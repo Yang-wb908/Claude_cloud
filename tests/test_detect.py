@@ -83,3 +83,16 @@ def test_weak_detections_need_open_sea():
     kept = filter_weak_detections(dets, window, land, landlike, cfg)
     assert [(d.row, d.peak_db) for d in kept] == [(50, 12.0), (101, 0.0)]
     assert [d.id for d in kept] == [1, 2]
+
+
+def test_sidelobes_do_not_widen_the_ship():
+    sigma0 = np.full((200, 200), 0.01)
+    sigma0[98:103, 85:115] = 100.0  # 300 m x 50 m hull at +20 dB
+    sigma0[60:140, 99:101] = 0.5  # azimuth sidelobe line, 23 dB below the peak
+    mask = sigma0 > 0.1
+    cfg = DetectorConfig(min_area_px=4, max_length_m=1000, min_peak_db=-10)
+    (d,) = cluster_detections(mask, sigma0, cfg)
+    assert abs(d.length_m - 300) < 20 and abs(d.width_m - 50) < 10
+    (wide,) = cluster_detections(mask, sigma0, DetectorConfig(
+        min_area_px=4, max_length_m=1000, min_peak_db=-10, shape_cutoff_db=40))
+    assert wide.width_m > 1.5 * d.width_m

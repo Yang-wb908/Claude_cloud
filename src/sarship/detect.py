@@ -35,6 +35,7 @@ class DetectorConfig:
     min_area_px: int = 4
     max_length_m: float = 450.0
     min_peak_db: float = -5.0  # sigma0 of the brightest pixel; rejects faint speckle blobs
+    shape_cutoff_db: float = 15.0  # length/width use pixels within this of the peak
     # Thermal noise is additive and nearly constant over a CFAR window, so it is
     # simply part of the clutter. Subtracting it and clipping the negative
     # values would distort the speckle statistics the thresholds rely on.
@@ -115,7 +116,8 @@ def cluster_detections(
     Pixels are joined with 8-connectivity after a one-pixel closing, so a ship
     broken up by speckle stays one object. Length and width come from the
     second moments of the pixel cloud (a uniform rectangle of length L has
-    variance L^2/12 along its axis).
+    variance L^2/12 along its axis), restricted to pixels within
+    ``cfg.shape_cutoff_db`` of the peak so sidelobes do not widen the ship.
     """
     row0, col0 = (window.row0, window.col0) if window else (0, 0)
     joined = ndimage.binary_closing(mask, structure=np.ones((3, 3)))
@@ -134,13 +136,16 @@ def cluster_detections(
         cc = cc + sl[1].start
         w = vals / vals.sum()
         r_c, c_c = float((w * rr).sum()), float((w * cc).sum())
-        if area >= 3:
-            ev, evec = np.linalg.eigh(np.cov(np.vstack([cc, rr])))
+        # Size from the pixels near the peak only: the sidelobe cross of a
+        # bright ship is well above the sea but is not part of the hull.
+        core = vals >= vals.max() * 10 ** (-cfg.shape_cutoff_db / 10)
+        if core.sum() >= 3:
+            ev, evec = np.linalg.eigh(np.cov(np.vstack([cc[core], rr[core]])))
             length = np.sqrt(12 * max(ev[1], 0) + 1) * pixel_spacing
             width = np.sqrt(12 * max(ev[0], 0) + 1) * pixel_spacing
             angle = float(np.degrees(np.arctan2(evec[1, 1], evec[0, 1])) % 180)
         else:
-            length = width = np.sqrt(area) * pixel_spacing
+            length = width = np.sqrt(core.sum()) * pixel_spacing
             angle = 0.0
         peak_db = float(10 * np.log10(vals.max()))
         if length > cfg.max_length_m or peak_db < cfg.min_peak_db:

@@ -266,6 +266,10 @@ K-distribution CA-CFAR at $P_{fa}=10^{-7}$ on VV (guard 200 m, background
 500 m), followed by connected-component clustering. Clusters are kept if
 they are at least 4 px, shorter than 450 m, and peak above −5 dB.
 
+Length and width come from the second moments of the pixels within 15 dB
+of the cluster's peak, so the sidelobe cross around bright ships does not
+count as hull.
+
 Weak clusters (peak below +5 dB) must also sit in open sea: at least 300 m
 from the land mask, and with almost no land-like pixels within 400 m. Next to
 the coast and around the Nakdong estuary sand bars, the clutter is rocks,
@@ -357,10 +361,11 @@ print(f"median length, confirmed in VH: {np.median(lengths[both]):.0f} m; "
 * **Moving-ship offset.** Moving targets are displaced in azimuth in proportion
   to their radial velocity (the "train off the track" effect), up to hundreds
   of metres.
-* **Target size.** Lengths and especially widths are overestimated for bright
-  ships: at ~20 m resolution the impulse response and its sidelobes smear
-  the hull, so widths of 80–140 m are not physical. A proper estimate would fit
-  an oriented rectangle convolved with the point spread function.
+* **Target size.** Size is measured on pixels within 15 dB of each target's
+  peak, which keeps the sidelobe cross of bright ships out (median width of
+  ships over 200 m drops from ~90 m to ~50 m). At ~20 m resolution small
+  targets are still inflated by the impulse response; a proper estimate would
+  fit an oriented rectangle convolved with the point spread function.
 * **Global ν.** One texture shape is used for the whole window; estimating it
   per tile would adapt to wind fronts and sheltered water.
 """),
