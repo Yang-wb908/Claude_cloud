@@ -61,6 +61,13 @@ def build_report(dash: Path, now: datetime | None = None) -> str:
     lines = [f"# SITREP {date}", "", f"**DTG** {dtg} · UNCLASSIFIED // OSINT · 자동 수집 {auto.get('generated', '-')}", "", "## BLUF", "", bluf, ""]
     if trip.get("fired"):
         lines += ["## 트립와이어 발동", ""] + [f"- **{t['title']}** — 현재 {t['current']} (임계 {t['op']} {t['threshold']}) · {t.get('why', '')}" for t in trip["fired"]] + [""]
+    sc_path = dash / "data" / "scorecard.json"
+    if sc_path.exists():
+        sc = json.loads(sc_path.read_text()); o = sc.get("overall", {})
+        if o.get("n"):
+            lines += ["## 예측 적중 (시나리오 하우스 뷰, 20거래일)", "", f"채점 {sc['n_scored']}건 · 방향 적중 {o['dir']:.0%} · 90% 구간 포함 {o['cov90']:.0%} · 스킬(무변동 대비) {o['skill']:+.2f}" + (f" · 판단 Brier {sc['ledger_brier'][-1]['brier']}" if sc.get("ledger_brier") else ""), ""]
+        else:
+            lines += ["## 예측 적중", "", f"예측 스냅숏 {sc.get('n_forecasts', 0)}건 진행 중, 채점은 20거래일 경과 후.", ""]
     lines += ["## 전역별 24시간 사건", ""]
     for th, evs in sorted(by_th.items(), key=lambda kv: -len(kv[1])):
         lines.append(f"### {TH_KO.get(th, th)} ({len(evs)}건)")

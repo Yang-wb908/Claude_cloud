@@ -437,6 +437,18 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .jbtn[aria-pressed="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .jbtns small{color:var(--faint);font-size:12px}
 a.btn{text-decoration:none;display:inline-block}
+.sctiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}
+.sct{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel2);display:grid;gap:2px}
+.sct .l{font-size:11.5px;color:var(--faint)} .sct .v{font-family:var(--num);font-size:24px;font-weight:600;line-height:1.1} .sct small{color:var(--muted);font-size:11px}
+.sct.good .v{color:var(--s1)} .sct.mid .v{color:var(--s3)} .sct.bad .v{color:var(--s5)}
+.sctrend{display:flex;gap:3px;align-items:flex-end;height:56px;padding:4px 0 0;border-bottom:1px solid var(--line)}
+.sctrend .c{flex:1;position:relative;height:100%;background:color-mix(in srgb,var(--line) 40%,transparent);border-radius:2px 2px 0 0;min-width:4px}
+.sctrend .c i{position:absolute;bottom:0;left:0;right:0;background:var(--s2);border-radius:2px 2px 0 0}
+.sctrend .c b{position:absolute;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ink)}
+.fc{border-top:1px dashed var(--line);padding:6px 0} .fc summary{cursor:pointer;font-size:13px;line-height:1.5} .fc summary small{display:block;color:var(--faint);font-size:11.5px}
+.prog{display:inline-block;width:90px;height:6px;background:color-mix(in srgb,var(--line) 60%,transparent);border-radius:3px;vertical-align:middle;overflow:hidden} .prog i{display:block;height:100%;background:var(--s3)}
+.shk .ok{color:var(--s1)} .shk .no{color:var(--s5)}
+.calib.pit .col b{background:var(--s2);left:20%;right:auto;width:60%}
 
 .btn{border:0;background:var(--ink);color:var(--panel);border-radius:8px;padding:10px 16px;font-weight:500;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
@@ -1865,6 +1877,7 @@ function compact(){
     시장조사: CMI ? ["energy","ags","macro"].map(k => CMI[k] ? {분야:k, 판단:CMI[k].judgments, 지표:(CMI[k].groups||[]).map(g => ({그룹:g.title, 동인:g.drivers, 리스크:g.risks, 지표:(g.metrics||[]).map(m => [m.l, m.v, m.d, m.chg, m.n].filter(Boolean).join(" | "))})), 포지션:(CMI[k].positioning||[]).map(p => p.l + " " + p.v + " " + (p.d||"") + " " + (p.chg||"")), 기간구조:(CMI[k].curve||[]).map(x => x.l + " " + x.v + " " + (x.n||""))} : null).filter(Boolean) : null,
     시나리오: scLast ? {선택: scSelected().map(t => t.n + " " + scState.p[t.id] + "% ×" + scState.k[t.id]), 지평일: scLast.H, 기대변동: scLast.rows.slice(0, 14).map(r => (CM_BY[r.a] || {n:r.a}).n + " " + fmtPct(r.e, r.bp) + " [P5 " + fmtPct(r.p5, r.bp) + " / P95 " + fmtPct(r.p95, r.bp) + "]")} : null,
     과거사례: AN_.analogs.slice(0, 24).map(a => a.n + " (" + a.date + ") 브렌트20일 " + fmtPct(a.moves && a.moves.brent ? a.moves.brent.d20 : null) + " 밀20일 " + fmtPct(a.moves && a.moves.wheat ? a.moves.wheat.d20 : null) + " VIX20일 " + fmtPct(a.moves && a.moves.vix ? a.moves.vix.d20 : null)),
+    예측적중: SCORE_ ? {예측: SCORE_.n_forecasts, 채점: SCORE_.n_scored, 방향적중: SCORE_.overall.dir, 구간포함90: SCORE_.overall.cov90, 스킬: SCORE_.overall.skill, 자산별: Object.entries(SCORE_.by_asset || {}).map(([a, v]) => a + " 방향 " + v.dir + " 스킬 " + v.skill)} : null,
     판단장부: (() => { const st = judgStats(judgItems()); return {건수: st.n, 판정: st.resolved, Brier: st.brier, 기한경과: st.overdue}; })(),
     백테스트: BT_ ? {사건연구: BT_.events && BT_.events.summary, 트립와이어: (BT_.tripwires || []).map(t => t.title + " 발동 " + t.episodes + "회, 브렌트60일 중앙값 " + fmtPct(t.median_brent_60))} : null,
     일정: allCalendar().slice(0, 40).map(c => c.d + " [" + c.cat + "] " + c.x),

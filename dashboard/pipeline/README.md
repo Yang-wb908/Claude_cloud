@@ -73,6 +73,14 @@ python dashboard/pipeline/run.py backtest    # data/backtest.json + reports/BACK
 
 사건 연구는 경보 4 이상 전역의 S/M/A 유형 사건을 대상으로 사건일 종가 대비 +1/+5/+20/+60 거래일 변동률(브렌트·밀·금·달러·VIX·코스피·원/달러·S&P)을 냅니다. 트립와이어는 `markets.*` 지표에 대해 임계치 최초 돌파일을 찾아 자기 자신·브렌트·S&P의 60일 수익률 중앙값을 냅니다.
 
+## 일일 예측·채점 (`forecast.py`)
+
+```bash
+python dashboard/pipeline/run.py series && python dashboard/pipeline/run.py forecast && python dashboard/pipeline/run.py score
+```
+
+`daily.yml`이 매일 09:20 KST에 실행합니다. 예측은 `data/forecasts/<날짜>.json`, 채점은 `data/scorecard.json`과 `reports/SCORECARD-latest.md`. 지평은 20거래일이며 방향 적중(부호 일치, ±1% 또는 ±10bp 이내는 '무변동'으로 취급), 90%·50% 구간 포함, PIT, MAE 대비 무변동·과거 사례 스킬을 냅니다.
+
 ## 테스트
 
 ```bash

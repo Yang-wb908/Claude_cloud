@@ -146,6 +146,8 @@ OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact
 | Pages `data/badges/*.json` | shields.io 엔드포인트 배지(브렌트·TTF·밀·VIX·원/달러·7일 사건 수·갱신 시각) |
 | Pages에서 GitHub API | 상황판 수집원 탭이 열린 Issue와 최근 커밋을 실시간 표시 |
 | `labels.yml` | 라벨 정의 파일을 고치면 워크플로가 저장소 라벨을 동기화 |
+| Actions `daily.yml` (매일 09:20 KST) | 2년 일봉 시계열 갱신 → 하우스 뷰(`data/house_view.json`)를 시나리오 모델에 넣어 오늘 예측 스냅숏 저장(`data/forecasts/`) → 20거래일 지난 예측을 실제 시세와 채점(`data/scorecard.json`) → 빌드·커밋·Pages 배포. 결과는 SITREP과 Job Summary에도 요약 |
+| Issues `scenario` + "하우스 뷰로 채택" | 체크하면 봇이 하우스 뷰를 갱신해 다음날부터 그 확률로 예측·채점 |
 
 상황판 상태 배지(Pages 배포 후 동작):
 

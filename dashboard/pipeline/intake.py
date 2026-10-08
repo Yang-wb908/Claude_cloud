@@ -81,7 +81,25 @@ console.log(L.join('\\n'));
     if r.returncode != 0:
         return "시나리오 계산 실패:\n```\n" + r.stderr[-1500:] + "\n```"
     note = form.get("분석관 메모") or ""
-    return r.stdout.strip() + ("\n\n**분석관 메모**\n" + note if note else "") + "\n\n_템플릿 " + json.dumps(pairs, ensure_ascii=False) + " · 상황판 시나리오 탭에서 동일 설정을 재현할 수 있습니다._"
+    adopt = "[x]" in (form.get("하우스 뷰") or "").lower()
+    adopted = ""
+    if adopt:
+        view = []
+        for pr in pairs:
+            bits = pr.split(":")
+            try:
+                view.append({"id": bits[0], "p": float(bits[1]) if len(bits) > 1 and bits[1] else None, "k": float(bits[2]) if len(bits) > 2 and bits[2] else 1})
+            except ValueError:
+                continue
+        hv = DASH / "data" / "house_view.json"
+        doc = json.loads(hv.read_text()) if hv.exists() else {}
+        doc.update({"asof": datetime.now(UTC).strftime("%Y-%m-%d"), "scenarios": view, "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)})
+        hv.write_text(json.dumps(doc, ensure_ascii=False, indent=1))
+        set_output("changed", "true")
+        adopted = "\n\n**하우스 뷰로 채택했습니다.** 내일부터 일일 예측 스냅숏과 적중 채점이 이 설정으로 돌아갑니다."
+    else:
+        set_output("changed", "false")
+    return r.stdout.strip() + adopted + ("\n\n**분석관 메모**\n" + note if note else "") + "\n\n_템플릿 " + json.dumps(pairs, ensure_ascii=False) + " · 상황판 시나리오 탭에서 동일 설정을 재현할 수 있습니다._"
 
 
 # ── judgment ────────────────────────────────────────────────────────────────

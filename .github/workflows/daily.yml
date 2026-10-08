@@ -1,0 +1,58 @@
+name: 일일 동기화 (시세·예측 스냅숏·적중 채점)
+
+on:
+  schedule:
+    - cron: "20 0 * * *"             # 00:20 UTC = 09:20 KST, SITREP(00:40) 전에
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: 시계열 → 오늘 예측 스냅숏 → 지난 예측 채점 → 백테스트 → 빌드
+        run: |
+          set -euo pipefail
+          python dashboard/pipeline/run.py series
+          python dashboard/pipeline/run.py forecast
+          python dashboard/pipeline/run.py score
+          python dashboard/pipeline/run.py backtest
+          python dashboard/build.py
+      - name: 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json reports
+          git diff --cached --quiet || (git commit -m "data: 일일 동기화 $(date -u +%Y-%m-%d) 예측·채점 [skip ci]" && git push)
+      - name: 적중 요약을 Job Summary에
+        run: cat reports/SCORECARD-latest.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

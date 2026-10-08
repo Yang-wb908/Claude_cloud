@@ -1,0 +1,20 @@
+{
+ "asof": "2026-10-08",
+ "note": "분석관 하우스 뷰. 같은 전역의 시나리오는 상호배타(확률 합이 1을 넘으면 정규화). 시나리오 Issue에서 '하우스 뷰로 채택'을 체크하면 봇이 이 파일을 갱신한다.",
+ "scenarios": [
+  {"id": "hormuz_persist", "p": 60, "k": 1},
+  {"id": "hormuz_reopen", "p": 30, "k": 1},
+  {"id": "hormuz_war", "p": 10, "k": 1},
+  {"id": "redsea_houthi", "p": 25, "k": 1},
+  {"id": "redsea_calm", "p": 30, "k": 1},
+  {"id": "blacksea_escalate", "p": 15, "k": 1},
+  {"id": "blacksea_deal", "p": 30, "k": 1},
+  {"id": "taiwan_quarantine", "p": 5, "k": 1},
+  {"id": "us_china_tariff", "p": 25, "k": 1},
+  {"id": "korea_strategic", "p": 10, "k": 1},
+  {"id": "fed_hawkish", "p": 25, "k": 1},
+  {"id": "elnino_super", "p": 70, "k": 1},
+  {"id": "gulf_hurricane", "p": 35, "k": 1},
+  {"id": "ethiopia_war", "p": 50, "k": 1}
+ ]
+}

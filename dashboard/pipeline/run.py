@@ -4,6 +4,7 @@
     python dashboard/pipeline/run.py collect --offline   # replay from cache
     python dashboard/pipeline/run.py report         # write reports/SITREP-<date>.md
     python dashboard/pipeline/run.py series && python dashboard/pipeline/run.py backtest   # weekly backtest (data/series.json, data/backtest.json)
+    python dashboard/pipeline/run.py forecast && python dashboard/pipeline/run.py score      # daily: house-view forecast snapshot, score past snapshots
 
 Environment: ANTHROPIC_API_KEY (optional, enables Korean summaries), PIPELINE_MODEL (default claude-opus-5-5),
 PIPELINE_NO_CLAUDE=1 to force rules-only enrichment.
@@ -27,7 +28,7 @@ import yaml
 HERE = Path(__file__).resolve().parent
 DASH = HERE.parent
 sys.path.insert(0, str(DASH))
-from pipeline import assemble, backtest, collectors, enrich, fetch, report, tripwires  # noqa: E402
+from pipeline import assemble, backtest, collectors, enrich, fetch, forecast, report, tripwires  # noqa: E402
 
 log = logging.getLogger("pipeline")
 RAW = HERE / "cache" / "raw.json"
@@ -121,6 +122,19 @@ def cmd_series(args) -> None:
     log.info("series: %d symbols (%s)", len(series), ", ".join(sorted(series)))
 
 
+def cmd_forecast(args) -> None:
+    doc = forecast.make_forecast(DASH)
+    log.info("forecast %s: %d scenarios, %d assets (top: %s)", doc["d"], len(doc["view"]), len(doc["rows"]), ", ".join(f"{r['a']} {r['e']:+.1f}" for r in doc["rows"][:5]))
+
+
+def cmd_score(args) -> None:
+    sc = forecast.score(DASH)
+    o = sc["overall"]
+    log.info("scorecard: forecasts %d, scored %d, pending %d, dir %s, cov90 %s, skill %s", sc["n_forecasts"], sc["n_scored"], sc["n_pending"], o["dir"], o["cov90"], o["skill"])
+    (DASH.parent / "reports").mkdir(exist_ok=True)
+    (DASH.parent / "reports" / "SCORECARD-latest.md").write_text(forecast.markdown(sc))
+
+
 def cmd_backtest(args) -> None:
     bt = backtest.run(DASH)
     log.info("backtest: series %d, event rows %d, tripwires %d, ledger brier %s", len(bt["series"]), bt["events"]["n"], len(bt["tripwires"]), bt["ledger"]["brier"])
@@ -134,14 +148,14 @@ def cmd_build(args) -> None:
 
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description="세계 상황판 수집 파이프라인")
-    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "backtest", "report", "build", "all"])
+    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "report", "build", "all"])
     ap.add_argument("--offline", action="store_true", help="네트워크 없이 캐시만 사용")
     ap.add_argument("--only", help="수집원 id 목록(쉼표)")
     ap.add_argument("--no-claude", action="store_true", help="규칙 기반 분류만 사용")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
-    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "backtest": cmd_backtest, "report": cmd_report, "build": cmd_build}
+    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "report": cmd_report, "build": cmd_build}
     if args.cmd == "all":
         for name in ["collect", "enrich", "assemble", "tripwires", "report", "build"]:
             steps[name](args)

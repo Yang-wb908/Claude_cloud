@@ -21,6 +21,12 @@ body:
     attributes:
       label: 분석관 메모
       description: 가정의 근거, 보고 싶은 상품, 검토를 원하는 전파 경로
+  - type: checkboxes
+    id: adopt
+    attributes:
+      label: 하우스 뷰
+      options:
+        - label: 이 설정을 하우스 뷰로 채택한다 (일일 예측 스냅숏·적중 채점의 기준이 된다)
   - type: dropdown
     id: horizon
     attributes:

@@ -4,6 +4,9 @@ const JUDG_ = typeof JUDG === "object" && JUDG ? JUDG : {items: []};
 const BT_ = typeof BT === "object" ? BT : null;
 const AN_ = typeof ANALOGS === "object" ? ANALOGS : {analogs: [], tripwires: [], method_notes: [], gaps: []};
 const SCN_ = typeof SCEN === "object" ? SCEN : {assets: {}, templates: []};
+const HOUSE_ = typeof HOUSE === "object" ? HOUSE : null;
+let SCORE_ = typeof SCORE === "object" ? SCORE : null;
+const pct0 = v => v == null ? "—" : Math.round(v * 100) + "%";
 const fmtPct = (v, bp) => v == null ? "—" : (v > 0 ? "+" : "") + (bp ? Math.round(v) + "bp" : (Math.abs(v) >= 10 ? v.toFixed(0) : v.toFixed(1)) + "%");
 const signCls = v => v == null ? "" : v > 0.05 ? "up" : v < -0.05 ? "down" : "flat";
 const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
@@ -84,7 +87,7 @@ function renderScenario(){
   $("#p-scn").innerHTML = `
     <div class="block"><h3>시나리오 충격 모델 <span class="en">Scenario shock model</span></h3><span class="meta">템플릿 ${SCN_.templates.length}개 · 같은 전역 안에서는 상호배타, 전역 간 독립 · 몬테카를로 3,000회 · 기저 잡음 = 연율 변동성×√(지평/252)</span>
       <p class="note">확률·강도를 조정하면 상품별 기대 변동과 분포가 다시 계산됩니다. 조건부 충격(발생 시 평균·표준편차)은 분석관 판단값이며, 과거 사례 탭의 실측 분포와 대조하세요.</p>
-      <div class="btnrow"><button class="btn" id="scRerun">다시 추출</button><button class="btn ghost" id="scReset">기본값</button><button class="btn ghost" id="scCopy">Markdown 복사</button><a class="btn ghost" href="${issueUrl}" target="_blank" rel="noopener">GitHub Issue로 제출</a><button class="btn ghost" id="scAsk">분석관에게 넘기기</button></div></div>
+      <div class="btnrow"><button class="btn" id="scRerun">다시 추출</button><button class="btn ghost" id="scReset">기본값</button>${HOUSE_ ? `<button class="btn ghost" id="scHouse" title="저장소의 하우스 뷰(${esc(HOUSE_.asof || "")}) 설정을 불러옵니다">하우스 뷰</button>` : ""}<button class="btn ghost" id="scCopy">Markdown 복사</button><a class="btn ghost" href="${issueUrl}" target="_blank" rel="noopener">GitHub Issue로 제출</a><button class="btn ghost" id="scAsk">분석관에게 넘기기</button></div></div>
     <div class="block"><h3>결과: 확률 가중 충격 <span class="en">${sel.length} scenarios · horizon ${res ? res.H : 0}d</span></h3>
       ${res ? scTableHtml(res) : '<p class="note">시나리오를 하나 이상 선택하세요.</p>'}
       <p class="note">기대 변동 = Σ 확률×강도×조건부 평균. 분포는 시나리오 발생 여부와 조건부 충격, 기저 잡음을 함께 추출한 결과입니다. 금리는 bp, VIX는 지수 변화율입니다.</p></div>
@@ -102,6 +105,7 @@ function renderScenario(){
   pane.querySelectorAll(".scard input[type=range]").forEach(r => { r.addEventListener("input", e => { const id = e.target.closest(".scard").dataset.id; scState.p[id] = +e.target.value; e.target.closest(".scard").querySelector(".pv").textContent = e.target.value + "%"; }); r.addEventListener("change", () => { scSave(); renderScenario(); }); });
   pane.querySelectorAll(".scard select").forEach(s => s.addEventListener("change", e => { const id = e.target.closest(".scard").dataset.id; scState.k[id] = +e.target.value; scSave(); renderScenario(); }));
   $("#scRerun").addEventListener("click", renderScenario);
+  const hb = $("#scHouse"); if (hb) hb.addEventListener("click", () => { SCN_.templates.forEach(t => { scState.sel[t.id] = false; }); (HOUSE_.scenarios || []).forEach(v => { if (scState.p[v.id] !== undefined) { scState.sel[v.id] = true; if (v.p != null) scState.p[v.id] = v.p; scState.k[v.id] = v.k || 1; } }); scSave(); renderScenario(); });
   $("#scReset").addEventListener("click", () => { try { localStorage.removeItem("sit-scn"); } catch(e) {} SCN_.templates.forEach(t => { scState.p[t.id] = t.p; scState.k[t.id] = 1; scState.sel[t.id] = ["hormuz_persist", "redsea_houthi", "blacksea_escalate", "elnino_super", "gulf_hurricane"].includes(t.id); }); renderScenario(); });
   $("#scCopy").addEventListener("click", () => { if (!scLast) return; const md = scMarkdown(scLast); (navigator.clipboard ? navigator.clipboard.writeText(md) : Promise.reject()).then(() => { $("#scCopy").textContent = "복사됨"; setTimeout(() => $("#scCopy").textContent = "Markdown 복사", 1500); }).catch(() => { prompt("복사하세요", md); }); });
   $("#scAsk").addEventListener("click", () => { if (!scLast) return; $("#q").value = "아래 시나리오 평가를 검토해줘. 조건부 충격 가정 중 과거 사례와 어긋나는 것, 빠진 전파 경로, 한국 포지션 관점의 비대칭 기회를 짚어줘.\n\n" + scMarkdown(scLast).slice(0, 1800); setTab("p-ai"); $("#q").focus(); });
@@ -121,6 +125,36 @@ function judgStats(items){
   return {n: items.length, resolved: res.length, brier: res.length ? res.reduce((a, r) => a + (r.p - r.o) ** 2, 0) / res.length : null, base: res.length ? res.reduce((a, r) => a + r.o, 0) / res.length : null, bins,
     overdue: items.filter(j => j.outcome == null && j.due && j.due < REF).length};
 }
+function scoreHtml(){
+  const sc = SCORE_;
+  const onPages = /github\.io$/.test(location.hostname);
+  const syncBtn = onPages ? '<button class="btn ghost" id="scSync">지금 동기화</button>' : '';
+  if (!sc) return `<div class="block"><h3>예측 적중 추적 <span class="en">Forecast scorecard</span></h3><p class="note">매일 09:20 KST GitHub 워크플로가 하우스 뷰 예측을 저장하고 20거래일 뒤 실제 시세와 대조합니다. 아직 채점 데이터가 없습니다.</p>${syncBtn}</div>`;
+  const o = sc.overall || {}, lb = sc.ledger_brier && sc.ledger_brier.length ? sc.ledger_brier[sc.ledger_brier.length - 1] : null;
+  const tile = (l, v, sub, cls) => `<div class="sct ${cls || ""}"><span class="l">${l}</span><span class="v">${v}</span><small>${sub}</small></div>`;
+  const sk = v => v == null ? "—" : (v > 0 ? "+" : "") + v.toFixed(2);
+  const tiles = `<div class="sctiles">
+    ${tile("방향 적중", pct0(o.dir), o.n ? `${o.n}개 자산·예측 채점` : "채점 대기", o.dir == null ? "" : o.dir >= 0.6 ? "good" : o.dir >= 0.5 ? "mid" : "bad")}
+    ${tile("90% 구간 포함", pct0(o.cov90), "목표 90% · 50% 구간 " + pct0(o.cov50), o.cov90 == null ? "" : o.cov90 >= 0.8 ? "good" : "mid")}
+    ${tile("스킬 (무변동 대비)", sk(o.skill), o.mae != null ? `MAE ${o.mae} vs ${o.mae_naive}` + (o.skill_analog != null ? ` · 과거사례 대비 ${sk(o.skill_analog)}` : "") : "0보다 크면 모델이 무변동 가정보다 낫다", o.skill == null ? "" : o.skill > 0 ? "good" : "bad")}
+    ${tile("판단 Brier", lb ? lb.brier.toFixed(3) : "—", lb ? `판정 ${lb.n}건 누적 · 0.25 = 동전` : "판정 전", lb ? (lb.brier <= 0.15 ? "good" : lb.brier <= 0.25 ? "mid" : "bad") : "")}
+  </div>`;
+  const byDate = sc.by_date || [];
+  const trend = byDate.length ? `<div class="sctrend">${byDate.slice(-40).map(d => `<div class="c" title="${esc(d.d)} · 방향 ${pct0(d.dir)} · 90% 포함 ${pct0(d.cov90)} · MAE ${d.mae}"><i style="height:${Math.round((d.dir || 0) * 100)}%"></i><b style="bottom:${Math.round((d.cov90 || 0) * 100)}%"></b></div>`).join("")}</div><p class="note">예측일별 방향 적중률(막대)과 90% 구간 포함률(점). 최근 ${Math.min(40, byDate.length)}건.</p>` : "";
+  const tot = (sc.pit_hist || []).reduce((a, b) => a + b, 0);
+  const pit = tot ? `<div class="calib pit">${sc.pit_hist.map((n, i) => `<div><div class="col" title="${n}건"><b style="height:${Math.min(100, n / tot * 250)}%"></b></div>${i * 20}–${i * 20 + 20}%</div>`).join("")}</div><p class="note">실제값이 예측 분포의 어느 백분위에 떨어졌는지(PIT). 고르게 퍼지면 분포가 보정된 것이고, 가운데에 몰리면 과대, 양끝에 몰리면 과소 산정입니다.</p>` : "";
+  const byAsset = Object.entries(sc.by_asset || {}).sort((x, y) => y[1].n - x[1].n);
+  const assetTbl = byAsset.length ? `<table class="shk"><thead><tr><th>자산</th><th>n</th><th>방향</th><th>90%</th><th>MAE</th><th>무변동</th><th>스킬</th></tr></thead><tbody>${byAsset.map(([a, v]) => `<tr><td>${esc((CM_BY[a] || {n: a}).n)}</td><td>${v.n}</td><td class="trend ${v.dir >= 0.5 ? "up" : "down"}">${pct0(v.dir)}</td><td>${pct0(v.cov90)}</td><td>${v.mae}</td><td>${v.mae_naive}</td><td class="trend ${v.skill > 0 ? "up" : "down"}">${sk(v.skill)}</td></tr>`).join("")}</tbody></table>` : "";
+  const fl = (sc.forecasts || []).slice().reverse().slice(0, 6);
+  const fcHtml = fl.map((f, idx) => { const rows = f.rows.filter(r => "real" in r || r.e !== 0).sort((x, y) => Math.abs(y.e) - Math.abs(x.e)).slice(0, 12); const prog = Math.min(100, Math.round(100 * (f.elapsed || 0) / f.h));
+    return `<details class="fc"${idx === 0 ? " open" : ""}><summary><b>${esc(f.d)}</b> 예측 → ${f.status === "scored" ? `<span class="tag">채점 완료</span> 방향 ${pct0(f.summary.dir)} · 90% ${pct0(f.summary.cov90)} · 스킬 ${sk(f.summary.skill)}` : `<span class="tag hot">진행 ${f.elapsed || 0}/${f.h}일</span> <span class="prog"><i style="width:${prog}%"></i></span>`} <small>${f.view.map(v => esc(v.n) + " " + v.p + "%").join(" · ")}</small></summary>
+      <table class="shk"><thead><tr><th>자산</th><th>예측</th><th>P5 ~ P95</th><th>실제${f.status === "scored" ? "" : " (현재까지)"}</th><th>판정</th></tr></thead><tbody>${rows.map(r => `<tr><td>${esc((CM_BY[r.a] || {n: r.a}).n)}</td><td class="trend ${signCls(r.e)}">${fmtPct(r.e, r.bp)}</td><td class="rng">${fmtPct(r.p5, r.bp)} ~ ${fmtPct(r.p95, r.bp)}</td><td class="trend ${signCls(r.real)}">${"real" in r ? fmtPct(r.real, r.bp) : "—"}</td><td>${"real" in r ? (r.done ? `${r.dir ? '<span class="ok">✓ 방향</span>' : '<span class="no">✗ 방향</span>'} ${r.in90 ? '<span class="tag">구간 내</span>' : '<span class="tag hot">구간 밖</span>'}` : `<small>${r.elapsed}일째</small>`) : "<small>시세 없음</small>"}</td></tr>`).join("")}</tbody></table></details>`; }).join("");
+  return `<div class="block"><h3>예측 적중 추적 <span class="en">Forecast scorecard · ${esc(sc.generated.slice(0, 10))}</span></h3>
+    <span class="meta">하우스 뷰 예측 ${sc.n_forecasts}건 · 채점 ${sc.n_scored}건 · 진행 ${sc.n_pending}건 · 지평 ${sc.h}거래일 · 시세 ${esc(sc.series_to || "—")}까지</span>
+    ${tiles}${trend}${pit}${assetTbl}
+    <p class="note">매일 09:20 KST 저장소 워크플로가 하우스 뷰(시나리오 확률)를 충격 모델에 넣어 예측을 저장하고, 20거래일이 지나면 실제 시세와 대조합니다. 방향 적중은 기대 변동 부호와 실제 부호의 일치, 구간 포함은 실제값이 P5~P95 안에 든 비율, 스킬은 1 − MAE/무변동 MAE 입니다.${onPages ? "" : " 아티팩트는 재게시 시점의 채점을 보여주고, GitHub Pages 판은 매일 갱신됩니다."}</p>
+    ${syncBtn}${fcHtml}</div>`;
+}
 function anCell(v, bp){ return `<td class="trend ${signCls(v)}">${fmtPct(v, bp)}</td>`; }
 function renderBacktest(){
   const asset = btState.asset, bp = asset === "us10y";
@@ -137,7 +171,7 @@ function renderBacktest(){
   const changed = Object.entries(judgLocal).filter(([id, v]) => v.outcome !== undefined);
   const judgIssue = `https://github.com/${REPO}/issues/new?template=judgment.yml&labels=judgment&title=${encodeURIComponent("[판정] " + changed.length + "건")}&items=${encodeURIComponent(JSON.stringify(changed.map(([id, v]) => ({id, outcome: v.outcome, note: v.note || ""}))))}`;
   const tb = BT_ && BT_.tripwires && BT_.tripwires.length ? BT_.tripwires : null;
-  $("#p-bt").innerHTML = `
+  $("#p-bt").innerHTML = scoreHtml() + `
     <div class="block"><h3>과거 사례 라이브러리 <span class="en">Event-study analogs</span></h3><span class="meta">${AN_.analogs.length}개 사건 · 사건 전일 종가 대비 변동률 · 금리는 bp</span>
       <div class="btnrow"><div class="seg" id="anAsset">${AN_ASSETS.map(([k, n]) => `<button data-k="${k}" aria-pressed="${k === asset}">${n}</button>`).join("")}</div></div>
       <div class="tchips" id="anCat">${Object.entries(AN_CATS).map(([k, n]) => `<button class="chip" aria-pressed="${k === btState.cat}" data-k="${k}">${n}</button>`).join("")}</div>
@@ -168,6 +202,7 @@ function renderBacktest(){
         <div class="jbtns"><button class="jbtn" data-o="1" aria-pressed="${j.outcome === 1 || j.outcome === true}">적중</button><button class="jbtn" data-o="0" aria-pressed="${j.outcome === 0 || j.outcome === false}">빗나감</button><button class="jbtn" data-o="x" aria-pressed="${j.outcome == null}">미정</button>${j.note ? `<small>${esc(j.note)}</small>` : ""}</div></li>`).join("")}</ul>
       ${!list.length ? '<p class="note">해당 항목이 없습니다.</p>' : ""}</div>`;
   const pane = $("#p-bt");
+  const sy = $("#scSync"); if (sy) sy.addEventListener("click", async () => { sy.textContent = "동기화 중…"; try { const r = await fetch("data/scorecard.json", {cache: "no-store"}); SCORE_ = await r.json(); renderBacktest(); } catch(e) { sy.textContent = "실패"; } });
   pane.querySelectorAll("#anAsset button").forEach(b => b.addEventListener("click", () => { btState.asset = b.dataset.k; renderBacktest(); }));
   pane.querySelectorAll("#anCat button").forEach(b => b.addEventListener("click", () => { btState.cat = b.dataset.k; renderBacktest(); }));
   pane.querySelectorAll("#lfSeg button").forEach(b => b.addEventListener("click", () => { btState.lf = b.dataset.k; renderBacktest(); }));
