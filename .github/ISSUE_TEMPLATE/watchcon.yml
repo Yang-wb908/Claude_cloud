@@ -1,0 +1,30 @@
+name: 경보단계(WATCHCON) 변경
+description: 전역의 경보단계를 올리거나 내립니다. 봇이 watchcon.json에 기록하고 경고 보고(WR)를 생산합니다.
+title: "[WATCHCON] "
+labels: ["watchcon"]
+body:
+  - type: dropdown
+    id: th
+    attributes:
+      label: 전역
+      options: ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib"]
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: 새 단계
+      options: ["5 전면전", "4 고강도", "3 긴장", "2 회색지대", "1 감시"]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 근거 (판단)
+      description: 어떤 징후가 어떤 가설을 지지해 단계를 바꾸는지
+    validations:
+      required: true
+  - type: textarea
+    id: indicators
+    attributes:
+      label: 확인된 징후 (한 줄에 하나)

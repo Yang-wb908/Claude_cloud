@@ -1,0 +1,23 @@
+name: 이견 제기 (대안 분석)
+description: 핵심 판단에 동의하지 않을 때 대안 가설과 근거를 공식 기록합니다. 봇이 판단 장부에 이견을 붙이고 브리프에 싣습니다.
+title: "[이견] "
+labels: ["dissent"]
+body:
+  - type: input
+    id: jid
+    attributes:
+      label: 판단 id
+      description: 판단 장부의 id (예 bluf-1). 백테스트 탭 판단 장부에서 확인.
+    validations:
+      required: true
+  - type: textarea
+    id: x
+    attributes:
+      label: 대안 판단과 근거
+      description: 어떤 증거가 공식 판단과 불일치하는지, 대안 확률은 얼마인지
+    validations:
+      required: true
+  - type: input
+    id: p
+    attributes:
+      label: 대안 확률 (0~100)

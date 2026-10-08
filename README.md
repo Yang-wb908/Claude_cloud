@@ -148,8 +148,9 @@ OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact
 | `labels.yml` | 라벨 정의 파일을 고치면 워크플로가 저장소 라벨을 동기화 |
 | Actions `daily.yml` (매일 09:20 KST) | 2년 일봉 시계열 갱신 → 하우스 뷰(`data/house_view.json`)를 시나리오 모델에 넣어 오늘 예측 스냅숏 저장(`data/forecasts/`) → 20거래일 지난 예측을 실제 시세와 채점(`data/scorecard.json`) → 빌드·커밋·Pages 배포. 결과는 SITREP과 Job Summary에도 요약 |
 | Issues `scenario` + "하우스 뷰로 채택" | 체크하면 봇이 하우스 뷰를 갱신해 다음날부터 그 확률로 예측·채점 |
-| Issues `trade` (6차) | 페이퍼 포지션 개시·종료 양식 → `data/book.json` 갱신. 일일 동기화가 시가평가·손절/목표 자동 종료·시나리오별 귀속 |
 | Actions `advisor.yml` (주간, 6차) | Claude 에이전트가 SDK 도구 실행기로 사건·시세·시뮬레이션·채점·장부를 직접 조회해 하우스 뷰 재조정·새 판단·포지션을 제안하는 Issue를 연다. 체크박스를 켜면 채택. 키가 없으면 규칙 점검만 |
+| Issues `pir` / `handover` / `watchcon` / `dissent` (7차) | 우선정보요구 등록, 당직 인수인계, 경보단계 변경, 이견 제기 양식. 봇이 각각 `pirs.json`·`watch_log.json`·`watchcon.json`·판단 장부에 기록하고, 경보단계 변경은 경고 보고(WR)를 생산 |
+| `products/` (7차) | 일련번호가 붙은 완성 생산물: 일일 정보 브리프 DIB-YY-MMDD(BLUF·경보단계·ICD 203 판단·징후·24시간 사건·PIR 현황·경제 위험·수집 공백·이견·분석 기준 점검), 경고 보고 WR-YY-MMDD-NN(트립와이어·경보단계 변경). SITREP Release에 첨부 |
 | 경제 위험 지수 (6차) | 일일 동기화가 시나리오 꼬리·시장·공급망·포지셔닝·사건·모델 불확실성을 가중한 0~100 지수를 `data/risk.json`에 쓰고 이력을 쌓음. 70 이상이면 트립와이어 Issue, SITREP·배지에 표시 |
 | 아티팩트 ↔ 저장소 동기화 (6차) | 게시된 상황판이 보는 사람의 GitHub 커넥터로 `data/*.json`을 읽어 시세·사건·트립와이어·채점·장부·하우스 뷰를 갱신("저장소 동기화" 버튼). Pages 배포 없이도 아티팩트가 최신을 따라감 |
 

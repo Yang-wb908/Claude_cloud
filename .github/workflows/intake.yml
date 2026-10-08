@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   intake:
-    if: ${{ contains(github.event.issue.labels.*.name, 'scenario') || contains(github.event.issue.labels.*.name, 'judgment') || contains(github.event.issue.labels.*.name, 'event') || contains(github.event.issue.labels.*.name, 'trade') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'scenario') || contains(github.event.issue.labels.*.name, 'judgment') || contains(github.event.issue.labels.*.name, 'event') || contains(github.event.issue.labels.*.name, 'pir') || contains(github.event.issue.labels.*.name, 'handover') || contains(github.event.issue.labels.*.name, 'watchcon') || contains(github.event.issue.labels.*.name, 'dissent') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
         env:
           LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          for k in scenario judgment event trade; do
+          for k in scenario judgment event pir handover watchcon dissent; do
             case ",$LABELS," in *",$k,"*) echo "kind=$k" >> "$GITHUB_OUTPUT"; break;; esac
           done
       - name: 처리
@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data/judgments.json dashboard/data_snapshot.json dashboard/data/house_view.json dashboard/data/book.json
+          git add dashboard/data/judgments.json dashboard/data_snapshot.json dashboard/data/house_view.json dashboard/data/pirs.json dashboard/data/watch_log.json dashboard/data/watchcon.json dashboard/data/warnings_pending.json
           git diff --cached --quiet || (git commit -m "data: issue #${{ github.event.issue.number }} ${{ steps.kind.outputs.kind }} 반영 [skip ci]" && git push)
       - name: 댓글
         env:
@@ -60,7 +60,7 @@ jobs:
           printf '%s\n\n---\n_자동 처리 · %s · run %s_\n' "$(cat /tmp/reply.md)" "${{ steps.kind.outputs.kind }}" "${{ github.run_id }}" > /tmp/body.md
           gh issue comment ${{ github.event.issue.number }} --body-file /tmp/body.md
       - name: 판정·보고 이슈는 닫기
-        if: ${{ steps.run.outputs.changed == 'true' && steps.kind.outputs.kind != 'scenario' }}
+        if: ${{ steps.run.outputs.changed == 'true' && steps.kind.outputs.kind != 'scenario' && steps.kind.outputs.kind != 'pir' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh issue close ${{ github.event.issue.number }} --reason completed

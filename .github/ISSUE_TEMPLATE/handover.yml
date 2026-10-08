@@ -1,0 +1,31 @@
+name: 당직 인수인계
+description: 교대 시 상황 요약·미결 사항·과업을 일지에 남깁니다. 봇이 watch_log.json에 기록하고 상황판 당직 탭에 표시합니다.
+title: "[당직] "
+labels: ["handover"]
+body:
+  - type: dropdown
+    id: shift
+    attributes:
+      label: 교대
+      options: ["주간 (08:00~20:00 KST)", "야간 (20:00~08:00 KST)"]
+    validations:
+      required: true
+  - type: input
+    id: officer
+    attributes:
+      label: 당직 분석관
+  - type: textarea
+    id: summary
+    attributes:
+      label: 상황 요약
+      description: 근무 중 발생한 핵심 변화 3~5줄
+    validations:
+      required: true
+  - type: textarea
+    id: open
+    attributes:
+      label: 미결 사항 (한 줄에 하나)
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 다음 근무 과업 (한 줄에 하나)

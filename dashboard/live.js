@@ -4,7 +4,7 @@
 const SYNC_REFS = ["refs/heads/claude/compassionate-rubin-jmaq9e", "refs/heads/main", "refs/heads/claude/vibrant-euler-j1ibn5"];
 const SYNC_FILES = {
   auto: "dashboard/intel.auto.json", latest: "dashboard/data/latest.json", trip: "dashboard/data/tripwires.json", rfi: "dashboard/data/rfi.json",
-  score: "dashboard/data/scorecard.json", judg: "dashboard/data/judgments.json", house: "dashboard/data/house_view.json", book: "dashboard/data/book_mtm.json", risk: "dashboard/data/risk.json"
+  score: "dashboard/data/scorecard.json", judg: "dashboard/data/judgments.json", house: "dashboard/data/house_view.json", risk: "dashboard/data/risk.json", pirs: "dashboard/data/pirs.json", watchcon: "dashboard/data/watchcon.json", watchlog: "dashboard/data/watch_log.json", products: "dashboard/data/products_index.json"
 };
 let syncState = {at: null, ok: {}, err: {}, busy: false, mcp: undefined};
 function extractJSON(result){
@@ -57,7 +57,11 @@ function applyLive(got){
   if (got.score && got.score.generated) SCORE_ = got.score;
   if (got.judg && got.judg.items) JUDG_ = got.judg;
   if (got.house && got.house.scenarios) HOUSE_ = got.house;
-  if (got.book && got.book.items) BOOK_ = got.book;
+  if (got.risk && got.risk.index != null) { /* 서버 지수는 참고용: 보드는 자체 계산을 유지하고 서버 값을 메타에 표시 */ window.RISK_SERVER = got.risk; }
+  if (got.pirs && got.pirs.items) PIRS_ = got.pirs;
+  if (got.watchcon && got.watchcon.theaters) WC_ = got.watchcon;
+  if (got.watchlog && got.watchlog.entries) WLOG_ = got.watchlog;
+  if (got.products && got.products.products) PROD_ = got.products;
   if (got.latest && Array.isArray(got.latest.events)) {
     const have = new Set(EVENTS.map(e => e.id)), haveS = new Set(EVENTS.map(e => e.s).filter(Boolean));
     got.latest.events.forEach((e, i) => { if (!e.d || !e.x) return; const id = e.id || "l" + i; if (have.has(id) || (e.s && haveS.has(e.s))) return; EVENTS.push({...e, id, lang: e.lang || "ko"}); have.add(id); eventsChanged = true; });
@@ -66,7 +70,7 @@ function applyLive(got){
   try { renderBluf(); } catch(e) { console.warn("bluf", e); }
   if (eventsChanged) { try { renderEventList(); renderTimeline(); renderTheaters(); renderTicker(); dirty = true; needDetail = true; } catch(e) { console.warn("events", e); } }
   try { renderCommod(); renderSources(); } catch(e) { console.warn("cm", e); }
-  try { renderBacktest(); renderScenario(); if (typeof renderBook === "function") renderBook(); if (typeof renderRisk === "function") { renderRisk(); renderCommod(); renderBluf(); } } catch(e) { console.warn("an", e); }
+  try { renderBacktest(); renderScenario(); if (typeof renderRisk === "function") { renderRisk(); renderCommod(); } if (typeof renderPIR === "function") { renderPIR(); renderProducts(); renderWatch(); } renderBluf(); } catch(e) { console.warn("an", e); }
   if (MODE !== "live") setStatus("snapshot");
 }
 (function initSync(){

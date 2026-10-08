@@ -32,6 +32,7 @@ jobs:
           zip -qr dist/snapshot-$D.zip dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/intel.js dashboard/iw.js dashboard/theaters.js dashboard/data
           [ -f dashboard/snapshots/latest.png ] && cp dashboard/snapshots/latest.png dist/board-$D.png || true
           [ -f reports/BACKTEST-latest.md ] && cp reports/BACKTEST-latest.md dist/ || true
+          ls products/DIB-*.md 2>/dev/null | tail -1 | xargs -r -I{} cp {} dist/
       - name: 보고서 커밋
         run: |
           git config user.name "situation-board-bot"

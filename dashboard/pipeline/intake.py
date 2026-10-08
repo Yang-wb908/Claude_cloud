@@ -15,7 +15,7 @@ import os
 import re
 import subprocess
 import sys
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -175,43 +175,96 @@ def event(form: dict) -> str:
     return f"현장 보고를 사건 목록에 추가했습니다.\n\n- 날짜 {d} · 전역 `{th}` · 유형 `{t}` · 등급 **{g}`\n- 장소 {place or '-'} {('(' + ', '.join(map(str, at)) + ')') if at else '(좌표 없음 — 지도에는 표시되지 않습니다)'}\n- {x[:200]}\n\n다음 수집 주기(6시간)에 GitHub Pages와 상황판에 반영됩니다."
 
 
-# ── trade (paper book) ─────────────────────────────────────────────────────
+# ── ops: PIR / handover / WATCHCON / dissent ─────────────────────────────────
+def _lines(v: str) -> list[str]:
+    return [x.strip("-• ").strip() for x in (v or "").splitlines() if x.strip("-• ").strip()]
+
+
+def pir(form: dict) -> str:
+    path = DASH / "data" / "pirs.json"
+    doc = json.loads(path.read_text()) if path.exists() else {"items": []}
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    pid = (form.get("PIR id") or "").strip()
+    eeis = []
+    for line in _lines(form.get("EEI (한 줄에 하나)")):
+        parts = [x.strip() for x in line.split("|")]
+        eeis.append({"q": parts[0], "ind": parts[1] if len(parts) > 1 else "", "src": [x.strip() for x in parts[2].split(",") if x.strip()] if len(parts) > 2 else [], "status": "답변중", "last": None, "added": today, "by": git_user()})
+    target = next((x for x in doc["items"] if x["id"] == pid), None) if pid else None
+    if target is None:
+        q = (form.get("정보 요구(질문)") or "").strip()
+        if not q:
+            set_output("changed", "false"); return "새 PIR에는 질문이 필요합니다 (또는 기존 PIR id를 적으세요)."
+        n = 1 + max([int(x["id"].split("-")[-1]) for x in doc["items"] if x["id"].split("-")[-1].isdigit()] or [0])
+        target = {"id": f"PIR-{n}", "pri": int((form.get("우선순위") or "2")[0]), "th": (form.get("전역") or "macro").strip(), "q": q, "owner": (form.get("담당과") or "").strip(), "due": (form.get("기한 (YYYY-MM-DD)") or "").strip() or None, "status": "active", "tags": [], "eei": [], "added": today, "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)}
+        doc["items"].append(target)
+    base = len(target.get("eei", []))
+    for i, e in enumerate(eeis, 1):
+        e["id"] = f"{target['id'].split('-')[-1]}.{base + i}"
+        target.setdefault("eei", []).append(e)
+    doc["asof"] = today
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=1)); set_output("changed", "true")
+    return f"**{target['id']}** {target['q']}\n\nEEI {len(eeis)}건 추가 (총 {len(target['eei'])}건). 상황판 요구 탭과 내일 DIB의 PIR 현황에 반영됩니다."
+
+
+def handover(form: dict) -> str:
+    path = DASH / "data" / "watch_log.json"
+    doc = json.loads(path.read_text()) if path.exists() else {"entries": []}
+    now = datetime.now(UTC) + timedelta(hours=9)
+    e = {"d": now.strftime("%Y-%m-%d"), "t": now.strftime("%H:%M"), "shift": (form.get("교대") or "").split(" ")[0], "officer": (form.get("당직 분석관") or git_user()).strip(), "summary": (form.get("상황 요약") or "").strip()[:800],
+         "open": _lines(form.get("미결 사항 (한 줄에 하나)")), "tasks": _lines(form.get("다음 근무 과업 (한 줄에 하나)")), "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)}
+    doc["entries"] = (doc.get("entries") or [])[-199:] + [e]
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=1)); set_output("changed", "true")
+    return f"인수인계 기록 {e['d']} {e['t']} KST {e['shift']} · {e['officer']}\n\n{e['summary']}\n\n미결 {len(e['open'])}건 · 과업 {len(e['tasks'])}건. 상황판 당직 탭에 표시됩니다."
+
+
+def watchcon(form: dict) -> str:
+    path = DASH / "data" / "watchcon.json"
+    doc = json.loads(path.read_text()) if path.exists() else {"theaters": {}}
+    th = (form.get("전역") or "").strip()
+    try:
+        level = int((form.get("새 단계") or "")[0])
+    except (ValueError, IndexError):
+        set_output("changed", "false"); return "새 단계를 읽지 못했습니다."
+    why = (form.get("근거 (판단)") or "").strip()
+    inds = _lines(form.get("확인된 징후 (한 줄에 하나)"))
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    cur = doc["theaters"].setdefault(th, {"level": None, "since": today, "history": []})
+    old = cur.get("level")
+    cur.update({"level": level, "since": today})
+    cur.setdefault("history", []).append({"d": today, "from": old, "to": level, "why": why[:300], "indicators": inds, "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)})
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=1))
+    pend = DASH / "data" / "warnings_pending.json"
+    pending = json.loads(pend.read_text()) if pend.exists() else []
+    pending.append({"kind": "watchcon", "id": f"watchcon-{th}-{today}", "title": f"{th} 경보단계 {old}→{level}", "th": th, "level": level, "current": level, "threshold": old, "why": why, "indicators": inds, "by": git_user()})
+    pend.write_text(json.dumps(pending, ensure_ascii=False))
+    set_output("changed", "true")
+    return f"**{th}** 경보단계 {old} → **{level}** 기록. 근거: {why[:200]}\n\n다음 생산 주기에 경고 보고(WR)가 발행되고 DIB 경보단계 표에 반영됩니다."
+
+
+def dissent(form: dict) -> str:
+    path = DASH / "data" / "judgments.json"
+    led = json.loads(path.read_text())
+    jid = (form.get("판단 id") or "").strip()
+    j = next((x for x in led["items"] if x["id"] == jid), None)
+    if not j:
+        set_output("changed", "false"); return f"판단 `{jid}` 을 찾지 못했습니다."
+    pv = _num(form.get("대안 확률 (0~100)"))
+    j.setdefault("dissent", []).append({"d": datetime.now(UTC).strftime("%Y-%m-%d"), "by": git_user(), "x": (form.get("대안 판단과 근거") or "").strip()[:500], "p": (pv / 100) if pv is not None else None, "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)})
+    path.write_text(json.dumps(led, ensure_ascii=False, indent=1)); set_output("changed", "true")
+    return f"판단 `{jid}` 에 이견 기록 (공식 {round(j['p'] * 100)}% vs 대안 {round(pv) if pv is not None else '—'}%). 브리프 '이견' 절과 생산물 탭에 실립니다. 판정 시 두 확률 모두 채점됩니다."
+
+
 def _num(v):
     try:
-        return float(str(v).replace(",", "").strip()) if str(v).strip() else None
+        return float(str(v).replace(",", "").strip()) if str(v or "").strip() else None
     except ValueError:
         return None
-
-
-def trade(form: dict) -> str:
-    path = DASH / "data" / "book.json"
-    book = json.loads(path.read_text()) if path.exists() else {"items": []}
-    today = datetime.now(UTC).strftime("%Y-%m-%d")
-    action = (form.get("동작") or "개시").strip()
-    tid = (form.get("포지션 id") or "").strip()
-    if action.startswith("종료"):
-        t = next((x for x in book["items"] if x["id"] == tid), None)
-        if not t:
-            set_output("changed", "false"); return f"포지션 `{tid}` 을 찾지 못했습니다."
-        t.update({"status": "closed", "exit": _num(form.get("종료가 (종료 시, 비우면 최근 종가)")), "exit_d": today, "closed_by": git_user(), "close_issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)})
-        path.write_text(json.dumps(book, ensure_ascii=False, indent=1)); set_output("changed", "true")
-        return f"포지션 `{tid}` 종료 기록. 종료가 {t['exit'] if t['exit'] is not None else '최근 종가(다음 동기화에서 확정)'}. 일일 동기화가 P&L을 확정합니다."
-    cm = (form.get("상품") or "").strip()
-    if not cm or not (form.get("논지") or "").strip():
-        set_output("changed", "false"); return "상품과 논지는 필수입니다."
-    n = 1 + max([int(x["id"].split("-")[-1]) for x in book["items"] if x["id"].startswith("pb-") and x["id"].split("-")[-1].isdigit()] or [0])
-    t = {"id": tid or f"pb-{n:03d}", "d": today, "cm": cm, "side": (form.get("방향") or "long").strip(), "entry": _num(form.get("진입가 (비우면 첫 종가)")), "size": _num(form.get("사이즈 (기본 1)")) or 1,
-         "stop": _num(form.get("손절가")), "target": _num(form.get("목표가")), "thesis": (form.get("논지") or "").strip()[:400],
-         "scn": [x.strip() for x in (form.get("근거 시나리오 id (쉼표)") or "").split(",") if x.strip()], "judg": [], "status": "open", "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)}
-    book["items"].append(t)
-    path.write_text(json.dumps(book, ensure_ascii=False, indent=1)); set_output("changed", "true")
-    return f"페이퍼 포지션 `{t['id']}` 개시: {t['cm']} {t['side']} · 진입 {t['entry'] if t['entry'] is not None else '첫 종가'} · 손절 {t['stop']} · 목표 {t['target']}\n\n{t['thesis']}\n\n일일 동기화가 시가평가하고 손절·목표 도달 시 자동 종료합니다."
 
 
 def main() -> None:
     kind = sys.argv[1]
     form = parse_form(os.environ.get("ISSUE_BODY", ""))
-    out = {"scenario": scenario, "judgment": judgment, "event": event, "trade": trade}[kind](form)
+    out = {"scenario": scenario, "judgment": judgment, "event": event, "pir": pir, "handover": handover, "watchcon": watchcon, "dissent": dissent}[kind](form)
     print(out)
 
 

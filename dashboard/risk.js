@@ -65,17 +65,7 @@ function riskModel(){
     const span = bp ? (p95 - p5) / 100 : (p95 - p5) / 60; const n7 = EVENTS.filter(e => e.cm && e.cm.includes(c.id) && daysAgo(e.d) >= 0 && daysAgo(e.d) < 7).length; const trw = cmTrans(c).reduce((a, t) => a + t.w * (TH[t.th].sev / 5), 0);
     const score = clamp01(0.45 * clamp01(span) + 0.2 * clamp01(vol / 80) + 0.2 * clamp01(trw / 6) + 0.15 * clamp01(n7 / 8));
     return {id: c.id, n: c.n, p5, p95, bp, vol, n7, trw, score, grade: score >= .75 ? 5 : score >= .55 ? 4 : score >= .38 ? 3 : score >= .22 ? 2 : 1, skew: bp ? null : (p95 + p5) / 2}; }).filter(Boolean).sort((a, b) => b.score - a.score);
-  /* 페이퍼 북 VaR·ES와 시나리오별 조건부 P&L */
-  const open = bookItems().filter(t => t.status === "open" && R.sims[t.cm]);
-  let book = null;
-  if (open.length) {
-    const pnl = new Float64Array(R.N);
-    open.forEach(t => { const s = R.sims[t.cm], sign = t.side === "short" ? -1 : 1, sz = t.size || 1; for (let i = 0; i < R.N; i++) pnl[i] += sign * sz * s[i]; });
-    const sorted = Float64Array.from(pnl).sort(); const var95 = sorted[Math.floor(.05 * R.N)]; const es = sorted.slice(0, Math.floor(.05 * R.N)).reduce((a, b) => a + b, 0) / Math.max(1, Math.floor(.05 * R.N));
-    const cond = R.sel.map(t => { let s = 0, n = 0; for (let i = 0; i < R.N; i++) if (R.occ[t.id][i]) { s += pnl[i]; n++; } return {id: t.id, n: t.n, p: scState.p[t.id], pnl: n ? s / n : null, occ: n / R.N}; }).filter(x => x.pnl != null).sort((a, b) => a.pnl - b.pnl);
-    const contrib = open.map(t => { const s = R.sims[t.cm], sign = t.side === "short" ? -1 : 1, sz = t.size || 1; let tail = 0, n = 0; for (let i = 0; i < R.N; i++) if (pnl[i] <= var95) { tail += sign * sz * s[i]; n++; } return {id: t.id, cm: t.cm, side: t.side, tail: n ? tail / n : 0}; }).sort((a, b) => a.tail - b.tail);
-    book = {n: open.length, mean: pnl.reduce((a, b) => a + b, 0) / R.N, var95, es, pUp: Array.from(pnl).filter(x => x > 0).length / R.N, cond, contrib, H: R.H};
-  }
+  const book = null;
   /* 한국 수입물가 충격 */
   const kr = KR_BASKET.map(([a, w, n]) => { const s = R.sims[a]; if (!s) return null; const e = s.reduce((x, y) => x + y, 0) / R.N; return {a, n, w, e, p95: R.q(s, .95), contrib: w * e}; }).filter(Boolean).sort((a, b) => Math.abs(b.contrib) - Math.abs(a.contrib));
   return {index, level: index >= 75 ? "심각" : index >= 55 ? "높음" : index >= 35 ? "보통" : "낮음", comp, perAsset, book, kr, basket: {p95: bP95, p50: bP50, mean: bMean}, H: R.H, sel: R.sel.map(t => t.id)};
@@ -91,7 +81,7 @@ function riskBlufHtml(){
   const r = RISK_;
   return `<div class="block sev${r.index >= 75 ? 5 : r.index >= 55 ? 4 : r.index >= 35 ? 3 : 2} riskblk"><h3>경제 위험 지수 <span class="en">economic risk · ${r.H}d</span></h3>
     <div class="riskrow">${riskGaugeHtml(r)}<div class="rbars">${Object.entries(RISK_W).map(([k, w]) => `<div class="rb" title="${esc(r.comp[k].d)}"><span>${esc(r.comp[k].l)}</span><i><b style="width:${Math.round(100 * clamp01(r.comp[k].v))}%"></b></i><small>${Math.round(100 * clamp01(r.comp[k].v))}</small></div>`).join("")}</div></div>
-    <p class="cap">한국 수입 바스켓 ${r.H}일 충격: 기대 ${fmtPct(r.basket.mean)} · P95 ${fmtPct(r.basket.p95)}${r.book ? ` · 페이퍼 북 VaR95 ${fmtPct(r.book.var95)}` : ""} · 상품 위험 R5: ${r.perAsset.filter(x => x.grade === 5).map(x => x.n).join(", ") || "없음"} <button class="thchip" id="riskMore">위험도 탭 →</button></p></div>`;
+    <p class="cap">한국 수입 바스켓 ${r.H}일 충격: 기대 ${fmtPct(r.basket.mean)} · P95 ${fmtPct(r.basket.p95)} · 상품 위험 R5: ${r.perAsset.filter(x => x.grade === 5).map(x => x.n).join(", ") || "없음"} <button class="thchip" id="riskMore">위험도 탭 →</button></p></div>`;
 }
 function renderRisk(){
   try { RISK_ = riskModel(); } catch(e) { $("#p-risk").innerHTML = `<p class="note">위험도 계산 실패: ${esc(e.message)}</p>`; return; }
@@ -105,17 +95,12 @@ function renderRisk(){
     <div class="block"><h3>상품별 위험 등급 <span class="en">R1 낮음 – R5 극단</span></h3><span class="meta">분포 폭(P5~P95) 45% · 변동성 20% · 분쟁 전파 가중 20% · 7일 사건 밀도 15%</span>
       <table class="shk"><thead><tr><th>상품</th><th>등급</th><th>P5 ~ P95</th><th>치우침</th><th>연율 변동성</th><th>전파</th><th>7일 사건</th></tr></thead><tbody>
       ${r.perAsset.map(a => `<tr data-cm="${a.id}"><td>${esc(a.n)}</td><td>${grade(a.grade)}</td><td class="rng">${fmtPct(a.p5, a.bp)} ~ ${fmtPct(a.p95, a.bp)}</td><td class="trend ${a.skew == null ? "" : signCls(a.skew)}">${a.skew == null ? "—" : fmtPct(a.skew)}</td><td>${a.vol}%</td><td>${a.trw.toFixed(1)}</td><td>${a.n7}</td></tr>`).join("")}</tbody></table></div>
-    ${r.book ? `<div class="block"><h3>페이퍼 북 위험 <span class="en">scenario VaR · ${r.book.n} positions</span></h3>
-      <div class="sctiles">${[["기대 P&L", fmtPct(r.book.mean), "단위 가중 합"], ["VaR 95%", fmtPct(r.book.var95), `${r.H}일, 5% 확률로 이보다 나쁨`], ["ES 95%", fmtPct(r.book.es), "최악 5% 평균"], ["이익 확률", pct0(r.book.pUp), ""]].map(([l, v, s]) => `<div class="sct ${/^-/.test(v) && l !== "VaR 95%" && l !== "ES 95%" ? "bad" : ""}"><span class="l">${l}</span><span class="v">${v}</span><small>${s}</small></div>`).join("")}</div>
-      <table class="shk"><thead><tr><th>시나리오 발생 시 조건부 P&L</th><th>확률</th><th>P&L</th></tr></thead><tbody>${r.book.cond.map(c => `<tr><td>${esc(c.n)}</td><td>${c.p}%</td><td class="trend ${signCls(c.pnl)}">${fmtPct(c.pnl)}</td></tr>`).join("")}</tbody></table>
-      <table class="shk"><thead><tr><th>꼬리(최악 5%) 기여</th><th>방향</th><th>기여</th></tr></thead><tbody>${r.book.contrib.map(c => `<tr><td>${esc(c.id)} ${esc((CM_BY[c.cm] || {n: c.cm}).n)}</td><td>${c.side === "short" ? "숏" : "롱"}</td><td class="trend ${signCls(c.tail)}">${fmtPct(c.tail)}</td></tr>`).join("")}</tbody></table>
-      <p class="note">같은 몬테카를로 추출에서 포지션 P&L을 합산했으므로 시나리오 공통 충격의 상관이 반영됩니다. 조건부 P&L이 가장 나쁜 시나리오가 헤지 대상입니다.</p></div>` : ""}
-    <div class="block"><h3>한국 수입물가 충격 <span class="en">import basket</span></h3><span class="meta">가중치 × 기대 변동 · 기여 큰 순</span>
+        <div class="block"><h3>한국 수입물가 충격 <span class="en">import basket</span></h3><span class="meta">가중치 × 기대 변동 · 기여 큰 순</span>
       <table class="shk"><thead><tr><th>품목</th><th>가중</th><th>기대</th><th>P95</th><th>기여</th></tr></thead><tbody>${r.kr.map(k => `<tr><td>${esc(k.n)}</td><td>${Math.round(k.w * 100)}%</td><td class="trend ${signCls(k.e)}">${fmtPct(k.e)}</td><td>${fmtPct(k.p95)}</td><td class="trend ${signCls(k.contrib)}">${fmtPct(k.contrib)}</td></tr>`).join("")}<tr class="sum"><td>바스켓</td><td>100%</td><td class="trend ${signCls(r.basket.mean)}">${fmtPct(r.basket.mean)}</td><td>${fmtPct(r.basket.p95)}</td><td></td></tr></tbody></table>
       <p class="note">바스켓 가중치는 한국 수입 구조의 근사치(상황판 설정값)이며 실제 통관 비중과 다를 수 있습니다.</p></div>
-    <div class="btnrow"><button class="btn ghost" id="riskRerun">다시 추출</button><button class="btn ghost" id="riskAsk">분석관에게 헤지 제안 요청</button></div>`;
+    <div class="btnrow"><button class="btn ghost" id="riskRerun">다시 추출</button><button class="btn ghost" id="riskAsk">분석관에게 경고 보고 초안 요청</button></div>`;
   $("#riskRerun").addEventListener("click", renderRisk);
-  $("#riskAsk").addEventListener("click", () => { $("#q").value = `경제 위험 지수 ${r.index}(${r.level}). 구성요소: ${Object.entries(RISK_W).map(([k]) => r.comp[k].l + " " + Math.round(100 * r.comp[k].v)).join(", ")}. 상품 R5: ${r.perAsset.filter(x => x.grade >= 4).map(x => x.n).join(", ")}.${r.book ? ` 페이퍼 북 VaR95 ${fmtPct(r.book.var95)}, 최악 시나리오 ${r.book.cond[0] && r.book.cond[0].n}.` : ""} 어떤 위험을 먼저 헤지해야 하고, 어떤 포지션이 꼬리를 키우는지, 한국 수입물가 관점에서 가장 비용 효율적인 헤지(옵션 구조 포함)를 제안해줘.`; setTab("p-ai"); });
+  $("#riskAsk").addEventListener("click", () => { $("#q").value = `경제 위험 지수 ${r.index}(${r.level}). 구성요소: ${Object.entries(RISK_W).map(([k]) => r.comp[k].l + " " + Math.round(100 * r.comp[k].v)).join(", ")}. 상품 R5: ${r.perAsset.filter(x => x.grade >= 4).map(x => x.n).join(", ")}. 어떤 위험을 먼저 경고해야 하고, 어떤 징후가 지수를 더 올릴지, 한국 경제 관점의 권고를 경고 보고 형식으로 제안해줘.`; setTab("p-ai"); });
   $("#p-risk").querySelectorAll("tr[data-cm]").forEach(tr => tr.addEventListener("click", () => { if (typeof cmSel !== "undefined") { cmSel = tr.dataset.cm; setTab("p-cm"); renderCommod(); } }));
 }
 document.addEventListener("click", e => { if (e.target && e.target.id === "riskMore") setTab("p-risk"); });

@@ -459,6 +459,12 @@ a.btn{text-decoration:none;display:inline-block}
 .achc{border:1px solid var(--line);background:transparent;border-radius:6px;min-width:34px;padding:3px 0;font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
 .achc.vCC{background:color-mix(in srgb,var(--s1) 35%,transparent)} .achc.vC{background:color-mix(in srgb,var(--s1) 16%,transparent)} .achc.vI{background:color-mix(in srgb,var(--s5) 18%,transparent)} .achc.vII{background:color-mix(in srgb,var(--s5) 38%,transparent)}
 tr.nondiag td{opacity:.6}
+.pir h3 .pid{font-family:var(--mono);font-size:12px;color:var(--c);margin-right:4px}
+.eei tr.gap td{background:color-mix(in srgb,var(--s5) 7%,transparent)} .eei td:first-child,.eei td:nth-child(2){white-space:normal;font-family:var(--sans);font-size:12.5px;text-align:left}
+.tag.ok{background:color-mix(in srgb,var(--s1) 18%,transparent);color:var(--s1)}
+.pir details summary{cursor:pointer;font-size:12.5px;color:var(--muted);margin-top:6px}
+button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--faint);padding:0}
+.fc p{font-size:13px;margin:6px 0}
 .riskrow{display:flex;gap:14px;align-items:center;margin:8px 0}
 .rgauge{width:132px;flex:none} .rgauge svg{position:static;inset:auto;width:132px;height:95px;display:block;pointer-events:none}
 .rbars{flex:1;display:grid;gap:4px;min-width:0} .rb{display:grid;grid-template-columns:92px 1fr 28px;gap:6px;align-items:center;font-size:11.5px;color:var(--muted)} .rb i{display:block;height:7px;background:color-mix(in srgb,var(--line) 60%,transparent);border-radius:3px;overflow:hidden} .rb i b{display:block;height:100%;background:var(--c);border-radius:3px} .rb small{font-family:var(--num);text-align:right;color:var(--ink)} .rb span small{color:var(--faint)}
@@ -597,8 +603,10 @@ tr.nondiag td{opacity:.6}
       <button class="tab" role="tab" aria-selected="false" data-pane="p-scn" data-g="an" hidden>시나리오</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-bt" data-g="an" hidden>백테스트</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ach" data-g="an" hidden>가설</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-book" data-g="an" hidden>포지션</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ai" data-g="an" hidden>분석관</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-watch" data-g="ops" hidden>당직</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-pir" data-g="ops" hidden>요구</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-prod" data-g="ops" hidden>생산물</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-src" data-g="ops" hidden>수집원</button>
     </nav>
     <div class="panes">
@@ -625,12 +633,14 @@ tr.nondiag td{opacity:.6}
       <section class="pane" id="p-net" role="tabpanel" hidden></section>
       <section class="pane" id="p-kr" role="tabpanel" hidden></section>
       <section class="pane" id="p-mkt" role="tabpanel" hidden></section>
+      <section class="pane" id="p-watch" role="tabpanel" hidden></section>
+      <section class="pane" id="p-pir" role="tabpanel" hidden></section>
+      <section class="pane" id="p-prod" role="tabpanel" hidden></section>
       <section class="pane" id="p-src" role="tabpanel" hidden></section>
       <section class="pane" id="p-scn" role="tabpanel" hidden></section>
       <section class="pane" id="p-bt" role="tabpanel" hidden></section>
       <section class="pane" id="p-risk" role="tabpanel" hidden></section>
       <section class="pane" id="p-ach" role="tabpanel" hidden></section>
-      <section class="pane" id="p-book" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
         <p class="note" id="aiNote">상황판에 담긴 데이터(브리핑·핵심판단·징후·시나리오·해협·경제·강대국·사건·시장)만 근거로 답합니다. 직접 검색은 하지 않아요.</p>
         <div class="ask" id="askBox">
@@ -1349,6 +1359,7 @@ function renderBluf(){
     <div class="block sev${g.level}"><div class="glevel"><span class="big">${g.level}</span><div class="lab"><b>종합 경보단계 · ${esc(g.label)} ${TREND[g.trend][0]}</b>전면전 ${sorted.filter(t=>t.sev===5).length} · 고강도 ${sorted.filter(t=>t.sev===4).length} · 긴장 ${sorted.filter(t=>t.sev===3).length} · 회색지대 ${sorted.filter(t=>t.sev===2).length}</div></div>
       <p class="cap" style="margin-top:12px;color:var(--ink)">${esc(g.summary)}</p></div>
     ${typeof riskBlufHtml === "function" ? riskBlufHtml() : ""}
+    ${typeof opsBlufHtml === "function" ? opsBlufHtml() : ""}
     <div class="block"><h3>핵심판단</h3><span class="meta">BLUF · 신뢰도는 출처 수·일관성·추론 의존도 기준</span>
       <ul class="kj">${B.judgments.map(j => `<li><div class="t">${esc(j.t)}</div><div class="b">${esc(j.basis)}</div>${confBadge(j.conf)} ${thChips(j.th)}</li>`).join("")}</ul></div>
     ${TRIP_ && TRIP_.fired && TRIP_.fired.length ? `<div class="block sev${Math.max(...TRIP_.fired.map(f => f.sev || 3))}"><h3>트립와이어 발동 <span class="en">auto</span></h3><span class="meta">임계치 돌파 · ${esc(TRIP_.generated || "")}</span>
@@ -1926,8 +1937,8 @@ function compact(){
     시나리오: scLast ? {선택: scSelected().map(t => t.n + " " + scState.p[t.id] + "% ×" + scState.k[t.id]), 지평일: scLast.H, 기대변동: scLast.rows.slice(0, 14).map(r => (CM_BY[r.a] || {n:r.a}).n + " " + fmtPct(r.e, r.bp) + " [P5 " + fmtPct(r.p5, r.bp) + " / P95 " + fmtPct(r.p95, r.bp) + "]")} : null,
     과거사례: AN_.analogs.slice(0, 24).map(a => a.n + " (" + a.date + ") 브렌트20일 " + fmtPct(a.moves && a.moves.brent ? a.moves.brent.d20 : null) + " 밀20일 " + fmtPct(a.moves && a.moves.wheat ? a.moves.wheat.d20 : null) + " VIX20일 " + fmtPct(a.moves && a.moves.vix ? a.moves.vix.d20 : null)),
     예측적중: SCORE_ ? {예측: SCORE_.n_forecasts, 채점: SCORE_.n_scored, 방향적중: SCORE_.overall.dir, 구간포함90: SCORE_.overall.cov90, 스킬: SCORE_.overall.skill, 자산별: Object.entries(SCORE_.by_asset || {}).map(([a, v]) => a + " 방향 " + v.dir + " 스킬 " + v.skill)} : null,
-    경제위험: RISK_ ? {지수: RISK_.index, 수준: RISK_.level, 구성: Object.fromEntries(Object.entries(RISK_.comp).map(([k, v]) => [v.l, Math.round(100 * v.v)])), 상품R4이상: RISK_.perAsset.filter(x => x.grade >= 4).map(x => x.n + " R" + x.grade + " " + fmtPct(x.p5, x.bp) + "~" + fmtPct(x.p95, x.bp)), 한국바스켓: {기대: fmtPct(RISK_.basket.mean), P95: fmtPct(RISK_.basket.p95)}, 페이퍼북: RISK_.book ? {VaR95: fmtPct(RISK_.book.var95), ES95: fmtPct(RISK_.book.es), 최악시나리오: RISK_.book.cond.slice(0, 3).map(c => c.n + " " + fmtPct(c.pnl))} : null} : null,
-    포지션: bookItems().filter(t => t.status === "open").map(t => t.id + " " + (CM_BY[t.cm] || {n: t.cm}).n + " " + t.side + " 진입 " + t.entry + " 현재 " + t.last + " P&L " + t.pnl + " — " + (t.thesis || "")),
+    운영: {당직: shiftNow(), 경보단계: Object.fromEntries(Object.entries(WC_.theaters || {}).map(([k, v]) => [k, v.level])), 경보변경7일: [].concat(...Object.entries(WC_.theaters || {}).map(([id, w]) => (w.history || []).filter(h => h.from != null && daysAgo(h.d) < 7).map(h => id + " " + h.d + " " + h.from + "→" + h.to + " " + h.why))), PIR: PIRS_.items.map(p => ({id: p.id, 우선: p.pri, 질문: p.q, 공백: (p.eei || []).filter(e => e.status === "공백").map(e => e.q)})), 미결과업: openTaskings().map(t => t.k + ": " + t.x), 최근인수인계: (WLOG_.entries || []).slice(-1).map(e => e.d + " " + e.shift + " " + e.summary), 생산물: (PROD_.products || []).slice(-6).map(p => p.serial + " " + p.title)},
+    경제위험: RISK_ ? {지수: RISK_.index, 수준: RISK_.level, 구성: Object.fromEntries(Object.entries(RISK_.comp).map(([k, v]) => [v.l, Math.round(100 * v.v)])), 상품R4이상: RISK_.perAsset.filter(x => x.grade >= 4).map(x => x.n + " R" + x.grade + " " + fmtPct(x.p5, x.bp) + "~" + fmtPct(x.p95, x.bp)), 한국바스켓: {기대: fmtPct(RISK_.basket.mean), P95: fmtPct(RISK_.basket.p95)}} : null,
     가설: ACH_.questions.map(q => { const r = achScores(q); return q.q + " → " + r.rank.map(h => h + " " + q.hyp[h] + " (불일치 " + r.scores[h].incons.toFixed(1) + ")").join(" / "); }),
     판단장부: (() => { const st = judgStats(judgItems()); return {건수: st.n, 판정: st.resolved, Brier: st.brier, 기한경과: st.overdue}; })(),
     백테스트: BT_ ? {사건연구: BT_.events && BT_.events.summary, 트립와이어: (BT_.tripwires || []).map(t => t.title + " 발동 " + t.episodes + "회, 브렌트60일 중앙값 " + fmtPct(t.median_brent_60))} : null,
@@ -1966,7 +1977,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderBook(); renderACH(); renderRisk(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

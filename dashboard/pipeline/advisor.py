@@ -1,8 +1,8 @@
-"""Agentic advisor: Claude investigates the board with tools and proposes house-view changes, judgments and paper trades.
+"""Agentic advisor: Claude investigates the board with tools and proposes house-view changes, judgments and warnings.
 
 Runs weekly (advisor.yml) or on demand: `python dashboard/pipeline/run.py advise`.
 With ANTHROPIC_API_KEY the Anthropic SDK tool runner lets Claude call the read-only tools below (events, series moves,
-simulation, scorecard, ledger, book, analog library) for several rounds, then return one JSON object. Without a key a
+simulation, scorecard, ledger, analog library) for several rounds, then return one JSON object. Without a key a
 rules-only pass produces the same shape from the scorecard and ledger (no model). The workflow turns the result into a
 GitHub Issue (labels scenario + advisor) whose "### 시나리오 설정" block the intake bot evaluates; ticking the house-view
 checkbox in that Issue adopts the proposal.
@@ -22,10 +22,10 @@ from . import forecast
 
 log = logging.getLogger("pipeline.advisor")
 SYSTEM = ("너는 국가 정보기관의 선임 지정학·시장 분석관이자 자율 에이전트다. 상황판 저장소의 데이터를 도구로 조회해 하우스 뷰(시나리오 확률)가 최근 사건·시세·채점 결과에 비춰 타당한지 점검하고, "
-          "바꿔야 할 확률, 새로 등록할 판단(ICD 203 확률 용어+숫자, 판정 기한), 페이퍼 포지션 제안을 낸다. 조사는 도구로 하고, 모든 수치 주장에 도구 결과를 근거로 달아라. "
+          "바꿔야 할 확률, 새로 등록할 판단(ICD 203 확률 용어+숫자, 판정 기한), 경고 보고가 필요한 전역을 낸다. 조사는 도구로 하고, 모든 수치 주장에 도구 결과를 근거로 달아라. "
           "마지막 답은 반드시 아래 JSON 하나만 출력한다(설명은 JSON 안의 문자열로): "
           '{"summary": "...", "proposals": [{"id": "시나리오id", "p": 0-100, "k": 0.5-2, "reason": "..."}], '
-          '"new_judgments": [{"x": "...", "p": 0-1, "due": "YYYY-MM-DD"}], "trades": [{"cm": "상품id", "side": "long|short", "stop": 숫자|null, "target": 숫자|null, "thesis": "...", "scn": ["시나리오id"]}], '
+          '"new_judgments": [{"x": "...", "p": 0-1, "due": "YYYY-MM-DD"}], "warnings": [{"th": "전역id", "level": 1-5, "x": "경고 요지", "indicators": ["확인 징후"]}], '
           '"ledger_verdicts": [{"id": "판단id", "outcome": 1|0, "note": "..."}]}. proposals에는 하우스 뷰의 모든 시나리오를 (바꾸지 않더라도) 포함하라.')
 
 
@@ -41,7 +41,6 @@ class Tools:
         self.house = json.loads((dash / "data" / "house_view.json").read_text()) if (dash / "data" / "house_view.json").exists() else {"scenarios": []}
         self.score = json.loads((dash / "data" / "scorecard.json").read_text()) if (dash / "data" / "scorecard.json").exists() else None
         self.ledger = json.loads((dash / "data" / "judgments.json").read_text()) if (dash / "data" / "judgments.json").exists() else {"items": []}
-        self.book = json.loads((dash / "data" / "book_mtm.json").read_text()) if (dash / "data" / "book_mtm.json").exists() else None
 
     def recent_events(self, days: int = 7, theater: str | None = None, query: str | None = None, limit: int = 30) -> list[dict]:
         cut = (datetime.now(UTC) - timedelta(days=int(days))).strftime("%Y-%m-%d")
@@ -141,11 +140,6 @@ def claude_advise(t: Tools, model: str | None = None) -> dict | None:
         return json.dumps({"scorecard": t.scorecard(), "ledger_overdue": t.ledger_overdue()}, ensure_ascii=False)
 
     @beta_tool
-    def get_book() -> str:
-        """페이퍼 북(가상 포지션)의 요약과 포지션별 P&L·손절·목표 거리."""
-        return json.dumps(t.book or {"items": []}, ensure_ascii=False)
-
-    @beta_tool
     def get_analogs(category: str = "") -> str:
         """과거 사례 라이브러리(사건 후 20일 브렌트·밀·VIX 변동). 범주: hormuz, redsea, blacksea, taiwan, korea, financial, pandemic, opec, weather, tariff, other.
 
@@ -158,7 +152,7 @@ def claude_advise(t: Tools, model: str | None = None) -> dict | None:
             "4) 지정된 JSON 하나로 답하라. 오늘: " + datetime.now(UTC).strftime("%Y-%m-%d"))
     try:
         runner = client.beta.messages.tool_runner(model=model, max_tokens=16000, max_iterations=10, system=SYSTEM,
-                                                  tools=[search_events, series_move, run_simulation, list_scenarios, get_scorecard, get_book, get_analogs],
+                                                  tools=[search_events, series_move, run_simulation, list_scenarios, get_scorecard, get_analogs],
                                                   messages=[{"role": "user", "content": task}])
         last = None
         for message in runner:
@@ -198,7 +192,7 @@ def rules_advise(t: Tools) -> dict:
     if overdue:
         notes.append(f"기한 경과 미판정 판단 {len(overdue)}건")
     return {"claude": False, "summary": "규칙 기반 점검(모델 미사용). " + ("; ".join(notes) if notes else "채점·장부에서 경고 없음."),
-            "proposals": [{"id": v["id"], "p": v.get("p"), "k": v.get("k", 1), "reason": "유지"} for v in t.house.get("scenarios", [])], "new_judgments": [], "trades": [], "ledger_verdicts": []}
+            "proposals": [{"id": v["id"], "p": v.get("p"), "k": v.get("k", 1), "reason": "유지"} for v in t.house.get("scenarios", [])], "new_judgments": [], "warnings": [], "ledger_verdicts": []}
 
 
 def markdown(res: dict, t: Tools) -> str:
@@ -213,8 +207,8 @@ def markdown(res: dict, t: Tools) -> str:
             L.append(f"| {T[p['id']]['n']} (`{p['id']}`) | {cur}% | {p.get('p')}% ×{p.get('k', 1)} | {p.get('reason', '')} |")
     if res.get("new_judgments"):
         L += ["", "### 새 판단 제안", ""] + [f"- {round(j['p'] * 100)}% · 기한 {j['due']} · {j['x']}" for j in res["new_judgments"]]
-    if res.get("trades"):
-        L += ["", "### 페이퍼 포지션 제안", ""] + [f"- {x['cm']} {x['side']} · 손절 {x.get('stop')} · 목표 {x.get('target')} · {x.get('thesis', '')} ({', '.join(x.get('scn', []))})" for x in res["trades"]]
+    if res.get("warnings"):
+        L += ["", "### 경고 보고 필요 전역", ""] + [f"- `{w.get('th')}` 단계 {w.get('level')} · {w.get('x', '')} ({', '.join(w.get('indicators', []))})" for w in res["warnings"]]
     if res.get("ledger_verdicts"):
         L += ["", "### 판정 제안 (판정 Issue에 붙여넣기)", "", "```"] + [f"{v['id']} {'적중' if v.get('outcome') in (1, True) else '빗나감'} {v.get('note', '')}" for v in res["ledger_verdicts"]] + ["```"]
     L += ["", f"_{'Claude 에이전트(' + res.get('model', '') + ')' if res.get('claude') else '규칙 기반'} · 자동 생성 · 체크박스를 켜고 저장하면 봇이 하우스 뷰를 갱신합니다_"]

@@ -81,14 +81,13 @@ python dashboard/pipeline/run.py series && python dashboard/pipeline/run.py fore
 
 `daily.yml`이 매일 09:20 KST에 실행합니다. 예측은 `data/forecasts/<날짜>.json`, 채점은 `data/scorecard.json`과 `reports/SCORECARD-latest.md`. 지평은 20거래일이며 방향 적중(부호 일치, ±1% 또는 ±10bp 이내는 '무변동'으로 취급), 90%·50% 구간 포함, PIT, MAE 대비 무변동·과거 사례 스킬을 냅니다.
 
-## 페이퍼 북·에이전트 (`book.py`, `advisor.py`)
+## 에이전트 분석관 (`advisor.py`)
 
 ```bash
-python dashboard/pipeline/run.py book      # data/book.json 시가평가 → data/book_mtm.json, reports/BOOK-latest.md
 python dashboard/pipeline/run.py advise    # 에이전트 재검토 → data/advisor.json, reports/ADVISOR-latest.md (ANTHROPIC_API_KEY 없으면 규칙 점검)
 ```
 
-`advisor.py`는 `@beta_tool` 함수 7개(사건 검색, 시세 변동, 시뮬레이션, 시나리오 목록, 채점표, 페이퍼 북, 과거 사례)를 `tool_runner`에 넘겨 최대 10라운드 조사 후 JSON 제안을 받습니다. `advisor.yml`이 매주 월요일 Issue(`scenario`+`advisor`)로 올리고, intake 봇이 충격표를 댓글로 답합니다.
+`advisor.py`는 `@beta_tool` 함수 6개(사건 검색, 시세 변동, 시뮬레이션, 시나리오 목록, 채점표, 과거 사례)를 `tool_runner`에 넘겨 최대 10라운드 조사 후 JSON 제안을 받습니다. `advisor.yml`이 매주 월요일 Issue(`scenario`+`advisor`)로 올리고, intake 봇이 충격표를 댓글로 답합니다.
 
 ## 경제 위험 지수 (`risk.py`)
 
@@ -96,7 +95,15 @@ python dashboard/pipeline/run.py advise    # 에이전트 재검토 → data/adv
 python dashboard/pipeline/run.py risk   # data/risk.json, data/risk_history.json, data/badges/risk.json, reports/RISK-latest.md
 ```
 
-상황판 `risk.js`와 같은 구성(시나리오 꼬리 30 · 시장 25 · 공급망 20 · 포지셔닝 10 · 사건 10 · 모델 5)을 저장소 데이터(시계열·intel.auto·PortWatch·COT·채점표·페이퍼 북)로 계산합니다. 트립와이어 경로 `risk.index`.
+상황판 `risk.js`와 같은 구성(시나리오 꼬리 30 · 시장 25 · 공급망 20 · 포지셔닝 10 · 사건 10 · 모델 5)을 저장소 데이터(시계열·intel.auto·PortWatch·COT·채점표)로 계산합니다. 트립와이어 경로 `risk.index`.
+
+## 생산물 (`products.py`)
+
+```bash
+python dashboard/pipeline/run.py products   # products/DIB-YY-MMDD.md, products/WR-YY-MMDD-NN.md, products/index.json, data/products_index.json
+```
+
+DIB는 매 실행마다 당일 것을 다시 쓰고, WR은 발동 트립와이어와 `data/warnings_pending.json`(경보단계 변경 Issue가 남김)마다 하루 한 번만 발행합니다. 수집(6시간)·일일 동기화 워크플로가 호출하고 SITREP Release가 DIB를 첨부합니다.
 
 ## 테스트
 

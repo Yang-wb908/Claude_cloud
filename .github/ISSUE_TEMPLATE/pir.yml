@@ -1,0 +1,40 @@
+name: 우선정보요구(PIR) 등록·수정
+description: 새 PIR 또는 기존 PIR의 EEI를 등록합니다. 봇이 pirs.json에 반영하고 수집 계획에 올립니다.
+title: "[PIR] "
+labels: ["pir"]
+body:
+  - type: input
+    id: pid
+    attributes:
+      label: PIR id
+      description: 기존 PIR에 EEI를 추가할 때(예 PIR-3). 비우면 새 PIR.
+  - type: dropdown
+    id: pri
+    attributes:
+      label: 우선순위
+      options: ["1", "2", "3"]
+  - type: dropdown
+    id: th
+    attributes:
+      label: 전역
+      options: ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", "macro", "weather"]
+  - type: input
+    id: q
+    attributes:
+      label: 정보 요구(질문)
+      description: 새 PIR일 때. 의사결정에 필요한 한 문장 질문.
+  - type: input
+    id: owner
+    attributes:
+      label: 담당과
+  - type: input
+    id: due
+    attributes:
+      label: 기한 (YYYY-MM-DD)
+  - type: textarea
+    id: eei
+    attributes:
+      label: EEI (한 줄에 하나)
+      description: "질문 | 징후 | 수집원 id(쉼표)"
+      placeholder: |
+        이란 외무부 통항 조건 성명 변화 | '무조건 재개' 표현 등장 | gnews_iran,reuters_world

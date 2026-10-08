@@ -1,6 +1,6 @@
 """Economic risk index (server side, daily) — the same construction as risk.js on the board, from repo data.
 
-Writes dashboard/data/risk.json (today's index, components, per-asset grades, book VaR, Korea basket) and appends to
+Writes dashboard/data/risk.json (today's index, components, per-asset grades, Korea basket) and appends to
 dashboard/data/risk_history.json so the board can chart the index over time. Used by SITREP, badges and tripwires.
 """
 
@@ -28,7 +28,7 @@ def _q(sorted_vals, f):
 
 
 def simulate_all(scen: dict, view: list[dict], n: int = 3000, seed: int = 5) -> tuple[dict[str, list[float]], dict[str, list[int]], int]:
-    """Like forecast.simulate but keeps the draws (per asset) and scenario occurrence flags, for basket/book math."""
+    """Like forecast.simulate but keeps the draws (per asset) and scenario occurrence flags, for basket math."""
     T = {t["id"]: t for t in scen["templates"]}
     sel = [{"t": T[v["id"]], "p": (v.get("p") if v.get("p") is not None else T[v["id"]]["p"]) / 100, "k": v.get("k", 1)} for v in view if v["id"] in T]
     groups: dict[str, list[dict]] = {}
@@ -79,7 +79,6 @@ def compute(dash: Path, src_dir: Path | None = None, now: datetime | None = None
     snap = json.loads((dash / "data_snapshot.json").read_text()) if (dash / "data_snapshot.json").exists() else {"events": []}
     auto = json.loads((dash / "intel.auto.json").read_text()) if (dash / "intel.auto.json").exists() else {}
     score = json.loads((dash / "data" / "scorecard.json").read_text()) if (dash / "data" / "scorecard.json").exists() else None
-    book = json.loads((dash / "data" / "book_mtm.json").read_text()) if (dash / "data" / "book_mtm.json").exists() else None
     sims, occ, H = simulate_all(scen, view_doc.get("scenarios", []))
     n = len(next(iter(sims.values()))) if sims else 0
     comp = {}
@@ -121,23 +120,11 @@ def compute(dash: Path, src_dir: Path | None = None, now: datetime | None = None
         sc = clamp01(0.6 * clamp01(span) + 0.4 * clamp01(A.get("vol", 20) / 80))
         per_asset.append({"id": a, "p5": round(p5, 1), "p95": round(p95, 1), "score": round(sc, 3), "grade": 5 if sc >= .75 else 4 if sc >= .55 else 3 if sc >= .38 else 2 if sc >= .22 else 1})
     per_asset.sort(key=lambda x: -x["score"])
-    book_risk = None
-    items = [t for t in (book or {}).get("items", []) if t.get("status") == "open" and t.get("cm") in sims]
-    if items:
-        pnl = [sum((-1 if t.get("side") == "short" else 1) * (t.get("size") or 1) * sims[t["cm"]][i] for t in items) for i in range(n)]
-        ps = sorted(pnl); k = max(1, int(.05 * n))
-        cond = []
-        for sid, flags in occ.items():
-            vals = [pnl[i] for i in range(n) if flags[i]]
-            if vals:
-                cond.append({"id": sid, "pnl": round(sum(vals) / len(vals), 2), "occ": round(len(vals) / n, 3)})
-        cond.sort(key=lambda c: c["pnl"])
-        book_risk = {"n": len(items), "mean": round(sum(pnl) / n, 2), "var95": round(ps[k - 1], 2), "es95": round(sum(ps[:k]) / k, 2), "p_up": round(sum(1 for x in pnl if x > 0) / n, 3), "cond": cond[:6]}
     kr = [{"a": a, "n": nm, "w": w, "e": round(sum(sims[a]) / n, 2)} for a, w, nm in KR_BASKET if a in sims]
     level = "심각" if index >= 75 else "높음" if index >= 55 else "보통" if index >= 35 else "낮음"
     return {"generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "d": now.strftime("%Y-%m-%d"), "index": index, "level": level, "h": H, "weights": W,
             "components": {k: {"v": round(clamp01(v["v"]), 3), "d": v["d"]} for k, v in comp.items()}, "basket": {"mean": round(bmean, 2), "p50": round(b50, 2), "p95": round(b95, 2)},
-            "per_asset": per_asset, "book": book_risk, "korea": kr}
+            "per_asset": per_asset, "korea": kr}
 
 
 def run(dash: Path, src_dir: Path | None = None, write: bool = True) -> dict:
@@ -147,7 +134,7 @@ def run(dash: Path, src_dir: Path | None = None, write: bool = True) -> dict:
         (dash / "data" / "risk.json").write_text(json.dumps(r, ensure_ascii=False, indent=1))
         hp = dash / "data" / "risk_history.json"
         hist = json.loads(hp.read_text()) if hp.exists() else []
-        hist = [h for h in hist if h.get("d") != r["d"]] + [{"d": r["d"], "index": r["index"], "tail": r["components"]["tail"]["v"], "market": r["components"]["market"]["v"], "supply": r["components"]["supply"]["v"], "basket_p95": r["basket"]["p95"], "book_var95": (r["book"] or {}).get("var95")}]
+        hist = [h for h in hist if h.get("d") != r["d"]] + [{"d": r["d"], "index": r["index"], "tail": r["components"]["tail"]["v"], "market": r["components"]["market"]["v"], "supply": r["components"]["supply"]["v"], "basket_p95": r["basket"]["p95"]}]
         hp.write_text(json.dumps(hist[-400:], ensure_ascii=False))
         bd = dash / "data" / "badges"; bd.mkdir(parents=True, exist_ok=True)
         (bd / "risk.json").write_text(json.dumps({"schemaVersion": 1, "label": "econ risk", "message": f"{r['index']} {r['level']}", "color": "red" if r["index"] >= 75 else "orange" if r["index"] >= 55 else "yellow" if r["index"] >= 35 else "green"}, ensure_ascii=False))
@@ -160,8 +147,5 @@ def markdown(r: dict) -> str:
     for k in W:
         L.append(f"| {k} (×{W[k]}) | {round(100 * c[k]['v'])} | {c[k]['d']} |")
     L += ["", f"한국 수입 바스켓 {r['h']}일: 기대 {r['basket']['mean']:+.1f}% · P95 {r['basket']['p95']:+.1f}%"]
-    if r.get("book"):
-        b = r["book"]
-        L.append(f"페이퍼 북 {b['n']}개: 기대 {b['mean']:+.1f}% · VaR95 {b['var95']:+.1f}% · ES95 {b['es95']:+.1f}% · 이익 확률 {b['p_up']:.0%}" + (f" · 최악 시나리오 {b['cond'][0]['id']} ({b['cond'][0]['pnl']:+.1f}%)" if b["cond"] else ""))
     L.append("상품 위험 R5: " + (", ".join(a["id"] for a in r["per_asset"] if a["grade"] == 5) or "없음"))
     return "\n".join(L)

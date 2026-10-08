@@ -1,0 +1,436 @@
+{
+ "asof": "2026-10-08",
+ "note": "우선정보요구(PIR)와 핵심정보요소(EEI). 상황판 요구 탭과 일일 브리프의 PIR 현황, 수집 계획(수집원 매칭)의 기준이다. 새 PIR은 Issue 양식 pir.yml, 공백은 RFI로 발행한다.",
+ "items": [
+  {
+   "id": "PIR-1",
+   "pri": 1,
+   "th": "iran",
+   "q": "호르무즈 해협 통항은 언제, 어떤 조건으로 정상화되는가?",
+   "owner": "중동과",
+   "due": "2026-10-31",
+   "status": "active",
+   "tags": [
+    "middle_east",
+    "maritime",
+    "energy"
+   ],
+   "eei": [
+    {
+     "id": "1.1",
+     "q": "일일 상업선 통과 척수와 선종(유조선·LNG·컨테이너)",
+     "ind": "PortWatch·Kpler 일 통항 20척 회복 여부",
+     "src": [
+      "portwatch",
+      "hellenic",
+      "ukmto"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "1.2",
+     "q": "이란 지도부·IRGC의 통항 조건 성명과 변화",
+     "ind": "'조건 충족 시 보장' 반복 → '무조건 재개' 전환",
+     "src": [
+      "gn_hormuz",
+      "aljazeera",
+      "bbc_world"
+     ],
+     "status": "답변중",
+     "last": "2026-10-05"
+    },
+    {
+     "id": "1.3",
+     "q": "카타르·오만 중재 접촉의 실체와 미국의 수용 조건",
+     "ind": "중재국 외무장관 왕복, 미 특사 지명",
+     "src": [
+      "gn_hormuz",
+      "bbc_world"
+     ],
+     "status": "공백",
+     "last": "2026-09-28"
+    },
+    {
+     "id": "1.4",
+     "q": "미 해군 항모·상륙군 중부사령부 전개와 교전 규칙 변화",
+     "ind": "항모 3척 집결 지속, USNI 함대 추적",
+     "src": [
+      "usni",
+      "centcom"
+     ],
+     "status": "답변중",
+     "last": "2026-10-03"
+    },
+    {
+     "id": "1.5",
+     "q": "전쟁위험 보험료·VLCC 운임과 재개방 기대의 괴리",
+     "ind": "보험료 7% 상회 지속 vs FFA 하락",
+     "src": [
+      "hellenic",
+      "markets"
+     ],
+     "status": "답변중",
+     "last": "2026-10-02"
+    }
+   ]
+  },
+  {
+   "id": "PIR-2",
+   "pri": 1,
+   "th": "ukraine",
+   "q": "흑해 곡물·에너지 수출 회랑은 연말까지 유지되는가, 아니면 확전으로 끊기는가?",
+   "owner": "유럽과",
+   "due": "2026-12-31",
+   "status": "active",
+   "tags": [
+    "europe",
+    "maritime",
+    "ags"
+   ],
+   "eei": [
+    {
+     "id": "2.1",
+     "q": "러시아 흑해 곡물 터미널 가동률과 복구 일정",
+     "ind": "노보로시스크 NKHP 복구, 선적 재개 보도",
+     "src": [
+      "kyivindependent",
+      "worldgrain",
+      "bbc_world"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "2.2",
+     "q": "우크라이나 월간 곡물 수출량과 오데사 항만 피격",
+     "ind": "월 100만t 하회·항만 추가 피격",
+     "src": [
+      "worldgrain",
+      "kyivindependent"
+     ],
+     "status": "답변중",
+     "last": "2026-09-30"
+    },
+    {
+     "id": "2.3",
+     "q": "10월 말 3자 회담의 해상 휴전 문안",
+     "ind": "'해상 휴전' 문구 포함 여부",
+     "src": [
+      "kyivindependent",
+      "bbc_world"
+     ],
+     "status": "공백",
+     "last": null
+    },
+    {
+     "id": "2.4",
+     "q": "흑해 전쟁위험 보험 인수 상태",
+     "ind": "인수 중단·할증 급등",
+     "src": [
+      "hellenic"
+     ],
+     "status": "답변중",
+     "last": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "id": "PIR-3",
+   "pri": 1,
+   "th": "yemen",
+   "q": "후티는 홍해·바브엘만데브 상선 공격을 재개하는가?",
+   "owner": "중동과",
+   "due": "2026-11-15",
+   "status": "active",
+   "tags": [
+    "middle_east",
+    "maritime"
+   ],
+   "eei": [
+    {
+     "id": "3.1",
+     "q": "UKMTO·Ambrey 경보 빈도와 표적 선종",
+     "ind": "24시간 2건 이상 경보",
+     "src": [
+      "ukmto",
+      "gn_redsea"
+     ],
+     "status": "답변중",
+     "last": "2026-10-06"
+    },
+    {
+     "id": "3.2",
+     "q": "주요 선사의 수에즈 복귀·재우회 공지",
+     "ind": "머스크·하파그 희망봉 재우회",
+     "src": [
+      "gcaptain",
+      "hellenic",
+      "splash247"
+     ],
+     "status": "답변중",
+     "last": "2026-10-02"
+    },
+    {
+     "id": "3.3",
+     "q": "후티 해안 미사일·드론 전력 잔존량",
+     "ind": "연합 타격 BDA, 발사 간격",
+     "src": [
+      "centcom",
+      "twz"
+     ],
+     "status": "공백",
+     "last": null
+    }
+   ]
+  },
+  {
+   "id": "PIR-4",
+   "pri": 2,
+   "th": "ethiopia",
+   "q": "에티오피아–에리트레아는 국가 간 전쟁으로 공식 전환하는가?",
+   "owner": "아프리카과",
+   "due": "2026-11-08",
+   "status": "active",
+   "tags": [
+    "africa"
+   ],
+   "eei": [
+    {
+     "id": "4.1",
+     "q": "아세브 방면 기갑·포병 이동과 동원령",
+     "ind": "에리트레아 총동원, 메켈레 남하",
+     "src": [
+      "gn_ethiopia",
+      "addisstandard",
+      "reliefweb"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "4.2",
+     "q": "티그라이 세력(TPLF)의 편 가르기",
+     "ind": "TPLF 성명·교전 보도",
+     "src": [
+      "gn_ethiopia",
+      "acled"
+     ],
+     "status": "답변중",
+     "last": "2026-10-06"
+    },
+    {
+     "id": "4.3",
+     "q": "홍해 남부 항로·지부티 물류 영향",
+     "ind": "지부티항 혼잡, 보험료",
+     "src": [
+      "hellenic"
+     ],
+     "status": "공백",
+     "last": null
+    }
+   ]
+  },
+  {
+   "id": "PIR-5",
+   "pri": 2,
+   "th": "korea",
+   "q": "북한은 당 창건일 전후 전략 도발(핵실험·ICBM)을 감행하는가?",
+   "owner": "한반도과",
+   "due": "2026-10-20",
+   "status": "active",
+   "tags": [
+    "korea"
+   ],
+   "eei": [
+    {
+     "id": "5.1",
+     "q": "풍계리·동창리 활동 징후",
+     "ind": "3번 갱도 차량·인원, 발사대 조립",
+     "src": [
+      "nknews",
+      "gn_korea"
+     ],
+     "status": "답변중",
+     "last": "2026-10-05"
+    },
+    {
+     "id": "5.2",
+     "q": "발사 빈도·유형 (2026 누계 16회)",
+     "ind": "정상각 ICBM·SLBM",
+     "src": [
+      "gn_korea",
+      "yonhap_en"
+     ],
+     "status": "답변중",
+     "last": "2026-10-03"
+    },
+    {
+     "id": "5.3",
+     "q": "DMZ 지뢰·총격 사건의 의도성",
+     "ind": "반복·확대 여부",
+     "src": [
+      "gn_korea"
+     ],
+     "status": "답변중",
+     "last": "2026-10-04"
+    }
+   ]
+  },
+  {
+   "id": "PIR-6",
+   "pri": 2,
+   "th": "taiwan",
+   "q": "중국은 미 항모 공백기에 대만 압박을 '격리'로 격상하는가?",
+   "owner": "동아시아과",
+   "due": "2026-11-30",
+   "status": "active",
+   "tags": [
+    "east_asia",
+    "maritime"
+   ],
+   "eei": [
+    {
+     "id": "6.1",
+     "q": "PLA 일일 항공기·함정 활동",
+     "ind": "항공기 40대 이상 연속 3일",
+     "src": [
+      "taiwan_mnd"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "6.2",
+     "q": "중국 해경의 '검역·임검' 용어·행동",
+     "ind": "상선 임검 사례",
+     "src": [
+      "gn_taiwan",
+      "diplomat"
+     ],
+     "status": "답변중",
+     "last": "2026-10-05"
+    },
+    {
+     "id": "6.3",
+     "q": "미·중 휴전 연장의 대만 조항",
+     "ind": "관세·희토류 통제 재개",
+     "src": [
+      "bbc_world",
+      "gn_tariff"
+     ],
+     "status": "답변중",
+     "last": "2026-09-28"
+    }
+   ]
+  },
+  {
+   "id": "PIR-7",
+   "pri": 1,
+   "th": "macro",
+   "q": "에너지·곡물·운임 충격은 한국 수입물가와 금리에 어느 정도, 언제 전이되는가?",
+   "owner": "경제분석과",
+   "due": "2026-12-31",
+   "status": "active",
+   "tags": [
+    "markets",
+    "energy",
+    "ags",
+    "maritime"
+   ],
+   "eei": [
+    {
+     "id": "7.1",
+     "q": "브렌트·JKM·요소 가격과 한국 도입가 시차",
+     "ind": "2개월 시차 반영률",
+     "src": [
+      "markets",
+      "eia_tie",
+      "argus_news"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "7.2",
+     "q": "원/달러·국채 10년물과 외국인 자금",
+     "ind": "1,400원·5.5% 돌파",
+     "src": [
+      "markets",
+      "koreaherald"
+     ],
+     "status": "답변중",
+     "last": "2026-10-07"
+    },
+    {
+     "id": "7.3",
+     "q": "컨테이너·VLCC 운임의 수출입 비용 전이",
+     "ind": "WCI·TD3C",
+     "src": [
+      "fbx",
+      "hellenic"
+     ],
+     "status": "답변중",
+     "last": "2026-10-02"
+    },
+    {
+     "id": "7.4",
+     "q": "정부 비축유 방출·세제 대응",
+     "ind": "방출 결정, 유류세",
+     "src": [
+      "gn_korea",
+      "yonhap_en"
+     ],
+     "status": "공백",
+     "last": null
+    }
+   ]
+  },
+  {
+   "id": "PIR-8",
+   "pri": 3,
+   "th": "weather",
+   "q": "엘니뇨는 역대급으로 정점에 이르며 식량·운하·에너지 수급을 어떻게 바꾸는가?",
+   "owner": "경제분석과",
+   "due": "2027-01-31",
+   "status": "active",
+   "tags": [
+    "weather",
+    "ags"
+   ],
+   "eei": [
+    {
+     "id": "8.1",
+     "q": "NOAA·BOM ENSO 진단과 ONI",
+     "ind": "ONI 2.0 이상",
+     "src": [
+      "noaa_enso"
+     ],
+     "status": "답변중",
+     "last": "2026-10-05"
+    },
+    {
+     "id": "8.2",
+     "q": "인도·동남아 쌀·설탕·팜유 수출 정책",
+     "ind": "수출 제한 재도입",
+     "src": [
+      "usda_wasde",
+      "agweb"
+     ],
+     "status": "답변중",
+     "last": "2026-10-03"
+    },
+    {
+     "id": "8.3",
+     "q": "파나마운하 수위·흘수 제한",
+     "ind": "가툰호 80ft 하회",
+     "src": [
+      "gcaptain"
+     ],
+     "status": "답변중",
+     "last": "2026-09-28"
+    }
+   ]
+  }
+ ]
+}
