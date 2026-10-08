@@ -28,10 +28,12 @@ jobs:
           node-version: "22"
       - run: pip install -r dashboard/pipeline/requirements.txt
       - name: Claude Code CLI (구독 토큰 모드)
-        if: ${{ env.OAUTH != '' }}
         env:
           OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        run: npm install -g @anthropic-ai/claude-code
+          APIKEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # 같은 step의 env는 if 조건에서 보이지 않으므로 셸에서 판정한다
+          if [ -n "$OAUTH" ] && [ -z "$APIKEY" ]; then npm install -g @anthropic-ai/claude-code && claude --version; else echo "구독 토큰 없음(또는 API 키 우선) → CLI 설치 생략"; fi
       - name: 에이전트 실행
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -44,7 +46,7 @@ jobs:
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
           git add dashboard/data/advisor.json reports/ADVISOR-latest.md
-          git diff --cached --quiet || (git commit -m "data: 에이전트 분석관 제안 $(date -u +%Y-%m-%d) [skip ci]" && git push)
+          git diff --cached --quiet || (git commit -m "data: 에이전트 분석관 제안 $(date -u +%Y-%m-%d) [skip ci]" && git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push)
       - name: 제안 Issue 생성 (intake 봇이 충격표를 댓글로, 체크박스를 켜면 하우스 뷰 채택)
         env:
           GH_TOKEN: ${{ github.token }}
