@@ -1,16 +1,16 @@
 ### 주간 백테스트 2026-10-08
-시계열 26개 · 사건 연구 60건 · 판단 장부 69건(판정 0건)
+시계열 26개 · 사건 연구 47건 · 판단 장부 69건(판정 0건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | -0.06 | -1.96 | None | None | None |
-| wheat | 0.36 | 0.92 | None | None | None |
-| gold | -0.13 | -1.1 | None | None | None |
-| dxy | 0.17 | 0.45 | None | None | None |
-| vix | 0.92 | -3.42 | None | None | None |
-| kospi | -1.98 | -0.97 | None | None | None |
-| krw | 0.37 | -0.9 | None | None | None |
-| spx | -0.17 | 1.17 | None | None | None |
+| brent | 4.97 | None | None | None | None |
+| wheat | 0.4 | None | None | None | None |
+| gold | 0.03 | None | None | None | None |
+| dxy | 0.13 | None | None | None | None |
+| vix | 6.17 | None | None | None | None |
+| kospi | -2.62 | None | None | None | None |
+| krw | 0.37 | None | None | None | None |
+| spx | -0.22 | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
 |---|---|---|---|---|---|

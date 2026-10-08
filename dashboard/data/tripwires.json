@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T10:47:18Z",
+ "generated": "2026-10-08T10:58:49Z",
  "fired": [
   {
    "id": "korea_missile",
@@ -7,10 +7,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 2,
+   "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-08T10:47:18Z"
+   "at": "2026-10-08T10:58:49Z"
   },
   {
    "id": "maritime_attacks",
@@ -18,10 +18,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 17,
+   "current": 30,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T10:47:18Z"
+   "at": "2026-10-08T10:58:49Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 22,
+   "current": 38,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-08T10:47:18Z"
+   "at": "2026-10-08T10:58:49Z"
   },
   {
    "id": "copper_6",
@@ -40,10 +40,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.64,
+   "current": 6.63,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-08T10:47:18Z"
+   "at": "2026-10-08T10:58:49Z"
   },
   {
    "id": "bio_health_events",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 12,
+   "current": 13,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T10:47:18Z"
+   "at": "2026-10-08T10:58:49Z"
   }
  ]
 }
