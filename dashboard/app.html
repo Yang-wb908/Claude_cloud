@@ -459,6 +459,8 @@ a.btn{text-decoration:none;display:inline-block}
 .achc{border:1px solid var(--line);background:transparent;border-radius:6px;min-width:34px;padding:3px 0;font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
 .achc.vCC{background:color-mix(in srgb,var(--s1) 35%,transparent)} .achc.vC{background:color-mix(in srgb,var(--s1) 16%,transparent)} .achc.vI{background:color-mix(in srgb,var(--s5) 18%,transparent)} .achc.vII{background:color-mix(in srgb,var(--s5) 38%,transparent)}
 tr.nondiag td{opacity:.6}
+.riskhist{width:100%;height:120px;display:block;margin:6px 0 2px}
+.opsx .block{border-bottom:1px solid var(--line)}
 .pir h3 .pid{font-family:var(--mono);font-size:12px;color:var(--c);margin-right:4px}
 .eei tr.gap td{background:color-mix(in srgb,var(--s5) 7%,transparent)} .eei td:first-child,.eei td:nth-child(2){white-space:normal;font-family:var(--sans);font-size:12.5px;text-align:left}
 .tag.ok{background:color-mix(in srgb,var(--s1) 18%,transparent);color:var(--s1)}
@@ -650,7 +652,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
             <button class="sug">72시간 내 가장 먼저 바뀔 지표</button>
             <button class="sug">해협 물동량 수치로 본 공급 충격의 실제 크기</button>
             <button class="sug">강대국 구도에서 한국이 선택을 강요받을 지점</button>
-            <button class="sug">이번 주 가장 비대칭적인 원자재 포지션과 촉매</button>
+            <button class="sug">이번 주 경제 위험지수를 가장 크게 움직일 촉매</button>
             <button class="sug">호르무즈·홍해 시나리오별 브렌트·TTF·운임 방향</button>
             <button class="sug">수집 공백을 메우려면 무엇을 먼저 찾아야 하나</button>
           </div>
@@ -1412,7 +1414,7 @@ function renderEventList(){
   $("#evcount").textContent = `${list.length}건 표시, 기준일 ${md(REF)}${MODE === "live" ? " (실시간)" : ""}`;
   $("#evlist").innerHTML = list.map(e => {
     const th = e.th && TH[e.th];
-    return `<li class="t${e.t}" data-id="${e.id}"><time>${md(e.d)}</time><div><div class="meta"><span class="ttag">${esc(TYPES[e.t].n)}</span><span>${esc(e.p || "")}${th ? " · " + esc(th.name) : ""}</span>${gradeBadge(e.s, e.g)}${e.auto ? '<span class="auto-tag">AUTO</span>' : ""}${e.at ? "" : '<span class="noloc">위치 미상</span>'}</div><p class="${e.lang === "en" ? "en-txt" : ""}"${e.lang === "en" ? ' lang="en"' : ""}>${esc(e.x)}</p></div></li>`;
+    return `<li class="t${e.t}" data-id="${e.id}"><time>${md(e.d)}</time><div><div class="meta"><span class="ttag">${esc(TYPES[e.t].n)}</span><span>${esc(e.p || "")}${th ? " · " + esc(th.name) : ""}</span>${gradeBadge(e.s, e.g)}${e.cc > 1 ? `<span class="tag ok" title="독립 출처 ${e.cc}곳이 보도">교차 ×${e.cc}</span>` : ""}${e.auto ? '<span class="auto-tag">AUTO</span>' : ""}${e.at ? "" : '<span class="noloc">위치 미상</span>'}</div><p class="${e.lang === "en" ? "en-txt" : ""}"${e.lang === "en" ? ' lang="en"' : ""}>${esc(e.x)}</p></div></li>`;
   }).join("") || `<li style="display:block;cursor:default;color:var(--muted)">선택한 기간과 유형에 해당하는 사건이 없어요. 기간을 넓히거나 유형을 켜 보세요.</li>`;
 }
 $("#evlist").addEventListener("click", e => {
@@ -1454,8 +1456,9 @@ function renderSea(){
   } else {
     cps = `<div class="block sev5"><h3>호르무즈 해협</h3><span class="meta">IMF PortWatch 9/27</span><div class="bigrow"><span class="big">1척</span><span class="delta">하루 통과, 평시 85척</span></div></div>`;
   }
-  const pwBlock = AUTO && AUTO.portwatch && Object.keys(AUTO.portwatch).length ? `<div class="block sev3"><h3>IMF PortWatch 일일 통항 <span class="en">auto · A2</span></h3><span class="meta">AIS 기반 · 자동 수집 ${esc(AUTO.generated || "")}</span>
-    ${Object.entries(AUTO.portwatch).map(([k, v]) => { const L = v.latest || {}; const pts = (v.series || []).filter(x => x[1] != null).map(x => [x[0], x[1]]); return `<div class="bigrow" style="margin-top:12px"><span class="big">${esc(String(L.n_total ?? "-"))}</span><span class="delta">${esc(CP_NAME[k] || k)} · ${esc(L.d || "")} · 7일 평균 ${esc(String(v.avg7 ?? "-"))} · 28일 ${esc(String(v.avg28 ?? "-"))}</span></div>${pts.length > 1 ? spark(pts, "sev3", p => p[0] + " " + p[1] + "척") : ""}`; }).join("")}</div>` : "";
+  const sarBlock = typeof opsSarHtml === "function" ? opsSarHtml() : "";
+  const pwBlock = (sarBlock || "") + (AUTO && AUTO.portwatch && Object.keys(AUTO.portwatch).length ? `<div class="block sev3"><h3>IMF PortWatch 일일 통항 <span class="en">auto · A2</span></h3><span class="meta">AIS 기반 · 자동 수집 ${esc(AUTO.generated || "")}</span>
+    ${Object.entries(AUTO.portwatch).map(([k, v]) => { const L = v.latest || {}; const pts = (v.series || []).filter(x => x[1] != null).map(x => [x[0], x[1]]); return `<div class="bigrow" style="margin-top:12px"><span class="big">${esc(String(L.n_total ?? "-"))}</span><span class="delta">${esc(CP_NAME[k] || k)} · ${esc(L.d || "")} · 7일 평균 ${esc(String(v.avg7 ?? "-"))} · 28일 ${esc(String(v.avg28 ?? "-"))}</span></div>${pts.length > 1 ? spark(pts, "sev3", p => p[0] + " " + p[1] + "척") : ""}`; }).join("")}</div>` : "");
   $("#p-sea").innerHTML = pwBlock + `
   <p class="note"><b>해협별 물동량·통항·보험료</b>입니다. 블록 제목을 누르면 지구본이 그 해협으로 돌아갑니다. 수치마다 날짜와 출처 등급이 붙어 있습니다.</p>
   ${cps}
@@ -1977,7 +1980,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

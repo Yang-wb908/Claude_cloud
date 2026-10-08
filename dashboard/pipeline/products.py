@@ -101,6 +101,22 @@ def dib(dash: Path, now: datetime | None = None) -> tuple[str, str]:
         L += ["", f"분석 정확도(채점 {score['n_scored']}건): 방향 {o['dir']:.0%} · 90% 구간 {o['cov90']:.0%} · 스킬 {o['skill']}"]
     gaps2 = list(iw["bluf"].get("gaps", [])) + list(auto.get("gaps", []))[:5]
     L += ["", "## 8. 수집 공백·요청", ""] + [f"- {g}" for g in gaps2[:10]]
+    cov = _load(dash / "data" / "coverage.json", None)
+    if cov and cov.get("clusters"):
+        L += ["", "### 미분류 보도 군집 (전역 밖에서 커지는 사안)", ""] + [f"- {c['key']} · {c['n']}건 · 출처 {c['domains']}곳 · {c['sample'][0]['title'] if c['sample'] else ''}" for c in cov["clusters"][:5]]
+    sar = auto.get("sar") or []
+    if sar:
+        L += ["", "### 자체 수집 (Sentinel-1 선박 탐지)", ""] + [f"- {x['aoi']} {x['d']}: {x['ships']}척 ({x.get('product', '')})" for x in sar]
+    hv_auto = _load(dash / "data" / "house_view_auto.json", None)
+    if hv_auto:
+        moved = [v for v in hv_auto.get("scenarios", []) if abs(v["p"] - v["prior"]) >= 1]
+        if moved:
+            L += ["", "### 징후 기반 확률 갱신 (자동 뷰)", ""] + [f"- {v['id']}: {v['prior']}% → {v['p']}% ({', '.join(e['note'] for e in v.get('evidence', [])[:3])})" for v in moved[:8]]
+    rt = _load(dash / "data" / "redteam.json", None)
+    if rt and rt.get("judgments"):
+        L += ["", f"## 8b. 레드팀 ({rt.get('week')})", ""] + [f"- **{r['id']}** 대안 {round((r.get('p_alt') or 0) * 100)}%: {r['counter'][:200]}" for r in rt["judgments"][:5]]
+        for k in rt.get("kac", [])[:3]:
+            L.append(f"- 핵심 가정 점검 · {k['th']}: " + " / ".join(f"{a['a']} ({a['confidence']})" for a in k.get("assumptions", [])[:3]))
     L += ["", "## 9. 다음 24~72시간 감시", ""] + [f"- {w.get('x')} ({w.get('why', '')})" for w in iw["bluf"].get("watch", [])[:8]]
     L += ["", "## 10. 분석 기준 점검 (ICD 203)", "", "- [x] 판단마다 신뢰도·확률 용어 표기", "- [x] 출처 등급(Admiralty) 사건별 표기", "- [x] 가정·대안 가설 명시(ACH 탭)", "- [ ] 당직 분석관 검토 서명", "- [ ] 소비자 피드백 반영(RFI 이슈)", "",
           f"_{sid} · 다음 DIB 익일 09:40 KST · 질의는 RFI 이슈로_"]
@@ -125,6 +141,58 @@ def warning_report(dash: Path, trigger: dict, n: int, now: datetime | None = Non
     return sid, "\n".join(L)
 
 
+def md_to_html(md: str, title: str) -> str:
+    """Small Markdown subset (headings, bullets, tables, bold/italic, links) to a phone-friendly standalone page."""
+    import html as H
+    import re as _re
+    out, in_ul, in_tbl = [], False, False
+
+    def inline(t: str) -> str:
+        t = H.escape(t)
+        t = _re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
+        t = _re.sub(r"(?<!\*)\*(?!\*)(.+?)\*", r"<i>\1</i>", t)
+        t = _re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
+        t = _re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2">\1</a>', t)
+        return t
+
+    for line in md.splitlines():
+        if line.startswith("|"):
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if all(_re.fullmatch(r"-{3,}", c) for c in cells):
+                continue
+            if not in_tbl:
+                out.append("<table>"); in_tbl = True
+            out.append("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in cells) + "</tr>")
+            continue
+        elif in_tbl:
+            out.append("</table>"); in_tbl = False
+        if line.startswith("- "):
+            if not in_ul:
+                out.append("<ul>"); in_ul = True
+            out.append(f"<li>{inline(line[2:])}</li>")
+            continue
+        elif in_ul and not line.startswith("  "):
+            out.append("</ul>"); in_ul = False
+        if line.startswith("# "):
+            out.append(f"<h1>{inline(line[2:])}</h1>")
+        elif line.startswith("## "):
+            out.append(f"<h2>{inline(line[3:])}</h2>")
+        elif line.startswith("### "):
+            out.append(f"<h3>{inline(line[4:])}</h3>")
+        elif line.strip():
+            out.append(f"<p>{inline(line)}</p>")
+    if in_ul:
+        out.append("</ul>")
+    if in_tbl:
+        out.append("</table>")
+    css = ("body{font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;max-width:720px;margin:0 auto;padding:16px;line-height:1.55;color:#18242E;background:#fff}"
+           "h1{font-size:20px;border-bottom:2px solid #18242E;padding-bottom:6px}h2{font-size:16px;margin-top:22px;border-left:4px solid #D3271D;padding-left:8px}h3{font-size:14px;color:#56687A}"
+           "table{border-collapse:collapse;width:100%;font-size:12.5px}td{border:1px solid #CBD5DC;padding:4px 6px;vertical-align:top}tr:first-child td{background:#EEF2F4;font-weight:600}"
+           "li{margin:3px 0;font-size:14px}p{font-size:14px}code{background:#EEF2F4;padding:0 4px;border-radius:3px}@media(prefers-color-scheme:dark){body{background:#0D1A22;color:#E4ECF1}td{border-color:#213441}tr:first-child td{background:#122330}h1{border-color:#E4ECF1}code{background:#122330}}"
+           "@media print{body{max-width:none}}")
+    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{H.escape(title)}</title><style>{css}</style></head><body>' + "\n".join(out) + "</body></html>"
+
+
 def run(dash: Path, out_dir: Path, now: datetime | None = None) -> dict:
     now = now or datetime.now(UTC)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -134,6 +202,7 @@ def run(dash: Path, out_dir: Path, now: datetime | None = None) -> dict:
     written = []
     sid, text = dib(dash, now)
     (out_dir / f"{sid}.md").write_text(text)
+    (dash / "brief.html").write_text(md_to_html(text, f"{sid} 일일 정보 브리프"))
     index["products"] = [p for p in index["products"] if p["serial"] != sid]
     index["products"].append({"serial": sid, "kind": "DIB", "d": now.strftime("%Y-%m-%d"), "title": "일일 정보 브리프", "cls": "UNCLASSIFIED // OSINT", "path": f"products/{sid}.md"})
     written.append(sid)

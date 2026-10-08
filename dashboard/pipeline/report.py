@@ -21,23 +21,12 @@ TH_KO = {"iran": "이란·호르무즈", "ukraine": "러시아–우크라이나
 
 
 def _bluf_claude(payload: dict) -> str | None:
-    if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
+    from . import llm
+    if llm.mode() is None:
         return None
-    try:
-        import anthropic
-        client = anthropic.Anthropic()
-        resp = client.beta.messages.create(
-            model=os.environ.get("PIPELINE_MODEL", "claude-opus-5-5"), max_tokens=2000,
-            betas=["server-side-fallback-2026-07-01"], fallbacks="default",
-            system="너는 국가 정보기관의 일일 상황보고(SITREP) 작성관이다. 주어진 데이터만 근거로 한국어 BLUF 4~6문장을 쓴다. 수치는 날짜와 함께, 추론은 추론이라 밝힌다. 마크다운 기호 없이 평문.",
-            messages=[{"role": "user", "content": json.dumps(payload, ensure_ascii=False)[:60000]}],
-        )
-        if resp.stop_reason == "refusal":
-            return None
-        return next(b.text for b in resp.content if b.type == "text").strip()
-    except Exception as e:  # noqa: BLE001 - report must still be written
-        log.warning("Claude BLUF failed: %s", e)
-        return None
+    res = llm.complete_json("너는 국가 정보기관 상황실의 선임 분석관이다. 아래 JSON(지난 24시간 사건·시세·해협 통항·트립와이어)으로 한국어 BLUF 3~5문장을 쓴다. 판단에는 신뢰도와 확률 용어를 붙이고 출처 등급이 낮은 사건은 '미확인'으로 표시한다.",
+                            json.dumps(payload, ensure_ascii=False)[:60000], {"type": "object", "properties": {"bluf": {"type": "string"}}, "required": ["bluf"], "additionalProperties": False})
+    return res.get("bluf") if isinstance(res, dict) else None
 
 
 def build_report(dash: Path, now: datetime | None = None) -> str:

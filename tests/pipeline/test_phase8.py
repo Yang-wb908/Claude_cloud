@@ -1,0 +1,79 @@
+import json
+import shutil
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "dashboard"))
+DASH = ROOT / "dashboard"
+
+from pipeline import assemble, bayes, calib, coverage, forecast, llm  # noqa: E402
+
+
+def test_llm_parse_json_and_mode(monkeypatch):
+    assert llm.parse_json('{"a": 1}') == {"a": 1}
+    assert llm.parse_json('text before ```json\n{"a": [1,2]}\n``` after') == {"a": [1, 2]}
+    assert llm.parse_json('blah {"x": "y"} trailing') == {"x": "y"}
+    assert llm.parse_json("nothing") is None
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False); monkeypatch.delenv("CLAUDE_CODE_OAUTH_TOKEN", raising=False); monkeypatch.delenv("PIPELINE_NO_CLAUDE", raising=False)
+    assert llm.mode() is None
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k"); assert llm.mode() == "api"
+    monkeypatch.setenv("PIPELINE_NO_CLAUDE", "1"); assert llm.mode() is None
+
+
+def test_coverage_clusters_unmapped_items():
+    now = datetime(2026, 10, 8, tzinfo=UTC)
+    mk = lambda t, d, dom, th=None: {"kind": "news", "title": t, "summary": "", "published": d + "T00:00:00Z", "url": f"https://{dom}/x", "extra": {"domain": dom}, "enr": {"th": th, "rel": 2}}
+    items = [mk("Irkutsk plague scare grows", "2026-10-06", "a.com"), mk("Plague fears in Irkutsk hospital quarantine", "2026-10-07", "b.com"), mk("Irkutsk lab worker death", "2026-10-07", "c.com"),
+             mk("Mapped item about Hormuz", "2026-10-07", "d.com", th="iran"), mk("Old Irkutsk story", "2026-09-01", "e.com"), mk("Random single", "2026-10-07", "f.com")]
+    cl = coverage.clusters(items, now=now)
+    assert cl and cl[0]["n"] == 3 and cl[0]["domains"] == 3 and cl[0]["key"].endswith("이르쿠츠크")
+
+
+def test_corroboration_and_source_scores():
+    ev = [{"d": "2026-10-05", "th": "iran", "t": "M", "p": "호르무즈", "x": "유조선 피격 호르무즈 인근 공격 보도", "s": "https://www.reuters.com/a", "g": "B2", "src": "reuters"},
+          {"d": "2026-10-05", "th": "iran", "t": "M", "p": "호르무즈", "x": "호르무즈 인근 유조선 피격 공격 보도 확인", "s": "https://www.bbc.com/b", "g": "B2", "src": "bbc_world"},
+          {"d": "2026-10-06", "th": "iran", "t": "M", "p": "호르무즈", "x": "유조선 피격 호르무즈 공격 추가 보도", "s": "https://www.aljazeera.com/c", "g": "B3", "src": "aljazeera"},
+          {"d": "2026-10-05", "th": "sudan", "t": "S", "p": "엘오베이드", "x": "드론 공격", "s": "https://www.reuters.com/d", "g": "B2", "src": "reuters"}]
+    out = assemble.corroborate(ev)
+    hz = [e for e in out if e["th"] == "iran"]
+    assert all(e["cc"] == 3 for e in hz) and all(e["g"] == "B1" for e in hz) and hz[2]["g0"] == "B3"
+    assert [e for e in out if e["th"] == "sudan"][0]["cc"] == 1
+    sc = assemble.source_scores(out, [{"id": "reuters", "ok": True}], now=datetime(2026, 10, 8, tzinfo=UTC))
+    assert sc["reuters"]["n"] == 2 and sc["reuters"]["corroborated"] == 0.5 and sc["bbc_world"]["corroborated"] == 1.0
+
+
+def test_bayes_update_shifts_within_group():
+    scen = forecast.load_js(DASH, "scenario.js", "SCEN")
+    iw = forecast.load_js(DASH, "iw.js", "IW")
+    house = {"scenarios": [{"id": "hormuz_persist", "p": 60}, {"id": "hormuz_reopen", "p": 30}, {"id": "hormuz_war", "p": 10}, {"id": "fed_hawkish", "p": 25}]}
+    lr = {"scenarios": {"hormuz_war": [{"key": "tw:brent_110", "lr": 3}], "hormuz_reopen": [{"key": "tw:brent_85", "lr": 3}], "fed_hawkish": [{"key": "risk:index>=75", "lr": 2}]}}
+    res = bayes.update(house, lr, scen, iw, fired={"brent_110"}, risk_index=80)
+    p = {v["id"]: v for v in res["scenarios"]}
+    assert p["hormuz_war"]["p"] > 10 and p["hormuz_persist"]["p"] < 60 and abs(sum(p[k]["p"] for k in ("hormuz_persist", "hormuz_reopen", "hormuz_war")) - 100) < 1.5
+    assert p["fed_hawkish"]["p"] > 25 and p["fed_hawkish"]["evidence"][0]["key"] == "risk:index>=75"
+    res0 = bayes.update(house, lr, scen, iw, fired=set(), risk_index=10)
+    assert all(abs(v["p"] - v["prior"]) < 1e-6 for v in res0["scenarios"] if not v["evidence"])
+
+
+def test_calibration_from_analogs():
+    scen = forecast.load_js(DASH, "scenario.js", "SCEN")
+    an = forecast.load_js(DASH, "analogs.js", "ANALOGS")
+    c = calib.calibrate(scen, an)
+    assert "hormuz_war" in c and "brent" in c["hormuz_war"]["assets"] and c["hormuz_war"]["assets"]["brent"]["n"] >= 2
+
+
+def test_forecast_auto_view_scored_separately(tmp_path):
+    dash = tmp_path / "dashboard"; (dash / "data").mkdir(parents=True)
+    (dash / "data" / "house_view.json").write_text(json.dumps({"asof": "2026-10-01", "scenarios": [{"id": "hormuz_war", "p": 40, "k": 1}]}))
+    (dash / "data" / "house_view_auto.json").write_text(json.dumps({"asof": "2026-10-01", "scenarios": [{"id": "hormuz_war", "p": 70, "k": 1}]}))
+    forecast.make_forecast(dash, src_dir=DASH, date="2026-10-01")
+    forecast.make_forecast(dash, src_dir=DASH, date="2026-10-01", view_name="auto")
+    assert (dash / "data" / "forecasts" / "2026-10-01-auto.json").exists()
+    import datetime as dt
+    d0 = dt.date(2026, 10, 1); dates = [(d0 + dt.timedelta(days=i)).isoformat() for i in range(40)]
+    (dash / "data" / "series.json").write_text(json.dumps({"series": {"BZ=F": {"l": "b", "d": dates, "c": [100 * 1.01 ** i for i in range(40)]}}}))
+    sc = forecast.score(dash)
+    assert sc["n_forecasts"] == 2 and sc["overall"]["n"] == 1 and sc["overall_auto"]["n"] == 1
+    assert sc["forecasts"][1]["view_name"] == "auto" and sc["forecasts"][1]["view"][0]["p"] == 70

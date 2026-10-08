@@ -167,4 +167,26 @@ OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact
 
 최신 화면: `https://yang-wb908.github.io/Claude_cloud/snapshots/latest.png`
 
-처음 켤 때: 저장소 Settings → Pages에서 Source를 **GitHub Actions**로 두고, Secrets에 `ANTHROPIC_API_KEY`(선택)를 넣은 뒤 Actions 탭에서 `상황판 수집`을 한 번 수동 실행합니다.
+### 켜는 순서 (운영 런북)
+
+1. **브랜치** 예약 워크플로는 기본 브랜치의 파일만 등록됩니다. Settings → General → Default branch를 `claude/compassionate-rubin-jmaq9e`로 바꾸거나(권장, 클릭 두 번) 이 브랜치를 기본 브랜치에 병합합니다. 바꾸기 전에도 `ops/RUN` 파일을 고쳐 푸시하면 `bootstrap.yml`이 작업 브랜치에서 전체 파이프라인을 1회 실행하고 결과를 커밋합니다.
+2. **Pages** Settings → Pages → Source를 **GitHub Actions**로. 배포 주소 `https://yang-wb908.github.io/Claude_cloud/`.
+3. **Claude 자격증명 (둘 중 하나)**
+   - `CLAUDE_CODE_OAUTH_TOKEN` — Claude Pro/Max 구독으로 씁니다. 브라우저가 있는 PC에서 `claude setup-token`을 실행해 나온 `sk-ant-oat…` 값을 Secrets에 넣습니다. 워크플로가 Claude Code CLI를 설치해 `claude -p`로 요약·분류·레드팀·에이전트를 돌립니다(구독 사용량 소모, API 과금 없음).
+   - `ANTHROPIC_API_KEY` — console.anthropic.com의 선불 크레딧을 쓰는 API 키. 둘 다 있으면 API 키가 우선합니다. Max 구독 자체에는 API 크레딧이 포함되지 않습니다.
+   - 둘 다 없으면 규칙 기반 분류·수집·채점·위험 지수는 그대로 돌고, Claude가 쓰는 BLUF·레드팀·에이전트 제안만 빠집니다.
+4. **전파(선택)** `SLACK_WEBHOOK_URL`(일일 브리프 BLUF·트립와이어 전송), `MAIL_SERVER`/`MAIL_USER`/`MAIL_PASS`/`MAIL_TO`(브리프 HTML 이메일).
+5. **첫 점검** 부트스트랩 실행의 Job Summary에서 실패 수집원 표를 보고 `sources.yaml`의 `verify: true` 항목을 정리합니다.
+
+| 추가 기능 (8차) | 역할 |
+|---|---|
+| `bootstrap.yml` | `ops/RUN` 푸시로 작업 브랜치에서 전체 파이프라인 1회 실행·커밋·트립와이어 Issue |
+| 누락 감지 `coverage.py` | 어느 전역에도 안 묶이는 관련 보도를 군집화해 `data/coverage.json`에 기록. 5건 이상이면 트립와이어 `coverage_surge`가 Issue를 열고 수집원 탭·DIB에 표시 |
+| 교차검증 `assemble.corroborate` | 같은 사건을 보도한 독립 매체 수(cc)를 세어 신빙성 숫자를 올리고(3곳 이상 → 1), 출처별 30일 교차확인율·신빙성 평균을 수집원 탭에 표시. 한 범주의 수집 실패는 직전 값을 유지 |
+| IMINT `imint.yml` | 주 1회 공개 Sentinel-1 영상에서 호르무즈·바브엘만데브·수에즈 AOI의 선박 수를 저장소의 K-CFAR 탐지기로 세어 해협 탭에 표시 |
+| 징후 갱신 `bayes.py` | 트립와이어·징후 상태·위험 지수의 우도비(`data/indicator_lr.json`)로 하우스 뷰를 베이즈 갱신한 자동 뷰를 매일 만들고, 예측·채점을 하우스 뷰와 나란히 기록 |
+| 사례 보정 `calib.py` | 과거 사례 +20일 분포로 시나리오별 조건부 충격을 추정해 시나리오 탭에 병기, 토글로 적용 |
+| 레드팀 `redteam.yml` | 매주 화요일 Claude가 핵심 판단마다 반론·핵심 가정 점검을 써서 이견 채널과 DIB에 싣고 Issue로 올림 |
+| 전파 | 일일 브리프를 휴대폰용 `dashboard/brief.html`과 PDF로 만들고 Slack·이메일로 전송(시크릿 설정 시) |
+| UI 스모크 테스트 | `validate.yml`이 Playwright로 모든 탭을 열어 화면 깨짐을 검사 |
+| 되감기·추이 | 당직 탭의 날짜 되감기(그날의 경보단계·열린 판단·위험 지수), 위험도 탭의 지수 추이 차트 |

@@ -28,7 +28,7 @@ import yaml
 HERE = Path(__file__).resolve().parent
 DASH = HERE.parent
 sys.path.insert(0, str(DASH))
-from pipeline import advisor, assemble, backtest, collectors, enrich, fetch, forecast, products, report, risk, tripwires  # noqa: E402
+from pipeline import advisor, assemble, backtest, bayes, calib, collectors, coverage, enrich, fetch, forecast, products, redteam, report, risk, tripwires  # noqa: E402
 
 log = logging.getLogger("pipeline")
 RAW = HERE / "cache" / "raw.json"
@@ -94,6 +94,8 @@ def cmd_enrich(args) -> None:
 def cmd_assemble(args) -> None:
     enr = json.loads(ENR.read_text())
     res = assemble.assemble(enr["items"], enr["status"])
+    cov = coverage.run(DASH, enr["items"])
+    log.info("coverage: unmapped %d, largest cluster %s (%d)", cov["unmapped_total"], cov["max_key"], cov["max_cluster"])
     c = res["auto"]["counts"]
     log.info("assembled: +%d events (%d candidates), markets %d, portwatch %d", c["added"], c["candidates"], len(res["auto"]["markets"]), len(res["auto"]["portwatch"]))
 
@@ -125,6 +127,36 @@ def cmd_series(args) -> None:
 def cmd_forecast(args) -> None:
     doc = forecast.make_forecast(DASH)
     log.info("forecast %s: %d scenarios, %d assets (top: %s)", doc["d"], len(doc["view"]), len(doc["rows"]), ", ".join(f"{r['a']} {r['e']:+.1f}" for r in doc["rows"][:5]))
+    if (DASH / "data" / "house_view_auto.json").exists():
+        auto = forecast.make_forecast(DASH, view_name="auto")
+        log.info("forecast(auto) %s: top %s", auto["d"], ", ".join(f"{r['a']} {r['e']:+.1f}" for r in auto["rows"][:3]))
+
+
+def cmd_bayes(args) -> None:
+    res = bayes.run(DASH)
+    log.info("bayes: %s", ", ".join(f"{v['id']} {v['prior']}→{v['p']}" for v in res["scenarios"] if abs(v["p"] - v["prior"]) >= 0.5) or "no change")
+
+
+def cmd_calib(args) -> None:
+    res = calib.run(DASH)
+    log.info("calib: %d scenarios with analog-based shocks", len(res["scenarios"]))
+
+
+def cmd_redteam(args) -> None:
+    rt = redteam.run(DASH)
+    if rt:
+        (DASH.parent / "reports").mkdir(exist_ok=True)
+        (DASH.parent / "reports" / "REDTEAM-latest.md").write_text(redteam.markdown(rt))
+        log.info("redteam: %d counter-arguments, %d dissents added", len(rt["judgments"]), rt["added"])
+    else:
+        log.info("redteam skipped")
+
+
+def cmd_simulate(args) -> None:
+    """Read-only helper for the CLI agent: python run.py simulate '[{"id":"hormuz_war","p":30,"k":1}]'"""
+    scen = forecast.load_js(DASH, "scenario.js", "SCEN")
+    view = json.loads(args.only or "[]")
+    print(json.dumps(forecast.simulate(scen, view, n=3000, seed=3)[:15], ensure_ascii=False))
 
 
 def cmd_score(args) -> None:
@@ -167,14 +199,14 @@ def cmd_build(args) -> None:
 
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description="세계 상황판 수집 파이프라인")
-    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "risk", "products", "advise", "report", "build", "all"])
+    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "risk", "bayes", "calib", "redteam", "simulate", "products", "advise", "report", "build", "all"])
     ap.add_argument("--offline", action="store_true", help="네트워크 없이 캐시만 사용")
-    ap.add_argument("--only", help="수집원 id 목록(쉼표)")
+    ap.add_argument("--only", help="수집원 id 목록(쉼표) · simulate 에서는 JSON view")
     ap.add_argument("--no-claude", action="store_true", help="규칙 기반 분류만 사용")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
-    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "risk": cmd_risk, "products": cmd_products, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
+    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "risk": cmd_risk, "bayes": cmd_bayes, "calib": cmd_calib, "redteam": cmd_redteam, "simulate": cmd_simulate, "products": cmd_products, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
     if args.cmd == "all":
         for name in ["collect", "enrich", "assemble", "tripwires", "report", "build"]:
             steps[name](args)

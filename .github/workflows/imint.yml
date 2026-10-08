@@ -1,0 +1,46 @@
+name: IMINT 주간 (Sentinel-1 선박 탐지)
+
+on:
+  schedule:
+    - cron: "30 2 * * 0"             # 일요일 02:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r dashboard/pipeline/requirements.txt && pip install -e .
+      - name: 호르무즈·바브엘만데브·수에즈 AOI 선박 수 (공개 AWS Sentinel-1 GRD, K-CFAR)
+        env:
+          SARSHIP_ENABLE: "1"
+          PIPELINE_NO_CLAUDE: "1"
+        run: |
+          set -euo pipefail
+          python dashboard/pipeline/run.py collect --only sarship
+          python dashboard/pipeline/run.py enrich --no-claude
+          python dashboard/pipeline/run.py assemble
+          python dashboard/build.py
+          python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          a = json.load(open("dashboard/intel.auto.json"))
+          print("## Sentinel-1 선박 수\n\n| AOI | 날짜 | 척수 | 장면 |\n|---|---|---|---|")
+          for s in a.get("sar", []): print(f"| {s['aoi']} | {s['d']} | {s['ships']} | {s.get('product','')} |")
+          EOF
+      - name: 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/intel.auto.json dashboard/data
+          git diff --cached --quiet || (git commit -m "data: IMINT Sentinel-1 선박 수 $(date -u +%Y-%m-%d) [skip ci]" && git push)

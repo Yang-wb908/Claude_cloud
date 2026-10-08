@@ -1,0 +1,131 @@
+{
+ "scenarios": [
+  {
+   "id": "hormuz_persist",
+   "p": 73.1,
+   "k": 1,
+   "prior": 60.0,
+   "evidence": [
+    {
+     "key": "ind:iran:0",
+     "f": 2.0,
+     "note": "이란 유조선·상선 공격 재개"
+    }
+   ]
+  },
+  {
+   "id": "hormuz_reopen",
+   "p": 17.2,
+   "k": 1,
+   "prior": 30.0,
+   "evidence": [
+    {
+     "key": "ind:iran:0",
+     "f": 0.5,
+     "note": "공격 재개는 재개방과 불일치"
+    }
+   ]
+  },
+  {
+   "id": "hormuz_war",
+   "p": 9.7,
+   "k": 1,
+   "prior": 10.0,
+   "evidence": []
+  },
+  {
+   "id": "redsea_houthi",
+   "p": 25.0,
+   "k": 1,
+   "prior": 25.0,
+   "evidence": []
+  },
+  {
+   "id": "redsea_calm",
+   "p": 30.0,
+   "k": 1,
+   "prior": 30.0,
+   "evidence": []
+  },
+  {
+   "id": "blacksea_escalate",
+   "p": 15.0,
+   "k": 1,
+   "prior": 15.0,
+   "evidence": []
+  },
+  {
+   "id": "blacksea_deal",
+   "p": 30.0,
+   "k": 1,
+   "prior": 30.0,
+   "evidence": []
+  },
+  {
+   "id": "taiwan_quarantine",
+   "p": 5.0,
+   "k": 1,
+   "prior": 5.0,
+   "evidence": []
+  },
+  {
+   "id": "us_china_tariff",
+   "p": 25.0,
+   "k": 1,
+   "prior": 25.0,
+   "evidence": []
+  },
+  {
+   "id": "korea_strategic",
+   "p": 10.0,
+   "k": 1,
+   "prior": 10.0,
+   "evidence": []
+  },
+  {
+   "id": "fed_hawkish",
+   "p": 25.0,
+   "k": 1,
+   "prior": 25.0,
+   "evidence": []
+  },
+  {
+   "id": "elnino_super",
+   "p": 70.0,
+   "k": 1,
+   "prior": 70.0,
+   "evidence": []
+  },
+  {
+   "id": "gulf_hurricane",
+   "p": 35.0,
+   "k": 1,
+   "prior": 35.0,
+   "evidence": []
+  },
+  {
+   "id": "ethiopia_war",
+   "p": 50.0,
+   "k": 1,
+   "prior": 50.0,
+   "evidence": []
+  },
+  {
+   "id": "bio_spread",
+   "p": 5.3,
+   "k": 1,
+   "prior": 10.0,
+   "evidence": [
+    {
+     "key": "ind:bio:0",
+     "f": 0.5,
+     "note": "접촉자 2차 발병"
+    }
+   ]
+  }
+ ],
+ "asof": "2026-10-08",
+ "mode": "auto",
+ "base_asof": "2026-10-08",
+ "fired": []
+}

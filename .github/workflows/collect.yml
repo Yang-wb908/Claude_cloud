@@ -38,9 +38,18 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r dashboard/pipeline/requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Claude Code CLI (구독 토큰 모드)
+        if: ${{ env.OAUTH != '' }}
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: npm install -g @anthropic-ai/claude-code
       - name: 수집 → 보강 → 조립 → 트립와이어 → 보고서 → 빌드
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           PIPELINE_NO_CLAUDE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.claude) && '1' || '' }}
           PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
         run: |
@@ -49,6 +58,7 @@ jobs:
           python dashboard/pipeline/run.py enrich
           python dashboard/pipeline/run.py assemble
           python dashboard/pipeline/run.py tripwires
+          python dashboard/pipeline/run.py bayes
           python dashboard/pipeline/run.py report
           python dashboard/pipeline/run.py products
       - name: RFI·수집원 제안 Issue를 데이터로 내보내기
@@ -59,9 +69,6 @@ jobs:
           gh issue list --label source-proposal --state open --json number,title,url,createdAt --limit 50 > dashboard/data/source_proposals.json || echo "[]" > dashboard/data/source_proposals.json
       - name: index.html 빌드
         run: python dashboard/build.py
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
       - name: 상황판 스크린샷 아카이브 (snapshots/latest.png, 일 1회 날짜본)
         continue-on-error: true
         run: |
@@ -73,6 +80,25 @@ jobs:
           D=$(date -u +%Y-%m-%d)
           [ -f "dashboard/snapshots/$D.png" ] || cp dashboard/snapshots/latest.png "dashboard/snapshots/$D.png"
           ls dashboard/snapshots | tail -n +31 | sed 's#^#dashboard/snapshots/#' | grep -v latest | xargs -r rm -f   # 최근 30일만 보관
+      - name: 브리프 PDF (products/DIB-*.pdf)
+        continue-on-error: true
+        run: |
+          D=$(ls products/DIB-*.md 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
+          [ -f dashboard/brief.html ] && npx --yes playwright@1.48.2 pdf --browser chromium "file://$PWD/dashboard/brief.html" "${D%.md}.pdf" || true
+      - name: Slack 전파 (SLACK_WEBHOOK_URL 설정 시)
+        if: ${{ env.HOOK != '' }}
+        env:
+          HOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, re, urllib.request
+          d = json.load(open("dashboard/data/tripwires.json"))
+          fired = d.get("fired", [])
+          if not fired: raise SystemExit(0)
+          text = "*[상황판 트립와이어]* " + " · ".join(f"{t['title']} ({t['current']})" for t in fired[:6])
+          req = urllib.request.Request(os.environ["HOOK"], data=json.dumps({"text": text}).encode(), headers={"Content-Type": "application/json"})
+          urllib.request.urlopen(req, timeout=20)
+          EOF
       - name: 트립와이어 출력
         id: trip
         run: |

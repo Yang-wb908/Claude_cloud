@@ -215,9 +215,28 @@ def markdown(res: dict, t: Tools) -> str:
     return "\n".join(L)
 
 
+def cli_advise(dash: Path) -> dict | None:
+    """Subscription-token mode: Claude Code reads the repository itself (Read/Grep) and runs read-only helpers."""
+    from . import llm
+    task = ("오늘 기준으로 하우스 뷰를 재검토하라. 읽을 파일: dashboard/data/house_view.json, dashboard/data/house_view_auto.json(징후 갱신본), dashboard/data/scorecard.json, "
+            "dashboard/data/judgments.json, dashboard/data/risk.json, dashboard/data_snapshot.json(최근 7일 사건), dashboard/scenario.js, dashboard/analogs.js. "
+            "시뮬레이션이 필요하면 `python3 dashboard/pipeline/run.py simulate '<JSON view>'` 를 실행하라. 오늘: " + datetime.now(UTC).strftime("%Y-%m-%d"))
+    res = llm.agent_json(SYSTEM, task, cwd=dash.parent, helpers=["python3 dashboard/pipeline/run.py simulate*", "python3 dashboard/pipeline/run.py:*"])
+    if isinstance(res, dict) and "proposals" in res:
+        res["claude"] = True; res["model"] = "claude-code-cli"
+        return res
+    return None
+
+
 def run(dash: Path, use_claude: bool = True) -> dict:
+    from . import llm
     t = Tools(dash)
-    res = claude_advise(t) if use_claude and os.environ.get("ANTHROPIC_API_KEY") else None
+    res = None
+    if use_claude:
+        if llm.mode() == "api":
+            res = claude_advise(t)
+        elif llm.mode() == "cli":
+            res = cli_advise(dash)
     if res is None:
         res = rules_advise(t)
     res["generated"] = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")

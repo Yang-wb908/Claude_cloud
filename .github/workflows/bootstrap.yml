@@ -1,0 +1,99 @@
+name: 부트스트랩 실행 (작업 브랜치에서 전체 파이프라인 1회)
+
+# 예약(schedule)·수동(workflow_dispatch) 워크플로는 기본 브랜치에 파일이 있어야 등록된다.
+# 기본 브랜치를 바꾸기 전에도 이 워크플로는 push 이벤트로 돌므로, ops/RUN 파일을 고쳐 푸시하면 전체 파이프라인이 1회 실행되고 결과가 이 브랜치에 커밋된다.
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["ops/RUN"]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: bootstrap-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run-all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: Claude Code CLI (구독 토큰 모드)
+        if: ${{ env.OAUTH != '' }}
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: npm install -g @anthropic-ai/claude-code
+      - name: 전체 파이프라인
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+        run: |
+          set -euo pipefail
+          python dashboard/pipeline/run.py collect
+          python dashboard/pipeline/run.py enrich
+          python dashboard/pipeline/run.py assemble
+          python dashboard/pipeline/run.py series || echo "series failed (continuing)"
+          python dashboard/pipeline/run.py tripwires
+          python dashboard/pipeline/run.py bayes
+          python dashboard/pipeline/run.py calib
+          python dashboard/pipeline/run.py forecast
+          python dashboard/pipeline/run.py score
+          python dashboard/pipeline/run.py backtest
+          python dashboard/pipeline/run.py risk
+          python dashboard/pipeline/run.py report
+          python dashboard/pipeline/run.py products
+          python dashboard/build.py
+      - name: 수집원 상태 요약
+        run: |
+          python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          a = json.load(open("dashboard/intel.auto.json"))
+          ok = [s for s in a["sources"] if s["ok"]]; bad = [s for s in a["sources"] if not s["ok"]]
+          print(f"## 수집원 {len(ok)}/{len(a['sources'])} 정상 · 항목 {a['counts']['raw']} · 새 사건 {a['counts']['added']} · Claude {a['counts']['claude']}\n")
+          print("| 실패 수집원 | 오류 |\n|---|---|")
+          for s in bad: print(f"| {s['id']} | {str(s.get('err',''))[:120]} |")
+          c = json.load(open("dashboard/data/coverage.json")) if __import__('os').path.exists("dashboard/data/coverage.json") else None
+          if c: print(f"\n미분류 군집: 최대 {c['max_cluster']} ({c['max_key']}) · 총 {c['unmapped_total']}")
+          EOF
+      - name: 결과 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data products reports
+          git diff --cached --quiet || (git commit -m "data: 부트스트랩 수집 $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]" && git push)
+      - name: 트립와이어 Issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'EOF'
+          import json, subprocess
+          d = json.load(open("dashboard/data/tripwires.json"))
+          for t in d["fired"]:
+              title = f"[TRIPWIRE] {t['title']}"
+              existing = subprocess.run(["gh", "issue", "list", "--label", "tripwire", "--state", "open", "--search", json.dumps(title), "--json", "number,title"], capture_output=True, text=True).stdout
+              if any(i["title"] == title for i in json.loads(existing or "[]")): continue
+              body = f"**현재값** {t['current']} (임계 {t['op']} {t['threshold']})\n\n{t.get('why','')}\n\n발동 {t['at']} · 부트스트랩 실행에서 자동 생성"
+              subprocess.run(["gh", "label", "create", "tripwire", "--color", "B60205", "--force"], check=False)
+              subprocess.run(["gh", "issue", "create", "--title", title, "--body", body, "--label", "tripwire"], check=False)
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bootstrap-${{ github.run_id }}
+          path: |
+            dashboard/pipeline/cache
+            dashboard/index.html
+          retention-days: 7

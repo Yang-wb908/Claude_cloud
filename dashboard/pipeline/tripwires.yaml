@@ -137,3 +137,10 @@ tripwires:
     sev: 3
     th: bio
     why: "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검."
+  - id: coverage_surge
+    title: "미분류 사건 군집 급증 (어느 전역에도 속하지 않는 보도 5건 이상)"
+    metric: coverage.max_cluster
+    op: ">="
+    value: 5
+    sev: 3
+    why: "새 위기가 전역 밖에서 터지고 있을 가능성. 수집원 탭의 미분류 군집을 보고 새 전역 등록(PIR Issue)을 검토."

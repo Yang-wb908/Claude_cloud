@@ -27,10 +27,22 @@ jobs:
         with:
           node-version: "22"
       - run: pip install -r dashboard/pipeline/requirements.txt
-      - name: 시계열 → 오늘 예측 스냅숏 → 지난 예측 채점 → 백테스트 → 빌드
+      - name: Claude Code CLI (구독 토큰 모드)
+        if: ${{ env.OAUTH != '' }}
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: npm install -g @anthropic-ai/claude-code
+      - name: 시계열 → 징후 갱신 → 오늘 예측 스냅숏 → 지난 예측 채점 → 백테스트 → 위험도 → 생산물 → 빌드
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
         run: |
           set -euo pipefail
           python dashboard/pipeline/run.py series
+          python dashboard/pipeline/run.py tripwires
+          python dashboard/pipeline/run.py bayes
+          python dashboard/pipeline/run.py calib
           python dashboard/pipeline/run.py forecast
           python dashboard/pipeline/run.py score
           python dashboard/pipeline/run.py backtest
@@ -41,8 +53,43 @@ jobs:
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json dashboard/data/risk.json dashboard/data/risk_history.json dashboard/data/badges dashboard/data/products_index.json dashboard/data/warnings_pending.json products reports
+          git add dashboard/data/house_view_auto.json dashboard/data/shock_calib.json dashboard/data/tripwires.json dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json dashboard/data/risk.json dashboard/data/risk_history.json dashboard/data/badges dashboard/data/products_index.json dashboard/data/warnings_pending.json products reports dashboard/brief.html
           git diff --cached --quiet || (git commit -m "data: 일일 동기화 $(date -u +%Y-%m-%d) 예측·채점 [skip ci]" && git push)
+      - name: 브리프 PDF
+        continue-on-error: true
+        run: |
+          D=$(ls products/DIB-*.md 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
+          npx --yes playwright@1.48.2 install --with-deps chromium >/dev/null 2>&1
+          npx --yes playwright@1.48.2 pdf --browser chromium "file://$PWD/dashboard/brief.html" "${D%.md}.pdf"
+          git add "${D%.md}.pdf" && (git commit -m "products: DIB PDF [skip ci]" && git push) || true
+      - name: Slack 전파 (SLACK_WEBHOOK_URL 설정 시)
+        if: ${{ env.HOOK != '' }}
+        env:
+          HOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, re, urllib.request, glob
+          d = sorted(glob.glob("products/DIB-*.md"))[-1]
+          md = open(d).read()
+          bluf = re.search(r"## 1\. BLUF\n\n(.*?)\n\n## 2", md, re.S)
+          text = f"*{os.path.basename(d)[:-3]} 일일 정보 브리프*\n" + (bluf.group(1) if bluf else md[:1200])[:2500] + f"\n<https://github.com/{os.environ.get('GITHUB_REPOSITORY','')}/blob/{os.environ.get('GITHUB_REF_NAME','')}/{d}|전문 보기>"
+          req = urllib.request.Request(os.environ["HOOK"], data=json.dumps({"text": text}).encode(), headers={"Content-Type": "application/json"})
+          urllib.request.urlopen(req, timeout=20)
+          EOF
+      - name: 이메일 전파 (MAIL_SERVER·MAIL_USER·MAIL_PASS·MAIL_TO 설정 시)
+        if: ${{ env.MAIL != '' }}
+        env:
+          MAIL: ${{ secrets.MAIL_TO }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: 465
+          username: ${{ secrets.MAIL_USER }}
+          password: ${{ secrets.MAIL_PASS }}
+          subject: "[상황판] 일일 정보 브리프 ${{ github.run_id }}"
+          to: ${{ secrets.MAIL_TO }}
+          from: 세계 상황판
+          html_body: file://dashboard/brief.html
       - name: 적중 요약을 Job Summary에
         run: cat reports/RISK-latest.md reports/SCORECARD-latest.md >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v3

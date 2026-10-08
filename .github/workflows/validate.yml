@@ -47,6 +47,11 @@ jobs:
           subprocess.run(["node", "--check", "/tmp/chk_app.js"], check=True)
           json.loads(pathlib.Path("dashboard/data_snapshot.json").read_text())
           EOF
+      - name: UI 스모크 테스트 (Playwright)
+        run: |
+          npm install --no-save playwright@1.48.2 >/dev/null 2>&1
+          npx playwright@1.48.2 install --with-deps chromium >/dev/null 2>&1
+          node tests/ui/smoke.mjs dashboard/index.html
       - name: 트립와이어·수집원 설정 검사
         run: |
           python - <<'EOF'

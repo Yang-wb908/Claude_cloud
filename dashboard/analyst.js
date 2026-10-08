@@ -6,6 +6,8 @@ const AN_ = typeof ANALOGS === "object" ? ANALOGS : {analogs: [], tripwires: [],
 const SCN_ = typeof SCEN === "object" ? SCEN : {assets: {}, templates: []};
 let HOUSE_ = typeof HOUSE === "object" ? HOUSE : null;
 let SCORE_ = typeof SCORE === "object" ? SCORE : null;
+let HAUTO_ = typeof HOUSE_AUTO === "object" ? HOUSE_AUTO : null;
+let CALIB_ = typeof CALIB === "object" ? CALIB : null;
 const pct0 = v => v == null ? "—" : Math.round(v * 100) + "%";
 const fmtPct = (v, bp) => v == null ? "—" : (v > 0 ? "+" : "") + (bp ? Math.round(v) + "bp" : (Math.abs(v) >= 10 ? v.toFixed(0) : v.toFixed(1)) + "%");
 const signCls = v => v == null ? "" : v > 0.05 ? "up" : v < -0.05 ? "down" : "flat";
@@ -16,6 +18,7 @@ const scGroupSev = th => TH[th] ? TH[th].sev : 3;
 
 /* ----- 상태: 선택·확률·강도. localStorage에 보관 ----- */
 const scState = {sel: {}, p: {}, k: {}};
+scState.calib = false; try { scState.calib = localStorage.getItem("sit-calib") === "1"; } catch(e) {}
 (function initScn(){
   const def = ["hormuz_persist", "redsea_houthi", "blacksea_escalate", "elnino_super", "gulf_hurricane"];
   SCN_.templates.forEach(t => { scState.sel[t.id] = def.includes(t.id); scState.p[t.id] = t.p; scState.k[t.id] = 1; });
@@ -25,6 +28,12 @@ function scSave(){ try { localStorage.setItem("sit-scn", JSON.stringify(scState)
 function scSelected(){ return SCN_.templates.filter(t => scState.sel[t.id]); }
 
 /* ----- 몬테카를로: 같은 전역의 시나리오는 상호배타, 전역 간 독립. 기저 잡음은 연율 변동성×√(h/252) ----- */
+function scShocks(t){
+  if (!scState.calib || !CALIB_ || !CALIB_.scenarios || !CALIB_.scenarios[t.id]) return t.shocks;
+  const c = CALIB_.scenarios[t.id].assets, out = Object.assign({}, t.shocks);
+  Object.entries(c).forEach(([a, v]) => { if (v.m != null && SCN_.assets[a] && !SCN_.assets[a].bp) out[a] = {m: v.m, s: v.s != null ? Math.max(v.s, 3) : (t.shocks[a] ? t.shocks[a].s : 8)}; });
+  return out;
+}
 function scRun(N){
   N = N || 3000;
   const sel = scSelected(); if (!sel.length) return null;
@@ -32,13 +41,14 @@ function scRun(N){
   sel.forEach(t => (groups[t.th] = groups[t.th] || []).push(t));
   const glist = Object.values(groups).map(list => { let sum = list.reduce((a, t) => a + scState.p[t.id] / 100, 0); const norm = sum > 1 ? 1 / sum : 1; return list.map(t => ({t, p: scState.p[t.id] / 100 * norm, k: scState.k[t.id]})); });
   const H = Math.max(...sel.map(t => t.h));
-  const assets = Object.keys(SCN_.assets).filter(a => sel.some(t => t.shocks[a]));
+  const SH = Object.fromEntries(sel.map(t => [t.id, scShocks(t)]));
+  const assets = Object.keys(SCN_.assets).filter(a => sel.some(t => SH[t.id][a]));
   const sims = Object.fromEntries(assets.map(a => [a, new Float64Array(N)]));
   const expected = Object.fromEntries(assets.map(a => [a, 0]));
-  glist.forEach(g => g.forEach(({t, p, k}) => Object.entries(t.shocks).forEach(([a, s]) => { expected[a] += p * k * s.m; })));
+  glist.forEach(g => g.forEach(({t, p, k}) => Object.entries(SH[t.id]).forEach(([a, s]) => { expected[a] += p * k * s.m; })));
   for (let i = 0; i < N; i++) {
     const shock = {};
-    glist.forEach(g => { const u = Math.random(); let cum = 0; for (const {t, p, k} of g) { cum += p; if (u < cum) { Object.entries(t.shocks).forEach(([a, s]) => { shock[a] = (shock[a] || 0) + k * (s.m + s.s * gauss()); }); break; } } });
+    glist.forEach(g => { const u = Math.random(); let cum = 0; for (const {t, p, k} of g) { cum += p; if (u < cum) { Object.entries(SH[t.id]).forEach(([a, s]) => { shock[a] = (shock[a] || 0) + k * (s.m + s.s * gauss()); }); break; } } });
     assets.forEach(a => { const A = SCN_.assets[a]; const noise = A.bp ? 12 * Math.sqrt(H / 20) * gauss() : A.vol * Math.sqrt(H / 252) * gauss(); sims[a][i] = A.bp ? (shock[a] || 0) + noise : Math.max(-95, (shock[a] || 0) + noise); });
   }
   const q = (arr, f) => { const s = Float64Array.from(arr).sort(); return s[Math.min(s.length - 1, Math.floor(f * s.length))]; };
@@ -87,7 +97,7 @@ function renderScenario(){
   $("#p-scn").innerHTML = `
     <div class="block"><h3>시나리오 충격 모델 <span class="en">Scenario shock model</span></h3><span class="meta">템플릿 ${SCN_.templates.length}개 · 같은 전역 안에서는 상호배타, 전역 간 독립 · 몬테카를로 3,000회 · 기저 잡음 = 연율 변동성×√(지평/252)</span>
       <p class="note">확률·강도를 조정하면 상품별 기대 변동과 분포가 다시 계산됩니다. 조건부 충격(발생 시 평균·표준편차)은 분석관 판단값이며, 과거 사례 탭의 실측 분포와 대조하세요.</p>
-      <div class="btnrow"><button class="btn" id="scRerun">다시 추출</button><button class="btn ghost" id="scReset">기본값</button>${HOUSE_ ? `<button class="btn ghost" id="scHouse" title="저장소의 하우스 뷰(${esc(HOUSE_.asof || "")}) 설정을 불러옵니다">하우스 뷰</button>` : ""}<button class="btn ghost" id="scCopy">Markdown 복사</button><a class="btn ghost" href="${issueUrl}" target="_blank" rel="noopener">GitHub Issue로 제출</a><button class="btn ghost" id="scAsk">분석관에게 넘기기</button></div></div>
+      <div class="btnrow"><button class="btn" id="scRerun">다시 추출</button><button class="btn ghost" id="scReset">기본값</button>${HOUSE_ ? `<button class="btn ghost" id="scHouse" title="저장소의 하우스 뷰(${esc(HOUSE_.asof || "")}) 설정을 불러옵니다">하우스 뷰</button>` : ""}${HAUTO_ ? `<button class="btn ghost" id="scAuto" title="트립와이어·징후로 베이즈 갱신한 자동 뷰(${esc(HAUTO_.asof || "")})">자동 뷰(징후 갱신)</button>` : ""}${CALIB_ ? `<button class="btn ghost" id="scCalib" aria-pressed="${scState.calib}">사례 보정 ${scState.calib ? "ON" : "OFF"}</button>` : ""}<button class="btn ghost" id="scCopy">Markdown 복사</button><a class="btn ghost" href="${issueUrl}" target="_blank" rel="noopener">GitHub Issue로 제출</a><button class="btn ghost" id="scAsk">분석관에게 넘기기</button></div></div>
     <div class="block"><h3>결과: 확률 가중 충격 <span class="en">${sel.length} scenarios · horizon ${res ? res.H : 0}d</span></h3>
       ${res ? scTableHtml(res) : '<p class="note">시나리오를 하나 이상 선택하세요.</p>'}
       <p class="note">기대 변동 = Σ 확률×강도×조건부 평균. 분포는 시나리오 발생 여부와 조건부 충격, 기저 잡음을 함께 추출한 결과입니다. 금리는 bp, VIX는 지수 변화율입니다.</p></div>
@@ -98,13 +108,16 @@ function renderScenario(){
       ${t.watch && t.watch.length ? `<div class="kv"><span>감시 지표</span><span>${t.watch.map(esc).join(" · ")}</span></div>` : ""}
       ${t.tripwires && t.tripwires.length ? `<div class="kv"><span>트립와이어</span><span>${t.tripwires.map(id => `<code>${esc(id)}</code>`).join(" ")}</span></div>` : ""}
       ${t.analogs && t.analogs.length ? `<div class="kv"><span>과거 사례</span><span>${t.analogs.map(id => { const a = AN_.analogs.find(x => x.id === id); return `<button class="thchip" data-analog="${esc(id)}">${esc(a ? a.n : id)}</button>`; }).join(" ")}</span></div>` : ""}
-      <div class="kv"><span>조건부 충격</span><span>${Object.entries(t.shocks).sort((x, y) => Math.abs(y[1].m) - Math.abs(x[1].m)).map(([a, s]) => `${esc((CM_BY[a] || {n: a}).n)} <b class="trend ${signCls(s.m)}">${fmtPct(s.m, SCN_.assets[a] && SCN_.assets[a].bp)}</b>±${s.s}`).join(" · ")}</span></div>
+      <div class="kv"><span>조건부 충격</span><span>${Object.entries(t.shocks).sort((x, y) => Math.abs(y[1].m) - Math.abs(x[1].m)).map(([a, s]) => { const c = CALIB_ && CALIB_.scenarios && CALIB_.scenarios[t.id] && CALIB_.scenarios[t.id].assets[a]; return `${esc((CM_BY[a] || {n: a}).n)} <b class="trend ${signCls(s.m)}">${fmtPct(s.m, SCN_.assets[a] && SCN_.assets[a].bp)}</b>±${s.s}${c && c.m != null ? ` <small title="과거 사례 ${c.n}건 +20일 평균±표준편차">(사례 ${fmtPct(c.m)}${c.s != null ? "±" + c.s : ""})</small>` : ""}`; }).join(" · ")}</span></div>
+      ${HAUTO_ && (HAUTO_.scenarios || []).find(v => v.id === t.id) ? `<div class="kv"><span>징후 갱신</span><span>${(() => { const v = HAUTO_.scenarios.find(x => x.id === t.id); return `${v.prior}% → <b>${v.p}%</b>` + (v.evidence && v.evidence.length ? " · " + v.evidence.map(e => esc(e.note) + " ×" + e.f).join(", ") : " · 발동 증거 없음"); })()}</span></div>` : ""}
     </div>`).join("")}</div>` : ""}`;
   const pane = $("#p-scn");
   pane.querySelectorAll(".scard input[type=checkbox]").forEach(cb => cb.addEventListener("change", e => { const id = e.target.closest(".scard").dataset.id; scState.sel[id] = e.target.checked; scSave(); renderScenario(); }));
   pane.querySelectorAll(".scard input[type=range]").forEach(r => { r.addEventListener("input", e => { const id = e.target.closest(".scard").dataset.id; scState.p[id] = +e.target.value; e.target.closest(".scard").querySelector(".pv").textContent = e.target.value + "%"; }); r.addEventListener("change", () => { scSave(); renderScenario(); }); });
   pane.querySelectorAll(".scard select").forEach(s => s.addEventListener("change", e => { const id = e.target.closest(".scard").dataset.id; scState.k[id] = +e.target.value; scSave(); renderScenario(); }));
   $("#scRerun").addEventListener("click", renderScenario);
+  const ab = $("#scAuto"); if (ab) ab.addEventListener("click", () => { SCN_.templates.forEach(t => { scState.sel[t.id] = false; }); (HAUTO_.scenarios || []).forEach(v => { if (scState.p[v.id] !== undefined) { scState.sel[v.id] = true; scState.p[v.id] = Math.round(v.p); scState.k[v.id] = v.k || 1; } }); scSave(); renderScenario(); });
+  const cb = $("#scCalib"); if (cb) cb.addEventListener("click", () => { scState.calib = !scState.calib; try { localStorage.setItem("sit-calib", scState.calib ? "1" : "0"); } catch(e) {} renderScenario(); });
   const hb = $("#scHouse"); if (hb) hb.addEventListener("click", () => { SCN_.templates.forEach(t => { scState.sel[t.id] = false; }); (HOUSE_.scenarios || []).forEach(v => { if (scState.p[v.id] !== undefined) { scState.sel[v.id] = true; if (v.p != null) scState.p[v.id] = v.p; scState.k[v.id] = v.k || 1; } }); scSave(); renderScenario(); });
   $("#scReset").addEventListener("click", () => { try { localStorage.removeItem("sit-scn"); } catch(e) {} SCN_.templates.forEach(t => { scState.p[t.id] = t.p; scState.k[t.id] = 1; scState.sel[t.id] = ["hormuz_persist", "redsea_houthi", "blacksea_escalate", "elnino_super", "gulf_hurricane"].includes(t.id); }); renderScenario(); });
   $("#scCopy").addEventListener("click", () => { if (!scLast) return; const md = scMarkdown(scLast); (navigator.clipboard ? navigator.clipboard.writeText(md) : Promise.reject()).then(() => { $("#scCopy").textContent = "복사됨"; setTimeout(() => $("#scCopy").textContent = "Markdown 복사", 1500); }).catch(() => { prompt("복사하세요", md); }); });
@@ -138,6 +151,7 @@ function scoreHtml(){
     ${tile("90% 구간 포함", pct0(o.cov90), "목표 90% · 50% 구간 " + pct0(o.cov50), o.cov90 == null ? "" : o.cov90 >= 0.8 ? "good" : "mid")}
     ${tile("스킬 (무변동 대비)", sk(o.skill), o.mae != null ? `MAE ${o.mae} vs ${o.mae_naive}` + (o.skill_analog != null ? ` · 과거사례 대비 ${sk(o.skill_analog)}` : "") : "0보다 크면 모델이 무변동 가정보다 낫다", o.skill == null ? "" : o.skill > 0 ? "good" : "bad")}
     ${tile("판단 Brier", lb ? lb.brier.toFixed(3) : "—", lb ? `판정 ${lb.n}건 누적 · 0.25 = 동전` : "판정 전", lb ? (lb.brier <= 0.15 ? "good" : lb.brier <= 0.25 ? "mid" : "bad") : "")}
+    ${sc.overall_auto && sc.overall_auto.n ? tile("자동 뷰 방향", pct0(sc.overall_auto.dir), `징후 갱신 뷰 ${sc.overall_auto.n}건 · 스킬 ${sk(sc.overall_auto.skill)} (하우스 ${pct0(o.dir)})`, sc.overall_auto.dir > (o.dir || 0) ? "good" : "mid") : ""}
   </div>`;
   const byDate = sc.by_date || [];
   const trend = byDate.length ? `<div class="sctrend">${byDate.slice(-40).map(d => `<div class="c" title="${esc(d.d)} · 방향 ${pct0(d.dir)} · 90% 포함 ${pct0(d.cov90)} · MAE ${d.mae}"><i style="height:${Math.round((d.dir || 0) * 100)}%"></i><b style="bottom:${Math.round((d.cov90 || 0) * 100)}%"></b></div>`).join("")}</div><p class="note">예측일별 방향 적중률(막대)과 90% 구간 포함률(점). 최근 ${Math.min(40, byDate.length)}건.</p>` : "";

@@ -159,6 +159,19 @@ SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영�
 
 def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) -> dict[str, dict]:
     """Returns {item_id: refinement}. Silently returns {} when no credentials are available."""
+    from . import llm
+    if llm.mode() == "cli":
+        out: dict[str, dict] = {}
+        for i in range(0, len(items), batch):
+            chunk = items[i:i + batch]
+            lines = [{"id": it["id"], "source": it.get("extra", {}).get("domain", ""), "date": it["published"][:10], "title": it["title"], "summary": it.get("summary", "")[:400]} for it in chunk]
+            res = llm.complete_json(SYSTEM, "항목:\n" + json.dumps(lines, ensure_ascii=False), SCHEMA)
+            for r in (res or {}).get("items", []) if isinstance(res, dict) else []:
+                if r.get("id"):
+                    out[r["id"]] = r
+        return out
+    if llm.mode() != "api":
+        return {}
     try:
         import anthropic
     except ImportError:

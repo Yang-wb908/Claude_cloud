@@ -250,6 +250,41 @@ def series(src: dict, cfg: dict) -> list[dict]:
     return out
 
 
+# ── IMINT: Sentinel-1 ship counts over chokepoint AOIs (src/sarship) ──────────
+def sar(src: dict, cfg: dict) -> list[dict]:
+    """kind: sar — only when SARSHIP_ENABLE=1 (slow: scene search + CFAR over a bbox). One metric item per AOI with the latest scene."""
+    import os
+    if os.environ.get("SARSHIP_ENABLE") != "1":
+        return []
+    from datetime import date, timedelta
+    try:
+        from sarship.detect import DetectorConfig, ShipDetector
+        from sarship.s1 import S1Product
+        from sarship.search import search
+    except ImportError as e:
+        log.warning("sarship not installed: %s", e)
+        return []
+    out = []
+    days = [date.today() - timedelta(d) for d in range(int(src.get("lookback_days", 4)))]
+    for aoi in src.get("aois", []):
+        try:
+            hits = list(search(aoi["lon"], aoi["lat"], days, "IW", "DV"))
+            if not hits:
+                log.info("sar: no scene for %s in %d days", aoi["id"], len(days)); continue
+            info = sorted(hits, key=lambda h: h.get("startTime", ""))[-1]
+            product = S1Product.from_aws(info["path"])
+            res = ShipDetector(DetectorConfig(pol="vv", method="k", pfa=1e-5)).run(product, bbox=tuple(aoi["bbox"]))
+            d = (info.get("startTime") or "")[:10] or date.today().isoformat()
+            out.append({"sid": src["id"], "title": f"Sentinel-1 ships {aoi['id']}", "summary": "", "url": f"https://sentinel-s1-l1c.s3.amazonaws.com/{info['path']}", "published": d + "T00:00:00Z",
+                        "lang": "en", "kind": "metric", "extra": {"metric": "sar", "aoi": aoi["id"], "date": d, "ships": len(res.detections), "product": info.get("id") or info["path"], "bbox": aoi["bbox"], "domain": "sentinel-s1-l1c"}})
+        except Exception as e:  # noqa: BLE001
+            log.warning("sar %s failed: %s", aoi.get("id"), e)
+    return out
+
+
+COLLECTORS["sar"] = sar
+
+
 # ── Wikipedia Current events (port of the in-page parser) ──────────────────
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]

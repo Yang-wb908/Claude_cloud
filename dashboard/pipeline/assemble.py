@@ -38,6 +38,93 @@ def to_event(it: dict) -> dict | None:
             "s": it.get("url") or "", "g": it.get("grade"), "src": it.get("sid"), "lang": e.get("lang", "en"), "auto": True, "id": it["id"]}
 
 
+_TOK = re.compile(r"[a-z0-9가-힣]{3,}")
+STOPW = set("the and for with from that this into after over under says said amid news live update reuters".split())
+
+
+def _toks(s: str) -> set[str]:
+    return {t for t in _TOK.findall((s or "").lower()) if t not in STOPW}
+
+
+def _dom(e: dict) -> str:
+    m = re.match(r"https?://(?:www\.)?([^/]+)", e.get("s") or "")
+    return m.group(1) if m else (e.get("src") or "")
+
+
+def corroborate(events: list[dict], window_days: int = 1, jaccard: float = 0.45) -> list[dict]:
+    """Cluster near-duplicate reports (same theater, dates within `window_days`, token overlap or same place+type) across
+    distinct source domains. Each event gets cc (independent domains) and its Admiralty credibility digit becomes 1 when
+    corroborated by >= 2 other domains, 2 when by one, otherwise unchanged. The cluster keeps every report (no deletion)."""
+    ev = [e for e in events if e.get("x")]
+    toks = [_toks(e["x"]) for e in ev]
+    n = len(ev)
+    parent = list(range(n))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]; i = parent[i]
+        return i
+
+    by_th: dict[str, list[int]] = {}
+    for i, e in enumerate(ev):
+        by_th.setdefault(e.get("th") or "_", []).append(i)
+    for idxs in by_th.values():
+        for a in range(len(idxs)):
+            i = idxs[a]
+            for b in range(a + 1, len(idxs)):
+                j = idxs[b]
+                try:
+                    dd = abs((datetime.fromisoformat(ev[i]["d"]) - datetime.fromisoformat(ev[j]["d"])).days)
+                except ValueError:
+                    continue
+                if dd > window_days:
+                    continue
+                same_place = ev[i].get("p") and ev[i].get("p") == ev[j].get("p") and ev[i].get("t") == ev[j].get("t")
+                inter = len(toks[i] & toks[j]); union = len(toks[i] | toks[j]) or 1
+                if same_place or inter / union >= jaccard:
+                    parent[find(i)] = find(j)
+    groups: dict[int, list[int]] = {}
+    for i in range(n):
+        groups.setdefault(find(i), []).append(i)
+    for members in groups.values():
+        doms = {_dom(ev[i]) for i in members if _dom(ev[i])}
+        cc = max(1, len(doms))
+        for i in members:
+            e = ev[i]
+            e["cc"] = cc
+            g = e.get("g") or ""
+            if cc >= 3 and len(g) == 2 and g[1] > "1":
+                e["g"], e["g0"] = g[0] + "1", e.get("g0") or g
+            elif cc == 2 and len(g) == 2 and g[1] > "2":
+                e["g"], e["g0"] = g[0] + "2", e.get("g0") or g
+    return events
+
+
+def source_scores(events: list[dict], status: list[dict], keep_days: int = 30, now: datetime | None = None) -> dict:
+    """Per source id: items in window, share corroborated by another domain, mean credibility digit; a reliability hint."""
+    now = now or datetime.now(UTC)
+    cutoff = (now - timedelta(days=keep_days)).strftime("%Y-%m-%d")
+    agg: dict[str, dict] = {}
+    for e in events:
+        sid = e.get("src")
+        if not sid or e.get("d", "") < cutoff:
+            continue
+        a = agg.setdefault(sid, {"n": 0, "corr": 0, "cred": []})
+        a["n"] += 1
+        if (e.get("cc") or 1) >= 2:
+            a["corr"] += 1
+        g = e.get("g") or ""
+        if len(g) == 2 and g[1].isdigit():
+            a["cred"].append(int(g[1]))
+    out = {}
+    ok = {s["id"]: s.get("ok") for s in status}
+    for sid, a in agg.items():
+        share = a["corr"] / a["n"] if a["n"] else 0
+        out[sid] = {"n": a["n"], "corroborated": round(share, 2), "cred": round(sum(a["cred"]) / len(a["cred"]), 2) if a["cred"] else None,
+                    "hint": "교차확인 높음" if a["n"] >= 5 and share >= 0.5 else "단독 보도 많음" if a["n"] >= 5 and share < 0.2 else "표본 적음", "ok": ok.get(sid)}
+    return out
+
+
 def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days: int = 30, per_day_theater: int = 12) -> list[dict]:
     cutoff = (now - timedelta(days=keep_days)).strftime("%Y-%m-%d")
     seen_url = {e.get("s") for e in existing if e.get("s")}
@@ -61,7 +148,7 @@ def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days
 
 
 def metrics_from(items: list[dict]) -> dict:
-    markets, pw, pla, cot, enso, fbx = [], {}, [], [], None, []
+    markets, pw, pla, cot, enso, fbx, sar = [], {}, [], [], None, [], []
     for it in items:
         ex = it.get("extra", {})
         if it.get("kind") != "metric":
@@ -79,6 +166,8 @@ def metrics_from(items: list[dict]) -> dict:
             enso = {"d": ex["date"], "status": ex.get("status"), "synopsis": ex.get("synopsis")}
         elif ex.get("metric") == "fbx":
             fbx.append({"lane": ex["lane"], "v": ex["value"], "d": ex["date"]})
+        elif ex.get("metric") == "sar":
+            sar.append({"aoi": ex["aoi"], "d": ex["date"], "ships": ex["ships"], "product": ex.get("product"), "src": it.get("url")})
     for c, s in pw.items():
         s["series"] = sorted({tuple(x) for x in s["series"]}, key=lambda x: x[0])
         s["series"] = [list(x) for x in s["series"]]
@@ -89,7 +178,7 @@ def metrics_from(items: list[dict]) -> dict:
             s["avg7"] = round(sum(vals[-7:]) / len(vals[-7:]), 1)
             s["avg28"] = round(sum(vals[-28:]) / len(vals[-28:]), 1)
     pla.sort(key=lambda x: x["d"])
-    return {"markets": markets, "portwatch": pw, "pla": pla, "cot": cot, "enso": enso, "fbx": fbx}
+    return {"markets": markets, "portwatch": pw, "pla": pla, "cot": cot, "enso": enso, "fbx": fbx, "sar": sar}
 
 
 def assemble(items: list[dict], status: list[dict], now: datetime | None = None, dash: Path = DASH, write: bool = True) -> dict:
@@ -98,14 +187,23 @@ def assemble(items: list[dict], status: list[dict], now: datetime | None = None,
     snap = json.loads(snap_path.read_text()) if snap_path.exists() else {"events": [], "cities": [], "lanes": [], "chokepoints": [], "markets": {}}
     new_events = [ev for ev in (to_event(it) for it in items) if ev]
     merged, added = merge_events(snap.get("events", []), new_events, now)
+    merged = corroborate(merged)
     snap["events"] = merged
     snap["auto_generated"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     metrics = metrics_from(items)
+    # a category empty in this run keeps the previous run's values (a single failed fetch must not blank the board)
+    prev_auto = json.loads((dash / "intel.auto.json").read_text()) if (dash / "intel.auto.json").exists() else {}
+    for k in ("markets", "portwatch", "pla", "cot", "fbx", "sar"):
+        if not metrics.get(k) and prev_auto.get(k):
+            metrics[k] = prev_auto[k]
+    if metrics.get("enso") is None and prev_auto.get("enso"):
+        metrics["enso"] = prev_auto["enso"]
+    scores = source_scores(merged, status, now=now)
     gaps = [f"{s['name']}: {s['err']}" for s in status if not s.get("ok")]
     auto = {
         "generated": snap["auto_generated"], "counts": {"raw": len(items), "candidates": len(new_events), "added": added,
                                                          "claude": sum(1 for it in items if (it.get("enr") or {}).get("claude"))},
-        "markets": metrics["markets"], "portwatch": metrics["portwatch"], "pla": metrics["pla"], "cot": metrics["cot"], "enso": metrics["enso"], "fbx": metrics["fbx"], "sources": status, "gaps": gaps,
+        "markets": metrics["markets"], "portwatch": metrics["portwatch"], "pla": metrics["pla"], "cot": metrics["cot"], "enso": metrics["enso"], "fbx": metrics["fbx"], "sar": metrics.get("sar", []), "sources": status, "source_scores": scores, "gaps": gaps,
     }
     changes = diff_against_history(auto, merged, dash)
     auto["changes"] = changes

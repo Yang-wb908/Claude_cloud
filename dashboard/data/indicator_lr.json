@@ -1,0 +1,21 @@
+{
+ "note": "시나리오별 증거와 우도비(LR). tw: 트립와이어 발동, ind: 전역 징후 상태(obs=LR, partial=√LR, no=1/√LR), risk: 경제 위험 지수. 같은 전역 안에서는 재정규화되므로 한 시나리오의 상승은 다른 시나리오의 하락으로 나타난다.",
+ "scenarios": {
+  "hormuz_persist": [{"key": "ind:iran:0", "lr": 2.0, "note": "이란 유조선·상선 공격 재개"}, {"key": "tw:hormuz_transits_low", "lr": 2.5, "note": "일 통항 10척 미만"}],
+  "hormuz_reopen": [{"key": "tw:brent_85", "lr": 3.0, "note": "브렌트 85달러 하회 — 재개방 기대"}, {"key": "ind:iran:0", "lr": 0.5, "note": "공격 재개는 재개방과 불일치"}],
+  "hormuz_war": [{"key": "tw:brent_110", "lr": 2.0, "note": "브렌트 110달러 돌파"}, {"key": "tw:vix_30", "lr": 1.5, "note": "VIX 30"}, {"key": "tw:maritime_attacks", "lr": 2.5, "note": "해상 피격 24시간 3건"}, {"key": "risk:index>=75", "lr": 1.5, "note": "경제 위험 심각"}],
+  "redsea_houthi": [{"key": "tw:bab_transits_low", "lr": 3.0, "note": "바브엘만데브 20척 미만"}, {"key": "tw:maritime_attacks", "lr": 2.0, "note": "해상 피격 급증"}],
+  "redsea_calm": [{"key": "tw:bab_transits_low", "lr": 0.4, "note": "통항 급감은 복귀와 불일치"}],
+  "blacksea_escalate": [{"key": "tw:wheat_800", "lr": 2.5, "note": "밀 8달러 돌파"}, {"key": "tw:ttf_100", "lr": 1.5, "note": "TTF 100유로"}],
+  "blacksea_deal": [{"key": "tw:wheat_800", "lr": 0.5, "note": "밀 급등은 합의와 불일치"}],
+  "taiwan_quarantine": [{"key": "tw:pla_air_40", "lr": 3.0, "note": "PLA 항공기 40대 이상"}, {"key": "tw:vix_30", "lr": 1.3, "note": "VIX 30"}],
+  "korea_strategic": [{"key": "tw:korea_missile", "lr": 1.8, "note": "24시간 내 발사"}],
+  "fed_hawkish": [{"key": "tw:us10y_55", "lr": 3.0, "note": "10년물 5.5%"}, {"key": "tw:dxy_105", "lr": 1.8, "note": "DXY 105"}],
+  "us_recession": [{"key": "tw:vix_30", "lr": 2.0, "note": "VIX 30"}, {"key": "tw:brent_85", "lr": 1.3, "note": "유가 급락"}],
+  "ethiopia_war": [{"key": "tw:ethiopia_interstate", "lr": 3.0, "note": "국가 간 교전 사건 급증"}],
+  "bio_spread": [{"key": "tw:bio_health_events", "lr": 3.0, "note": "보건 사건 급증"}, {"key": "ind:bio:0", "lr": 4.0, "note": "접촉자 2차 발병"}],
+  "elnino_super": [],
+  "gulf_hurricane": [],
+  "us_china_tariff": [{"key": "tw:dxy_105", "lr": 1.3, "note": "달러 강세"}]
+ }
+}

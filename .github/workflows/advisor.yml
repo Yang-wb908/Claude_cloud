@@ -27,9 +27,15 @@ jobs:
         with:
           node-version: "22"
       - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: Claude Code CLI (구독 토큰 모드)
+        if: ${{ env.OAUTH != '' }}
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: npm install -g @anthropic-ai/claude-code
       - name: 에이전트 실행
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
           PIPELINE_NO_CLAUDE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.claude) && '1' || '' }}
         run: python dashboard/pipeline/run.py advise

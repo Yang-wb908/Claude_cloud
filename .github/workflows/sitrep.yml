@@ -17,10 +17,19 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: Claude Code CLI (구독 토큰 모드)
+        if: ${{ env.OAUTH != '' }}
+        env:
+          OAUTH: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: npm install -g @anthropic-ai/claude-code
       - name: SITREP 생성
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
         run: python dashboard/pipeline/run.py report
       - name: 데이터 스냅숏 묶기
@@ -32,7 +41,7 @@ jobs:
           zip -qr dist/snapshot-$D.zip dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/intel.js dashboard/iw.js dashboard/theaters.js dashboard/data
           [ -f dashboard/snapshots/latest.png ] && cp dashboard/snapshots/latest.png dist/board-$D.png || true
           [ -f reports/BACKTEST-latest.md ] && cp reports/BACKTEST-latest.md dist/ || true
-          ls products/DIB-*.md 2>/dev/null | tail -1 | xargs -r -I{} cp {} dist/
+          ls products/DIB-*.md products/DIB-*.pdf 2>/dev/null | tail -2 | xargs -r -I{} cp {} dist/
       - name: 보고서 커밋
         run: |
           git config user.name "situation-board-bot"

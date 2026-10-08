@@ -108,23 +108,24 @@ def analog_baseline(scen: dict, analogs: dict, view: list[dict]) -> dict[str, fl
     return res
 
 
-def make_forecast(dash: Path, src_dir: Path | None = None, date: str | None = None, write: bool = True) -> dict:
+def make_forecast(dash: Path, src_dir: Path | None = None, date: str | None = None, write: bool = True, view_name: str = "house") -> dict:
     src_dir = src_dir or dash
     scen = load_js(src_dir, "scenario.js", "SCEN")
     analogs = load_js(src_dir, "analogs.js", "ANALOGS")
-    view_doc = json.loads((dash / "data" / "house_view.json").read_text()) if (dash / "data" / "house_view.json").exists() else {"scenarios": []}
+    vp = dash / "data" / ("house_view_auto.json" if view_name == "auto" else "house_view.json")
+    view_doc = json.loads(vp.read_text()) if vp.exists() else {"scenarios": []}
     view = view_doc.get("scenarios", [])
     date = date or datetime.now(UTC).strftime("%Y-%m-%d")
-    rows = simulate(scen, view, seed=int(date.replace("-", "")))
+    rows = simulate(scen, view, seed=int(date.replace("-", "")) + (7 if view_name == "auto" else 0))
     base = analog_baseline(scen, analogs, view)
     for r in rows:
         r["analog"] = base.get(r["a"])
     T = {t["id"]: t for t in scen["templates"]}
-    doc = {"d": date, "h": H_DAYS, "n": N_SIMS, "view": [{"id": v["id"], "n": T[v["id"]]["n"], "th": T[v["id"]]["th"], "p": v.get("p", T[v["id"]]["p"]), "k": v.get("k", 1)} for v in view if v["id"] in T],
+    doc = {"d": date, "h": H_DAYS, "n": N_SIMS, "view_name": view_name, "view": [{"id": v["id"], "n": T[v["id"]]["n"], "th": T[v["id"]]["th"], "p": v.get("p", T[v["id"]]["p"]), "k": v.get("k", 1)} for v in view if v["id"] in T],
            "view_asof": view_doc.get("asof"), "rows": rows}
     if write:
         (dash / "data" / "forecasts").mkdir(parents=True, exist_ok=True)
-        (dash / "data" / "forecasts" / f"{date}.json").write_text(json.dumps(doc, ensure_ascii=False))
+        (dash / "data" / "forecasts" / (f"{date}.json" if view_name == "house" else f"{date}-{view_name}.json")).write_text(json.dumps(doc, ensure_ascii=False))
     return doc
 
 
@@ -176,7 +177,7 @@ def _agg(items: list[dict]) -> dict:
 def score(dash: Path, write: bool = True, keep: int = 40) -> dict:
     series = json.loads((dash / "data" / "series.json").read_text()).get("series", {}) if (dash / "data" / "series.json").exists() else {}
     fdir = dash / "data" / "forecasts"
-    files = sorted(fdir.glob("*.json")) if fdir.exists() else []
+    files = sorted(fdir.glob("*.json"), key=lambda f: (f.stem[:10], "-" in f.stem[10:], f.stem)) if fdir.exists() else []  # house view before its -auto twin
     forecasts, scored_items = [], []
     for f in files:
         doc = json.loads(f.read_text())
@@ -193,16 +194,16 @@ def score(dash: Path, write: bool = True, keep: int = 40) -> dict:
                 rr["err"] = round(x - r["e"], 2); rr["err_analog"] = round(x - r["analog"], 2) if r.get("analog") is not None else None
                 if real["done"]:
                     done_n += 1
-                    scored_items.append({**rr, "d": doc["d"]})
+                    scored_items.append({**rr, "d": doc["d"], "view_name": doc.get("view_name", "house")})
             rows.append(rr)
         status = "scored" if rows and done_n == sum(1 for r in rows if "real" in r) and done_n else ("partial" if any("real" in r for r in rows) else "pending")
         elapsed = max([r.get("elapsed", 0) for r in rows] or [0])
-        forecasts.append({"d": doc["d"], "h": doc["h"], "status": status, "elapsed": elapsed, "view": doc["view"], "summary": _agg([r for r in rows if r.get("done")]),
+        forecasts.append({"d": doc["d"], "h": doc["h"], "status": status, "elapsed": elapsed, "view": doc["view"], "view_name": doc.get("view_name", "house"), "summary": _agg([r for r in rows if r.get("done")]),
                           "rows": rows})
     by_asset = {}
-    for a in sorted({i["a"] for i in scored_items}):
-        by_asset[a] = _agg([i for i in scored_items if i["a"] == a])
-    by_date = [{"d": f["d"], **f["summary"]} for f in forecasts if f["status"] == "scored"]
+    for a in sorted({i["a"] for i in scored_items if i.get("view_name", "house") == "house"}):
+        by_asset[a] = _agg([i for i in scored_items if i["a"] == a and i.get("view_name", "house") == "house"])
+    by_date = [{"d": f["d"], **f["summary"]} for f in forecasts if f["status"] == "scored" and f.get("view_name", "house") == "house"]
     pits = [i["pit"] for i in scored_items]
     pit_hist = [sum(1 for p in pits if lo / 100 <= p < (lo + 20) / 100 or (lo == 80 and p >= 1)) for lo in (0, 20, 40, 60, 80)]
     ledger = json.loads((dash / "data" / "judgments.json").read_text()) if (dash / "data" / "judgments.json").exists() else {"items": []}
@@ -211,9 +212,11 @@ def score(dash: Path, write: bool = True, keep: int = 40) -> dict:
     for j in res:
         acc.append((j["p"] - (1 if j["outcome"] in (1, True) else 0)) ** 2)
         brier_t.append({"d": j["resolved"], "n": len(acc), "brier": round(sum(acc) / len(acc), 3)})
+    house_items = [i for i in scored_items if i.get("view_name", "house") == "house"]
+    auto_items = [i for i in scored_items if i.get("view_name") == "auto"]
     out = {"generated": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), "h": H_DAYS, "series_to": max([v["d"][-1] for v in series.values()], default=None),
            "n_forecasts": len(forecasts), "n_scored": sum(1 for f in forecasts if f["status"] == "scored"), "n_pending": sum(1 for f in forecasts if f["status"] != "scored"),
-           "overall": _agg(scored_items), "by_asset": by_asset, "by_date": by_date, "pit_hist": pit_hist, "forecasts": forecasts[-keep:], "ledger_brier": brier_t}
+           "overall": _agg(house_items), "overall_auto": _agg(auto_items), "by_asset": by_asset, "by_date": by_date, "pit_hist": pit_hist, "forecasts": forecasts[-keep:], "ledger_brier": brier_t}
     if write:
         (dash / "data").mkdir(exist_ok=True)
         (dash / "data" / "scorecard.json").write_text(json.dumps(out, ensure_ascii=False))

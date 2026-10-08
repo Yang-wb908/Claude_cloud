@@ -62,10 +62,38 @@ function renderWatch(){
     <div class="block"><h3>미결 과업 <span class="en">taskings · ${tasks.length}</span></h3>${tasks.length ? `<ul class="wl">${tasks.map(t => `<li><span class="tag ${t.k === "트립와이어" || t.k === "EEI 공백" ? "hot" : ""}">${esc(t.k)}</span> ${t.url ? `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.x)}</a>` : t.tab ? `<button class="lnk" data-tab="${t.tab}">${esc(t.x)}</button>` : esc(t.x)}</li>`).join("")}</ul>` : '<p class="note">미결 과업이 없습니다.</p>'}</div>
     <div class="block"><h3>경보단계 <span class="en">WATCHCON by theater</span></h3><table class="shk"><thead><tr><th>전역</th><th>단계</th><th>기준일</th><th>최근 변경 근거</th></tr></thead><tbody>${wcRows.map(r => `<tr><td><button class="thchip sev${r.level}" data-th="${r.t.id}">${esc(r.t.name)}</button></td><td><b class="sev${r.level}" style="color:var(--c)">${r.level}</b></td><td>${esc(r.since || "")}</td><td><small>${r.h ? esc((r.h.from != null ? r.h.from + "→" + r.h.to + " · " : "") + (r.h.why || "")) : ""}</small></td></tr>`).join("")}</tbody></table>
       ${changes7.length ? `<ul class="wl">${changes7.map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")} · ${esc(c.by || "")}</small></li>`).join("")}</ul>` : ""}</div>
+    <div class="block"><h3>상황 되감기 <span class="en">rewind</span></h3><span class="meta">날짜를 고르면 그날의 경보단계·열린 판단·위험 지수·사건 수를 보여줍니다</span>
+      <div class="btnrow"><input type="date" id="rewindDate" value="${esc(REF)}" max="${esc(REF)}" style="background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 8px"><button class="btn ghost" id="rewindEv">그날 사건 보기</button></div><div id="rewindOut">${rewindHtml(REF)}</div></div>
     <div class="block"><h3>인수인계 일지 <span class="en">handover log · ${(WLOG_.entries || []).length}</span></h3>${(WLOG_.entries || []).slice(-10).reverse().map(e => `<details class="fc" ${e === last ? "open" : ""}><summary><b>${esc(e.d)} ${esc(e.t || "")}</b> ${esc(e.shift || "")} · ${esc(e.officer || "")}<small>${esc((e.summary || "").slice(0, 120))}</small></summary><p>${esc(e.summary || "")}</p>${(e.open || []).length ? `<b>미결</b><ul class="wl">${e.open.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}${(e.tasks || []).length ? `<b>과업</b><ul class="wl">${e.tasks.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</details>`).join("") || '<p class="note">기록 없음</p>'}</div>`;
+  const rd = $("#rewindDate"); if (rd) rd.addEventListener("change", () => { $("#rewindOut").innerHTML = rewindHtml(rd.value); });
+  const re = $("#rewindEv"); if (re) re.addEventListener("click", () => { const d = rd.value; REF = d; rangeDays = 1; try { renderEventList(); renderTimeline(); renderTheaters(); dirty = true; needDetail = true; } catch(e) {} setTab("p-ev"); });
   $("#watchAsk").addEventListener("click", () => { $("#q").value = `${k.d} ${shift} 교대 인수인계 브리핑 초안을 써줘. get_ops로 PIR 공백·경보단계·미결 과업을, search_events로 지난 12시간 사건을, get_risk로 경제 위험을 확인한 뒤 '상황 요약 / 변화 / 미결 / 다음 근무 과업 / 경고 후보' 순으로 10줄 이내로.`; setTab("p-ai"); });
   $("#p-watch").querySelectorAll("[data-th]").forEach(b => b.addEventListener("click", () => { if (typeof select === "function") select(b.dataset.th); }));
   $("#p-watch").querySelectorAll("button.lnk").forEach(b => b.addEventListener("click", () => setTab(b.dataset.tab)));
+}
+let COV_ = typeof COVERAGE === "object" ? COVERAGE : null;
+function rewindHtml(date){
+  const d = date || REF;
+  const rows = DATA.theaters.map(t => { const w = (WC_.theaters || {})[t.id] || {}; const hist = (w.history || []).filter(h => h.d <= d); const lv = hist.length ? hist[hist.length - 1].to : null; return {t, lv}; }).filter(r => r.lv != null).sort((a, b) => b.lv - a.lv);
+  const judg = judgItems().filter(j => j.d <= d && (!j.resolved || j.resolved > d));
+  const rh = (typeof RISK_HIST === "object" && Array.isArray(RISK_HIST) ? RISK_HIST : []).filter(h => h.d <= d).slice(-1)[0];
+  const ev = EVENTS.filter(e => e.d === d).length;
+  return `<div class="sctiles">${[["경보단계 (그날)", rows.length ? rows.slice(0, 4).map(r => r.t.name.split("·")[0] + " " + r.lv).join(" · ") : "—", ""], ["열린 판단", judg.length, "그날 기준 미판정"], ["경제 위험 지수", rh ? rh.index : "—", rh ? rh.d : "이력 없음"], ["사건", ev, d]].map(([l, v, sub]) => `<div class="sct"><span class="l">${l}</span><span class="v" style="font-size:16px">${esc(String(v))}</span><small>${esc(sub)}</small></div>`).join("")}</div>`;
+}
+function opsCoverageHtml(){
+  if (!COV_ || !COV_.clusters) return `<div class="block"><h3>미분류 보도 군집 <span class="en">coverage</span></h3><p class="note">자동 수집(collect/bootstrap)이 한 번 돌면 어느 전역에도 속하지 않는 보도가 같은 장소·주제로 뭉치는지 여기에 표시됩니다. 5건 이상이면 트립와이어 coverage_surge가 울립니다.</p></div>`;
+  return `<div class="block ${COV_.max_cluster >= 5 ? "sev4" : "sev2"}"><h3>미분류 보도 군집 <span class="en">coverage · ${esc(COV_.generated ? COV_.generated.slice(0, 10) : "")}</span></h3><span class="meta">어느 전역에도 속하지 않는 관련 보도 ${COV_.unmapped_total}건 (최근 ${COV_.days}일) · 최대 군집 ${COV_.max_cluster}건${COV_.max_cluster >= 5 ? ' · <span class="tag hot">새 전역 검토</span>' : ""}</span>
+    ${COV_.clusters.length ? `<ul class="wl">${COV_.clusters.slice(0, 8).map(c => `<li><b>${esc(c.key.replace(/^(place|topic|word):/, ""))}</b> ${c.n}건 · 출처 ${c.domains}곳<small>${c.sample.slice(0, 2).map(x => `${esc(x.d)} <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join(" · ")}</small></li>`).join("")}</ul><div class="btnrow"><a class="btn ghost" href="https://github.com/${REPO}/issues/new?template=pir.yml&labels=pir&title=${encodeURIComponent("[PIR] 새 전역 검토: " + (COV_.max_key || "").replace(/^\w+:/, ""))}" target="_blank" rel="noopener">새 전역·PIR 제안</a></div>` : '<p class="note">미분류 군집 없음. 수집이 돌면 채워집니다.</p>'}</div>`;
+}
+function opsSourceScoresHtml(){
+  const sc = AUTO && AUTO.source_scores; if (!sc || !Object.keys(sc).length) return `<div class="block"><h3>출처 신뢰성 이력 <span class="en">30d corroboration</span></h3><p class="note">수집원별 사건 수·교차확인 비율·평균 신빙성은 자동 수집이 쌓이면 표시됩니다.</p></div>`;
+  const rows = Object.entries(sc).sort((a, b) => b[1].n - a[1].n).slice(0, 25);
+  return `<div class="block"><h3>출처 신뢰성 이력 <span class="en">30d corroboration</span></h3><span class="meta">사건 수, 다른 매체와 교차확인된 비율, 평균 신빙성 숫자(1 확인 ~ 6 미평가)</span>
+    <table class="shk"><thead><tr><th>수집원</th><th>사건</th><th>교차확인</th><th>신빙성</th><th>판정</th></tr></thead><tbody>${rows.map(([id, v]) => { const src = SRC_.find(x => x.id === id); return `<tr><td>${esc(src ? src.name : id)}</td><td>${v.n}</td><td>${pct0(v.corroborated)}</td><td>${v.cred ?? "—"}</td><td><span class="tag ${/높음/.test(v.hint) ? "ok" : /단독/.test(v.hint) ? "hot" : ""}">${esc(v.hint)}</span></td></tr>`; }).join("")}</tbody></table></div>`;
+}
+function opsSarHtml(){
+  const sar = AUTO && AUTO.sar; if (!sar || !sar.length) return `<div class="block"><h3>자체 수집 · Sentinel-1 선박 탐지 <span class="en">IMINT</span></h3><p class="note">주간 imint 워크플로(SARSHIP_ENABLE=1)가 호르무즈·바브엘만데브·수에즈 남단의 공개 SAR 영상에서 직접 센 척수를 여기에 둡니다.</p></div>`;
+  return `<div class="block sev3"><h3>자체 수집 · Sentinel-1 선박 탐지 <span class="en">IMINT · K-CFAR</span></h3><span class="meta">공개 위성 영상에서 직접 센 척수. PortWatch(AIS 보도)와 독립.</span><table class="shk"><thead><tr><th>AOI</th><th>장면 날짜</th><th>척수</th></tr></thead><tbody>${sar.map(x => `<tr><td>${esc(x.aoi)}</td><td>${esc(x.d)}</td><td><b>${x.ships}</b></td></tr>`).join("")}</tbody></table></div>`;
 }
 function opsBlufHtml(){
   const changes7 = [].concat(...Object.entries(WC_.theaters || {}).map(([id, w]) => (w.history || []).filter(h => h.from != null && daysAgo(h.d) >= 0 && daysAgo(h.d) < 7).map(h => ({id, ...h}))));
@@ -75,4 +103,5 @@ function opsBlufHtml(){
     ${changes7.length ? `<ul class="wl">${changes7.slice(0, 4).map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")}</small></li>`).join("")}</ul>` : ""}
     <div class="btnrow"><button class="thchip" data-tab="p-watch">당직 →</button><button class="thchip" data-tab="p-pir">요구 →</button><button class="thchip" data-tab="p-prod">생산물 →</button></div></div>`;
 }
+function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-tab]"); if (b && b.dataset.tab && document.getElementById(b.dataset.tab) && !b.classList.contains("tab") && !b.classList.contains("lnk")) setTab(b.dataset.tab); });

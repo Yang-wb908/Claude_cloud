@@ -119,4 +119,6 @@ sources:
   # ── 선택(키 필요) ─────────────────────────────────────────────────
   - {id: acled, name: ACLED (키 필요), kind: acled, enabled: false, grade: A2, note: "ACLED_KEY·ACLED_EMAIL 설정 시 활성화. 정식 분쟁 사건 DB."}
   - {id: eia_api, name: EIA API (키 필요), kind: eia, enabled: false, grade: A2, note: "EIA_API_KEY 설정 시 SPR 재고·현물가."}
-  - {id: sarship, name: Sentinel-1 선박 탐지 (sarship), kind: sar, enabled: false, grade: B2, note: "SARSHIP_ENABLE=1 시 호르무즈·바브엘만데브 AOI를 저장소의 CFAR 탐지기로 세어 통항 보조 지표로 쓴다."}
+  - {id: sarship, name: Sentinel-1 선박 탐지 (sarship · IMINT), kind: sar, enabled: false, grade: B2, region: maritime, tags: [maritime, imint], lookback_days: 4,
+     note: "imint.yml이 SARSHIP_ENABLE=1 로 주 1회 호출. 공개 AWS Sentinel-1 GRD에서 AOI 최신 장면을 골라 K-CFAR로 선박 수를 센다(자체 수집, PortWatch 보도와 독립).",
+     aois: [{id: hormuz, lon: 56.5, lat: 26.5, bbox: [55.9, 26.2, 57.1, 26.9]}, {id: bab, lon: 43.35, lat: 12.6, bbox: [43.0, 12.3, 43.7, 12.9]}, {id: suez_s, lon: 32.55, lat: 29.9, bbox: [32.3, 29.7, 32.8, 30.1]}]}
