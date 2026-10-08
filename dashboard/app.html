@@ -1386,10 +1386,14 @@ tagEvents();
 const CMI = INTEL && INTEL.cm ? INTEL.cm : null;
 function cmQuote(c){
   if (AUTO && AUTO.markets && c.sym) { const m = AUTO.markets.find(x => x.sym === c.sym); if (m) return {v:String(m.v), d:m.d, chg:m.chg, src:m.src, live:true}; }
-  const rows = cmMetrics(c); return rows.length ? {v:rows[0].v, d:rows[0].d, chg:rows[0].chg, src:rows[0].src, trend:rows[0].trend} : null;
+  const rows = cmMetrics(c); if (!rows.length) return null;
+  const enw = c.en && c.en.split(" ")[0].length >= 4 ? new RegExp(c.en.split(" ")[0], "i") : null;
+  const score = m => (/선물|현물|정산|근월|월물|가격|스팟|spot|price|3M|cash|지수|환율|10년물|종합|62%/i.test(m.l) ? 3 : 0) + (enw && enw.test(m.l) ? 2 : 0) + (/^[\s]*[$€£¥₩]?\s?[\d,.]+/.test(m.v) ? 1 : 0) - (/관세|duty|쿼터|재고|stock|수출|수입|생산|출하|처리량|파종|수확|작황|강우|날씨|기온|통항|보유|포지션|순매수|순매도|확률|목표|전망|스프레드|EFS|차익|가동률|유예|만료|베이시스/i.test(m.l) ? 3 : 0);
+  const best = [...rows].sort((x, y) => score(y) - score(x))[0];
+  return {v:best.v, d:best.d, chg:best.chg, src:best.src, trend:best.trend};
 }
 function cmGroups(){ if (!CMI) return []; return [].concat(...["energy","ags","macro"].map(k => (CMI[k] && CMI[k].groups) || [])); }
-function cmMetrics(c){ const out = []; cmGroups().forEach(g => (g.metrics || []).forEach(m => { if (c.rx.test(m.l) || (c.en && new RegExp(c.en.split(" ")[0], "i").test(m.l))) out.push(m); })); return out; }
+function cmMetrics(c){ const out = []; cmGroups().forEach(g => (g.metrics || []).forEach(m => { if (c.rx.test(m.l)) out.push(m); })); return out; }
 function cmDevs(c){ const out = []; cmGroups().forEach(g => (g.dev || []).forEach(d => { if (c.rx.test(d.x)) out.push(d); })); return out.sort((a,b) => b.d.localeCompare(a.d)); }
 function cmPos(c){ const out = []; if (AUTO && AUTO.cot) AUTO.cot.forEach(p => { if (c.rx.test(p.market)) out.push({l:p.market + " 매니지드머니 순포지션", v:p.net.toLocaleString() + " 계약", d:p.d, chg:p.chg != null ? (p.chg > 0 ? "+" : "") + p.chg.toLocaleString() + " w/w" : "", src:"https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"}); });
   if (CMI) ["energy","ags"].forEach(k => ((CMI[k] && CMI[k].positioning) || []).forEach(p => { if (c.rx.test(p.l)) out.push(p); })); return out; }
