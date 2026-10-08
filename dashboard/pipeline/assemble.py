@@ -61,7 +61,7 @@ def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days
 
 
 def metrics_from(items: list[dict]) -> dict:
-    markets, pw, pla = [], {}, []
+    markets, pw, pla, cot, enso, fbx = [], {}, [], [], None, []
     for it in items:
         ex = it.get("extra", {})
         if it.get("kind") != "metric":
@@ -73,6 +73,12 @@ def metrics_from(items: list[dict]) -> dict:
             s["series"].append([ex["date"], ex.get("n_total"), ex.get("n_tanker"), ex.get("n_container")])
         elif ex.get("metric") == "pla_daily":
             pla.append({"d": ex["date"], "aircraft": ex.get("aircraft"), "ships": ex.get("ships")})
+        elif ex.get("metric") == "cot":
+            cot.append({"market": ex["market"], "d": ex["date"], "net": ex["mm_net"], "long": ex["mm_long"], "short": ex["mm_short"], "chg": ex.get("net_chg"), "oi": ex.get("oi")})
+        elif ex.get("metric") == "enso":
+            enso = {"d": ex["date"], "status": ex.get("status"), "synopsis": ex.get("synopsis")}
+        elif ex.get("metric") == "fbx":
+            fbx.append({"lane": ex["lane"], "v": ex["value"], "d": ex["date"]})
     for c, s in pw.items():
         s["series"] = sorted({tuple(x) for x in s["series"]}, key=lambda x: x[0])
         s["series"] = [list(x) for x in s["series"]]
@@ -83,7 +89,7 @@ def metrics_from(items: list[dict]) -> dict:
             s["avg7"] = round(sum(vals[-7:]) / len(vals[-7:]), 1)
             s["avg28"] = round(sum(vals[-28:]) / len(vals[-28:]), 1)
     pla.sort(key=lambda x: x["d"])
-    return {"markets": markets, "portwatch": pw, "pla": pla}
+    return {"markets": markets, "portwatch": pw, "pla": pla, "cot": cot, "enso": enso, "fbx": fbx}
 
 
 def assemble(items: list[dict], status: list[dict], now: datetime | None = None, dash: Path = DASH, write: bool = True) -> dict:
@@ -99,7 +105,7 @@ def assemble(items: list[dict], status: list[dict], now: datetime | None = None,
     auto = {
         "generated": snap["auto_generated"], "counts": {"raw": len(items), "candidates": len(new_events), "added": added,
                                                          "claude": sum(1 for it in items if (it.get("enr") or {}).get("claude"))},
-        "markets": metrics["markets"], "portwatch": metrics["portwatch"], "pla": metrics["pla"], "sources": status, "gaps": gaps,
+        "markets": metrics["markets"], "portwatch": metrics["portwatch"], "pla": metrics["pla"], "cot": metrics["cot"], "enso": metrics["enso"], "fbx": metrics["fbx"], "sources": status, "gaps": gaps,
     }
     changes = diff_against_history(auto, merged, dash)
     auto["changes"] = changes

@@ -79,3 +79,45 @@ tripwires:
     sev: 4
     th: ethiopia
     why: "국가 간 전쟁 공식화 가능성."
+  - id: ttf_100
+    title: "유럽 TTF 가스 100유로/MWh 돌파"
+    metric: markets.TTF=F
+    op: ">"
+    value: 100
+    sev: 4
+    why: "JKM 연동 → 한국 현물 LNG 도입가 급등."
+  - id: wheat_800
+    title: "시카고 밀 8달러/bu 돌파"
+    metric: markets.ZW=F
+    op: ">"
+    value: 800
+    sev: 3
+    why: "흑해 공급 차질 반영, 제분·사료 원가."
+  - id: copper_6
+    title: "구리 6달러/lb 돌파"
+    metric: markets.HG=F
+    op: ">"
+    value: 6
+    sev: 3
+    why: "공급 차질·재고 고갈 신호."
+  - id: gold_4500
+    title: "금 4,500달러/oz 돌파"
+    metric: markets.GC=F
+    op: ">"
+    value: 4500
+    sev: 3
+    why: "안전자산 수요 급증·달러 신뢰 약화."
+  - id: vix_30
+    title: "VIX 30 돌파"
+    metric: markets.^VIX
+    op: ">"
+    value: 30
+    sev: 4
+    why: "위험자산 전반 디레버리징."
+  - id: dxy_105
+    title: "달러인덱스 105 돌파"
+    metric: markets.DX-Y.NYB
+    op: ">"
+    value: 105
+    sev: 3
+    why: "신흥국·원자재 통화 압박."

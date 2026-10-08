@@ -33,6 +33,6 @@ auto = ("\nconst INTEL_AUTO = " + opt_json("intel.auto.json", None) + ";\nconst 
         + ";\nconst SOURCES = " + registry() + ";\n")
 out = (app.replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
           .replace("/*__DATA__*/", rd("data_snapshot.json")).replace("/*__THEATERS__*/", theaters)
-          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__INTEL__*/", rd("intel.js") + auto))
+          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto))
 (B / "index.html").write_text(out)
 print("built", len(out), "bytes")

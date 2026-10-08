@@ -23,6 +23,7 @@ from . import fetch
 log = logging.getLogger("pipeline.collect")
 
 ISO = "%Y-%m-%dT%H:%M:%SZ"
+COLLECTORS: dict = {}
 
 
 def _iso(t) -> str:
@@ -309,7 +310,80 @@ def html_page(src: dict, cfg: dict) -> list[dict]:
     return HTML_PARSERS[src["parser"]](body, src["id"])
 
 
-COLLECTORS = {"rss": rss, "gnews": gnews, "gdelt": gdelt, "reliefweb": reliefweb, "portwatch": portwatch, "markets": markets, "wiki": wiki, "html": html_page}
+# ── CFTC Commitments of Traders (disaggregated futures-only, weekly) ───────
+def parse_cot(text: str, markets: dict, sid: str) -> list[dict]:
+    import csv, io
+    rows = list(csv.reader(io.StringIO(text)))
+    if not rows:
+        return []
+    hdr = [h.strip().lower() for h in rows[0]]
+    def col(*cands):
+        for cnd in cands:
+            for i, h in enumerate(hdr):
+                if cnd in h:
+                    return i
+        return None
+    i_name, i_date = col("market_and_exchange"), col("report_date_as_yyyy", "report_date")
+    i_ml, i_ms = col("m_money_positions_long"), col("m_money_positions_short")
+    i_cl, i_cs = col("change_in_m_money_long"), col("change_in_m_money_short")
+    i_oi = col("open_interest_all", "open_interest")
+    if None in (i_name, i_date, i_ml, i_ms):
+        raise RuntimeError("COT header columns not found")
+    out, seen = [], set()
+    for r in rows[1:]:
+        if len(r) <= max(i_ml, i_ms):
+            continue
+        name = r[i_name].strip().upper()
+        key = next((k for k in markets if name.startswith(k.upper())), None)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        try:
+            long_, short = int(float(r[i_ml])), int(float(r[i_ms]))
+            chg = (int(float(r[i_cl])) - int(float(r[i_cs]))) if i_cl is not None and i_cs is not None and r[i_cl] and r[i_cs] else None
+        except ValueError:
+            continue
+        d = r[i_date].strip()[:10]
+        out.append({"sid": sid, "title": f"COT {markets[key]} {d}", "summary": "", "url": "https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm", "published": d + "T00:00:00Z",
+                    "lang": "en", "kind": "metric", "extra": {"metric": "cot", "market": markets[key], "key": key, "date": d, "mm_long": long_, "mm_short": short, "mm_net": long_ - short,
+                                                               "net_chg": chg, "oi": int(float(r[i_oi])) if i_oi is not None and r[i_oi] else None, "domain": "cftc.gov"}})
+    return out
+
+
+def cot(src: dict, cfg: dict) -> list[dict]:
+    body = fetch.get(src["url"], timeout=max(40, cfg.get("timeout", 25))).decode("utf-8", "replace")
+    return parse_cot(body, src.get("markets", {}), src["id"])
+
+
+def parse_noaa_enso(html_text: str, sid: str) -> list[dict]:
+    txt = _clean(html_text)
+    m = re.search(r"ENSO Alert System Status:\s*([A-Za-z\s]+?)(?:\.|\s{2}|Synopsis)", txt)
+    syn = re.search(r"Synopsis:\s*(.{20,400}?\.)", txt)
+    d = re.search(r"(\d{1,2}\s+\w+\s+\d{4})", txt)
+    try:
+        date = datetime.strptime(d.group(1), "%d %B %Y").strftime("%Y-%m-%d") if d else _iso(None)[:10]
+    except ValueError:
+        date = _iso(None)[:10]
+    if not (m or syn):
+        return []
+    return [{"sid": sid, "title": f"ENSO: {m.group(1).strip() if m else ''}", "summary": syn.group(1) if syn else "", "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml",
+             "published": date + "T00:00:00Z", "lang": "en", "kind": "metric", "extra": {"metric": "enso", "status": m.group(1).strip() if m else "", "synopsis": syn.group(1) if syn else "", "date": date, "domain": "cpc.ncep.noaa.gov"}}]
+
+
+def parse_fbx(html_text: str, sid: str) -> list[dict]:
+    out = []
+    for lane, val in re.findall(r"(FBX(?:0[1-9]|1[0-3])?)[^$]{0,120}\$\s?([\d,]{3,7})", html_text)[:14]:
+        out.append({"sid": sid, "title": f"{lane} ${val}", "summary": "", "url": "https://fbx.freightos.com/", "published": _iso(None), "lang": "en", "kind": "metric",
+                    "extra": {"metric": "fbx", "lane": lane, "value": int(val.replace(",", "")), "date": _iso(None)[:10], "domain": "fbx.freightos.com"}})
+    return out
+
+
+HTML_PARSERS.update({"noaa_enso": parse_noaa_enso, "fbx": parse_fbx})
+COLLECTORS["cot"] = cot
+
+
+COLLECTORS_BASE = {"rss": rss, "gnews": gnews, "gdelt": gdelt, "reliefweb": reliefweb, "portwatch": portwatch, "markets": markets, "wiki": wiki, "html": html_page}
+COLLECTORS.update(COLLECTORS_BASE)
 
 
 def collect(src: dict, cfg: dict) -> list[dict]:

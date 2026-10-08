@@ -63,7 +63,33 @@ sources:
      url: "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query",
      note: "AIS 기반 일일 통항 척수. 레이어명·필드명은 첫 실행에서 검증.", verify: true}
   - {id: markets, name: 시장 시세 (Yahoo Finance), kind: markets, grade: B2, lang: en, region: markets, tags: [markets],
-     tickers: {"BZ=F": "브렌트유 ($/bbl)", "CL=F": "WTI ($/bbl)", "NG=F": "헨리허브 가스 ($/MMBtu)", "GC=F": "금 ($/oz)", "DX-Y.NYB": "달러인덱스", "KRW=X": "원/달러", "JPY=X": "엔/달러", "^KS11": "코스피", "^GSPC": "S&P 500", "^N225": "니케이225", "^TNX": "미 10년물 (%)", "ZW=F": "시카고 밀 (c/bu)", "BTC-USD": "비트코인 ($)"}}
+     tickers: {"BZ=F": "브렌트유 ($/bbl)", "CL=F": "WTI ($/bbl)", "HO=F": "경유 선물 ($/gal)", "RB=F": "휘발유 선물 ($/gal)", "NG=F": "헨리허브 가스 ($/MMBtu)", "TTF=F": "유럽 TTF 가스 (€/MWh)",
+               "GC=F": "금 ($/oz)", "SI=F": "은 ($/oz)", "PL=F": "백금 ($/oz)", "HG=F": "구리 ($/lb)", "ZW=F": "시카고 밀 (c/bu)", "KE=F": "캔자스 밀 (c/bu)", "ZC=F": "옥수수 (c/bu)", "ZS=F": "대두 (c/bu)", "ZL=F": "대두유 (c/lb)", "ZR=F": "쌀 ($/cwt)",
+               "SB=F": "설탕 No.11 (c/lb)", "KC=F": "커피 아라비카 (c/lb)", "CC=F": "코코아 ($/t)", "CT=F": "면화 (c/lb)", "LE=F": "생우 (c/lb)",
+               "DX-Y.NYB": "달러인덱스", "KRW=X": "원/달러", "JPY=X": "엔/달러", "CNY=X": "위안/달러", "EURUSD=X": "유로/달러", "AUDUSD=X": "호주달러/달러", "BRL=X": "헤알/달러",
+               "^TNX": "미 10년물 (%)", "^FVX": "미 5년물 (%)", "^VIX": "VIX", "^KS11": "코스피", "^GSPC": "S&P 500", "^N225": "니케이225", "000001.SS": "상하이종합",
+               "URA": "우라늄 ETF (URA)", "LIT": "리튬·배터리 ETF (LIT)", "BDRY": "건화물 운임 ETF (BDRY)", "BTC-USD": "비트코인 ($)"}}
+  - {id: cftc_cot, name: CFTC 포지션 (COT 분류별), kind: cot, grade: A2, lang: en, region: markets, tags: [markets, positioning],
+     url: "https://www.cftc.gov/dea/newcot/f_disagg.txt",
+     markets: {"CRUDE OIL, LIGHT SWEET": "WTI", "NATURAL GAS": "헨리허브 가스", "GOLD": "금", "SILVER": "은", "COPPER": "구리", "CORN": "옥수수", "SOYBEANS": "대두", "WHEAT-SRW": "시카고 밀", "SUGAR NO. 11": "설탕", "COFFEE C": "커피", "COCOA": "코코아", "COTTON NO. 2": "면화"},
+     note: "주간(화요일 기준, 금요일 발표) 매니지드머니 순포지션. 파일 열 이름은 첫 실행에서 검증.", verify: true}
+  - {id: usda_wasde, name: USDA WASDE·보고서, kind: rss, url: "https://www.usda.gov/rss/latest-releases.xml", grade: A2, lang: en, region: ags, tags: [ags], verify: true}
+  - {id: usda_ers, name: USDA ERS 전망, kind: rss, url: "https://www.ers.usda.gov/rss/", grade: A2, lang: en, region: ags, tags: [ags], verify: true}
+  - {id: noaa_enso, name: NOAA ENSO 진단, kind: html, parser: noaa_enso, url: "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml", grade: A2, lang: en, region: weather, tags: [ags, weather], verify: true}
+  - {id: fbx, name: Freightos FBX, kind: html, parser: fbx, url: "https://fbx.freightos.com/", grade: B2, lang: en, region: maritime, tags: [maritime, markets], verify: true}
+  - {id: iea_news, name: IEA 뉴스, kind: rss, url: "https://www.iea.org/news/rss", grade: A2, lang: en, region: energy, tags: [energy], verify: true}
+  - {id: opec_press, name: OPEC 보도자료, kind: rss, url: "https://www.opec.org/opec_web/en/press_room/rss.xml", grade: A2, lang: en, region: energy, tags: [energy], verify: true}
+  - {id: mining_com, name: Mining.com, kind: rss, url: "https://www.mining.com/feed/", grade: C3, lang: en, region: metals, tags: [metals]}
+  - {id: argus_news, name: Argus Media 뉴스, kind: rss, url: "https://www.argusmedia.com/en/rss", grade: B2, lang: en, region: energy, tags: [energy, metals, ags], verify: true}
+  - {id: agweb, name: AgWeb, kind: rss, url: "https://www.agweb.com/rss", grade: C3, lang: en, region: ags, tags: [ags], verify: true}
+  - {id: worldgrain, name: World Grain, kind: rss, url: "https://www.world-grain.com/rss/topic/1-news", grade: C3, lang: en, region: ags, tags: [ags], verify: true}
+  - {id: gn_opec, name: Google News · OPEC, kind: gnews, q: "OPEC+ output decision", grade: C3, tags: [energy]}
+  - {id: gn_lng, name: Google News · LNG, kind: gnews, q: "LNG cargo force majeure Qatar", grade: C3, tags: [energy]}
+  - {id: gn_copper, name: Google News · copper, kind: gnews, q: "copper mine strike supply", grade: C3, tags: [metals]}
+  - {id: gn_wheat, name: Google News · grain, kind: gnews, q: "wheat corn export Black Sea USDA", grade: C3, tags: [ags]}
+  - {id: gn_fert, name: Google News · fertilizer, kind: gnews, q: "urea potash price export", grade: C3, tags: [ags]}
+  - {id: gn_rareearth, name: Google News · rare earths, kind: gnews, q: "rare earth export controls China", grade: C3, tags: [metals, policy]}
+  - {id: gn_tariff, name: Google News · tariffs, kind: gnews, q: "tariff Section 232 copper steel", grade: C3, tags: [policy]}
   - {id: wiki_current, name: 위키백과 Current events, kind: wiki, grade: C3, lang: en, region: global, note: "사람이 큐레이션한 일별 사건 목록. 지도 좌표는 연결 문서에서 추정."}
 
   # ── Google News 검색 RSS (집계, C3; 기사 원출처 도메인으로 재등급) ──

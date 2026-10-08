@@ -136,6 +136,31 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .city circle{fill:var(--muted)}
 .city text{font-size:10.5px;fill:var(--muted);paint-order:stroke;stroke:var(--halo);stroke-width:3px;stroke-linejoin:round}
 .ctry text{pointer-events:none}
+.hub{cursor:pointer} .hub path{stroke:var(--halo);stroke-width:1.1}
+.hub.oil path{fill:var(--oil)} .hub.lng path{fill:var(--s2)} .hub.gas path{fill:var(--s2)} .hub.mine path{fill:var(--s4)} .hub.grain path{fill:var(--s1)} .hub.refine path{fill:var(--oil)} .hub.port path{fill:var(--muted)}
+.cmgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;padding:8px 16px}
+.cmtile{border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;background:var(--panel2);display:grid;grid-template-columns:1fr auto;gap:2px 6px;min-width:0;text-align:left}
+.cmtile.on{outline:2px solid var(--ink);outline-offset:-1px}
+.cmtile .n{font-size:13px;font-weight:600;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cmtile .v{font-family:var(--num);font-size:19px;font-weight:600;color:var(--c);grid-row:span 2;align-self:center;text-align:right;font-variant-numeric:tabular-nums}
+.cmtile .s{font-size:11px;color:var(--muted);display:flex;gap:6px;align-items:center;white-space:nowrap;overflow:hidden}
+.cmtile .s .trend{font-size:13px}
+.cmhead{display:flex;align-items:baseline;gap:8px;padding:12px 16px 2px}
+.cmhead h3{margin:0;font-size:14px}
+.mx{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px}
+.mx th{font-weight:500;color:var(--muted);padding:3px 4px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line)}
+.mx td{padding:3px 4px;border-bottom:1px dashed var(--line);text-align:center;font-family:var(--num);font-size:14px;font-weight:600}
+.mx td:first-child{text-align:left;font-family:var(--sans);font-size:12px;font-weight:500;white-space:nowrap}
+.mx .pos{color:var(--s5)} .mx .neg{color:var(--s1)} .mx .zero{color:var(--faint)}
+.cal{list-style:none;margin:0;padding:0}
+.cal li{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:9px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.cal .dd{font-family:var(--num);font-weight:600;font-size:16px;line-height:1.1;color:var(--ink)}
+.cal .dd small{display:block;font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.04em}
+.cal .dd.soon{color:var(--s4)} .cal .dd.past{color:var(--faint)}
+.cal .cat{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--c);margin-right:6px}
+.cal small{display:block;color:var(--muted);font-size:12.5px}
+.cal .wk{grid-column:1 / 3;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--faint);padding:4px 0 0}
+.catchips{display:flex;flex-wrap:wrap;gap:5px;padding:8px 16px}
 .meas circle{fill:var(--s3);stroke:var(--halo);stroke-width:1.5}
 .meas text{font-family:var(--mono);font-size:11px;fill:var(--ink);paint-order:stroke;stroke:var(--halo);stroke-width:3px}
 
@@ -446,6 +471,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <button class="chip" data-layer="site" aria-pressed="false"><i class="tri sev3"></i>시설</button>
       <button class="chip" data-layer="unit" aria-pressed="false"><i class="dot" style="--c:var(--unit)"></i>부대</button>
       <button class="chip" data-layer="pipe" aria-pressed="false"><i style="--c:var(--oil)"></i>송유관</button>
+      <button class="chip" data-layer="hub" aria-pressed="true"><i class="dot" style="--c:var(--s3);width:7px;height:7px"></i>자원</button>
       <button class="chip" data-layer="city" aria-pressed="true"><i class="dot" style="--c:var(--muted);width:6px;height:6px"></i>도시</button>
     </div>
     <div class="zoomctl">
@@ -464,8 +490,10 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <button class="tab" role="tab" aria-selected="false" data-pane="p-th">분쟁</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ev">사건</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-sea">해협</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cm">상품</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-eco">경제</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-gp">강대국</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cal">일정</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-pos">태세</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-net">연계</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-kr">한국</button>
@@ -489,7 +517,9 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
         <ul class="evlist" id="evlist"></ul>
       </section>
       <section class="pane" id="p-sea" role="tabpanel" hidden></section>
+      <section class="pane" id="p-cm" role="tabpanel" hidden></section>
       <section class="pane" id="p-eco" role="tabpanel" hidden></section>
+      <section class="pane" id="p-cal" role="tabpanel" hidden></section>
       <section class="pane" id="p-gp" role="tabpanel" hidden></section>
       <section class="pane" id="p-pos" role="tabpanel" hidden></section>
       <section class="pane" id="p-net" role="tabpanel" hidden></section>
@@ -505,6 +535,8 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
             <button class="sug">72시간 내 가장 먼저 바뀔 지표</button>
             <button class="sug">해협 물동량 수치로 본 공급 충격의 실제 크기</button>
             <button class="sug">강대국 구도에서 한국이 선택을 강요받을 지점</button>
+            <button class="sug">이번 주 가장 비대칭적인 원자재 포지션과 촉매</button>
+            <button class="sug">호르무즈·홍해 시나리오별 브렌트·TTF·운임 방향</button>
             <button class="sug">수집 공백을 메우려면 무엇을 먼저 찾아야 하나</button>
           </div>
           <div class="btnrow"><button class="btn" id="askBtn">분석 요청</button><button class="btn ghost" id="stopBtn" hidden>중지</button></div>
@@ -524,6 +556,7 @@ const DATA = /*__DATA__*/;
 DATA.theaters = THEATERS;
 /*__IW__*/
 /*__EN__*/
+/*__COMMOD__*/
 /*__INTEL__*/
 window.INTEL = (typeof INTEL === "object") ? INTEL : null;
 </script>
@@ -604,7 +637,7 @@ const md = d => { if (!d) return ""; const p = d.split("-"); return p.length >= 
   const dtg = `${p2(z.getUTCDate())}${p2(z.getUTCHours())}${p2(z.getUTCMinutes())}Z ${MON[z.getUTCMonth()]} ${String(z.getUTCFullYear()).slice(2)}`;
   $("#dtg").innerHTML = `<b>${dtg}</b> · ${esc(IW.meta.asofKST)} KST · ${esc(IW.meta.id)}`;
   $("#banL").textContent = IW.meta.classification;
-  $("#banR").textContent = `${IW.meta.id} · 전역 ${DATA.theaters.length} · 사건 ${DATA.events.length} · 72h 변화 ${IW.bluf.changes72.length}`;
+  $("#banR").textContent = `${IW.meta.id} · 전역 ${DATA.theaters.length} · 상품 ${COMMOD.registry.length} · 사건 ${DATA.events.length}`;
   const g = IW.global, tr = TREND[g.trend];
   const el = $("#glvl"); el.className = "lvl sev" + g.level;
   el.innerHTML = `<b>${g.level}</b>종합 경보 ${esc(g.label)} <span class="tr">${tr[0]}</span>`;
@@ -656,7 +689,7 @@ const evG = overlay.append("g").attr("class", "ev-layer");
 const chokeG = overlay.append("g").attr("class", "choke-layer");
 const hotG = overlay.append("g").attr("class", "hot-layer");
 const measG = overlay.append("g").attr("class", "meas");
-const LAYER = {hot:1, ev:1, lanes:1, choke:1, base:0, site:0, unit:0, pipe:0, city:1};
+const LAYER = {hot:1, ev:1, lanes:1, choke:1, base:0, site:0, unit:0, pipe:0, city:1, hub:1};
 
 /* 항로·송유관 경로 보간: 구심 Catmull-Rom 스플라인으로 경유점 사이를 채운다 (경도 연속화 후 보간) */
 function smoothLine(pts, n){
@@ -984,6 +1017,13 @@ const site = siteG.selectAll("g").data(P_.sites).join("g").attr("class", d => "s
   .on("click", (e, d) => { e.stopPropagation(); showInfo([{h:d.n, k:SITE_K[d.k] + " · " + d.c, x:d.x || "", g:"A1", gw:"정적 참조 자료"}]); });
 site.append("path").attr("d", "M0,-5.5L5,3.5L-5,3.5Z");
 site.append("text").attr("class", "lbl tiny").attr("x", 7).attr("dy", "0.35em").text(d => EN.sites[d.n] || d.n);
+const hubG = overlay.append("g").attr("class", "hub-layer");
+const HUB_K = {oil:"원유 수출·저장", lng:"LNG", gas:"가스", mine:"광산", grain:"곡물·농산물 항", refine:"정제·화학", port:"항만·운하"};
+const HUB_D = {oil:"M4.5,0A4.5,4.5 0 1,1 -4.5,0A4.5,4.5 0 1,1 4.5,0", lng:"M0,-5.5L5.5,0L0,5.5L-5.5,0Z", gas:"M0,-5.5L5.5,0L0,5.5L-5.5,0Z", mine:"M-5,-4H5L0,5Z", grain:"M-4.2,-4.2H4.2V4.2H-4.2Z", refine:"M-4.8,-2.8L0,-5.5L4.8,-2.8V2.8L0,5.5L-4.8,2.8Z", port:"M-4.5,-4.5H4.5V4.5H-4.5Z"};
+const hub = hubG.selectAll("g").data(COMMOD.hubs).join("g").attr("class", d => "hub " + d.k).attr("tabindex", 0).attr("role", "button").attr("aria-label", d => d.n)
+  .on("click", (e, d) => { e.stopPropagation(); showHub(d); });
+hub.append("path").attr("d", d => HUB_D[d.k] || HUB_D.port);
+hub.append("text").attr("class", "lbl tiny").attr("x", 7).attr("dy", "0.35em").text(d => d.en);
 const unit = unitG.selectAll("g").data(P_.units).join("g").attr("class", "unit").attr("tabindex", 0).attr("role", "button").attr("aria-label", d => d.n)
   .on("click", (e, d) => { e.stopPropagation(); showInfo([{h:d.n, k:(d.k === "csg" ? "항모타격단" : "상륙준비단") + " · " + d.st + " · " + d.asof + " 기준", x:d.x, g:d.g, gw:"보도 기반 광역 추정"}]); });
 unit.append("circle").attr("r", 11);
@@ -1050,7 +1090,7 @@ function placeOverlay(){
   ["#legend", ".zoomctl", "#evcard:not([hidden])", "#readout"].forEach(s => { const el = document.querySelector(s); if (!el) return; const r = el.getBoundingClientRect(); boxes.push({x:r.left - mr.left - 4, y:r.top - mr.top - 4, w:r.width + 8, h:r.height + 8}); });
   const pos = (sel, on) => sel.each(function(d){ const v = on && visible(d.at); d._v = v; if (!v) { this.style.display = "none"; return; } const [x,y] = P(d.at); d._x = x; d._y = y; this.style.display = null; this.setAttribute("transform", `translate(${x},${y})`); });
   const k = projection.scale() / R0;
-  pos(hot, LAYER.hot); pos(choke, LAYER.choke); pos(base, LAYER.base); pos(site, LAYER.site); pos(unit, LAYER.unit);
+  pos(hot, LAYER.hot); pos(choke, LAYER.choke); pos(base, LAYER.base); pos(site, LAYER.site); pos(unit, LAYER.unit); pos(hub, LAYER.hub && k >= 1.4);
   const cityOn = LAYER.city && k >= (W < 600 ? 3 : 2.2);
   pos(city, cityOn);
   const ctryOn = k >= 1.6;
@@ -1097,13 +1137,14 @@ function placeOverlay(){
   city.each(function(d){ if (d._v) second.push({d, el:this, pri:1, h:13, small:true, hideAll:true}); });
   base.each(function(d){ if (d._v) second.push({d, el:this, pri:3, h:13, small:true}); });
   site.each(function(d){ if (d._v) second.push({d, el:this, pri:4, h:13, small:true}); });
+  hub.each(function(d){ if (d._v) second.push({d, el:this, pri:5, h:13, small:true}); });
   ctry.each(function(d){ if (d._v) second.push({d, el:this, pri:2 + d.a * 10, h:12, centered:true}); });
   place(second);
   const mp = measG.selectAll("g").data(meas.pts.filter(p => visible(p))).join(enter => { const g = enter.append("g"); g.append("circle").attr("r", 4); g.append("text").attr("x", 7).attr("dy", "0.35em"); return g; });
   mp.attr("transform", d => { const [x,y] = P(d); return `translate(${x},${y})`; }).select("text").text(d => fmtLL(d));
 }
 
-const LAYER_G = {hot:hotG, ev:evG, choke:chokeG, base:baseG, site:siteG, unit:unitG, city:cityG};
+const LAYER_G = {hot:hotG, ev:evG, choke:chokeG, base:baseG, site:siteG, unit:unitG, city:cityG, hub:hubG};
 function setLayer(name, on){
   LAYER[name] = on ? 1 : 0;
   if (LAYER_G[name]) LAYER_G[name].classed("layer-off", !on);
@@ -1202,16 +1243,17 @@ function renderBluf(){
       <ul class="wl">${AUTO.changes.new_count ? `<li>새 사건 ${AUTO.changes.new_count}건 수집</li>` : ""}${(AUTO.changes.portwatch || []).map(c => `<li>${esc(CP_NAME[c.choke] || c.choke)} 통항 ${esc(String(c.from))} → <b>${esc(String(c.to))}</b>척 (${esc(c.d)})</li>`).join("")}${(AUTO.changes.markets || []).map(c => `<li>${esc(c.l)} ${esc(String(c.from))} → <b>${esc(String(c.to))}</b> (${c.pct > 0 ? "+" : ""}${c.pct}%)</li>`).join("")}</ul></div>` : ""}
     ${RFI_.length ? `<div class="block"><h3>열린 정보 요청 (RFI) ${RFI_.length}건</h3><span class="meta">GitHub Issue · 닫히면 사라집니다</span>
       <ul class="wl">${RFI_.map(i => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener">#${i.number} ${esc(i.title.replace(/^\[RFI\]\s*/, ""))}</a><small>${esc((i.createdAt || "").slice(0, 10))}</small></li>`).join("")}</ul></div>` : ""}
+    ${(() => { const today = new Date().toISOString().slice(0, 10); const up = allCalendar().filter(c => c.d >= today).slice(0, 6); return up.length ? `<div class="block"><h3>다가오는 일정 <span class="en">next</span></h3><ul class="chg">${up.map(c => `<li><time>${esc(md(c.d))}</time><span></span><span><span class="en">${esc(COMMOD.calendarCats[c.cat] || c.cat)}</span> ${esc(c.x)}</span></li>`).join("")}</ul><p class="cap"><button class="thchip sev2 tabgo2" data-tab="p-cal">일정 탭 열기</button></p></div>` : ""; })()}
     ${extra.length ? `<div class="block"><h3>경제·강대국 판단</h3><span class="meta">수집 산출 · 근거는 괄호 안</span><ul class="kj">${extra.map(j => `<li><div class="t">${esc(j.t)}</div><span class="conf">${esc(j.tag)}</span></li>`).join("")}</ul></div>` : ""}
     <div class="block"><h3>지난 72시간 변화</h3><span class="meta">↑ 악화 · ↓ 완화 · → 태세 변화</span>
       <ul class="chg">${B.changes72.map(c => `<li${c.th && TH[c.th] ? ` data-th="${c.th}"` : ""}><time>${esc(c.d)}</time>${trendTag(c.dir)}<span>${esc(c.x)}${c.th && TH[c.th] ? ` <span class="noloc">· ${esc(TH[c.th].name)}</span>` : ""}</span></li>`).join("")}</ul></div>
     <div class="block"><h3>다음 72시간 감시 항목</h3>
       <ul class="wl">${B.watch.map(w => `<li>${TH[w.th] ? `<button class="thchip sev${TH[w.th].sev}" data-th="${w.th}">${esc(TH[w.th].name)}</button>` : ""}${esc(w.x)}<small>${esc(w.why)}</small></li>`).join("")}</ul></div>
-    ${INTEL && INTEL.gp && INTEL.gp.calendar && INTEL.gp.calendar.length ? `<div class="block"><h3>다가오는 일정</h3><span class="meta">강대국 경쟁·시장 변곡점</span><ul class="chg">${INTEL.gp.calendar.map(c => `<li><time>${esc(md(c.d))}</time><span></span><span>${esc(c.x)} ${srcA(c.src)}</span></li>`).join("")}</ul></div>` : ""}
     <div class="block"><h3>수집 공백</h3><span class="meta">판단 신뢰도를 제한하는 미확인 사항 ${gaps.length}건</span>
       <ul class="gap">${gaps.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
     <div class="block"><h3>방법</h3><p class="cap">${esc(IW.meta.method)} 이전 스냅숏: ${esc(IW.meta.prev)}.</p></div>`;
   $("#p-bluf").querySelectorAll("[data-th]").forEach(el => el.addEventListener("click", e => { const id = el.dataset.th; if (id && TH[id]) { e.stopPropagation(); select(id); } }));
+  $("#p-bluf").querySelectorAll(".tabgo2").forEach(b => b.onclick = () => setTab(b.dataset.tab));
 }
 
 /* ---------- 사건 목록 + 타임라인 ---------- */
@@ -1336,6 +1378,100 @@ $("#p-mkt").innerHTML = `
     <p class="cap">2월~9월 사이 관측값이 비어 직선으로 이었습니다. 1년 전 1,700달러 안팎의 2.5배 수준입니다.</p></div>
   <div class="block sev3"><h3>발틱 건화물 운임지수 (BDI)</h3><span class="meta">${M.bdi.d} 자료 · 최신치는 해협 탭 운임 지수 참고</span>
     <div class="bigrow"><span class="big">${M.bdi.v}</span><span class="delta">${M.bdi.chg}</span></div></div>`;
+
+/* ---------- 상품: 태깅·시세·전파·카드 ---------- */
+const CMR = COMMOD.registry, CM_BY = Object.fromEntries(CMR.map(c => [c.id, c]));
+function tagEvents(){ EVENTS.forEach(e => { const txt = (e.x || "") + " " + (e.p || ""); e.cm = CMR.filter(c => c.rx.test(txt)).map(c => c.id); }); }
+tagEvents();
+const CMI = INTEL && INTEL.cm ? INTEL.cm : null;
+function cmQuote(c){
+  if (AUTO && AUTO.markets && c.sym) { const m = AUTO.markets.find(x => x.sym === c.sym); if (m) return {v:String(m.v), d:m.d, chg:m.chg, src:m.src, live:true}; }
+  const rows = cmMetrics(c); return rows.length ? {v:rows[0].v, d:rows[0].d, chg:rows[0].chg, src:rows[0].src, trend:rows[0].trend} : null;
+}
+function cmGroups(){ if (!CMI) return []; return [].concat(...["energy","ags","macro"].map(k => (CMI[k] && CMI[k].groups) || [])); }
+function cmMetrics(c){ const out = []; cmGroups().forEach(g => (g.metrics || []).forEach(m => { if (c.rx.test(m.l) || (c.en && new RegExp(c.en.split(" ")[0], "i").test(m.l))) out.push(m); })); return out; }
+function cmDevs(c){ const out = []; cmGroups().forEach(g => (g.dev || []).forEach(d => { if (c.rx.test(d.x)) out.push(d); })); return out.sort((a,b) => b.d.localeCompare(a.d)); }
+function cmPos(c){ const out = []; if (AUTO && AUTO.cot) AUTO.cot.forEach(p => { if (c.rx.test(p.market)) out.push({l:p.market + " 매니지드머니 순포지션", v:p.net.toLocaleString() + " 계약", d:p.d, chg:p.chg != null ? (p.chg > 0 ? "+" : "") + p.chg.toLocaleString() + " w/w" : "", src:"https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm"}); });
+  if (CMI) ["energy","ags"].forEach(k => ((CMI[k] && CMI[k].positioning) || []).forEach(p => { if (c.rx.test(p.l)) out.push(p); })); return out; }
+function cmEvents(c, days){ return EVENTS.filter(e => e.cm && e.cm.includes(c.id) && daysAgo(e.d) >= 0 && daysAgo(e.d) < (days || 7)).sort((a,b) => b.d.localeCompare(a.d)); }
+function cmTrans(c){ return COMMOD.transmission.filter(t => t.cm === c.id && TH[t.th]).sort((a,b) => (TH[b.th].sev * b.w) - (TH[a.th].sev * a.w)); }
+const dirTag = d => d === "+" ? '<span class="trend up">▲</span>' : d === "-" ? '<span class="trend down">▼</span>' : '<span class="trend flat">•</span>';
+let cmSel = null;
+function renderCommod(){
+  const hot = sorted.filter(t => t.sev >= 3);
+  const cols = CMR.filter(c => COMMOD.transmission.some(t => t.cm === c.id));
+  const mx = `<table class="mx"><thead><tr><th>전역 → 상품</th>${cols.map(c => `<th title="${esc(c.n)}">${esc(c.en.split(" ")[0].slice(0, 7))}</th>`).join("")}</tr></thead><tbody>${hot.map(t => `<tr><td>${esc(shortName(t))} <span class="en">${t.sev}</span></td>${cols.map(c => { const e = COMMOD.transmission.find(x => x.th === t.id && x.cm === c.id); return `<td class="${e ? (e.dir === "+" ? "pos" : e.dir === "-" ? "neg" : "zero") : ""}" title="${e ? esc(e.m + " · " + e.lag) : ""}">${e ? (e.dir === "+" ? "+" : e.dir === "-" ? "−" : "•") + e.w : ""}</td>`; }).join("")}</tr>`).join("")}</tbody></table>`;
+  const judg = CMI ? [].concat(...["energy","ags","macro"].map(k => ((CMI[k] && CMI[k].judgments) || []).map(x => ({x, k})))) : [];
+  const KN = {energy:"에너지", ags:"농산물", macro:"거시"};
+  $("#p-cm").innerHTML = `
+    <p class="note"><b>원자재·거래 보드</b>. 타일을 누르면 시세·동인·포지션·기간구조·관련 사건이 펼쳐집니다. 시세는 자동 수집(Yahoo) 또는 조사 수집값이며 날짜가 붙습니다.</p>
+    ${judg.length ? `<div class="block"><h3>시장 핵심판단</h3><span class="meta">조사 수집 · 근거는 괄호 안</span><ul class="kj">${judg.map(j => `<li><div class="t">${esc(j.x)}</div><span class="conf">${esc(KN[j.k])}</span></li>`).join("")}</ul></div>` : `<div class="block"><p class="cap">시장 조사 데이터가 아직 없습니다. 아래 타일의 시세는 자동 수집 실행 후 채워집니다.</p></div>`}
+    ${COMMOD.groups.map(g => `<div class="cmhead"><h3>${esc(g.n)}</h3><span class="en">${esc(g.en)}</span></div><div class="cmgrid">${CMR.filter(c => c.g === g.id).map(c => { const q = cmQuote(c); const n7 = cmEvents(c, 7).length; const tr = cmTrans(c).filter(t => TH[t.th].sev >= 4); const sev = tr.length ? Math.max(...tr.map(t => TH[t.th].sev)) : 2;
+      return `<button class="cmtile sev${sev}${cmSel === c.id ? " on" : ""}" data-cm="${c.id}"><span class="n">${esc(c.n)}</span><span class="v">${q ? esc(q.v) : "—"}</span><span class="s">${q && q.chg ? `<span class="trend ${/^[-−]/.test(q.chg) ? "down" : /^\+/.test(q.chg) ? "up" : "flat"}">${esc(q.chg)}</span>` : ""}${q && q.d ? `<span>${esc(md(q.d))}</span>` : ""}${n7 ? `<span>사건 ${n7}</span>` : ""}${tr.length ? `<span>${tr.map(t => dirTag(t.dir)).join("")}</span>` : ""}</span></button>`; }).join("")}</div>
+      <div id="cmd-${g.id}"></div>`).join("")}
+    <div class="block"><h3>분쟁 → 상품 전파 행렬</h3><span class="meta">경보 3 이상 전역 × 상품 · +상승 −하락 · 숫자는 강도 1~3 · 셀에 마우스를 올리면 경로</span>${mx}</div>`;
+  $("#p-cm").querySelectorAll(".cmtile").forEach(b => b.onclick = () => { cmSel = cmSel === b.dataset.cm ? null : b.dataset.cm; renderCommod(); if (cmSel) renderCmDetail(CM_BY[cmSel]); });
+  if (cmSel && CM_BY[cmSel]) renderCmDetail(CM_BY[cmSel]);
+}
+function renderCmDetail(c){
+  const q = cmQuote(c), rows = cmMetrics(c), devs = cmDevs(c), pos = cmPos(c), ev = cmEvents(c, 14), tr = cmTrans(c);
+  const curve = CMI && CMI.energy && CMI.energy.curve ? CMI.energy.curve.filter(x => c.rx.test(x.l)) : [];
+  const hubs = COMMOD.hubs.filter(h => h.cm.includes(c.id));
+  const grp = cmGroups().filter(g => (g.metrics || []).some(m => c.rx.test(m.l)));
+  const drivers = [...new Set([].concat(...grp.map(g => g.drivers || [])))].slice(0, 4), risks = [...new Set([].concat(...grp.map(g => g.risks || [])))].slice(0, 3);
+  const el = document.getElementById("cmd-" + c.g); if (!el) return;
+  el.innerHTML = `<div class="block sev${tr.some(t => TH[t.th].sev >= 5) ? 5 : 3}"><h3>${esc(c.n)} <span class="en">${esc(c.en)} · ${esc(c.ex)} · ${esc(c.unit)}</span></h3>
+    ${q ? `<div class="bigrow"><span class="big">${esc(q.v)}</span><span class="delta">${esc(q.chg || "")} · ${esc(md(q.d || ""))}${q.live ? " · 자동 수집" : ""}</span></div>` : ""}
+    <h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">구조적 동인</h4><ul class="plain" style="margin:0;padding-left:18px;font-size:13.5px">${c.drivers.map(d => `<li>${esc(d)}</li>`).join("")}</ul>
+    ${drivers.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">현재 가격 동인 (수집)</h4><ul class="plain" style="margin:0;padding-left:18px;font-size:13.5px">${drivers.map(d => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}
+    ${risks.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">앞선 리스크</h4><ul class="plain" style="margin:0;padding-left:18px;font-size:13.5px">${risks.map(d => `<li>${esc(d)}</li>`).join("")}</ul>` : ""}
+    ${rows.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">지표</h4>${metricRows(rows.slice(0, 8))}` : ""}
+    ${curve.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">기간구조</h4>${metricRows(curve)}` : ""}
+    ${pos.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">포지셔닝 (CFTC)</h4>${metricRows(pos.slice(0, 4))}` : ""}
+    ${tr.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">분쟁 전파</h4><ul class="wl">${tr.map(t => `<li>${dirTag(t.dir)} <button class="thchip sev${TH[t.th].sev}" data-th="${t.th}">${esc(TH[t.th].name)}</button>강도 ${t.w} · ${esc(t.lag)}<small>${esc(t.m)}</small></li>`).join("")}</ul>` : ""}
+    ${c.kr ? `<p class="cap"><b>한국 연관</b> ${esc(c.kr)}</p>` : ""}
+    ${hubs.length ? `<p class="cap"><b>거점</b> ${hubs.map(h => `<button class="thchip sev2" data-hub="${esc(h.n)}">${esc(h.n)}</button>`).join("")}</p>` : ""}
+    ${devs.length ? `<h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">관련 동향 (수집)</h4>${devList(devs.slice(0, 6))}` : ""}
+    <h4 style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 0 2px">관련 사건 14일 · ${ev.length}건</h4>${ev.length ? `<ul class="dev">${ev.slice(0, 10).map(e => `<li class="t${e.t}" data-ev="${e.id}"><div class="evmeta"><time>${md(e.d)}</time><span class="ttag">${esc(TYPES[e.t].n)}</span><span>${esc(e.p || "")}</span>${gradeBadge(e.s, e.g)}</div><span>${esc(e.x)}</span></li>`).join("")}</ul>` : `<p class="cap">태깅된 사건 없음.</p>`}
+  </div>`;
+  el.querySelectorAll("[data-th]").forEach(b => b.onclick = () => select(b.dataset.th));
+  el.querySelectorAll("[data-hub]").forEach(b => b.onclick = () => { const h = COMMOD.hubs.find(x => x.n === b.dataset.hub); if (h) { setLayer("hub", true); if (innerWidth < 960) scrollToMap(); flyToPoint(h.at, 6); showHub(h); } });
+  el.querySelectorAll("[data-ev]").forEach(li => li.onclick = () => { const e = EVENTS.find(x => x.id === li.dataset.ev); if (e) { if (e.at) flyToPoint(e.at, 2); showCard([e]); } });
+  el.scrollIntoView({block:"nearest", behavior: reduce ? "auto" : "smooth"});
+}
+function showHub(h){
+  selectedEv = null;
+  const ev = nearEvents([h.at], 500, 14);
+  const cms = h.cm.map(id => CM_BY[id]).filter(Boolean);
+  infraCard("sev3", {k:"자원 거점 · " + (HUB_K[h.k] || h.k), h:h.n, en:h.en, p:`${h.x} · ${h.c}`, g:"A1"},
+    sec("연관 상품", `<ul class="rows">${cms.map(c => { const q = cmQuote(c); return `<li><span>${esc(c.n)}<span class="n">${esc(c.ex)}</span></span><span class="v">${q ? esc(q.v) : "—"}<small>${q ? esc(q.chg || "") + " " + esc(md(q.d || "")) : ""}</small></span></li>`; }).join("")}</ul>`) +
+    sec(`반경 500km · 14일 사건 ${ev.length}건`, ev.length ? `<ul class="dev">${ev.slice(0, 8).map(evLi).join("")}</ul>` : "") +
+    `<div class="evitem"><div class="lnk">${cms.map(c => `<button class="cmgo" data-cm="${c.id}">${esc(c.n)} 상세</button>`).join("")}</div></div>`);
+  evcard.querySelectorAll(".cmgo").forEach(b => b.onclick = () => { cmSel = b.dataset.cm; setTab("p-cm"); renderCommod(); });
+}
+
+/* ---------- 일정 ---------- */
+let calCat = null;
+function allCalendar(){
+  const out = [];
+  if (INTEL && INTEL.gp && INTEL.gp.calendar) INTEL.gp.calendar.forEach(c => out.push({...c, cat:"geo"}));
+  if (CMI) { (CMI.energy && CMI.energy.calendar || []).forEach(c => out.push({...c, cat:c.cat || "energy"})); (CMI.ags && CMI.ags.calendar || []).forEach(c => out.push({...c, cat:c.cat || "ags"})); (CMI.macro && CMI.macro.calendar || []).forEach(c => out.push({...c, cat:c.cat || "macro"})); }
+  const seen = new Set();
+  return out.filter(c => c.d && c.x && !seen.has(c.d + c.x.slice(0, 14)) && seen.add(c.d + c.x.slice(0, 14))).sort((a,b) => a.d.localeCompare(b.d));
+}
+function renderCalendar(){
+  const today = new Date().toISOString().slice(0, 10);
+  const list = allCalendar().filter(c => !calCat || c.cat === calCat);
+  const cats = COMMOD.calendarCats;
+  const dday = d => { const n = Math.round((Date.parse(d) - Date.parse(today)) / 864e5); return n === 0 ? "D-DAY" : n > 0 ? "D-" + n : "D+" + (-n); };
+  let lastWk = "";
+  $("#p-cal").innerHTML = `
+    <p class="note"><b>시장·지정학 일정</b>. 조사·수집에서 모은 발표·회의·만료일입니다. 오늘 기준 D-일수는 페이지를 연 날짜로 계산합니다.</p>
+    <div class="catchips"><button class="tchip" data-cat="" aria-pressed="${!calCat}">전체</button>${Object.entries(cats).map(([k, v]) => `<button class="tchip t${k === "geo" ? "S" : k === "energy" ? "E" : k === "ags" ? "H" : k === "metals" ? "G" : k === "policy" ? "D" : "M"}" data-cat="${k}" aria-pressed="${calCat === k}">${esc(v)}</button>`).join("")}</div>
+    ${list.length ? `<ul class="cal">${list.map(c => { const wk = c.d.slice(0, 7); const hdr = wk !== lastWk ? `<li><span class="wk">${wk.replace("-", ".")}</span></li>` : ""; lastWk = wk; const n = Math.round((Date.parse(c.d) - Date.parse(today)) / 864e5);
+      return hdr + `<li class="t${c.cat === "geo" ? "S" : c.cat === "energy" ? "E" : c.cat === "ags" ? "H" : c.cat === "metals" ? "G" : c.cat === "policy" ? "D" : "M"}"><span class="dd${n < 0 ? " past" : n <= 7 ? " soon" : ""}">${esc(md(c.d))}<small>${dday(c.d)}</small></span><span><span class="cat">${esc((cats[c.cat] || c.cat).toUpperCase())}</span>${esc(c.x)} ${srcA(c.src)}${c.why ? `<small>${esc(c.why)}</small>` : ""}</span></li>`; }).join("")}</ul>` : `<div class="block"><p class="cap">일정 데이터가 아직 없습니다.</p></div>`}`;
+  $("#p-cal").querySelectorAll("[data-cat]").forEach(b => b.onclick = () => { calCat = b.dataset.cat || null; renderCalendar(); });
+}
 
 /* ---------- 수집원 ---------- */
 function renderSources(){
@@ -1667,6 +1803,9 @@ function compact(){
     강대국: INTEL && INTEL.gp ? {진영:INTEL.gp.blocs, 축:INTEL.gp.axes.map(a => ({축:a.title, 상태:a.status, 추세:a.trend, 사실:(a.facts||[]).map(f => f.d + " " + f.x), 지표:(a.metrics||[]).map(mrow)})), 판단:INTEL.gp.judgments, 일정:(INTEL.gp.calendar||[]).map(c => c.d + " " + c.x)} : null,
     자동수집: AUTO ? {시각:AUTO.generated, 시세:AUTO.markets.map(m => m.l + " " + m.v + " (" + m.d + ", " + m.chg + ")"), 해협통항:Object.fromEntries(Object.entries(AUTO.portwatch || {}).map(([k,v]) => [k, v.latest])), 변화:AUTO.changes, 수집원상태:(AUTO.sources||[]).filter(x => !x.ok).map(x => x.name + ": " + x.err)} : null,
     트립와이어: TRIP_ ? TRIP_.fired : [], RFI: RFI_.map(i => i.title),
+    상품: CMR.map(c => { const q = cmQuote(c); const tr = cmTrans(c); return {상품:c.n, 거래소:c.ex, 시세:q ? q.v + " " + c.unit + " (" + (q.d || "") + ", " + (q.chg || "") + ")" : null, 동인:c.drivers, 한국:c.kr, 전파:tr.map(t => t.th + " " + t.dir + t.w + " " + t.m), 사건7일:cmEvents(c, 7).length}; }),
+    시장조사: CMI ? ["energy","ags","macro"].map(k => CMI[k] ? {분야:k, 판단:CMI[k].judgments, 지표:(CMI[k].groups||[]).map(g => ({그룹:g.title, 동인:g.drivers, 리스크:g.risks, 지표:(g.metrics||[]).map(m => [m.l, m.v, m.d, m.chg, m.n].filter(Boolean).join(" | "))})), 포지션:(CMI[k].positioning||[]).map(p => p.l + " " + p.v + " " + (p.d||"") + " " + (p.chg||"")), 기간구조:(CMI[k].curve||[]).map(x => x.l + " " + x.v + " " + (x.n||""))} : null).filter(Boolean) : null,
+    일정: allCalendar().slice(0, 40).map(c => c.d + " [" + c.cat + "] " + c.x),
     항로: DATA.lanes.map(l => l.name + ": " + l.label),
     군사태세: IW.posture.units.map(u => u.n + " " + u.st + " (" + u.asof + ", " + u.g + ") " + u.x),
     연계: IW.links.edges.map(e => e.s + "→" + e.t + " w" + e.w + " " + e.m),
@@ -1682,7 +1821,7 @@ askBtn.addEventListener("click", async () => {
   askBtn.disabled = true; stopBtn.hidden = false;
   answer.className = "answer wait"; answer.textContent = "분석 중…";
   ctl = new AbortController();
-  const prompt = "너는 국가 정보기관의 선임 지정학 분석관이다. 아래 JSON은 상황판 데이터다(종합경보, 핵심판단과 신뢰도, 전역별 징후 지표·시나리오·행위자·정보공백, 해협별 물동량·운임·보험, 전쟁 경제 지표, 강대국 경쟁 구조, 군사태세, 연계, 한국 영향, 시장, 출처 등급이 붙은 사건 목록).\n규칙: 이 데이터만 근거로 한국어로 답한다. 데이터에 없는 사실은 '상황판에 없음'이라고 밝히고, 추론은 추론이라고 표시한다. 판단에는 신뢰도(높음/보통/낮음)를 붙이고, 확률은 ICD 203 척도(거의 확실·매우 높음·높음·반반·낮음·매우 낮음)로 표현한다. 수치를 인용할 때는 날짜를 함께 적고, 출처 등급이 C 이하인 자료에 의존할 때는 그 사실을 밝힌다. 마크다운 기호 없이 평문, 핵심 판단을 첫 문장에, 6~12문장.\n\n데이터:\n" + compact() + "\n\n질문: " + question;
+  const prompt = "너는 국가 정보기관의 선임 지정학·시장 분석관이다. 원자재 선물·환율·금리 거래에 쓰일 정보(시세·재고·포지션·기간구조·일정·분쟁 전파)를 함께 다룬다. 아래 JSON은 상황판 데이터다(종합경보, 핵심판단과 신뢰도, 전역별 징후 지표·시나리오·행위자·정보공백, 해협별 물동량·운임·보험, 전쟁 경제 지표, 강대국 경쟁 구조, 군사태세, 연계, 한국 영향, 시장, 출처 등급이 붙은 사건 목록).\n규칙: 이 데이터만 근거로 한국어로 답한다. 데이터에 없는 사실은 '상황판에 없음'이라고 밝히고, 추론은 추론이라고 표시한다. 판단에는 신뢰도(높음/보통/낮음)를 붙이고, 확률은 ICD 203 척도(거의 확실·매우 높음·높음·반반·낮음·매우 낮음)로 표현한다. 수치를 인용할 때는 날짜를 함께 적고, 출처 등급이 C 이하인 자료에 의존할 때는 그 사실을 밝힌다. 마크다운 기호 없이 평문, 핵심 판단을 첫 문장에, 6~12문장.\n\n데이터:\n" + compact() + "\n\n질문: " + question;
   try {
     const r = await sample(prompt, {signal:ctl.signal, modelTier:"default", onText:({text}) => { answer.className = "answer"; answer.textContent = text; }});
     answer.className = "answer"; answer.textContent = r.text + (r.truncated ? "\n\n(답변이 길어 잘렸어요.)" : "");
@@ -1699,7 +1838,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 })();
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();
