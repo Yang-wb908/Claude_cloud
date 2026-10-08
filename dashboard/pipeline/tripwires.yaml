@@ -121,3 +121,10 @@ tripwires:
     value: 105
     sev: 3
     why: "신흥국·원자재 통화 압박."
+  - id: econ_risk_70
+    title: "경제 위험 지수 70 돌파"
+    metric: risk.index
+    op: ">="
+    value: 70
+    sev: 4
+    why: "시나리오 꼬리·시장·공급망 스트레스 복합 상승. 수입물가·포지션 헤지 점검."

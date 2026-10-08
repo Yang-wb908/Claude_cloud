@@ -61,6 +61,10 @@ def build_report(dash: Path, now: datetime | None = None) -> str:
     lines = [f"# SITREP {date}", "", f"**DTG** {dtg} · UNCLASSIFIED // OSINT · 자동 수집 {auto.get('generated', '-')}", "", "## BLUF", "", bluf, ""]
     if trip.get("fired"):
         lines += ["## 트립와이어 발동", ""] + [f"- **{t['title']}** — 현재 {t['current']} (임계 {t['op']} {t['threshold']}) · {t.get('why', '')}" for t in trip["fired"]] + [""]
+    rk = dash / "data" / "risk.json"
+    if rk.exists():
+        r = json.loads(rk.read_text())
+        lines += ["## 경제 위험 지수", "", f"**{r['index']} ({r['level']})** · " + " · ".join(f"{k} {round(100 * v['v'])}" for k, v in r["components"].items()) + f" · 한국 수입 바스켓 P95 {r['basket']['p95']:+.1f}%" + (f" · 페이퍼 북 VaR95 {r['book']['var95']:+.1f}%" if r.get("book") else ""), ""]
     sc_path = dash / "data" / "scorecard.json"
     if sc_path.exists():
         sc = json.loads(sc_path.read_text()); o = sc.get("overall", {})

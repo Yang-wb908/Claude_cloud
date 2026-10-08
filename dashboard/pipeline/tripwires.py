@@ -25,6 +25,11 @@ def _get(d, path: str):
             if m.get("sym") == sym:
                 return m.get("v")
         return None
+    if parts[0] == "risk":
+        cur = d.get("risk") or {}
+        for p in parts[1:]:
+            cur = cur.get(p) if isinstance(cur, dict) else None
+        return cur
     if parts[0] == "pla" and len(parts) > 1 and parts[1] == "latest":
         pla = d.get("pla") or []
         if not pla:
@@ -76,6 +81,8 @@ def evaluate(auto: dict, events: list[dict], rules: list[dict] | None = None, no
 
 def run(dash: Path) -> list[dict]:
     auto = json.loads((dash / "intel.auto.json").read_text()) if (dash / "intel.auto.json").exists() else {}
+    if (dash / "data" / "risk.json").exists():
+        auto["risk"] = json.loads((dash / "data" / "risk.json").read_text())
     snap = json.loads((dash / "data_snapshot.json").read_text())
     fired = evaluate(auto, snap.get("events", []))
     (dash / "data").mkdir(exist_ok=True)

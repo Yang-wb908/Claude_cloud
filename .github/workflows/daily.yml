@@ -35,15 +35,16 @@ jobs:
           python dashboard/pipeline/run.py score
           python dashboard/pipeline/run.py backtest
           python dashboard/pipeline/run.py book
+          python dashboard/pipeline/run.py risk
           python dashboard/build.py
       - name: 커밋
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json dashboard/data/book.json dashboard/data/book_mtm.json reports
+          git add dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json dashboard/data/book.json dashboard/data/book_mtm.json dashboard/data/risk.json dashboard/data/risk_history.json dashboard/data/badges reports
           git diff --cached --quiet || (git commit -m "data: 일일 동기화 $(date -u +%Y-%m-%d) 예측·채점 [skip ci]" && git push)
       - name: 적중 요약을 Job Summary에
-        run: cat reports/SCORECARD-latest.md reports/BOOK-latest.md >> "$GITHUB_STEP_SUMMARY"
+        run: cat reports/RISK-latest.md reports/SCORECARD-latest.md reports/BOOK-latest.md >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dashboard

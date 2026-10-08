@@ -90,6 +90,14 @@ python dashboard/pipeline/run.py advise    # 에이전트 재검토 → data/adv
 
 `advisor.py`는 `@beta_tool` 함수 7개(사건 검색, 시세 변동, 시뮬레이션, 시나리오 목록, 채점표, 페이퍼 북, 과거 사례)를 `tool_runner`에 넘겨 최대 10라운드 조사 후 JSON 제안을 받습니다. `advisor.yml`이 매주 월요일 Issue(`scenario`+`advisor`)로 올리고, intake 봇이 충격표를 댓글로 답합니다.
 
+## 경제 위험 지수 (`risk.py`)
+
+```bash
+python dashboard/pipeline/run.py risk   # data/risk.json, data/risk_history.json, data/badges/risk.json, reports/RISK-latest.md
+```
+
+상황판 `risk.js`와 같은 구성(시나리오 꼬리 30 · 시장 25 · 공급망 20 · 포지셔닝 10 · 사건 10 · 모델 5)을 저장소 데이터(시계열·intel.auto·PortWatch·COT·채점표·페이퍼 북)로 계산합니다. 트립와이어 경로 `risk.index`.
+
 ## 테스트
 
 ```bash

@@ -28,7 +28,7 @@ import yaml
 HERE = Path(__file__).resolve().parent
 DASH = HERE.parent
 sys.path.insert(0, str(DASH))
-from pipeline import advisor, assemble, backtest, book, collectors, enrich, fetch, forecast, report, tripwires  # noqa: E402
+from pipeline import advisor, assemble, backtest, book, collectors, enrich, fetch, forecast, report, risk, tripwires  # noqa: E402
 
 log = logging.getLogger("pipeline")
 RAW = HERE / "cache" / "raw.json"
@@ -143,6 +143,13 @@ def cmd_book(args) -> None:
     (DASH.parent / "reports" / "BOOK-latest.md").write_text(book.markdown(m))
 
 
+def cmd_risk(args) -> None:
+    r = risk.run(DASH)
+    log.info("risk index %d (%s): %s", r["index"], r["level"], ", ".join(f"{k} {round(100 * v['v'])}" for k, v in r["components"].items()))
+    (DASH.parent / "reports").mkdir(exist_ok=True)
+    (DASH.parent / "reports" / "RISK-latest.md").write_text(risk.markdown(r))
+
+
 def cmd_advise(args) -> None:
     res = advisor.run(DASH, use_claude=not (args.no_claude or os.environ.get("PIPELINE_NO_CLAUDE")))
     (DASH.parent / "reports").mkdir(exist_ok=True)
@@ -163,14 +170,14 @@ def cmd_build(args) -> None:
 
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description="세계 상황판 수집 파이프라인")
-    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "book", "advise", "report", "build", "all"])
+    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "book", "risk", "advise", "report", "build", "all"])
     ap.add_argument("--offline", action="store_true", help="네트워크 없이 캐시만 사용")
     ap.add_argument("--only", help="수집원 id 목록(쉼표)")
     ap.add_argument("--no-claude", action="store_true", help="규칙 기반 분류만 사용")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
-    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "book": cmd_book, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
+    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "book": cmd_book, "risk": cmd_risk, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
     if args.cmd == "all":
         for name in ["collect", "enrich", "assemble", "tripwires", "report", "build"]:
             steps[name](args)

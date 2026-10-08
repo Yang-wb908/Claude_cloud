@@ -459,6 +459,12 @@ a.btn{text-decoration:none;display:inline-block}
 .achc{border:1px solid var(--line);background:transparent;border-radius:6px;min-width:34px;padding:3px 0;font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
 .achc.vCC{background:color-mix(in srgb,var(--s1) 35%,transparent)} .achc.vC{background:color-mix(in srgb,var(--s1) 16%,transparent)} .achc.vI{background:color-mix(in srgb,var(--s5) 18%,transparent)} .achc.vII{background:color-mix(in srgb,var(--s5) 38%,transparent)}
 tr.nondiag td{opacity:.6}
+.riskrow{display:flex;gap:14px;align-items:center;margin:8px 0}
+.rgauge{width:132px;flex:none} .rgauge svg{position:static;inset:auto;width:132px;height:95px;display:block;pointer-events:none}
+.rbars{flex:1;display:grid;gap:4px;min-width:0} .rb{display:grid;grid-template-columns:92px 1fr 28px;gap:6px;align-items:center;font-size:11.5px;color:var(--muted)} .rb i{display:block;height:7px;background:color-mix(in srgb,var(--line) 60%,transparent);border-radius:3px;overflow:hidden} .rb i b{display:block;height:100%;background:var(--c);border-radius:3px} .rb small{font-family:var(--num);text-align:right;color:var(--ink)} .rb span small{color:var(--faint)}
+.riskblk .cap{font-size:12.5px;color:var(--muted)}
+.rk{display:inline-block;font-family:var(--mono);font-size:9.5px;padding:0 4px;border-radius:3px;margin-left:5px;vertical-align:middle;letter-spacing:.03em}
+.rk.r1{background:color-mix(in srgb,var(--s1) 20%,transparent);color:var(--s1)} .rk.r2{background:color-mix(in srgb,var(--s2) 20%,transparent);color:var(--s2)} .rk.r3{background:color-mix(in srgb,var(--s3) 22%,transparent);color:var(--s3)} .rk.r4{background:color-mix(in srgb,var(--s4) 24%,transparent);color:var(--s4)} .rk.r5{background:color-mix(in srgb,var(--s5) 26%,transparent);color:var(--s5)}
 .sctiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}
 .sct{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel2);display:grid;gap:2px}
 .sct .l{font-size:11.5px;color:var(--faint)} .sct .v{font-family:var(--num);font-size:24px;font-weight:600;line-height:1.1} .sct small{color:var(--muted);font-size:11px}
@@ -587,6 +593,7 @@ tr.nondiag td{opacity:.6}
       <button class="tab" role="tab" aria-selected="false" data-pane="p-gp" data-g="mkt" hidden>강대국</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-cal" data-g="mkt" hidden>일정</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt" data-g="mkt" hidden>시장</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-risk" data-g="mkt" hidden>위험도</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-scn" data-g="an" hidden>시나리오</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-bt" data-g="an" hidden>백테스트</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ach" data-g="an" hidden>가설</button>
@@ -621,6 +628,7 @@ tr.nondiag td{opacity:.6}
       <section class="pane" id="p-src" role="tabpanel" hidden></section>
       <section class="pane" id="p-scn" role="tabpanel" hidden></section>
       <section class="pane" id="p-bt" role="tabpanel" hidden></section>
+      <section class="pane" id="p-risk" role="tabpanel" hidden></section>
       <section class="pane" id="p-ach" role="tabpanel" hidden></section>
       <section class="pane" id="p-book" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
@@ -1340,6 +1348,7 @@ function renderBluf(){
   $("#p-bluf").innerHTML = `
     <div class="block sev${g.level}"><div class="glevel"><span class="big">${g.level}</span><div class="lab"><b>종합 경보단계 · ${esc(g.label)} ${TREND[g.trend][0]}</b>전면전 ${sorted.filter(t=>t.sev===5).length} · 고강도 ${sorted.filter(t=>t.sev===4).length} · 긴장 ${sorted.filter(t=>t.sev===3).length} · 회색지대 ${sorted.filter(t=>t.sev===2).length}</div></div>
       <p class="cap" style="margin-top:12px;color:var(--ink)">${esc(g.summary)}</p></div>
+    ${typeof riskBlufHtml === "function" ? riskBlufHtml() : ""}
     <div class="block"><h3>핵심판단</h3><span class="meta">BLUF · 신뢰도는 출처 수·일관성·추론 의존도 기준</span>
       <ul class="kj">${B.judgments.map(j => `<li><div class="t">${esc(j.t)}</div><div class="b">${esc(j.basis)}</div>${confBadge(j.conf)} ${thChips(j.th)}</li>`).join("")}</ul></div>
     ${TRIP_ && TRIP_.fired && TRIP_.fired.length ? `<div class="block sev${Math.max(...TRIP_.fired.map(f => f.sev || 3))}"><h3>트립와이어 발동 <span class="en">auto</span></h3><span class="meta">임계치 돌파 · ${esc(TRIP_.generated || "")}</span>
@@ -1516,7 +1525,7 @@ function renderCommod(){
     <p class="note"><b>원자재·거래 보드</b>. 타일을 누르면 시세·동인·포지션·기간구조·관련 사건이 펼쳐집니다. 시세는 자동 수집(Yahoo) 또는 조사 수집값이며 날짜가 붙습니다.</p>
     ${judg.length ? `<div class="block"><h3>시장 핵심판단</h3><span class="meta">조사 수집 · 근거는 괄호 안</span><ul class="kj">${judg.map(j => `<li><div class="t">${esc(j.x)}</div><span class="conf">${esc(KN[j.k])}</span></li>`).join("")}</ul></div>` : `<div class="block"><p class="cap">시장 조사 데이터가 아직 없습니다. 아래 타일의 시세는 자동 수집 실행 후 채워집니다.</p></div>`}
     ${COMMOD.groups.map(g => `<div class="cmhead"><h3>${esc(g.n)}</h3><span class="en">${esc(g.en)}</span></div><div class="cmgrid">${CMR.filter(c => c.g === g.id).map(c => { const q = cmQuote(c); const n7 = cmEvents(c, 7).length; const tr = cmTrans(c).filter(t => TH[t.th].sev >= 4); const sev = tr.length ? Math.max(...tr.map(t => TH[t.th].sev)) : 2;
-      return `<button class="cmtile sev${sev}${cmSel === c.id ? " on" : ""}" data-cm="${c.id}"><span class="n">${esc(c.n)}</span><span class="v">${q ? esc(q.v) : "—"}</span><span class="s">${q && q.chg ? `<span class="trend ${/^[-−]/.test(q.chg) ? "down" : /^\+/.test(q.chg) ? "up" : "flat"}">${esc(q.chg)}</span>` : ""}${q && q.d ? `<span>${esc(md(q.d))}</span>` : ""}${n7 ? `<span>사건 ${n7}</span>` : ""}${tr.length ? `<span>${tr.map(t => dirTag(t.dir)).join("")}</span>` : ""}</span></button>`; }).join("")}</div>
+      return `<button class="cmtile sev${sev}${cmSel === c.id ? " on" : ""}" data-cm="${c.id}"><span class="n">${esc(c.n)}${typeof riskBadge === "function" ? riskBadge(c.id) : ""}</span><span class="v">${q ? esc(q.v) : "—"}</span><span class="s">${q && q.chg ? `<span class="trend ${/^[-−]/.test(q.chg) ? "down" : /^\+/.test(q.chg) ? "up" : "flat"}">${esc(q.chg)}</span>` : ""}${q && q.d ? `<span>${esc(md(q.d))}</span>` : ""}${n7 ? `<span>사건 ${n7}</span>` : ""}${tr.length ? `<span>${tr.map(t => dirTag(t.dir)).join("")}</span>` : ""}</span></button>`; }).join("")}</div>
       <div id="cmd-${g.id}"></div>`).join("")}
     <div class="block"><h3>분쟁 → 상품 전파 행렬</h3><span class="meta">경보 3 이상 전역 × 상품 · +상승 −하락 · 숫자는 강도 1~3 · 셀에 마우스를 올리면 경로</span>${mx}</div>`;
   $("#p-cm").querySelectorAll(".cmtile").forEach(b => b.onclick = () => { cmSel = cmSel === b.dataset.cm ? null : b.dataset.cm; renderCommod(); if (cmSel) renderCmDetail(CM_BY[cmSel]); });
@@ -1917,6 +1926,7 @@ function compact(){
     시나리오: scLast ? {선택: scSelected().map(t => t.n + " " + scState.p[t.id] + "% ×" + scState.k[t.id]), 지평일: scLast.H, 기대변동: scLast.rows.slice(0, 14).map(r => (CM_BY[r.a] || {n:r.a}).n + " " + fmtPct(r.e, r.bp) + " [P5 " + fmtPct(r.p5, r.bp) + " / P95 " + fmtPct(r.p95, r.bp) + "]")} : null,
     과거사례: AN_.analogs.slice(0, 24).map(a => a.n + " (" + a.date + ") 브렌트20일 " + fmtPct(a.moves && a.moves.brent ? a.moves.brent.d20 : null) + " 밀20일 " + fmtPct(a.moves && a.moves.wheat ? a.moves.wheat.d20 : null) + " VIX20일 " + fmtPct(a.moves && a.moves.vix ? a.moves.vix.d20 : null)),
     예측적중: SCORE_ ? {예측: SCORE_.n_forecasts, 채점: SCORE_.n_scored, 방향적중: SCORE_.overall.dir, 구간포함90: SCORE_.overall.cov90, 스킬: SCORE_.overall.skill, 자산별: Object.entries(SCORE_.by_asset || {}).map(([a, v]) => a + " 방향 " + v.dir + " 스킬 " + v.skill)} : null,
+    경제위험: RISK_ ? {지수: RISK_.index, 수준: RISK_.level, 구성: Object.fromEntries(Object.entries(RISK_.comp).map(([k, v]) => [v.l, Math.round(100 * v.v)])), 상품R4이상: RISK_.perAsset.filter(x => x.grade >= 4).map(x => x.n + " R" + x.grade + " " + fmtPct(x.p5, x.bp) + "~" + fmtPct(x.p95, x.bp)), 한국바스켓: {기대: fmtPct(RISK_.basket.mean), P95: fmtPct(RISK_.basket.p95)}, 페이퍼북: RISK_.book ? {VaR95: fmtPct(RISK_.book.var95), ES95: fmtPct(RISK_.book.es), 최악시나리오: RISK_.book.cond.slice(0, 3).map(c => c.n + " " + fmtPct(c.pnl))} : null} : null,
     포지션: bookItems().filter(t => t.status === "open").map(t => t.id + " " + (CM_BY[t.cm] || {n: t.cm}).n + " " + t.side + " 진입 " + t.entry + " 현재 " + t.last + " P&L " + t.pnl + " — " + (t.thesis || "")),
     가설: ACH_.questions.map(q => { const r = achScores(q); return q.q + " → " + r.rank.map(h => h + " " + q.hyp[h] + " (불일치 " + r.scores[h].incons.toFixed(1) + ")").join(" / "); }),
     판단장부: (() => { const st = judgStats(judgItems()); return {건수: st.n, 판정: st.resolved, Brier: st.brier, 기한경과: st.overdue}; })(),
@@ -1956,7 +1966,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderBook(); renderACH(); repoActivity(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderBook(); renderACH(); renderRisk(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();
