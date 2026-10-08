@@ -182,6 +182,7 @@ OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact
 |---|---|
 | `bootstrap.yml` | `ops/RUN` 푸시로 작업 브랜치에서 전체 파이프라인 1회 실행·커밋·트립와이어 Issue |
 | 누락 감지 `coverage.py` | 어느 전역에도 안 묶이는 관련 보도를 군집화해 `data/coverage.json`에 기록. 5건 이상이면 트립와이어 `coverage_surge`가 Issue를 열고 수집원 탭·DIB에 표시 |
+| 대체 수집 `collectors.rss` | 피드가 403/404/빈 응답이면 같은 매체의 Google News `site:<도메인>` 검색으로 자동 대체하고 수집원 탭·실행 요약에 사유를 남김(`no_fallback: true`로 해제). 브라우저 UA, ReliefWeb v2 |
 | 교차검증 `assemble.corroborate` | 같은 사건을 보도한 독립 매체 수(cc)를 세어 신빙성 숫자를 올리고(3곳 이상 → 1), 출처별 30일 교차확인율·신빙성 평균을 수집원 탭에 표시. 한 범주의 수집 실패는 직전 값을 유지 |
 | IMINT `imint.yml` | 주 1회 공개 Sentinel-1 영상에서 호르무즈·바브엘만데브·수에즈 AOI의 선박 수를 저장소의 K-CFAR 탐지기로 세어 해협 탭에 표시 |
 | 징후 갱신 `bayes.py` | 트립와이어·징후 상태·위험 지수의 우도비(`data/indicator_lr.json`)로 하우스 뷰를 베이즈 갱신한 자동 뷰를 매일 만들고, 예측·채점을 하우스 뷰와 나란히 기록 |

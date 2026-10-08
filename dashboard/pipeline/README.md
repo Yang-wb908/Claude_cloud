@@ -112,3 +112,8 @@ python -m pytest tests/pipeline -q
 ```
 
 네트워크 없이 고정 입력(fixtures)으로 파서·보강·병합·트립와이어를 검사합니다.
+
+
+### 피드 대체 수집
+
+`kind: rss` 수집원은 원 피드가 403/404이거나 비어 있으면 자동으로 Google News `site:<도메인> when:2d` 검색 RSS로 대체된다. 등급·도메인은 원 수집원 것을 그대로 쓰고, 상태표(`intel.auto.json.sources[].note`)와 부트스트랩/수집 요약에 사유가 남는다. 특정 수집원에서 끄려면 `no_fallback: true`.
