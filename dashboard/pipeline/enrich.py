@@ -177,7 +177,7 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     except ImportError:
         log.warning("anthropic SDK not installed; skipping Claude enrichment")
         return {}
-    model = model or os.environ.get("PIPELINE_MODEL", "claude-opus-5-5")
+    model = model or os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"
     client = anthropic.Anthropic()
     out: dict[str, dict] = {}
     for i in range(0, len(items), batch):

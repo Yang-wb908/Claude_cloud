@@ -37,7 +37,7 @@ def mode() -> str | None:
 
 
 def model_name() -> str:
-    return os.environ.get("PIPELINE_MODEL", "claude-opus-5-5")
+    return os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"  # 워크플로가 빈 vars 를 넘겨도 기본값
 
 
 def cli_model_alias() -> str:

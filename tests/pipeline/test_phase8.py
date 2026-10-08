@@ -136,3 +136,8 @@ def test_metric_items_sharing_a_url_keep_distinct_ids():
     b = {"kind": "metric", "sid": "cftc_cot", "title": "COT 구리 2026-09-29", "url": "https://www.cftc.gov/x"}
     n1 = {"kind": "news", "sid": "s1", "title": "t1", "url": "https://e.com/1"}; n2 = {"kind": "news", "sid": "s2", "title": "t2", "url": "https://e.com/1"}
     assert assemble.item_id(a) != assemble.item_id(b) and assemble.item_id(n1) == assemble.item_id(n2)
+
+
+def test_empty_model_env_falls_back_to_default(monkeypatch):
+    monkeypatch.setenv("PIPELINE_MODEL", "")
+    assert llm.model_name() == "claude-opus-5-5"

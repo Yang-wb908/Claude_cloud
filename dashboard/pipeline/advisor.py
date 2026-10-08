@@ -96,7 +96,7 @@ def claude_advise(t: Tools, model: str | None = None) -> dict | None:
     except ImportError:
         log.warning("anthropic SDK not installed")
         return None
-    model = model or os.environ.get("PIPELINE_MODEL", "claude-opus-5-5")
+    model = model or os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"
     client = anthropic.Anthropic()
 
     @beta_tool
