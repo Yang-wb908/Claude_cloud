@@ -150,7 +150,7 @@ SCHEMA = {
                    "description": "전역 id. 어느 전역에도 속하지 않으면 null"},
             "p": {"type": "string", "description": "가장 구체적인 지명의 한국어 표기, 없으면 빈 문자열"},
             "lat": {"anyOf": [{"type": "number"}, {"type": "null"}]}, "lon": {"anyOf": [{"type": "number"}, {"type": "null"}]},
-            "rel": {"type": "integer", "minimum": 0, "maximum": 3, "description": "지정학·안보 상황판 관련도: 0 무관, 1 배경, 2 관련, 3 핵심"},
+            "rel": {"type": "integer", "enum": [0, 1, 2, 3], "description": "지정학·안보 상황판 관련도: 0 무관, 1 배경, 2 관련, 3 핵심"},
         }}}},
 }
 SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영어 뉴스 항목을 받아 한국어 한 줄 요약(x), 사건 유형(t: S 공습·드론·미사일, G 지상전·점령, "

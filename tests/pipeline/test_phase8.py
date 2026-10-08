@@ -141,3 +141,33 @@ def test_metric_items_sharing_a_url_keep_distinct_ids():
 def test_empty_model_env_falls_back_to_default(monkeypatch):
     monkeypatch.setenv("PIPELINE_MODEL", "")
     assert llm.model_name() == "claude-opus-5-5"
+
+
+UNSUPPORTED = {"minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "minLength", "maxLength", "pattern", "format", "minItems", "maxItems", "uniqueItems", "multipleOf", "patternProperties", "if", "then", "else", "not", "oneOf", "allOf"}
+
+
+def _walk(node, path="$"):
+    """구조화 출력(output_config.format.json_schema)이 거부하는 키워드·type 배열을 찾는다."""
+    bad = []
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if k in UNSUPPORTED:
+                bad.append(f"{path}.{k}")
+            if k == "type" and isinstance(v, list):
+                bad.append(f"{path}.type[] (anyOf 사용)")
+            bad += _walk(v, f"{path}.{k}")
+    elif isinstance(node, list):
+        for i, v in enumerate(node):
+            bad += _walk(v, f"{path}[{i}]")
+    return bad
+
+
+def test_structured_output_schemas_use_supported_subset():
+    from pipeline import enrich, redteam, advisor
+    import pipeline.report as report
+    schemas = {"enrich": enrich.SCHEMA, "redteam": redteam.SCHEMA}
+    for name, obj in list(vars(advisor).items()) + list(vars(report).items()):
+        if name.endswith("SCHEMA") and isinstance(obj, dict):
+            schemas[name] = obj
+    for name, sc in schemas.items():
+        assert not _walk(sc), f"{name}: {_walk(sc)}"
