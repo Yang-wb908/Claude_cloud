@@ -17,7 +17,9 @@ import requests
 log = logging.getLogger("pipeline.fetch")
 
 CACHE_DIR = Path(__file__).resolve().parent / "cache"
-UA = "situation-board-collector/0.3 (+https://github.com/Yang-wb908/Claude_cloud)"
+# 많은 언론사 CDN이 알려지지 않은 UA에 403을 돌려주므로 브라우저 UA를 쓰고, 연락처는 From 헤더에 둔다.
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 situation-board/0.4"
+CONTACT = "https://github.com/Yang-wb908/Claude_cloud"
 
 _session: requests.Session | None = None
 OFFLINE = False
@@ -27,7 +29,7 @@ def session() -> requests.Session:
     global _session
     if _session is None:
         _session = requests.Session()
-        _session.headers.update({"User-Agent": UA, "Accept": "*/*"})
+        _session.headers.update({"User-Agent": UA, "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, application/json, */*", "Accept-Language": "en-US,en;q=0.8,ko;q=0.5", "From": CONTACT})
     return _session
 
 

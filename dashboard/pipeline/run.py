@@ -64,7 +64,7 @@ def cmd_collect(args) -> None:
             for it in got:
                 it["id"] = assemble.item_id(it)
             items += got
-            status.append({"id": src["id"], "name": src["name"], "kind": src["kind"], "grade": src.get("grade"), "ok": err is None, "n": len(got), "err": err, "ms": ms,
+            status.append({"id": src["id"], "name": src["name"], "kind": src["kind"], "grade": src.get("grade"), "ok": err is None, "n": len(got), "err": err, "ms": ms, "note": src.get("_note"),
                            "verify": bool(src.get("verify")), "tags": src.get("tags", []), "region": src.get("region", "")})
             log.info("%-18s %s %3d items %5dms %s", src["id"], "ok " if err is None else "ERR", len(got), ms, err or "")
     # dedupe by id, prefer richer summary

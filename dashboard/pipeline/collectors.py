@@ -65,8 +65,24 @@ def parse_feed(body: bytes, sid: str, max_items: int = 40) -> list[dict]:
 
 
 def rss(src: dict, cfg: dict) -> list[dict]:
-    body = fetch.get(src["url"], timeout=cfg.get("timeout", 25))
-    return parse_feed(body, src["id"], cfg.get("max_items", 40))
+    src.pop("_note", None)
+    try:
+        body = fetch.get(src["url"], timeout=cfg.get("timeout", 25))
+        items = parse_feed(body, src["id"], cfg.get("max_items", 40))
+        if items or src.get("no_fallback"):
+            return items
+        err = "empty feed"
+    except Exception as e:  # noqa: BLE001
+        if src.get("no_fallback"):
+            raise
+        err = f"{type(e).__name__}: {str(e)[:80]}"
+    # 피드가 막히거나(403) 옮겨졌으면(404) 같은 매체의 기사를 Google News site: 검색으로 받는다. 등급·도메인은 그대로.
+    d = src.get("domain") or domain(src["url"])
+    if not d:
+        raise RuntimeError(err)
+    items = gnews({"id": src["id"], "q": f"site:{d}", "lang": src.get("lang", "en")}, cfg)
+    src["_note"] = f"{err} → Google News site:{d} 대체 {len(items)}건"
+    return items
 
 
 # ── Google News search RSS ─────────────────────────────────────────────────
@@ -144,7 +160,7 @@ def reliefweb(src: dict, cfg: dict) -> list[dict]:
         ]},
         "fields": {"include": ["title", "body", "url_alias", "date.created", "country.name", "format.name", "source.shortname", "source.name"]},
     }
-    r = fetch.session().post(src["url"], json=body, timeout=cfg.get("timeout", 25))
+    r = fetch.session().post(src["url"], params={"appname": "situation-board"}, json=body, timeout=cfg.get("timeout", 25))
     r.raise_for_status()
     return parse_reliefweb(r.json(), src["id"])
 

@@ -68,6 +68,10 @@ jobs:
           print(f"## 수집원 {len(ok)}/{len(a['sources'])} 정상 · 항목 {a['counts']['raw']} · 새 사건 {a['counts']['added']} · Claude {a['counts']['claude']}\n")
           print("| 실패 수집원 | 오류 |\n|---|---|")
           for s in bad: print(f"| {s['id']} | {str(s.get('err',''))[:120]} |")
+          fb = [s for s in ok if s.get("note")]
+          if fb:
+              print("\n| 대체 수집(Google News site:) | 사유 |\n|---|---|")
+              for s in fb: print(f"| {s['id']} | {str(s['note'])[:120]} |")
           c = json.load(open("dashboard/data/coverage.json")) if __import__('os').path.exists("dashboard/data/coverage.json") else None
           if c: print(f"\n미분류 군집: 최대 {c['max_cluster']} ({c['max_key']}) · 총 {c['unmapped_total']}")
           EOF

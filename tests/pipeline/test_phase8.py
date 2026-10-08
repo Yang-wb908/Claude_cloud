@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "dashboard"))
 DASH = ROOT / "dashboard"
 
-from pipeline import assemble, bayes, calib, coverage, forecast, llm  # noqa: E402
+from pipeline import assemble, bayes, calib, collectors, coverage, fetch, forecast, llm  # noqa: E402
 
 
 def test_llm_parse_json_and_mode(monkeypatch):
@@ -77,3 +77,25 @@ def test_forecast_auto_view_scored_separately(tmp_path):
     sc = forecast.score(dash)
     assert sc["n_forecasts"] == 2 and sc["overall"]["n"] == 1 and sc["overall_auto"]["n"] == 1
     assert sc["forecasts"][1]["view_name"] == "auto" and sc["forecasts"][1]["view"][0]["p"] == 70
+
+
+FEED = b"""<?xml version="1.0"?><rss><channel><item><title>Plague alert in Irkutsk - Kyiv Independent</title><link>https://news.google.com/rss/articles/x</link><pubDate>Tue, 06 Oct 2026 10:00:00 GMT</pubDate></item></channel></rss>"""
+
+
+def test_rss_falls_back_to_google_news_site_search(monkeypatch):
+    calls = []
+
+    def fake_get(url, params=None, timeout=25, retries=2, cache=True):
+        calls.append(url)
+        if url.startswith("https://kyivindependent.com"):
+            raise RuntimeError("HTTPError: 404 Client Error")
+        return FEED
+    monkeypatch.setattr(fetch, "get", fake_get)
+    src = {"id": "kyivindependent", "kind": "rss", "url": "https://kyivindependent.com/feed/", "lang": "en"}
+    items = collectors.rss(src, {})
+    assert len(items) == 1 and items[0]["extra"]["publisher"] == "Kyiv Independent"
+    assert "site%3Akyivindependent.com" in calls[1] and "404" in src["_note"] and "site:kyivindependent.com" in src["_note"]
+    strict = {**src, "no_fallback": True}
+    import pytest
+    with pytest.raises(RuntimeError):
+        collectors.rss(strict, {})

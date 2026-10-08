@@ -1,6 +1,7 @@
 # 수집원 레지스트리. 등급은 Admiralty 코드 기본값(신뢰성 A~F, 신빙성 1~6).
 # kind: rss | gnews(Google News 검색 RSS) | gdelt | reliefweb | portwatch | markets | series | cot | wiki | html
 # verify: true 는 URL을 실제 운용에서 아직 검증하지 못한 수집원. 첫 실행 상태표에서 실패하면 교정한다.
+# rss 수집원은 피드가 403/404/빈 응답이면 자동으로 Google News site:<도메인> 검색으로 대체된다(상태표 note에 표시). no_fallback: true 로 끌 수 있다.
 defaults:
   timeout: 25
   max_items: 40
@@ -58,7 +59,7 @@ sources:
      queries: ["(Hormuz OR tanker attack) sourcelang:eng", "(Houthi OR \"Red Sea\" OR \"Bab el-Mandeb\") sourcelang:eng", "(Tigray OR Eritrea OR Mekelle) sourcelang:eng", "(Sudan AND (RSF OR Kordofan OR Darfur)) sourcelang:eng", "(\"North Korea\" AND (missile OR DMZ)) sourcelang:eng", "(Taiwan AND (PLA OR ADIZ OR \"coast guard\")) sourcelang:eng", "(Ukraine AND (drone OR strike OR offensive)) sourcelang:eng", "(Sahel OR Mali OR Niger) AND (attack OR JNIM OR \"Islamic State\") sourcelang:eng", "(Somalia AND (pirates OR al-Shabaab)) sourcelang:eng", "(Haiti OR Venezuela) AND (gang OR strike OR military) sourcelang:eng"],
      note: "전 세계 뉴스 메타데이터. 기사 URL을 그대로 받아 도메인 기준으로 재등급."}
   - {id: reliefweb, name: ReliefWeb API, kind: reliefweb, grade: A2, lang: en, region: global, tags: [humanitarian],
-     url: "https://api.reliefweb.int/v1/reports", note: "OCHA 인도적 상황 보고. 국가별 최신 상황보고·플래시 업데이트."}
+     url: "https://api.reliefweb.int/v2/reports", note: "OCHA 인도적 상황 보고. 국가별 최신 상황보고·플래시 업데이트."}
   - {id: portwatch, name: IMF PortWatch 해협 통항, kind: portwatch, grade: A2, lang: en, region: maritime, tags: [maritime],
      url: "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query",
      note: "AIS 기반 일일 통항 척수. 레이어명·필드명은 첫 실행에서 검증.", verify: true}
