@@ -1,0 +1,60 @@
+{
+ "generated": "2026-10-08T10:47:18Z",
+ "fired": [
+  {
+   "id": "korea_missile",
+   "title": "북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)",
+   "sev": 3,
+   "th": "korea",
+   "why": "한반도 긴장 수위.",
+   "current": 2,
+   "threshold": 1,
+   "op": ">=",
+   "at": "2026-10-08T10:47:18Z"
+  },
+  {
+   "id": "maritime_attacks",
+   "title": "해상 피격·피랍 사건 24시간 내 3건 이상",
+   "sev": 4,
+   "th": null,
+   "why": "해협 폐쇄·보험료 급등 선행.",
+   "current": 17,
+   "threshold": 3,
+   "op": ">=",
+   "at": "2026-10-08T10:47:18Z"
+  },
+  {
+   "id": "ethiopia_interstate",
+   "title": "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)",
+   "sev": 4,
+   "th": "ethiopia",
+   "why": "국가 간 전쟁 공식화 가능성.",
+   "current": 22,
+   "threshold": 5,
+   "op": ">=",
+   "at": "2026-10-08T10:47:18Z"
+  },
+  {
+   "id": "copper_6",
+   "title": "구리 6달러/lb 돌파",
+   "sev": 3,
+   "th": null,
+   "why": "공급 차질·재고 고갈 신호.",
+   "current": 6.64,
+   "threshold": 6,
+   "op": ">",
+   "at": "2026-10-08T10:47:18Z"
+  },
+  {
+   "id": "bio_health_events",
+   "title": "보건안보 전역 24시간 보건(H) 사건 3건 이상",
+   "sev": 3,
+   "th": "bio",
+   "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
+   "current": 12,
+   "threshold": 3,
+   "op": ">=",
+   "at": "2026-10-08T10:47:18Z"
+  }
+ ]
+}

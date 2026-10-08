@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 73.1,
+   "p": 65.6,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -15,7 +15,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 17.2,
+   "p": 15.4,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -28,21 +28,33 @@
   },
   {
    "id": "hormuz_war",
-   "p": 9.7,
+   "p": 19.0,
    "k": 1,
    "prior": 10.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:maritime_attacks",
+     "f": 2.5,
+     "note": "해상 피격 24시간 3건"
+    }
+   ]
   },
   {
    "id": "redsea_houthi",
-   "p": 25.0,
+   "p": 31.4,
    "k": 1,
    "prior": 25.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:maritime_attacks",
+     "f": 2.0,
+     "note": "해상 피격 급증"
+    }
+   ]
   },
   {
    "id": "redsea_calm",
-   "p": 30.0,
+   "p": 23.6,
    "k": 1,
    "prior": 30.0,
    "evidence": []
@@ -77,10 +89,16 @@
   },
   {
    "id": "korea_strategic",
-   "p": 10.0,
+   "p": 16.7,
    "k": 1,
    "prior": 10.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:korea_missile",
+     "f": 1.8,
+     "note": "24시간 내 발사"
+    }
+   ]
   },
   {
    "id": "fed_hawkish",
@@ -105,17 +123,28 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 50.0,
+   "p": 75.0,
    "k": 1,
    "prior": 50.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:ethiopia_interstate",
+     "f": 3.0,
+     "note": "국가 간 교전 사건 급증"
+    }
+   ]
   },
   {
    "id": "bio_spread",
-   "p": 5.3,
+   "p": 14.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
+    {
+     "key": "tw:bio_health_events",
+     "f": 3.0,
+     "note": "보건 사건 급증"
+    },
     {
      "key": "ind:bio:0",
      "f": 0.5,
@@ -127,5 +156,11 @@
  "asof": "2026-10-08",
  "mode": "auto",
  "base_asof": "2026-10-08",
- "fired": []
+ "fired": [
+  "bio_health_events",
+  "copper_6",
+  "ethiopia_interstate",
+  "korea_missile",
+  "maritime_attacks"
+ ]
 }
