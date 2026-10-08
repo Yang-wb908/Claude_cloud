@@ -1,23 +1,23 @@
 # SITREP 2026-10-08
 
-**DTG** 081347Z OCT 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-10-08T13:46:59Z
+**DTG** 081352Z OCT 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-10-08T13:52:45Z
 
 ## BLUF
 
-지난 24시간 사건 511건이 수집됐고, 가장 많은 전역은 이란·호르무즈 105건, 러시아–우크라이나 65건, 에티오피아·티그라이 60건입니다. 트립와이어 6건이 발동 상태입니다. 자동 생성 요약이며 분석관 판단이 아닙니다.
+후티의 사우디 공항 연쇄 공격(사망 3명, 리야드 폭발음)과 카타르 북부 해상 유조선 피격(UKMTO)이 겹치며 걸프 분쟁이 사우디 본토로 확산되고 있다. 호르무즈 통항은 일 4척(유조선 0척, 10월 4일 PortWatch 기준)으로 사실상 마비 상태이며, 브렌트유 104.66달러(+4.3%), 유럽 TTF 가스 +7.8%, 경유 +5.8% 급등으로 미루어 향후 1~2주 내 에너지 가격 고공행진이 지속될 가능성이 높다(높은 신뢰도). 미군의 대이란 대규모 작전 재개 준비 지시(Axios 단독, 미확인)와 트럼프 대통령의 대이란 협상 거부 발언을 고려하면, 미·이란 직접 교전이 재개될 가능성은 대등하다(중간 신뢰도). 튀르키예·파키스탄의 대사우디 상호방위조약 발동 보도는 미확인이나, 사실일 경우 분쟁의 다자화 위험이 커진다. 한반도에서는 합참의장이 DMZ 지뢰 폭발을 '도발'로 규정했고, 북한이 의료지원 제안을 거부했으며, 북한군 포로 문제로 주우크라이나 대사가 소환됐다. 북한 미사일 트립와이어(6건)는 북한 발사가 아닌 타 지역 공습 사건이 오집계된 것으로 판단되므로, 단기 국지 도발 가능성은 있음 수준(중간 신뢰도)으로 평가한다. 코스피 -3.1%와 대러 연료 수출 의혹도 주시가 필요하다. 에티오피아의 에리트레아군 티그라이 진입 비난과 드론 공습(목격자 증언, 일부 미확인)으로 볼 때 양국 간 국가 대 국가 교전이 공식화될 가능성이 있다(중간 신뢰도).
 
 ## 트립와이어 발동
 
 - **호르무즈 일일 통항 10척 미만 (PortWatch)** — 현재 4 (임계 < 10) · 봉쇄·공격으로 통항이 사실상 멈춘 상태. 유가·보험료 급등 선행 지표.
 - **북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)** — 현재 6 (임계 >= 1) · 한반도 긴장 수위.
-- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 73 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
-- **에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)** — 현재 60 (임계 >= 5) · 국가 간 전쟁 공식화 가능성.
+- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 78 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
+- **에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)** — 현재 61 (임계 >= 5) · 국가 간 전쟁 공식화 가능성.
 - **구리 6달러/lb 돌파** — 현재 6.6 (임계 > 6) · 공급 차질·재고 고갈 신호.
 - **보건안보 전역 24시간 보건(H) 사건 3건 이상** — 현재 13 (임계 >= 3) · 2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.
 
 ## 경제 위험 지수
 
-**51 (보통)** · tail 66 · market 46 · supply 4 · crowd 65 · events 100 · model 50 · 한국 수입 바스켓 P95 +33.1%
+**51 (보통)** · tail 66 · market 45 · supply 4 · crowd 65 · events 100 · model 50 · 한국 수입 바스켓 P95 +33.1%
 
 ## 예측 적중
 
@@ -25,7 +25,7 @@
 
 ## 전역별 24시간 사건
 
-### 이란·호르무즈 (105건)
+### 이란·호르무즈 (114건)
 - 2026-10-08 · 외교·정치 · 카이로 — Strait of Hormuz crisis fuels Cairo's plastic recycling business [출처](https://www.france24.com/en/tv-shows/focus/20261008-strait-of-hormuz-crisis-fuels-cairo-s-plastic-recycling-business) `B3`
 - 2026-10-08 · 외교·정치 · 리야드 — Explosions heard in Saudi capital Riyadh after Houthis' deadly attacks on airports [출처](https://www.france24.com/en/middle-east/20261008-saudi-arabia-strikes-deadly-houthi-attacks-airports) `B2`
 - 2026-10-08 · 공습·드론·미사일 ·  — Oil prices rise sharply on Middle East tensions and US hurricane threat [출처](https://www.theguardian.com/business/2026/oct/08/oil-prices-rise-middle-east-tensions-us-hurricane-threat) `B3`
@@ -35,7 +35,7 @@
 - 2026-10-08 · 공습·드론·미사일 · 테헤란 — Morning update [출처](https://www.middleeasteye.net/live-blog/live-blog-update/morning-update-637) `B3`
 - 2026-10-08 · 해상 · 워싱턴 — IRGC Navy official rejects US claims on transits through Hormuz Strait [출처](https://www.middleeasteye.net/live-blog/live-blog-update/irgc-navy-official-rejects-us-claims-transits-through-hormuz-strait) `B2`
 
-### 러시아–우크라이나 (65건)
+### 러시아–우크라이나 (67건)
 - 2026-10-08 · 외교·정치 · 키이우 — Former ambassador on NATO's meeting in Ukraine and the ongoing war [출처](https://www.npr.org/2026/10/08/nx-s1-5993774/former-ambassador-on-natos-meeting-in-ukraine-and-the-ongoing-war) `B1`
 - 2026-10-08 · 공습·드론·미사일 · 크라마토르스크 — Dozens killed in Russian strike on buses in Ukraine's Kramatorsk as Kyiv targets data centre [출처](https://www.france24.com/en/europe/20261008-russian-strike-buses-kills-at-least-12-ukraine-kramatorsk-kyiv-targets-data-centre) `B1`
 - 2026-10-08 · 공습·드론·미사일 ·  — Russian strike on buses kills 33, say officials, as deadly attacks on Ukraine surge [출처](https://www.bbc.co.uk/news/articles/c875pwq134l3o?at_medium=RSS&at_campaign=rss) `B2`
@@ -45,7 +45,7 @@
 - 2026-10-08 · 외교·정치 ·  — Covid, Brexit and Liz Truss mini-budget led to lasting decline in mental health, study finds [출처](https://www.theguardian.com/society/2026/oct/08/covid-brexit-liz-truss-mini-budget-lasting-decline-mental-health-uk-study) `B3`
 - 2026-10-08 · 외교·정치 · 서울 — South Korea pledges legal action over alleged fuel exports to Russia [출처](https://www.aljazeera.com/news/2026/10/8/south-korea-pledges-legal-action-over-alleged-fuel-exports-to-russia?traffic_source=rss) `B1`
 
-### 에티오피아·티그라이 (60건)
+### 에티오피아·티그라이 (61건)
 - 2026-10-08 · 외교·정치 ·  — Back to War in Ethiopia? [출처](https://www.crisisgroup.org/pod/africa/ethiopia/back-war-ethiopia-0) `B2`
 - 2026-10-08 · 외교·정치 ·  — Ethiopia’s Northern Conflict Does Not Begin or End in Ethiopia [출처](https://news.google.com/rss/articles/CBMinwFBVV95cUxOaDIta2dsdDZsT0dWX2VZbXV1QTJ5bnQ5czF3bDl2VlZoMVA3YjF2SVg0Qll1Mkk1ZDR2SXA4WFh5c1dRSHpiVHdhQmtjYVlRbHV6YnlFTTd5NzhiOFRRZVp1Yk1YTnBpWHNGNUdLcWQtcVJKejFYOWNXUml6WkVWUTYzT3N2Qkhsb0YzdElCbDdUSnZFWVJMVmY4dFo5Tkk?oc=5) `C3`
 - 2026-10-08 · 외교·정치 ·  — Eritrean soldiers entered northern Ethiopian towns, government-allied commander says [출처](https://news.google.com/rss/articles/CBMiywFBVV95cUxQVkFHMjNPQy1fZnlTYkFocWx2Umg5R015dlE2ajU4T2Q1enNSNFhSTDR4X21VZ0I4VG15UnB4MC0weEpUZnFWTlZZZ002MjhoVEFOSDlpRnFzNktYS2F0SHZfOFF6RUlQSVJFaXJTRlFLdDhJMDgtS0ZPdTNnenBwZ05LSWdFTUJDMVJVbFRCcUpoQXFOOG5rMVZGTGhWM1BmOGg2NlExbjNjYmVSdDI2Tlh6UU5Qcl9ZejRxbC16ZmxpSktSTWtZaVFBSQ?oc=5) `C3`
@@ -55,7 +55,7 @@
 - 2026-10-08 · 공습·드론·미사일 · 티그라이 — Ethiopia drone strikes against Eritrean troops in northern Tigray: witnesses, monitor - Africa - World [출처](https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2dSY1ItWnlmNFJSZVZGU1ZWcFRYLV9ZczhNR2N3NkctOXpaRzBicUxvWmpUTmhSdHJrZnE1SXVlcURLREUxOGlvSEtyY0VWb1FMRUJLaW1ISXZsMDFUWGlrTmk4UGtOYURzSmNXd1Y4cFpoR0M2aVFBUk5HdVRLQ18weEl5TjZ3SktDaU8zVDJqcHYxRmZlc0tEVUJUN2ZjcEhJMUdfNlQxSDNGYkdXQWpuTjVyUzVjd1F4TFVB?oc=5) `C1`
 - 2026-10-08 · 외교·정치 ·  — Daily_Brief: #Sudan’s al-Burhan inspects army division in #Kassala near #Ethiopia, #Eritrea borders [출처](https://news.google.com/rss/articles/CBMiUkFVX3lxTE93bEFnNmR3ZDByLTlJRThzNW9mS09sVlRCYTlXNlFaX0lrQ1FFbmoyUVdZYjFGWjJCSFRUZERZWHcxTWlaTEZZNHlmMEtOTFBLdUE?oc=5) `C3`
 
-### 예멘·홍해 (55건)
+### 예멘·홍해 (56건)
 - 2026-10-08 · 공습·드론·미사일 · 리야드 — Houthis claim new attack on Riyadh airport as fighting continues in Yemen [출처](https://www.france24.com/en/video/20261008-houthis-claim-new-attack-on-riyadh-airport-as-fighting-continues-in-yemen) `B1`
 - 2026-10-08 · 외교·정치 ·  — Three people killed in Houthi attacks on Saudi Arabia airports, officials say [출처](https://www.bbc.co.uk/news/articles/cwn8d5rx22rdo?at_medium=RSS&at_campaign=rss) `B2`
 - 2026-10-08 · 외교·정치 ·  — Yemen’s government needs tribes to defeat the Houthis. Will they join? [출처](https://www.aljazeera.com/news/2026/10/8/yemens-government-needs-tribes-to-defeat-the-houthis-will-they-join?traffic_source=rss) `B3`
@@ -183,45 +183,45 @@
 
 | 지표 | 값 | 날짜 | 변동 |
 |---|---:|---|---|
-| 브렌트유 ($/bbl) | 104.7 | 2026-10-08 | +4.4% |
-| WTI ($/bbl) | 92.27 | 2026-10-08 | +3.2% |
-| 경유 선물 ($/gal) | 4.82 | 2026-10-08 | +6.0% |
-| 휘발유 선물 ($/gal) | 3.18 | 2026-10-08 | -2.2% |
-| 헨리허브 가스 ($/MMBtu) | 3.25 | 2026-10-08 | +6.0% |
+| 브렌트유 ($/bbl) | 104.66 | 2026-10-08 | +4.3% |
+| WTI ($/bbl) | 92.26 | 2026-10-08 | +3.2% |
+| 경유 선물 ($/gal) | 4.81 | 2026-10-08 | +5.8% |
+| 휘발유 선물 ($/gal) | 3.17 | 2026-10-08 | -2.3% |
+| 헨리허브 가스 ($/MMBtu) | 3.24 | 2026-10-08 | +5.7% |
 | 유럽 TTF 가스 (€/MWh) | 79.25 | 2026-10-08 | +7.8% |
-| 금 ($/oz) | 4149.1 | 2026-10-08 | -0.2% |
-| 은 ($/oz) | 59.4 | 2026-10-08 | -2.4% |
-| 백금 ($/oz) | 1647.6 | 2026-10-08 | -3.5% |
+| 금 ($/oz) | 4146.2 | 2026-10-08 | -0.3% |
+| 은 ($/oz) | 59.35 | 2026-10-08 | -2.5% |
+| 백금 ($/oz) | 1645.2 | 2026-10-08 | -3.6% |
 | 구리 ($/lb) | 6.6 | 2026-10-08 | +0.2% |
-| 시카고 밀 (c/bu) | 688.0 | 2026-10-08 | -0.6% |
-| 캔자스 밀 (c/bu) | 738.75 | 2026-10-08 | -0.5% |
-| 옥수수 (c/bu) | 500.25 | 2026-10-08 | +0.6% |
-| 대두 (c/bu) | 1291.5 | 2026-10-08 | +0.8% |
-| 대두유 (c/lb) | 67.85 | 2026-10-08 | -1.6% |
-| 쌀 ($/cwt) | 16.81 | 2026-10-08 | +3.5% |
-| 설탕 No.11 (c/lb) | 20.54 | 2026-10-08 | -0.9% |
-| 커피 아라비카 (c/lb) | 287.05 | 2026-10-08 | -1.9% |
-| 코코아 ($/t) | 5520.0 | 2026-10-08 | -5.9% |
+| 시카고 밀 (c/bu) | 686.25 | 2026-10-08 | -0.9% |
+| 캔자스 밀 (c/bu) | 737.0 | 2026-10-08 | -0.7% |
+| 옥수수 (c/bu) | 498.75 | 2026-10-08 | +0.3% |
+| 대두 (c/bu) | 1289.0 | 2026-10-08 | +0.6% |
+| 대두유 (c/lb) | 67.72 | 2026-10-08 | -1.8% |
+| 쌀 ($/cwt) | 16.8 | 2026-10-08 | +3.5% |
+| 설탕 No.11 (c/lb) | 20.52 | 2026-10-08 | -1.0% |
+| 커피 아라비카 (c/lb) | 286.15 | 2026-10-08 | -2.2% |
+| 코코아 ($/t) | 5489.0 | 2026-10-08 | -6.4% |
 | 면화 (c/lb) | 80.65 | 2026-10-08 | +4.6% |
-| 생우 (c/lb) | 223.88 | 2026-10-08 | +3.0% |
-| 달러인덱스 | 102.3 | 2026-10-08 | +0.1% |
-| 원/달러 | 1342.68 | 2026-10-08 | -1.3% |
-| 엔/달러 | 158.18 | 2026-10-08 | +0.2% |
-| 위안/달러 | 6.69 | 2026-10-08 | -0.2% |
-| 유로/달러 | 1.12 | 2026-10-08 | -0.5% |
-| 호주달러/달러 | 0.7 | 2026-10-08 | +0.3% |
-| 헤알/달러 | 5.02 | 2026-10-08 | -3.9% |
+| 생우 (c/lb) | 223.65 | 2026-10-08 | +2.9% |
+| 달러인덱스 | 102.31 | 2026-10-08 | +0.1% |
+| 원/달러 | 1341.93 | 2026-10-08 | -1.4% |
+| 엔/달러 | 158.14 | 2026-10-08 | +0.1% |
+| 위안/달러 | 6.7 | 2026-10-08 | -0.0% |
+| 유로/달러 | 1.12 | 2026-10-08 | -0.4% |
+| 호주달러/달러 | 0.7 | 2026-10-08 | +0.4% |
+| 헤알/달러 | 5.01 | 2026-10-08 | -4.1% |
 | 미 10년물 (%) | 5.29 | 2026-10-08 | +0.3% |
 | 미 5년물 (%) | 5.05 | 2026-10-08 | -0.1% |
-| VIX | 15.52 | 2026-10-08 | +1.4% |
+| VIX | 15.37 | 2026-10-08 | +0.4% |
 | 코스피 | 6625.93 | 2026-10-08 | -3.1% |
-| S&P 500 | 7775.86 | 2026-10-08 | +1.4% |
+| S&P 500 | 7784.76 | 2026-10-08 | +1.5% |
 | 니케이225 | 69042.11 | 2026-10-08 | +1.1% |
 | 상하이종합 | 3811.9 | 2026-10-08 | -2.0% |
-| 우라늄 ETF (URA) | 39.26 | 2026-10-08 | -0.8% |
-| 리튬·배터리 ETF (LIT) | 69.36 | 2026-10-08 | +1.7% |
-| 건화물 운임 ETF (BDRY) | 14.44 | 2026-10-08 | -0.6% |
-| 비트코인 ($) | 81776.29 | 2026-10-08 | -5.4% |
+| 우라늄 ETF (URA) | 39.28 | 2026-10-08 | -0.8% |
+| 리튬·배터리 ETF (LIT) | 69.25 | 2026-10-08 | +1.5% |
+| 건화물 운임 ETF (BDRY) | 14.61 | 2026-10-08 | +0.6% |
+| 비트코인 ($) | 82092.52 | 2026-10-08 | -5.1% |
 
 ## 해협 통항 (IMF PortWatch)
 
