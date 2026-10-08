@@ -120,13 +120,25 @@ def parse_gdelt(payload: dict, sid: str) -> list[dict]:
 
 
 def gdelt(src: dict, cfg: dict) -> list[dict]:
-    out = []
-    for q in src.get("queries", []):
+    """GDELT DOC API는 IP당 약 5초에 1요청으로 제한한다(429). 질의 사이를 띄우고, 429가 연속 2회면 나머지는 포기한다."""
+    import time as _t
+    out, strikes = [], 0
+    for i, q in enumerate(src.get("queries", [])):
+        if i:
+            _t.sleep(float(src.get("pace_s", 6)))
         params = {"query": q, "mode": "artlist", "format": "json", "timespan": "24h", "maxrecords": 50, "sort": "datedesc"}
         try:
-            out += parse_gdelt(fetch.get_json(GDELT, params, timeout=cfg.get("timeout", 25)), src["id"])
+            body = fetch.get(GDELT, params, timeout=cfg.get("timeout", 25), retries=0, cache=False)
+            payload = json.loads(body) if body.strip() else {}
+            out += parse_gdelt(payload, src["id"]); strikes = 0
         except Exception as e:  # noqa: BLE001 - one bad query should not kill the source
             log.warning("gdelt query failed %r: %s", q, e)
+            if "429" in str(e):
+                strikes += 1
+                if strikes >= 2:
+                    src["_note"] = "GDELT 429 연속 → 나머지 질의 생략"
+                    break
+                _t.sleep(15)
     return out
 
 

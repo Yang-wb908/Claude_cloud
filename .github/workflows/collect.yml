@@ -116,7 +116,7 @@ jobs:
           git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data dashboard/snapshots products reports
           if git diff --cached --quiet; then echo "변경 없음"; else
             git commit -m "data: 자동 수집 $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-            git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push
+            git pull --rebase --autostash -X theirs origin "$GITHUB_REF_NAME" && git push
           fi
       - name: 수집 로그·캐시 아티팩트
         uses: actions/upload-artifact@v4

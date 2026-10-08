@@ -34,7 +34,7 @@ jobs:
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
           git add dashboard/data/series.json dashboard/data/backtest.json reports/BACKTEST-latest.md
-          git diff --cached --quiet || (git commit -m "data: 주간 백테스트 $(date -u +%Y-%m-%d) [skip ci]" && git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push)
+          git diff --cached --quiet || (git commit -m "data: 주간 백테스트 $(date -u +%Y-%m-%d) [skip ci]" && git pull --rebase --autostash -X theirs origin "$GITHUB_REF_NAME" && git push)
       - name: 백테스트 이슈에 댓글 (고정 스레드)
         env:
           GH_TOKEN: ${{ github.token }}

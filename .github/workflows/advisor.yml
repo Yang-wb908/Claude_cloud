@@ -46,7 +46,7 @@ jobs:
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
           git add dashboard/data/advisor.json reports/ADVISOR-latest.md
-          git diff --cached --quiet || (git commit -m "data: 에이전트 분석관 제안 $(date -u +%Y-%m-%d) [skip ci]" && git pull --rebase -X theirs origin "$GITHUB_REF_NAME" && git push)
+          git diff --cached --quiet || (git commit -m "data: 에이전트 분석관 제안 $(date -u +%Y-%m-%d) [skip ci]" && git pull --rebase --autostash -X theirs origin "$GITHUB_REF_NAME" && git push)
       - name: 제안 Issue 생성 (intake 봇이 충격표를 댓글로, 체크박스를 켜면 하우스 뷰 채택)
         env:
           GH_TOKEN: ${{ github.token }}
