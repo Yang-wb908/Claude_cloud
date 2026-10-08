@@ -26,7 +26,8 @@ def _norm(s: str) -> str:
 
 
 def item_id(it: dict) -> str:
-    key = it.get("url") or (it.get("sid", "") + "|" + _norm(it.get("title", "")))
+    # metric 항목(COT·FBX 등)은 여러 행이 같은 안내 URL을 쓰므로 수집원+제목으로 구분한다
+    key = (it.get("sid", "") + "|" + _norm(it.get("title", ""))) if it.get("kind") == "metric" else (it.get("url") or (it.get("sid", "") + "|" + _norm(it.get("title", ""))))
     return "a" + hashlib.sha1(key.encode()).hexdigest()[:10]
 
 

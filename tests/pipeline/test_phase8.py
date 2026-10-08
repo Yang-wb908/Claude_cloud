@@ -129,3 +129,10 @@ def test_generic_fallback_domain(monkeypatch):
     monkeypatch.setitem(collectors.COLLECTORS, "boom", lambda src, cfg: (_ for _ in ()).throw(RuntimeError("403")))
     src = {"id": "reliefweb", "kind": "boom", "fallback_domain": "reliefweb.int"}
     assert len(collectors.collect(src, {})) == 1 and "site:reliefweb.int" in src["_note"]
+
+
+def test_metric_items_sharing_a_url_keep_distinct_ids():
+    a = {"kind": "metric", "sid": "cftc_cot", "title": "COT 금 2026-09-29", "url": "https://www.cftc.gov/x"}
+    b = {"kind": "metric", "sid": "cftc_cot", "title": "COT 구리 2026-09-29", "url": "https://www.cftc.gov/x"}
+    n1 = {"kind": "news", "sid": "s1", "title": "t1", "url": "https://e.com/1"}; n2 = {"kind": "news", "sid": "s2", "title": "t2", "url": "https://e.com/1"}
+    assert assemble.item_id(a) != assemble.item_id(b) and assemble.item_id(n1) == assemble.item_id(n2)
