@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   intake:
-    if: ${{ contains(github.event.issue.labels.*.name, 'scenario') || contains(github.event.issue.labels.*.name, 'judgment') || contains(github.event.issue.labels.*.name, 'event') }}
+    if: ${{ contains(github.event.issue.labels.*.name, 'scenario') || contains(github.event.issue.labels.*.name, 'judgment') || contains(github.event.issue.labels.*.name, 'event') || contains(github.event.issue.labels.*.name, 'trade') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
         env:
           LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          for k in scenario judgment event; do
+          for k in scenario judgment event trade; do
             case ",$LABELS," in *",$k,"*) echo "kind=$k" >> "$GITHUB_OUTPUT"; break;; esac
           done
       - name: 처리
@@ -51,7 +51,7 @@ jobs:
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data/judgments.json dashboard/data_snapshot.json dashboard/data/house_view.json
+          git add dashboard/data/judgments.json dashboard/data_snapshot.json dashboard/data/house_view.json dashboard/data/book.json
           git diff --cached --quiet || (git commit -m "data: issue #${{ github.event.issue.number }} ${{ steps.kind.outputs.kind }} 반영 [skip ci]" && git push)
       - name: 댓글
         env:

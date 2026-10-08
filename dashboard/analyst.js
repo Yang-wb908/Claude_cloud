@@ -1,10 +1,10 @@
 /* ---------- 5차: 시나리오 충격 모델 · 백테스트 · 판단 장부 (analyst.js, build.py가 app.html에 주입) ---------- */
 const REPO = "Yang-wb908/Claude_cloud";
-const JUDG_ = typeof JUDG === "object" && JUDG ? JUDG : {items: []};
+let JUDG_ = typeof JUDG === "object" && JUDG ? JUDG : {items: []};
 const BT_ = typeof BT === "object" ? BT : null;
 const AN_ = typeof ANALOGS === "object" ? ANALOGS : {analogs: [], tripwires: [], method_notes: [], gaps: []};
 const SCN_ = typeof SCEN === "object" ? SCEN : {assets: {}, templates: []};
-const HOUSE_ = typeof HOUSE === "object" ? HOUSE : null;
+let HOUSE_ = typeof HOUSE === "object" ? HOUSE : null;
 let SCORE_ = typeof SCORE === "object" ? SCORE : null;
 const pct0 = v => v == null ? "—" : Math.round(v * 100) + "%";
 const fmtPct = (v, bp) => v == null ? "—" : (v > 0 ? "+" : "") + (bp ? Math.round(v) + "bp" : (Math.abs(v) >= 10 ? v.toFixed(0) : v.toFixed(1)) + "%");

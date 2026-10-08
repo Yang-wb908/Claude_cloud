@@ -175,10 +175,43 @@ def event(form: dict) -> str:
     return f"현장 보고를 사건 목록에 추가했습니다.\n\n- 날짜 {d} · 전역 `{th}` · 유형 `{t}` · 등급 **{g}`\n- 장소 {place or '-'} {('(' + ', '.join(map(str, at)) + ')') if at else '(좌표 없음 — 지도에는 표시되지 않습니다)'}\n- {x[:200]}\n\n다음 수집 주기(6시간)에 GitHub Pages와 상황판에 반영됩니다."
 
 
+# ── trade (paper book) ─────────────────────────────────────────────────────
+def _num(v):
+    try:
+        return float(str(v).replace(",", "").strip()) if str(v).strip() else None
+    except ValueError:
+        return None
+
+
+def trade(form: dict) -> str:
+    path = DASH / "data" / "book.json"
+    book = json.loads(path.read_text()) if path.exists() else {"items": []}
+    today = datetime.now(UTC).strftime("%Y-%m-%d")
+    action = (form.get("동작") or "개시").strip()
+    tid = (form.get("포지션 id") or "").strip()
+    if action.startswith("종료"):
+        t = next((x for x in book["items"] if x["id"] == tid), None)
+        if not t:
+            set_output("changed", "false"); return f"포지션 `{tid}` 을 찾지 못했습니다."
+        t.update({"status": "closed", "exit": _num(form.get("종료가 (종료 시, 비우면 최근 종가)")), "exit_d": today, "closed_by": git_user(), "close_issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)})
+        path.write_text(json.dumps(book, ensure_ascii=False, indent=1)); set_output("changed", "true")
+        return f"포지션 `{tid}` 종료 기록. 종료가 {t['exit'] if t['exit'] is not None else '최근 종가(다음 동기화에서 확정)'}. 일일 동기화가 P&L을 확정합니다."
+    cm = (form.get("상품") or "").strip()
+    if not cm or not (form.get("논지") or "").strip():
+        set_output("changed", "false"); return "상품과 논지는 필수입니다."
+    n = 1 + max([int(x["id"].split("-")[-1]) for x in book["items"] if x["id"].startswith("pb-") and x["id"].split("-")[-1].isdigit()] or [0])
+    t = {"id": tid or f"pb-{n:03d}", "d": today, "cm": cm, "side": (form.get("방향") or "long").strip(), "entry": _num(form.get("진입가 (비우면 첫 종가)")), "size": _num(form.get("사이즈 (기본 1)")) or 1,
+         "stop": _num(form.get("손절가")), "target": _num(form.get("목표가")), "thesis": (form.get("논지") or "").strip()[:400],
+         "scn": [x.strip() for x in (form.get("근거 시나리오 id (쉼표)") or "").split(",") if x.strip()], "judg": [], "status": "open", "by": git_user(), "issue": int(os.environ.get("ISSUE_NUMBER", "0") or 0)}
+    book["items"].append(t)
+    path.write_text(json.dumps(book, ensure_ascii=False, indent=1)); set_output("changed", "true")
+    return f"페이퍼 포지션 `{t['id']}` 개시: {t['cm']} {t['side']} · 진입 {t['entry'] if t['entry'] is not None else '첫 종가'} · 손절 {t['stop']} · 목표 {t['target']}\n\n{t['thesis']}\n\n일일 동기화가 시가평가하고 손절·목표 도달 시 자동 종료합니다."
+
+
 def main() -> None:
     kind = sys.argv[1]
     form = parse_form(os.environ.get("ISSUE_BODY", ""))
-    out = {"scenario": scenario, "judgment": judgment, "event": event}[kind](form)
+    out = {"scenario": scenario, "judgment": judgment, "event": event, "trade": trade}[kind](form)
     print(out)
 
 

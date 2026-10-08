@@ -18,6 +18,14 @@ def opt_json(path, default):
         return json.dumps(default, ensure_ascii=False)
 
 
+def opt_json_raw(path):
+    p = B / path
+    try:
+        return json.loads(p.read_text()) if p.exists() else None
+    except Exception:
+        return None
+
+
 def registry():
     try:
         import yaml
@@ -31,9 +39,9 @@ app = (B / "app.html").read_text()
 theaters = re.sub(r"^\s*<script>\s*", "", (B / "theaters.js").read_text()).rstrip()
 auto = ("\nconst INTEL_AUTO = " + opt_json("intel.auto.json", None) + ";\nconst RFI = " + opt_json("data/rfi.json", []) + ";\nconst TRIP = " + opt_json("data/tripwires.json", None)
         + ";\nconst SOURCES = " + registry() + ";\nconst JUDG = " + opt_json("data/judgments.json", {"items": []}) + ";\nconst BT = " + opt_json("data/backtest.json", None)
-        + ";\nconst SERIES = " + opt_json("data/series.json", None) + ";\nconst HOUSE = " + opt_json("data/house_view.json", None) + ";\nconst SCORE = " + opt_json("data/scorecard.json", None) + ";\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
+        + ";\nconst SERIES = " + opt_json("data/series.json", None) + ";\nconst HOUSE = " + opt_json("data/house_view.json", None) + ";\nconst SCORE = " + opt_json("data/scorecard.json", None) + ";\nconst BOOK = " + opt_json("data/book_mtm.json", opt_json_raw("data/book.json")) + ";\n" + rd("ach.js") + "\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
 out = (app.replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
           .replace("/*__DATA__*/", rd("data_snapshot.json")).replace("/*__THEATERS__*/", theaters)
-          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js")))
+          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("live.js")))
 (B / "index.html").write_text(out)
 print("built", len(out), "bytes")

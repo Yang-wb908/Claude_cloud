@@ -81,6 +81,15 @@ python dashboard/pipeline/run.py series && python dashboard/pipeline/run.py fore
 
 `daily.yml`이 매일 09:20 KST에 실행합니다. 예측은 `data/forecasts/<날짜>.json`, 채점은 `data/scorecard.json`과 `reports/SCORECARD-latest.md`. 지평은 20거래일이며 방향 적중(부호 일치, ±1% 또는 ±10bp 이내는 '무변동'으로 취급), 90%·50% 구간 포함, PIT, MAE 대비 무변동·과거 사례 스킬을 냅니다.
 
+## 페이퍼 북·에이전트 (`book.py`, `advisor.py`)
+
+```bash
+python dashboard/pipeline/run.py book      # data/book.json 시가평가 → data/book_mtm.json, reports/BOOK-latest.md
+python dashboard/pipeline/run.py advise    # 에이전트 재검토 → data/advisor.json, reports/ADVISOR-latest.md (ANTHROPIC_API_KEY 없으면 규칙 점검)
+```
+
+`advisor.py`는 `@beta_tool` 함수 7개(사건 검색, 시세 변동, 시뮬레이션, 시나리오 목록, 채점표, 페이퍼 북, 과거 사례)를 `tool_runner`에 넘겨 최대 10라운드 조사 후 JSON 제안을 받습니다. `advisor.yml`이 매주 월요일 Issue(`scenario`+`advisor`)로 올리고, intake 봇이 충격표를 댓글로 답합니다.
+
 ## 테스트
 
 ```bash

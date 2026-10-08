@@ -437,6 +437,28 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .jbtn[aria-pressed="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .jbtns small{color:var(--faint);font-size:12px}
 a.btn{text-decoration:none;display:inline-block}
+.groups{display:flex;gap:4px;padding:8px 10px 0;background:var(--panel);position:sticky;top:0;z-index:3}
+.grp{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:4px 12px;font-size:12.5px;cursor:pointer;font-weight:500}
+.grp[aria-selected="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.tabs{top:37px}
+.status.sync,.status.search{padding:3px 10px} .status.sync i{display:none} .status[hidden]{display:none}
+#palette{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding-top:10vh}
+#palette[hidden]{display:none}
+.pal{width:min(720px,92vw);background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden}
+.pal input{width:100%;box-sizing:border-box;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:15px;padding:14px 16px;outline:none}
+.pal ul{list-style:none;margin:0;padding:6px 0;max-height:60vh;overflow:auto}
+.pal li{padding:8px 16px;font-size:13.5px;cursor:pointer;display:flex;gap:8px;align-items:baseline} .pal li:hover{background:var(--panel2)} .pal li.none{color:var(--faint);cursor:default}
+.agentbar{border-top:1px dashed var(--line);margin-top:10px;padding-top:10px;display:grid;gap:8px}
+.sug.agent{border-color:color-mix(in srgb,var(--s2) 50%,var(--line))}
+.agentlog{list-style:none;margin:0;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel2);font-family:var(--mono);font-size:11.5px;color:var(--muted);max-height:140px;overflow:auto}
+.agentlog li{padding:2px 0}
+#drafts h4{margin:8px 0 4px;font-size:13px} #drafts .wl li{font-size:13px}
+.achrank{display:grid;gap:6px;margin:8px 0}
+.hyp{border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13.5px;background:var(--panel2)} .hyp.lead{border-color:var(--s1);box-shadow:inset 3px 0 0 var(--s1)} .hyp small{display:block;color:var(--faint);font-size:11.5px}
+.achm td:first-child{white-space:normal;max-width:260px}
+.achc{border:1px solid var(--line);background:transparent;border-radius:6px;min-width:34px;padding:3px 0;font-family:var(--mono);font-size:12px;cursor:pointer;color:var(--ink)}
+.achc.vCC{background:color-mix(in srgb,var(--s1) 35%,transparent)} .achc.vC{background:color-mix(in srgb,var(--s1) 16%,transparent)} .achc.vI{background:color-mix(in srgb,var(--s5) 18%,transparent)} .achc.vII{background:color-mix(in srgb,var(--s5) 38%,transparent)}
+tr.nondiag td{opacity:.6}
 .sctiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}
 .sct{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel2);display:grid;gap:2px}
 .sct .l{font-size:11.5px;color:var(--faint)} .sct .v{font-family:var(--num);font-size:24px;font-weight:600;line-height:1.1} .sct small{color:var(--muted);font-size:11px}
@@ -505,6 +527,8 @@ a.btn{text-decoration:none;display:inline-block}
         <span class="lvl" id="glvl"></span>
         <span class="dtg" id="dtg"></span>
         <button class="status" id="status" aria-expanded="false" aria-controls="info"><i></i><span id="statusText">스냅숏</span></button>
+        <button class="status sync" id="syncBtn" title="GitHub 커넥터로 저장소의 최신 시세·사건·채점·장부를 불러옵니다">저장소 동기화</button>
+        <button class="status search" id="searchBtn" title="전역 검색 (Ctrl+K)">⌕ 검색</button>
       </div>
     </div>
     <div class="clocks">
@@ -547,23 +571,28 @@ a.btn{text-decoration:none;display:inline-block}
   </section>
 
   <aside class="panel">
+    <nav class="groups" role="tablist" aria-label="영역">
+      <button class="grp" data-g="sit" aria-selected="true">상황</button><button class="grp" data-g="mkt" aria-selected="false">시장</button><button class="grp" data-g="an" aria-selected="false">분석</button><button class="grp" data-g="ops" aria-selected="false">운영</button>
+    </nav>
     <nav class="tabs" role="tablist">
-      <button class="tab" role="tab" aria-selected="true" data-pane="p-bluf">브리프</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-th">분쟁</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-ev">사건</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-sea">해협</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-cm">상품</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-eco">경제</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-gp">강대국</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-cal">일정</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-pos">태세</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-net">연계</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-kr">한국</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt">시장</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-src">수집원</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-scn">시나리오</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-bt">백테스트</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-ai">분석관</button>
+      <button class="tab" role="tab" aria-selected="true" data-pane="p-bluf" data-g="sit">브리프</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-th" data-g="sit">분쟁</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-ev" data-g="sit">사건</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-pos" data-g="sit">태세</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-net" data-g="sit">연계</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-kr" data-g="sit">한국</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-sea" data-g="mkt" hidden>해협</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cm" data-g="mkt" hidden>상품</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-eco" data-g="mkt" hidden>경제</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-gp" data-g="mkt" hidden>강대국</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cal" data-g="mkt" hidden>일정</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt" data-g="mkt" hidden>시장</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-scn" data-g="an" hidden>시나리오</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-bt" data-g="an" hidden>백테스트</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-ach" data-g="an" hidden>가설</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-book" data-g="an" hidden>포지션</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-ai" data-g="an" hidden>분석관</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-src" data-g="ops" hidden>수집원</button>
     </nav>
     <div class="panes">
       <section class="pane" id="p-bluf" role="tabpanel"></section>
@@ -592,6 +621,8 @@ a.btn{text-decoration:none;display:inline-block}
       <section class="pane" id="p-src" role="tabpanel" hidden></section>
       <section class="pane" id="p-scn" role="tabpanel" hidden></section>
       <section class="pane" id="p-bt" role="tabpanel" hidden></section>
+      <section class="pane" id="p-ach" role="tabpanel" hidden></section>
+      <section class="pane" id="p-book" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
         <p class="note" id="aiNote">상황판에 담긴 데이터(브리핑·핵심판단·징후·시나리오·해협·경제·강대국·사건·시장)만 근거로 답합니다. 직접 검색은 하지 않아요.</p>
         <div class="ask" id="askBox">
@@ -635,9 +666,9 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const INTEL = typeof window.INTEL === "object" ? window.INTEL : null;
-const AUTO = typeof INTEL_AUTO === "object" ? INTEL_AUTO : null;
-const RFI_ = typeof RFI === "object" && RFI ? RFI : [];
-const TRIP_ = typeof TRIP === "object" ? TRIP : null;
+let AUTO = typeof INTEL_AUTO === "object" ? INTEL_AUTO : null;
+let RFI_ = typeof RFI === "object" && RFI ? RFI : [];
+let TRIP_ = typeof TRIP === "object" ? TRIP : null;
 const SRC_ = typeof SOURCES === "object" && SOURCES ? SOURCES : [];
 let current = null;
 const TH = Object.fromEntries(DATA.theaters.map(t => [t.id, t]));
@@ -1249,21 +1280,29 @@ function hideCard(){ if (evcard.hidden) return; evcard.hidden = true; selectedEv
 evcard.addEventListener("click", e => e.stopPropagation());
 
 /* ---------- 탭 ---------- */
+function setGroup(g){
+  document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-selected", b.dataset.g === g));
+  document.querySelectorAll(".tab").forEach(t => t.hidden = t.dataset.g !== g);
+}
 function setTab(id){
+  const tab = document.querySelector(`.tab[data-pane="${id}"]`); if (tab) setGroup(tab.dataset.g);
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.pane === id));
   document.querySelectorAll(".pane").forEach(p => p.hidden = p.id !== id);
   if (id === "p-net" && !netDrawn) drawNet();
-  try { localStorage.setItem("sit-tab", id); } catch(e) {}
+  try { localStorage.setItem("sit-tab", id); if (tab) localStorage.setItem("sit-tab-" + tab.dataset.g, id); } catch(e) {}
 }
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => setTab(t.dataset.pane)));
+document.querySelectorAll(".grp").forEach(b => b.addEventListener("click", () => { const g = b.dataset.g; let last = null; try { last = localStorage.getItem("sit-tab-" + g); } catch(e) {} const first = document.querySelector(`.tab[data-g="${g}"]`); setTab(last && document.querySelector(`.tab[data-pane="${last}"][data-g="${g}"]`) ? last : first.dataset.pane); }));
 
 /* ---------- 티커 ---------- */
-(function ticker(){
+function renderTicker(){
   const latest = [...EVENTS].sort((a,b) => b.d.localeCompare(a.d)).filter(e => daysAgo(e.d) <= 2).slice(0, 24);
   const html = latest.map(e => `<button data-id="${e.id}" class="t${e.t}"><time>${md(e.d)}</time><span class="tag">${esc(TYPES[e.t].en)}</span>${esc(e.p ? e.p + " · " : "")}${esc(e.x)}</button>`).join("");
   const el = $("#ticker"); el.innerHTML = html + html;
+  if (el.dataset.bound) return; el.dataset.bound = "1";
   el.addEventListener("click", ev => { const b = ev.target.closest("button[data-id]"); if (!b) return; const e = EVENTS.find(x => x.id === b.dataset.id); if (!e) return; if (innerWidth < 960) scrollToMap(); if (e.at) flyToPoint(e.at, 4); showCard([e]); });
-})();
+}
+renderTicker();
 
 /* ---------- 분쟁 목록 + 상태판 ---------- */
 function dayCounts(thId){
@@ -1878,6 +1917,8 @@ function compact(){
     시나리오: scLast ? {선택: scSelected().map(t => t.n + " " + scState.p[t.id] + "% ×" + scState.k[t.id]), 지평일: scLast.H, 기대변동: scLast.rows.slice(0, 14).map(r => (CM_BY[r.a] || {n:r.a}).n + " " + fmtPct(r.e, r.bp) + " [P5 " + fmtPct(r.p5, r.bp) + " / P95 " + fmtPct(r.p95, r.bp) + "]")} : null,
     과거사례: AN_.analogs.slice(0, 24).map(a => a.n + " (" + a.date + ") 브렌트20일 " + fmtPct(a.moves && a.moves.brent ? a.moves.brent.d20 : null) + " 밀20일 " + fmtPct(a.moves && a.moves.wheat ? a.moves.wheat.d20 : null) + " VIX20일 " + fmtPct(a.moves && a.moves.vix ? a.moves.vix.d20 : null)),
     예측적중: SCORE_ ? {예측: SCORE_.n_forecasts, 채점: SCORE_.n_scored, 방향적중: SCORE_.overall.dir, 구간포함90: SCORE_.overall.cov90, 스킬: SCORE_.overall.skill, 자산별: Object.entries(SCORE_.by_asset || {}).map(([a, v]) => a + " 방향 " + v.dir + " 스킬 " + v.skill)} : null,
+    포지션: bookItems().filter(t => t.status === "open").map(t => t.id + " " + (CM_BY[t.cm] || {n: t.cm}).n + " " + t.side + " 진입 " + t.entry + " 현재 " + t.last + " P&L " + t.pnl + " — " + (t.thesis || "")),
+    가설: ACH_.questions.map(q => { const r = achScores(q); return q.q + " → " + r.rank.map(h => h + " " + q.hyp[h] + " (불일치 " + r.scores[h].incons.toFixed(1) + ")").join(" / "); }),
     판단장부: (() => { const st = judgStats(judgItems()); return {건수: st.n, 판정: st.resolved, Brier: st.brier, 기한경과: st.overdue}; })(),
     백테스트: BT_ ? {사건연구: BT_.events && BT_.events.summary, 트립와이어: (BT_.tripwires || []).map(t => t.title + " 발동 " + t.episodes + "회, 브렌트60일 중앙값 " + fmtPct(t.median_brent_60))} : null,
     일정: allCalendar().slice(0, 40).map(c => c.d + " [" + c.cat + "] " + c.x),
@@ -1915,7 +1956,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); repoActivity(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderBook(); renderACH(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

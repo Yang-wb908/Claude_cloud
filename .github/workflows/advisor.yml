@@ -1,0 +1,48 @@
+name: 에이전트 분석관 (주간 하우스 뷰 재검토)
+
+on:
+  schedule:
+    - cron: "10 1 * * 1"             # 월요일 01:10 UTC = 10:10 KST, 백테스트(00:50) 뒤
+  workflow_dispatch:
+    inputs:
+      claude:
+        description: "Claude 에이전트 사용 (ANTHROPIC_API_KEY 필요, 끄면 규칙 점검만)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  advise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: 에이전트 실행
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+          PIPELINE_NO_CLAUDE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.claude) && '1' || '' }}
+        run: python dashboard/pipeline/run.py advise
+      - name: 결과 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/data/advisor.json reports/ADVISOR-latest.md
+          git diff --cached --quiet || (git commit -m "data: 에이전트 분석관 제안 $(date -u +%Y-%m-%d) [skip ci]" && git push)
+      - name: 제안 Issue 생성 (intake 봇이 충격표를 댓글로, 체크박스를 켜면 하우스 뷰 채택)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create advisor --color F9D0C4 --description "에이전트 분석관 제안" 2>/dev/null || true
+          gh issue create --title "[시나리오] 에이전트 하우스 뷰 재검토 $(date -u +%Y-%m-%d)" --label scenario --label advisor --body-file reports/ADVISOR-latest.md
+      - run: cat reports/ADVISOR-latest.md >> "$GITHUB_STEP_SUMMARY"
