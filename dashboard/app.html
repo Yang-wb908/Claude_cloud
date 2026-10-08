@@ -1276,7 +1276,7 @@ function evItemHTML(e, withTheater){
   const ty = TYPES[e.t] || TYPES.A, th = e.th && TH[e.th];
   return `<div class="evitem t${e.t}"><div class="evmeta"><time>${md(e.d)}</time><span class="ttag">${esc(ty.n)}</span><span>${esc(e.p || "")}</span>${gradeBadge(e.s)}</div>
     <p${e.lang === "en" ? ' lang="en"' : ""}>${esc(e.x)}</p>
-    <div class="lnk">${srcA(e.s)}${withTheater && th ? `<button data-th="${th.id}">${esc(th.name)} 브리핑</button>` : ""}</div></div>`;
+    <div class="lnk">${srcA(e.s)}${(e.alt || []).slice(0, 4).map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener" class="alt" title="${esc(u)}">다른 보도 ${i + 1}</a>`).join("")}${withTheater && th ? `<button data-th="${th.id}">${esc(th.name)} 브리핑</button>` : ""}</div></div>`;
 }
 function openCard(cls, html){
   evcard.className = "evcard " + cls;

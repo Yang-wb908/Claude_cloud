@@ -181,3 +181,16 @@ def test_region_theater_needs_security_keyword_even_after_claude(monkeypatch):
     monkeypatch.setattr(enrich, "claude_enrich", lambda news, model=None, batch=20: {"a1": {"x": "노벨상", "t": "D", "th": "namerica", "p": "", "lat": None, "lon": None, "rel": 2}, "a2": {"x": "관세", "t": "E", "th": "namerica", "p": "", "lat": None, "lon": None, "rel": 2}})
     out = enrich.enrich_all(items)
     assert out[0]["enr"]["rel"] <= 1 and out[1]["enr"]["rel"] == 2
+
+
+def test_collapse_duplicates_keeps_one_row_with_alt_sources():
+    ev = [{"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "칠레 구리 광산 파업으로 공급 우려 부각", "s": "https://a.com/1", "g": "C2", "auto": True},
+          {"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "칠레 파업에 따른 생산 위협으로 구리 가격 상승", "s": "https://b.com/2", "g": "B2", "auto": True},
+          {"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "칠레 구리광산 노사분쟁 생산량 5% 위험", "s": "https://c.com/3", "g": "C3", "auto": True},
+          {"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "분석관 수기 사건", "s": "https://d.com/4", "g": "A1"}]
+    out = assemble.collapse_duplicates(assemble.corroborate(ev))
+    auto = [e for e in out if e.get("auto")]
+    assert len(auto) == 1 and auto[0]["cc"] == 4 and auto[0]["g"] == "B1" and set(auto[0]["alt"]) == {"https://a.com/1", "https://c.com/3"}
+    assert any(not e.get("auto") for e in out) and all("_c" not in e for e in out)
+    merged = assemble.merge_events(out, [{"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "다시 들어온 같은 기사", "s": "https://a.com/1", "g": "C2", "auto": True, "id": "z"}], datetime(2026, 10, 8, tzinfo=UTC))
+    assert isinstance(merged, tuple) and merged[1] == 0

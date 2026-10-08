@@ -87,12 +87,13 @@ def corroborate(events: list[dict], window_days: int = 1, jaccard: float = 0.45)
     groups: dict[int, list[int]] = {}
     for i in range(n):
         groups.setdefault(find(i), []).append(i)
-    for members in groups.values():
+    for root, members in groups.items():
         doms = {_dom(ev[i]) for i in members if _dom(ev[i])}
         cc = max(1, len(doms))
         for i in members:
             e = ev[i]
             e["cc"] = cc
+            e["_c"] = root
             g = e.get("g") or ""
             if cc >= 3 and len(g) == 2 and g[1] > "1":
                 e["g"], e["g0"] = g[0] + "1", e.get("g0") or g
@@ -126,9 +127,32 @@ def source_scores(events: list[dict], status: list[dict], keep_days: int = 30, n
     return out
 
 
+def collapse_duplicates(events: list[dict], max_alt: int = 6) -> list[dict]:
+    """After corroborate(): keep one report per cluster (best credibility digit, then the longer summary) and fold the other
+    automatic reports' URLs into `alt` so the board shows one row with '교차 ×n' and the other sources. Manual events are never dropped."""
+    groups: dict = {}
+    for e in events:
+        groups.setdefault(e.pop("_c", id(e)), []).append(e)
+    out = []
+    for members in groups.values():
+        auto = [m for m in members if m.get("auto")]
+        manual = [m for m in members if not m.get("auto")]
+        out += manual
+        if not auto:
+            continue
+        auto.sort(key=lambda m: ((m.get("g") or "C9")[1:], -len(m.get("x") or "")))
+        keep, rest = auto[0], auto[1:]
+        alt = list(dict.fromkeys([u for u in (keep.get("alt") or []) + [m.get("s") for m in rest] + [u for m in rest for u in (m.get("alt") or [])] if u and u != keep.get("s")]))
+        if alt:
+            keep["alt"] = alt[:max_alt]
+        out.append(keep)
+    out.sort(key=lambda e: e.get("d", ""), reverse=True)
+    return out
+
+
 def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days: int = 30, per_day_theater: int = 12) -> list[dict]:
     cutoff = (now - timedelta(days=keep_days)).strftime("%Y-%m-%d")
-    seen_url = {e.get("s") for e in existing if e.get("s")}
+    seen_url = {e.get("s") for e in existing if e.get("s")} | {u for e in existing for u in (e.get("alt") or [])}
     seen_txt = {(e.get("d"), _norm(e.get("x", ""))) for e in existing}
     out = [e for e in existing if not e.get("auto") or e.get("d", "") >= cutoff]
     added = 0
@@ -188,7 +212,7 @@ def assemble(items: list[dict], status: list[dict], now: datetime | None = None,
     snap = json.loads(snap_path.read_text()) if snap_path.exists() else {"events": [], "cities": [], "lanes": [], "chokepoints": [], "markets": {}}
     new_events = [ev for ev in (to_event(it) for it in items) if ev]
     merged, added = merge_events(snap.get("events", []), new_events, now)
-    merged = corroborate(merged)
+    merged = collapse_duplicates(corroborate(merged))
     snap["events"] = merged
     snap["auto_generated"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     metrics = metrics_from(items)
