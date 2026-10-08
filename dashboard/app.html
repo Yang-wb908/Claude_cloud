@@ -448,6 +448,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <button id="zin" aria-label="확대">+</button>
       <button id="zout" aria-label="축소">−</button>
       <button id="spin" aria-label="자동 회전" aria-pressed="false" title="자동 회전"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 3v4h-4M6 21v-4h4" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+      <button id="north" aria-label="북쪽 위로" title="북쪽 위로"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l4 9h-8z" fill="currentColor"/><path d="M12 21v-9" stroke="currentColor" stroke-width="2"/></svg></button>
       <button id="meas" aria-label="거리 측정" aria-pressed="false" title="거리 측정"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17L17 3l4 4L7 21z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12l2 2M11 9l2 2M14 6l2 2" stroke="currentColor" stroke-width="2"/></svg></button>
       <button id="zreset" aria-label="기본 보기"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
     </div>
@@ -724,28 +725,53 @@ function frame(ts){
 }
 requestAnimationFrame(frame);
 
-/* 확대 + 회전 (공 굴리기) */
-let lastT = d3.zoomIdentity;
+/* 확대 + 회전: 트랙볼(쿼터니언). 어느 방향으로 끌어도 공처럼 굴러간다 */
+const versor = (() => {
+  const {acos, asin, atan2, cos, sin, sqrt, max, min, PI} = Math, RADS = PI / 180, DEGS = 180 / PI;
+  function V(e){ const l = e[0] / 2 * RADS, sl = sin(l), cl = cos(l), p = e[1] / 2 * RADS, sp = sin(p), cp = cos(p), g = (e[2] || 0) / 2 * RADS, sg = sin(g), cg = cos(g);
+    return [cl*cp*cg + sl*sp*sg, sl*cp*cg - cl*sp*sg, cl*sp*cg + sl*cp*sg, cl*cp*sg - sl*sp*cg]; }
+  V.cartesian = e => { const l = e[0] * RADS, p = e[1] * RADS, cp = cos(p); return [cp * cos(l), cp * sin(l), sin(p)]; };
+  V.rotation = q => [atan2(2 * (q[0]*q[1] + q[2]*q[3]), 1 - 2 * (q[1]*q[1] + q[2]*q[2])) * DEGS, asin(max(-1, min(1, 2 * (q[0]*q[2] - q[3]*q[1])))) * DEGS, atan2(2 * (q[0]*q[3] + q[1]*q[2]), 1 - 2 * (q[2]*q[2] + q[3]*q[3])) * DEGS];
+  const cross = (a, b) => [a[1]*b[2] - a[2]*b[1], a[2]*b[0] - a[0]*b[2], a[0]*b[1] - a[1]*b[0]], dot = (a, b) => a[0]*b[0] + a[1]*b[1] + a[2]*b[2];
+  V.delta = (v0, v1) => { const w = cross(v0, v1), l = sqrt(dot(w, w)); if (!l) return [1, 0, 0, 0]; const t = acos(max(-1, min(1, dot(v0, v1)))) / 2, s = sin(t); return [cos(t), w[2] / l * s, -w[1] / l * s, w[0] / l * s]; };
+  V.multiply = (a, b) => [a[0]*b[0] - a[1]*b[1] - a[2]*b[2] - a[3]*b[3], a[0]*b[1] + a[1]*b[0] + a[2]*b[3] - a[3]*b[2], a[0]*b[2] - a[1]*b[3] + a[2]*b[0] + a[3]*b[1], a[0]*b[3] + a[1]*b[2] - a[2]*b[1] + a[3]*b[0]];
+  return V;
+})();
+let lastT = d3.zoomIdentity, v0 = null, q0 = null, r0 = null;
+const onSphere = p => p && isFinite(p[0]) && isFinite(p[1]);
+function pointerOf(e){ const ps = d3.pointers(e, node); return ps.length ? ps[0] : null; }
+function startBall(e){ r0 = projection.rotate(); q0 = versor(r0); const pt = pointerOf(e); const p = pt && projection.invert(pt); v0 = onSphere(p) ? versor.cartesian(p) : null; }
+function rollTo(e, t){
+  const pt = pointerOf(e);
+  if (v0 && pt) {
+    const cur = projection.rotate();
+    const p = projection.rotate(r0).invert(pt);
+    if (onSphere(p)) { const v1 = versor.cartesian(p); projection.rotate(versor.rotation(versor.multiply(q0, versor.delta(v0, v1)))); return; }
+    projection.rotate(cur);
+  }
+  const dx = t.x - lastT.x, dy = t.y - lastT.y, r = projection.rotate(), s = projection.scale();
+  r[0] += dx / s * DEG; r[1] -= dy / s * DEG; projection.rotate(r);
+  startBall(e);
+}
 const zoom = d3.zoom().scaleExtent([.85, 90]).filter(e => !meas.on || e.type === "wheel" || e.type.startsWith("touch"))
-  .on("start", e => { if (e.sourceEvent) { wrap.classList.add("grabbing"); stopSpin(); } touch(); })
+  .on("start", e => { if (e.sourceEvent) { wrap.classList.add("grabbing"); stopSpin(); startBall(e); } touch(); })
   .on("zoom", e => {
     const t = e.transform, se = e.sourceEvent;
-    if (se && se.type !== "wheel") {
-      const dx = t.x - lastT.x, dy = t.y - lastT.y, r = projection.rotate(), s = projection.scale();
-      r[0] += dx / s * DEG; r[1] -= dy / s * DEG; r[1] = Math.max(-89, Math.min(89, r[1])); r[2] = 0;
-      projection.rotate(r);
-    }
-    projection.scale(R0 * t.k);
+    if (se && se.type !== "wheel") rollTo(e, t);
+    if (t.k !== lastT.k) { projection.scale(R0 * t.k); if (se && se.type !== "wheel") startBall(e); }
     lastT = t; touch(); updateReadout();
   })
-  .on("end", () => { wrap.classList.remove("grabbing"); interacting = false; needDetail = true; dirty = true; });
+  .on("end", () => { wrap.classList.remove("grabbing"); v0 = null; interacting = false; needDetail = true; dirty = true; });
 svg.call(zoom).on("dblclick.zoom", null);
+function northUp(){ const r = projection.rotate(); if (Math.abs(r[2]) < .01) return; flyTo([r[0], r[1]], projection.scale(), 600); }
+$("#north").onclick = northUp;
 
 function flyTo(targetRot, targetScale, dur){
-  const r0 = projection.rotate(), s0 = projection.scale();
-  let dl = targetRot[0] - r0[0]; dl = ((dl + 540) % 360) - 180;
-  const r1 = [r0[0] + dl, targetRot[1], 0];
-  const ir = d3.interpolateArray(r0, r1), is = d3.interpolateNumber(s0, targetScale);
+  const ra = projection.rotate(), s0 = projection.scale();
+  let dl = targetRot[0] - ra[0]; dl = ((dl + 540) % 360) - 180;
+  let dg = (targetRot[2] || 0) - ra[2]; dg = ((dg + 540) % 360) - 180;
+  const r1 = [ra[0] + dl, targetRot[1], ra[2] + dg];
+  const ir = d3.interpolateArray(ra, r1), is = d3.interpolateNumber(s0, targetScale);
   stopSpin();
   if (reduce || !dur) { projection.rotate(r1).scale(targetScale); syncZoom(); needDetail = true; dirty = true; return; }
   interacting = true;
