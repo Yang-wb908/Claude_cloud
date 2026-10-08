@@ -1,22 +1,23 @@
 # SITREP 2026-10-08
 
-**DTG** 081106Z OCT 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-10-08T11:06:06Z
+**DTG** 081111Z OCT 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-10-08T11:11:08Z
 
 ## BLUF
 
-지난 24시간 사건 411건이 수집됐고, 가장 많은 전역은 이란·호르무즈 73건, 러시아–우크라이나 53건, 에티오피아·티그라이 46건입니다. 트립와이어 5건이 발동 상태입니다. 자동 생성 요약이며 분석관 판단이 아닙니다.
+지난 24시간 사건 432건이 수집됐고, 가장 많은 전역은 이란·호르무즈 92건, 러시아–우크라이나 53건, 에티오피아·티그라이 46건입니다. 트립와이어 6건이 발동 상태입니다. 자동 생성 요약이며 분석관 판단이 아닙니다.
 
 ## 트립와이어 발동
 
+- **호르무즈 일일 통항 10척 미만 (PortWatch)** — 현재 4 (임계 < 10) · 봉쇄·공격으로 통항이 사실상 멈춘 상태. 유가·보험료 급등 선행 지표.
 - **북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)** — 현재 3 (임계 >= 1) · 한반도 긴장 수위.
-- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 50 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
+- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 66 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
 - **에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)** — 현재 46 (임계 >= 5) · 국가 간 전쟁 공식화 가능성.
 - **구리 6달러/lb 돌파** — 현재 6.63 (임계 > 6) · 공급 차질·재고 고갈 신호.
 - **보건안보 전역 24시간 보건(H) 사건 3건 이상** — 현재 13 (임계 >= 3) · 2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.
 
 ## 경제 위험 지수
 
-**48 (보통)** · tail 66 · market 46 · supply 0 · crowd 40 · events 100 · model 50 · 한국 수입 바스켓 P95 +33.1%
+**51 (보통)** · tail 66 · market 46 · supply 4 · crowd 65 · events 100 · model 50 · 한국 수입 바스켓 P95 +33.1%
 
 ## 예측 적중
 
@@ -24,7 +25,7 @@
 
 ## 전역별 24시간 사건
 
-### 이란·호르무즈 (73건)
+### 이란·호르무즈 (92건)
 - 2026-10-08 · 외교·정치 · 카이로 — Strait of Hormuz crisis fuels Cairo's plastic recycling business [출처](https://www.france24.com/en/tv-shows/focus/20261008-strait-of-hormuz-crisis-fuels-cairo-s-plastic-recycling-business) `B3`
 - 2026-10-08 · 외교·정치 · 리야드 — Explosions heard in Saudi capital Riyadh after Houthis' deadly attacks on airports [출처](https://www.france24.com/en/middle-east/20261008-saudi-arabia-strikes-deadly-houthi-attacks-airports) `B2`
 - 2026-10-08 · 공습·드론·미사일 ·  — Oil prices rise sharply on Middle East tensions and US hurricane threat [출처](https://www.theguardian.com/business/2026/oct/08/oil-prices-rise-middle-east-tensions-us-hurricane-threat) `B3`
@@ -54,7 +55,7 @@
 - 2026-10-08 · 공습·드론·미사일 · 티그라이 — Ethiopia drone strikes against Eritrean troops in northern Tigray: witnesses, monitor - Africa - World [출처](https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2dSY1ItWnlmNFJSZVZGU1ZWcFRYLV9ZczhNR2N3NkctOXpaRzBicUxvWmpUTmhSdHJrZnE1SXVlcURLREUxOGlvSEtyY0VWb1FMRUJLaW1ISXZsMDFUWGlrTmk4UGtOYURzSmNXd1Y4cFpoR0M2aVFBUk5HdVRLQ18weEl5TjZ3SktDaU8zVDJqcHYxRmZlc0tEVUJUN2ZjcEhJMUdfNlQxSDNGYkdXQWpuTjVyUzVjd1F4TFVB?oc=5) `C1`
 - 2026-10-08 · 외교·정치 ·  — Daily_Brief: #Sudan’s al-Burhan inspects army division in #Kassala near #Ethiopia, #Eritrea borders [출처](https://news.google.com/rss/articles/CBMiUkFVX3lxTE93bEFnNmR3ZDByLTlJRThzNW9mS09sVlRCYTlXNlFaX0lrQ1FFbmoyUVdZYjFGWjJCSFRUZERZWHcxTWlaTEZZNHlmMEtOTFBLdUE?oc=5) `C3`
 
-### 예멘·홍해 (44건)
+### 예멘·홍해 (45건)
 - 2026-10-08 · 공습·드론·미사일 · 리야드 — Houthis claim new attack on Riyadh airport as fighting continues in Yemen [출처](https://www.france24.com/en/video/20261008-houthis-claim-new-attack-on-riyadh-airport-as-fighting-continues-in-yemen) `B1`
 - 2026-10-08 · 외교·정치 ·  — Three people killed in Houthi attacks on Saudi Arabia airports, officials say [출처](https://www.bbc.co.uk/news/articles/cwn8d5rx22rdo?at_medium=RSS&at_campaign=rss) `B2`
 - 2026-10-08 · 외교·정치 ·  — Yemen’s government needs tribes to defeat the Houthis. Will they join? [출처](https://www.aljazeera.com/news/2026/10/8/yemens-government-needs-tribes-to-defeat-the-houthis-will-they-join?traffic_source=rss) `B3`
@@ -124,15 +125,15 @@
 - 2026-10-07 · 보건 ·  — Fears of a Plague Outbreak in Russia: What to Know [출처](https://www.nytimes.com/2026/10/07/world/europe/russia-plague-fears-what-to-know.html) `B3`
 - 2026-10-07 · 보건 ·  — Russia Says It Found No ‘Emergency’ in Plague Lab [출처](https://www.nytimes.com/2026/10/07/world/europe/russia-plague-us-trump-state-department.html) `B3`
 
-### 미얀마 (8건)
+### 미얀마 (9건)
 - 2026-10-08 · 외교·정치 ·  — Myanmar’s Strongman President Is on a Global Quest for Legitimacy. Next Stop, Malaysia. [출처](https://www.nytimes.com/2026/10/08/world/asia/myanmar-president-malaysia.html) `B3`
 - 2026-10-08 · 외교·정치 ·  — Malaysia PM says will work on Myanmar’s ASEAN reintegration [출처](https://www.aljazeera.com/news/2026/10/8/malaysia-to-help-myanmar-reintegrate-into-asean-despite-rights-concerns?traffic_source=rss) `B3`
 - 2026-10-08 · 외교·정치 ·  — Guest Column | Arakan Under the Myanmar Regime’s Air War [출처](https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDNqUjNvZEh6XzRkNlBkek1zQ09SQnZ1a2JXQ05PeUxwNmdqWVlJSk9YZXJ6eXJlWmIyNS1fdzJXazR3RWZ3dkJ5R3VoelpHOFdwZkttZ084aHBBV1hZZEZPWl8tVmlOV2kwb20yTUdoTGd5X1F1Z3JXNDVlNjRVVnduTTlvazQyZHNlQ1RoeXNmdnNmTWVr?oc=5) `C4`
+- 2026-10-08 · 외교·정치 ·  — Myanmar Regime’s New Labor Minister Outlines Mission: Milking Migrants [출처](https://news.google.com/rss/articles/CBMirwFBVV95cUxQZFZoTXZaYjNkR2ZsYzE3Z0NvRFo4TlM5M1dBRjliWXFTbTRNUG5JX2tUNm5aWWtRemVXeU5JenpLUVpGV2djSUFHd0lYMEZ3ZlRYZEs4cm8zeVRaTDBSQlBDVTJjZVJNbjUtemRlUExEc1VLbU1nU2VIVm5hQ1RWZXl3a24yVGYyRmRYVEQyTEpIdG1zMkNMY3Q2SER1dldCcFNPNHNVYmN0QWNkVk8w?oc=5) `C4`
 - 2026-10-07 · 외교·정치 ·  — Myanmar’s Min Aung Hlaing visits Malaysia amid criticism over repatriation of nationals [출처](https://news.google.com/rss/articles/CBMiwwFBVV95cUxONG1OVWZsTUx1a2c4STcwM1BMemF0RkttdVZEdVhwV3pVQTdlRmN2cm02TDV1N2JMMUtwN3JpN3RxT3gydU5McHhfTlJUSXhUcEQ3UUs3SklMajVlcTJmY1dvUUpnVl83dVFtR3A4Zi1aZnpvR2NidnVnSVZXY2lEd0RBR1ZoS1I2NXRpSzhDWlo1VWpkeTY1UkV1VFpaSUswek1qZHFxelg1OGduWVU4VFV4S1l6OFBSeFo4NmNfTFFTWTQ?oc=5) `C4`
 - 2026-10-07 · 외교·정치 ·  — Myanmar Regime Trying to Hound Independent Exile Media Through Interpol [출처](https://news.google.com/rss/articles/CBMizgFBVV95cUxNV3B6dVdrVUVRRFJId2hRWGtaZEtyN19qYW9UTWpMRzZNS25MTng5MFJpUzVaZlkydXFSM3RYd1k0OG1SU21lN093WnNsc3VwWi0tOGFsQ1c5S3FMYl8xMmlPSERYVmpwVU5NVkY5eTlGbEQtQk9FcXRNOXZtRm4yYkdPMk1HdGJlOWdVVThWWEhRWXNzTk1CZldka3NyUmlad1hHRERjejhBLUZJS2lYVTZxNFZ4cFpZMFFtVm14RF95bFBVZWRraXA5OGJHUQ?oc=5) `C4`
 - 2026-10-07 · 외교·정치 · 베이징 — Beijing’s Docuseries on Myanmar Scams Implicates Junta But Glosses Chinese Financing [출처](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNazRFSUNPR2pwdHZpWmxzLUliUS1FR0V5Z3dkRTJQQVFQZG9tTktlUmxxaHFyb2xSRjUtbW1MREdCdmhqa1VkVUVqRy1ibGVUQy1CMkxGNnFKanYwcUYyd05MOFJHXzN5WDlQQXVYWmd1RE80S3JhemRMZWZldDQtZTlHSE9DTkY0b2x6S0V2a0lpUXFDNmF3bTRaZkhUNGlzVFY2WUlwMGVSZE0zTG5jYnYtT0w0NzNaTDIyN3VqWGJ1NE0?oc=5) `C4`
 - 2026-10-07 · 외교·정치 ·  — Min Aung Hlaing Admits Myanmar Economy Has Failed to Progress [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxNLXhVNjBWX01IMGNXVjI2RUxIVlZwdmJYd29uZnhhZ0ZNekl1NkF2NVNWYThaSU9vMWhIWFI0c1hMNjM5ekZWNE9CWjRoWVhVUndUdzNZQ0RvSTJJWkpHMXNKS2JrQnlEZVhKdHozRmk0c1dpSzdlcjBaMGZvQ3BYTVI0d1NaUFNQVUREZDNCMDFacEYzQmZyengyRTJ5YVRlYVdrdld3?oc=5) `C4`
-- 2026-10-07 · 외교·정치 ·  — Myanmar Coup Leader Lands in Malaysia for Migrant Return Talks [출처](https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMVUxdlhLSktLVkdxdE9qYnNvUlpzbFNkQ21CWXJJdEZnR3ZhZTdWcjNEYW1QT0dLRXZwbHh5LWs3VlhvYzBzVFJLakNFbDlDZE11d2JvMWV3YzdzTGFpblIyeDVjY2Q0VFRhZ0VHc1kwRF9YZEdJUnhfUm13NmpqVHdua1pkbld6bkZyZXg3aEp2SEFZVVdsWTZNWUJTeFA5MVdubjB4MEJuQm1tVmphTHptMWlBMkVhcUxTM29mX2lTdw?oc=5) `C4`
 
 ### 콩고 동부 (7건)
 - 2026-10-08 · 보건 ·  — Why single Ebola death in Kenya has prompted fears of wider African spread [출처](https://www.aljazeera.com/news/2026/10/8/why-single-ebola-death-in-kenya-has-sparked-fears-of-wider-african-spread?traffic_source=rss) `B3`
@@ -176,29 +177,29 @@
 
 | 지표 | 값 | 날짜 | 변동 |
 |---|---:|---|---|
-| 브렌트유 ($/bbl) | 105.22 | 2026-10-08 | +4.9% |
-| WTI ($/bbl) | 92.7 | 2026-10-08 | +3.7% |
-| 경유 선물 ($/gal) | 4.84 | 2026-10-08 | +6.5% |
+| 브렌트유 ($/bbl) | 105.1 | 2026-10-08 | +4.8% |
+| WTI ($/bbl) | 92.56 | 2026-10-08 | +3.5% |
+| 경유 선물 ($/gal) | 4.83 | 2026-10-08 | +6.3% |
 | 휘발유 선물 ($/gal) | 3.17 | 2026-10-08 | -2.2% |
 | 헨리허브 가스 ($/MMBtu) | 3.26 | 2026-10-08 | +6.3% |
 | 유럽 TTF 가스 (€/MWh) | 79.15 | 2026-10-08 | +7.7% |
-| 금 ($/oz) | 4144.3 | 2026-10-08 | -0.3% |
+| 금 ($/oz) | 4145.8 | 2026-10-08 | -0.3% |
 | 은 ($/oz) | 59.05 | 2026-10-08 | -3.0% |
-| 백금 ($/oz) | 1653.3 | 2026-10-08 | -3.1% |
-| 구리 ($/lb) | 6.63 | 2026-10-08 | +0.6% |
+| 백금 ($/oz) | 1653.1 | 2026-10-08 | -3.2% |
+| 구리 ($/lb) | 6.63 | 2026-10-08 | +0.7% |
 | 시카고 밀 (c/bu) | 689.0 | 2026-10-08 | -0.5% |
 | 캔자스 밀 (c/bu) | 740.0 | 2026-10-08 | -0.3% |
-| 옥수수 (c/bu) | 502.75 | 2026-10-08 | +1.1% |
-| 대두 (c/bu) | 1294.75 | 2026-10-08 | +1.1% |
-| 대두유 (c/lb) | 68.21 | 2026-10-08 | -1.1% |
+| 옥수수 (c/bu) | 503.0 | 2026-10-08 | +1.2% |
+| 대두 (c/bu) | 1294.5 | 2026-10-08 | +1.1% |
+| 대두유 (c/lb) | 68.19 | 2026-10-08 | -1.1% |
 | 쌀 ($/cwt) | 16.74 | 2026-10-08 | +3.1% |
-| 설탕 No.11 (c/lb) | 20.78 | 2026-10-08 | +0.2% |
-| 커피 아라비카 (c/lb) | 286.95 | 2026-10-08 | -1.9% |
-| 코코아 ($/t) | 5491.0 | 2026-10-08 | -6.4% |
+| 설탕 No.11 (c/lb) | 20.8 | 2026-10-08 | +0.3% |
+| 커피 아라비카 (c/lb) | 288.1 | 2026-10-08 | -1.5% |
+| 코코아 ($/t) | 5518.0 | 2026-10-08 | -5.9% |
 | 면화 (c/lb) | 80.71 | 2026-10-08 | +4.6% |
 | 생우 (c/lb) | 223.7 | 2026-10-07 | +3.0% |
 | 달러인덱스 | 102.38 | 2026-10-08 | +0.2% |
-| 원/달러 | 1344.98 | 2026-10-08 | -1.1% |
+| 원/달러 | 1344.96 | 2026-10-08 | -1.1% |
 | 엔/달러 | 158.28 | 2026-10-08 | +0.2% |
 | 위안/달러 | 6.69 | 2026-10-08 | -0.2% |
 | 유로/달러 | 1.12 | 2026-10-08 | -0.6% |
@@ -206,7 +207,7 @@
 | 헤알/달러 | 5.0 | 2026-10-08 | -4.2% |
 | 미 10년물 (%) | 5.28 | 2026-10-07 | +0.8% |
 | 미 5년물 (%) | 5.02 | 2026-10-07 | +0.3% |
-| VIX | 15.97 | 2026-10-08 | +4.3% |
+| VIX | 15.96 | 2026-10-08 | +4.2% |
 | 코스피 | 6625.93 | 2026-10-08 | -3.1% |
 | S&P 500 | 7801.77 | 2026-10-07 | +2.0% |
 | 니케이225 | 69042.11 | 2026-10-08 | +1.1% |
@@ -214,13 +215,21 @@
 | 우라늄 ETF (URA) | 39.93 | 2026-10-07 | +0.2% |
 | 리튬·배터리 ETF (LIT) | 69.51 | 2026-10-07 | +1.6% |
 | 건화물 운임 ETF (BDRY) | 14.43 | 2026-10-07 | -0.8% |
-| 비트코인 ($) | 82584.76 | 2026-10-08 | -4.5% |
+| 비트코인 ($) | 82432.44 | 2026-10-08 | -4.7% |
 
 ## 해협 통항 (IMF PortWatch)
 
 | 해협 | 최신일 | 척수 | 7일 평균 | 28일 평균 |
 |---|---|---:|---:|---:|
-| suez | 2026-10-04 | 46 | 46.0 | 46.0 |
+| suez | 2026-10-04 | 46 | 43.1 | 41.9 |
+| panama | 2026-10-04 | 29 | 27.1 | 27.2 |
+| blacksea | 2026-10-04 | 72 | 38.6 | 47.3 |
+| bab | 2026-10-04 | 34 | 29.6 | 27.9 |
+| malacca | 2026-10-04 | 209 | 226.3 | 225.1 |
+| hormuz | 2026-10-04 | 4 | 2.7 | 3.2 |
+| cape | 2026-10-04 | 99 | 87.7 | 87.3 |
+| gibraltar | 2026-10-04 | 130 | 135.1 | 131.9 |
+| taiwan | 2026-10-04 | 233 | 233.0 | 232.7 |
 
 ## 수집원 상태 (77/77 정상)
 

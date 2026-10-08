@@ -1,6 +1,17 @@
 {
- "generated": "2026-10-08T11:06:09Z",
+ "generated": "2026-10-08T11:11:11Z",
  "fired": [
+  {
+   "id": "hormuz_transits_low",
+   "title": "호르무즈 일일 통항 10척 미만 (PortWatch)",
+   "sev": 5,
+   "th": "iran",
+   "why": "봉쇄·공격으로 통항이 사실상 멈춘 상태. 유가·보험료 급등 선행 지표.",
+   "current": 4,
+   "threshold": 10,
+   "op": "<",
+   "at": "2026-10-08T11:11:11Z"
+  },
   {
    "id": "korea_missile",
    "title": "북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)",
@@ -10,7 +21,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-08T11:06:09Z"
+   "at": "2026-10-08T11:11:11Z"
   },
   {
    "id": "maritime_attacks",
@@ -18,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 50,
+   "current": 66,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T11:06:09Z"
+   "at": "2026-10-08T11:11:11Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -32,7 +43,7 @@
    "current": 46,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-08T11:06:09Z"
+   "at": "2026-10-08T11:11:11Z"
   },
   {
    "id": "copper_6",
@@ -43,7 +54,7 @@
    "current": 6.63,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-08T11:06:09Z"
+   "at": "2026-10-08T11:11:11Z"
   },
   {
    "id": "bio_health_events",
@@ -54,7 +65,7 @@
    "current": 13,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T11:06:09Z"
+   "at": "2026-10-08T11:11:11Z"
   }
  ]
 }

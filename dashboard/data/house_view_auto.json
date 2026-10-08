@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 65.6,
+   "p": 69.1,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -10,12 +10,17 @@
      "key": "ind:iran:0",
      "f": 2.0,
      "note": "이란 유조선·상선 공격 재개"
+    },
+    {
+     "key": "tw:hormuz_transits_low",
+     "f": 2.5,
+     "note": "일 통항 10척 미만"
     }
    ]
   },
   {
    "id": "hormuz_reopen",
-   "p": 15.4,
+   "p": 13.8,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -28,7 +33,7 @@
   },
   {
    "id": "hormuz_war",
-   "p": 19.0,
+   "p": 17.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -160,6 +165,7 @@
   "bio_health_events",
   "copper_6",
   "ethiopia_interstate",
+  "hormuz_transits_low",
   "korea_missile",
   "maritime_attacks"
  ]
