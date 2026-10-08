@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T14:00:24Z",
+ "generated": "2026-10-08T14:29:47Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +18,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 6,
+   "current": 15,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 80,
+   "current": 93,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 61,
+   "current": 71,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
   },
   {
    "id": "copper_6",
@@ -54,7 +54,7 @@
    "current": 6.61,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +62,21 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 14,
+   "current": 29,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-08T14:00:24Z"
+   "at": "2026-10-08T14:29:47Z"
+  },
+  {
+   "id": "coverage_surge",
+   "title": "미분류 사건 군집 급증 (어느 전역에도 속하지 않는 보도 5건 이상)",
+   "sev": 3,
+   "th": null,
+   "why": "새 위기가 전역 밖에서 터지고 있을 가능성. 수집원 탭의 미분류 군집을 보고 새 전역 등록(PIR Issue)을 검토.",
+   "current": 6,
+   "threshold": 5,
+   "op": ">=",
+   "at": "2026-10-08T14:29:47Z"
   }
  ]
 }
