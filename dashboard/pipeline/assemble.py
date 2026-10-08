@@ -36,7 +36,7 @@ def to_event(it: dict) -> dict | None:
     if it.get("kind") not in ("news", "report") or e.get("rel", 0) < 2:
         return None
     return {"d": it["published"][:10], "t": e.get("t") or "D", "at": e.get("at"), "th": e.get("th"), "p": e.get("p") or "", "x": e.get("x") or it["title"][:140],
-            "s": it.get("url") or "", "g": it.get("grade"), "src": it.get("sid"), "lang": e.get("lang", "en"), "auto": True, "id": it["id"]}
+            "s": it.get("url") or "", "g": it.get("grade"), "src": it.get("sid"), "lang": e.get("lang", "en"), "auto": True, "id": it["id"], "r": int(e.get("rel", 2))}
 
 
 _TOK = re.compile(r"[a-z0-9가-힣]{3,}")
@@ -133,7 +133,7 @@ def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days
     out = [e for e in existing if not e.get("auto") or e.get("d", "") >= cutoff]
     added = 0
     counts: dict[tuple, int] = {}
-    for e in sorted(new, key=lambda x: x["d"], reverse=True):
+    for e in sorted(new, key=lambda x: (x["d"], x.get("r", 2)), reverse=True):  # 같은 날은 관련도 높은 사건부터 (전역·일 한도에 걸릴 때 핵심 사건 우선)
         if (e["s"] and e["s"] in seen_url) or (e["d"], _norm(e["x"])) in seen_txt or e["d"] < cutoff:
             continue
         k = (e["d"], e.get("th"))

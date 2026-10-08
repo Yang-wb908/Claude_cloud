@@ -162,7 +162,10 @@ SCHEMA = {
 }
 SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영어 뉴스 항목을 받아 한국어 한 줄 요약(x), 사건 유형(t: S 공습·드론·미사일, G 지상전·점령, "
           "M 해상, A 테러·민간인 공격, D 외교·정치, E 경제·제재, H 보건, X 재난·사고, C 범죄·치안), 관련 전역(th), 가장 구체적인 지명(p, 한국어)과 그 좌표(lat, lon), "
-          "관련도(rel)를 매긴다. 좌표는 확신할 때만 적고 모르면 null. 요약은 추측 없이 기사에 있는 사실만, 60자 이내.")
+          "관련도(rel)를 매긴다. 좌표는 확신할 때만 적고 모르면 null. 요약은 추측 없이 기사에 있는 사실만, 60자 이내. "
+          "rel 기준: 3 핵심(분쟁·군사·제재·해협·에너지/원자재 공급·정권 변동·대형 재난·감염병), 2 관련(외교·선거·무역정책·치안·경제 지표·인프라), "
+          "1 배경(일반 정치·사회·경제 기사), 0 무관(문화·연예·스포츠·과학 일반·생활·소비자 서비스·수상·축제·인물 인터뷰). "
+          "남미·북미·오세아니아·유럽·남아시아처럼 넓은 지역 전역은 지명만으로 2를 주지 말고 안보·경제 함의가 있을 때만 2 이상을 준다.")
 
 
 def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) -> dict[str, dict]:
@@ -250,7 +253,10 @@ def enrich_all(items: list[dict], use_claude: bool = True) -> list[dict]:
             e["p"] = r["p"] or e["p"]
             if r["lat"] is not None and r["lon"] is not None:
                 e["at"] = [round(float(r["lon"]), 3), round(float(r["lat"]), 3)]
-            e["rel"] = max(e["rel"], int(r["rel"]))
+            rel = int(r["rel"])
+            if e["th"] in REGION_TH and rel < 3 and not RELEVANT_KW.search(it.get("title", "") + " " + it.get("summary", "")[:400]):
+                rel = min(rel, 1)  # 지역형 전역: 문화·생활·스포츠처럼 안보·경제 키워드가 없는 항목은 사건으로 올리지 않는다
+            e["rel"] = max(e["rel"], rel) if e["th"] not in REGION_TH else rel
             e["lang"] = "ko"
             e["claude"] = True
     return items

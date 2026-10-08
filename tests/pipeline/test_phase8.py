@@ -171,3 +171,13 @@ def test_structured_output_schemas_use_supported_subset():
             schemas[name] = obj
     for name, sc in schemas.items():
         assert not _walk(sc), f"{name}: {_walk(sc)}"
+
+
+def test_region_theater_needs_security_keyword_even_after_claude(monkeypatch):
+    from pipeline import enrich
+    items = [{"id": "a1", "kind": "news", "title": "Nobel literature prize goes to Canadian poet", "summary": "", "url": "https://x.com/1", "published": "2026-10-08T00:00:00Z", "extra": {}},
+             {"id": "a2", "kind": "news", "title": "US imposes 50% tariffs on Canadian autos", "summary": "", "url": "https://x.com/2", "published": "2026-10-08T00:00:00Z", "extra": {}}]
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    monkeypatch.setattr(enrich, "claude_enrich", lambda news, model=None, batch=20: {"a1": {"x": "노벨상", "t": "D", "th": "namerica", "p": "", "lat": None, "lon": None, "rel": 2}, "a2": {"x": "관세", "t": "E", "th": "namerica", "p": "", "lat": None, "lon": None, "rel": 2}})
+    out = enrich.enrich_all(items)
+    assert out[0]["enr"]["rel"] <= 1 and out[1]["enr"]["rel"] == 2
