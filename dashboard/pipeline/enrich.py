@@ -68,17 +68,18 @@ THEATER_RULES = [
     ("korea", r"North Korea|Korean Peninsula|Pyongyang|Kim Jong|\bDMZ\b|Seoul|Yongbyon|Wonsan|Panmunjom|ballistic missile toward"),
     ("taiwan", r"Taiwan|Cross-strait|East China Sea|\bPLA\b|ADIZ|Kinmen|Senkaku|Okinawa"),
     ("scs", r"South China Sea|Philippin|Scarborough|Spratly|Second Thomas|Palawan|Manila"),
-    ("carib", r"Caribbean|Venezuel|Haiti|Colombia|Southern Spear|Port-au-Prince|Caracas|SOUTHCOM"),
+    ("carib", r"Caribbean|Venezuel|Maduro|Haiti|Colombia|Southern Spear|Port-au-Prince|Caracas|SOUTHCOM"),
     ("latam", r"Brazil|Lula|Bolsonaro|Argentin|Milei|\bChile|Escondida|Centinela|Codelco|\bPeru|Fujimori|Bolivia|Ecuador|Uruguay|Paraguay|Mercosur|Santiago|S[aã]o Paulo|Bras[ií]lia|Buenos Aires|Antofagasta|Atacama"),
     ("oceania", r"Australi|Canberra|AUKUS|Papua|Bougainville|Solomon Islands|Honiara|\bFiji|Vanuatu|\bTonga|\bSamoa|Pacific Islands Forum|Pilbara|Port Hedland|Fortescue|Rio Tinto|\bBHP\b|New Zealand|Kiribati|Nauru|\bGuam"),
     ("southasia", r"\bIndia\b|Indian Army|Indian Navy|New Delhi|\bModi\b|Bangladesh|Dhaka|Sri Lanka|Colombo|\bNepal|Kathmandu|Maldives|Line of Control|\bLoC\b|Siachen"),
     ("europe", r"Baltic|\bNATO\b|Kaliningrad|Estonia|Latvia|Lithuania|Finland|Sweden|Norway|Denmark|Poland|Germany|Berlin|France|Paris|Macron|\bMerz|Brussels|European Commission|European Union|shadow fleet|Northern Sea Route|Arctic|Murmansk|Svalbard|Greenland|Ust-Luga|Primorsk|Vaindloo|Gotland|Bornholm|undersea cable"),
-    ("namerica", r"Canada|Carney|Ottawa|USMCA|Sheinbaum|Mexic|Sinaloa|CJNG|Tijuana|Ciudad Ju[aá]rez|Culiac[aá]n|midterm|government shutdown|Congress|Supreme Court|Capitol Hill|Federal Reserve|Section 338"),
+    ("namerica", r"Canada|Carney|Ottawa|USMCA|Sheinbaum|Mexic|Sinaloa|CJNG|Tijuana|Ciudad Ju[aá]rez|Culiac[aá]n|midterm|government shutdown|U\.?S\.? Congress|Capitol Hill|Federal Reserve|Section 338|Gulf of Mexico|Gulf Coast"),
 ]
+REGION_TH = {"latam", "namerica", "oceania", "europe", "southasia"}
 WIKI_CAT = {"Armed conflicts and attacks": None, "International relations": "D", "Politics and elections": "D", "Business and economy": "E",
             "Health and environment": "H", "Disasters and accidents": "X", "Law and crime": "C"}
-RELEVANT_KW = re.compile(r"(war|strike|attack|missile|drone|troops|military|navy|carrier|sanction|blockade|ceasefire|offensive|rebel|militia|coup|pirat|hijack|"
-                         r"tanker|Hormuz|Houthi|Taiwan|PLA|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola|plague|outbreak|quarantine|WHO\b|pandemic|election|runoff|tariff|treaty|indict|cartel|mediation|shadow fleet)", re.I)
+RELEVANT_KW = re.compile(r"(\bwars?\b|warfare|strike|attack|missile|drone|troops|military|navy|carrier|sanction|blockade|ceasefire|offensive|rebel|militia|coup|pirat|hijack|"
+                         r"tanker|Hormuz|Houthi|Taiwan|\bPLA\b|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola|plague|outbreak|quarantine|WHO\b|pandemic|election|runoff|tariff|treaty|indict|cartel|mediation|shadow fleet|hurricane|tropical storm|LNG|pipeline|copper|iron ore|lithium|undersea cable|GPS|cyber|espionage|coast guard|border|protest)", re.I)
 
 
 def classify_type(text: str, wiki_cat: str | None = None) -> str:
@@ -136,7 +137,8 @@ def rule_enrich(item: dict) -> dict:
     t = classify_type(text, ex.get("cat"))
     th = classify_theater(text)
     loc = geocode(text, ex.get("wiki_links") or ex.get("countries"))
-    relevant = bool(th) or bool(RELEVANT_KW.search(text))
+    # 지역형 전역(남미·북미·오세아니아·유럽·남아시아)은 지명만으로는 부족하고 안보·경제 키워드가 있어야 사건이 된다
+    relevant = (bool(th) and th not in REGION_TH) or bool(RELEVANT_KW.search(text))
     return {"t": t, "th": th, "at": loc["at"] if loc else None, "p": loc["p"] if loc else "", "x": item.get("title", "")[:140],
             "rel": 2 if th else (1 if relevant else 0), "lang": "en"}
 

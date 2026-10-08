@@ -47,7 +47,7 @@ sources:
   - {id: bulletin, name: Bulletin of the Atomic Scientists, kind: rss, url: "https://thebulletin.org/feed/", grade: B2, lang: en, region: global, tags: [nuclear]}
 
   # ── 해운·에너지 (B2~B3) ───────────────────────────────────────────
-  - {id: gcaptain, name: gCaptain, kind: rss, url: "https://gcaptain.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime]}
+  - {id: gcaptain, name: gCaptain, kind: rss, url: "https://gcaptain.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime, europe]}
   - {id: splash247, name: Splash247, kind: rss, url: "https://splash247.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime]}
   - {id: hellenic, name: Hellenic Shipping News, kind: rss, url: "https://www.hellenicshippingnews.com/feed/", grade: C3, lang: en, region: maritime, tags: [maritime]}
   - {id: maritime_exec, name: Maritime Executive, kind: rss, url: "https://maritime-executive.com/rss/all", grade: B3, lang: en, region: maritime, tags: [maritime], verify: true}
@@ -121,7 +121,6 @@ sources:
   - {id: gn_baltic, name: Google News · Baltic·Arctic, kind: gnews, q: "(Baltic OR Kaliningrad OR \"shadow fleet\" OR \"Northern Sea Route\" OR Arctic OR NATO) AND (tanker OR sanctions OR cable OR navy)", grade: C3, region: global, tags: [europe, maritime]}
   - {id: barents, name: The Barents Observer, kind: rss, url: "https://www.thebarentsobserver.com/rss", grade: B3, lang: en, region: global, tags: [europe, maritime], verify: true}
   - {id: err_news, name: ERR News (에스토니아), kind: rss, url: "https://news.err.ee/rss", grade: B3, lang: en, region: global, tags: [europe], verify: true}
-  - {id: gcaptain, name: gCaptain, kind: rss, url: "https://gcaptain.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime, europe], verify: true}
   - {id: politico_eu, name: Politico Europe, kind: rss, url: "https://www.politico.eu/feed/", grade: B3, lang: en, region: global, tags: [europe], verify: true}
   - {id: gn_southasia, name: Google News · South Asia, kind: gnews, q: "(India Pakistan OR Bangladesh OR \"Sri Lanka\" OR Kashmir OR \"Line of Control\") AND (military OR border OR protest OR cyber)", grade: C3, region: southasia, tags: [southasia]}
   - {id: thehindu, name: The Hindu (국내), kind: rss, url: "https://www.thehindu.com/news/national/feeder/default.rss", grade: B3, lang: en, region: southasia, tags: [southasia], verify: true}
