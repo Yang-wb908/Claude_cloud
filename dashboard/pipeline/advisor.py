@@ -105,7 +105,7 @@ def claude_advise(t: Tools, model: str | None = None) -> dict | None:
 
         Args:
             days: 최근 며칠.
-            theater: 전역 id (iran, ukraine, yemen, ethiopia, sudan, gaza, afpak, korea, lebanon, sahel, drc, somalia, myanmar, taiwan, scs, carib). 빈 문자열이면 전체.
+            theater: 전역 id (iran, ukraine, yemen, ethiopia, sudan, gaza, afpak, korea, lebanon, sahel, drc, somalia, myanmar, taiwan, scs, carib, latam, namerica, oceania, europe, southasia). 빈 문자열이면 전체.
             query: 공백으로 구분한 키워드(모두 포함).
         """
         return json.dumps(t.recent_events(days, theater or None, query or None), ensure_ascii=False)

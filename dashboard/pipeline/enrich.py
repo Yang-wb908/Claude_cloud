@@ -68,12 +68,17 @@ THEATER_RULES = [
     ("korea", r"North Korea|Korean Peninsula|Pyongyang|Kim Jong|\bDMZ\b|Seoul|Yongbyon|Wonsan|Panmunjom|ballistic missile toward"),
     ("taiwan", r"Taiwan|Cross-strait|East China Sea|\bPLA\b|ADIZ|Kinmen|Senkaku|Okinawa"),
     ("scs", r"South China Sea|Philippin|Scarborough|Spratly|Second Thomas|Palawan|Manila"),
-    ("carib", r"Caribbean|Venezuel|Haiti|Colombia|Southern Spear|cartel|Port-au-Prince|Caracas|SOUTHCOM"),
+    ("carib", r"Caribbean|Venezuel|Haiti|Colombia|Southern Spear|Port-au-Prince|Caracas|SOUTHCOM"),
+    ("latam", r"Brazil|Lula|Bolsonaro|Argentin|Milei|\bChile|Escondida|Centinela|Codelco|\bPeru|Fujimori|Bolivia|Ecuador|Uruguay|Paraguay|Mercosur|Santiago|S[aã]o Paulo|Bras[ií]lia|Buenos Aires|Antofagasta|Atacama"),
+    ("oceania", r"Australi|Canberra|AUKUS|Papua|Bougainville|Solomon Islands|Honiara|\bFiji|Vanuatu|\bTonga|\bSamoa|Pacific Islands Forum|Pilbara|Port Hedland|Fortescue|Rio Tinto|\bBHP\b|New Zealand|Kiribati|Nauru|\bGuam"),
+    ("southasia", r"\bIndia\b|Indian Army|Indian Navy|New Delhi|\bModi\b|Bangladesh|Dhaka|Sri Lanka|Colombo|\bNepal|Kathmandu|Maldives|Line of Control|\bLoC\b|Siachen"),
+    ("europe", r"Baltic|\bNATO\b|Kaliningrad|Estonia|Latvia|Lithuania|Finland|Sweden|Norway|Denmark|Poland|Germany|Berlin|France|Paris|Macron|\bMerz|Brussels|European Commission|European Union|shadow fleet|Northern Sea Route|Arctic|Murmansk|Svalbard|Greenland|Ust-Luga|Primorsk|Vaindloo|Gotland|Bornholm|undersea cable"),
+    ("namerica", r"Canada|Carney|Ottawa|USMCA|Sheinbaum|Mexic|Sinaloa|CJNG|Tijuana|Ciudad Ju[aá]rez|Culiac[aá]n|midterm|government shutdown|Congress|Supreme Court|Capitol Hill|Federal Reserve|Section 338"),
 ]
 WIKI_CAT = {"Armed conflicts and attacks": None, "International relations": "D", "Politics and elections": "D", "Business and economy": "E",
             "Health and environment": "H", "Disasters and accidents": "X", "Law and crime": "C"}
 RELEVANT_KW = re.compile(r"(war|strike|attack|missile|drone|troops|military|navy|carrier|sanction|blockade|ceasefire|offensive|rebel|militia|coup|pirat|hijack|"
-                         r"tanker|Hormuz|Houthi|Taiwan|PLA|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola|plague|outbreak|quarantine|WHO\b|pandemic)", re.I)
+                         r"tanker|Hormuz|Houthi|Taiwan|PLA|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola|plague|outbreak|quarantine|WHO\b|pandemic|election|runoff|tariff|treaty|indict|cartel|mediation|shadow fleet)", re.I)
 
 
 def classify_type(text: str, wiki_cat: str | None = None) -> str:
@@ -146,7 +151,7 @@ SCHEMA = {
             "id": {"type": "string"},
             "x": {"type": "string", "description": "한국어 한 줄 요약, 60자 이내, 사실만. 숫자·지명 유지"},
             "t": {"type": "string", "enum": ["S", "G", "M", "A", "D", "E", "H", "X", "C"]},
-            "th": {"anyOf": [{"type": "string", "enum": ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", "bio"]}, {"type": "null"}],
+            "th": {"anyOf": [{"type": "string", "enum": ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", "bio", "latam", "namerica", "oceania", "europe", "southasia"]}, {"type": "null"}],
                    "description": "전역 id. 어느 전역에도 속하지 않으면 null"},
             "p": {"type": "string", "description": "가장 구체적인 지명의 한국어 표기, 없으면 빈 문자열"},
             "lat": {"anyOf": [{"type": "number"}, {"type": "null"}]}, "lon": {"anyOf": [{"type": "number"}, {"type": "null"}]},

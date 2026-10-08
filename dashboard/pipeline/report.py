@@ -17,7 +17,7 @@ from .enrich import grade_url
 log = logging.getLogger("pipeline.report")
 TYPE_KO = {"S": "공습·드론·미사일", "G": "지상전·점령", "M": "해상", "A": "테러·민간인 공격", "D": "외교·정치", "E": "경제·제재", "H": "보건", "X": "재난·사고", "C": "범죄·치안"}
 TH_KO = {"iran": "이란·호르무즈", "ukraine": "러시아–우크라이나", "yemen": "예멘·홍해", "ethiopia": "에티오피아·티그라이", "sudan": "수단", "gaza": "가자·서안", "afpak": "아프간–파키스탄",
-         "korea": "한반도", "lebanon": "레바논·시리아", "sahel": "사헬", "drc": "콩고 동부", "bio": "보건안보·페스트", "somalia": "소말리아·아덴만", "myanmar": "미얀마", "taiwan": "대만해협", "scs": "남중국해", "carib": "카리브해"}
+         "korea": "한반도", "lebanon": "레바논·시리아", "sahel": "사헬", "drc": "콩고 동부", "bio": "보건안보·페스트", "somalia": "소말리아·아덴만", "myanmar": "미얀마", "taiwan": "대만해협", "scs": "남중국해", "carib": "카리브해", "latam": "남미", "namerica": "북미", "oceania": "호주·태평양", "europe": "유럽·발트·북극", "southasia": "남아시아"}
 
 
 def _bluf_claude(payload: dict) -> str | None:

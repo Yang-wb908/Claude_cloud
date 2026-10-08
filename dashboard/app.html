@@ -1445,9 +1445,9 @@ function spark(pts, cls, fmt){
   const lab = (i, anchor) => `<text x="${X(t[i][0]).toFixed(1)}" y="${Hd + 12}" text-anchor="${anchor}">${pts[i][0].slice(0,7).replace("-",".")}</text>`;
   return `<svg class="spark ${cls}" viewBox="0 0 ${Wd} ${Hd + 14}" preserveAspectRatio="none" aria-hidden="true"><path class="area" d="${area}"/><path d="${line}"/>${dots}${lab(0,"start")}${lab(t.length-1,"end")}</svg>`;
 }
-const CP_SEV = {hormuz:5, bab:5, suez:3, cape:1, malacca:2, taiwan:2, blacksea:3, panama:1, aden:3};
+const CP_SEV = {hormuz:5, bab:5, suez:3, cape:1, malacca:2, taiwan:2, blacksea:3, panama:2, aden:3, danish:2, gulf_finland:3, nsr:2, lombok:1, luzon:2, korea_strait:1, torres:1, dover:1, gibraltar:1, bering:1, magellan:1};
 const CP_AT = {hormuz:[56.5,26.4], bab:[43.4,12.6], suez:[32.45,30.4], cape:[18.4,-34.6], malacca:[101.5,2.5], taiwan:[120.5,24.5], blacksea:[31,43.5], panama:[-79.7,9.1], aden:[48,12.5]};
-const CP_NAME = {hormuz:"호르무즈", bab:"바브엘만데브·홍해", suez:"수에즈", cape:"희망봉 우회", malacca:"말라카·싱가포르", taiwan:"대만해협·남중국해", blacksea:"흑해", panama:"파나마", aden:"아덴만"};
+const CP_NAME = {hormuz:"호르무즈", bab:"바브엘만데브·홍해", suez:"수에즈", cape:"희망봉 우회", malacca:"말라카·싱가포르", taiwan:"대만해협·남중국해", blacksea:"흑해", panama:"파나마", aden:"아덴만", danish:"덴마크 해협·외레순", gulf_finland:"핀란드만·바인들로", nsr:"북극항로(NSR)", lombok:"롬복·마카사르", luzon:"루손 해협", korea_strait:"대한해협", torres:"토레스 해협", dover:"도버 해협", gibraltar:"지브롤터", bering:"베링 해협", magellan:"마젤란·드레이크"};
 function renderSea(){
   const S = INTEL && INTEL.sea;
   let cps = "";

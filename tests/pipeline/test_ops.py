@@ -27,8 +27,8 @@ def test_intake_ops_handlers(tmp_path, monkeypatch):
     r = intake.pir({"PIR id": "", "우선순위": "1", "전역": "yemen", "정보 요구(질문)": "후티 전력?", "담당과": "중동과", "기한 (YYYY-MM-DD)": "2026-11-01", "EEI (한 줄에 하나)": "발사 간격 | 24h 2건 | ukmto,gn_redsea\n잔존 전력 | BDA | centcom"})
     pirs = json.loads((d / "data" / "pirs.json").read_text())
     new = pirs["items"][-1]
-    assert new["id"] == "PIR-10" and len(new["eei"]) == 2 and new["eei"][0]["src"] == ["ukmto", "gn_redsea"] and "PIR-10" in r
-    r2 = intake.pir({"PIR id": "PIR-10", "EEI (한 줄에 하나)": "추가 질문 | 징후 | usni"})
+    assert new["id"] == "PIR-15" and len(new["eei"]) == 2 and new["eei"][0]["src"] == ["ukmto", "gn_redsea"] and "PIR-15" in r
+    r2 = intake.pir({"PIR id": "PIR-15", "EEI (한 줄에 하나)": "추가 질문 | 징후 | usni"})
     assert len(json.loads((d / "data" / "pirs.json").read_text())["items"][-1]["eei"]) == 3 and "3건" in r2
     r3 = intake.handover({"교대": "야간 (20:00~08:00 KST)", "당직 분석관": "kim", "상황 요약": "조용", "미결 사항 (한 줄에 하나)": "- a\n- b", "다음 근무 과업 (한 줄에 하나)": "c"})
     e = json.loads((d / "data" / "watch_log.json").read_text())["entries"][-1]

@@ -106,6 +106,26 @@ sources:
   - {id: gn_redsea, name: Google News · Red Sea, kind: gnews, q: "Houthi Red Sea ship", grade: C3, tags: [yemen, maritime]}
   - {id: gn_ethiopia, name: Google News · Ethiopia, kind: gnews, q: "Ethiopia Tigray Eritrea", grade: C3, tags: [ethiopia]}
   - {id: gn_korea, name: Google News · North Korea, kind: gnews, q: "North Korea missile", grade: C3, tags: [korea]}
+  # 9차: 지역 커버리지 (남미·북미·오세아니아·유럽/발트/북극·남아시아)
+  - {id: gn_latam, name: Google News · South America, kind: gnews, q: "(Brazil OR Argentina OR Chile OR Peru OR Bolivia OR Ecuador) AND (election OR strike OR protest OR mine OR military OR cartel)", grade: C3, region: americas, tags: [latam]}
+  - {id: riotimes, name: Rio Times, kind: rss, url: "https://www.riotimesonline.com/feed/", grade: C3, lang: en, region: americas, tags: [latam, metals], verify: true}
+  - {id: mercopress, name: MercoPress, kind: rss, url: "https://en.mercopress.com/rss", grade: C3, lang: en, region: americas, tags: [latam], verify: true}
+  - {id: batimes, name: Buenos Aires Times, kind: rss, url: "https://www.batimes.com.ar/feed", grade: C3, lang: en, region: americas, tags: [latam], verify: true}
+  - {id: gn_namerica, name: Google News · North America, kind: gnews, q: "(Canada tariffs OR USMCA OR Sheinbaum OR Carney OR \"cartel strike\" OR midterm OR shutdown)", grade: C3, region: americas, tags: [namerica]}
+  - {id: cbc_world, name: CBC News World, kind: rss, url: "https://www.cbc.ca/webfeed/rss/rss-world", grade: B3, lang: en, region: americas, tags: [namerica], verify: true}
+  - {id: mexiconewsdaily, name: Mexico News Daily, kind: rss, url: "https://mexiconewsdaily.com/feed/", grade: C3, lang: en, region: americas, tags: [namerica], verify: true}
+  - {id: politico, name: Politico (US), kind: rss, url: "https://rss.politico.com/politics-news.xml", grade: B3, lang: en, region: americas, tags: [namerica], verify: true}
+  - {id: gn_oceania, name: Google News · Pacific, kind: gnews, q: "(Australia OR \"Papua New Guinea\" OR \"Solomon Islands\" OR Fiji OR \"Pacific Islands Forum\" OR AUKUS) AND (China OR security OR treaty OR \"iron ore\" OR LNG)", grade: C3, region: asia, tags: [oceania]}
+  - {id: abc_au, name: ABC News (호주), kind: rss, url: "https://www.abc.net.au/news/feed/51120/rss.xml", grade: B2, lang: en, region: asia, tags: [oceania], verify: true}
+  - {id: rnz_pacific, name: RNZ Pacific, kind: rss, url: "https://www.rnz.co.nz/rss/pacific.xml", grade: B3, lang: en, region: asia, tags: [oceania], verify: true}
+  - {id: gn_baltic, name: Google News · Baltic·Arctic, kind: gnews, q: "(Baltic OR Kaliningrad OR \"shadow fleet\" OR \"Northern Sea Route\" OR Arctic OR NATO) AND (tanker OR sanctions OR cable OR navy)", grade: C3, region: global, tags: [europe, maritime]}
+  - {id: barents, name: The Barents Observer, kind: rss, url: "https://www.thebarentsobserver.com/rss", grade: B3, lang: en, region: global, tags: [europe, maritime], verify: true}
+  - {id: err_news, name: ERR News (에스토니아), kind: rss, url: "https://news.err.ee/rss", grade: B3, lang: en, region: global, tags: [europe], verify: true}
+  - {id: gcaptain, name: gCaptain, kind: rss, url: "https://gcaptain.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime, europe], verify: true}
+  - {id: politico_eu, name: Politico Europe, kind: rss, url: "https://www.politico.eu/feed/", grade: B3, lang: en, region: global, tags: [europe], verify: true}
+  - {id: gn_southasia, name: Google News · South Asia, kind: gnews, q: "(India Pakistan OR Bangladesh OR \"Sri Lanka\" OR Kashmir OR \"Line of Control\") AND (military OR border OR protest OR cyber)", grade: C3, region: southasia, tags: [southasia]}
+  - {id: thehindu, name: The Hindu (국내), kind: rss, url: "https://www.thehindu.com/news/national/feeder/default.rss", grade: B3, lang: en, region: southasia, tags: [southasia], verify: true}
+  - {id: dailystar_bd, name: The Daily Star (방글라데시), kind: rss, url: "https://www.thedailystar.net/frontpage/rss.xml", grade: C3, lang: en, region: southasia, tags: [southasia], verify: true}
   - {id: gn_taiwan, name: Google News · Taiwan, kind: gnews, q: "Taiwan PLA aircraft", grade: C3, tags: [taiwan]}
   - {id: gn_carrier, name: Google News · US carrier, kind: gnews, q: "aircraft carrier strike group deploys", grade: C3, tags: [posture]}
   - {id: gn_sanctions, name: Google News · sanctions, kind: gnews, q: "OFAC sanctions Iran Russia", grade: C3, tags: [economy]}

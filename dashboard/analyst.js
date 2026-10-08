@@ -12,7 +12,7 @@ const pct0 = v => v == null ? "—" : Math.round(v * 100) + "%";
 const fmtPct = (v, bp) => v == null ? "—" : (v > 0 ? "+" : "") + (bp ? Math.round(v) + "bp" : (Math.abs(v) >= 10 ? v.toFixed(0) : v.toFixed(1)) + "%");
 const signCls = v => v == null ? "" : v > 0.05 ? "up" : v < -0.05 ? "down" : "flat";
 const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
-const SC_GROUP_NAME = {macro: "거시·정책", weather: "기상·기후"};
+const SC_GROUP_NAME = {macro: "거시·정책", weather: "기상·기후", latam_cu: "칠레 구리 노동", na_trade: "북미 무역", na_mexico: "미–멕시코 안보"};
 const scGroupName = th => TH[th] ? TH[th].name : (SC_GROUP_NAME[th] || th);
 const scGroupSev = th => TH[th] ? TH[th].sev : 3;
 

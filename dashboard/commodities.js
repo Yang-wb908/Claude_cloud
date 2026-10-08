@@ -114,7 +114,17 @@ const COMMOD = {
     { th:"sudan", cm:"gold", dir:"0", w:1, lag:"수주", m:"수단 금 밀수·수출 경로" },
     { th:"gaza", cm:"brent", dir:"+", w:1, lag:"즉시", m:"확전 시 역내 프리미엄" },
     { th:"myanmar", cm:"rareearth", dir:"+", w:1, lag:"수주", m:"카친 희토류 광산" },
-    { th:"afpak", cm:"rareearth", dir:"0", w:1, lag:"수주", m:"아프간 광물 개발 기대" }
+    { th:"afpak", cm:"rareearth", dir:"0", w:1, lag:"수주", m:"아프간 광물 개발 기대" },
+    { th:"latam", cm:"copper", dir:"+", w:2, lag:"수주", m:"에스콘디다·센티넬라 파업 → 세계 공급 6% 차질" },
+    { th:"latam", cm:"soy", dir:"-", w:1, lag:"수개월", m:"브라질 결선·헤알화 → 수출 물량" },
+    { th:"latam", cm:"lithium", dir:"-", w:1, lag:"수개월", m:"아르헨티나 증산·인도 확보 → 공급 과잉" },
+    { th:"namerica", cm:"aluminum", dir:"+", w:2, lag:"즉시", m:"캐나다 관세 → 미국 내 알루미늄 프리미엄" },
+    { th:"namerica", cm:"silver", dir:"+", w:1, lag:"수주", m:"멕시코 타격·보복 → 세계 1위 은 생산국 리스크" },
+    { th:"oceania", cm:"ironore", dir:"-", w:2, lag:"수주", m:"CMRG 가격 압박·구매 중단 → 벤치마크 하락" },
+    { th:"oceania", cm:"jkm", dir:"+", w:1, lag:"수주", m:"호주 LNG 차질·가격 상향 전망" },
+    { th:"europe", cm:"brent", dir:"+", w:2, lag:"즉시", m:"발트해 나포·NSR 사고 → 러시아 수출 차질" },
+    { th:"europe", cm:"tanker", dir:"+", w:1, lag:"즉시", m:"그림자함대 검문 → 보험료·운임" },
+    { th:"southasia", cm:"rice", dir:"+", w:1, lag:"수주", m:"인도 수출 통제·분쟁 → 아시아 쌀" }
   ],
   calendarCats: { macro:"거시", energy:"에너지", ags:"농산물", metals:"금속", policy:"정책", geo:"지정학" }
 };
