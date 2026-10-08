@@ -181,9 +181,14 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     model = model or os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"
     client = anthropic.Anthropic()
     out: dict[str, dict] = {}
-    for i in range(0, len(items), batch):
-        chunk = items[i:i + batch]
+    chunks = [items[i:i + batch] for i in range(0, len(items), batch)]
+    stop = {"flag": False}
+
+    def one(bi: int, chunk: list[dict]) -> dict[str, dict]:
+        if stop["flag"]:
+            return {}
         lines = [{"id": it["id"], "source": it.get("extra", {}).get("domain", ""), "date": it["published"][:10], "title": it["title"], "summary": it.get("summary", "")[:400]} for it in chunk]
+        got: dict[str, dict] = {}
         try:
             resp = client.beta.messages.create(
                 model=model, max_tokens=8000,
@@ -193,21 +198,29 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
                 messages=[{"role": "user", "content": "항목:\n" + json.dumps(lines, ensure_ascii=False)}],
             )
             if resp.stop_reason == "refusal":
-                log.warning("batch %d refused: %s", i // batch, getattr(resp, "stop_details", None))
-                continue
+                log.warning("batch %d refused: %s", bi, getattr(resp, "stop_details", None))
+                return {}
             text = next(b.text for b in resp.content if b.type == "text")
             for r in json.loads(text).get("items", []):
-                out[r["id"]] = r
+                got[r["id"]] = r
         except anthropic.RateLimitError as e:
-            log.warning("rate limited; stopping enrichment early: %s", e)
-            break
+            log.warning("rate limited; stopping enrichment early: %s", e); stop["flag"] = True
         except anthropic.APIStatusError as e:
-            log.warning("API error %s on batch %d: %s", e.status_code, i // batch, e.message)
+            log.warning("API error %s on batch %d: %s", e.status_code, bi, e.message)
+            if e.status_code == 400:  # 스키마·모델 오류는 모든 배치가 똑같이 실패하므로 바로 멈춘다
+                stop["flag"] = True
         except anthropic.APIConnectionError as e:
-            log.warning("connection error: %s", e)
-            break
+            log.warning("connection error: %s", e); stop["flag"] = True
         except (StopIteration, json.JSONDecodeError, KeyError) as e:
-            log.warning("unparseable batch %d: %s", i // batch, e)
+            log.warning("unparseable batch %d: %s", bi, e)
+        return got
+
+    # 배치를 4개씩 동시에 보낸다 (순차로는 30여 배치에 20분 넘게 걸린다)
+    from concurrent.futures import ThreadPoolExecutor
+    workers = int(os.environ.get("PIPELINE_ENRICH_WORKERS") or 4)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for got in ex.map(lambda t: one(*t), list(enumerate(chunks))):
+            out.update(got)
     return out
 
 
