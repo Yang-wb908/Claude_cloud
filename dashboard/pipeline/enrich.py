@@ -146,9 +146,10 @@ SCHEMA = {
             "id": {"type": "string"},
             "x": {"type": "string", "description": "한국어 한 줄 요약, 60자 이내, 사실만. 숫자·지명 유지"},
             "t": {"type": "string", "enum": ["S", "G", "M", "A", "D", "E", "H", "X", "C"]},
-            "th": {"type": ["string", "null"], "enum": ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", None]},
+            "th": {"anyOf": [{"type": "string", "enum": ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", "bio"]}, {"type": "null"}],
+                   "description": "전역 id. 어느 전역에도 속하지 않으면 null"},
             "p": {"type": "string", "description": "가장 구체적인 지명의 한국어 표기, 없으면 빈 문자열"},
-            "lat": {"type": ["number", "null"]}, "lon": {"type": ["number", "null"]},
+            "lat": {"anyOf": [{"type": "number"}, {"type": "null"}]}, "lon": {"anyOf": [{"type": "number"}, {"type": "null"}]},
             "rel": {"type": "integer", "minimum": 0, "maximum": 3, "description": "지정학·안보 상황판 관련도: 0 무관, 1 배경, 2 관련, 3 핵심"},
         }}}},
 }
