@@ -1,0 +1,81 @@
+# 트립와이어: 수집 지표가 임계치를 넘으면 GitHub Issue를 열고 상황판 브리프에 표시한다.
+# metric 경로는 intel.auto.json 기준. kind: metric(기본) | event_count
+tripwires:
+  - id: hormuz_transits_low
+    title: "호르무즈 일일 통항 10척 미만 (PortWatch)"
+    metric: portwatch.hormuz.latest.n_total
+    op: "<"
+    value: 10
+    sev: 5
+    th: iran
+    why: "봉쇄·공격으로 통항이 사실상 멈춘 상태. 유가·보험료 급등 선행 지표."
+  - id: bab_transits_low
+    title: "바브엘만데브 일일 통항 20척 미만 (PortWatch)"
+    metric: portwatch.bab.latest.n_total
+    op: "<"
+    value: 20
+    sev: 5
+    th: yemen
+    why: "홍해 재우회 전환 신호."
+  - id: brent_110
+    title: "브렌트유 110달러 돌파"
+    metric: markets.BZ=F
+    op: ">"
+    value: 110
+    sev: 4
+    why: "한국 원유 도입가·물가 직결."
+  - id: brent_85
+    title: "브렌트유 85달러 하회"
+    metric: markets.BZ=F
+    op: "<"
+    value: 85
+    sev: 2
+    why: "해협 재개방 기대 반영 가능성."
+  - id: krw_1400
+    title: "원/달러 1,400원 돌파"
+    metric: markets.KRW=X
+    op: ">"
+    value: 1400
+    sev: 3
+    why: "안전자산 선호·에너지 수입 부담."
+  - id: us10y_55
+    title: "미 10년물 5.5% 돌파"
+    metric: markets.^TNX
+    op: ">"
+    value: 5.5
+    sev: 3
+    why: "글로벌 금융여건 급격 긴축."
+  - id: pla_air_40
+    title: "대만 주변 PLA 항공기 일 40대 이상"
+    metric: pla.latest.aircraft
+    op: ">="
+    value: 40
+    sev: 4
+    th: taiwan
+    why: "대규모 훈련·압박 재개 지표."
+  - id: korea_missile
+    title: "북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)"
+    kind: event_count
+    filter: {th: korea, t: S, days: 1}
+    op: ">="
+    value: 1
+    sev: 3
+    th: korea
+    why: "한반도 긴장 수위."
+  - id: maritime_attacks
+    title: "해상 피격·피랍 사건 24시간 내 3건 이상"
+    kind: event_count
+    filter: {t: M, days: 1}
+    op: ">="
+    value: 3
+    sev: 4
+    why: "해협 폐쇄·보험료 급등 선행."
+  - id: ethiopia_interstate
+    title: "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)"
+    kind: event_count
+    filter: {th: ethiopia, days: 1}
+    op: ">="
+    value: 5
+    sev: 4
+    th: ethiopia
+    why: "국가 간 전쟁 공식화 가능성."

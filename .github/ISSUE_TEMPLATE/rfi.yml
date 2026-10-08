@@ -1,0 +1,36 @@
+name: 정보 요청 (RFI)
+description: 상황판이 답하지 못하는 질문이나 메워야 할 수집 공백을 등록합니다. 열린 RFI는 다음 수집 주기에 상황판 '수집 공백'에 표시됩니다.
+title: "[RFI] "
+labels: ["rfi"]
+body:
+  - type: dropdown
+    id: theater
+    attributes:
+      label: 전역
+      options: [iran, ukraine, yemen, ethiopia, sudan, gaza, afpak, korea, lebanon, sahel, drc, somalia, myanmar, taiwan, scs, carib, 해협·물류, 경제, 강대국, 기타]
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 알고 싶은 것
+      description: 판단에 필요한 사실·수치·위치를 구체적으로.
+      placeholder: "예: 10월 둘째 주 호르무즈 일일 통과 척수의 Kpler와 PortWatch 집계 차이 원인"
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: 필요 시점
+      placeholder: "2026-10-12"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options: ["3 긴급", "2 높음", "1 보통"]
+    validations:
+      required: true
+  - type: textarea
+    id: known
+    attributes:
+      label: 이미 아는 것·후보 출처

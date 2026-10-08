@@ -1,0 +1,88 @@
+# 수집원 레지스트리. 등급은 Admiralty 코드 기본값(신뢰성 A~F, 신빙성 1~6).
+# kind: rss | gnews(Google News 검색 RSS) | gdelt | reliefweb | portwatch | markets | wiki | html
+# verify: true 는 URL을 실제 운용에서 아직 검증하지 못한 수집원. 첫 실행 상태표에서 실패하면 교정한다.
+defaults:
+  timeout: 25
+  max_items: 40
+  user_agent: "situation-board-collector/0.3 (+https://github.com/Yang-wb908/Claude_cloud)"
+
+sources:
+  # ── 통신사·공영·주요 매체 (B2~B3) ───────────────────────────────
+  - {id: bbc_world, name: BBC World, kind: rss, url: "https://feeds.bbci.co.uk/news/world/rss.xml", grade: B2, lang: en, region: global}
+  - {id: aljazeera, name: Al Jazeera, kind: rss, url: "https://www.aljazeera.com/xml/rss/all.xml", grade: B3, lang: en, region: mena}
+  - {id: france24, name: France 24, kind: rss, url: "https://www.france24.com/en/rss", grade: B3, lang: en, region: global}
+  - {id: dw_world, name: DW World, kind: rss, url: "https://rss.dw.com/rdf/rss-en-world", grade: B3, lang: en, region: global}
+  - {id: guardian_world, name: The Guardian World, kind: rss, url: "https://www.theguardian.com/world/rss", grade: B3, lang: en, region: global}
+  - {id: nyt_world, name: NYT World, kind: rss, url: "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", grade: B3, lang: en, region: global}
+  - {id: npr_world, name: NPR World, kind: rss, url: "https://feeds.npr.org/1004/rss.xml", grade: B3, lang: en, region: global}
+  - {id: cnn_world, name: CNN World, kind: rss, url: "http://rss.cnn.com/rss/edition_world.rss", grade: B3, lang: en, region: global, verify: true}
+  - {id: un_news, name: UN News, kind: rss, url: "https://news.un.org/feed/subscribe/en/news/all/rss.xml", grade: A2, lang: en, region: global}
+  - {id: who_don, name: WHO Disease Outbreak News, kind: rss, url: "https://www.who.int/feeds/entity/csr/don/en/rss.xml", grade: A2, lang: en, region: global, tags: [health], verify: true}
+
+  # ── 전역별 전문 매체 (B3~C3) ──────────────────────────────────────
+  - {id: kyivindependent, name: Kyiv Independent, kind: rss, url: "https://kyivindependent.com/feed/", grade: B3, lang: en, region: ukraine, tags: [ukraine]}
+  - {id: timesofisrael, name: Times of Israel, kind: rss, url: "https://www.timesofisrael.com/feed/", grade: B3, lang: en, region: mena, tags: [gaza, lebanon, iran]}
+  - {id: arabnews, name: Arab News, kind: rss, url: "https://www.arabnews.com/rss.xml", grade: B3, lang: en, region: mena, tags: [yemen, iran]}
+  - {id: middleeasteye, name: Middle East Eye, kind: rss, url: "https://www.middleeasteye.net/rss", grade: C3, lang: en, region: mena, verify: true}
+  - {id: yonhap_en, name: Yonhap News (EN), kind: rss, url: "https://en.yna.co.kr/RSS/news.xml", grade: B3, lang: en, region: korea, tags: [korea]}
+  - {id: nknews, name: NK News, kind: rss, url: "https://www.nknews.org/feed/", grade: C3, lang: en, region: korea, tags: [korea]}
+  - {id: koreaherald, name: Korea Herald, kind: rss, url: "https://www.koreaherald.com/rss/020000000000.xml", grade: B3, lang: en, region: korea, tags: [korea], verify: true}
+  - {id: diplomat, name: The Diplomat, kind: rss, url: "https://thediplomat.com/feed/", grade: B3, lang: en, region: asia, tags: [taiwan, scs, korea, myanmar]}
+  - {id: focustaiwan, name: Focus Taiwan (CNA), kind: rss, url: "https://focustaiwan.tw/rss/politics.aspx", grade: B3, lang: en, region: asia, tags: [taiwan], verify: true}
+  - {id: addisstandard, name: Addis Standard, kind: rss, url: "https://addisstandard.com/feed/", grade: C3, lang: en, region: africa, tags: [ethiopia]}
+  - {id: sudantribune, name: Sudan Tribune, kind: rss, url: "https://sudantribune.com/feed/", grade: C3, lang: en, region: africa, tags: [sudan]}
+  - {id: garowe, name: Garowe Online, kind: rss, url: "https://www.garoweonline.com/en/rss", grade: C3, lang: en, region: africa, tags: [somalia], verify: true}
+  - {id: africanews, name: Africanews, kind: rss, url: "https://www.africanews.com/feed/rss", grade: B3, lang: en, region: africa, verify: true}
+  - {id: dawn_pk, name: Dawn (Pakistan), kind: rss, url: "https://www.dawn.com/feeds/home", grade: B3, lang: en, region: southasia, tags: [afpak], verify: true}
+  - {id: irrawaddy, name: The Irrawaddy, kind: rss, url: "https://www.irrawaddy.com/feed", grade: C3, lang: en, region: asia, tags: [myanmar], verify: true}
+
+  # ── 분석기관 (B2) ─────────────────────────────────────────────────
+  - {id: isw, name: ISW, kind: rss, url: "https://www.understandingwar.org/rss.xml", grade: B2, lang: en, region: global, tags: [ukraine, iran], verify: true}
+  - {id: criticalthreats, name: Critical Threats (AEI), kind: rss, url: "https://www.criticalthreats.org/feed", grade: B2, lang: en, region: global, tags: [iran, yemen, sahel, somalia]}
+  - {id: crisisgroup, name: International Crisis Group, kind: rss, url: "https://www.crisisgroup.org/rss", grade: B2, lang: en, region: global, verify: true}
+  - {id: warontherocks, name: War on the Rocks, kind: rss, url: "https://warontherocks.com/feed/", grade: B2, lang: en, region: global}
+  - {id: usni, name: USNI News, kind: rss, url: "https://news.usni.org/feed", grade: B2, lang: en, region: global, tags: [posture]}
+  - {id: twz, name: The War Zone, kind: rss, url: "https://www.twz.com/feed", grade: B2, lang: en, region: global, tags: [posture], verify: true}
+  - {id: bulletin, name: Bulletin of the Atomic Scientists, kind: rss, url: "https://thebulletin.org/feed/", grade: B2, lang: en, region: global, tags: [nuclear]}
+
+  # ── 해운·에너지 (B2~B3) ───────────────────────────────────────────
+  - {id: gcaptain, name: gCaptain, kind: rss, url: "https://gcaptain.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime]}
+  - {id: splash247, name: Splash247, kind: rss, url: "https://splash247.com/feed/", grade: B3, lang: en, region: maritime, tags: [maritime]}
+  - {id: hellenic, name: Hellenic Shipping News, kind: rss, url: "https://www.hellenicshippingnews.com/feed/", grade: C3, lang: en, region: maritime, tags: [maritime]}
+  - {id: maritime_exec, name: Maritime Executive, kind: rss, url: "https://maritime-executive.com/rss/all", grade: B3, lang: en, region: maritime, tags: [maritime], verify: true}
+  - {id: oilprice, name: OilPrice.com, kind: rss, url: "https://oilprice.com/rss/main", grade: C3, lang: en, region: energy, tags: [energy]}
+  - {id: eia_tie, name: EIA Today in Energy, kind: rss, url: "https://www.eia.gov/rss/todayinenergy.xml", grade: A2, lang: en, region: energy, tags: [energy]}
+
+  # ── 구조화 API (A2~B2) ────────────────────────────────────────────
+  - {id: gdelt_conflict, name: GDELT DOC 2.0, kind: gdelt, grade: B3, lang: en, region: global,
+     queries: ["(Hormuz OR tanker attack) sourcelang:eng", "(Houthi OR \"Red Sea\" OR \"Bab el-Mandeb\") sourcelang:eng", "(Tigray OR Eritrea OR Mekelle) sourcelang:eng", "(Sudan AND (RSF OR Kordofan OR Darfur)) sourcelang:eng", "(\"North Korea\" AND (missile OR DMZ)) sourcelang:eng", "(Taiwan AND (PLA OR ADIZ OR \"coast guard\")) sourcelang:eng", "(Ukraine AND (drone OR strike OR offensive)) sourcelang:eng", "(Sahel OR Mali OR Niger) AND (attack OR JNIM OR \"Islamic State\") sourcelang:eng", "(Somalia AND (pirates OR al-Shabaab)) sourcelang:eng", "(Haiti OR Venezuela) AND (gang OR strike OR military) sourcelang:eng"],
+     note: "전 세계 뉴스 메타데이터. 기사 URL을 그대로 받아 도메인 기준으로 재등급."}
+  - {id: reliefweb, name: ReliefWeb API, kind: reliefweb, grade: A2, lang: en, region: global, tags: [humanitarian],
+     url: "https://api.reliefweb.int/v1/reports", note: "OCHA 인도적 상황 보고. 국가별 최신 상황보고·플래시 업데이트."}
+  - {id: portwatch, name: IMF PortWatch 해협 통항, kind: portwatch, grade: A2, lang: en, region: maritime, tags: [maritime],
+     url: "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query",
+     note: "AIS 기반 일일 통항 척수. 레이어명·필드명은 첫 실행에서 검증.", verify: true}
+  - {id: markets, name: 시장 시세 (Yahoo Finance), kind: markets, grade: B2, lang: en, region: markets, tags: [markets],
+     tickers: {"BZ=F": "브렌트유 ($/bbl)", "CL=F": "WTI ($/bbl)", "NG=F": "헨리허브 가스 ($/MMBtu)", "GC=F": "금 ($/oz)", "DX-Y.NYB": "달러인덱스", "KRW=X": "원/달러", "JPY=X": "엔/달러", "^KS11": "코스피", "^GSPC": "S&P 500", "^N225": "니케이225", "^TNX": "미 10년물 (%)", "ZW=F": "시카고 밀 (c/bu)", "BTC-USD": "비트코인 ($)"}}
+  - {id: wiki_current, name: 위키백과 Current events, kind: wiki, grade: C3, lang: en, region: global, note: "사람이 큐레이션한 일별 사건 목록. 지도 좌표는 연결 문서에서 추정."}
+
+  # ── Google News 검색 RSS (집계, C3; 기사 원출처 도메인으로 재등급) ──
+  - {id: gn_hormuz, name: Google News · Hormuz, kind: gnews, q: "Strait of Hormuz tanker", grade: C3, tags: [iran, maritime]}
+  - {id: gn_redsea, name: Google News · Red Sea, kind: gnews, q: "Houthi Red Sea ship", grade: C3, tags: [yemen, maritime]}
+  - {id: gn_ethiopia, name: Google News · Ethiopia, kind: gnews, q: "Ethiopia Tigray Eritrea", grade: C3, tags: [ethiopia]}
+  - {id: gn_korea, name: Google News · North Korea, kind: gnews, q: "North Korea missile", grade: C3, tags: [korea]}
+  - {id: gn_taiwan, name: Google News · Taiwan, kind: gnews, q: "Taiwan PLA aircraft", grade: C3, tags: [taiwan]}
+  - {id: gn_carrier, name: Google News · US carrier, kind: gnews, q: "aircraft carrier strike group deploys", grade: C3, tags: [posture]}
+  - {id: gn_sanctions, name: Google News · sanctions, kind: gnews, q: "OFAC sanctions Iran Russia", grade: C3, tags: [economy]}
+  - {id: gn_piracy, name: Google News · piracy, kind: gnews, q: "Somali pirates hijack", grade: C3, tags: [somalia, maritime]}
+
+  # ── 공식 발표 HTML (A2, 최선형 파서) ──────────────────────────────
+  - {id: taiwan_mnd, name: 대만 국방부 PLA 동향, kind: html, parser: taiwan_mnd, url: "https://www.mnd.gov.tw/PublishTable.aspx?Types=%E5%8D%B3%E6%99%82%E8%BB%8D%E4%BA%8B%E5%8B%95%E6%85%8B&title=%E5%9C%8B%E9%98%B2%E6%B6%88%E6%81%AF", grade: A2, lang: zh, region: asia, tags: [taiwan], verify: true}
+  - {id: ukmto, name: UKMTO 해상 경보, kind: html, parser: ukmto, url: "https://www.ukmto.org/indian-ocean/recent-incidents", grade: A2, lang: en, region: maritime, tags: [maritime], verify: true}
+  - {id: centcom, name: 미 중부사령부 보도자료, kind: rss, url: "https://www.centcom.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1017&max=20", grade: A2, lang: en, region: mena, tags: [iran, yemen, posture], verify: true}
+  - {id: southcom, name: 미 남부사령부 보도자료, kind: rss, url: "https://www.southcom.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1037&max=20", grade: A2, lang: en, region: americas, tags: [carib], verify: true}
+
+  # ── 선택(키 필요) ─────────────────────────────────────────────────
+  - {id: acled, name: ACLED (키 필요), kind: acled, enabled: false, grade: A2, note: "ACLED_KEY·ACLED_EMAIL 설정 시 활성화. 정식 분쟁 사건 DB."}
+  - {id: eia_api, name: EIA API (키 필요), kind: eia, enabled: false, grade: A2, note: "EIA_API_KEY 설정 시 SPR 재고·현물가."}
+  - {id: sarship, name: Sentinel-1 선박 탐지 (sarship), kind: sar, enabled: false, grade: B2, note: "SARSHIP_ENABLE=1 시 호르무즈·바브엘만데브 AOI를 저장소의 CFAR 탐지기로 세어 통항 보조 지표로 쓴다."}

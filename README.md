@@ -116,3 +116,27 @@ notebooks/     executed analysis notebook (Busan, 2021-06-04)
 scripts/       notebook builder
 docs/          figures and detection GeoJSON
 ```
+
+---
+
+## 세계 상황판 (dashboard/)
+
+OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact/VdTv11W2Zv8j55Rpf4aBGJ · 소스와 운영 방식은 [`dashboard/README.md`](dashboard/README.md), 수집 파이프라인은 [`dashboard/pipeline/README.md`](dashboard/pipeline/README.md).
+
+[![상황판 수집](https://github.com/Yang-wb908/Claude_cloud/actions/workflows/collect.yml/badge.svg)](https://github.com/Yang-wb908/Claude_cloud/actions/workflows/collect.yml)
+[![검증](https://github.com/Yang-wb908/Claude_cloud/actions/workflows/validate.yml/badge.svg)](https://github.com/Yang-wb908/Claude_cloud/actions/workflows/validate.yml)
+
+이 저장소가 상황판 운영 체계입니다.
+
+| GitHub 기능 | 역할 |
+|---|---|
+| Actions `collect.yml` (6시간 주기) | 58개 수집원에서 수집 → Claude 보강 → 스냅숏 병합 → 트립와이어 → SITREP → `index.html` 빌드 → 커밋 → Pages 배포 |
+| Pages | 상황판을 자체 주소로 호스팅. 여기서는 외부 데이터(위키백과 Current events)를 실시간으로 읽습니다 |
+| Issues `tripwire` | 임계치 돌파(호르무즈 통항 10척 미만, 브렌트 110달러, PLA 40대 등)를 Issue로 자동 생성·재확인 |
+| Issues `rfi` / `source-proposal` | 템플릿으로 정보 요청·수집원 제안. 열린 RFI는 상황판 브리프에 '열린 정보 요청'으로 표시 |
+| Releases `sitrep-<date>` | 매일 09:40 KST SITREP 마크다운과 데이터 스냅숏 zip을 보존 |
+| 커밋 이력 `dashboard/data/history/` | 실행별 요약을 남겨 직전 실행 대비 변화(새 사건, 시세·통항 변동)를 계산 |
+| PR 검증 `validate.yml` + CODEOWNERS | 분석관 판단 파일(`iw.js`, `theaters.js`, `intel.js`)은 사람이 검토. 데이터 참조·문법·수집원 설정 자동 검사 |
+| Dependabot | 파이프라인 의존성과 Actions 버전 주간 갱신 |
+
+처음 켤 때: 저장소 Settings → Pages에서 Source를 **GitHub Actions**로 두고, Secrets에 `ANTHROPIC_API_KEY`(선택)를 넣은 뒤 Actions 탭에서 `상황판 수집`을 한 번 수동 실행합니다.

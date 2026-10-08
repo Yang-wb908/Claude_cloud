@@ -1,0 +1,126 @@
+name: 상황판 수집 (6시간 주기)
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"          # 00:17, 06:17, 12:17, 18:17 UTC
+  workflow_dispatch:
+    inputs:
+      claude:
+        description: "Claude 한국어 요약·분류 사용 (ANTHROPIC_API_KEY 필요)"
+        type: boolean
+        default: true
+      only:
+        description: "수집원 id 목록(쉼표, 비우면 전체)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: collect-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    outputs:
+      fired: ${{ steps.trip.outputs.fired }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: 수집 → 보강 → 조립 → 트립와이어 → 보고서 → 빌드
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PIPELINE_NO_CLAUDE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.claude) && '1' || '' }}
+          PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+        run: |
+          set -euo pipefail
+          python dashboard/pipeline/run.py collect ${{ inputs.only != '' && format('--only {0}', inputs.only) || '' }}
+          python dashboard/pipeline/run.py enrich
+          python dashboard/pipeline/run.py assemble
+          python dashboard/pipeline/run.py tripwires
+          python dashboard/pipeline/run.py report
+      - name: RFI·수집원 제안 Issue를 데이터로 내보내기
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue list --label rfi --state open --json number,title,url,createdAt,labels --limit 50 > dashboard/data/rfi.json || echo "[]" > dashboard/data/rfi.json
+          gh issue list --label source-proposal --state open --json number,title,url,createdAt --limit 50 > dashboard/data/source_proposals.json || echo "[]" > dashboard/data/source_proposals.json
+      - name: index.html 빌드
+        run: python dashboard/build.py
+      - name: 트립와이어 출력
+        id: trip
+        run: |
+          python - <<'EOF' >> "$GITHUB_OUTPUT"
+          import json
+          d = json.load(open("dashboard/data/tripwires.json"))
+          print("fired=" + json.dumps(d["fired"], ensure_ascii=False))
+          EOF
+      - name: 수집 결과 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data reports
+          if git diff --cached --quiet; then echo "변경 없음"; else
+            git commit -m "data: 자동 수집 $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+            git push
+          fi
+      - name: 수집 로그·캐시 아티팩트
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: dashboard/pipeline/cache
+          retention-days: 14
+      - name: Pages 아티팩트
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  tripwire-issues:
+    needs: collect
+    if: ${{ needs.collect.outputs.fired != '[]' && needs.collect.outputs.fired != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 발동된 트립와이어를 Issue로
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FIRED: ${{ needs.collect.outputs.fired }}
+        run: |
+          set -euo pipefail
+          gh label create tripwire --color B60205 --description "자동 임계치 경보" 2>/dev/null || true
+          echo "$FIRED" | python3 -c '
+          import json, subprocess, sys
+          for t in json.load(sys.stdin):
+              title = f"[TRIPWIRE] {t[\"title\"]}"
+              existing = subprocess.run(["gh", "issue", "list", "--label", "tripwire", "--state", "open", "--search", json.dumps(title), "--json", "number,title"], capture_output=True, text=True).stdout
+              body = (f"**현재값** {t[\"current\"]} (임계 {t[\"op\"]} {t[\"threshold\"]})\n\n**경보단계** {t[\"sev\"]}  **전역** {t.get(\"th\") or \"-\"}\n\n{t.get(\"why\",\"\")}\n\n"
+                      f"발동 시각 {t[\"at\"]} · 자동 생성. 상황이 끝나면 닫아 주세요. 상황판: https://claude.ai/artifact/VdTv11W2Zv8j55Rpf4aBGJ")
+              hits = [i for i in json.loads(existing or "[]") if i["title"] == title]
+              if hits:
+                  subprocess.run(["gh", "issue", "comment", str(hits[0]["number"]), "--body", f"재확인 {t[\"at\"]}: 현재값 {t[\"current\"]}"], check=False)
+              else:
+                  labels = "tripwire" + (f",{t[\"th\"]}" if t.get("th") else "")
+                  subprocess.run(["gh", "label", "create", t["th"], "--color", "0E8A16", "--force"], check=False) if t.get("th") else None
+                  subprocess.run(["gh", "issue", "create", "--title", title, "--body", body, "--label", labels], check=False)
+          '

@@ -1,0 +1,49 @@
+name: 일일 SITREP 릴리스
+
+on:
+  schedule:
+    - cron: "40 0 * * *"            # 00:40 UTC = 09:40 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sitrep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: SITREP 생성
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+        run: python dashboard/pipeline/run.py report
+      - name: 데이터 스냅숏 묶기
+        run: |
+          D=$(date -u +%Y-%m-%d)
+          echo "DATE=$D" >> "$GITHUB_ENV"
+          mkdir -p dist
+          cp reports/SITREP-$D.md dist/
+          zip -qr dist/snapshot-$D.zip dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/intel.js dashboard/iw.js dashboard/theaters.js dashboard/data
+      - name: 보고서 커밋
+        run: |
+          git config user.name "situation-board-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add reports
+          git diff --cached --quiet || (git commit -m "report: SITREP ${DATE} [skip ci]" && git push)
+      - name: Release 발행
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="sitrep-${DATE}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+            gh release edit "$TAG" --notes-file "reports/SITREP-${DATE}.md"
+          else
+            gh release create "$TAG" dist/* --title "SITREP ${DATE}" --notes-file "reports/SITREP-${DATE}.md"
+          fi

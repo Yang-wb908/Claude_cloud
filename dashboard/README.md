@@ -26,3 +26,6 @@ python3 dashboard/build.py   # dashboard/index.html 생성
 - 출처 등급: Admiralty 코드(신뢰성 A~F, 신빙성 1~6). 매체 유형 기준 자동 1차 등급.
 - 징후 지표 상태: obs(관측) / part(부분·미확인) / no(미관측).
 - 부대 위치는 보도 시점 광역 추정(C3~C4)이며 갱신 대상입니다.
+
+## 자동 수집 (3차)
+`pipeline/`이 6시간마다 GitHub Actions에서 돌아 `data_snapshot.json`(사건)과 `intel.auto.json`(시세·PortWatch·PLA·수집원 상태·변화)을 갱신하고, `build.py`가 이를 `index.html`에 주입합니다. 트립와이어는 Issue로, 일일 SITREP은 Release로 나갑니다. 자세한 내용은 [`pipeline/README.md`](pipeline/README.md)와 루트 README의 운영 표를 보세요.

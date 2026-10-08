@@ -1,0 +1,37 @@
+name: 수집원 제안
+description: 새 RSS·API·공식 페이지를 제안합니다. 채택되면 dashboard/pipeline/sources.yaml에 추가됩니다.
+title: "[수집원] "
+labels: ["source-proposal"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 이름
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL (RSS/API/페이지)
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 유형
+      options: [rss, api, html, 데이터셋, 기타]
+    validations:
+      required: true
+  - type: dropdown
+    id: grade
+    attributes:
+      label: 제안 등급 (Admiralty)
+      options: [A2 공식·통계, B2 통신사·분석기관, B3 주요 매체, C3 지역·전문 매체, C4 미분류]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 어떤 공백을 메우나
+    validations:
+      required: true

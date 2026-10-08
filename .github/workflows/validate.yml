@@ -1,0 +1,62 @@
+name: 상황판 데이터·파이프라인 검증
+
+on:
+  pull_request:
+    paths: ["dashboard/**", "tests/pipeline/**", ".github/workflows/**"]
+  push:
+    branches: ["**"]
+    paths: ["dashboard/**", "tests/pipeline/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: pip install -r dashboard/pipeline/requirements.txt pytest
+      - name: 파이프라인 단위 테스트
+        run: python -m pytest tests/pipeline -q
+      - name: 분석 데이터 문법·참조 검사
+        run: |
+          set -euo pipefail
+          python dashboard/build.py
+          python - <<'EOF'
+          import re, pathlib, subprocess, json
+          h = pathlib.Path("dashboard/index.html").read_text()
+          s = re.findall(r"<script>(.*?)</script>", h, re.S)
+          pathlib.Path("/tmp/chk_data.js").write_text("var window={};\n" + s[0] + """
+          const ids=new Set(DATA.theaters.map(t=>t.id));
+          for (const id of ids) if(!IW.theaters[id]) throw new Error('IW missing '+id);
+          const nodes=new Set([...ids, ...IW.links.nodes.map(n=>n.id)]);
+          IW.links.edges.forEach(e=>{ if(!nodes.has(e.s)||!nodes.has(e.t)) throw new Error('bad edge '+JSON.stringify(e)); });
+          IW.bluf.judgments.forEach(j=>j.th.forEach(t=>{ if(!ids.has(t)) throw new Error('bad th '+t); }));
+          for (const t of DATA.theaters) for (const m of t.metrics) if(!m.v||!m.l) throw new Error('bad metric in '+t.id);
+          console.log('data ok: theaters', ids.size, 'events', DATA.events.length);
+          """)
+          pathlib.Path("/tmp/chk_app.js").write_text(s[1])
+          subprocess.run(["node", "/tmp/chk_data.js"], check=True)
+          subprocess.run(["node", "--check", "/tmp/chk_app.js"], check=True)
+          json.loads(pathlib.Path("dashboard/data_snapshot.json").read_text())
+          EOF
+      - name: 트립와이어·수집원 설정 검사
+        run: |
+          python - <<'EOF'
+          import yaml, pathlib
+          s = yaml.safe_load(pathlib.Path("dashboard/pipeline/sources.yaml").read_text())
+          ids = [x["id"] for x in s["sources"]]
+          assert len(ids) == len(set(ids)), "duplicate source id"
+          for x in s["sources"]:
+              assert x["kind"] in {"rss","gnews","gdelt","reliefweb","portwatch","markets","wiki","html","acled","eia","sar"}, x["id"]
+          t = yaml.safe_load(pathlib.Path("dashboard/pipeline/tripwires.yaml").read_text())["tripwires"]
+          assert len({x["id"] for x in t}) == len(t)
+          print(f"sources {len(ids)}, tripwires {len(t)} ok")
+          EOF

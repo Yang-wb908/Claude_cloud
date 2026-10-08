@@ -302,6 +302,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .evlist .meta{font-size:12px;color:var(--faint);margin-bottom:1px;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
 .evlist p{margin:0;font-size:14px;line-height:1.5}
 .evlist .en-txt{font-size:13.5px}
+.auto-tag{font-family:var(--mono);font-size:10px;color:var(--faint);border:1px solid var(--line);border-radius:3px;padding:0 3px}
 .ttag{color:var(--c);font-weight:500}
 .noloc{font-size:11.5px;color:var(--faint)}
 
@@ -469,6 +470,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <button class="tab" role="tab" aria-selected="false" data-pane="p-net">연계</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-kr">한국</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt">시장</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-src">수집원</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ai">분석관</button>
     </nav>
     <div class="panes">
@@ -493,6 +495,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <section class="pane" id="p-net" role="tabpanel" hidden></section>
       <section class="pane" id="p-kr" role="tabpanel" hidden></section>
       <section class="pane" id="p-mkt" role="tabpanel" hidden></section>
+      <section class="pane" id="p-src" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
         <p class="note" id="aiNote">상황판에 담긴 데이터(브리핑·핵심판단·징후·시나리오·해협·경제·강대국·사건·시장)만 근거로 답합니다. 직접 검색은 하지 않아요.</p>
         <div class="ask" id="askBox">
@@ -533,6 +536,10 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const INTEL = typeof window.INTEL === "object" ? window.INTEL : null;
+const AUTO = typeof INTEL_AUTO === "object" ? INTEL_AUTO : null;
+const RFI_ = typeof RFI === "object" && RFI ? RFI : [];
+const TRIP_ = typeof TRIP === "object" ? TRIP : null;
+const SRC_ = typeof SOURCES === "object" && SOURCES ? SOURCES : [];
 let current = null;
 const TH = Object.fromEntries(DATA.theaters.map(t => [t.id, t]));
 const M = DATA.markets;
@@ -577,11 +584,11 @@ function grade(url){
   for (const [rx, g, why] of SRC_GRADE) if (rx.test(url)) return {g, why};
   return {g:"C4", why:"미분류 매체"};
 }
-const gradeBadge = url => { const {g, why} = grade(url); return `<span class="grade g${g[0].toLowerCase()}" title="${esc(why)}">${g}</span>`; };
+const gradeBadge = (url, pre) => { const {g, why} = pre ? {g:pre, why:"수집 파이프라인 등급"} : grade(url); return `<span class="grade g${g[0].toLowerCase()}" title="${esc(why)}">${g}</span>`; };
 const srcA = (url, label) => url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label || "출처")}</a>` : "";
 
 /* ---------- 상태: 사건 ---------- */
-let EVENTS = DATA.events.map((e,i) => ({...e, id:"s"+i, lang:"ko"}));
+let EVENTS = DATA.events.map((e,i) => ({...e, id:e.id || "s"+i, lang:e.lang || "ko"}));
 const DATES = [...new Set(EVENTS.map(e => e.d))].sort();
 let REF = DATES[DATES.length - 1];
 let MODE = "snapshot";
@@ -1189,6 +1196,12 @@ function renderBluf(){
       <p class="cap" style="margin-top:12px;color:var(--ink)">${esc(g.summary)}</p></div>
     <div class="block"><h3>핵심판단</h3><span class="meta">BLUF · 신뢰도는 출처 수·일관성·추론 의존도 기준</span>
       <ul class="kj">${B.judgments.map(j => `<li><div class="t">${esc(j.t)}</div><div class="b">${esc(j.basis)}</div>${confBadge(j.conf)} ${thChips(j.th)}</li>`).join("")}</ul></div>
+    ${TRIP_ && TRIP_.fired && TRIP_.fired.length ? `<div class="block sev${Math.max(...TRIP_.fired.map(f => f.sev || 3))}"><h3>트립와이어 발동 <span class="en">auto</span></h3><span class="meta">임계치 돌파 · ${esc(TRIP_.generated || "")}</span>
+      <ul class="wl">${TRIP_.fired.map(f => `<li>${f.th && TH[f.th] ? `<button class="thchip sev${TH[f.th].sev}" data-th="${f.th}">${esc(TH[f.th].name)}</button>` : ""}<b>${esc(f.title)}</b> · 현재 ${esc(String(f.current))} (임계 ${esc(f.op)} ${esc(String(f.threshold))})<small>${esc(f.why || "")}</small></li>`).join("")}</ul></div>` : ""}
+    ${AUTO && AUTO.changes && (AUTO.changes.new_count || (AUTO.changes.markets || []).length || (AUTO.changes.portwatch || []).length) ? `<div class="block"><h3>자동 수집 변화 <span class="en">since ${esc((AUTO.changes.since || "").slice(5, 16))}</span></h3>
+      <ul class="wl">${AUTO.changes.new_count ? `<li>새 사건 ${AUTO.changes.new_count}건 수집</li>` : ""}${(AUTO.changes.portwatch || []).map(c => `<li>${esc(CP_NAME[c.choke] || c.choke)} 통항 ${esc(String(c.from))} → <b>${esc(String(c.to))}</b>척 (${esc(c.d)})</li>`).join("")}${(AUTO.changes.markets || []).map(c => `<li>${esc(c.l)} ${esc(String(c.from))} → <b>${esc(String(c.to))}</b> (${c.pct > 0 ? "+" : ""}${c.pct}%)</li>`).join("")}</ul></div>` : ""}
+    ${RFI_.length ? `<div class="block"><h3>열린 정보 요청 (RFI) ${RFI_.length}건</h3><span class="meta">GitHub Issue · 닫히면 사라집니다</span>
+      <ul class="wl">${RFI_.map(i => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener">#${i.number} ${esc(i.title.replace(/^\[RFI\]\s*/, ""))}</a><small>${esc((i.createdAt || "").slice(0, 10))}</small></li>`).join("")}</ul></div>` : ""}
     ${extra.length ? `<div class="block"><h3>경제·강대국 판단</h3><span class="meta">수집 산출 · 근거는 괄호 안</span><ul class="kj">${extra.map(j => `<li><div class="t">${esc(j.t)}</div><span class="conf">${esc(j.tag)}</span></li>`).join("")}</ul></div>` : ""}
     <div class="block"><h3>지난 72시간 변화</h3><span class="meta">↑ 악화 · ↓ 완화 · → 태세 변화</span>
       <ul class="chg">${B.changes72.map(c => `<li${c.th && TH[c.th] ? ` data-th="${c.th}"` : ""}><time>${esc(c.d)}</time>${trendTag(c.dir)}<span>${esc(c.x)}${c.th && TH[c.th] ? ` <span class="noloc">· ${esc(TH[c.th].name)}</span>` : ""}</span></li>`).join("")}</ul></div>
@@ -1232,7 +1245,7 @@ function renderEventList(){
   $("#evcount").textContent = `${list.length}건 표시, 기준일 ${md(REF)}${MODE === "live" ? " (실시간)" : ""}`;
   $("#evlist").innerHTML = list.map(e => {
     const th = e.th && TH[e.th];
-    return `<li class="t${e.t}" data-id="${e.id}"><time>${md(e.d)}</time><div><div class="meta"><span class="ttag">${esc(TYPES[e.t].n)}</span><span>${esc(e.p || "")}${th ? " · " + esc(th.name) : ""}</span>${gradeBadge(e.s)}${e.at ? "" : '<span class="noloc">위치 미상</span>'}</div><p class="${e.lang === "en" ? "en-txt" : ""}"${e.lang === "en" ? ' lang="en"' : ""}>${esc(e.x)}</p></div></li>`;
+    return `<li class="t${e.t}" data-id="${e.id}"><time>${md(e.d)}</time><div><div class="meta"><span class="ttag">${esc(TYPES[e.t].n)}</span><span>${esc(e.p || "")}${th ? " · " + esc(th.name) : ""}</span>${gradeBadge(e.s, e.g)}${e.auto ? '<span class="auto-tag">AUTO</span>' : ""}${e.at ? "" : '<span class="noloc">위치 미상</span>'}</div><p class="${e.lang === "en" ? "en-txt" : ""}"${e.lang === "en" ? ' lang="en"' : ""}>${esc(e.x)}</p></div></li>`;
   }).join("") || `<li style="display:block;cursor:default;color:var(--muted)">선택한 기간과 유형에 해당하는 사건이 없어요. 기간을 넓히거나 유형을 켜 보세요.</li>`;
 }
 $("#evlist").addEventListener("click", e => {
@@ -1274,7 +1287,9 @@ function renderSea(){
   } else {
     cps = `<div class="block sev5"><h3>호르무즈 해협</h3><span class="meta">IMF PortWatch 9/27</span><div class="bigrow"><span class="big">1척</span><span class="delta">하루 통과, 평시 85척</span></div></div>`;
   }
-  $("#p-sea").innerHTML = `
+  const pwBlock = AUTO && AUTO.portwatch && Object.keys(AUTO.portwatch).length ? `<div class="block sev3"><h3>IMF PortWatch 일일 통항 <span class="en">auto · A2</span></h3><span class="meta">AIS 기반 · 자동 수집 ${esc(AUTO.generated || "")}</span>
+    ${Object.entries(AUTO.portwatch).map(([k, v]) => { const L = v.latest || {}; const pts = (v.series || []).filter(x => x[1] != null).map(x => [x[0], x[1]]); return `<div class="bigrow" style="margin-top:12px"><span class="big">${esc(String(L.n_total ?? "-"))}</span><span class="delta">${esc(CP_NAME[k] || k)} · ${esc(L.d || "")} · 7일 평균 ${esc(String(v.avg7 ?? "-"))} · 28일 ${esc(String(v.avg28 ?? "-"))}</span></div>${pts.length > 1 ? spark(pts, "sev3", p => p[0] + " " + p[1] + "척") : ""}`; }).join("")}</div>` : "";
+  $("#p-sea").innerHTML = pwBlock + `
   <p class="note"><b>해협별 물동량·통항·보험료</b>입니다. 블록 제목을 누르면 지구본이 그 해협으로 돌아갑니다. 수치마다 날짜와 출처 등급이 붙어 있습니다.</p>
   ${cps}
   ${S && S.freight && S.freight.length ? `<div class="block sev2"><h3>운임 지수</h3><span class="meta">컨테이너·건화물·유조선·LNG선</span>${metricRows(S.freight)}</div>` : ""}
@@ -1289,7 +1304,8 @@ function renderSea(){
 function renderEco(){
   const E = INTEL && INTEL.economy;
   const SEV = {energy:5, macro:3, markets:2, trade:3, sanctions:4, stress:4};
-  $("#p-eco").innerHTML = `<p class="note"><b>전쟁 경제</b>: 에너지·거시·시장·교역·제재·국가 스트레스. 수치마다 날짜·출처·등급이 붙습니다.</p>` +
+  const autoMk = AUTO && AUTO.markets && AUTO.markets.length ? `<div class="block sev2"><h3>실시간 시세 <span class="en">auto · Yahoo Finance</span></h3><span class="meta">자동 수집 ${esc(AUTO.generated || "")} · 종가 기준</span>${metricRows(AUTO.markets.map(m => ({l:m.l, v:String(m.v), d:m.d, chg:m.chg, src:m.src})))}</div>` : "";
+  $("#p-eco").innerHTML = `<p class="note"><b>전쟁 경제</b>: 에너지·거시·시장·교역·제재·국가 스트레스. 수치마다 날짜·출처·등급이 붙습니다.</p>` + autoMk +
     (E && E.groups && E.groups.length ? E.groups.map(g => `<div class="block sev${SEV[g.id] || 2}"><h3>${esc(g.title)} <span class="en">${esc(g.id)}</span></h3>${metricRows(g.metrics)}${devList(g.dev)}</div>`).join("")
       : `<div class="block"><p class="cap">경제 수집 결과가 아직 없습니다. 시장 탭의 스냅숏 값을 참고하세요.</p></div>`) +
     (E && E.judgments && E.judgments.length ? `<div class="block"><h3>경제 판단</h3><ul class="kj">${E.judgments.map(j => `<li><div class="t">${esc(j)}</div></li>`).join("")}</ul></div>` : "");
@@ -1320,6 +1336,23 @@ $("#p-mkt").innerHTML = `
     <p class="cap">2월~9월 사이 관측값이 비어 직선으로 이었습니다. 1년 전 1,700달러 안팎의 2.5배 수준입니다.</p></div>
   <div class="block sev3"><h3>발틱 건화물 운임지수 (BDI)</h3><span class="meta">${M.bdi.d} 자료 · 최신치는 해협 탭 운임 지수 참고</span>
     <div class="bigrow"><span class="big">${M.bdi.v}</span><span class="delta">${M.bdi.chg}</span></div></div>`;
+
+/* ---------- 수집원 ---------- */
+function renderSources(){
+  const st = AUTO && AUTO.sources ? Object.fromEntries(AUTO.sources.map(s => [s.id, s])) : {};
+  const KIND = {rss:"RSS", gnews:"Google News", gdelt:"GDELT", reliefweb:"ReliefWeb", portwatch:"PortWatch", markets:"시세", wiki:"위키", html:"공식 페이지", acled:"ACLED", eia:"EIA", sar:"SAR"};
+  const groups = {};
+  SRC_.forEach(s => (groups[s.region || "기타"] = groups[s.region || "기타"] || []).push(s));
+  const REG = {global:"전 세계", mena:"중동", ukraine:"우크라이나", korea:"한반도", asia:"아시아", africa:"아프리카", southasia:"남아시아", maritime:"해운", energy:"에너지", markets:"시장", americas:"미주", "기타":"기타"};
+  const ok = Object.values(st).filter(s => s.ok).length, tot = Object.keys(st).length;
+  const li = s => { const r = st[s.id]; const g = (s.grade || "C4"); return `<li><span class="n">${esc(s.name)} <span class="grade g${g[0].toLowerCase()}">${esc(g)}</span>${s.verify ? '<span class="chk">검증 전</span>' : ""}${s.enabled === false ? '<span class="chk" style="color:var(--faint);border-color:var(--line)">비활성</span>' : ""}</span><span class="k">${esc(KIND[s.kind] || s.kind)}${r ? ` · ${r.ok ? `<span style="color:var(--s1)">정상 ${r.n}건</span>` : `<span style="color:var(--s5)">실패</span>`}` : ""}</span>${r && !r.ok ? `<span class="x">${esc(r.err || "")}</span>` : s.note ? `<span class="x">${esc(s.note)}</span>` : ""}</li>`; };
+  $("#p-src").innerHTML = `
+    <p class="note"><b>수집원 레지스트리</b> ${SRC_.length}곳. ${tot ? `마지막 자동 수집에서 <b>${ok}/${tot}</b> 정상 (${esc(AUTO.generated || "")}).` : "아직 자동 수집 실행 기록이 없습니다. GitHub Actions가 6시간마다 수집합니다."} 등급은 Admiralty 기본값이고 기사마다 원출처 도메인으로 재등급합니다.</p>
+    ${AUTO && AUTO.counts ? `<div class="block"><div class="mgrid"><div class="mcell sev2"><b>${AUTO.counts.raw}</b><span>수집 항목</span></div><div class="mcell sev2"><b>${AUTO.counts.candidates}</b><span>관련 후보</span></div><div class="mcell sev1"><b>${AUTO.counts.added}</b><span>상황판 반영</span></div><div class="mcell sev3"><b>${AUTO.counts.claude}</b><span>Claude 요약</span></div></div></div>` : ""}
+    ${Object.entries(groups).map(([r, list]) => `<div class="block"><h3>${esc(REG[r] || r)} <span class="en">${list.length}</span></h3><ul class="plist">${list.map(li).join("")}</ul></div>`).join("")}
+    <div class="block"><h3>수집원 제안·정보 요청</h3><p class="cap">저장소 Issues에서 <b>수집원 제안</b> 또는 <b>정보 요청(RFI)</b> 템플릿으로 등록하면 다음 수집 주기에 상황판에 반영됩니다. 등록: <a href="https://github.com/Yang-wb908/Claude_cloud/issues/new/choose" target="_blank" rel="noopener">github.com/Yang-wb908/Claude_cloud/issues</a></p></div>`;
+  $("#p-src").querySelectorAll(".plist li").forEach(l => l.style.cursor = "default");
+}
 
 /* ---------- 태세 ---------- */
 function renderPosture(){
@@ -1478,7 +1511,7 @@ function setStatus(mode){
   statusEl.className = "status " + mode;
   if (mode === "loading") statusText.textContent = "실시간 연결 중…";
   else if (mode === "live") statusText.textContent = "실시간 " + liveAgo();
-  else statusText.textContent = "스냅숏";
+  else statusText.textContent = AUTO && AUTO.generated ? "자동 수집 " + AUTO.generated.slice(5, 16).replace("T", " ") + "Z" : "스냅숏";
   renderInfo();
 }
 function liveAgo(){ if (!liveAt) return ""; const m = Math.round((Date.now() - liveAt) / 60000); return m < 1 ? "방금 갱신" : m + "분 전 갱신"; }
@@ -1632,6 +1665,8 @@ function compact(){
     경제: INTEL && INTEL.economy ? INTEL.economy.groups.map(g => ({분야:g.title, 지표:(g.metrics||[]).map(mrow), 동향:(g.dev||[]).map(d => d.d + " " + d.x)})) : null,
     경제판단: INTEL && INTEL.economy ? INTEL.economy.judgments : [],
     강대국: INTEL && INTEL.gp ? {진영:INTEL.gp.blocs, 축:INTEL.gp.axes.map(a => ({축:a.title, 상태:a.status, 추세:a.trend, 사실:(a.facts||[]).map(f => f.d + " " + f.x), 지표:(a.metrics||[]).map(mrow)})), 판단:INTEL.gp.judgments, 일정:(INTEL.gp.calendar||[]).map(c => c.d + " " + c.x)} : null,
+    자동수집: AUTO ? {시각:AUTO.generated, 시세:AUTO.markets.map(m => m.l + " " + m.v + " (" + m.d + ", " + m.chg + ")"), 해협통항:Object.fromEntries(Object.entries(AUTO.portwatch || {}).map(([k,v]) => [k, v.latest])), 변화:AUTO.changes, 수집원상태:(AUTO.sources||[]).filter(x => !x.ok).map(x => x.name + ": " + x.err)} : null,
+    트립와이어: TRIP_ ? TRIP_.fired : [], RFI: RFI_.map(i => i.title),
     항로: DATA.lanes.map(l => l.name + ": " + l.label),
     군사태세: IW.posture.units.map(u => u.n + " " + u.st + " (" + u.asof + ", " + u.g + ") " + u.x),
     연계: IW.links.edges.map(e => e.s + "→" + e.t + " w" + e.w + " " + e.m),
@@ -1664,7 +1699,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 })();
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();
