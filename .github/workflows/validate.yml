@@ -55,7 +55,7 @@ jobs:
           ids = [x["id"] for x in s["sources"]]
           assert len(ids) == len(set(ids)), "duplicate source id"
           for x in s["sources"]:
-              assert x["kind"] in {"rss","gnews","gdelt","reliefweb","portwatch","markets","wiki","html","acled","eia","sar","cot"}, x["id"]
+              assert x["kind"] in {"rss","gnews","gdelt","reliefweb","portwatch","markets","series","wiki","html","acled","eia","sar","cot"}, x["id"]
           t = yaml.safe_load(pathlib.Path("dashboard/pipeline/tripwires.yaml").read_text())["tripwires"]
           assert len({x["id"] for x in t}) == len(t)
           print(f"sources {len(ids)}, tripwires {len(t)} ok")

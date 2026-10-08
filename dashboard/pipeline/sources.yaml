@@ -1,5 +1,5 @@
 # 수집원 레지스트리. 등급은 Admiralty 코드 기본값(신뢰성 A~F, 신빙성 1~6).
-# kind: rss | gnews(Google News 검색 RSS) | gdelt | reliefweb | portwatch | markets | wiki | html
+# kind: rss | gnews(Google News 검색 RSS) | gdelt | reliefweb | portwatch | markets | series | cot | wiki | html
 # verify: true 는 URL을 실제 운용에서 아직 검증하지 못한 수집원. 첫 실행 상태표에서 실패하면 교정한다.
 defaults:
   timeout: 25
@@ -69,6 +69,10 @@ sources:
                "DX-Y.NYB": "달러인덱스", "KRW=X": "원/달러", "JPY=X": "엔/달러", "CNY=X": "위안/달러", "EURUSD=X": "유로/달러", "AUDUSD=X": "호주달러/달러", "BRL=X": "헤알/달러",
                "^TNX": "미 10년물 (%)", "^FVX": "미 5년물 (%)", "^VIX": "VIX", "^KS11": "코스피", "^GSPC": "S&P 500", "^N225": "니케이225", "000001.SS": "상하이종합",
                "URA": "우라늄 ETF (URA)", "LIT": "리튬·배터리 ETF (LIT)", "BDRY": "건화물 운임 ETF (BDRY)", "BTC-USD": "비트코인 ($)"}}
+  - {id: series, name: 백테스트 시계열 (Yahoo Finance 2년 일봉), kind: series, grade: B2, lang: en, region: markets, tags: [markets, backtest], enabled: false, range: "2y",
+     note: "주간 백테스트 워크플로가 --only series 로 호출. 6시간 수집에서는 꺼 둔다.",
+     tickers: {"BZ=F": "브렌트유", "CL=F": "WTI", "HO=F": "경유", "NG=F": "헨리허브", "TTF=F": "TTF", "GC=F": "금", "SI=F": "은", "HG=F": "구리", "ZW=F": "시카고 밀", "ZC=F": "옥수수", "ZS=F": "대두", "ZR=F": "쌀", "SB=F": "설탕", "KC=F": "커피", "CC=F": "코코아", "CT=F": "면화",
+               "DX-Y.NYB": "달러인덱스", "KRW=X": "원/달러", "^TNX": "미 10년물", "^VIX": "VIX", "^KS11": "코스피", "^GSPC": "S&P 500", "URA": "우라늄 ETF", "LIT": "리튬 ETF", "BDRY": "건화물 ETF", "BTC-USD": "비트코인"}}
   - {id: cftc_cot, name: CFTC 포지션 (COT 분류별), kind: cot, grade: A2, lang: en, region: markets, tags: [markets, positioning],
      url: "https://www.cftc.gov/dea/newcot/f_disagg.txt",
      markets: {"CRUDE OIL, LIGHT SWEET": "WTI", "NATURAL GAS": "헨리허브 가스", "GOLD": "금", "SILVER": "은", "COPPER": "구리", "CORN": "옥수수", "SOYBEANS": "대두", "WHEAT-SRW": "시카고 밀", "SUGAR NO. 11": "설탕", "COFFEE C": "커피", "COCOA": "코코아", "COTTON NO. 2": "면화"},

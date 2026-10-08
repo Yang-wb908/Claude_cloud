@@ -1,0 +1,28 @@
+name: 시나리오 평가 요청
+description: 시나리오 조합과 확률·강도를 제출하면 봇이 상품별 충격 분포(몬테카를로)를 댓글로 답합니다.
+title: "[시나리오] "
+labels: ["scenario"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        상황판 **시나리오 탭**의 "GitHub Issue로 제출" 버튼을 누르면 아래 설정이 자동으로 채워집니다. 직접 적을 때는 `id:확률(%):강도` 를 쉼표로 구분하세요.
+        사용 가능한 id는 `dashboard/scenario.js` 의 templates 항목입니다. 예: `hormuz_war:15:1.5,redsea_houthi:30:1,elnino_super:70:1`
+  - type: textarea
+    id: scenarios
+    attributes:
+      label: 시나리오 설정
+      description: "id:확률:강도 를 쉼표 또는 줄바꿈으로 구분"
+      placeholder: "hormuz_war:15:1.5,redsea_houthi:30:1"
+    validations:
+      required: true
+  - type: textarea
+    id: memo
+    attributes:
+      label: 분석관 메모
+      description: 가정의 근거, 보고 싶은 상품, 검토를 원하는 전파 경로
+  - type: dropdown
+    id: horizon
+    attributes:
+      label: 관심 지평
+      options: ["단기 (2주)", "중기 (1~2개월)", "장기 (분기)"]

@@ -1,0 +1,69 @@
+name: 현장 보고 (사건 등록)
+description: 자동 수집이 놓친 사건을 직접 등록합니다. 봇이 사건 목록에 추가하고 다음 배포에 반영합니다.
+title: "[보고] "
+labels: ["event"]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: 날짜
+      description: YYYY-MM-DD
+    validations:
+      required: true
+  - type: dropdown
+    id: theater
+    attributes:
+      label: 전역
+      options:
+        - "iran 이란 전쟁과 호르무즈"
+        - "ukraine 러시아–우크라이나"
+        - "yemen 예멘·홍해"
+        - "ethiopia 에티오피아–에리트레아"
+        - "sudan 수단"
+        - "gaza 가자·이스라엘"
+        - "afpak 아프가니스탄–파키스탄"
+        - "korea 한반도"
+        - "lebanon 레바논"
+        - "sahel 사헬"
+        - "drc 동부 콩고"
+        - "somalia 소말리아"
+        - "myanmar 미얀마"
+        - "taiwan 대만해협"
+        - "scs 남중국해"
+        - "carib 카리브·베네수엘라"
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: 유형
+      options: ["타격·미사일 (S)", "지상전 (G)", "공격·테러 (A)", "해상 사건 (M)", "외교·정치 (D)", "경제·제재 (E)", "인도적 (H)"]
+    validations:
+      required: true
+  - type: input
+    id: place
+    attributes:
+      label: 장소
+      description: 지명(영문 또는 한글). 지명사전에 있으면 자동으로 좌표를 붙입니다.
+  - type: input
+    id: coords
+    attributes:
+      label: 좌표 (위도, 경도)
+      placeholder: "26.5, 56.3"
+  - type: textarea
+    id: text
+    attributes:
+      label: 내용
+      description: 한 문장. 무엇이, 어디서, 누구에 의해.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 출처 URL
+  - type: dropdown
+    id: grade
+    attributes:
+      label: 출처 등급
+      description: Admiralty 코드. 비우면 URL로 자동 산정.
+      options: ["A1", "A2", "B2", "B3", "C3", "C4", "D4", "E5", "F6"]

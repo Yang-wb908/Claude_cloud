@@ -304,7 +304,7 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 /* feed + timeline */
 .filters{padding:10px 16px 8px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:8px;position:sticky;top:45px;background:var(--panel);z-index:1}
 @media (min-width:960px){.filters{top:0}}
-.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content}
+.seg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;width:max-content;max-width:100%;flex-wrap:wrap}
 .seg button{border:0;background:transparent;padding:6px 12px;font-size:13px;cursor:pointer;color:var(--muted)}
 .seg button+button{border-left:1px solid var(--line)}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--panel)}
@@ -388,6 +388,54 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .sugs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
 .sug{border:1px solid var(--line);background:transparent;border-radius:999px;padding:5px 10px;font-size:12.5px;cursor:pointer;color:var(--muted)}
 .btnrow{display:flex;gap:8px;flex-wrap:wrap}
+/* 5차: 시나리오·백테스트·판단 장부 */
+.scgroup{margin:8px 0 12px}
+.sch{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);margin:6px 0 2px}
+.sch .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.scard{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:5px 0;background:var(--panel2);display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;align-items:center}
+.scard.on{border-color:var(--c);box-shadow:inset 3px 0 0 var(--c)}
+.scard small{display:block;color:var(--muted);font-size:12px;margin-top:1px}
+.scard .pv{font-family:var(--num);font-size:18px;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}
+.scard .ctl{grid-column:1/-1;display:grid;grid-template-columns:2fr 1fr auto;gap:8px;align-items:center;font-size:12px;color:var(--muted);padding-top:4px;border-top:1px dashed var(--line)}
+.scard .ctl label{display:flex;align-items:center;gap:6px}
+.scard input[type=range]{flex:1;accent-color:var(--c);min-width:60px}
+.scard select{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:2px 4px;font-size:12px}
+.shk{width:100%;border-collapse:collapse;margin-top:6px}
+.shk th,.shk td{padding:5px 5px;border-top:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;font-family:var(--num);font-size:14px;vertical-align:middle;white-space:nowrap}
+.shk td:first-child{white-space:normal}
+.shk td.rng{color:var(--muted);font-size:12.5px}
+.shk .seg{margin:8px 0}
+.shk th{font-family:var(--sans);font-size:11.5px;color:var(--faint);font-weight:500;border-top:0}
+.shk td:first-child,.shk th:first-child{text-align:left;font-family:var(--sans);font-size:13px}
+.shk td:first-child small{display:block;color:var(--faint);font-size:11.5px;font-family:var(--sans)}
+.shk tr.sum td{color:var(--muted);font-weight:600;border-top:2px solid var(--line)}
+.shk tr.match td:first-child b{color:var(--s4)}
+.shk tr.focus td{background:color-mix(in srgb,var(--s3) 12%,transparent)}
+.shk tr[data-cm]{cursor:pointer} .shk tr[data-cm]:hover td{background:color-mix(in srgb,var(--ink) 5%,transparent)}
+.shk .bh{min-width:96px}
+.hbar{min-width:90px}
+.hbar{position:relative;height:10px;background:color-mix(in srgb,var(--line) 60%,transparent);border-radius:3px}
+.hbar i{position:absolute;top:0;height:10px;border-radius:3px;background:color-mix(in srgb,var(--c) 55%,transparent)}
+.hbar b{position:absolute;top:-3px;width:2px;height:16px;background:var(--ink);margin-left:-1px}
+.hbar s{position:absolute;top:-2px;width:1px;height:14px;background:var(--faint);text-decoration:none;opacity:.7}
+.scdet{padding:8px 0;border-top:1px dashed var(--line)} .scdet:first-of-type{border-top:0}
+.scdet .kv{display:grid;grid-template-columns:72px 1fr;gap:6px;font-size:13px;margin-top:4px} .scdet .kv>span:first-child{color:var(--faint);font-size:12px}
+.scdet code{font-family:var(--mono);font-size:11px;background:var(--panel2);padding:1px 4px;border-radius:4px}
+.tag{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;background:var(--panel2);color:var(--muted);font-family:var(--mono);letter-spacing:.04em}
+.tag.hot{background:color-mix(in srgb,var(--s5) 18%,transparent);color:var(--s5)}
+.calib{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0 2px;text-align:center;font-size:12px;color:var(--muted)}
+.calib .col{height:64px;position:relative;background:color-mix(in srgb,var(--line) 50%,transparent);border-radius:4px;margin-bottom:4px}
+.calib .col i{position:absolute;bottom:0;left:14%;width:32%;background:var(--muted);border-radius:3px 3px 0 0}
+.calib .col b{position:absolute;bottom:0;right:14%;width:32%;background:var(--s2);border-radius:3px 3px 0 0}
+.ledger li{display:grid;gap:4px}
+.ledger .jh{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.ledger .p{font-family:var(--num);font-size:16px;font-weight:600}
+.jbtns{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.jbtn{border:1px solid var(--line);background:transparent;border-radius:6px;padding:3px 9px;font-size:12px;color:var(--muted);cursor:pointer}
+.jbtn[aria-pressed="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.jbtns small{color:var(--faint);font-size:12px}
+a.btn{text-decoration:none;display:inline-block}
+
 .btn{border:0;background:var(--ink);color:var(--panel);border-radius:8px;padding:10px 16px;font-weight:500;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .btn:disabled{opacity:.5;cursor:default}
@@ -499,6 +547,8 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <button class="tab" role="tab" aria-selected="false" data-pane="p-kr">한국</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt">시장</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-src">수집원</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-scn">시나리오</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-bt">백테스트</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ai">분석관</button>
     </nav>
     <div class="panes">
@@ -526,6 +576,8 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
       <section class="pane" id="p-kr" role="tabpanel" hidden></section>
       <section class="pane" id="p-mkt" role="tabpanel" hidden></section>
       <section class="pane" id="p-src" role="tabpanel" hidden></section>
+      <section class="pane" id="p-scn" role="tabpanel" hidden></section>
+      <section class="pane" id="p-bt" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
         <p class="note" id="aiNote">상황판에 담긴 데이터(브리핑·핵심판단·징후·시나리오·해협·경제·강대국·사건·시장)만 근거로 답합니다. 직접 검색은 하지 않아요.</p>
         <div class="ask" id="askBox">
@@ -1809,6 +1861,10 @@ function compact(){
     트립와이어: TRIP_ ? TRIP_.fired : [], RFI: RFI_.map(i => i.title),
     상품: CMR.map(c => { const q = cmQuote(c); const tr = cmTrans(c); return {상품:c.n, 거래소:c.ex, 시세:q ? q.v + " " + c.unit + " (" + (q.d || "") + ", " + (q.chg || "") + ")" : null, 동인:c.drivers, 한국:c.kr, 전파:tr.map(t => t.th + " " + t.dir + t.w + " " + t.m), 사건7일:cmEvents(c, 7).length}; }),
     시장조사: CMI ? ["energy","ags","macro"].map(k => CMI[k] ? {분야:k, 판단:CMI[k].judgments, 지표:(CMI[k].groups||[]).map(g => ({그룹:g.title, 동인:g.drivers, 리스크:g.risks, 지표:(g.metrics||[]).map(m => [m.l, m.v, m.d, m.chg, m.n].filter(Boolean).join(" | "))})), 포지션:(CMI[k].positioning||[]).map(p => p.l + " " + p.v + " " + (p.d||"") + " " + (p.chg||"")), 기간구조:(CMI[k].curve||[]).map(x => x.l + " " + x.v + " " + (x.n||""))} : null).filter(Boolean) : null,
+    시나리오: scLast ? {선택: scSelected().map(t => t.n + " " + scState.p[t.id] + "% ×" + scState.k[t.id]), 지평일: scLast.H, 기대변동: scLast.rows.slice(0, 14).map(r => (CM_BY[r.a] || {n:r.a}).n + " " + fmtPct(r.e, r.bp) + " [P5 " + fmtPct(r.p5, r.bp) + " / P95 " + fmtPct(r.p95, r.bp) + "]")} : null,
+    과거사례: AN_.analogs.slice(0, 24).map(a => a.n + " (" + a.date + ") 브렌트20일 " + fmtPct(a.moves && a.moves.brent ? a.moves.brent.d20 : null) + " 밀20일 " + fmtPct(a.moves && a.moves.wheat ? a.moves.wheat.d20 : null) + " VIX20일 " + fmtPct(a.moves && a.moves.vix ? a.moves.vix.d20 : null)),
+    판단장부: (() => { const st = judgStats(judgItems()); return {건수: st.n, 판정: st.resolved, Brier: st.brier, 기한경과: st.overdue}; })(),
+    백테스트: BT_ ? {사건연구: BT_.events && BT_.events.summary, 트립와이어: (BT_.tripwires || []).map(t => t.title + " 발동 " + t.episodes + "회, 브렌트60일 중앙값 " + fmtPct(t.median_brent_60))} : null,
     일정: allCalendar().slice(0, 40).map(c => c.d + " [" + c.cat + "] " + c.x),
     항로: DATA.lanes.map(l => l.name + ": " + l.label),
     군사태세: IW.posture.units.map(u => u.n + " " + u.st + " (" + u.asof + ", " + u.g + ") " + u.x),
@@ -1841,8 +1897,10 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
   if (!sample) { $("#askBox").hidden = true; $("#aiNote").textContent = "분석관은 Claude 안에서 이 페이지를 열 때만 쓸 수 있어요."; }
 })();
 
+/*__ANALYST__*/
+
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); setStatus("snapshot");
+renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

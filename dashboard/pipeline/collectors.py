@@ -214,6 +214,40 @@ def markets(src: dict, cfg: dict) -> list[dict]:
     return out
 
 
+def parse_yf_series(payload: dict, sym: str, label: str, sid: str) -> dict | None:
+    """Daily close series (for backtests). Keeps dates as YYYY-MM-DD and closes rounded to 4 decimals."""
+    try:
+        res = payload["chart"]["result"][0]
+        ts = res["timestamp"]
+        closes = res["indicators"]["quote"][0]["close"]
+        d, c = [], []
+        for t, v in zip(ts, closes):
+            if v is None:
+                continue
+            d.append(datetime.fromtimestamp(t, tz=UTC).strftime("%Y-%m-%d")); c.append(round(float(v), 4))
+        if len(c) < 5:
+            return None
+        return {"sid": sid, "title": label, "summary": "", "url": f"https://finance.yahoo.com/quote/{quote_plus(sym)}", "published": d[-1] + "T00:00:00Z",
+                "lang": "en", "kind": "series", "extra": {"sym": sym, "label": label, "dates": d, "closes": c, "domain": "finance.yahoo.com"}}
+    except Exception as e:  # noqa: BLE001
+        log.warning("yf series parse failed %s: %s", sym, e)
+        return None
+
+
+def series(src: dict, cfg: dict) -> list[dict]:
+    """kind: series — multi-year daily closes for the backtest engine (dashboard/data/series.json)."""
+    out = []
+    for sym, label in src.get("tickers", {}).items():
+        try:
+            payload = fetch.get_json(YF.format(sym=quote_plus(sym)), {"range": src.get("range", "2y"), "interval": "1d"}, timeout=cfg.get("timeout", 25))
+            it = parse_yf_series(payload, sym, label, src["id"])
+            if it:
+                out.append(it)
+        except Exception as e:  # noqa: BLE001
+            log.warning("yf series fetch failed %s: %s", sym, e)
+    return out
+
+
 # ── Wikipedia Current events (port of the in-page parser) ──────────────────
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -380,6 +414,7 @@ def parse_fbx(html_text: str, sid: str) -> list[dict]:
 
 HTML_PARSERS.update({"noaa_enso": parse_noaa_enso, "fbx": parse_fbx})
 COLLECTORS["cot"] = cot
+COLLECTORS["series"] = series
 
 
 COLLECTORS_BASE = {"rss": rss, "gnews": gnews, "gdelt": gdelt, "reliefweb": reliefweb, "portwatch": portwatch, "markets": markets, "wiki": wiki, "html": html_page}

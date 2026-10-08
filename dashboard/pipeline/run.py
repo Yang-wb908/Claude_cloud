@@ -3,6 +3,7 @@
     python dashboard/pipeline/run.py all            # collect -> enrich -> assemble -> tripwires -> build
     python dashboard/pipeline/run.py collect --offline   # replay from cache
     python dashboard/pipeline/run.py report         # write reports/SITREP-<date>.md
+    python dashboard/pipeline/run.py series && python dashboard/pipeline/run.py backtest   # weekly backtest (data/series.json, data/backtest.json)
 
 Environment: ANTHROPIC_API_KEY (optional, enables Korean summaries), PIPELINE_MODEL (default claude-opus-5-5),
 PIPELINE_NO_CLAUDE=1 to force rules-only enrichment.
@@ -26,7 +27,7 @@ import yaml
 HERE = Path(__file__).resolve().parent
 DASH = HERE.parent
 sys.path.insert(0, str(DASH))
-from pipeline import assemble, collectors, enrich, fetch, report, tripwires  # noqa: E402
+from pipeline import assemble, backtest, collectors, enrich, fetch, report, tripwires  # noqa: E402
 
 log = logging.getLogger("pipeline")
 RAW = HERE / "cache" / "raw.json"
@@ -44,7 +45,8 @@ def cmd_collect(args) -> None:
     fetch.UA = os.environ.get("PIPELINE_UA", fetch.UA)
     defaults, srcs = load_sources()
     if args.only:
-        srcs = [s for s in srcs if s["id"] in args.only.split(",")]
+        cfg_all = yaml.safe_load((HERE / "sources.yaml").read_text())["sources"]
+        srcs = [s for s in cfg_all if s["id"] in args.only.split(",")]
     items, status = [], []
 
     def one(src):
@@ -107,20 +109,39 @@ def cmd_report(args) -> None:
     log.info("report written: %s", p)
 
 
+def cmd_series(args) -> None:
+    """Fetch the multi-year daily closes (sources.yaml id=series) straight into dashboard/data/series.json."""
+    fetch.OFFLINE = args.offline
+    cfg = yaml.safe_load((HERE / "sources.yaml").read_text())
+    src = next(s for s in cfg["sources"] if s["id"] == "series")
+    items = collectors.collect(src, cfg.get("defaults", {}))
+    series = {it["extra"]["sym"]: {"l": it["extra"]["label"], "d": it["extra"]["dates"], "c": it["extra"]["closes"]} for it in items}
+    (DASH / "data").mkdir(exist_ok=True)
+    (DASH / "data" / "series.json").write_text(json.dumps({"generated": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), "series": series}, ensure_ascii=False))
+    log.info("series: %d symbols (%s)", len(series), ", ".join(sorted(series)))
+
+
+def cmd_backtest(args) -> None:
+    bt = backtest.run(DASH)
+    log.info("backtest: series %d, event rows %d, tripwires %d, ledger brier %s", len(bt["series"]), bt["events"]["n"], len(bt["tripwires"]), bt["ledger"]["brier"])
+    (DASH.parent / "reports").mkdir(exist_ok=True)
+    (DASH.parent / "reports" / "BACKTEST-latest.md").write_text(backtest.markdown(bt))
+
+
 def cmd_build(args) -> None:
     subprocess.run([sys.executable, str(DASH / "build.py")], check=True)
 
 
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description="세계 상황판 수집 파이프라인")
-    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "report", "build", "all"])
+    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "backtest", "report", "build", "all"])
     ap.add_argument("--offline", action="store_true", help="네트워크 없이 캐시만 사용")
     ap.add_argument("--only", help="수집원 id 목록(쉼표)")
     ap.add_argument("--no-claude", action="store_true", help="규칙 기반 분류만 사용")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
-    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "report": cmd_report, "build": cmd_build}
+    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "backtest": cmd_backtest, "report": cmd_report, "build": cmd_build}
     if args.cmd == "all":
         for name in ["collect", "enrich", "assemble", "tripwires", "report", "build"]:
             steps[name](args)

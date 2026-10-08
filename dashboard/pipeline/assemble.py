@@ -109,7 +109,12 @@ def assemble(items: list[dict], status: list[dict], now: datetime | None = None,
     }
     changes = diff_against_history(auto, merged, dash)
     auto["changes"] = changes
+    series = {it["extra"]["sym"]: {"l": it["extra"]["label"], "d": it["extra"]["dates"], "c": it["extra"]["closes"]} for it in items if it.get("kind") == "series"}
     if write:
+        if series:
+            (dash / "data").mkdir(exist_ok=True)
+            (dash / "data" / "series.json").write_text(json.dumps({"generated": snap["auto_generated"], "series": series}, ensure_ascii=False))
+        write_badges(dash, metrics, snap)
         snap_path.write_text(json.dumps(snap, ensure_ascii=False))
         (dash / "intel.auto.json").write_text(json.dumps(auto, ensure_ascii=False, indent=1))
         (dash / "data").mkdir(exist_ok=True); (dash / "data" / "history").mkdir(exist_ok=True)
@@ -144,3 +149,20 @@ def diff_against_history(auto: dict, merged: list[dict], dash: Path) -> dict:
         if p and cur and p.get("n_total") is not None and cur.get("n_total") is not None and cur["d"] != p.get("d"):
             pw.append({"choke": k, "from": p["n_total"], "to": cur["n_total"], "d": cur["d"]})
     return {"since": prev.get("generated"), "new_events": [e["id"] for e in new_ev][:80], "new_count": len(new_ev), "markets": mk, "portwatch": pw}
+
+
+def write_badges(dash: Path, metrics: dict, snap: dict) -> None:
+    """shields.io endpoint JSON (README badges read these from GitHub Pages)."""
+    out = dash / "data" / "badges"
+    out.mkdir(parents=True, exist_ok=True)
+    sym = {m["sym"]: m for m in metrics.get("markets", [])}
+    def badge(name, label, msg, color):
+        (out / f"{name}.json").write_text(json.dumps({"schemaVersion": 1, "label": label, "message": str(msg), "color": color}, ensure_ascii=False))
+    for name, s, label, unit, hi, lo in [("brent", "BZ=F", "Brent", "$", 100, 85), ("ttf", "TTF=F", "TTF", "€", 60, 35), ("wheat", "ZW=F", "Wheat", "¢", 700, 550), ("vix", "^VIX", "VIX", "", 25, 15), ("krw", "KRW=X", "USD/KRW", "₩", 1400, 1300)]:
+        m = sym.get(s)
+        if m and m.get("v") is not None:
+            v = m["v"]
+            badge(name, label, f"{unit}{v:,.2f} {m.get('chg','')}".strip(), "red" if v >= hi else "green" if v <= lo else "yellow")
+    ev = snap.get("events", [])
+    badge("events", "events 7d", sum(1 for e in ev if e.get("d", "") >= (datetime.now(UTC) - timedelta(days=7)).strftime("%Y-%m-%d")), "blue")
+    badge("updated", "updated", snap.get("auto_generated", "")[:16].replace("T", " ") + "Z", "informational")

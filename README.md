@@ -138,5 +138,25 @@ OSINT 기반 지정학 상황판입니다. 게시본: https://claude.ai/artifact
 | 커밋 이력 `dashboard/data/history/` | 실행별 요약을 남겨 직전 실행 대비 변화(새 사건, 시세·통항 변동)를 계산 |
 | PR 검증 `validate.yml` + CODEOWNERS | 분석관 판단 파일(`iw.js`, `theaters.js`, `intel.js`)은 사람이 검토. 데이터 참조·문법·수집원 설정 자동 검사 |
 | Dependabot | 파이프라인 의존성과 Actions 버전 주간 갱신 |
+| Issues `scenario` (5차) | 시나리오 탭의 "Issue로 제출" → `intake.yml`이 몬테카를로 충격표를 댓글로 답변. 시나리오 토론 스레드가 됨 |
+| Issues `judgment` (5차) | 판단 장부 판정 제출 → `data/judgments.json`에 기록·커밋, Brier 점수와 보정표를 댓글로. 분석관 적중률의 공식 기록 |
+| Issues `event` (5차) | 현장 보고 양식 → 사건 목록에 등급·좌표와 함께 추가·커밋 (HUMINT/OSINT 수동 입력 경로) |
+| Actions `backtest.yml` (주간) | 2년 일봉 시계열 수집 → 사건 연구·트립와이어 발동 이력·장부 보정 계산 → `data/backtest.json` 커밋, 고정 Issue 스레드에 주간 결과 댓글 |
+| `snapshots/` 스크린샷 아카이브 | 수집마다 상황판 화면을 Playwright로 찍어 `latest.png`와 일자별 PNG(30일)를 보관. SITREP Release에 첨부 |
+| Pages `data/badges/*.json` | shields.io 엔드포인트 배지(브렌트·TTF·밀·VIX·원/달러·7일 사건 수·갱신 시각) |
+| Pages에서 GitHub API | 상황판 수집원 탭이 열린 Issue와 최근 커밋을 실시간 표시 |
+| `labels.yml` | 라벨 정의 파일을 고치면 워크플로가 저장소 라벨을 동기화 |
+
+상황판 상태 배지(Pages 배포 후 동작):
+
+![Brent](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fbrent.json)
+![TTF](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fttf.json)
+![Wheat](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fwheat.json)
+![VIX](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fvix.json)
+![KRW](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fkrw.json)
+![events](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fevents.json)
+![updated](https://img.shields.io/endpoint?url=https%3A%2F%2Fyang-wb908.github.io%2FClaude_cloud%2Fdata%2Fbadges%2Fupdated.json)
+
+최신 화면: `https://yang-wb908.github.io/Claude_cloud/snapshots/latest.png`
 
 처음 켤 때: 저장소 Settings → Pages에서 Source를 **GitHub Actions**로 두고, Secrets에 `ANTHROPIC_API_KEY`(선택)를 넣은 뒤 Actions 탭에서 `상황판 수집`을 한 번 수동 실행합니다.

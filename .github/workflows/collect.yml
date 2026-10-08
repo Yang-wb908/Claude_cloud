@@ -58,6 +58,20 @@ jobs:
           gh issue list --label source-proposal --state open --json number,title,url,createdAt --limit 50 > dashboard/data/source_proposals.json || echo "[]" > dashboard/data/source_proposals.json
       - name: index.html 빌드
         run: python dashboard/build.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: 상황판 스크린샷 아카이브 (snapshots/latest.png, 일 1회 날짜본)
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          npx --yes playwright@1.48.2 install --with-deps chromium >/dev/null 2>&1
+          mkdir -p dashboard/snapshots
+          npx --yes playwright@1.48.2 screenshot --browser chromium --viewport-size=1600,1000 --color-scheme=dark --wait-for-timeout=6000 \
+            "file://$PWD/dashboard/index.html" dashboard/snapshots/latest.png
+          D=$(date -u +%Y-%m-%d)
+          [ -f "dashboard/snapshots/$D.png" ] || cp dashboard/snapshots/latest.png "dashboard/snapshots/$D.png"
+          ls dashboard/snapshots | tail -n +31 | sed 's#^#dashboard/snapshots/#' | grep -v latest | xargs -r rm -f   # 최근 30일만 보관
       - name: 트립와이어 출력
         id: trip
         run: |
@@ -70,7 +84,7 @@ jobs:
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data reports
+          git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data dashboard/snapshots reports
           if git diff --cached --quiet; then echo "변경 없음"; else
             git commit -m "data: 자동 수집 $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
             git push

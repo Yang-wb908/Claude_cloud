@@ -1,0 +1,24 @@
+name: 라벨 동기화
+
+on:
+  push:
+    paths: [".github/labels.yml"]
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: gh label create --force
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'EOF' | sh
+          import yaml
+          for l in yaml.safe_load(open(".github/labels.yml")):
+              print(f'gh label create "{l["name"]}" --color {l["color"]} --description "{l.get("description","")}" --force')
+          EOF

@@ -1,0 +1,28 @@
+name: 판단 판정 제출
+description: 판단 장부의 항목을 적중/빗나감으로 판정합니다. 봇이 장부에 기록하고 Brier 점수를 갱신합니다.
+title: "[판정] "
+labels: ["judgment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        상황판 **백테스트 탭 → 판단 장부**에서 판정한 뒤 "Issue로 제출"을 누르면 JSON이 자동으로 채워집니다.
+        직접 적을 때는 아래 두 번째 칸에 한 줄에 하나씩 `판단id 적중|빗나감|미정 근거` 형식으로 적으세요. id는 `dashboard/data/judgments.json` 에 있습니다.
+  - type: textarea
+    id: items
+    attributes:
+      label: 판정 목록 (JSON)
+      description: 상황판이 생성한 JSON. 수동 입력 시 비워 두세요.
+      render: json
+  - type: textarea
+    id: lines
+    attributes:
+      label: 판정 (한 줄에 하나)
+      placeholder: |
+        bluf-1 적중 10/20 Kpler 통항 12척으로 정상화 실패
+        cm-ags-3 빗나감 MPOB 재고 320만t으로 예상 하회
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 근거 링크
+      description: 판정 근거가 된 보도·데이터 URL

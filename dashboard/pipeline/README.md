@@ -31,6 +31,11 @@ python dashboard/pipeline/run.py collect --offline    # 캐시 재생
 | `dashboard/data/tripwires.json` | 발동된 트립와이어. 워크플로가 Issue(`tripwire` 라벨)로 만듭니다 |
 | `dashboard/data/rfi.json` | 열린 `rfi` Issue. 브리프 탭 '열린 정보 요청'에 표시 |
 | `reports/SITREP-<date>.md` | 일일 상황보고. Release `sitrep-<date>`로 보존 |
+| `dashboard/data/series.json` | 2년 일봉 종가(26개 심볼). `run.py series`. 주간 백테스트 입력 |
+| `dashboard/data/backtest.json` | 사건 연구·트립와이어 발동 이력·판단 장부 통계. `run.py backtest` → `reports/BACKTEST-latest.md` |
+| `dashboard/data/judgments.json` | 판단 장부. `intake.py judgment`(Issue 양식)로 판정 기록 |
+| `dashboard/data/badges/*.json` | shields.io 엔드포인트 배지 (브렌트·TTF·밀·VIX·원/달러·사건 수·갱신 시각) |
+| `dashboard/snapshots/*.png` | 워크플로가 찍는 상황판 스크린샷 (latest + 일자별 30일) |
 
 ## 보강 규칙
 
@@ -45,6 +50,28 @@ python dashboard/pipeline/run.py collect --offline    # 캐시 재생
 ## 트립와이어
 
 `tripwires.yaml`. `metric` 경로(`portwatch.hormuz.latest.n_total`, `markets.BZ=F`, `pla.latest.aircraft`) 또는 `kind: event_count`(전역·유형·기간 필터)를 임계치와 비교합니다. 같은 제목의 열린 Issue가 있으면 댓글로 재확인만 남깁니다.
+
+## Issue 접수 (`intake.py`)
+
+`intake.yml`이 라벨(`scenario`·`judgment`·`event`)로 종류를 가려 실행합니다. 양식은 `.github/ISSUE_TEMPLATE/`.
+
+```bash
+ISSUE_BODY="$(printf '### 시나리오 설정\n\nhormuz_war:15:1.5,redsea_houthi:30:1\n')" python dashboard/pipeline/intake.py scenario
+ISSUE_BODY="$(printf '### 판정 (한 줄에 하나)\n\nbluf-1 적중 통항 12척\n')" python dashboard/pipeline/intake.py judgment
+```
+
+- `scenario`: `scenario.js` 템플릿으로 몬테카를로(5,000회)를 돌려 충격표를 댓글로 답합니다. 데이터는 바꾸지 않습니다.
+- `judgment`: `data/judgments.json`에 결과·근거·판정자를 기록하고 Brier·보정표를 댓글로 단 뒤 Issue를 닫습니다.
+- `event`: `data_snapshot.json` 사건 목록에 추가(`manual: true`, 등급은 선택값 또는 URL 자동 산정, 지명사전으로 좌표). 다음 수집 배포에 반영됩니다.
+
+## 백테스트 (`backtest.py`)
+
+```bash
+python dashboard/pipeline/run.py series      # Yahoo 2년 일봉 → data/series.json
+python dashboard/pipeline/run.py backtest    # data/backtest.json + reports/BACKTEST-latest.md
+```
+
+사건 연구는 경보 4 이상 전역의 S/M/A 유형 사건을 대상으로 사건일 종가 대비 +1/+5/+20/+60 거래일 변동률(브렌트·밀·금·달러·VIX·코스피·원/달러·S&P)을 냅니다. 트립와이어는 `markets.*` 지표에 대해 임계치 최초 돌파일을 찾아 자기 자신·브렌트·S&P의 60일 수익률 중앙값을 냅니다.
 
 ## 테스트
 
