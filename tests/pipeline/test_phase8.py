@@ -99,3 +99,33 @@ def test_rss_falls_back_to_google_news_site_search(monkeypatch):
     import pytest
     with pytest.raises(RuntimeError):
         collectors.rss(strict, {})
+
+
+SOCRATA_COT = """id,market_and_exchange_names,report_date_as_yyyy_mm_dd,open_interest_all,m_money_positions_long_all,m_money_positions_short_all,change_in_m_money_long_all,change_in_m_money_short_all
+1,"COPPER - COMMODITY EXCHANGE INC.",2026-10-06T00:00:00.000,300000,120000,40000,5000,-2000
+2,"COPPER - COMMODITY EXCHANGE INC.",2026-09-29T00:00:00.000,290000,110000,45000,1000,1000
+3,"GOLD - COMMODITY EXCHANGE INC.",2026-10-06T00:00:00.000,500000,250000,50000,0,0
+"""
+
+
+def test_cot_falls_back_to_socrata_api(monkeypatch):
+    calls = []
+
+    def fake_get(url, params=None, timeout=25, retries=2, cache=True):
+        calls.append((url, params))
+        if "cftc.gov/dea" in url:
+            raise RuntimeError("HTTPError: 403 Client Error")
+        return SOCRATA_COT.encode()
+    monkeypatch.setattr(fetch, "get", fake_get)
+    src = {"id": "cftc_cot", "kind": "cot", "url": "https://www.cftc.gov/dea/newcot/f_disagg.txt", "alt_url": "https://publicreporting.cftc.gov/resource/72hh-3qpy.csv", "markets": {"COPPER": "구리", "GOLD": "금"}}
+    items = collectors.collect(src, {})
+    by = {i["extra"]["key"]: i["extra"] for i in items}
+    assert by["COPPER"]["date"] == "2026-10-06" and by["COPPER"]["mm_net"] == 80000 and by["COPPER"]["net_chg"] == 7000 and by["GOLD"]["oi"] == 500000
+    assert "$where" in calls[1][1] and "대체 2건" in src["_note"]
+
+
+def test_generic_fallback_domain(monkeypatch):
+    monkeypatch.setattr(fetch, "get", lambda url, params=None, timeout=25, retries=2, cache=True: FEED)
+    monkeypatch.setitem(collectors.COLLECTORS, "boom", lambda src, cfg: (_ for _ in ()).throw(RuntimeError("403")))
+    src = {"id": "reliefweb", "kind": "boom", "fallback_domain": "reliefweb.int"}
+    assert len(collectors.collect(src, {})) == 1 and "site:reliefweb.int" in src["_note"]

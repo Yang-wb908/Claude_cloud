@@ -450,8 +450,21 @@ def parse_cot(text: str, markets: dict, sid: str) -> list[dict]:
 
 
 def cot(src: dict, cfg: dict) -> list[dict]:
-    body = fetch.get(src["url"], timeout=max(40, cfg.get("timeout", 25))).decode("utf-8", "replace")
-    return parse_cot(body, src.get("markets", {}), src["id"])
+    """cftc.gov 의 주간 텍스트 파일이 막히면(403) 같은 자료의 공개 데이터 API(Socrata, CSV)로 최근 3주를 받는다."""
+    src.pop("_note", None)
+    try:
+        body = fetch.get(src["url"], timeout=max(40, cfg.get("timeout", 25))).decode("utf-8", "replace")
+        return parse_cot(body, src.get("markets", {}), src["id"])
+    except Exception as e:  # noqa: BLE001
+        alt = src.get("alt_url")
+        if not alt:
+            raise
+        since = (datetime.now(UTC) - timedelta(days=21)).strftime("%Y-%m-%d")
+        params = {"$where": f"report_date_as_yyyy_mm_dd >= '{since}'", "$order": "report_date_as_yyyy_mm_dd DESC", "$limit": 5000}
+        body = fetch.get(alt, params, timeout=max(40, cfg.get("timeout", 25)), cache=False).decode("utf-8", "replace")
+        items = parse_cot(body, src.get("markets", {}), src["id"])
+        src["_note"] = f"{type(e).__name__}: {str(e)[:60]} → CFTC 공개 데이터 API 대체 {len(items)}건"
+        return items
 
 
 def parse_noaa_enso(html_text: str, sid: str) -> list[dict]:
@@ -490,7 +503,15 @@ def collect(src: dict, cfg: dict) -> list[dict]:
     fn = COLLECTORS.get(src["kind"])
     if not fn:
         raise RuntimeError(f"no collector for kind={src['kind']}")
-    items = fn(src, cfg)
+    try:
+        items = fn(src, cfg)
+    except Exception as e:  # noqa: BLE001
+        # rss 외의 수집원도 fallback_domain 이 있으면 같은 매체의 Google News site: 검색으로 대체
+        fd = src.get("fallback_domain")
+        if not fd:
+            raise
+        items = gnews({"id": src["id"], "q": f"site:{fd}", "lang": src.get("lang", "en")}, cfg)
+        src["_note"] = f"{type(e).__name__}: {str(e)[:60]} → Google News site:{fd} 대체 {len(items)}건"
     for it in items:
         it.setdefault("extra", {})
         it["extra"].setdefault("domain", domain(it.get("url", "")))
