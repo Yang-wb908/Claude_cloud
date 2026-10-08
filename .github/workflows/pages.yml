@@ -1,0 +1,54 @@
+name: GitHub Pages 배포 (수집·동기화 후 상황판 빌드)
+
+# 수집(6시간)·일일 동기화·부트스트랩이 끝날 때마다, 그리고 대시보드 소스가 푸시될 때마다 index.html 을 빌드해 Pages 에 올린다.
+# 첫 실행에서 Pages 를 자동으로 켠다(enablement). 주소: https://<owner>.github.io/<repo>/
+on:
+  workflow_run:
+    workflows: ["상황판 수집 (6시간 주기)", "일일 동기화 (시세·예측 스냅숏·적중 채점)", "부트스트랩 실행 (작업 브랜치에서 전체 파이프라인 1회)"]
+    types: [completed]
+  push:
+    branches: ["claude/compassionate-rubin-jmaq9e", "main"]
+    paths: ["dashboard/*.js", "dashboard/app.html", "dashboard/build.py", "dashboard/*.json", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: 상황판 빌드
+        run: |
+          python dashboard/build.py
+          mkdir -p site/products
+          cp dashboard/index.html site/index.html
+          [ -f dashboard/brief.html ] && cp dashboard/brief.html site/brief.html || true
+          cp products/*.md site/products/ 2>/dev/null || true
+          cp products/index.json site/products/ 2>/dev/null || true
+          echo '<meta http-equiv="refresh" content="0; url=../index.html">' > site/products/index.html
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

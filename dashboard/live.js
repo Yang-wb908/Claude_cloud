@@ -2,7 +2,18 @@
    claude.ai 아티팩트는 외부 fetch가 막혀 있지만, 보는 사람의 GitHub 커넥터로 저장소 파일을 읽을 수 있다.
    data/*.json 을 읽어 시세·사건·트립와이어·RFI·채점·장부·하우스 뷰를 갱신하고 관련 패널을 다시 그린다. */
 const SYNC_REFS = ["refs/heads/claude/compassionate-rubin-jmaq9e", "refs/heads/main", "refs/heads/claude/vibrant-euler-j1ibn5"];
+/* 자동 브리핑(data/theater_briefs.json)을 theaters.js 위에 덮어쓴다. 원문은 _h0 에 보관. */
+function applyBriefs(B){
+  if (!B || !B.items) return 0; let n = 0;
+  DATA.theaters.forEach(t => { const b = B.items[t.id]; if (!b || !b.headline) return;
+    if (!t._h0) t._h0 = {headline: t.headline, brief: t.brief, metrics: t.metrics, sources: t.sources, asof: t.asof};
+    t.headline = b.headline; if (b.brief && b.brief.length) t.brief = b.brief; if (b.metrics && b.metrics.length) t.metrics = b.metrics;
+    if (b.sources && b.sources.length) t.sources = b.sources.map(s => [s.name, s.url]); t.asof = b.asof || t.asof; t.auto_brief = b.d || true;
+    if (IW.theaters[t.id] && b.trend) IW.theaters[t.id].trend = b.trend; n++; });
+  return n;
+}
 const SYNC_FILES = {
+  briefs: "dashboard/data/theater_briefs.json",
   auto: "dashboard/intel.auto.json", latest: "dashboard/data/latest.json", trip: "dashboard/data/tripwires.json", rfi: "dashboard/data/rfi.json",
   score: "dashboard/data/scorecard.json", judg: "dashboard/data/judgments.json", house: "dashboard/data/house_view.json", risk: "dashboard/data/risk.json", pirs: "dashboard/data/pirs.json", watchcon: "dashboard/data/watchcon.json", watchlog: "dashboard/data/watch_log.json", products: "dashboard/data/products_index.json", coverage: "dashboard/data/coverage.json", hauto: "dashboard/data/house_view_auto.json", calib: "dashboard/data/shock_calib.json"
 };
@@ -64,6 +75,7 @@ function applyLive(got){
   if (got.coverage && got.coverage.clusters) COV_ = got.coverage;
   if (got.hauto && got.hauto.scenarios) HAUTO_ = got.hauto;
   if (got.calib && got.calib.scenarios) CALIB_ = got.calib;
+  if (got.briefs && got.briefs.items) { if (applyBriefs(got.briefs)) { try { renderTheaters(); } catch(e) { console.warn("briefs", e); } } }
   if (got.latest && Array.isArray(got.latest.events)) {
     const have = new Set(EVENTS.map(e => e.id)), haveS = new Set(EVENTS.map(e => e.s).filter(Boolean));
     got.latest.events.forEach((e, i) => { if (!e.d || !e.x) return; const id = e.id || "l" + i; if (have.has(id) || (e.s && haveS.has(e.s))) return; EVENTS.push({...e, id, lang: e.lang || "ko"}); have.add(id); eventsChanged = true; });

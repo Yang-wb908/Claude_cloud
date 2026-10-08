@@ -194,3 +194,19 @@ def test_collapse_duplicates_keeps_one_row_with_alt_sources():
     assert any(not e.get("auto") for e in out) and all("_c" not in e for e in out)
     merged = assemble.merge_events(out, [{"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": "다시 들어온 같은 기사", "s": "https://a.com/1", "g": "C2", "auto": True, "id": "z"}], datetime(2026, 10, 8, tzinfo=UTC))
     assert isinstance(merged, tuple) and merged[1] == 0
+
+
+def test_briefs_overlay_only_from_events(tmp_path, monkeypatch):
+    from pipeline import briefs
+    dash = tmp_path / "dashboard"; (dash / "data").mkdir(parents=True)
+    (dash / "theaters.js").write_text('<script>const THEATERS = [\n  { id:"latam", name:"남미", sev:2, headline:"옛 브리핑", asof:"10/1" },\n  { id:"europe", name:"유럽", sev:3, headline:"옛", asof:"10/1" }\n];</script>')
+    ev = [{"d": "2026-10-08", "th": "latam", "t": "E", "p": "칠레", "x": f"사건 {i}", "s": f"https://a.com/{i}", "g": "B2", "r": 3} for i in range(4)]
+    (dash / "data_snapshot.json").write_text(json.dumps({"events": ev}))
+    (dash / "data" / "theater_briefs.json").write_text(json.dumps({"items": {"europe": {"d": "2026-10-07", "asof": "10/7", "headline": "유럽 이전 자동 브리핑", "brief": ["x"], "metrics": [], "sources": [], "trend": "flat"}}}))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    monkeypatch.setattr(briefs.llm, "complete_json", lambda system, user, schema=None, max_tokens=8000, effort="low", model=None: {"skip": False, "headline": "칠레 파업 확대", "brief": ["10/8 사건 0", "10/8 사건 1"], "metrics": [{"v": "95%", "l": "찬성", "n": "10/7"}], "sources": [{"name": "A", "url": "https://a.com/1"}, {"name": "가짜", "url": "https://nope.com/x"}], "trend": "up"})
+    doc = briefs.run(dash, now=datetime(2026, 10, 8, 1, tzinfo=UTC))
+    it = doc["items"]
+    assert it["latam"]["headline"] == "칠레 파업 확대" and it["latam"]["sources"] == [{"name": "A", "url": "https://a.com/1"}] and it["latam"]["asof"] == "10/8"
+    assert it["europe"]["headline"] == "유럽 이전 자동 브리핑"  # 사건 3건 미만 → 이전 자동 브리핑 유지
+    assert json.loads((dash / "data" / "theater_briefs.json").read_text())["items"]["latam"]["n_events"] == 4

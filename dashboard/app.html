@@ -1344,7 +1344,7 @@ function renderTheaters(){
       <h3>${esc(t.name)}${trendTag(iw.trend || "flat")}<span class="en">${esc(enName(t))}</span></h3>
       <span class="kind"><b>${t.sev}</b>${esc(KIND_LABEL[t.sev])}</span>
       <p>${esc(t.headline)}</p>
-      <span class="sub">${barsHTML(c)}<span>7일 ${n}건</span><span>징후 ${obs}/${tot} 관측</span><span>브리핑 ${esc(t.asof)}</span></span>
+      <span class="sub">${barsHTML(c)}<span>7일 ${n}건</span><span>징후 ${obs}/${tot} 관측</span><span>브리핑 ${esc(t.asof)}${t.auto_brief ? " 자동" : ""}</span></span>
     </li>`; }).join("");
 }
 $("#sgrid").addEventListener("click", e => { const b = e.target.closest(".stile"); if (b) select(b.dataset.id); });
@@ -1718,7 +1718,7 @@ function renderDossier(t){
   const obs = iw.indicators.filter(i => i.s === "obs").length;
   dossier.className = "dossier open sev" + t.sev;
   dossier.innerHTML = `
-    <div class="dhead"><div><div class="kind">경보단계 ${t.sev} · ${esc(t.kind)} ${trendTag(iw.trend)}<span>브리핑 ${esc(t.asof)}</span></div><h2 id="dTitle">${esc(t.name)} <span class="en">${esc(enName(t))}</span></h2></div>
+    <div class="dhead"><div><div class="kind">경보단계 ${t.sev} · ${esc(t.kind)} ${trendTag(iw.trend)}<span title="${t.auto_brief ? "최근 72시간 수집 사건에서 Claude가 매일 다시 쓴 브리핑. 핵심판단·징후·시나리오는 분석관 작성" : "분석관 작성 브리핑"}">브리핑 ${esc(t.asof)}${t.auto_brief ? " · 자동 생성" : ""}</span></div><h2 id="dTitle">${esc(t.name)} <span class="en">${esc(enName(t))}</span></h2></div>
       <button class="close" aria-label="닫기"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="2.4"/></svg></button></div>
     <div class="dbody">
       <p class="lead">${esc(t.headline)}</p>
@@ -1982,7 +1982,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
+applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

@@ -43,6 +43,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+          PIPELINE_BRIEF_MODEL: ${{ vars.PIPELINE_BRIEF_MODEL }}
         run: |
           set -euo pipefail
           python dashboard/pipeline/run.py collect
@@ -56,6 +57,7 @@ jobs:
           python dashboard/pipeline/run.py score
           python dashboard/pipeline/run.py backtest
           python dashboard/pipeline/run.py risk
+          python dashboard/pipeline/run.py briefs
           python dashboard/pipeline/run.py report
           python dashboard/pipeline/run.py products
           python dashboard/build.py

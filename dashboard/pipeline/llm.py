@@ -90,12 +90,12 @@ def _run_cli(prompt: str, max_turns: int = 1, allowed_tools: list[str] | None = 
     return d.get("result")
 
 
-def complete_json(system: str, user: str, schema: dict | None = None, max_tokens: int = 8000, effort: str = "low") -> dict | list | None:
+def complete_json(system: str, user: str, schema: dict | None = None, max_tokens: int = 8000, effort: str = "low", model: str | None = None) -> dict | list | None:
     m = mode()
     if m == "api":
         import anthropic
         client = anthropic.Anthropic()
-        kw = {"model": model_name(), "max_tokens": max_tokens, "betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default",
+        kw = {"model": model or model_name(), "max_tokens": max_tokens, "betas": ["server-side-fallback-2026-07-01"], "fallbacks": "default",
               "system": [{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}], "messages": [{"role": "user", "content": user}],
               "output_config": {"effort": effort, **({"format": {"type": "json_schema", "schema": schema}} if schema else {})}}
         try:
