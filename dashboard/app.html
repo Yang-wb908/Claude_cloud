@@ -1789,9 +1789,11 @@ function renderInfo(){
   } else {
     info.innerHTML = `<p><b>스냅숏 모드.</b> ${esc(IW.meta.asofKST)} KST까지 수집한 사건 ${DATA.events.length}건, 전역 브리핑 ${DATA.theaters.length}건, 핵심판단 ${IW.bluf.judgments.length}개${INTEL ? ", 해협·경제·강대국 수집 지표" : ""}입니다.</p>
       <p>${liveErr ? "실시간 연결 실패: " + esc(liveErr) + ". " : ""}claude.ai에 게시된 페이지는 보안 정책상 외부 데이터를 불러오지 못합니다. 이 HTML 파일을 개인 주소에 올리면 위키백과 Current events로 15분마다 자동 갱신됩니다.</p>
-      <button class="btn ghost" id="reload">실시간 연결 다시 시도</button>`;
+      <button class="btn ghost" id="reload">실시간 연결 다시 시도</button>
+      ${window.claude && window.claude.use ? `<p class="note">저장소 동기화: ${typeof syncState !== "undefined" && syncState.at ? "마지막 " + syncState.at.toISOString().slice(11, 16) + "Z" : "아직 안 함"} · <label><input type="checkbox" id="autoSyncChk"${typeof autoSyncOn === "function" && autoSyncOn() ? " checked" : ""}> 자동 (열 때·30분마다)</label></p>` : ""}`;
   }
   const r = $("#reload"); if (r) r.onclick = () => goLive(true);
+  const a = $("#autoSyncChk"); if (a) a.onchange = () => setAutoSync(a.checked);
 }
 statusEl.addEventListener("click", () => { const open = info.hidden; info.hidden = !open; statusEl.setAttribute("aria-expanded", open); });
 

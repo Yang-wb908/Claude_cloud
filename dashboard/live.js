@@ -47,7 +47,6 @@ async function syncRepo(manual){
   const fatal = Object.values(errs).find(e => e && SYNC_COPY[e.code]);
   if (btn) { btn.disabled = false; btn.textContent = fatal ? "동기화 실패" : "동기화 " + syncState.at.toISOString().slice(11, 16) + "Z"; btn.title = fatal ? SYNC_COPY[fatal.code] : Object.keys(got).length + "개 파일 갱신" + (Object.keys(errs).length ? " · 실패: " + Object.keys(errs).join(", ") : ""); }
   if (fatal && manual) { info.innerHTML = `<p><b>동기화 실패.</b> ${esc(SYNC_COPY[fatal.code])}</p>`; statusEl.setAttribute("aria-expanded", "true"); info.hidden = false; }
-  if (!fatal && Object.keys(got).length) { try { localStorage.setItem("sit-autosync", "1"); } catch(e) {} }
 }
 function applyLive(got){
   let eventsChanged = false;
@@ -76,10 +75,15 @@ function applyLive(got){
   try { renderBacktest(); renderScenario(); if (typeof renderRisk === "function") { renderRisk(); renderCommod(); } if (typeof renderPIR === "function") { renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); } renderBluf(); } catch(e) { console.warn("an", e); }
   if (MODE !== "live") setStatus("snapshot");
 }
+const SYNC_PERIOD_MS = 30 * 60 * 1000;   // 열려 있는 동안 30분마다
+function autoSyncOn(){ try { return localStorage.getItem("sit-autosync") !== "0"; } catch(e) { return true; } }   // 기본 켜짐, "0"이면 끔
+function setAutoSync(on){ try { localStorage.setItem("sit-autosync", on ? "1" : "0"); } catch(e) {} if (on && !syncState.busy) syncRepo(false); }
 (function initSync(){
   const btn = $("#syncBtn"); if (!btn) return;
   btn.addEventListener("click", () => syncRepo(true));
   if (!(window.claude && window.claude.use)) { btn.hidden = true; return; }
-  let auto = false; try { auto = localStorage.getItem("sit-autosync") === "1"; } catch(e) {}
-  if (auto) setTimeout(() => syncRepo(false), 1500);
+  // Claude 안에서 열면 저장소 최신 데이터를 자동으로 읽는다: 열 때 한 번, 30분마다, 탭에 돌아왔을 때(10분 경과 시)
+  if (autoSyncOn()) setTimeout(() => syncRepo(false), 1500);
+  setInterval(() => { if (autoSyncOn() && !document.hidden) syncRepo(false); }, SYNC_PERIOD_MS);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && autoSyncOn() && syncState.at && Date.now() - syncState.at.getTime() > 10 * 60 * 1000) syncRepo(false); });
 })();
