@@ -47,6 +47,18 @@ const ACH = {
         {id: "E4", d: "2026-09-28", g: "A2", x: "파나마 가툰호 9월 강우로 회복(85.7ft 전망), 단기 건조 신호 약함", src: "https://pancanal.com/en/panama-canal-announces-increase-in-draft-and-daily-transit/", v: {H1: "N", H2: "N", H3: "C"}},
         {id: "E5", d: "2026-10-07", g: "B2", x: "팜유 재고 사상최고 전망(337만t): 엘니뇨 생산 감소가 아직 수치에 미반영", src: "INTEL.cm.ags", v: {H1: "N", H2: "N", H3: "N"}}
       ]},
+    { id: "irkutsk", th: "bio", q: "이르쿠츠크 항페스트연구소 연구원은 무엇으로 죽었는가?", scn: {H1: null, H2: null, H3: null},
+      hyp: {H1: "실험실 노출에 의한 폐페스트(당국 은폐)", H2: "페스트가 아닌 폐렴(공식 발표대로)", H3: "자연 발생(부랴티아·몽골) 감염"},
+      ev: [
+        {id: "E1", d: "2026-09-25", g: "C4", x: "지역매체 류디 바이칼라: 폐페스트균 시험관 파손 보도(당국 미확인)", src: "https://www.euronews.com/2026/10/04/has-plague-returned-to-siberia-panic-in-russia-after-death-of-lab-worker", v: {H1: "CC", H2: "I", H3: "I"}},
+        {id: "E2", d: "2026-10-02", g: "B2", x: "연구소 직원 60여 명 건물 내 격리, 병원 4곳 봉쇄, 접촉자 약 200명 관찰 — 통상 폐렴 대응을 넘는 규모", src: "https://www.rferl.org/a/russia-plague-warning-siberia-irkutsk-laboratory/33870385.html", v: {H1: "C", H2: "I", H3: "C"}},
+        {id: "E3", d: "2026-10-04", g: "B3", x: "로스포트레브나드조르: '원인불명 폐렴', 업무 관련 미생물 미검출, 사고 없음", src: "https://tass.com/society/2198859", v: {H1: "I", H2: "C", H3: "N"}},
+        {id: "E4", d: "2026-10-07", g: "B3", x: "접촉자 90% 이상 관찰 완료, 코로나 2·리노바이러스 2 외 검출 없음 — 2차 감염 없음", src: "https://tass.com/society/2198859", v: {H1: "N", H2: "C", H3: "N"}},
+        {id: "E5", d: "2026-10-06", g: "A2", x: "WHO: 러시아가 '사례 없음' 통보했으나 병원체 확인 자료 미공유, 사인 미확정", src: "https://news.un.org/en/story/2026/10/1168533", v: {H1: "C", H2: "N", H3: "N"}},
+        {id: "E6", d: "2026-10-05", g: "B3", x: "부랴티아 주지사: 자연 발생 없음·출장 사실 없음 부인", src: "https://www.malone.news/p/inside-the-irkutsk-plague-institute", v: {H1: "N", H2: "N", H3: "II"}},
+        {id: "E7", d: "2026-07-25", g: "C3", x: "몽골 호브드 선페스트 확진, 몽골 17개 주 위험지역 — 자연 발생 배경 존재", src: "https://outbreaknewstoday.substack.com/p/mongolia-human-plague-confirmed-in", v: {H1: "N", H2: "N", H3: "C"}},
+        {id: "E8", d: "2026-10-04", g: "B2", x: "포포바 청장 현지 급파·크렘린 '루머 무시' — 중앙정부 개입 수준이 통상 폐렴 사례와 다름", src: "https://edition.cnn.com/2026/10/04/europe/russia-laboratory-plague-accident-intl", v: {H1: "C", H2: "I", H3: "N"}}
+      ]},
     { id: "taiwan", th: "taiwan", q: "중국은 미 항모 공백기에 대만 압박을 키우는가?", scn: {H1: null, H2: null, H3: "taiwan_quarantine"},
       hyp: {H1: "해빙 속 회색지대 유지", H2: "선거 국면 압박 재개(대규모 훈련·ADIZ 급증)", H3: "격리·봉쇄 시도"},
       ev: [

@@ -101,6 +101,15 @@
            "카타르 중재 직접 협상은 미타결이고, 벨기에와 르완다는 콩고 분쟁으로 끊었던 관계를 복원했습니다."],
     sources:[["Reuters 케냐 에볼라","https://www.reuters.com/business/healthcare-pharmaceuticals/kenya-confirms-first-ebola-case-imported-congo-pat"],["Reuters 벨기에–르완다","https://www.reuters.com/world/africa/belgium-rwanda-resume-diplomatic-relations-after-drc-conflict-dispute-202"]] },
 
+  { id:"bio", name:"시베리아 페스트·보건안보", sev:3, kind:"긴장 고조", asof:"10/7", at:[104.3,52.3],
+    view:[[85,40],[125,62]], countries:["496"], related:["643"],
+    headline:"이르쿠츠크 항페스트연구소 연구원이 폐렴으로 숨진 뒤 약 200명이 격리됐습니다. 러시아는 '원인불명 폐렴'이라 하지만 WHO·미국은 사인 확인을 요구합니다.",
+    metrics:[{v:"~200명",l:"격리·의료관찰 접촉자 (10/5)",n:"병원 4곳 봉쇄, 연구소 직원 60여 명 건물 내 격리"},{v:"10/2",l:"연구원 사망 (셸레호프 병원)",n:"9/25 시험관 파손 보도, 9/29 중증 폐렴 입원"},{v:"90%+",l:"접촉자 관찰 완료 (10/7, 로스포트레브나드조르)",n:"코로나 2·리노바이러스 2 외 검출 없음 주장"},{v:"낮음",l:"한국 국내 유입 위험 (질병청 10/7)",n:"긴급 위험평가, 변화 시 검역 즉시 강화"}],
+    brief:["지역 독립매체 '류디 바이칼라'는 9월 25일 연구원이 폐페스트균 시험관을 깼다고 보도했고, 그는 9월 29일 중증 폐렴으로 입원해 10월 2일 새벽 숨졌습니다. 당국은 10월 4일 사인을 '원인불명 폐렴'으로 발표하고 업무 관련 미생물은 검출되지 않았다고 했습니다.",
+           "접촉자 약 200명이 격리·관찰됐고 이르쿠츠크 병원 여러 곳이 봉쇄됐습니다. 10월 6일 러시아는 WHO에 '이르쿠츠크에 페스트 사례 없음'을 통보했고, 10월 7일 '역학적 위험 없음'을 선언했습니다. 백악관·CDC는 감시 중이며, 질병관리청은 국내 위험을 낮음으로 평가했습니다.",
+           "부랴티아 자연 발생 연계설은 부랴티아 주지사가 부인했습니다. 몽골 호브드주에서는 7월 25일 마멋 섭취에 의한 선페스트 확진이 있었고, 몽골 21개 주 중 17개가 페스트 위험지역입니다."],
+    sources:[["Reuters/NBC 접촉자 검사","https://www.nbcnews.com/world/russia/russia-says-no-plague-found-contacts-siberian-lab-worker-died-rcna601805"],["UN News WHO 입장","https://news.un.org/en/story/2026/10/1168533"],["CNN 격리 상황","https://edition.cnn.com/2026/10/04/europe/russia-laboratory-plague-accident-intl"],["RFE/RL 연구소 격리","https://www.rferl.org/a/russia-plague-warning-siberia-irkutsk-laboratory/33870385.html"],["Atlantic Council 5가지 쟁점","https://www.atlanticcouncil.org/dispatches/five-things-to-know-about-the-death-at-russias-anti-plague-laboratory/"],["머니투데이 질병청","https://www.mt.co.kr/thebio/2026/10/07/2026100716061638462"],["TASS 로스포트레브나드조르","https://tass.com/society/2198859"]] },
+
   { id:"somalia", name:"소말리아·아덴만", sev:3, kind:"긴장 고조", asof:"9/29", at:[45.3,5.0],
     view:[[40,-2],[53,13]], countries:["706"], related:[],
     headline:"바이도아에서 대통령 측과 전 남서부주 지도자 세력이 충돌. 해적이 10여 년 만에 선원을 살해했습니다.",

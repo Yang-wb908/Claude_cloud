@@ -97,6 +97,10 @@ sources:
   - {id: wiki_current, name: 위키백과 Current events, kind: wiki, grade: C3, lang: en, region: global, note: "사람이 큐레이션한 일별 사건 목록. 지도 좌표는 연결 문서에서 추정."}
 
   # ── Google News 검색 RSS (집계, C3; 기사 원출처 도메인으로 재등급) ──
+  - {id: gn_outbreak, name: Google News · 감염병·실험실 사고, kind: gnews, q: "plague OR outbreak OR quarantine OR \"lab leak\" WHO", grade: C3, tags: [health, bio]}
+  - {id: gn_plague_kr, name: Google News · 페스트·감염병 (한국어), kind: gnews, q: "페스트 OR 감염병 OR 검역 질병관리청", grade: C3, lang: ko, tags: [health, bio, korea]}
+  - {id: cidrap, name: CIDRAP 감염병 뉴스, kind: rss, url: "https://www.cidrap.umn.edu/news/all/rss.xml", grade: B2, lang: en, region: global, tags: [health, bio], verify: true}
+  - {id: ukhsa_outbreaks, name: 영국 보건안보청 주간 감시 (Outbreaks under monitoring), kind: gnews, q: "\"outbreaks under monitoring\" gov.uk", grade: A2, tags: [health, bio], verify: true}
   - {id: gn_hormuz, name: Google News · Hormuz, kind: gnews, q: "Strait of Hormuz tanker", grade: C3, tags: [iran, maritime]}
   - {id: gn_redsea, name: Google News · Red Sea, kind: gnews, q: "Houthi Red Sea ship", grade: C3, tags: [yemen, maritime]}
   - {id: gn_ethiopia, name: Google News · Ethiopia, kind: gnews, q: "Ethiopia Tigray Eritrea", grade: C3, tags: [ethiopia]}

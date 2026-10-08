@@ -71,7 +71,9 @@ def rss(src: dict, cfg: dict) -> list[dict]:
 
 # ── Google News search RSS ─────────────────────────────────────────────────
 def gnews(src: dict, cfg: dict) -> list[dict]:
-    url = f"https://news.google.com/rss/search?q={quote_plus(src['q'] + ' when:2d')}&hl=en-US&gl=US&ceid=US:en"
+    lang = src.get("lang", "en")
+    loc = {"ko": ("ko", "KR", "KR:ko"), "ja": ("ja", "JP", "JP:ja")}.get(lang, ("en-US", "US", "US:en"))
+    url = f"https://news.google.com/rss/search?q={quote_plus(src['q'] + ' when:2d')}&hl={loc[0]}&gl={loc[1]}&ceid={loc[2]}"
     items = parse_feed(fetch.get(url, timeout=cfg.get("timeout", 25)), src["id"], cfg.get("max_items", 40))
     for it in items:
         # "Headline - Publisher" -> keep publisher for grading, since the link is a Google redirect

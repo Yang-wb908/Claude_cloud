@@ -128,3 +128,12 @@ tripwires:
     value: 70
     sev: 4
     why: "시나리오 꼬리·시장·공급망 스트레스 복합 상승. 수입물가·포지션 헤지 점검."
+  - id: bio_health_events
+    title: "보건안보 전역 24시간 보건(H) 사건 3건 이상"
+    kind: event_count
+    filter: {th: bio, t: H, days: 1}
+    op: ">="
+    value: 3
+    sev: 3
+    th: bio
+    why: "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검."

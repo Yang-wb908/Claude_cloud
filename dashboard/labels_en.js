@@ -2,7 +2,7 @@
 const EN = {
   theaters: {
     iran:"IRAN · HORMUZ", ukraine:"RUSSIA–UKRAINE", yemen:"YEMEN · RED SEA", ethiopia:"ETHIOPIA · TIGRAY", sudan:"SUDAN", gaza:"GAZA · WEST BANK",
-    afpak:"AFGHANISTAN–PAKISTAN", korea:"KOREAN PENINSULA", lebanon:"LEBANON · SYRIA", sahel:"SAHEL", drc:"EASTERN DRC · EBOLA", somalia:"SOMALIA · GULF OF ADEN",
+    afpak:"AFGHANISTAN–PAKISTAN", korea:"KOREAN PENINSULA", lebanon:"LEBANON · SYRIA", sahel:"SAHEL", drc:"EASTERN DRC · EBOLA", bio:"IRKUTSK · PLAGUE SCARE", somalia:"SOMALIA · GULF OF ADEN",
     myanmar:"MYANMAR", taiwan:"TAIWAN STRAIT", scs:"SOUTH CHINA SEA", carib:"CARIBBEAN"
   },
   chokepoints: { hormuz:["Hormuz","7–10 / 85 ships/day"], bab:["Bab el-Mandeb","ground war"], suez:["Suez","−55%"], cape:["Cape of Good Hope","main detour"] },

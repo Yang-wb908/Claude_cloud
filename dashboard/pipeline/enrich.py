@@ -45,13 +45,14 @@ TYPE_RULES = [
     ("G", r"(captur|retak|recaptur|seiz|take control|took [^.]{0,30}control|took over|launch(es|ed)? [^.]{0,30}(offensive|operation)|ground (operation|offensive)|troops (enter|advance)|withdr)"),
     ("S", r"(airstrike|air strike|drone|missile|shell|bomb|rocket|strikes? (on|against|at)|struck|artillery|ballistic|icbm|irbm)"),
     ("A", r"(suicide|bomber|massacre|kill(ed|s) civilians|attack on (a )?(village|market|camp|mosque|church|school)|gunmen|militants? (attack|kill)|terror)"),
-    ("H", r"(ebola|cholera|outbreak|epidemic|who declares|vaccin|famine|malnutrition)"),
+    ("H", r"(ebola|cholera|outbreak|epidemic|who declares|vaccin|famine|malnutrition|plague|pneumonic|quarantin|biosafety|lab leak|hantavirus|nipah|marburg|h5n1|avian influenza|anthrax|smallpox|rospotrebnadzor|pandemic)"),
     ("E", r"(sanction|tariff|export control|price cap|oil price|brent|opec|inflation|rate hike|central bank|gdp|currency|rial|ruble|won\b)"),
     ("X", r"(earthquake|flood|typhoon|hurricane|cyclone|wildfire|collapse|crash|explosion at)"),
     ("C", r"(gang|cartel|smuggl|trafficking|arrest|indict|police)"),
     ("D", r"(summit|talks|negotiat|ceasefire|truce|minister|ambassador|embassy|treaty|agreement|un security council|resolution|election|parliament|president|visit)"),
 ]
 THEATER_RULES = [
+    ("bio", r"plague|pneumonic|Irkutsk|Rospotrebnadzor|anti-plague|biosafety|lab leak|laboratory accident|Nipah|hantavirus|H5N1|avian influenza|Marburg|smallpox|anthrax|pandemic|Buryatia|Khovd|PHEIC"),
     ("ukraine", r"Russo-Ukrainian|Ukrain|Kyiv|Kharkiv|Odesa|Zaporizh|Donetsk|Belgorod|Kursk|Kremlin|Moscow|Crimea|Black Sea"),
     ("iran", r"Hormuz|\bIran|Tehran|IRGC|Kharg|Bandar Abbas|Persian Gulf|\bIraq|Basra|Erbil"),
     ("yemen", r"Yemen|Houthi|Red Sea|Mandeb|Mandab|Bab al|Hodeidah|Sanaa|Aden\b|Perim|Mocha|Taiz|Marib|Jizan|Najran"),
@@ -72,7 +73,7 @@ THEATER_RULES = [
 WIKI_CAT = {"Armed conflicts and attacks": None, "International relations": "D", "Politics and elections": "D", "Business and economy": "E",
             "Health and environment": "H", "Disasters and accidents": "X", "Law and crime": "C"}
 RELEVANT_KW = re.compile(r"(war|strike|attack|missile|drone|troops|military|navy|carrier|sanction|blockade|ceasefire|offensive|rebel|militia|coup|pirat|hijack|"
-                         r"tanker|Hormuz|Houthi|Taiwan|PLA|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola)", re.I)
+                         r"tanker|Hormuz|Houthi|Taiwan|PLA|North Korea|nuclear|IAEA|NATO|Kremlin|Pentagon|CENTCOM|humanitarian|refugee|displaced|famine|Ebola|plague|outbreak|quarantine|WHO\b|pandemic)", re.I)
 
 
 def classify_type(text: str, wiki_cat: str | None = None) -> str:
