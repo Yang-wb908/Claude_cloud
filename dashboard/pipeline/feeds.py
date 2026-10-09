@@ -169,7 +169,7 @@ def fetch_gfw(token: str, now: datetime) -> dict:
                 dark = {}
             out[cid] = {"n": name, "bbox": bbox, **summarize_gfw(pres, sar_all, dark)}
         except Exception as e:  # noqa: BLE001
-            errs.append(f"{cid}: {type(e).__name__}: {str(e).replace(token, '***')[:100]}")
+            errs.append(f"{cid}: {type(e).__name__}: {str(e).replace(token, '***')[:600 if not errs else 120]}")
     if not out:
         raise RuntimeError("; ".join(errs[:3]) or "GFW 응답 없음")
     if errs:
@@ -193,7 +193,7 @@ def run(dash: Path, now: datetime | None = None) -> dict:
             doc[name] = {"ok": True, "at": doc["generated"], "data": data}
             log.info("feeds %s: %d series", name, len([k for k in data if not k.startswith("_")]))
         except Exception as e:  # noqa: BLE001
-            err = f"{type(e).__name__}: {str(e).replace(key, '***')[:160]}"  # 공개 저장소에 커밋되므로 키 마스킹
+            err = f"{type(e).__name__}: {str(e).replace(key, '***')[:700]}"  # 공개 저장소에 커밋되므로 키 마스킹
             log.warning("feeds %s failed: %s", name, err)
             doc[name] = {**(prev.get(name) or {}), "ok": False, "err": err}
     path.parent.mkdir(exist_ok=True)
