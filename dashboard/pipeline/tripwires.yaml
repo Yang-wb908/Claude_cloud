@@ -144,3 +144,32 @@ tripwires:
     value: 5
     sev: 3
     why: "새 위기가 전역 밖에서 터지고 있을 가능성. 수집원 탭의 미분류 군집을 보고 새 전역 등록(PIR Issue)을 검토."
+  - id: firms_site_alert
+    title: "위성 열점 경보 (감시 시설·분쟁 지역에서 평소의 3배 이상, NASA FIRMS)"
+    metric: firms.n_alerts
+    op: ">="
+    value: 1
+    sev: 3
+    why: "정유·터미널·기지 주변 열점 급증은 피격·화재 신호. 사건 목록의 '위성 열점' 항목과 FIRMS 지도로 확인."
+  - id: fred_stress
+    title: "금융 스트레스 지수 1 이상 (세인트루이스 연준 STLFSI4)"
+    metric: feeds.fred.data.STLFSI4.v
+    op: ">="
+    value: 1.0
+    sev: 3
+    why: "0이 평균, 1 이상은 시장 스트레스가 평소보다 1표준편차 이상 높은 상태."
+  - id: hy_spread_5
+    title: "미 하이일드 스프레드 5%p 이상 (FRED)"
+    metric: feeds.fred.data.BAMLH0A0HYM2.v
+    op: ">="
+    value: 5.0
+    sev: 3
+    why: "신용 경색 선행 지표. 위험회피로 원자재·신흥국 자산 동반 하락 가능."
+  - id: eia_crude_draw
+    title: "미 상업 원유 재고 주간 500만 배럴 이상 감소 (EIA)"
+    metric: feeds.eia.data.WCESTUS1.chg_w
+    op: "<="
+    value: -5000
+    sev: 2
+    why: "공급 부족 신호. 유가 상방 압력."
+

@@ -25,7 +25,7 @@ def _get(d, path: str):
             if m.get("sym") == sym:
                 return m.get("v")
         return None
-    if parts[0] in ("risk", "coverage"):
+    if parts[0] in ("risk", "coverage", "firms", "feeds"):
         cur = d.get(parts[0]) or {}
         for p in parts[1:]:
             cur = cur.get(p) if isinstance(cur, dict) else None
@@ -85,6 +85,10 @@ def run(dash: Path) -> list[dict]:
         auto["risk"] = json.loads((dash / "data" / "risk.json").read_text())
     if (dash / "data" / "coverage.json").exists():
         auto["coverage"] = json.loads((dash / "data" / "coverage.json").read_text())
+    if (dash / "data" / "firms.json").exists():
+        auto["firms"] = json.loads((dash / "data" / "firms.json").read_text())
+    if (dash / "data" / "feeds.json").exists():
+        auto["feeds"] = json.loads((dash / "data" / "feeds.json").read_text())
     snap = json.loads((dash / "data_snapshot.json").read_text())
     fired = evaluate(auto, snap.get("events", []))
     (dash / "data").mkdir(exist_ok=True)

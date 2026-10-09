@@ -1456,7 +1456,7 @@ function renderSea(){
   } else {
     cps = `<div class="block sev5"><h3>호르무즈 해협</h3><span class="meta">IMF PortWatch 9/27</span><div class="bigrow"><span class="big">1척</span><span class="delta">하루 통과, 평시 85척</span></div></div>`;
   }
-  const sarBlock = typeof opsSarHtml === "function" ? opsSarHtml() : "";
+  const sarBlock = (typeof gfwHtml === "function" ? gfwHtml() : "") + (typeof opsSarHtml === "function" ? opsSarHtml() : "");
   const pwBlock = (sarBlock || "") + (AUTO && AUTO.portwatch && Object.keys(AUTO.portwatch).length ? `<div class="block sev3"><h3>IMF PortWatch 일일 통항 <span class="en">auto · A2</span></h3><span class="meta">AIS 기반 · 자동 수집 ${esc(AUTO.generated || "")}</span>
     ${Object.entries(AUTO.portwatch).map(([k, v]) => { const L = v.latest || {}; const pts = (v.series || []).filter(x => x[1] != null).map(x => [x[0], x[1]]); return `<div class="bigrow" style="margin-top:12px"><span class="big">${esc(String(L.n_total ?? "-"))}</span><span class="delta">${esc(CP_NAME[k] || k)} · ${esc(L.d || "")} · 7일 평균 ${esc(String(v.avg7 ?? "-"))} · 28일 ${esc(String(v.avg28 ?? "-"))}</span></div>${pts.length > 1 ? spark(pts, "sev3", p => p[0] + " " + p[1] + "척") : ""}`; }).join("")}</div>` : "");
   $("#p-sea").innerHTML = pwBlock + `
@@ -1475,7 +1475,7 @@ function renderEco(){
   const E = INTEL && INTEL.economy;
   const SEV = {energy:5, macro:3, markets:2, trade:3, sanctions:4, stress:4};
   const autoMk = AUTO && AUTO.markets && AUTO.markets.length ? `<div class="block sev2"><h3>실시간 시세 <span class="en">auto · Yahoo Finance</span></h3><span class="meta">자동 수집 ${esc(AUTO.generated || "")} · 종가 기준</span>${metricRows(AUTO.markets.map(m => ({l:m.l, v:String(m.v), d:m.d, chg:m.chg, src:m.src})))}</div>` : "";
-  $("#p-eco").innerHTML = `<p class="note"><b>전쟁 경제</b>: 에너지·거시·시장·교역·제재·국가 스트레스. 수치마다 날짜·출처·등급이 붙습니다.</p>` + autoMk +
+  $("#p-eco").innerHTML = `<p class="note"><b>전쟁 경제</b>: 에너지·거시·시장·교역·제재·국가 스트레스. 수치마다 날짜·출처·등급이 붙습니다.</p>` + autoMk + (typeof feedsEcoHtml === "function" ? feedsEcoHtml() : "") +
     (E && E.groups && E.groups.length ? E.groups.map(g => `<div class="block sev${SEV[g.id] || 2}"><h3>${esc(g.title)} <span class="en">${esc(g.id)}</span></h3>${metricRows(g.metrics)}${devList(g.dev)}</div>`).join("")
       : `<div class="block"><p class="cap">경제 수집 결과가 아직 없습니다. 시장 탭의 스냅숏 값을 참고하세요.</p></div>`) +
     (E && E.judgments && E.judgments.length ? `<div class="block"><h3>경제 판단</h3><ul class="kj">${E.judgments.map(j => `<li><div class="t">${esc(j)}</div></li>`).join("")}</ul></div>` : "");

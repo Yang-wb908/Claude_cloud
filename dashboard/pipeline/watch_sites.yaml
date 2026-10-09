@@ -1,0 +1,64 @@
+# NASA FIRMS 위성 열점 감시 대상.
+# sites: 반경 r_km 안의 VIIRS 열점을 시설별로 센다. 정유·가스 시설은 평소 플레어로 열점이 늘 있으므로
+#        시설별 기준선(지난 14일 중앙값)을 학습한 뒤 그 3배를 넘을 때만 경보를 낸다. 좌표는 공개 지도 기준 근사치라
+#        반경을 넉넉히 잡았다(정확한 위치가 확인되면 고친다).
+# aois:  분쟁 지역 전체의 일일 열점 수. 마을 방화·포격 화재 급증을 기준선 대비로 본다.
+sites:
+  # 러시아 정유·수출 터미널 (우크라이나 장거리 타격 대상)
+  - {id: salavat, n: 살라바트 정유·석유화학, en: Salavat refinery, lat: 53.38, lon: 55.97, r_km: 6, th: ukraine, kind: energy}
+  - {id: omsk, n: 옴스크 정유공장, en: Omsk refinery, lat: 55.07, lon: 73.22, r_km: 6, th: ukraine, kind: energy}
+  - {id: ryazan, n: 랴잔 정유공장, en: Ryazan refinery, lat: 54.59, lon: 39.73, r_km: 5, th: ukraine, kind: energy}
+  - {id: volgograd, n: 볼고그라드 정유공장, en: Volgograd refinery, lat: 48.51, lon: 44.55, r_km: 5, th: ukraine, kind: energy}
+  - {id: saratov, n: 사라토프 정유공장, en: Saratov refinery, lat: 51.49, lon: 46.06, r_km: 5, th: ukraine, kind: energy}
+  - {id: syzran, n: 시즈란 정유공장, en: Syzran refinery, lat: 53.17, lon: 48.42, r_km: 5, th: ukraine, kind: energy}
+  - {id: kirishi, n: 키리시 정유공장, en: Kirishi refinery, lat: 59.47, lon: 32.03, r_km: 5, th: ukraine, kind: energy}
+  - {id: tuapse, n: 투압세 정유·항만, en: Tuapse refinery, lat: 44.10, lon: 39.08, r_km: 4, th: ukraine, kind: energy}
+  - {id: novorossiysk, n: 노보로시스크 셰스하리스 터미널, en: Novorossiysk Sheskharis, lat: 44.70, lon: 37.79, r_km: 5, th: ukraine, kind: energy}
+  - {id: primorsk, n: 프리모르스크 원유 터미널, en: Primorsk oil terminal, lat: 60.35, lon: 28.70, r_km: 5, th: europe, kind: energy}
+  - {id: ust_luga, n: 우스트루가 항만, en: Ust-Luga port, lat: 59.68, lon: 28.40, r_km: 6, th: europe, kind: energy}
+  - {id: engels, n: 엥겔스 공군기지, en: Engels air base, lat: 51.48, lon: 46.20, r_km: 5, th: ukraine, kind: military}
+  - {id: zaporizhzhia_npp, n: 자포리자 원전, en: Zaporizhzhia NPP, lat: 47.51, lon: 34.59, r_km: 4, th: ukraine, kind: nuclear}
+  # 이란·걸프
+  - {id: abadan, n: 아바단 정유공장, en: Abadan refinery, lat: 30.34, lon: 48.28, r_km: 6, th: iran, kind: energy}
+  - {id: bandar_abbas, n: 반다르아바스 정유·항만, en: Bandar Abbas refinery, lat: 27.20, lon: 56.07, r_km: 8, th: iran, kind: energy}
+  - {id: kharg, n: 하르그섬 원유 터미널, en: Kharg Island terminal, lat: 29.24, lon: 50.31, r_km: 6, th: iran, kind: energy}
+  - {id: bushehr, n: 부셰르 원전, en: Bushehr NPP, lat: 28.83, lon: 50.89, r_km: 5, th: iran, kind: nuclear}
+  - {id: fordow, n: 포르도 농축시설, en: Fordow, lat: 34.88, lon: 50.99, r_km: 5, th: iran, kind: nuclear}
+  - {id: ras_tanura, n: 라스타누라 정유·터미널, en: Ras Tanura, lat: 26.64, lon: 50.16, r_km: 7, th: yemen, kind: energy}
+  - {id: abqaiq, n: 아브카이크 원유처리시설, en: Abqaiq, lat: 25.93, lon: 49.67, r_km: 7, th: yemen, kind: energy}
+  - {id: jizan, n: 지잔 정유·항만, en: Jazan refinery, lat: 16.75, lon: 42.62, r_km: 8, th: yemen, kind: energy}
+  - {id: riyadh_kkia, n: 리야드 킹칼리드 공항, en: Riyadh KKIA, lat: 24.96, lon: 46.70, r_km: 6, th: yemen, kind: military}
+  - {id: ras_laffan, n: 라스라판 LNG, en: Ras Laffan LNG, lat: 25.90, lon: 51.55, r_km: 8, th: iran, kind: energy}
+  - {id: fujairah, n: 푸자이라 저장 터미널, en: Fujairah terminal, lat: 25.17, lon: 56.36, r_km: 6, th: iran, kind: energy}
+  # 예멘·홍해
+  - {id: hodeidah, n: 호데이다 항, en: Hodeidah port, lat: 14.83, lon: 42.93, r_km: 6, th: yemen, kind: port}
+  - {id: ras_isa, n: 라스이사 원유 터미널, en: Ras Isa terminal, lat: 15.13, lon: 42.63, r_km: 6, th: yemen, kind: energy}
+  - {id: sanaa, n: 사나 공항, en: Sanaa airport, lat: 15.48, lon: 44.22, r_km: 6, th: yemen, kind: military}
+  - {id: marib, n: 마리브, en: Marib, lat: 15.46, lon: 45.32, r_km: 10, th: yemen, kind: city}
+  # 이스라엘·가자·레바논
+  - {id: haifa, n: 하이파 정유공장, en: Haifa refinery, lat: 32.80, lon: 35.05, r_km: 4, th: gaza, kind: energy}
+  - {id: gaza_city, n: 가자시티, en: Gaza City, lat: 31.52, lon: 34.45, r_km: 6, th: gaza, kind: city}
+  - {id: khan_younis, n: 칸유니스, en: Khan Younis, lat: 31.34, lon: 34.30, r_km: 6, th: gaza, kind: city}
+  - {id: dahiyeh, n: 베이루트 다히예, en: Beirut Dahiyeh, lat: 33.85, lon: 35.51, r_km: 4, th: lebanon, kind: city}
+  # 수단·에티오피아
+  - {id: el_fasher, n: 엘파셰르, en: El Fasher, lat: 13.63, lon: 25.35, r_km: 10, th: sudan, kind: city}
+  - {id: el_obeid, n: 엘오베이드, en: El Obeid, lat: 13.18, lon: 30.22, r_km: 10, th: sudan, kind: city}
+  - {id: port_sudan, n: 포트수단, en: Port Sudan, lat: 19.60, lon: 37.22, r_km: 8, th: sudan, kind: port}
+  - {id: khartoum_refinery, n: 하르툼 알자일리 정유공장, en: Al Jaili refinery, lat: 15.98, lon: 32.68, r_km: 6, th: sudan, kind: energy}
+  - {id: kadugli, n: 카두글리, en: Kadugli, lat: 11.01, lon: 29.72, r_km: 10, th: sudan, kind: city}
+  - {id: mekelle, n: 메켈레, en: Mekelle, lat: 13.50, lon: 39.47, r_km: 10, th: ethiopia, kind: city}
+  # 기타
+  - {id: amuay, n: 아무아이·카르돈 정유단지, en: Amuay-Cardon refinery, lat: 11.75, lon: -70.22, r_km: 8, th: carib, kind: energy}
+  - {id: es_sider, n: 에스시데르 원유 터미널, en: Es Sider terminal, lat: 30.63, lon: 18.35, r_km: 6, th: sahel, kind: energy}
+  - {id: yongbyon, n: 영변 핵시설, en: Yongbyon, lat: 39.80, lon: 125.75, r_km: 5, th: korea, kind: nuclear}
+  - {id: sohae, n: 서해 위성발사장, en: Sohae launch site, lat: 39.66, lon: 124.71, r_km: 5, th: korea, kind: military}
+  - {id: sabetta, n: 사베타 야말 LNG, en: Sabetta Yamal LNG, lat: 71.27, lon: 72.07, r_km: 8, th: europe, kind: energy}
+aois:
+  - {id: darfur, n: 다르푸르, th: sudan, bbox: [22.0, 10.0, 27.5, 16.0]}
+  - {id: kordofan, n: 코르도판, th: sudan, bbox: [27.5, 9.5, 32.5, 14.5]}
+  - {id: gaza, n: 가자지구, th: gaza, bbox: [34.2, 31.2, 34.6, 31.6]}
+  - {id: south_lebanon, n: 레바논 남부, th: lebanon, bbox: [35.1, 33.0, 35.9, 33.6]}
+  - {id: tigray, n: 티그라이, th: ethiopia, bbox: [36.5, 12.2, 40.0, 14.9]}
+  - {id: east_drc, n: 콩고 동부(키부), th: drc, bbox: [27.5, -3.5, 30.0, 1.0]}
+  - {id: rakhine, n: 미얀마 라카인, th: myanmar, bbox: [92.2, 19.0, 94.5, 21.5]}
+  - {id: ukraine_front, n: 우크라이나 동부 전선, th: ukraine, bbox: [35.0, 46.5, 39.0, 49.5]}

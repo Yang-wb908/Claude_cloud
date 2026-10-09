@@ -72,6 +72,43 @@ function renderWatch(){
   $("#p-watch").querySelectorAll("button.lnk").forEach(b => b.addEventListener("click", () => setTab(b.dataset.tab)));
 }
 let COV_ = typeof COVERAGE === "object" ? COVERAGE : null;
+let FEEDS_ = typeof FEEDS === "object" ? FEEDS : null;
+let FIRMS_ = typeof FIRMS === "object" ? FIRMS : null;
+const fmtSigned = (v, dp) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(dp == null ? 1 : dp);
+function feedNote(f, env){ return f && f.ok === false ? `<p class="note">${esc(f.err && f.err.indexOf("미설정") >= 0 ? env + " 이 저장소 Secrets 에 없어 수집하지 않았습니다." : "최근 수집 실패: " + (f.err || ""))}${f.at ? " 아래는 " + esc(f.at.slice(0, 16)) + "Z 값." : ""}</p>` : ""; }
+/* 위성 열점 (NASA FIRMS) — 운영 탭 */
+function opsFirmsHtml(){
+  const F = FIRMS_;
+  if (!F) return `<div class="block"><h3>위성 열점 <span class="en">NASA FIRMS · VIIRS</span></h3><p class="note">FIRMS_MAP_KEY 를 저장소 Secrets 에 넣으면 6시간마다 감시 시설 ${""}주변과 분쟁 지역의 위성 열점을 셉니다.</p></div>`;
+  const al = (F.sites || []).filter(s => s.status === "alert").concat((F.aois || []).filter(a => a.status === "alert"));
+  const rows = (F.sites || []).slice().sort((a, b) => (b.status === "alert") - (a.status === "alert") || (b.n || 0) - (a.n || 0)).slice(0, 18);
+  const st = s => s.status === "alert" ? '<span class="chk" style="color:var(--s5);border-color:var(--s5)">경보</span>' : s.status === "learning" ? '<span class="chk">기준선 학습</span>' : '<span class="chk" style="color:var(--s1);border-color:var(--s1)">평소</span>';
+  return `<div class="block ${al.length ? "sev4" : "sev2"}"><h3>위성 열점 <span class="en">NASA FIRMS · VIIRS · ${esc((F.generated || "").slice(5, 16).replace("T", " "))}Z</span></h3>
+    <span class="meta">시설 ${(F.sites || []).length}곳·분쟁 지역 ${(F.aois || []).length}곳의 최근 2일 열점을 각자의 평소 수준(지난 14일 중앙값)과 비교. 정유·가스 시설은 평소 플레어가 있어 3배 이상일 때만 경보. 기준선 학습 중 ${F.learning || 0}곳.</span>
+    ${al.length ? `<ul class="wl">${(F.alerts || []).map(e => `<li><b>${esc(e.p)}</b> ${esc(e.x)} <small><a href="${esc(e.s)}" target="_blank" rel="noopener">FIRMS 지도</a></small></li>`).join("")}</ul>` : `<p class="note">경보 없음.</p>`}
+    <table class="shk"><thead><tr><th style="text-align:left">시설</th><th>최근 2일</th><th>평소</th><th>최대 FRP</th><th>상태</th></tr></thead><tbody>${rows.map(s => `<tr><td style="text-align:left">${esc(s.n_ko)}<small style="display:block;color:var(--faint)">${esc(TH[s.th] ? TH[s.th].name : s.th)}</small></td><td>${s.n}</td><td>${s.base_n == null ? "—" : Math.round(s.base_n)}</td><td>${s.frp_max ? Math.round(s.frp_max) + "MW" : "—"}</td><td>${st(s)}</td></tr>`).join("")}</tbody></table>
+    ${(F.aois || []).length ? `<h4 style="margin:12px 0 4px">분쟁 지역 일일 열점</h4><table class="shk"><tbody>${F.aois.map(a => `<tr><td style="text-align:left">${esc(a.n_ko)}</td><td>${a.n}</td><td>${a.base_n == null ? "—" : "평소 " + Math.round(a.base_n)}</td><td>${st(a)}</td></tr>`).join("")}</tbody></table>` : ""}
+    ${F.errors && F.errors.length ? `<p class="note">일부 요청 실패 ${F.errors.length}건</p>` : ""}</div>`;
+}
+/* 선박 통항 (Global Fishing Watch) — 해협 탭 */
+function gfwHtml(){
+  const f = FEEDS_ && FEEDS_.gfw; if (!f) return "";
+  const d = f.data || {}; const ids = Object.keys(d).filter(k => !k.startsWith("_"));
+  if (!ids.length) return `<div class="block"><h3>선박 통항 <span class="en">Global Fishing Watch</span></h3>${feedNote(f, "GFW_TOKEN")}</div>`;
+  const chg = c => c == null ? "—" : `<span style="color:${c <= -0.2 ? "var(--s5)" : c >= 0.2 ? "var(--s1)" : "var(--ink)"}">${(c > 0 ? "+" : "") + Math.round(c * 100)}%</span>`;
+  return `<div class="block sev3"><h3>선박 통항 · 암흑 선박 <span class="en">Global Fishing Watch · AIS + Sentinel-1 SAR</span></h3>
+    <span class="meta">AIS 기준 해역 내 평균 체류 선박(선박·시간 ÷ 24)의 최근 7일 평균과 전주 대비, Sentinel-1 레이더로 탐지된 선박 중 AIS 와 짝이 없는 '암흑 선박' 7일 합계. GFW 공개 데이터는 3~5일 늦게 들어옵니다.</span>${feedNote(f, "GFW_TOKEN")}
+    <table class="shk"><thead><tr><th style="text-align:left">해역</th><th>기준일</th><th>평균 선박</th><th>전주 대비</th><th>SAR 7일</th><th>암흑 7일</th></tr></thead><tbody>${ids.map(k => { const v = d[k]; return `<tr><td style="text-align:left">${esc(v.n || k)}</td><td>${v.latest ? esc(md(v.latest)) : "—"}</td><td>${v.vessels_avg7 == null ? "—" : v.vessels_avg7}</td><td>${chg(v.chg)}</td><td>${v.sar_7d || 0}</td><td>${v.dark_7d ? `<b style="color:var(--s4)">${v.dark_7d}</b>` : 0}</td></tr>`; }).join("")}</tbody></table></div>`;
+}
+/* 원유 재고 (EIA) · 금융 스트레스 (FRED) — 경제 탭 */
+function feedsEcoHtml(){
+  const e = FEEDS_ && FEEDS_.eia, f = FEEDS_ && FEEDS_.fred; let h = "";
+  if (e) { const d = e.data || {}; const ks = Object.keys(d);
+    h += `<div class="block sev3"><h3>미국 석유 재고 <span class="en">EIA 주간 · 천 배럴</span></h3>${feedNote(e, "EIA_API_KEY")}${ks.length ? `<table class="shk"><thead><tr><th style="text-align:left">항목</th><th>기준 주</th><th>재고</th><th>전주 대비</th><th>4주</th></tr></thead><tbody>${ks.map(k => `<tr><td style="text-align:left">${esc(d[k].l)}</td><td>${esc(md(d[k].d))}</td><td>${Math.round(d[k].v).toLocaleString()}</td><td>${d[k].chg_w == null ? "—" : `<span style="color:${d[k].chg_w < 0 ? "var(--s4)" : "var(--ink)"}">${fmtSigned(d[k].chg_w / 1000, 1)}M</span>`}</td><td>${d[k].chg_4w == null ? "—" : fmtSigned(d[k].chg_4w / 1000, 1) + "M"}</td></tr>`).join("")}</tbody></table>` : ""}</div>`; }
+  if (f) { const d = f.data || {}; const ks = Object.keys(d);
+    h += `<div class="block sev3"><h3>금융 스트레스·금리 <span class="en">FRED · 세인트루이스 연준</span></h3><span class="meta">금융스트레스 지수는 0이 평균, 1 이상이면 경계. 하이일드 스프레드 5%p 이상은 신용 경색 신호.</span>${feedNote(f, "FRED_API_KEY")}${ks.length ? `<table class="shk"><thead><tr><th style="text-align:left">지표</th><th>기준일</th><th>값</th><th>1주</th><th>1개월</th></tr></thead><tbody>${ks.map(k => `<tr><td style="text-align:left">${esc(d[k].l)}</td><td>${esc(md(d[k].d))}</td><td><b>${Number(d[k].v).toFixed(2)}</b> <small>${esc(d[k].unit || "")}</small></td><td>${fmtSigned(d[k].chg_1w, 2)}</td><td>${fmtSigned(d[k].chg_1m, 2)}</td></tr>`).join("")}</tbody></table>` : ""}</div>`; }
+  return h;
+}
 function rewindHtml(date){
   const d = date || REF;
   const rows = DATA.theaters.map(t => { const w = (WC_.theaters || {})[t.id] || {}; const hist = (w.history || []).filter(h => h.d <= d); const lv = hist.length ? hist[hist.length - 1].to : null; return {t, lv}; }).filter(r => r.lv != null).sort((a, b) => b.lv - a.lv);
@@ -103,5 +140,5 @@ function opsBlufHtml(){
     ${changes7.length ? `<ul class="wl">${changes7.slice(0, 4).map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")}</small></li>`).join("")}</ul>` : ""}
     <div class="btnrow"><button class="thchip" data-tab="p-watch">당직 →</button><button class="thchip" data-tab="p-pir">요구 →</button><button class="thchip" data-tab="p-prod">생산물 →</button></div></div>`;
 }
-function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
+function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-tab]"); if (b && b.dataset.tab && document.getElementById(b.dataset.tab) && !b.classList.contains("tab") && !b.classList.contains("lnk")) setTab(b.dataset.tab); });

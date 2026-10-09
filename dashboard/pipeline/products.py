@@ -112,6 +112,24 @@ def dib(dash: Path, now: datetime | None = None) -> tuple[str, str]:
         moved = [v for v in hv_auto.get("scenarios", []) if abs(v["p"] - v["prior"]) >= 1]
         if moved:
             L += ["", "### 징후 기반 확률 갱신 (자동 뷰)", ""] + [f"- {v['id']}: {v['prior']}% → {v['p']}% ({', '.join(e['note'] for e in v.get('evidence', [])[:3])})" for v in moved[:8]]
+    fi = _load(dash / "data" / "firms.json", None)
+    fe = _load(dash / "data" / "feeds.json", None)
+    sens = []
+    if fi:
+        sens += [f"- 위성 열점: {e['x']}" for e in fi.get("alerts", [])[:5]] or [f"- 위성 열점: 경보 없음 (감시 {len(fi.get('sites', []))}곳, 기준선 학습 중 {fi.get('learning', 0)}곳)"]
+    if fe:
+        g = ((fe.get("gfw") or {}).get("data") or {})
+        for k, v in g.items():
+            if isinstance(v, dict) and v.get("chg") is not None and abs(v["chg"]) >= 0.2:
+                sens.append(f"- 선박 통항 {v.get('n', k)}: 7일 평균 {v.get('vessels_avg7')}척, 전주 대비 {v['chg'] * 100:+.0f}% (GFW, 기준 {v.get('latest')})")
+        fr = ((fe.get("fred") or {}).get("data") or {})
+        if fr.get("STLFSI4"):
+            sens.append(f"- 금융스트레스 지수 {fr['STLFSI4']['v']:.2f} ({fr['STLFSI4']['d']}), 하이일드 스프레드 {fr.get('BAMLH0A0HYM2', {}).get('v', float('nan')):.2f}%p")
+        ei = ((fe.get("eia") or {}).get("data") or {})
+        if ei.get("WCESTUS1") and ei["WCESTUS1"].get("chg_w") is not None:
+            sens.append(f"- 미 상업 원유 재고 {ei['WCESTUS1']['v'] / 1000:.1f}M배럴, 전주 대비 {ei['WCESTUS1']['chg_w'] / 1000:+.1f}M ({ei['WCESTUS1']['d']}, EIA)")
+    if sens:
+        L += ["", "### 센서·정형 데이터 (FIRMS·GFW·FRED·EIA)", ""] + sens
     rt = _load(dash / "data" / "redteam.json", None)
     if rt and rt.get("judgments"):
         L += ["", f"## 8b. 레드팀 ({rt.get('week')})", ""] + [f"- **{r['id']}** 대안 {round((r.get('p_alt') or 0) * 100)}%: {r['counter'][:200]}" for r in rt["judgments"][:5]]

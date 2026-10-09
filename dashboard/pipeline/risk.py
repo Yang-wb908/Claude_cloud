@@ -89,14 +89,25 @@ def compute(dash: Path, src_dir: Path | None = None, now: datetime | None = None
     mk = {m["sym"]: m["v"] for m in auto.get("markets", [])}
     vix = mk.get("^VIX", _last(series, "^VIX")); dxy = mk.get("DX-Y.NYB", _last(series, "DX-Y.NYB")); tnx = mk.get("^TNX", _last(series, "^TNX")); brent = mk.get("BZ=F", _last(series, "BZ=F")); krw = mk.get("KRW=X", _last(series, "KRW=X"))
     ms = [x for x in [clamp01((vix - 12) / 28) if vix else None, clamp01((dxy - 95) / 15) if dxy else None, clamp01((tnx - 3.5) / 2.5) if tnx else None, clamp01((brent - 70) / 60) if brent else None, clamp01((krw - 1250) / 250) if krw else None] if x is not None]
-    comp["market"] = {"v": sum(ms) / len(ms) if ms else 0.5, "d": f"VIX {vix} · DXY {dxy} · 10y {tnx} · Brent {brent} · KRW {krw}"}
+    feeds = json.loads((dash / "data" / "feeds.json").read_text()) if (dash / "data" / "feeds.json").exists() else {}
+    fred = ((feeds.get("fred") or {}).get("data") or {})
+    stl = (fred.get("STLFSI4") or {}).get("v"); hy = (fred.get("BAMLH0A0HYM2") or {}).get("v")
+    ms += [x for x in [clamp01((stl + 0.5) / 3) if stl is not None else None, clamp01((hy - 2.5) / 5) if hy is not None else None] if x is not None]
+    comp["market"] = {"v": sum(ms) / len(ms) if ms else 0.5, "d": f"VIX {vix} · DXY {dxy} · 10y {tnx} · Brent {brent} · KRW {krw}" + (f" · 금융스트레스 {stl:.2f}" if stl is not None else "") + (f" · HY {hy:.2f}%p" if hy is not None else "")}
     pw = auto.get("portwatch") or {}
     cs = []
     for k, v in pw.items():
         lat = (v.get("latest") or {}).get("n_total"); base = v.get("avg28")
         if lat is not None and base:
             cs.append(clamp01(1 - lat / base))
-    comp["supply"] = {"v": (max(cs) * 0.5 + sum(cs) / len(cs) * 0.5) if cs else 0.5, "d": f"PortWatch 통항 감소율 {[round(x, 2) for x in cs]}" if cs else "PortWatch 없음(기본 0.5)"}
+    gfw = ((feeds.get("gfw") or {}).get("data") or {})
+    gd = []
+    for k, v in gfw.items():
+        if isinstance(v, dict) and v.get("chg") is not None:
+            gd.append(clamp01(-v["chg"] * 2))  # 7일 평균 선박 수가 전주 대비 50% 줄면 1
+    cs += gd
+    comp["supply"] = {"v": (max(cs) * 0.5 + sum(cs) / len(cs) * 0.5) if cs else 0.5,
+                      "d": (f"PortWatch·GFW 통항 감소율 {[round(x, 2) for x in cs]}" if cs else "PortWatch·GFW 없음(기본 0.5)")}
     cot = auto.get("cot") or []
     crowd = [clamp01(abs(c.get("net") or 0) / 300000) for c in cot]
     comp["crowd"] = {"v": (max(crowd) * 0.5 + sum(crowd) / len(crowd) * 0.5) if crowd else 0.3, "d": f"COT {len(cot)}개 시장" if cot else "COT 없음(기본 0.3)"}

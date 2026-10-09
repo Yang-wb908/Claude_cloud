@@ -52,11 +52,13 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           PIPELINE_NO_CLAUDE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.claude) && '1' || '' }}
           PIPELINE_MODEL: ${{ vars.PIPELINE_MODEL }}
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
         run: |
           set -euo pipefail
           python dashboard/pipeline/run.py collect ${{ inputs.only != '' && format('--only {0}', inputs.only) || '' }}
           python dashboard/pipeline/run.py enrich
           python dashboard/pipeline/run.py assemble
+          python dashboard/pipeline/run.py firms || echo "firms failed (continuing)"
           python dashboard/pipeline/run.py tripwires
           python dashboard/pipeline/run.py bayes
           python dashboard/pipeline/run.py report

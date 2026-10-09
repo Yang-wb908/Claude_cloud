@@ -13,7 +13,7 @@ function applyBriefs(B){
   return n;
 }
 const SYNC_FILES = {
-  briefs: "dashboard/data/theater_briefs.json",
+  briefs: "dashboard/data/theater_briefs.json", feeds: "dashboard/data/feeds.json", firms: "dashboard/data/firms.json",
   auto: "dashboard/intel.auto.json", latest: "dashboard/data/latest.json", trip: "dashboard/data/tripwires.json", rfi: "dashboard/data/rfi.json",
   score: "dashboard/data/scorecard.json", judg: "dashboard/data/judgments.json", house: "dashboard/data/house_view.json", risk: "dashboard/data/risk.json", pirs: "dashboard/data/pirs.json", watchcon: "dashboard/data/watchcon.json", watchlog: "dashboard/data/watch_log.json", products: "dashboard/data/products_index.json", coverage: "dashboard/data/coverage.json", hauto: "dashboard/data/house_view_auto.json", calib: "dashboard/data/shock_calib.json"
 };
@@ -75,6 +75,9 @@ function applyLive(got){
   if (got.coverage && got.coverage.clusters) COV_ = got.coverage;
   if (got.hauto && got.hauto.scenarios) HAUTO_ = got.hauto;
   if (got.calib && got.calib.scenarios) CALIB_ = got.calib;
+  if (got.feeds && got.feeds.generated) FEEDS_ = got.feeds;
+  if (got.firms && got.firms.generated) FIRMS_ = got.firms;
+  if (got.feeds || got.firms) { try { renderSea(); renderEco(); renderOpsExtras(); } catch(e) { console.warn("feeds", e); } }
   if (got.briefs && got.briefs.items) { if (applyBriefs(got.briefs)) { try { renderTheaters(); } catch(e) { console.warn("briefs", e); } } }
   if (got.latest && Array.isArray(got.latest.events)) {
     const have = new Set(EVENTS.map(e => e.id)), haveS = new Set(EVENTS.map(e => e.s).filter(Boolean));

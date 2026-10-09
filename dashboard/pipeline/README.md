@@ -122,3 +122,8 @@ python -m pytest tests/pipeline -q
 ### 자격 증명 우선순위
 
 `CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독, `claude setup-token`)이 있으면 그것을 먼저 쓴다. 같은 모델을 구독 사용량으로 돌리므로 API 크레딧이 차감되지 않는다. 토큰이 없을 때만 `ANTHROPIC_API_KEY`(종량 과금)를 쓴다. 구독 모드에서는 이미 상황판에 오른 기사만 빼고 새 기사를 전부 정제하고, API 모드에서는 규칙 신호(전역·관련어·지명)가 있는 새 기사만 정제한다.
+
+
+### 정형 데이터 키 (Secrets)
+
+`FIRMS_MAP_KEY`(수집 6시간마다, `run.py firms`), `EIA_API_KEY`·`FRED_API_KEY`·`GFW_TOKEN`(일일 동기화, `run.py feeds`). 산출물 `data/firms.json`·`data/firms_history.json`·`data/feeds.json`.
