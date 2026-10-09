@@ -1,8 +1,55 @@
 {
- "generated": "2026-10-09T14:51:32Z",
+ "generated": "2026-10-09T18:30:59Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 4,
+ "max_cluster": 2,
+ "max_key": "topic:International Criminal",
+ "clusters": [
+  {
+   "key": "topic:International Criminal",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-09",
+   "sample": [
+    {
+     "d": "2026-10-09",
+     "title": "US sanctions International Criminal Court itself in major escalation",
+     "url": "https://www.aljazeera.com/news/2026/10/9/us-sanctions-international-criminal-court-itself-in-latest-escalation?traffic_source=rss",
+     "domain": "aljazeera.com"
+    },
+    {
+     "d": "2026-10-09",
+     "title": "US sanctions International Criminal Court hours after former judge wins Nobel Peace Prize",
+     "url": "https://www.middleeasteye.net/news/us-sanctions-international-criminal-court-major-escalation-after-former-judge-awarded-nobel",
+     "domain": "middleeasteye.net"
+    }
+   ]
+  },
+  {
+   "key": "topic:Copper",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-09",
+   "sample": [
+    {
+     "d": "2026-10-09",
+     "title": "Copper rebounds from losses despite renewed demand concerns",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN3lEcWJhYmoyYXBySHRCa0pXQW1jUDFFUk50S0x0blI5TDhTSG5iWXYyUHNHalFxTVdISXRBLVI3TlhRSkVVV0x4X2Z2UlRfMTA0dFJ5QlcwUkptN1VSakZYeXBnNzFEbDcwREpwR3FHbmtlTW9HMTRXMkJjRVVJakppOXdOQlB3eTg5bXlTN0wtMEZjTldQU25VeG90eG9pU2xRQVFWLW15Vi1qM2dHRlJ2ZEc0dw?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-10-09",
+     "title": "Copper, Uranium and Lithium Forecast: China Buying Fuels Copper Rebound",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNMFk4NnRKbUlOcFpoTDBsUlRHd2ZiWVphSHRlcEtOdl9TbmZjZFBNbGlOZmgzbU9uOW5LY3QxNXdUVUVjOFlVUHRhcWpNV0wtamhmQWY3RVBfc0RBVGx5V2xvWjRhMGdGN0FvOGY1YXJPRHZWVjNkSVRXcWV3LTh5MTRibjJ3SEl1QWRYNVgxM1JtMzJEMXlqMVp6M2tselJ2LVplRG9zcHZEVExicnNKMTY4bHFMSWhTS3Y5WkIwcUdTbHo2MlRz?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  }
+ ]
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T16:15:42Z",
+ "generated": "2026-10-09T18:31:14Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +18,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 7,
+   "current": 6,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 70,
+   "current": 74,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 36,
+   "current": 38,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.7,
+   "current": 6.71,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "bio_health_events",
@@ -65,7 +65,7 @@
    "current": 15,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "ioda_outage",
@@ -73,10 +73,21 @@
    "sev": 3,
    "th": null,
    "why": "정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인.",
-   "current": 3,
+   "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
+  },
+  {
+   "id": "quake_near_site",
+   "title": "감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)",
+   "sev": 2,
+   "th": null,
+   "why": "원전·정유·해협 인근 지진은 공급 차질과 시설 안전 문제로 이어질 수 있다. 핵실험 위장 여부(북한·이란)도 함께 확인.",
+   "current": 1,
+   "threshold": 1,
+   "op": ">=",
+   "at": "2026-10-09T18:31:14Z"
   },
   {
    "id": "gdacs_red",
@@ -87,7 +98,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-09T16:15:42Z"
+   "at": "2026-10-09T18:31:14Z"
   }
  ]
 }
