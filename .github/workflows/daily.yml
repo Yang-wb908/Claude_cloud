@@ -55,6 +55,13 @@ jobs:
           python dashboard/pipeline/run.py briefs
           python dashboard/pipeline/run.py products
           python dashboard/build.py
+      - name: 새 경보 알림
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          BOARD_URL: ${{ secrets.BOARD_URL }}
+          NOTIFY_MIN_SEV: ${{ vars.NOTIFY_MIN_SEV }}
+        run: python dashboard/pipeline/run.py notify || echo "notify failed (continuing)"
       - name: 커밋
         run: |
           python dashboard/pipeline/run.py bundle || echo "bundle failed (continuing)"

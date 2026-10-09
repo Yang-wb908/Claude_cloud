@@ -89,20 +89,13 @@ jobs:
         run: |
           D=$(ls products/DIB-*.md 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
           [ -f dashboard/brief.html ] && npx --yes playwright@1.48.2 pdf --browser chromium "file://$PWD/dashboard/brief.html" "${D%.md}.pdf" || true
-      - name: Slack 전파 (SLACK_WEBHOOK_URL 설정 시)
-        if: ${{ env.HOOK != '' }}
+      - name: 새 경보 휴대폰·Slack 알림 (NTFY_TOPIC / SLACK_WEBHOOK_URL 설정 시, 새로 생긴 것만)
         env:
-          HOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          python3 - <<'EOF'
-          import json, os, re, urllib.request
-          d = json.load(open("dashboard/data/tripwires.json"))
-          fired = d.get("fired", [])
-          if not fired: raise SystemExit(0)
-          text = "*[상황판 트립와이어]* " + " · ".join(f"{t['title']} ({t['current']})" for t in fired[:6])
-          req = urllib.request.Request(os.environ["HOOK"], data=json.dumps({"text": text}).encode(), headers={"Content-Type": "application/json"})
-          urllib.request.urlopen(req, timeout=20)
-          EOF
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          BOARD_URL: ${{ secrets.BOARD_URL }}
+          NOTIFY_MIN_SEV: ${{ vars.NOTIFY_MIN_SEV }}
+        run: python dashboard/pipeline/run.py notify || echo "notify failed (continuing)"
       - name: 트립와이어 출력
         id: trip
         run: |
