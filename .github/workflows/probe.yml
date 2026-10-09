@@ -1,11 +1,11 @@
-name: 정형 데이터 점검 (FIRMS·GFW·EIA·FRED 단독 실행, 커밋 없음)
+name: 정형 데이터 점검 (FIRMS·GFW·EIA·FRED·공개 피드 단독 실행, 커밋 없음)
 
 # 키 연결·응답 형식을 빠르게 확인한다. 결과는 실행 요약과 아티팩트로만 남기고 저장소에는 커밋하지 않는다.
 on:
   workflow_dispatch:
     inputs:
       only:
-        description: "firms, feeds 중 하나만 (비우면 둘 다)"
+        description: "firms, feeds, openfeeds 중 하나만 (비우면 모두)"
         type: string
         default: ""
   push:
@@ -36,6 +36,7 @@ jobs:
         run: |
           if [ -z "$ONLY" ] || [ "$ONLY" = "feeds" ]; then python dashboard/pipeline/run.py feeds || true; fi
           if [ -z "$ONLY" ] || [ "$ONLY" = "firms" ]; then python dashboard/pipeline/run.py firms || true; fi
+          if [ -z "$ONLY" ] || [ "$ONLY" = "openfeeds" ]; then python dashboard/pipeline/run.py openfeeds || true; fi
           python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import json, os
           for f in ("dashboard/data/feeds.json", "dashboard/data/firms.json"):
@@ -49,6 +50,35 @@ jobs:
                       for e in (data.get("_errors") or [])[:4]: print(f"  - {e[:600]}")
               else:
                   print(f"- firms: alerts={d.get('n_alerts')} learning={d.get('learning')} errors={d.get('errors')[:3]}")
+          f = "dashboard/data/openfeeds.json"
+          if os.path.exists(f):
+              d = json.load(open(f))
+              print(f"- openfeeds summary: {d.get('summary')}")
+              for k in ("ioda", "poly", "quakes", "gdacs", "ofac"):
+                  v = d.get(k) or {}
+                  print(f"- {k}: ok={v.get('ok')} err={str(v.get('err') or '')[:500]}")
+              io = ((d.get("ioda") or {}).get("data") or {}).get("countries") or []
+              for r in io[:15]: print(f"  - IODA {r['code']} {r['name']} score={r['score']} th={r.get('th')} src={r.get('sources')}")
+              pm = (d.get("poly") or {}).get("data") or {}
+              print(f"  - Polymarket markets={pm.get('n_markets')}")
+              for sid, m in (pm.get("matched") or {}).items(): print(f"  - match {sid}: p={m['p']} vol={m['vol']} n={m['n_candidates']} | {m['q'][:140]}")
+              for m in (pm.get("top") or [])[:25]: print(f"  - top p={m['p']} vol={m['vol']} | {m['q'][:140]}")
+              for q in ((d.get("quakes") or {}).get("data") or [])[:6]: print(f"  - quake {q['d']} M{q['mag']} {q['place']} near={q['near']}")
+              for g in ((d.get("gdacs") or {}).get("data") or [])[:8]: print(f"  - gdacs {g['level']} {g['type']} {g['name']} {g['country']} {g['from']}..{g['to']}")
+              of = (d.get("ofac") or {}).get("data") or {}
+              print(f"  - OFAC total={of.get('n_total')} baseline={of.get('baseline')} new={of.get('n_new')}")
+          PY
+          python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY" || true
+          # 원 응답 형식 확인용 (IODA·GDACS 앞부분)
+          import time, requests
+          now = int(time.time())
+          for name, url, params in (("IODA raw", "https://api.ioda.inetintel.cc.gatech.edu/v2/outages/summary", {"from": now - 86400, "until": now, "entityType": "country"}),
+                                    ("GDACS raw", "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH", {"eventlist": "TC;EQ;FL", "alertlevel": "Orange;Red"})):
+              try:
+                  r = requests.get(url, params=params, timeout=40)
+                  print(f"- {name}: HTTP {r.status_code}"); print("```"); print(r.text[:1500]); print("```")
+              except Exception as e:
+                  print(f"- {name}: {e}")
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -56,4 +86,5 @@ jobs:
           path: |
             dashboard/data/feeds.json
             dashboard/data/firms.json
+            dashboard/data/openfeeds.json
           retention-days: 3

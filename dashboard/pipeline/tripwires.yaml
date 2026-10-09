@@ -173,3 +173,31 @@ tripwires:
     sev: 2
     why: "공급 부족 신호. 유가 상방 압력."
 
+  - id: ioda_outage
+    title: "감시 국가 인터넷 대규모 장애·차단 (IODA)"
+    metric: openfeeds.summary.ioda_alerts
+    op: ">="
+    value: 1
+    sev: 3
+    why: "정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인."
+  - id: ofac_vessels
+    title: "OFAC 신규 제재에 선박 포함 (그림자 선단 단속)"
+    metric: openfeeds.summary.ofac_new_vessels
+    op: ">="
+    value: 1
+    sev: 2
+    why: "유조선 지정은 이란·러시아·베네수엘라 원유 수출 단속 강화 신호. 운임·보험료와 해당 항로 통항량 변화를 같이 본다."
+  - id: quake_near_site
+    title: "감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)"
+    metric: openfeeds.summary.quakes_near
+    op: ">="
+    value: 1
+    sev: 2
+    why: "원전·정유·해협 인근 지진은 공급 차질과 시설 안전 문제로 이어질 수 있다. 핵실험 위장 여부(북한·이란)도 함께 확인."
+  - id: gdacs_red
+    title: "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)"
+    metric: openfeeds.summary.gdacs_red
+    op: ">="
+    value: 1
+    sev: 2
+    why: "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다."
