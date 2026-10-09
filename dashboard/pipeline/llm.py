@@ -29,10 +29,11 @@ log = logging.getLogger("pipeline.llm")
 def mode() -> str | None:
     if os.environ.get("PIPELINE_NO_CLAUDE"):
         return None
-    if os.environ.get("ANTHROPIC_API_KEY"):
-        return "api"
+    # 구독 토큰(Claude Pro/Max)이 있으면 그것을 먼저 쓴다: 같은 모델, API 크레딧 차감 없음. API 키는 토큰이 없을 때만.
     if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN") and shutil.which("claude"):
         return "cli"
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return "api"
     return None
 
 
@@ -40,8 +41,8 @@ def model_name() -> str:
     return os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"  # 워크플로가 빈 vars 를 넘겨도 기본값
 
 
-def cli_model_alias() -> str:
-    m = model_name()
+def cli_model_alias(model: str | None = None) -> str:
+    m = model or model_name()
     return "opus" if "opus" in m else "sonnet" if "sonnet" in m else "fable" if "fable" in m else m
 
 
@@ -65,8 +66,8 @@ def parse_json(text: str):
     return None
 
 
-def _run_cli(prompt: str, max_turns: int = 1, allowed_tools: list[str] | None = None, cwd: Path | None = None, timeout: int = 900) -> str | None:
-    cmd = ["claude", "-p", prompt, "--output-format", "json", "--max-turns", str(max_turns), "--model", cli_model_alias()]
+def _run_cli(prompt: str, max_turns: int = 1, allowed_tools: list[str] | None = None, cwd: Path | None = None, timeout: int = 900, model: str | None = None) -> str | None:
+    cmd = ["claude", "-p", prompt, "--output-format", "json", "--max-turns", str(max_turns), "--model", cli_model_alias(model)]
     if allowed_tools:
         cmd += ["--allowedTools", *allowed_tools]
     else:
@@ -110,7 +111,7 @@ def complete_json(system: str, user: str, schema: dict | None = None, max_tokens
         return parse_json(text)
     if m == "cli":
         prompt = system + "\n\n반드시 JSON 하나만 출력한다. 설명·마크다운·코드 펜스 없이 JSON 본문만." + (("\n\nJSON 스키마:\n" + json.dumps(schema, ensure_ascii=False)) if schema else "") + "\n\n" + user
-        return parse_json(_run_cli(prompt, max_turns=1))
+        return parse_json(_run_cli(prompt, max_turns=1, model=model))
     return None
 
 

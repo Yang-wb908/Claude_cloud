@@ -28,7 +28,7 @@ jobs:
           APIKEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           # 같은 step의 env는 if 조건에서 보이지 않으므로 셸에서 판정한다
-          if [ -n "$OAUTH" ] && [ -z "$APIKEY" ]; then npm install -g @anthropic-ai/claude-code && claude --version; else echo "구독 토큰 없음(또는 API 키 우선) → CLI 설치 생략"; fi
+          if [ -n "$OAUTH" ]; then npm install -g @anthropic-ai/claude-code && claude --version; else echo "구독 토큰 없음 → CLI 설치 생략 (API 키가 있으면 API 사용)"; fi
       - name: 레드팀 실행
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

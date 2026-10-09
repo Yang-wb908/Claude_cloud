@@ -18,7 +18,7 @@ python dashboard/pipeline/run.py enrich --no-claude   # 규칙 분류만
 python dashboard/pipeline/run.py collect --offline    # 캐시 재생
 ```
 
-환경변수: `ANTHROPIC_API_KEY`(API 키) 또는 `CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독 토큰, `claude setup-token`; `llm.py`가 `claude -p`로 호출), `PIPELINE_MODEL`(BLUF·레드팀·분석관, 기본 `claude-opus-5-5`), `PIPELINE_ENRICH_MODEL`(사건 정제, 기본 `claude-sonnet-5-5`), `PIPELINE_ENRICH_WORKERS`(정제 동시 배치 수, 기본 4), `PIPELINE_NO_CLAUDE=1`. 새 명령: `bayes`(징후 갱신 자동 뷰), `calib`(사례 보정), `redteam`, `simulate`(에이전트용 시뮬레이션 도우미), `products`.
+환경변수: `ANTHROPIC_API_KEY`(API 키) 또는 `CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독 토큰, `claude setup-token`; `llm.py`가 `claude -p`로 호출), `PIPELINE_MODEL`(BLUF·레드팀·분석관, 기본 `claude-opus-5-5`), `PIPELINE_ENRICH_MODEL`(사건 정제만 다른 모델로, 기본은 `PIPELINE_MODEL`), `PIPELINE_ENRICH_WORKERS`(정제 동시 배치 수, 기본 4), `PIPELINE_NO_CLAUDE=1`. 새 명령: `bayes`(징후 갱신 자동 뷰), `calib`(사례 보정), `redteam`, `simulate`(에이전트용 시뮬레이션 도우미), `products`.
 
 ## 산출물
 
@@ -117,3 +117,8 @@ python -m pytest tests/pipeline -q
 ### 피드 대체 수집
 
 `kind: rss` 수집원은 원 피드가 403/404이거나 비어 있으면 자동으로 Google News `site:<도메인> when:2d` 검색 RSS로 대체된다. 등급·도메인은 원 수집원 것을 그대로 쓰고, 상태표(`intel.auto.json.sources[].note`)와 부트스트랩/수집 요약에 사유가 남는다. 특정 수집원에서 끄려면 `no_fallback: true`.
+
+
+### 자격 증명 우선순위
+
+`CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독, `claude setup-token`)이 있으면 그것을 먼저 쓴다. 같은 모델을 구독 사용량으로 돌리므로 API 크레딧이 차감되지 않는다. 토큰이 없을 때만 `ANTHROPIC_API_KEY`(종량 과금)를 쓴다. 구독 모드에서는 이미 상황판에 오른 기사만 빼고 새 기사를 전부 정제하고, API 모드에서는 규칙 신호(전역·관련어·지명)가 있는 새 기사만 정제한다.

@@ -220,3 +220,19 @@ def test_claude_candidates_skip_known_and_noise():
         it["enr"] = enrich.rule_enrich(it)
     out = enrich.claude_candidates(items, known_urls={"https://x.com/d"})
     assert [it["id"] for it in out] == ["a", "c"]  # b: 잡음, d: 이미 상황판에 있음
+
+
+def test_subscription_token_takes_priority_over_api_key(monkeypatch):
+    import shutil as _sh
+    monkeypatch.delenv("PIPELINE_NO_CLAUDE", raising=False)
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k"); monkeypatch.setenv("CLAUDE_CODE_OAUTH_TOKEN", "t")
+    monkeypatch.setattr(llm.shutil, "which", lambda name: "/usr/bin/claude")
+    assert llm.mode() == "cli"
+    monkeypatch.setattr(llm.shutil, "which", lambda name: None)  # CLI 가 설치 안 됐으면 API 로
+    assert llm.mode() == "api"
+    from pipeline import enrich
+    mk = lambda i, t: {"id": i, "kind": "news", "title": t, "summary": "", "url": f"https://x.com/{i}", "published": "2026-10-08T00:00:00Z", "extra": {}}
+    items = [mk("a", "Houthi missile hits tanker"), mk("b", "Nobel prize for a poet"), mk("c", "Old story")]
+    for it in items:
+        it["enr"] = enrich.rule_enrich(it)
+    assert [it["id"] for it in enrich.claude_candidates(items, {"https://x.com/c"}, signal_only=False)] == ["a", "b"]  # 구독: 새 기사 전부

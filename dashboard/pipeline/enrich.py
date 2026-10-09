@@ -171,15 +171,24 @@ SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영�
 def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) -> dict[str, dict]:
     """Returns {item_id: refinement}. Silently returns {} when no credentials are available."""
     from . import llm
+    model = model or os.environ.get("PIPELINE_ENRICH_MODEL") or None
     if llm.mode() == "cli":
-        out: dict[str, dict] = {}
-        for i in range(0, len(items), batch):
-            chunk = items[i:i + batch]
+        from concurrent.futures import ThreadPoolExecutor
+        chunks = [items[i:i + batch] for i in range(0, len(items), batch)]
+
+        def one_cli(chunk: list[dict]) -> dict[str, dict]:
             lines = [{"id": it["id"], "source": it.get("extra", {}).get("domain", ""), "date": it["published"][:10], "title": it["title"], "summary": it.get("summary", "")[:400]} for it in chunk]
-            res = llm.complete_json(SYSTEM, "항목:\n" + json.dumps(lines, ensure_ascii=False), SCHEMA)
+            res = llm.complete_json(SYSTEM, "항목:\n" + json.dumps(lines, ensure_ascii=False), SCHEMA, model=model)
+            got = {}
             for r in (res or {}).get("items", []) if isinstance(res, dict) else []:
-                if r.get("id"):
-                    out[r["id"]] = r
+                if isinstance(r, dict) and r.get("id"):
+                    got[r["id"]] = r
+            return got
+
+        out: dict[str, dict] = {}
+        with ThreadPoolExecutor(max_workers=int(os.environ.get("PIPELINE_ENRICH_WORKERS") or 4)) as ex:
+            for got in ex.map(one_cli, chunks):
+                out.update(got)
         return out
     if llm.mode() != "api":
         return {}
@@ -188,7 +197,7 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     except ImportError:
         log.warning("anthropic SDK not installed; skipping Claude enrichment")
         return {}
-    model = model or os.environ.get("PIPELINE_ENRICH_MODEL") or "claude-sonnet-5-5"  # 하루 수백 회 호출되는 단계라 기본은 Sonnet
+    model = model or os.environ.get("PIPELINE_ENRICH_MODEL") or os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"
     client = anthropic.Anthropic()
     out: dict[str, dict] = {}
     chunks = [items[i:i + batch] for i in range(0, len(items), batch)]
@@ -234,7 +243,7 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     return out
 
 
-def claude_candidates(items: list[dict], known_urls: set[str] | None = None) -> list[dict]:
+def claude_candidates(items: list[dict], known_urls: set[str] | None = None, signal_only: bool = True) -> list[dict]:
     """Which news items are worth a Claude call: not already on the board (URL known from earlier runs) and with at least one
     rule signal (theater, security/economy keyword, or a gazetteer place). Pure noise and re-fetched stories are skipped,
     which cuts the per-run call volume by roughly 80-90% at steady state."""
@@ -245,6 +254,8 @@ def claude_candidates(items: list[dict], known_urls: set[str] | None = None) -> 
             continue
         if it.get("url") and it["url"] in known:
             continue
+        if not signal_only:
+            out.append(it); continue
         e = it.get("enr") or {}
         text = (it.get("title") or "") + " " + (it.get("summary") or "")[:400]
         if e.get("th") or e.get("at") or RELEVANT_KW.search(text):
@@ -257,8 +268,10 @@ def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] 
     for it in items:
         it["enr"] = rule_enrich(it)
         it["grade"] = grade_url(it.get("url", ""), "C3" if it.get("sid", "").startswith("gn_") else "C4")
-    if use_claude and (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("PIPELINE_FORCE_CLAUDE")):
-        news = claude_candidates(items, known_urls)
+    from . import llm
+    if use_claude and (llm.mode() is not None or os.environ.get("PIPELINE_FORCE_CLAUDE")):
+        # 구독(cli)은 추가 비용이 없으니 새 기사 전부, API(유료)는 규칙 신호가 있는 새 기사만
+        news = claude_candidates(items, known_urls, signal_only=(llm.mode() == "api"))
         log.info("claude candidates: %d of %d news items (known urls %d)", len(news), sum(1 for it in items if it.get("kind") in ("news", "report")), len(known_urls or ()))
         ref = claude_enrich(news)
         for it in news:
@@ -266,13 +279,17 @@ def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] 
             if not r:
                 continue
             e = it["enr"]
-            e["x"] = r["x"] or e["x"]
-            e["t"] = r["t"] or e["t"]
-            e["th"] = r["th"] if r["th"] is not None else e["th"]
-            e["p"] = r["p"] or e["p"]
-            if r["lat"] is not None and r["lon"] is not None:
-                e["at"] = [round(float(r["lon"]), 3), round(float(r["lat"]), 3)]
-            rel = int(r["rel"])
+            th_ok = SCHEMA["properties"]["items"]["items"]["properties"]["th"]["anyOf"][0]["enum"]
+            e["x"] = (r.get("x") or e["x"])[:140]
+            e["t"] = r.get("t") if r.get("t") in ("S", "G", "M", "A", "D", "E", "H", "X", "C") else e["t"]
+            e["th"] = r["th"] if r.get("th") in th_ok else e["th"]
+            e["p"] = r.get("p") or e["p"]
+            try:
+                if r.get("lat") is not None and r.get("lon") is not None and -90 <= float(r["lat"]) <= 90 and -180 <= float(r["lon"]) <= 180:
+                    e["at"] = [round(float(r["lon"]), 3), round(float(r["lat"]), 3)]
+                rel = int(r.get("rel", e["rel"]))
+            except (TypeError, ValueError):
+                rel = e["rel"]
             if e["th"] in REGION_TH and rel < 3 and not RELEVANT_KW.search(it.get("title", "") + " " + it.get("summary", "")[:400]):
                 rel = min(rel, 1)  # 지역형 전역: 문화·생활·스포츠처럼 안보·경제 키워드가 없는 항목은 사건으로 올리지 않는다
             e["rel"] = max(e["rel"], rel) if e["th"] not in REGION_TH else rel

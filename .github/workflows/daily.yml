@@ -33,7 +33,7 @@ jobs:
           APIKEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           # 같은 step의 env는 if 조건에서 보이지 않으므로 셸에서 판정한다
-          if [ -n "$OAUTH" ] && [ -z "$APIKEY" ]; then npm install -g @anthropic-ai/claude-code && claude --version; else echo "구독 토큰 없음(또는 API 키 우선) → CLI 설치 생략"; fi
+          if [ -n "$OAUTH" ]; then npm install -g @anthropic-ai/claude-code && claude --version; else echo "구독 토큰 없음 → CLI 설치 생략 (API 키가 있으면 API 사용)"; fi
       - name: 시계열 → 징후 갱신 → 오늘 예측 스냅숏 → 지난 예측 채점 → 백테스트 → 위험도 → 생산물 → 빌드
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -57,7 +57,7 @@ jobs:
         run: |
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add dashboard/data/theater_briefs.json dashboard/data/house_view_auto.json dashboard/data/shock_calib.json dashboard/data/tripwires.json dashboard/data/series.json dashboard/data/forecasts dashboard/data/scorecard.json dashboard/data/backtest.json dashboard/data/risk.json dashboard/data/risk_history.json dashboard/data/badges dashboard/data/products_index.json dashboard/data/warnings_pending.json products reports dashboard/brief.html
+          git add -A dashboard/data products reports dashboard/brief.html
           git diff --cached --quiet || (git commit -m "data: 일일 동기화 $(date -u +%Y-%m-%d) 예측·채점 [skip ci]" && git pull --rebase --autostash -X theirs origin "$GITHUB_REF_NAME" && git push)
       - name: 브리프 PDF
         continue-on-error: true
