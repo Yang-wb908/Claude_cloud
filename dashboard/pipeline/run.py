@@ -37,7 +37,7 @@ ENR = HERE / "cache" / "enriched.json"
 
 def load_sources() -> tuple[dict, list[dict]]:
     cfg = yaml.safe_load((HERE / "sources.yaml").read_text())
-    srcs = [s for s in cfg["sources"] if s.get("enabled", True)]
+    srcs = [s for s in cfg["sources"] if s.get("enabled", True) and s.get("kind") != "feed"]  # feed 는 별도 모듈이 수집
     return cfg.get("defaults", {}), srcs
 
 
@@ -47,7 +47,7 @@ def cmd_collect(args) -> None:
     defaults, srcs = load_sources()
     if args.only:
         cfg_all = yaml.safe_load((HERE / "sources.yaml").read_text())["sources"]
-        srcs = [s for s in cfg_all if s["id"] in args.only.split(",")]
+        srcs = [s for s in cfg_all if s["id"] in args.only.split(",") and s.get("kind") != "feed"]
     items, status = [], []
 
     def one(src):

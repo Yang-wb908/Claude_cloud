@@ -30,7 +30,7 @@ def registry():
     try:
         import yaml
         s = yaml.safe_load((B / "pipeline" / "sources.yaml").read_text())
-        return json.dumps([{k: v for k, v in x.items() if k in ("id", "name", "kind", "grade", "region", "tags", "enabled", "verify", "note", "url")} for x in s["sources"]], ensure_ascii=False)
+        return json.dumps([{k: v for k, v in x.items() if k in ("id", "name", "kind", "grade", "region", "tags", "enabled", "verify", "note", "url", "feed")} for x in s["sources"]], ensure_ascii=False)
     except Exception:
         return "[]"
 
