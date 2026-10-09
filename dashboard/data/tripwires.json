@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T09:36:51Z",
+ "generated": "2026-10-09T12:03:55Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +18,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 6,
+   "current": 7,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 53,
+   "current": 64,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 19,
+   "current": 30,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.65,
+   "current": 6.7,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +62,32 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 12,
+   "current": 14,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-09T09:36:51Z"
+   "at": "2026-10-09T12:03:55Z"
+  },
+  {
+   "id": "ioda_outage",
+   "title": "감시 국가 인터넷 대규모 장애·차단 (IODA)",
+   "sev": 3,
+   "th": null,
+   "why": "정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인.",
+   "current": 2,
+   "threshold": 1,
+   "op": ">=",
+   "at": "2026-10-09T12:03:55Z"
+  },
+  {
+   "id": "gdacs_red",
+   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
+   "sev": 2,
+   "th": null,
+   "why": "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다.",
+   "current": 2,
+   "threshold": 1,
+   "op": ">=",
+   "at": "2026-10-09T12:03:55Z"
   }
  ]
 }
