@@ -1,0 +1,428 @@
+{
+ "generated": "2026-10-09T14:51:42Z",
+ "adsb": {
+  "ok": true,
+  "at": "2026-10-09T14:51:42Z",
+  "data": {
+   "areas": {
+    "taiwan": {
+     "name": "대만해협·남중국해 북부",
+     "th": "taiwan",
+     "bbox": [
+      114.0,
+      18.0,
+      126.0,
+      27.5
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    },
+    "scs": {
+     "name": "남중국해",
+     "th": "scs",
+     "bbox": [
+      108.0,
+      4.0,
+      121.0,
+      18.0
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    },
+    "korea": {
+     "name": "한반도 주변",
+     "th": "korea",
+     "bbox": [
+      123.0,
+      33.0,
+      132.0,
+      40.5
+     ],
+     "n": 1,
+     "key": 1,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.2,
+       "lon": 127.25,
+       "alt": 10775,
+       "reg": "N591SR"
+      }
+     ]
+    },
+    "gulf": {
+     "name": "페르시아만·오만만",
+     "th": "iran",
+     "bbox": [
+      47.0,
+      22.0,
+      60.0,
+      30.5
+     ],
+     "n": 1,
+     "key": 1,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "YETI48",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.2,
+       "lon": 55.87,
+       "alt": 25025,
+       "reg": "19-46111"
+      }
+     ]
+    },
+    "redsea": {
+     "name": "홍해·아덴만",
+     "th": "yemen",
+     "bbox": [
+      32.0,
+      11.0,
+      46.0,
+      28.0
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    },
+    "emed": {
+     "name": "동지중해",
+     "th": "gaza",
+     "bbox": [
+      28.0,
+      30.5,
+      37.0,
+      37.5
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    },
+    "blacksea": {
+     "name": "흑해",
+     "th": "ukraine",
+     "bbox": [
+      27.0,
+      40.5,
+      42.0,
+      47.5
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    },
+    "baltic": {
+     "name": "발트해",
+     "th": "europe",
+     "bbox": [
+      9.0,
+      53.5,
+      30.5,
+      61.0
+     ],
+     "n": 2,
+     "key": 1,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {
+      "airlift": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "SVF807",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 57.73,
+       "lon": 11.84,
+       "alt": 13600,
+       "reg": "84007"
+      },
+      {
+       "flight": "RRR7209",
+       "t": "R135",
+       "role": "isr",
+       "lat": 57.11,
+       "lon": 26.5,
+       "alt": 33000,
+       "reg": "ZZ664"
+      }
+     ]
+    },
+    "carib": {
+     "name": "카리브해(베네수엘라 앞)",
+     "th": "carib",
+     "bbox": [
+      -75.0,
+      9.0,
+      -58.0,
+      18.5
+     ],
+     "n": 0,
+     "key": 0,
+     "base": null,
+     "runs": 0,
+     "status": "learning",
+     "by_role": {},
+     "ac": []
+    }
+   },
+   "n_surge": 0,
+   "total_mil": 4
+  }
+ },
+ "kev": {
+  "ok": true,
+  "at": "2026-10-09T14:51:42Z",
+  "data": {
+   "n_total": 1739,
+   "recent": [
+    {
+     "cve": "CVE-2015-5477",
+     "vendor": "ISC",
+     "product": "BIND",
+     "name": " ISC BIND Data Processing Errors Vulnerability",
+     "added": "2026-10-08",
+     "due": "2026-10-11",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2016-3081",
+     "vendor": "Apache",
+     "product": "Struts",
+     "name": "Apache Struts Command Injection Vulnerability",
+     "added": "2026-10-08",
+     "due": "2026-10-11",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2023-22894",
+     "vendor": "Strapi",
+     "product": "Strapi",
+     "name": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+     "added": "2026-10-08",
+     "due": "2026-10-11",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2021-3199",
+     "vendor": "ONLYOFFICE",
+     "product": "Docs",
+     "name": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+     "added": "2026-10-08",
+     "due": "2026-10-11",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2015-3306",
+     "vendor": "ProFTPD",
+     "product": "ProFTPD",
+     "name": "ProFTPD Improper Access Control Vulnerability",
+     "added": "2026-10-08",
+     "due": "2026-10-11",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-88779",
+     "vendor": "Citrix",
+     "product": "NetScaler",
+     "name": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+     "added": "2026-10-04",
+     "due": "2026-10-07",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-102490",
+     "vendor": "Zammad GmbH",
+     "product": "Zammad",
+     "name": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+     "added": "2026-10-02",
+     "due": "2026-10-05",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-102489",
+     "vendor": "Zammad GmbH",
+     "product": "Zammad",
+     "name": "Zammad GmbH Zammad Session Fixation Vulnerability",
+     "added": "2026-10-02",
+     "due": "2026-10-05",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-104286",
+     "vendor": "Fortinet",
+     "product": "FortiMail",
+     "name": "Fortinet FortiMail Path Traversal Vulnerability",
+     "added": "2026-10-01",
+     "due": "2026-10-04",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-76504",
+     "vendor": "Cisco",
+     "product": "Catalyst SD-WAN Manager",
+     "name": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
+     "added": "2026-09-30",
+     "due": "2026-10-03",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-86950",
+     "vendor": "Apple",
+     "product": "Multiple Products",
+     "name": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+     "added": "2026-09-29",
+     "due": "2026-10-13",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-88772",
+     "vendor": "Citrix",
+     "product": "NetScaler",
+     "name": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+     "added": "2026-09-27",
+     "due": "2026-09-30",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-88771",
+     "vendor": "Citrix",
+     "product": "NetScaler",
+     "name": "Citrix NetScaler Improper Input Validation Vulnerability",
+     "added": "2026-09-27",
+     "due": "2026-09-30",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-67279",
+     "vendor": "MikroTik",
+     "product": "RouterOS",
+     "name": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+     "added": "2026-09-25",
+     "due": "2026-09-28",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-65660",
+     "vendor": "Microsoft",
+     "product": "SharePoint",
+     "name": "Microsoft SharePoint Code Injection Vulnerability",
+     "added": "2026-09-25",
+     "due": "2026-09-28",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-87902",
+     "vendor": "WordPress",
+     "product": "Core",
+     "name": "WordPress Core Remote File Inclusion Vulnerability",
+     "added": "2026-09-25",
+     "due": "2026-09-28",
+     "ransom": false,
+     "edge": false
+    }
+   ],
+   "n_recent": 16,
+   "n_week": 8
+  }
+ },
+ "ransom": {
+  "ok": true,
+  "at": "2026-10-09T14:51:42Z",
+  "data": {
+   "n_week": 100,
+   "by_country": {
+    "US": 30,
+    "??": 16,
+    "DE": 7,
+    "BR": 5,
+    "IN": 4,
+    "CH": 4,
+    "ES": 4,
+    "AE": 2,
+    "MX": 2,
+    "EG": 2,
+    "SG": 2,
+    "CA": 2,
+    "TR": 2,
+    "IT": 2,
+    "NL": 2
+   },
+   "by_group": {
+    "qilin": 11,
+    "safepay": 10,
+    "UmBra": 9,
+    "SilentRansomGroup": 8,
+    "Eclipse": 6,
+    "incransom": 5,
+    "everest": 5,
+    "N0n": 4,
+    "lamashtu": 4,
+    "Panzer": 3
+   },
+   "kr": []
+  }
+ },
+ "summary": {
+  "adsb_surge": 0,
+  "kev_week": 8,
+  "kev_edge_3d": 0,
+  "ransom_week": 100,
+  "ransom_kr_week": 0,
+  "events": 0
+ }
+}

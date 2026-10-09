@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-09T12:03:40Z",
+ "generated": "2026-10-09T14:51:32Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
  "n_alerts": 0,
  "errors": [],
- "learning": 43,
+ "learning": 44,
  "sites": [
   {
    "id": "salavat",
@@ -221,13 +221,16 @@
    "lat": 51.48,
    "lon": 46.2,
    "r_km": 5,
-   "n": 0,
+   "n": 1,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 0,
+   "frp_max": 3.0,
    "base_frp": null,
-   "at": null,
-   "d": null,
+   "at": [
+    46.17143,
+    51.47029
+   ],
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -434,11 +437,11 @@
    "n": 26,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 5.9,
+   "frp_max": 7.1,
    "base_frp": null,
    "at": [
-    51.54871,
-    25.9028
+    51.5493,
+    25.90297
    ],
    "d": "2026-10-09",
    "status": "learning"
@@ -686,13 +689,16 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 0,
+   "n": 3,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 0,
+   "frp_max": 16.7,
    "base_frp": null,
-   "at": null,
-   "d": null,
+   "at": [
+    29.64793,
+    10.95584
+   ],
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -771,6 +777,24 @@
    "status": "learning"
   },
   {
+   "id": "punggye",
+   "n_ko": "풍계리 핵실험장",
+   "en": "Punggye-ri test site",
+   "th": "korea",
+   "kind": "nuclear",
+   "lat": 41.28,
+   "lon": 129.08,
+   "r_km": 5,
+   "n": 0,
+   "base_days": 0,
+   "base_n": null,
+   "frp_max": 0,
+   "base_frp": null,
+   "at": null,
+   "d": null,
+   "status": "learning"
+  },
+  {
    "id": "sohae",
    "n_ko": "서해 위성발사장",
    "en": "Sohae launch site",
@@ -821,11 +845,11 @@
     27.5,
     16.0
    ],
-   "n": 47,
+   "n": 65,
    "base_days": 0,
    "base_n": null,
-   "n_hi": 2,
-   "d": "2026-10-08",
+   "n_hi": 7,
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -838,11 +862,11 @@
     32.5,
     14.5
    ],
-   "n": 128,
+   "n": 279,
    "base_days": 0,
    "base_n": null,
-   "n_hi": 10,
-   "d": "2026-10-08",
+   "n_hi": 53,
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -855,11 +879,11 @@
     34.6,
     31.6
    ],
-   "n": 0,
+   "n": 1,
    "base_days": 0,
    "base_n": null,
    "n_hi": 0,
-   "d": null,
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -872,11 +896,11 @@
     35.9,
     33.6
    ],
-   "n": 0,
+   "n": 2,
    "base_days": 0,
    "base_n": null,
    "n_hi": 0,
-   "d": null,
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -889,11 +913,11 @@
     40.0,
     14.9
    ],
-   "n": 17,
+   "n": 80,
    "base_days": 0,
    "base_n": null,
-   "n_hi": 0,
-   "d": "2026-10-08",
+   "n_hi": 14,
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -940,10 +964,10 @@
     39.0,
     49.5
    ],
-   "n": 135,
+   "n": 243,
    "base_days": 0,
    "base_n": null,
-   "n_hi": 44,
+   "n_hi": 83,
    "d": "2026-10-09",
    "status": "learning"
   }
