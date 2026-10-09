@@ -17,8 +17,6 @@ on:
 permissions:
   contents: write
   issues: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: collect-${{ github.ref }}
@@ -124,20 +122,6 @@ jobs:
           name: raw-${{ github.run_id }}
           path: dashboard/pipeline/cache
           retention-days: 14
-      - name: Pages 아티팩트
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dashboard
-
-  deploy:
-    needs: collect
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
 
   tripwire-issues:
     needs: collect
@@ -152,18 +136,20 @@ jobs:
         run: |
           set -euo pipefail
           gh label create tripwire --color B60205 --description "자동 임계치 경보" 2>/dev/null || true
-          echo "$FIRED" | python3 -c '
-          import json, subprocess, sys
-          for t in json.load(sys.stdin):
-              title = f"[TRIPWIRE] {t[\"title\"]}"
+          python3 - <<'EOF'
+          import json, os, subprocess
+          BOARD = "https://claude.ai/artifact/VdTv11W2Zv8j55Rpf4aBGJ"
+          for t in json.loads(os.environ.get("FIRED") or "[]"):
+              title = f"[TRIPWIRE] {t['title']}"
               existing = subprocess.run(["gh", "issue", "list", "--label", "tripwire", "--state", "open", "--search", json.dumps(title), "--json", "number,title"], capture_output=True, text=True).stdout
-              body = (f"**현재값** {t[\"current\"]} (임계 {t[\"op\"]} {t[\"threshold\"]})\n\n**경보단계** {t[\"sev\"]}  **전역** {t.get(\"th\") or \"-\"}\n\n{t.get(\"why\",\"\")}\n\n"
-                      f"발동 시각 {t[\"at\"]} · 자동 생성. 상황이 끝나면 닫아 주세요. 상황판: https://claude.ai/artifact/VdTv11W2Zv8j55Rpf4aBGJ")
               hits = [i for i in json.loads(existing or "[]") if i["title"] == title]
-              if hits:
-                  subprocess.run(["gh", "issue", "comment", str(hits[0]["number"]), "--body", f"재확인 {t[\"at\"]}: 현재값 {t[\"current\"]}"], check=False)
-              else:
-                  labels = "tripwire" + (f",{t[\"th\"]}" if t.get("th") else "")
-                  subprocess.run(["gh", "label", "create", t["th"], "--color", "0E8A16", "--force"], check=False) if t.get("th") else None
-                  subprocess.run(["gh", "issue", "create", "--title", title, "--body", body, "--label", labels], check=False)
-          '
+              if hits:  # 같은 트립와이어가 열려 있으면 새 Issue 대신 댓글로 재확인만 남긴다
+                  subprocess.run(["gh", "issue", "comment", str(hits[0]["number"]), "--body", f"재확인 {t['at']}: 현재값 {t['current']}"], check=False)
+                  continue
+              body = (f"**현재값** {t['current']} (임계 {t['op']} {t['threshold']})\n\n**경보단계** {t['sev']}  **전역** {t.get('th') or '-'}\n\n{t.get('why', '')}\n\n"
+                      f"발동 시각 {t['at']} · 자동 생성. 상황이 끝나면 닫아 주세요. 상황판: {BOARD}")
+              labels = "tripwire" + (f",{t['th']}" if t.get("th") else "")
+              if t.get("th"):
+                  subprocess.run(["gh", "label", "create", t["th"], "--color", "0E8A16", "--force"], check=False)
+              subprocess.run(["gh", "issue", "create", "--title", title, "--body", body, "--label", labels], check=False)
+          EOF
