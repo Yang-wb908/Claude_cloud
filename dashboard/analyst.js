@@ -62,7 +62,7 @@ function scCardHtml(t){
   return `<div class="scard sev${sev}${on ? " on" : ""}" data-id="${t.id}">
     <input type="checkbox" ${on ? "checked" : ""} aria-label="${esc(t.n)} 선택">
     <div><b>${esc(t.n)}</b> <span class="en">${esc(t.en)}</span><small>${esc(t.d)}</small></div>
-    <span class="pv">${scState.p[t.id]}%</span>
+    <span class="pv">${scState.p[t.id]}%${(() => { const m = typeof polyMatch === "function" && polyMatch(t.id); return m ? `<small class="mkt" title="Polymarket: ${esc(m.q)}">시장 ${Math.round(m.p * 100)}%</small>` : ""; })()}</span>
     ${on ? `<div class="ctl"><label>확률 <input type="range" min="1" max="99" value="${scState.p[t.id]}" data-k="p"></label>
       <label>강도 <select data-k="k">${[0.5, 1, 1.5, 2].map(k => `<option value="${k}"${scState.k[t.id] == k ? " selected" : ""}>×${k}</option>`).join("")}</select></label>
       <span>지평 ${t.h}일 · 기본 ${t.p}%</span></div>` : ""}
@@ -101,6 +101,7 @@ function renderScenario(){
     <div class="block"><h3>결과: 확률 가중 충격 <span class="en">${sel.length} scenarios · horizon ${res ? res.H : 0}d</span></h3>
       ${res ? scTableHtml(res) : '<p class="note">시나리오를 하나 이상 선택하세요.</p>'}
       <p class="note">기대 변동 = Σ 확률×강도×조건부 평균. 분포는 시나리오 발생 여부와 조건부 충격, 기저 잡음을 함께 추출한 결과입니다. 금리는 bp, VIX는 지수 변화율입니다.</p></div>
+    ${typeof polyHtml === "function" ? polyHtml() : ""}
     <div class="block"><h3>시나리오 선택</h3>
       ${order.map(th => `<div class="scgroup"><div class="sch sev${scGroupSev(th)}"><span class="dot"></span>${esc(scGroupName(th))}</div>${byTh[th].map(scCardHtml).join("")}</div>`).join("")}</div>
     ${sel.length ? `<div class="block"><h3>선택 시나리오 상세</h3>${sel.map(t => `<div class="scdet"><b>${esc(t.n)}</b> <span class="meta">${esc(scGroupName(t.th))} · ${scState.p[t.id]}% · ×${scState.k[t.id]}</span>

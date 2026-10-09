@@ -74,6 +74,7 @@ function renderWatch(){
 let COV_ = typeof COVERAGE === "object" ? COVERAGE : null;
 let FEEDS_ = typeof FEEDS === "object" ? FEEDS : null;
 let FIRMS_ = typeof FIRMS === "object" ? FIRMS : null;
+let OPEN_ = typeof OPEN === "object" ? OPEN : null;
 const fmtSigned = (v, dp) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(dp == null ? 1 : dp);
 function feedNote(f, env){ return f && f.ok === false ? `<p class="note">${esc(f.err && f.err.indexOf("미설정") >= 0 ? env + " 이 저장소 Secrets 에 없어 수집하지 않았습니다." : "최근 수집 실패: " + (f.err || ""))}${f.at ? " 아래는 " + esc(f.at.slice(0, 16)) + "Z 값." : ""}</p>` : ""; }
 /* 위성 열점 (NASA FIRMS) — 운영 탭 */
@@ -89,6 +90,42 @@ function opsFirmsHtml(){
     <table class="shk"><thead><tr><th style="text-align:left">시설</th><th>최근 2일</th><th>평소</th><th>최대 FRP</th><th>상태</th></tr></thead><tbody>${rows.map(s => `<tr><td style="text-align:left">${esc(s.n_ko)}<small style="display:block;color:var(--faint)">${esc(TH[s.th] ? TH[s.th].name : s.th)}</small></td><td>${s.n}</td><td>${s.base_n == null ? "—" : Math.round(s.base_n)}</td><td>${s.frp_max ? Math.round(s.frp_max) + "MW" : "—"}</td><td>${st(s)}</td></tr>`).join("")}</tbody></table>
     ${(F.aois || []).length ? `<h4 style="margin:12px 0 4px">분쟁 지역 일일 열점</h4><table class="shk"><tbody>${F.aois.map(a => `<tr><td style="text-align:left">${esc(a.n_ko)}</td><td>${a.n}</td><td>${a.base_n == null ? "—" : "평소 " + Math.round(a.base_n)}</td><td>${st(a)}</td></tr>`).join("")}</tbody></table>` : ""}
     ${F.errors && F.errors.length ? `<p class="note">일부 요청 실패 ${F.errors.length}건</p>` : ""}</div>`;
+}
+/* 공개 피드 (IODA 인터넷 장애 · USGS/GDACS 재난 · OFAC 신규 제재) — 운영 탭 */
+function openNote(p, name){ return p && p.ok === false ? `<p class="note">${name ? esc(name) + " " : ""}최근 수집 실패: ${esc(p.err || "")}${p.at ? " · 아래는 " + esc(p.at.slice(0, 16)) + "Z 값" : ""}</p>` : ""; }
+function opsOpenHtml(){
+  const O = OPEN_;
+  if (!O) return `<div class="block"><h3>인터넷 장애 · 재난 · 신규 제재 <span class="en">IODA · USGS · GDACS · OFAC</span></h3><p class="note">자동 수집이 한 번 돌면 국가별 인터넷 장애, 감시 시설 인근 지진·재난 경보, OFAC 신규 제재 지정을 여기에 보여줍니다.</p></div>`;
+  const S = O.summary || {}, io = O.ioda || {}, qk = O.quakes || {}, gd = O.gdacs || {}, of = O.ofac || {};
+  const hot = (S.ioda_alerts || 0) + (S.quakes_near || 0) + (S.gdacs_red || 0) + (S.ofac_new_vessels || 0);
+  const ioRows = ((io.data || {}).countries || []).slice(0, 10);
+  const qs = (qk.data || []).slice(0, 6), gs = (gd.data || []).slice(0, 6);
+  const od = of.data || {};
+  const GK = {TC: "열대성 폭풍", EQ: "지진", FL: "홍수", VO: "화산", DR: "가뭄", WF: "산불"};
+  const tag = (txt, c) => `<span class="chk" style="color:var(${c});border-color:var(${c})">${txt}</span>`;
+  return `<div class="block ${hot ? "sev4" : "sev2"}"><h3>인터넷 장애 · 재난 · 신규 제재 <span class="en">IODA · USGS · GDACS · OFAC · ${esc((O.generated || "").slice(5, 16).replace("T", " "))}Z</span></h3>
+    <span class="meta">6시간마다 키 없이 받는 공개 피드. 경보 기준을 넘은 항목은 사건 목록에도 올라갑니다.</span>
+    <h4 style="margin:10px 0 4px">국가 인터넷 장애 <small class="en">IODA 24시간 · 점수 높을수록 심각</small></h4>${openNote(io, "IODA")}
+    ${ioRows.length ? `<table class="shk"><thead><tr><th style="text-align:left">국가</th><th>점수</th><th>신호</th><th>상태</th></tr></thead><tbody>${ioRows.map(r => `<tr><td style="text-align:left"><a href="https://ioda.inetintel.cc.gatech.edu/country/${esc(r.code)}" target="_blank" rel="noopener">${esc(r.name)}</a>${r.th && TH[r.th] ? ` <small>${esc(TH[r.th].name.split("·")[0])}</small>` : ""}</td><td>${Math.round(r.score).toLocaleString()}</td><td><small>${Object.entries(r.sources || {}).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([k]) => esc(k)).join(" · ")}</small></td><td>${r.alert ? tag("경보", "--s5") : r.th ? tag("감시", "--s2") : "<small>—</small>"}</td></tr>`).join("")}</tbody></table>` : `<p class="note">최근 24시간 감지된 국가 단위 장애 없음.</p>`}
+    <h4 style="margin:12px 0 4px">지진 · 재난 경보 <small class="en">USGS M5+ · GDACS 주황/적색</small></h4>${openNote(qk, "USGS")}${openNote(gd, "GDACS")}
+    ${qs.length || gs.length ? `<ul class="wl">${qs.map(q => `<li><b>M${q.mag.toFixed(1)}</b> ${esc(q.place)} <small>${esc(q.d)}${q.near ? " · 감시 대상 " + esc(q.near) : ""}${q.tsunami ? " · 쓰나미" : ""} · <a href="${esc(q.url)}" target="_blank" rel="noopener">USGS</a></small></li>`).join("")}${gs.map(g => `<li>${tag(g.level === "red" ? "적색" : "주황", g.level === "red" ? "--s5" : "--s4")} <b>${esc(GK[g.type] || g.type)}</b> ${esc(g.name)} <small>${esc(g.country)} · ${esc(g.from)}${g.to && g.to !== g.from ? "~" + esc(g.to) : ""}${g.sev ? " · " + esc(g.sev) : ""} · <a href="${esc(g.url)}" target="_blank" rel="noopener">GDACS</a></small></li>`).join("")}</ul>` : `<p class="note">기준을 넘은 지진·재난 경보 없음.</p>`}
+    <h4 style="margin:12px 0 4px">OFAC 신규 제재 지정 <small class="en">SDN 목록 비교 · 전체 ${od.n_total ? od.n_total.toLocaleString() : "—"}건</small></h4>${openNote(of, "OFAC")}
+    ${od.baseline ? `<p class="note">첫 수집이라 기준 목록만 저장했습니다. 다음 수집부터 새로 추가된 개인·기업·선박을 보여줍니다.</p>` : od.n_new ? `<p class="meta">${esc(od.d || "")} 신규 ${od.n_new}건${od.new_vessels ? ` · 선박 ${od.new_vessels}척` : ""}${od.removed ? ` · 해제 ${od.removed}건` : ""} · ${Object.entries(od.by_program || {}).slice(0, 5).map(([k, v]) => esc(k) + " " + v).join(", ")}</p><ul class="wl">${(od.new || []).slice(0, 12).map(n => `<li><b>${esc(n.name)}</b> <small>${esc(n.type === "entity" ? "단체·기업" : n.type === "individual" ? "개인" : n.type === "vessel" ? "선박" + (n.vess_flag ? " · " + n.vess_flag : "") : n.type)} · ${esc(n.program)}</small></li>`).join("")}</ul>` : `<p class="note">지난 수집 이후 새 지정 없음.</p>`}
+  </div>`;
+}
+/* 예측시장 (Polymarket) — 시나리오 탭 */
+function polyMatch(id){ const m = OPEN_ && OPEN_.poly && OPEN_.poly.data && OPEN_.poly.data.matched; return m ? m[id] : null; }
+function polyHtml(){
+  const P = OPEN_ && OPEN_.poly; if (!P) return "";
+  const d = P.data || {}, matched = d.matched || {};
+  const scn = typeof SCN_ === "object" && SCN_ ? SCN_.templates : [];
+  const rows = scn.filter(t => matched[t.id]);
+  const gap = (t, m) => { const ours = typeof scState === "object" ? scState.p[t.id] : t.p, g = ours - Math.round(m.p * 100); return `<span style="color:${Math.abs(g) >= 20 ? "var(--s5)" : Math.abs(g) >= 10 ? "var(--s4)" : "var(--ink)"}">${g > 0 ? "+" : ""}${g}%p</span>`; };
+  return `<div class="block sev3"><h3>예측시장 비교 <span class="en">Polymarket · 시장 ${d.n_markets || 0}개</span></h3>${openNote(P, "Polymarket")}
+    <span class="meta">돈이 걸린 시장 확률과 우리 시나리오 확률을 나란히 봅니다. 질문 문장·마감일이 시나리오와 정확히 같지 않으니 차이가 크면 질문 원문을 먼저 확인하세요. 거래량이 작은 시장은 흔들림이 큽니다.</span>
+    ${rows.length ? `<table class="shk"><thead><tr><th style="text-align:left">시나리오</th><th>우리</th><th>시장</th><th>차이</th><th style="text-align:left">시장 질문</th></tr></thead><tbody>${rows.map(t => { const m = matched[t.id]; return `<tr><td style="text-align:left;min-width:8em">${esc(t.n)}</td><td>${typeof scState === "object" ? scState.p[t.id] : t.p}%</td><td><b>${Math.round(m.p * 100)}%</b>${m.chg1d ? ` <small>${m.chg1d > 0 ? "+" : ""}${Math.round(m.chg1d * 100)}</small>` : ""}</td><td>${gap(t, m)}</td><td style="text-align:left;white-space:normal;min-width:12em"><small><a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.q)}</a>${m.inverted ? " (반대 방향)" : ""} · 마감 ${esc(m.end || "—")} · $${Math.round(m.vol).toLocaleString()}</small></td></tr>`; }).join("")}</tbody></table>` : `<p class="note">시나리오와 맞는 시장을 찾지 못했습니다.</p>`}
+    ${(d.top || []).length ? `<details><summary>지정학·거시 관련 상위 시장 ${d.top.length}개</summary><ul class="wl">${d.top.map(m => `<li><b>${Math.round(m.p * 100)}%</b> <a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.q)}</a> <small>마감 ${esc(m.end || "—")} · $${Math.round(m.vol).toLocaleString()}</small></li>`).join("")}</ul></details>` : ""}
+  </div>`;
 }
 /* 선박 통항 (Global Fishing Watch) — 해협 탭 */
 function gfwHtml(){
@@ -140,5 +177,5 @@ function opsBlufHtml(){
     ${changes7.length ? `<ul class="wl">${changes7.slice(0, 4).map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")}</small></li>`).join("")}</ul>` : ""}
     <div class="btnrow"><button class="thchip" data-tab="p-watch">당직 →</button><button class="thchip" data-tab="p-pir">요구 →</button><button class="thchip" data-tab="p-prod">생산물 →</button></div></div>`;
 }
-function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
+function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsOpenHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-tab]"); if (b && b.dataset.tab && document.getElementById(b.dataset.tab) && !b.classList.contains("tab") && !b.classList.contains("lnk")) setTab(b.dataset.tab); });

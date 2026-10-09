@@ -47,11 +47,15 @@ COUNTRY = {
     "EG": ("gaza", 30.8, 26.8), "TR": ("lebanon", 35.2, 39.0), "JO": ("gaza", 36.2, 30.6), "AE": ("iran", 53.8, 23.4), "QA": ("iran", 51.2, 25.4),
     "OM": ("iran", 55.9, 21.5), "KW": ("iran", 47.5, 29.3), "BH": ("iran", 50.6, 26.0), "GE": ("ukraine", 43.4, 42.3), "AM": ("ukraine", 45.0, 40.1),
     "AZ": ("ukraine", 47.6, 40.1), "KE": ("somalia", 37.9, -0.02), "UG": ("drc", 32.3, 1.4), "CF": ("drc", 20.9, 6.6), "MZ": (None, 35.5, -18.7),
+    "TN": ("sahel", 9.5, 33.9), "DZ": ("sahel", 1.7, 28.0), "HN": ("carib", -86.2, 15.2), "NI": ("carib", -85.2, 12.9), "GT": ("namerica", -90.2, 15.8),
 }
 CHOKE_PTS = {"호르무즈": (56.5, 26.4), "바브엘만데브": (43.4, 12.6), "수에즈": (32.5, 30.0), "말라카": (103.8, 1.2), "대만해협": (120.0, 24.0),
              "보스포루스": (29.0, 41.1), "파나마": (-79.9, 9.1), "대한해협": (129.0, 34.3), "덴마크 해협": (12.6, 55.7)}
 IODA_API = "https://api.ioda.inetintel.cc.gatech.edu/v2"
-IODA_MIN_SCORE = 1000.0     # 국가 요약 점수(overall) 이 이상만 경보 후보 — 첫 실측 후 조정
+# 2026-10-09 첫 실측: 평시에도 gtr(구글 트래픽) 단독 이상치가 수천 점(리투아니아 4.5천, 아이티 6천)씩 나온다.
+# 인프라 신호(BGP·핑) 가 IODA_MIN_SCORE 이상이거나, 어떤 신호든 IODA_ANY_SCORE 이상일 때만 경보.
+IODA_MIN_SCORE = 2000.0
+IODA_ANY_SCORE = 20000.0
 POLY_API = "https://gamma-api.polymarket.com"
 USGS_FEED = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson"
 GDACS_API = "https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH"
@@ -101,7 +105,8 @@ def fetch_ioda(now: datetime) -> dict:
     for r in rows:
         th = COUNTRY.get(r["code"], (None,))[0]
         r["th"] = th
-        r["alert"] = bool(th) and r["score"] >= IODA_MIN_SCORE
+        infra = max([v for k, v in r["sources"].items() if not k.startswith("gtr")], default=0)
+        r["alert"] = bool(th) and (infra >= IODA_MIN_SCORE or r["score"] >= IODA_ANY_SCORE)
     return {"window_h": 24, "countries": rows[:30], "n_alerts": sum(1 for r in rows if r["alert"])}
 
 
@@ -184,7 +189,8 @@ def fetch_poly() -> dict:
     markets = sorted({m["q"]: m for m in markets}.values(), key=lambda m: -m["vol"])  # 두 경로에서 겹친 질문 제거
     mapping = (yaml.safe_load((HERE / "prediction_map.yaml").read_text()) or {}).get("scenarios", {})
     geo_rx = re.compile(r"Iran|Israel|Russia|Ukraine|China|Taiwan|North Korea|Venezuela|Hormuz|Houthi|Gaza|Hamas|Hezbollah|war|ceasefire|invade|strike|NATO|nuclear|tariff|Fed|recession|oil|election", re.I)
-    top = [m for m in markets if geo_rx.search(m["q"])][:25]
+    noise = re.compile(r"win the 20\d\d (US |U\.S\. )?(Presidential|Democratic|Republican)|nomination|Super Bowl|NBA|NFL|Bitcoin|Ethereum", re.I)
+    top = [m for m in markets if geo_rx.search(m["q"]) and not noise.search(m["q"]) and 0.02 <= m["p"] <= 0.98][:25]
     return {"n_markets": len(markets), "matched": match_scenarios(markets, mapping), "top": top}
 
 
@@ -244,7 +250,10 @@ def parse_gdacs(payload: dict) -> list[dict]:
             lon, lat = float(g[0]), float(g[1])
         except (TypeError, ValueError, IndexError):
             lon = lat = None
-        out.append({"type": p.get("eventtype"), "name": p.get("name") or p.get("eventname") or "", "level": lvl, "country": p.get("country") or "",
+        iso2 = [c.get("iso2") for c in (p.get("affectedcountries") or []) if isinstance(c, dict) and c.get("iso2")]
+        country = (p.get("country") or "").strip()
+        out.append({"type": p.get("eventtype"), "name": p.get("name") or p.get("eventname") or "", "level": lvl, "iso2": iso2,
+                    "country": country if len(country) <= 60 else country[:57].rsplit(",", 1)[0] + " 등",
                     "iso3": p.get("iso3") or "", "from": (p.get("fromdate") or "")[:10], "to": (p.get("todate") or "")[:10], "lon": lon, "lat": lat,
                     "sev": sev.get("severitytext") or "", "url": (url.get("report") if isinstance(url, dict) else url) or "https://www.gdacs.org/",
                     "id": f"{p.get('eventtype')}{p.get('eventid')}-{p.get('episodeid')}"})
@@ -262,10 +271,10 @@ def hazard_events(quakes: list[dict], gdacs: list[dict], now: datetime) -> list[
         x = f"규모 {q['mag']:.1f} 지진: {q['place']}" + (f" (감시 대상 {q['near']} 거리)" if q["near"] else "") + (" · 쓰나미 경보" if q.get("tsunami") else "")
         ev.append(_ev(q["d"], "X", [round(q["lon"], 2), round(q["lat"], 2)], nearest_theater(q["lon"], q["lat"]), q["place"][:40], x, q["url"], "A1", "usgs", f"usgs-{q['url'][-12:]}", 3 if q["near"] or q["mag"] >= 7 else 2))
     for g in gdacs:
-        if (g["to"] or g["from"]) < cut or g["lon"] is None:
+        if (g["to"] or g["from"]) < cut or g["lon"] is None or g["type"] == "DR":
             continue
         x = f"GDACS {'적색' if g['level'] == 'red' else '주황'} 경보 · {GDACS_KO.get(g['type'], g['type'])} {g['name']} ({g['country']}) {g['sev']}".strip()
-        ev.append(_ev(g["to"] or g["from"], "X", [round(g["lon"], 2), round(g["lat"], 2)], nearest_theater(g["lon"], g["lat"]), g["country"][:40], x, g["url"], "A2", "gdacs", f"gdacs-{g['id']}", 3 if g["level"] == "red" else 2))
+        ev.append(_ev(g["to"] or g["from"], "X", [round(g["lon"], 2), round(g["lat"], 2)], next((COUNTRY[c][0] for c in g.get("iso2", []) if c in COUNTRY and COUNTRY[c][0]), None) or nearest_theater(g["lon"], g["lat"]), g["country"][:40], x, g["url"], "A2", "gdacs", f"gdacs-{g['id']}", 3 if g["level"] == "red" else 2))
     return ev
 
 
@@ -338,7 +347,7 @@ def run(dash: Path, now: datetime | None = None) -> dict:
     doc = {"generated": now.strftime("%Y-%m-%dT%H:%M:%SZ")}
     events = []
     jobs = (("ioda", lambda: fetch_ioda(now)), ("poly", fetch_poly), ("quakes", lambda: parse_quakes(_get_json(USGS_FEED), now)),
-            ("gdacs", lambda: parse_gdacs(_get_json(GDACS_API, {"eventlist": "TC;EQ;FL;VO;DR;WF", "alertlevel": "Orange;Red",
+            ("gdacs", lambda: parse_gdacs(_get_json(GDACS_API, {"eventlist": "TC;EQ;FL;VO;WF", "alertlevel": "Orange;Red",
                                                                    "fromDate": (now - timedelta(days=10)).strftime("%Y-%m-%d"), "toDate": now.strftime("%Y-%m-%d")}))),
             ("ofac", lambda: fetch_ofac(dash, now)))
     for name, fn in jobs:

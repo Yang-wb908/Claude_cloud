@@ -128,8 +128,20 @@ def dib(dash: Path, now: datetime | None = None) -> tuple[str, str]:
         ei = ((fe.get("eia") or {}).get("data") or {})
         if ei.get("WCESTUS1") and ei["WCESTUS1"].get("chg_w") is not None:
             sens.append(f"- 미 상업 원유 재고 {ei['WCESTUS1']['v'] / 1000:.1f}M배럴, 전주 대비 {ei['WCESTUS1']['chg_w'] / 1000:+.1f}M ({ei['WCESTUS1']['d']}, EIA)")
+    op = _load(dash / "data" / "openfeeds.json", None)
+    if op:
+        io = ((op.get("ioda") or {}).get("data") or {}).get("countries") or []
+        sens += [f"- 인터넷 장애: {r['name']} IODA 점수 {r['score']:.0f}" for r in io if r.get("alert")][:4]
+        sens += [f"- {'적색' if g['level'] == 'red' else '주황'} 재난 경보: {g['name']} ({g['country']})" for g in ((op.get("gdacs") or {}).get("data") or []) if g.get("type") != "DR"][:3]
+        sens += [f"- 지진 M{q['mag']:.1f} {q['place']}" + (f" (감시 대상 {q['near']})" if q.get("near") else "") for q in ((op.get("quakes") or {}).get("data") or [])[:2]]
+        of = (op.get("ofac") or {}).get("data") or {}
+        if of.get("n_new"):
+            sens.append(f"- OFAC 신규 제재 {of['n_new']}건 (선박 {of.get('new_vessels', 0)}척): " + ", ".join(f"{k} {v}" for k, v in list((of.get("by_program") or {}).items())[:4]))
+        mt = ((op.get("poly") or {}).get("data") or {}).get("matched") or {}
+        if mt:
+            sens.append("- 예측시장(Polymarket): " + " · ".join(f"{k} {round(v['p'] * 100)}%" for k, v in list(mt.items())[:6]))
     if sens:
-        L += ["", "### 센서·정형 데이터 (FIRMS·GFW·FRED·EIA)", ""] + sens
+        L += ["", "### 센서·정형 데이터 (FIRMS·GFW·FRED·EIA·IODA·GDACS·OFAC·Polymarket)", ""] + sens
     rt = _load(dash / "data" / "redteam.json", None)
     if rt and rt.get("judgments"):
         L += ["", f"## 8b. 레드팀 ({rt.get('week')})", ""] + [f"- **{r['id']}** 대안 {round((r.get('p_alt') or 0) * 100)}%: {r['counter'][:200]}" for r in rt["judgments"][:5]]

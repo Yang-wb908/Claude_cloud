@@ -14,13 +14,14 @@ NOW = datetime(2026, 10, 9, 12, tzinfo=UTC)
 def test_parse_ioda_summary_and_alert_gate(monkeypatch):
     payload = {"data": [{"entity": {"code": "ir", "name": "Iran"}, "scores": {"overall": 52000.5, "bgp": 300, "ping-slash24": 51700}, "event_cnt": 3},
                         {"entity": {"code": "FR", "name": "France"}, "scores": {"overall": 20}},
-                        {"entity": {"code": "ZZ", "name": "Nowhere"}, "scores": {"overall": 99999}}, "junk"]}
+                        {"entity": {"code": "ZZ", "name": "Nowhere"}, "scores": {"overall": 99999}},
+                        {"entity": {"code": "LT", "name": "Lithuania"}, "scores": {"overall": 4540, "gtr.sarima": 4540}}, "junk"]}
     rows = of.parse_ioda_summary(payload)
-    assert [r["code"] for r in rows] == ["ZZ", "IR", "FR"] and rows[1]["sources"]["ping-slash24"] == 51700
+    assert [r["code"] for r in rows] == ["ZZ", "IR", "LT", "FR"] and rows[1]["sources"]["ping-slash24"] == 51700
     monkeypatch.setattr(of, "_get_json", lambda *a, **k: payload)
     d = of.fetch_ioda(NOW)
     alerts = [r["code"] for r in d["countries"] if r["alert"]]
-    assert alerts == ["IR"] and d["n_alerts"] == 1  # 감시 국가가 아니면(ZZ) 점수가 커도 경보 아님, FR 은 점수 미달
+    assert alerts == ["IR"] and d["n_alerts"] == 1  # 감시 국가가 아니면(ZZ) 경보 아님, 구글 트래픽 단독(LT)·저점수(FR)도 아님
     ev = of.ioda_events(d, NOW)
     assert ev[0]["th"] == "iran" and ev[0]["t"] == "D" and "ping-slash24" in ev[0]["x"] and ev[0]["s"].endswith("IR?d=2026-10-09")
 
