@@ -131,7 +131,7 @@ def parse_gfw(payload: dict, field: str) -> dict[str, float]:
 
 def _gfw_report(token: str, dataset: str, bbox: list[float], start: str, end: str, flt: str | None = None) -> dict:
     params = [("spatial-resolution", "LOW"), ("temporal-resolution", "DAILY"), ("datasets[0]", dataset), ("date-range", f"{start},{end}"),
-              ("format", "JSON"), ("spatial-aggregation", "true")]
+              ("format", "JSON"), ("spatial-aggregation", "true"), ("group-by", "FLAG")]  # group-by 필수 → 국적별로 받아 합산
     if flt:
         params.append(("filters[0]", flt))
     for attempt in range(4):
