@@ -43,7 +43,7 @@ AOIS = {
 }
 ROLE = [  # (role, type-code regex) — ICAO type designators seen on adsb.lol
     ("isr", r"^(R135|RC35|E3TF|E3CF|E8|E6|E737|E2|P8|P3|GLF5|GLEX|Q4|RQ4|GLHK|Q9|MQ9|U2|EP3|C30J-ISR|BE35|DHC8-ISR|CL60)$"),
-    ("tanker", r"^(K35R|K35E|KC10|KC46|K46|A332|MRTT|A310|KC30|K767|IL78|KC39)$"),
+    ("tanker", r"^(K35R|K35E|KC10|KC46|K46|B762|A332|MRTT|A310|KC30|K767|IL78|KC39)$"),  # B762 군용 = KC-46·KC-767
     ("bomber", r"^(B52|B1|B2|TU95|TU22|TU160|H6)$"),
     ("airlift", r"^(C17|C5M|C5|C130|C30J|A400|IL76|KC390|C2)$"),
 ]
