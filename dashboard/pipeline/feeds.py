@@ -96,6 +96,10 @@ CHOKES = {  # [west, south, east, north]
     "malacca": ("싱가포르 해협", [103.4, 1.0, 104.4, 1.4]), "taiwan": ("대만해협", [118.8, 22.8, 121.0, 25.6]), "bosporus": ("보스포루스", [28.9, 40.95, 29.2, 41.25]),
     "danish": ("외레순·덴마크 해협", [12.4, 55.4, 12.9, 56.2]), "gulf_finland": ("핀란드만(바인들로)", [25.5, 59.6, 28.7, 60.3]), "panama": ("파나마 운하 입구", [-79.95, 8.8, -79.4, 9.45]),
     "korea_strait": ("대한해협", [128.5, 33.9, 129.8, 35.0]),
+    # 그림자 선단 선박 간 환적(STS) 거점
+    "fujairah": ("푸자이라·오만만 정박지(STS)", [56.2, 24.8, 57.0, 25.7]),
+    "eopl": ("말레이시아 동부 해역 EOPL(STS)", [104.2, 1.15, 105.1, 1.75]),
+    "laconian": ("그리스 라코니아만(STS)", [22.4, 36.3, 23.2, 36.9]),
 }
 
 
@@ -129,9 +133,35 @@ def parse_gfw(payload: dict, field: str) -> dict[str, float]:
     return by
 
 
-def _gfw_report(token: str, dataset: str, bbox: list[float], start: str, end: str, flt: str | None = None) -> dict:
-    params = [("spatial-resolution", "LOW"), ("temporal-resolution", "DAILY"), ("datasets[0]", dataset), ("date-range", f"{start},{end}"),
-              ("format", "JSON"), ("spatial-aggregation", "true"), ("group-by", "FLAG")]  # group-by 필수 → 국적별로 받아 합산
+def parse_dark_cells(payload: dict, field: str = "detections", top: int = 80) -> list[list]:
+    """격자(spatial-aggregation=false) 응답 → [[lon, lat, 척수, 마지막 날짜], ...] 척수 많은 순. 위치 없는 행은 건너뛴다."""
+    cells: dict[tuple, list] = {}
+    entries = (payload or {}).get("entries", payload if isinstance(payload, list) else [])
+    for ent in entries or []:
+        lists = [[ent]] if isinstance(ent, dict) and ("lat" in ent or "latitude" in ent) else (ent.values() if isinstance(ent, dict) else [ent])
+        for rows in lists:
+            if not isinstance(rows, list):
+                continue
+            for r in rows:
+                if not isinstance(r, dict):
+                    continue
+                try:
+                    lat, lon = float(r.get("lat", r.get("latitude"))), float(r.get("lon", r.get("longitude")))
+                    v = float(r.get(field) or 0)
+                except (TypeError, ValueError):
+                    continue
+                if v <= 0:
+                    continue
+                k = (round(lon, 2), round(lat, 2))
+                d = str(r.get("date") or r.get("timestamp") or "")[:10]
+                c = cells.setdefault(k, [k[0], k[1], 0, ""])
+                c[2] += int(round(v)); c[3] = max(c[3], d)
+    return sorted(cells.values(), key=lambda c: (c[2], c[3]), reverse=True)[:top]
+
+
+def _gfw_report(token: str, dataset: str, bbox: list[float], start: str, end: str, flt: str | None = None, cells: bool = False) -> dict:
+    params = [("spatial-resolution", "HIGH" if cells else "LOW"), ("temporal-resolution", "DAILY"), ("datasets[0]", dataset), ("date-range", f"{start},{end}"),
+              ("format", "JSON"), ("spatial-aggregation", "false" if cells else "true"), ("group-by", "FLAG")]  # group-by 필수 → 국적별로 받아 합산
     if flt:
         params.append(("filters[0]", flt))
     for attempt in range(4):
@@ -163,11 +193,15 @@ def fetch_gfw(token: str, now: datetime) -> dict:
         try:
             pres = parse_gfw(_gfw_report(token, "public-global-presence:latest", bbox, start, end), "hours")
             sar_all = parse_gfw(_gfw_report(token, "public-global-sar-presence:latest", bbox, start, end), "detections")
-            try:
-                dark = parse_gfw(_gfw_report(token, "public-global-sar-presence:latest", bbox, start, end, "matched='false'"), "detections")
+            dark, pts = {}, []
+            try:  # 암흑 선박(AIS 짝 없는 레이더 탐지)은 격자로 받아 날짜별 합계와 위치를 함께 얻는다
+                raw = _gfw_report(token, "public-global-sar-presence:latest", bbox, start, end, "matched='false'", cells=True)
+                dark = parse_gfw(raw, "detections")
+                week = (now - timedelta(days=8)).strftime("%Y-%m-%d")
+                pts = [c for c in parse_dark_cells(raw) if not c[3] or c[3] >= week]
             except Exception:  # noqa: BLE001 - 필터 미지원이면 암흑 선박 수만 비운다
-                dark = {}
-            out[cid] = {"n": name, "bbox": bbox, **summarize_gfw(pres, sar_all, dark)}
+                pass
+            out[cid] = {"n": name, "bbox": bbox, **summarize_gfw(pres, sar_all, dark), "dark_pts": pts}
         except Exception as e:  # noqa: BLE001
             errs.append(f"{cid}: {type(e).__name__}: {str(e).replace(token, '***')[:600 if not errs else 120]}")
     if not out:

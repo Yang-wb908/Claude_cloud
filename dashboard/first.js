@@ -120,6 +120,9 @@ function sensorPoints(){
     ((O.gdacs || {}).data || []).filter(g => g.type !== "DR" && g.lon != null && g.type !== "EQ").forEach(g => P.push({k: "haz", sev: g.level === "red" ? 5 : 3, at: [g.lon, g.lat], lab: g.name.replace(/^(Tropical Cyclone|Eruption|Flood in|Forest fires? in)\s*/i, "").slice(0, 14), h: `GDACS ${g.level === "red" ? "적색" : "주황"} · ${g.name}`, x: `${g.country || "해상"} · ${g.from}~${g.to} · ${g.sev || ""}`}));
   }
   const G = typeof FEEDS_ === "object" && FEEDS_ && FEEDS_.gfw && FEEDS_.gfw.data;
+  // 암흑 선박: Sentinel-1 레이더에 잡혔지만 AIS 신호와 짝이 없는 선박(지난 7일, 격자 0.01°)
+  if (G) Object.values(G).forEach(v => (v && v.dark_pts || []).forEach(c => P.push({k: "dark", sev: c[2] >= 5 ? 4 : 3, at: [c[0], c[1]], lab: c[2] >= 3 ? `암흑 ${c[2]}` : "", h: `암흑 선박 ${c[2]}척 · ${v.n}`,
+    x: `Sentinel-1 레이더 탐지 중 AIS 신호가 없는 선박 ${c[2]}척 (마지막 ${c[3] || "?"}, 지난 7일 · 위치 ±0.5km). 그림자 선단 유조선·군함·불법 조업 등을 레이더만으로는 구분할 수 없음. Global Fishing Watch`})));
   if (G) Object.values(G).forEach(v => { if (v && v.bbox && v.chg != null && Math.abs(v.chg) >= 0.15) P.push({k: "ship", sev: v.chg <= -0.25 ? 4 : 2, at: [(v.bbox[0] + v.bbox[2]) / 2, (v.bbox[1] + v.bbox[3]) / 2], lab: `${v.chg > 0 ? "+" : ""}${Math.round(v.chg * 100)}%`, h: `${v.n} 선박 통항`, x: `7일 평균 ${v.vessels_avg7}척, 전주 ${v.vessels_prev7}척 · 레이더 탐지 7일 ${v.sar_7d} · 암흑 선박 ${v.dark_7d} (Global Fishing Watch)`}); });
   const D = typeof DOM_ === "object" ? DOM_ : null;
   const RK = {isr: "정찰·감시", tanker: "공중급유", bomber: "폭격기", airlift: "수송"};

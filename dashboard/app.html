@@ -480,6 +480,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
 .rk.r1{background:color-mix(in srgb,var(--s1) 20%,transparent);color:var(--s1)} .rk.r2{background:color-mix(in srgb,var(--s2) 20%,transparent);color:var(--s2)} .rk.r3{background:color-mix(in srgb,var(--s3) 22%,transparent);color:var(--s3)} .rk.r4{background:color-mix(in srgb,var(--s4) 24%,transparent);color:var(--s4)} .rk.r5{background:color-mix(in srgb,var(--s5) 26%,transparent);color:var(--s5)}
 .sens path{fill:var(--c);stroke:var(--bg);stroke-width:1.2;cursor:pointer} .sens.net path,.sens.quake path{fill:none;stroke:var(--c);stroke-width:2} .sens .lbl{fill:var(--c);font-weight:600}
 .sens.sev5 path{filter:drop-shadow(0 0 4px var(--c))}
+.sens.dark path{fill:#b07cff;stroke:var(--bg);stroke-width:1} .sens.dark .lbl{fill:#b07cff}
 .aql{list-style:none;margin:6px 0 0;padding:0}
 .aq{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:start;padding:8px 0;border-top:1px dashed var(--line);font-size:13.5px}
 .aq:first-child{border-top:0} .aq small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
@@ -579,7 +580,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
     <div class="legend" id="legend">
       <button class="chip" data-layer="hot" aria-pressed="true"><i class="dot sev5"></i>분쟁</button>
       <button class="chip" data-layer="ev" aria-pressed="true"><i class="sq tG"></i>사건</button>
-      <button class="chip" data-layer="sens" aria-pressed="true" title="위성 열점·인터넷 장애·지진·재난·해협 통항 급변·군용기"><i class="dot sev4" style="border-radius:2px"></i>센서</button>
+      <button class="chip" data-layer="sens" aria-pressed="true" title="위성 열점·인터넷 장애·지진·재난·해협 통항 급변·군용기·암흑 선박(AIS 끈 선박)"><i class="dot sev4" style="border-radius:2px"></i>센서</button>
       <button class="chip" data-layer="lanes" aria-pressed="true"><i class="sev1"></i>항로</button>
       <button class="chip" data-layer="choke" aria-pressed="true"><i class="sq sev3" style="transform:rotate(45deg)"></i>해협</button>
       <button class="chip" data-layer="base" aria-pressed="false"><i class="sq" style="--c:var(--base)"></i>기지</button>
@@ -1160,14 +1161,14 @@ hub.append("path").attr("d", d => HUB_D[d.k] || HUB_D.port);
 hub.append("text").attr("class", "lbl tiny").attr("x", 7).attr("dy", "0.35em").text(d => d.en);
 /* 센서 레이어 (first.js 의 sensorPoints): 위성 열점·인터넷 장애·지진·재난·해협 통항 */
 const sensG = overlay.append("g").attr("class", "sens-layer");
-const SENS_D = {fire:"M0,-6C3,-2 4,1 4,3A4,4 0 0,1 -4,3C-4,1 -3,-2 0,-6Z", net:"M-5,0A5,5 0 1,1 5,0A5,5 0 1,1 -5,0M-4,4L4,-4", quake:"M-6,0L-3,0L-1.5,-4L1.5,4L3,0L6,0", haz:"M0,-6L5.2,-3V3L0,6L-5.2,3V-3Z", ship:"M-5,1L5,1L3,4H-3Z M-0.6,-5H0.6V1H-0.6Z", air:"M0,-6L1,-1L6,1V2.5L1,1.5L0.8,4.5L2.5,5.8V6.5L0,6L-2.5,6.5V5.8L-0.8,4.5L-1,1.5L-6,2.5V1L-1,-1Z"};
+const SENS_D = {fire:"M0,-6C3,-2 4,1 4,3A4,4 0 0,1 -4,3C-4,1 -3,-2 0,-6Z", net:"M-5,0A5,5 0 1,1 5,0A5,5 0 1,1 -5,0M-4,4L4,-4", quake:"M-6,0L-3,0L-1.5,-4L1.5,4L3,0L6,0", haz:"M0,-6L5.2,-3V3L0,6L-5.2,3V-3Z", ship:"M-5,1L5,1L3,4H-3Z M-0.6,-5H0.6V1H-0.6Z", air:"M0,-6L1,-1L6,1V2.5L1,1.5L0.8,4.5L2.5,5.8V6.5L0,6L-2.5,6.5V5.8L-0.8,4.5L-1,1.5L-6,2.5V1L-1,-1Z", dark:"M0,-5.5L4,0L0,5.5L-4,0Z"};
 let sens = sensG.selectAll("g");
 function renderSensors(){
   let pts = []; try { pts = sensorPoints(); } catch(e) { pts = []; }
   sens = sensG.selectAll("g.sens").data(pts, d => d.k + d.h + d.at.join(",")).join(enter => { const g = enter.append("g").attr("tabindex", 0).attr("role", "button");
     g.append("path"); g.append("text").attr("class", "lbl tiny").attr("x", 8).attr("dy", "0.35em"); return g; })
     .attr("class", d => `sens ${d.k} sev${d.sev}`).attr("aria-label", d => d.h)
-    .on("click", (e, d) => { e.stopPropagation(); showInfo([{h: d.h, k: {fire:"위성 열점 (NASA FIRMS)", net:"인터넷 장애 (IODA)", quake:"지진 (USGS)", haz:"재난 경보 (GDACS)", ship:"선박 통항 (GFW)", air:"군용기 (공개 ADS-B)"}[d.k], x: d.x, g: "B2", gw: "센서·정형 데이터 · 원인은 별도 확인 필요"}]); });
+    .on("click", (e, d) => { e.stopPropagation(); showInfo([{h: d.h, k: {fire:"위성 열점 (NASA FIRMS)", net:"인터넷 장애 (IODA)", quake:"지진 (USGS)", haz:"재난 경보 (GDACS)", ship:"선박 통항 (GFW)", air:"군용기 (공개 ADS-B)", dark:"암흑 선박 (Sentinel-1 SAR · GFW)"}[d.k], x: d.x, g: "B2", gw: "센서·정형 데이터 · 원인은 별도 확인 필요"}]); });
   sens.select("path").attr("d", d => SENS_D[d.k]);
   sens.select("text").text(d => d.lab || "");
   placeOverlay();
