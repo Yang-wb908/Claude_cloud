@@ -84,7 +84,14 @@ def cmd_collect(args) -> None:
 def cmd_enrich(args) -> None:
     raw = json.loads(RAW.read_text())
     use_claude = not (args.no_claude or os.environ.get("PIPELINE_NO_CLAUDE"))
-    items = enrich.enrich_all(raw["items"], use_claude=use_claude)
+    known: set[str] = set()
+    snap_path = DASH / "data_snapshot.json"
+    if snap_path.exists():  # 이미 상황판에 올라간 기사(URL·대체 출처)는 Claude 에 다시 보내지 않는다
+        for e in json.loads(snap_path.read_text()).get("events", []):
+            if e.get("s"):
+                known.add(e["s"])
+            known.update(e.get("alt") or [])
+    items = enrich.enrich_all(raw["items"], use_claude=use_claude, known_urls=known)
     ENR.write_text(json.dumps({"generated": raw["generated"], "items": items, "status": raw["status"]}, ensure_ascii=False))
     n_cl = sum(1 for it in items if it.get("enr", {}).get("claude"))
     n_rel = sum(1 for it in items if it.get("enr", {}).get("rel", 0) >= 2)

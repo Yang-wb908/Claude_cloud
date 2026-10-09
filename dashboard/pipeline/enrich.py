@@ -188,7 +188,7 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     except ImportError:
         log.warning("anthropic SDK not installed; skipping Claude enrichment")
         return {}
-    model = model or os.environ.get("PIPELINE_MODEL") or "claude-opus-5-5"
+    model = model or os.environ.get("PIPELINE_ENRICH_MODEL") or "claude-sonnet-5-5"  # 하루 수백 회 호출되는 단계라 기본은 Sonnet
     client = anthropic.Anthropic()
     out: dict[str, dict] = {}
     chunks = [items[i:i + batch] for i in range(0, len(items), batch)]
@@ -234,13 +234,32 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) 
     return out
 
 
-def enrich_all(items: list[dict], use_claude: bool = True) -> list[dict]:
+def claude_candidates(items: list[dict], known_urls: set[str] | None = None) -> list[dict]:
+    """Which news items are worth a Claude call: not already on the board (URL known from earlier runs) and with at least one
+    rule signal (theater, security/economy keyword, or a gazetteer place). Pure noise and re-fetched stories are skipped,
+    which cuts the per-run call volume by roughly 80-90% at steady state."""
+    known = known_urls or set()
+    out = []
+    for it in items:
+        if it.get("kind") not in ("news", "report"):
+            continue
+        if it.get("url") and it["url"] in known:
+            continue
+        e = it.get("enr") or {}
+        text = (it.get("title") or "") + " " + (it.get("summary") or "")[:400]
+        if e.get("th") or e.get("at") or RELEVANT_KW.search(text):
+            out.append(it)
+    return out
+
+
+def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] | None = None) -> list[dict]:
     """Attach `enr` to each item. Rules first, Claude refinement second (when available)."""
     for it in items:
         it["enr"] = rule_enrich(it)
         it["grade"] = grade_url(it.get("url", ""), "C3" if it.get("sid", "").startswith("gn_") else "C4")
     if use_claude and (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("PIPELINE_FORCE_CLAUDE")):
-        news = [it for it in items if it.get("kind") in ("news", "report")]
+        news = claude_candidates(items, known_urls)
+        log.info("claude candidates: %d of %d news items (known urls %d)", len(news), sum(1 for it in items if it.get("kind") in ("news", "report")), len(known_urls or ()))
         ref = claude_enrich(news)
         for it in news:
             r = ref.get(it["id"])

@@ -18,7 +18,7 @@ python dashboard/pipeline/run.py enrich --no-claude   # 규칙 분류만
 python dashboard/pipeline/run.py collect --offline    # 캐시 재생
 ```
 
-환경변수: `ANTHROPIC_API_KEY`(API 키) 또는 `CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독 토큰, `claude setup-token`; `llm.py`가 `claude -p`로 호출), `PIPELINE_MODEL`(기본 `claude-opus-5-5`), `PIPELINE_ENRICH_WORKERS`(정제 동시 배치 수, 기본 4), `PIPELINE_NO_CLAUDE=1`. 새 명령: `bayes`(징후 갱신 자동 뷰), `calib`(사례 보정), `redteam`, `simulate`(에이전트용 시뮬레이션 도우미), `products`.
+환경변수: `ANTHROPIC_API_KEY`(API 키) 또는 `CLAUDE_CODE_OAUTH_TOKEN`(Claude Pro/Max 구독 토큰, `claude setup-token`; `llm.py`가 `claude -p`로 호출), `PIPELINE_MODEL`(BLUF·레드팀·분석관, 기본 `claude-opus-5-5`), `PIPELINE_ENRICH_MODEL`(사건 정제, 기본 `claude-sonnet-5-5`), `PIPELINE_ENRICH_WORKERS`(정제 동시 배치 수, 기본 4), `PIPELINE_NO_CLAUDE=1`. 새 명령: `bayes`(징후 갱신 자동 뷰), `calib`(사례 보정), `redteam`, `simulate`(에이전트용 시뮬레이션 도우미), `products`.
 
 ## 산출물
 

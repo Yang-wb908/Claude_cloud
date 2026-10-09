@@ -210,3 +210,13 @@ def test_briefs_overlay_only_from_events(tmp_path, monkeypatch):
     assert it["latam"]["headline"] == "칠레 파업 확대" and it["latam"]["sources"] == [{"name": "A", "url": "https://a.com/1"}] and it["latam"]["asof"] == "10/8"
     assert it["europe"]["headline"] == "유럽 이전 자동 브리핑"  # 사건 3건 미만 → 이전 자동 브리핑 유지
     assert json.loads((dash / "data" / "theater_briefs.json").read_text())["items"]["latam"]["n_events"] == 4
+
+
+def test_claude_candidates_skip_known_and_noise():
+    from pipeline import enrich
+    mk = lambda i, t: {"id": i, "kind": "news", "title": t, "summary": "", "url": f"https://x.com/{i}", "published": "2026-10-08T00:00:00Z", "extra": {}}
+    items = [mk("a", "Houthi missile hits tanker near Hormuz"), mk("b", "Nobel literature prize goes to Canadian poet"), mk("c", "US imposes tariffs on Canada"), mk("d", "Kyiv under drone attack")]
+    for it in items:
+        it["enr"] = enrich.rule_enrich(it)
+    out = enrich.claude_candidates(items, known_urls={"https://x.com/d"})
+    assert [it["id"] for it in out] == ["a", "c"]  # b: 잡음, d: 이미 상황판에 있음
