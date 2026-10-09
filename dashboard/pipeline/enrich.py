@@ -48,6 +48,7 @@ TYPE_RULES = [
     ("H", r"(ebola|cholera|outbreak|epidemic|who declares|vaccin|famine|malnutrition|plague|pneumonic|quarantin|biosafety|lab leak|hantavirus|nipah|marburg|h5n1|avian influenza|anthrax|smallpox|rospotrebnadzor|pandemic)"),
     ("E", r"(sanction|tariff|export control|price cap|oil price|brent|opec|inflation|rate hike|central bank|gdp|currency|rial|ruble|won\b)"),
     ("X", r"(earthquake|flood|typhoon|hurricane|cyclone|wildfire|collapse|crash|explosion at)"),
+    ("Y", r"(cyber ?attack|hack(ed|ers?|ing)|ransomware|data breach|DDoS|malware|zero-day|해킹|랜섬웨어|사이버 ?공격)"),
     ("C", r"(gang|cartel|smuggl|trafficking|arrest|indict|police)"),
     ("D", r"(summit|talks|negotiat|ceasefire|truce|minister|ambassador|embassy|treaty|agreement|un security council|resolution|election|parliament|president|visit)"),
 ]
@@ -152,7 +153,7 @@ SCHEMA = {
         "properties": {
             "id": {"type": "string"},
             "x": {"type": "string", "description": "한국어 한 줄 요약, 60자 이내, 사실만. 숫자·지명 유지"},
-            "t": {"type": "string", "enum": ["S", "G", "M", "A", "D", "E", "H", "X", "C"]},
+            "t": {"type": "string", "enum": ["S", "G", "M", "A", "D", "E", "H", "X", "C", "Y"]},
             "th": {"anyOf": [{"type": "string", "enum": ["iran", "ukraine", "yemen", "ethiopia", "sudan", "gaza", "afpak", "korea", "lebanon", "sahel", "drc", "somalia", "myanmar", "taiwan", "scs", "carib", "bio", "latam", "namerica", "oceania", "europe", "southasia"]}, {"type": "null"}],
                    "description": "전역 id. 어느 전역에도 속하지 않으면 null"},
             "p": {"type": "string", "description": "가장 구체적인 지명의 한국어 표기, 없으면 빈 문자열"},
@@ -161,7 +162,7 @@ SCHEMA = {
         }}}},
 }
 SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영어 뉴스 항목을 받아 한국어 한 줄 요약(x), 사건 유형(t: S 공습·드론·미사일, G 지상전·점령, "
-          "M 해상, A 테러·민간인 공격, D 외교·정치, E 경제·제재, H 보건, X 재난·사고, C 범죄·치안), 관련 전역(th), 가장 구체적인 지명(p, 한국어)과 그 좌표(lat, lon), "
+          "M 해상, A 테러·민간인 공격, D 외교·정치, E 경제·제재, H 보건, X 재난·사고, C 범죄·치안, Y 사이버 공격·해킹), 관련 전역(th), 가장 구체적인 지명(p, 한국어)과 그 좌표(lat, lon), "
           "관련도(rel)를 매긴다. 좌표는 확신할 때만 적고 모르면 null. 요약은 추측 없이 기사에 있는 사실만, 60자 이내. "
           "rel 기준: 3 핵심(분쟁·군사·제재·해협·에너지/원자재 공급·정권 변동·대형 재난·감염병), 2 관련(외교·선거·무역정책·치안·경제 지표·인프라), "
           "1 배경(일반 정치·사회·경제 기사), 0 무관(문화·연예·스포츠·과학 일반·생활·소비자 서비스·수상·축제·인물 인터뷰). "

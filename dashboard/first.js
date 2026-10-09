@@ -39,6 +39,14 @@ function alertQueue(){
     ((typeof SCN_ === "object" && SCN_ && SCN_.templates) || []).forEach(t => { const m = mt[t.id]; if (!m) return; const ours = (typeof scState === "object" && scState.p[t.id] != null) ? scState.p[t.id] : t.p; const gap = ours - Math.round(m.p * 100);
       if (Math.abs(gap) >= 20) add({key: `poly:${t.id}:${Math.round(m.p * 20)}`, sev: 2, src: "예측시장 괴리", h: `${t.n}: 우리 ${ours}% · 시장 ${Math.round(m.p * 100)}%`, x: m.q, tab: "p-scn", url: m.url}); });
   }
+  const D = typeof DOM_ === "object" ? DOM_ : null;
+  if (D) {
+    Object.entries((((D.adsb || {}).data || {}).areas) || {}).forEach(([k, a]) => { if (a.status === "surge") add({key: `adsb:${k}:${(D.generated || "").slice(0, 13)}`, sev: 4, src: "군용기", h: `${a.name} 정찰·급유기 ${a.key}대 (평소 ${a.base})`, x: Object.entries(a.by_role || {}).map(([r, n]) => r + " " + n).join(", ") + " · 공개 ADS-B 기준", th: a.th, at: [(a.bbox[0] + a.bbox[2]) / 2, (a.bbox[1] + a.bbox[3]) / 2]}); });
+    const cut3 = new Date(Date.now() - 3 * 86400e3).toISOString().slice(0, 10);
+    ((((D.kev || {}).data || {}).recent) || []).filter(r => r.added >= cut3 && (r.edge || r.ransom)).forEach(r => add({key: "kev:" + r.cve, sev: r.ransom ? 3 : 2, src: "사이버", h: `악용 확인 ${r.vendor} ${r.product} (${r.cve})`, x: r.name + (r.ransom ? " · 랜섬웨어 사용" : " · 경계 장비"), url: "https://nvd.nist.gov/vuln/detail/" + r.cve, tab: "p-src"}));
+    const kr = (((D.ransom || {}).data || {}).kr) || [];
+    if (kr.length) add({key: `rwkr:${kr.length}:${kr[0].d}`, sev: kr.length >= 3 ? 3 : 2, src: "사이버", h: `한국 랜섬웨어 피해 게시 ${kr.length}건 (7일)`, x: kr.slice(0, 4).map(r => r.victim + " (" + r.group + ")").join(", "), th: "korea", tab: "p-src"});
+  }
   const G = typeof FEEDS_ === "object" && FEEDS_ && FEEDS_.gfw && FEEDS_.gfw.data;
   if (G) Object.entries(G).forEach(([k, v]) => { if (v && v.chg != null && Math.abs(v.chg) >= 0.25) add({key: `gfw:${k}:${v.latest}`, sev: v.chg <= -0.25 ? 3 : 2, src: "해협 통항", h: `${v.n} 체류 선박 ${v.chg > 0 ? "+" : ""}${Math.round(v.chg * 100)}% (전주 대비)`, x: `7일 평균 ${v.vessels_avg7}척 · 암흑 선박 7일 ${v.dark_7d}척`, at: v.bbox ? [(v.bbox[0] + v.bbox[2]) / 2, (v.bbox[1] + v.bbox[3]) / 2] : null, tab: "p-sea"}); });
   return Q.sort((a, b) => b.sev - a.sev);
@@ -113,5 +121,8 @@ function sensorPoints(){
   }
   const G = typeof FEEDS_ === "object" && FEEDS_ && FEEDS_.gfw && FEEDS_.gfw.data;
   if (G) Object.values(G).forEach(v => { if (v && v.bbox && v.chg != null && Math.abs(v.chg) >= 0.15) P.push({k: "ship", sev: v.chg <= -0.25 ? 4 : 2, at: [(v.bbox[0] + v.bbox[2]) / 2, (v.bbox[1] + v.bbox[3]) / 2], lab: `${v.chg > 0 ? "+" : ""}${Math.round(v.chg * 100)}%`, h: `${v.n} 선박 통항`, x: `7일 평균 ${v.vessels_avg7}척, 전주 ${v.vessels_prev7}척 · 레이더 탐지 7일 ${v.sar_7d} · 암흑 선박 ${v.dark_7d} (Global Fishing Watch)`}); });
+  const D = typeof DOM_ === "object" ? DOM_ : null;
+  const RK = {isr: "정찰·감시", tanker: "공중급유", bomber: "폭격기", airlift: "수송"};
+  if (D) Object.values((((D.adsb || {}).data || {}).areas) || {}).forEach(a => (a.ac || []).forEach(x => { if (x.role !== "other") P.push({k: "air", sev: a.status === "surge" ? 5 : x.role === "bomber" ? 4 : 3, at: [x.lon, x.lat], lab: x.t, h: `${RK[x.role] || x.role} ${x.t} ${x.flight || x.reg || ""}`.trim(), x: `${a.name} · 고도 ${x.alt ?? "?"}ft · 공개 ADS-B 위치(수집 시점 ${((D.generated || "").slice(5, 16).replace("T", " "))}Z)`}); }));
   return P;
 }

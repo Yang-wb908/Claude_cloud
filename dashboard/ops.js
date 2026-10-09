@@ -75,6 +75,7 @@ let COV_ = typeof COVERAGE === "object" ? COVERAGE : null;
 let FEEDS_ = typeof FEEDS === "object" ? FEEDS : null;
 let FIRMS_ = typeof FIRMS === "object" ? FIRMS : null;
 let OPEN_ = typeof OPEN === "object" ? OPEN : null;
+let DOM_ = typeof DOMAINS === "object" ? DOMAINS : null;
 const fmtSigned = (v, dp) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(dp == null ? 1 : dp);
 function feedNote(f, env){ return f && f.ok === false ? `<p class="note">${esc(f.err && f.err.indexOf("미설정") >= 0 ? env + " 이 저장소 Secrets 에 없어 수집하지 않았습니다." : "최근 수집 실패: " + (f.err || ""))}${f.at ? " 아래는 " + esc(f.at.slice(0, 16)) + "Z 값." : ""}</p>` : ""; }
 /* 위성 열점 (NASA FIRMS) — 운영 탭 */
@@ -111,6 +112,24 @@ function opsOpenHtml(){
     ${qs.length || gs.length ? `<ul class="wl">${qs.map(q => `<li><b>M${q.mag.toFixed(1)}</b> ${esc(q.place)} <small>${esc(q.d)}${q.near ? " · 감시 대상 " + esc(q.near) : ""}${q.tsunami ? " · 쓰나미" : ""} · <a href="${esc(q.url)}" target="_blank" rel="noopener">USGS</a></small></li>`).join("")}${gs.map(g => `<li>${tag(g.level === "red" ? "적색" : "주황", g.level === "red" ? "--s5" : "--s4")} <b>${esc(GK[g.type] || g.type)}</b> ${esc(g.name)} <small>${esc(g.country)} · ${esc(g.from)}${g.to && g.to !== g.from ? "~" + esc(g.to) : ""}${g.sev ? " · " + esc(g.sev) : ""} · <a href="${esc(g.url)}" target="_blank" rel="noopener">GDACS</a></small></li>`).join("")}</ul>` : `<p class="note">기준을 넘은 지진·재난 경보 없음.</p>`}
     <h4 style="margin:12px 0 4px">OFAC 신규 제재 지정 <small class="en">SDN 목록 비교 · 전체 ${od.n_total ? od.n_total.toLocaleString() : "—"}건</small></h4>${openNote(of, "OFAC")}
     ${od.baseline ? `<p class="note">첫 수집이라 기준 목록만 저장했습니다. 다음 수집부터 새로 추가된 개인·기업·선박을 보여줍니다.</p>` : od.n_new ? `<p class="meta">${esc(od.d || "")} 신규 ${od.n_new}건${od.new_vessels ? ` · 선박 ${od.new_vessels}척` : ""}${od.removed ? ` · 해제 ${od.removed}건` : ""} · ${Object.entries(od.by_program || {}).slice(0, 5).map(([k, v]) => esc(k) + " " + v).join(", ")}</p><ul class="wl">${(od.new || []).slice(0, 12).map(n => `<li><b>${esc(n.name)}</b> <small>${esc(n.type === "entity" ? "단체·기업" : n.type === "individual" ? "개인" : n.type === "vessel" ? "선박" + (n.vess_flag ? " · " + n.vess_flag : "") : n.type)} · ${esc(n.program)}</small></li>`).join("")}</ul>` : `<p class="note">지난 수집 이후 새 지정 없음.</p>`}
+  </div>`;
+}
+/* 새 수집 영역: 군용기(ADS-B) · 사이버(CISA KEV · 랜섬웨어 유출 사이트) — 운영 탭 */
+function opsDomainsHtml(){
+  const D = DOM_;
+  if (!D) return `<div class="block"><h3>군용기 · 사이버 <span class="en">ADS-B · CISA KEV · ransomware.live</span></h3><p class="note">자동 수집이 한 번 돌면 분쟁 해역 상공 군용기(정찰·급유·폭격), 실제 악용이 확인된 취약점, 랜섬웨어 피해 게시를 보여줍니다.</p></div>`;
+  const ad = (D.adsb || {}).data || {}, kv = (D.kev || {}).data || {}, rw = (D.ransom || {}).data || {}, S = D.summary || {};
+  const RK = {isr: "정찰", tanker: "급유", bomber: "폭격", airlift: "수송", other: "기타"};
+  const st = a => a.status === "surge" ? '<span class="chk" style="color:var(--s5);border-color:var(--s5)">급증</span>' : a.status === "learning" ? `<span class="chk">학습 ${a.runs}/8</span>` : '<span class="chk" style="color:var(--s1);border-color:var(--s1)">평소</span>';
+  const areas = Object.entries(ad.areas || {});
+  return `<div class="block ${(S.adsb_surge || 0) + (S.kev_edge_3d || 0) ? "sev4" : "sev2"}"><h3>군용기 · 사이버 <span class="en">ADS-B · CISA KEV · ransomware.live · ${esc((D.generated || "").slice(5, 16).replace("T", " "))}Z</span></h3>
+    <h4 style="margin:10px 0 4px">분쟁 해역 상공 군용기 <small class="en">공개 ADS-B · 송출을 끈 기체는 안 보임(하한값)</small></h4>${openNote(D.adsb, "ADS-B")}
+    ${areas.length ? `<div style="overflow-x:auto"><table class="shk"><thead><tr><th style="text-align:left">지역</th><th>전체</th><th>정찰+급유</th><th>평소</th><th style="text-align:left">역할</th><th>상태</th></tr></thead><tbody>${areas.map(([k, a]) => `<tr><td style="text-align:left">${esc(a.name)}</td><td>${a.n}</td><td><b>${a.key}</b></td><td>${a.base == null ? "—" : a.base}</td><td style="text-align:left"><small>${Object.entries(a.by_role || {}).map(([r, n]) => esc(RK[r] || r) + " " + n).join(" · ") || "—"}</small></td><td>${st(a)}</td></tr>`).join("")}</tbody></table></div>` : ""}
+    <h4 style="margin:12px 0 4px">실제 악용 확인 취약점 <small class="en">CISA KEV · 최근 14일 ${kv.n_recent || 0}건 · 이번 주 ${kv.n_week || 0}건</small></h4>${openNote(D.kev, "CISA KEV")}
+    ${(kv.recent || []).length ? `<ul class="wl">${kv.recent.slice(0, 8).map(r => `<li><b>${esc(r.vendor)} ${esc(r.product)}</b> <a href="https://nvd.nist.gov/vuln/detail/${esc(r.cve)}" target="_blank" rel="noopener">${esc(r.cve)}</a>${r.edge ? ' <span class="tag">경계 장비</span>' : ""}${r.ransom ? ' <span class="tag" style="color:var(--s5)">랜섬웨어</span>' : ""}<small>${esc(r.added)} 추가 · ${esc(r.name)}</small></li>`).join("")}</ul>` : `<p class="note">최근 14일 추가 없음.</p>`}
+    <h4 style="margin:12px 0 4px">랜섬웨어 피해 게시 <small class="en">유출 사이트 기준 · 범죄 집단 주장(미확인) · 7일 ${rw.n_week || 0}건</small></h4>${openNote(D.ransom, "ransomware.live")}
+    ${rw.by_country ? `<p class="meta">국가별: ${Object.entries(rw.by_country).slice(0, 10).map(([c, n]) => `${c === "KR" ? "<b>한국 " + n + "</b>" : esc(c) + " " + n}`).join(" · ")}${rw.by_group ? ` · 주요 집단: ${Object.entries(rw.by_group).slice(0, 4).map(([g, n]) => esc(g) + " " + n).join(", ")}` : ""}</p>` : ""}
+    ${(rw.kr || []).length ? `<ul class="wl">${rw.kr.slice(0, 8).map(r => `<li><b>${esc(r.victim)}</b> <small>${esc(r.d)} · ${esc(r.group)}${r.sector ? " · " + esc(r.sector) : ""}</small></li>`).join("")}</ul>` : ""}
   </div>`;
 }
 /* 예측시장 (Polymarket) — 시나리오 탭 */
@@ -177,5 +196,5 @@ function opsBlufHtml(){
     ${changes7.length ? `<ul class="wl">${changes7.slice(0, 4).map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")}</small></li>`).join("")}</ul>` : ""}
     <div class="btnrow"><button class="thchip" data-tab="p-watch">당직 →</button><button class="thchip" data-tab="p-pir">요구 →</button><button class="thchip" data-tab="p-prod">생산물 →</button></div></div>`;
 }
-function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsOpenHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
+function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsOpenHtml() + opsDomainsHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-tab]"); if (b && b.dataset.tab && document.getElementById(b.dataset.tab) && !b.classList.contains("tab") && !b.classList.contains("lnk")) setTab(b.dataset.tab); });

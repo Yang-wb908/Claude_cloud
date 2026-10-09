@@ -5,7 +5,7 @@ dashboard/data/indicator_lr.json  per scenario: evidence items {key, lr, note}
          "ind:<theater>:<n>"             IW.theaters[th].indicators[n].s: obs -> lr, partial -> sqrt(lr), no -> 1/sqrt(lr)
          "risk:index>=<v>"               economic risk index at or above v
          "metric:<path><op><v>"          any sensor/feed value (tripwire path syntax: feeds.gfw.data.hormuz.chg<=-0.3)
-         "sens:<kind>:<theater>"         a sensor alert in that theater; kind = firms | ioda | quake | gdacs | gdacs_tc
+         "sens:<kind>:<theater>"         a sensor alert in that theater; kind = firms | ioda | quake | gdacs | gdacs_tc | adsb
 Prediction markets (openfeeds poly.matched, prediction_map.yaml) enter as one more evidence factor: a weighted
 log-odds pool toward the market price, (odds_market / odds_ours) ** w. w comes from the mapping (how well the question
 matches the scenario) times a skill factor learned from resolved markets in data/market_track.json.
@@ -50,7 +50,12 @@ def _metric(key: str, sources: dict) -> bool:
 def sensor_alerts(sources: dict) -> dict[str, set[str]]:
     """{kind: {theater,...}} for current sensor alerts (FIRMS, IODA, USGS near watch sites, GDACS)."""
     from .openfeeds import COUNTRY
-    out: dict[str, set[str]] = {k: set() for k in ("firms", "ioda", "quake", "gdacs", "gdacs_tc")}
+    out: dict[str, set[str]] = {k: set() for k in ("firms", "ioda", "quake", "gdacs", "gdacs_tc", "adsb")}
+    dm = sources.get("domains") or {}
+    if (dm.get("adsb") or {}).get("ok"):
+        for a in ((dm["adsb"].get("data") or {}).get("areas") or {}).values():
+            if a.get("status") == "surge" and a.get("th"):
+                out["adsb"].add(a["th"])
     for e in (sources.get("firms") or {}).get("alerts", []):
         if e.get("th"):
             out["firms"].add(e["th"])
@@ -168,7 +173,7 @@ def run(dash: Path, write: bool = True) -> dict:
     fired = {f["id"] for f in trip.get("fired", [])}
     risk = json.loads((dash / "data" / "risk.json").read_text()) if (dash / "data" / "risk.json").exists() else None
     ld = lambda n: json.loads((dash / "data" / n).read_text()) if (dash / "data" / n).exists() else None
-    sources = {"firms": ld("firms.json"), "feeds": ld("feeds.json"), "openfeeds": ld("openfeeds.json"), "risk": risk, "coverage": ld("coverage.json")}
+    sources = {"firms": ld("firms.json"), "feeds": ld("feeds.json"), "openfeeds": ld("openfeeds.json"), "domains": ld("domains.json"), "risk": risk, "coverage": ld("coverage.json")}
     op = sources["openfeeds"] or {}
     markets = ((op.get("poly") or {}).get("data") or {}).get("matched") if (op.get("poly") or {}).get("ok") is not False else None
     track_path = dash / "data" / "market_track.json"

@@ -201,3 +201,24 @@ tripwires:
     value: 1
     sev: 2
     why: "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다."
+  - id: mil_air_surge
+    title: "분쟁 해역 상공 정찰·급유기 급증 (공개 ADS-B)"
+    metric: domains.summary.adsb_surge
+    op: ">="
+    value: 1
+    sev: 3
+    why: "정찰기·공중급유기가 평소의 2배 이상이면 작전 준비나 감시 강화 신호. 송출을 끈 기체가 많아 실제는 더 많을 수 있다."
+  - id: kev_edge
+    title: "VPN·방화벽 등 경계 장비 취약점 실제 악용 확인 (CISA KEV, 3일 내)"
+    metric: domains.summary.kev_edge_3d
+    op: ">="
+    value: 1
+    sev: 2
+    why: "국가 배후 해킹 조직이 즉시 노리는 유형. 국내 기관·기업 장비 패치 여부 점검."
+  - id: ransom_kr
+    title: "한국 기업·기관 랜섬웨어 피해 게시 주 3건 이상"
+    metric: domains.summary.ransom_kr_week
+    op: ">="
+    value: 3
+    sev: 2
+    why: "범죄 집단 유출 사이트 기준(피해 사실 미확인). 특정 업종에 몰리면 표적 공격 캠페인 가능성."

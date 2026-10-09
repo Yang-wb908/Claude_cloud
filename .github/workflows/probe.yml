@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: "firms, feeds, openfeeds 중 하나만 (비우면 모두)"
+        description: "firms, feeds, openfeeds, domains 중 하나만 (비우면 모두)"
         type: string
         default: ""
   push:
@@ -37,6 +37,7 @@ jobs:
           if [ -z "$ONLY" ] || [ "$ONLY" = "feeds" ]; then python dashboard/pipeline/run.py feeds || true; fi
           if [ -z "$ONLY" ] || [ "$ONLY" = "firms" ]; then python dashboard/pipeline/run.py firms || true; fi
           if [ -z "$ONLY" ] || [ "$ONLY" = "openfeeds" ]; then python dashboard/pipeline/run.py openfeeds || true; fi
+          if [ -z "$ONLY" ] || [ "$ONLY" = "domains" ]; then python dashboard/pipeline/run.py domains || true; fi
           python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
           import json, os
           for f in ("dashboard/data/feeds.json", "dashboard/data/firms.json"):
@@ -67,6 +68,29 @@ jobs:
               for g in ((d.get("gdacs") or {}).get("data") or [])[:8]: print(f"  - gdacs {g['level']} {g['type']} {g['name']} {g['country']} {g['from']}..{g['to']}")
               of = (d.get("ofac") or {}).get("data") or {}
               print(f"  - OFAC total={of.get('n_total')} baseline={of.get('baseline')} new={of.get('n_new')}")
+          f = "dashboard/data/domains.json"
+          if os.path.exists(f):
+              d = json.load(open(f))
+              print(f"- domains summary: {d.get('summary')}")
+              for k in ("adsb", "kev", "ransom"):
+                  v = d.get(k) or {}
+                  print(f"- {k}: ok={v.get('ok')} err={str(v.get('err') or '')[:500]}")
+              ad = ((d.get("adsb") or {}).get("data") or {})
+              print(f"  - ADS-B mil total in AOIs={ad.get('total_mil')}")
+              for k, a in (ad.get("areas") or {}).items(): print(f"  - {k}: n={a['n']} key={a['key']} roles={a['by_role']} types={sorted({x['t'] for x in a['ac']})[:12]}")
+              kv = ((d.get("kev") or {}).get("data") or {})
+              print(f"  - KEV total={kv.get('n_total')} 14d={kv.get('n_recent')} week={kv.get('n_week')}")
+              for r in (kv.get("recent") or [])[:6]: print(f"  - KEV {r['added']} {r['cve']} {r['vendor']} {r['product']} edge={r.get('edge')} ransom={r['ransom']}")
+              rw = ((d.get("ransom") or {}).get("data") or {})
+              print(f"  - ransomware week={rw.get('n_week')} by_country={rw.get('by_country')} kr={[x['victim'] for x in rw.get('kr', [])][:5]}")
+          PY
+          python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY" || true
+          import requests
+          for name, url in (("ADSB raw", "https://api.adsb.lol/v2/mil"), ("RW raw", "https://api.ransomware.live/v2/recentvictims")):
+              try:
+                  r = requests.get(url, timeout=40); print(f"- {name}: HTTP {r.status_code}"); print("```"); print(r.text[:900]); print("```")
+              except Exception as e:
+                  print(f"- {name}: {e}")
           PY
           python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY" || true
           # 원 응답 형식 확인용 (IODA·GDACS 앞부분)
@@ -87,4 +111,5 @@ jobs:
             dashboard/data/feeds.json
             dashboard/data/firms.json
             dashboard/data/openfeeds.json
+            dashboard/data/domains.json
           retention-days: 3

@@ -70,6 +70,11 @@
     "key": "sens:firms:iran",
     "lr": 1.5,
     "note": "이란·걸프 에너지 시설 위성 열점 경보 (FIRMS)"
+   },
+   {
+    "key": "sens:adsb:iran",
+    "lr": 1.4,
+    "note": "걸프 상공 정찰·급유기 급증 (ADS-B)"
    }
   ],
   "redsea_houthi": [
@@ -92,6 +97,11 @@
     "key": "metric:feeds.gfw.data.bab.chg<=-0.3",
     "lr": 1.5,
     "note": "바브엘만데브 통항 30% 이상 감소 (GFW)"
+   },
+   {
+    "key": "sens:adsb:yemen",
+    "lr": 1.3,
+    "note": "홍해 상공 정찰·급유기 급증 (ADS-B)"
    }
   ],
   "redsea_calm": [
@@ -131,6 +141,11 @@
     "key": "metric:feeds.gfw.data.bosporus.chg<=-0.3",
     "lr": 1.5,
     "note": "보스포루스 통항 30% 이상 감소 (GFW)"
+   },
+   {
+    "key": "sens:adsb:ukraine",
+    "lr": 1.3,
+    "note": "흑해 상공 정찰기 급증 (ADS-B)"
    }
   ],
   "blacksea_deal": [
@@ -160,6 +175,11 @@
     "key": "sens:ioda:taiwan",
     "lr": 1.5,
     "note": "대만 인터넷 대규모 장애 (IODA)"
+   },
+   {
+    "key": "sens:adsb:taiwan",
+    "lr": 1.5,
+    "note": "대만해협 정찰·급유기 급증 (ADS-B)"
    }
   ],
   "korea_strategic": [
@@ -172,6 +192,11 @@
     "key": "sens:quake:korea",
     "lr": 4.0,
     "note": "풍계리·영변 인근 지진 — 핵실험 가능성 (USGS)"
+   },
+   {
+    "key": "sens:adsb:korea",
+    "lr": 1.3,
+    "note": "한반도 주변 정찰기 급증 (ADS-B)"
    }
   ],
   "fed_hawkish": [
@@ -279,6 +304,11 @@
     "key": "metric:feeds.gfw.data.gulf_finland.chg<=-0.3",
     "lr": 1.5,
     "note": "핀란드만 통항 30% 이상 감소 (GFW)"
+   },
+   {
+    "key": "sens:adsb:europe",
+    "lr": 1.3,
+    "note": "발트해 상공 정찰·초계기 급증 (ADS-B)"
    }
   ],
   "us_canada_auto_tariffs": [
@@ -313,6 +343,11 @@
     "key": "sens:ioda:carib",
     "lr": 1.3,
     "note": "카리브 국가 인터넷 대규모 장애 (IODA)"
+   },
+   {
+    "key": "sens:adsb:carib",
+    "lr": 1.5,
+    "note": "카리브해 정찰·급유기 급증 (ADS-B)"
    }
   ]
  }

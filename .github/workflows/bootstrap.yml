@@ -56,6 +56,7 @@ jobs:
           python dashboard/pipeline/run.py firms || echo "firms failed (continuing)"
           python dashboard/pipeline/run.py feeds || echo "feeds failed (continuing)"
           python dashboard/pipeline/run.py openfeeds || echo "openfeeds failed (continuing)"
+          python dashboard/pipeline/run.py domains || echo "domains failed (continuing)"
           python dashboard/pipeline/run.py series || echo "series failed (continuing)"
           python dashboard/pipeline/run.py tripwires
           python dashboard/pipeline/run.py bayes
