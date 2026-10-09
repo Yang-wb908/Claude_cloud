@@ -112,6 +112,7 @@ jobs:
           EOF
       - name: 수집 결과 커밋
         run: |
+          python dashboard/pipeline/run.py bundle || echo "bundle failed (continuing)"
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
           git add dashboard/data_snapshot.json dashboard/intel.auto.json dashboard/data dashboard/snapshots products reports

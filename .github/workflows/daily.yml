@@ -57,6 +57,7 @@ jobs:
           python dashboard/build.py
       - name: 커밋
         run: |
+          python dashboard/pipeline/run.py bundle || echo "bundle failed (continuing)"
           git config user.name "situation-board-bot"
           git config user.email "bot@users.noreply.github.com"
           git add -A dashboard/data products reports dashboard/brief.html

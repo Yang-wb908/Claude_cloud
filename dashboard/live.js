@@ -48,9 +48,14 @@ async function syncRepo(manual){
   if (syncState.mcp === undefined) { try { syncState.mcp = window.claude && window.claude.use ? await window.claude.use("mcp") : null; } catch(e) { syncState.mcp = null; } }
   if (!syncState.mcp) { if (btn) { btn.hidden = true; } return; }
   syncState.busy = true; if (btn) { btn.disabled = true; btn.textContent = "동기화 중…"; }
-  const got = {}, errs = {};
-  for (const [k, path] of Object.entries(SYNC_FILES)) {
-    try { got[k] = await readRepoFile(syncState.mcp, path); } catch(e) { errs[k] = e; if (e && SYNC_COPY[e.code] && k === "auto") break; }
+  let got = {}, errs = {};
+  // 수집 워크플로가 만드는 묶음 파일 하나만 읽는다(커넥터 호출 1회). 없거나 깨졌으면 파일별로 읽는다.
+  try { const b = await readRepoFile(syncState.mcp, "dashboard/data/live_bundle.json"); if (b && b.files && Object.keys(b.files).length) got = b.files; }
+  catch(e) { if (e && SYNC_COPY[e.code]) errs.bundle = e; }
+  if (!Object.keys(got).length && !errs.bundle) {
+    for (const [k, path] of Object.entries(SYNC_FILES)) {
+      try { got[k] = await readRepoFile(syncState.mcp, path); } catch(e) { errs[k] = e; if (e && SYNC_COPY[e.code] && k === "auto") break; }
+    }
   }
   syncState.ok = got; syncState.err = errs; syncState.at = new Date();
   applyLive(got);
@@ -93,13 +98,15 @@ function applyLive(got){
   if (MODE !== "live") setStatus("snapshot");
 }
 const SYNC_PERIOD_MS = 30 * 60 * 1000;   // 열려 있는 동안 30분마다
-function autoSyncOn(){ try { return localStorage.getItem("sit-autosync") !== "0"; } catch(e) { return true; } }   // 기본 켜짐, "0"이면 끔
-function setAutoSync(on){ try { localStorage.setItem("sit-autosync", on ? "1" : "0"); } catch(e) {} if (on && !syncState.busy) syncRepo(false); }
+// 기본 꺼짐: 열 때 커넥터를 부르면 매번 허용("계속") 창이 뜰 수 있다. 화면에는 마지막 재배포 때 넣은 데이터가 이미 들어 있고,
+// 최신 수집분이 필요하면 상단 "저장소 동기화" 버튼을 누른다. 상태 창에서 자동을 켜면 열 때·30분마다 읽는다.
+function autoSyncOn(){ try { return localStorage.getItem("sit-autosync2") === "1"; } catch(e) { return false; } }
+function setAutoSync(on){ try { localStorage.setItem("sit-autosync2", on ? "1" : "0"); } catch(e) {} if (on && !syncState.busy) syncRepo(false); }
 (function initSync(){
   const btn = $("#syncBtn"); if (!btn) return;
   btn.addEventListener("click", () => syncRepo(true));
   if (!(window.claude && window.claude.use)) { btn.hidden = true; return; }
-  // Claude 안에서 열면 저장소 최신 데이터를 자동으로 읽는다: 열 때 한 번, 30분마다, 탭에 돌아왔을 때(10분 경과 시)
+  // 자동을 켠 경우에만: 열 때 한 번, 30분마다, 탭에 돌아왔을 때(10분 경과 시)
   if (autoSyncOn()) setTimeout(() => syncRepo(false), 1500);
   setInterval(() => { if (autoSyncOn() && !document.hidden) syncRepo(false); }, SYNC_PERIOD_MS);
   document.addEventListener("visibilitychange", () => { if (!document.hidden && autoSyncOn() && syncState.at && Date.now() - syncState.at.getTime() > 10 * 60 * 1000) syncRepo(false); });

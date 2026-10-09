@@ -204,16 +204,40 @@ def cmd_build(args) -> None:
     subprocess.run([sys.executable, str(DASH / "build.py")], check=True)
 
 
+# live.js 의 SYNC_FILES 와 같은 목록. 아티팩트가 커넥터 호출 한 번으로 전부 읽도록 묶는다.
+LIVE_FILES = {
+    "briefs": "data/theater_briefs.json", "feeds": "data/feeds.json", "firms": "data/firms.json", "open": "data/openfeeds.json",
+    "auto": "intel.auto.json", "latest": "data/latest.json", "trip": "data/tripwires.json", "rfi": "data/rfi.json",
+    "score": "data/scorecard.json", "judg": "data/judgments.json", "house": "data/house_view.json", "risk": "data/risk.json", "pirs": "data/pirs.json",
+    "watchcon": "data/watchcon.json", "watchlog": "data/watch_log.json", "products": "data/products_index.json", "coverage": "data/coverage.json",
+    "hauto": "data/house_view_auto.json", "calib": "data/shock_calib.json",
+}
+
+
+def cmd_bundle(args) -> None:
+    files = {}
+    for k, rel in LIVE_FILES.items():
+        p = DASH / rel
+        if p.exists():
+            try:
+                files[k] = json.loads(p.read_text())
+            except ValueError:
+                log.warning("bundle: %s is not JSON", rel)
+    out = DASH / "data" / "live_bundle.json"
+    out.write_text(json.dumps({"generated": datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), "files": files}, ensure_ascii=False, separators=(",", ":")))
+    log.info("bundle: %d files, %d bytes", len(files), out.stat().st_size)
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description="세계 상황판 수집 파이프라인")
-    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "risk", "bayes", "calib", "redteam", "briefs", "firms", "feeds", "openfeeds", "simulate", "products", "advise", "report", "build", "all"])
+    ap.add_argument("cmd", choices=["collect", "enrich", "assemble", "tripwires", "series", "forecast", "score", "backtest", "risk", "bayes", "calib", "redteam", "briefs", "firms", "feeds", "openfeeds", "bundle", "simulate", "products", "advise", "report", "build", "all"])
     ap.add_argument("--offline", action="store_true", help="네트워크 없이 캐시만 사용")
     ap.add_argument("--only", help="수집원 id 목록(쉼표) · simulate 에서는 JSON view")
     ap.add_argument("--no-claude", action="store_true", help="규칙 기반 분류만 사용")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
-    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "risk": cmd_risk, "bayes": cmd_bayes, "calib": cmd_calib, "redteam": cmd_redteam, "briefs": lambda a: briefs.run(DASH), "firms": lambda a: firms.run(DASH), "feeds": lambda a: feeds.run(DASH), "openfeeds": lambda a: openfeeds.run(DASH), "simulate": cmd_simulate, "products": cmd_products, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
+    steps = {"collect": cmd_collect, "enrich": cmd_enrich, "assemble": cmd_assemble, "tripwires": cmd_tripwires, "series": cmd_series, "forecast": cmd_forecast, "score": cmd_score, "backtest": cmd_backtest, "risk": cmd_risk, "bayes": cmd_bayes, "calib": cmd_calib, "redteam": cmd_redteam, "briefs": lambda a: briefs.run(DASH), "firms": lambda a: firms.run(DASH), "feeds": lambda a: feeds.run(DASH), "openfeeds": lambda a: openfeeds.run(DASH), "bundle": cmd_bundle, "simulate": cmd_simulate, "products": cmd_products, "advise": cmd_advise, "report": cmd_report, "build": cmd_build}
     if args.cmd == "all":
         for name in ["collect", "enrich", "assemble", "tripwires", "report", "build"]:
             steps[name](args)
