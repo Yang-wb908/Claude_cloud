@@ -104,8 +104,9 @@ def fetch_ioda(now: datetime) -> dict:
     until = int(now.timestamp()); since = int((now - timedelta(hours=24)).timestamp())
     rows = parse_ioda_summary(_get_json(f"{IODA_API}/outages/summary", {"from": since, "until": until, "entityType": "country"}))
     for r in rows:
-        th = COUNTRY.get(r["code"], (None,))[0]
+        th, lon, lat = COUNTRY.get(r["code"], (None, None, None))
         r["th"] = th
+        r["at"] = [lon, lat] if lon is not None else None
         infra = max([v for k, v in r["sources"].items() if not k.startswith("gtr")], default=0)
         r["alert"] = bool(th) and (infra >= IODA_MIN_SCORE or r["score"] >= IODA_ANY_SCORE)
     return {"window_h": 24, "countries": rows[:30], "n_alerts": sum(1 for r in rows if r["alert"])}

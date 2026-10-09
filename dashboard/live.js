@@ -84,6 +84,7 @@ function applyLive(got){
   if (got.firms && got.firms.generated) FIRMS_ = got.firms;
   if (got.open && got.open.generated) OPEN_ = got.open;
   if (got.open) { try { if ($("#p-scn") && $("#p-scn").innerHTML) renderScenario(); } catch(e) { console.warn("open", e); } }
+  if (got.feeds || got.firms || got.open) { try { renderSensors(); renderBluf(); } catch(e) { console.warn("sens", e); } }
   if (got.feeds || got.firms || got.open) { try { renderSea(); renderEco(); renderOpsExtras(); } catch(e) { console.warn("feeds", e); } }
   if (got.briefs && got.briefs.items) { if (applyBriefs(got.briefs)) { try { renderTheaters(); } catch(e) { console.warn("briefs", e); } } }
   if (got.latest && Array.isArray(got.latest.events)) {

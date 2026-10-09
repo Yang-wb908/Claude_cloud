@@ -474,6 +474,15 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
 .riskblk .cap{font-size:12.5px;color:var(--muted)}
 .rk{display:inline-block;font-family:var(--mono);font-size:9.5px;padding:0 4px;border-radius:3px;margin-left:5px;vertical-align:middle;letter-spacing:.03em}
 .rk.r1{background:color-mix(in srgb,var(--s1) 20%,transparent);color:var(--s1)} .rk.r2{background:color-mix(in srgb,var(--s2) 20%,transparent);color:var(--s2)} .rk.r3{background:color-mix(in srgb,var(--s3) 22%,transparent);color:var(--s3)} .rk.r4{background:color-mix(in srgb,var(--s4) 24%,transparent);color:var(--s4)} .rk.r5{background:color-mix(in srgb,var(--s5) 26%,transparent);color:var(--s5)}
+.sens path{fill:var(--c);stroke:var(--bg);stroke-width:1.2;cursor:pointer} .sens.net path,.sens.quake path{fill:none;stroke:var(--c);stroke-width:2} .sens .lbl{fill:var(--c);font-weight:600}
+.sens.sev5 path{filter:drop-shadow(0 0 4px var(--c))}
+.aql{list-style:none;margin:6px 0 0;padding:0}
+.aq{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:start;padding:8px 0;border-top:1px dashed var(--line);font-size:13.5px}
+.aq:first-child{border-top:0} .aq small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.aqs{font-size:11px;padding:2px 6px;border-radius:4px;border:1px solid var(--c);color:var(--c);white-space:nowrap}
+.aqb{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end} .aq.acked{opacity:.6}
+.first-ev li{cursor:pointer;font-size:13px} .first-ev time{font-family:var(--num);color:var(--muted);margin-right:4px}
+@media (max-width:600px){.aq{grid-template-columns:1fr}.aqb{justify-content:flex-start}}
 .sctiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:10px 0}
 .sct{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel2);display:grid;gap:2px}
 .sct .l{font-size:11.5px;color:var(--faint)} .sct .v{font-family:var(--num);font-size:24px;font-weight:600;line-height:1.1} .sct small{color:var(--muted);font-size:11px}
@@ -566,6 +575,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
     <div class="legend" id="legend">
       <button class="chip" data-layer="hot" aria-pressed="true"><i class="dot sev5"></i>분쟁</button>
       <button class="chip" data-layer="ev" aria-pressed="true"><i class="sq tG"></i>사건</button>
+      <button class="chip" data-layer="sens" aria-pressed="true" title="위성 열점·인터넷 장애·지진·재난·해협 통항 급변"><i class="dot sev4" style="border-radius:2px"></i>센서</button>
       <button class="chip" data-layer="lanes" aria-pressed="true"><i class="sev1"></i>항로</button>
       <button class="chip" data-layer="choke" aria-pressed="true"><i class="sq sev3" style="transform:rotate(45deg)"></i>해협</button>
       <button class="chip" data-layer="base" aria-pressed="false"><i class="sq" style="--c:var(--base)"></i>기지</button>
@@ -807,7 +817,7 @@ const evG = overlay.append("g").attr("class", "ev-layer");
 const chokeG = overlay.append("g").attr("class", "choke-layer");
 const hotG = overlay.append("g").attr("class", "hot-layer");
 const measG = overlay.append("g").attr("class", "meas");
-const LAYER = {hot:1, ev:1, lanes:1, choke:1, base:0, site:0, unit:0, pipe:0, city:1, hub:1};
+const LAYER = {hot:1, ev:1, sens:1, lanes:1, choke:1, base:0, site:0, unit:0, pipe:0, city:1, hub:1};
 
 /* 항로·송유관 경로 보간: 구심 Catmull-Rom 스플라인으로 경유점 사이를 채운다 (경도 연속화 후 보간) */
 function smoothLine(pts, n){
@@ -1143,6 +1153,20 @@ const hub = hubG.selectAll("g").data(COMMOD.hubs).join("g").attr("class", d => "
   .on("click", (e, d) => { e.stopPropagation(); showHub(d); });
 hub.append("path").attr("d", d => HUB_D[d.k] || HUB_D.port);
 hub.append("text").attr("class", "lbl tiny").attr("x", 7).attr("dy", "0.35em").text(d => d.en);
+/* 센서 레이어 (first.js 의 sensorPoints): 위성 열점·인터넷 장애·지진·재난·해협 통항 */
+const sensG = overlay.append("g").attr("class", "sens-layer");
+const SENS_D = {fire:"M0,-6C3,-2 4,1 4,3A4,4 0 0,1 -4,3C-4,1 -3,-2 0,-6Z", net:"M-5,0A5,5 0 1,1 5,0A5,5 0 1,1 -5,0M-4,4L4,-4", quake:"M-6,0L-3,0L-1.5,-4L1.5,4L3,0L6,0", haz:"M0,-6L5.2,-3V3L0,6L-5.2,3V-3Z", ship:"M-5,1L5,1L3,4H-3Z M-0.6,-5H0.6V1H-0.6Z"};
+let sens = sensG.selectAll("g");
+function renderSensors(){
+  let pts = []; try { pts = sensorPoints(); } catch(e) { pts = []; }
+  sens = sensG.selectAll("g.sens").data(pts, d => d.k + d.h + d.at.join(",")).join(enter => { const g = enter.append("g").attr("tabindex", 0).attr("role", "button");
+    g.append("path"); g.append("text").attr("class", "lbl tiny").attr("x", 8).attr("dy", "0.35em"); return g; })
+    .attr("class", d => `sens ${d.k} sev${d.sev}`).attr("aria-label", d => d.h)
+    .on("click", (e, d) => { e.stopPropagation(); showInfo([{h: d.h, k: {fire:"위성 열점 (NASA FIRMS)", net:"인터넷 장애 (IODA)", quake:"지진 (USGS)", haz:"재난 경보 (GDACS)", ship:"선박 통항 (GFW)"}[d.k], x: d.x, g: "B2", gw: "센서·정형 데이터 · 원인은 별도 확인 필요"}]); });
+  sens.select("path").attr("d", d => SENS_D[d.k]);
+  sens.select("text").text(d => d.lab || "");
+  placeOverlay();
+}
 const unit = unitG.selectAll("g").data(P_.units).join("g").attr("class", "unit").attr("tabindex", 0).attr("role", "button").attr("aria-label", d => d.n)
   .on("click", (e, d) => { e.stopPropagation(); showInfo([{h:d.n, k:(d.k === "csg" ? "항모타격단" : "상륙준비단") + " · " + d.st + " · " + d.asof + " 기준", x:d.x, g:d.g, gw:"보도 기반 광역 추정"}]); });
 unit.append("circle").attr("r", 11);
@@ -1209,7 +1233,7 @@ function placeOverlay(){
   ["#legend", ".zoomctl", "#evcard:not([hidden])", "#readout"].forEach(s => { const el = document.querySelector(s); if (!el) return; const r = el.getBoundingClientRect(); boxes.push({x:r.left - mr.left - 4, y:r.top - mr.top - 4, w:r.width + 8, h:r.height + 8}); });
   const pos = (sel, on) => sel.each(function(d){ const v = on && visible(d.at); d._v = v; if (!v) { this.style.display = "none"; return; } const [x,y] = P(d.at); d._x = x; d._y = y; this.style.display = null; this.setAttribute("transform", `translate(${x},${y})`); });
   const k = projection.scale() / R0;
-  pos(hot, LAYER.hot); pos(choke, LAYER.choke); pos(base, LAYER.base); pos(site, LAYER.site); pos(unit, LAYER.unit); pos(hub, LAYER.hub && k >= 1.4);
+  pos(hot, LAYER.hot); pos(choke, LAYER.choke); pos(base, LAYER.base); pos(site, LAYER.site); pos(unit, LAYER.unit); pos(hub, LAYER.hub && k >= 1.4); pos(sens, LAYER.sens);
   const cityOn = LAYER.city && k >= (W < 600 ? 3 : 2.2);
   pos(city, cityOn);
   const ctryOn = k >= 1.6;
@@ -1257,13 +1281,14 @@ function placeOverlay(){
   base.each(function(d){ if (d._v) second.push({d, el:this, pri:3, h:13, small:true}); });
   site.each(function(d){ if (d._v) second.push({d, el:this, pri:4, h:13, small:true}); });
   hub.each(function(d){ if (d._v) second.push({d, el:this, pri:5, h:13, small:true}); });
+  sens.each(function(d){ if (d._v && d.lab) second.push({d, el:this, pri:6 + d.sev, h:13, small:true}); });
   ctry.each(function(d){ if (d._v) second.push({d, el:this, pri:2 + d.a * 10, h:12, centered:true}); });
   place(second);
   const mp = measG.selectAll("g").data(meas.pts.filter(p => visible(p))).join(enter => { const g = enter.append("g"); g.append("circle").attr("r", 4); g.append("text").attr("x", 7).attr("dy", "0.35em"); return g; });
   mp.attr("transform", d => { const [x,y] = P(d); return `translate(${x},${y})`; }).select("text").text(d => fmtLL(d));
 }
 
-const LAYER_G = {hot:hotG, ev:evG, choke:chokeG, base:baseG, site:siteG, unit:unitG, city:cityG, hub:hubG};
+const LAYER_G = {hot:hotG, ev:evG, sens:sensG, choke:chokeG, base:baseG, site:siteG, unit:unitG, city:cityG, hub:hubG};
 function setLayer(name, on){
   LAYER[name] = on ? 1 : 0;
   if (LAYER_G[name]) LAYER_G[name].classed("layer-off", !on);
@@ -1359,15 +1384,15 @@ function renderBluf(){
   const g = IW.global, B = IW.bluf;
   const extra = INTEL ? [...((INTEL.economy && INTEL.economy.judgments) || []).map(x => ({t:x, tag:"경제"})), ...((INTEL.gp && INTEL.gp.judgments) || []).map(x => ({t:x, tag:"강대국"}))] : [];
   const gaps = B.gaps.concat(INTEL ? [].concat((INTEL.sea && INTEL.sea.gaps) || [], (INTEL.economy && INTEL.economy.gaps) || [], (INTEL.gp && INTEL.gp.gaps) || []) : []);
-  $("#p-bluf").innerHTML = `
+  let first = ""; try { first = typeof firstHtml === "function" ? firstHtml() : ""; } catch(e) { console.warn("first", e); }
+  $("#p-bluf").innerHTML = first + `
     <div class="block sev${g.level}"><div class="glevel"><span class="big">${g.level}</span><div class="lab"><b>종합 경보단계 · ${esc(g.label)} ${TREND[g.trend][0]}</b>전면전 ${sorted.filter(t=>t.sev===5).length} · 고강도 ${sorted.filter(t=>t.sev===4).length} · 긴장 ${sorted.filter(t=>t.sev===3).length} · 회색지대 ${sorted.filter(t=>t.sev===2).length}</div></div>
       <p class="cap" style="margin-top:12px;color:var(--ink)">${esc(g.summary)}</p></div>
     ${typeof riskBlufHtml === "function" ? riskBlufHtml() : ""}
     ${typeof opsBlufHtml === "function" ? opsBlufHtml() : ""}
     <div class="block"><h3>핵심판단</h3><span class="meta">BLUF · 신뢰도는 출처 수·일관성·추론 의존도 기준</span>
       <ul class="kj">${B.judgments.map(j => `<li><div class="t">${esc(j.t)}</div><div class="b">${esc(j.basis)}</div>${confBadge(j.conf)} ${thChips(j.th)}</li>`).join("")}</ul></div>
-    ${TRIP_ && TRIP_.fired && TRIP_.fired.length ? `<div class="block sev${Math.max(...TRIP_.fired.map(f => f.sev || 3))}"><h3>트립와이어 발동 <span class="en">auto</span></h3><span class="meta">임계치 돌파 · ${esc(TRIP_.generated || "")}</span>
-      <ul class="wl">${TRIP_.fired.map(f => `<li>${f.th && TH[f.th] ? `<button class="thchip sev${TH[f.th].sev}" data-th="${f.th}">${esc(TH[f.th].name)}</button>` : ""}<b>${esc(f.title)}</b> · 현재 ${esc(String(f.current))} (임계 ${esc(f.op)} ${esc(String(f.threshold))})<small>${esc(f.why || "")}</small></li>`).join("")}</ul></div>` : ""}
+    <!-- 트립와이어 발동 목록은 맨 위 경보 큐로 옮김 (first.js) -->
     ${AUTO && AUTO.changes && (AUTO.changes.new_count || (AUTO.changes.markets || []).length || (AUTO.changes.portwatch || []).length) ? `<div class="block"><h3>자동 수집 변화 <span class="en">since ${esc((AUTO.changes.since || "").slice(5, 16))}</span></h3>
       <ul class="wl">${AUTO.changes.new_count ? `<li>새 사건 ${AUTO.changes.new_count}건 수집</li>` : ""}${(AUTO.changes.portwatch || []).map(c => `<li>${esc(CP_NAME[c.choke] || c.choke)} 통항 ${esc(String(c.from))} → <b>${esc(String(c.to))}</b>척 (${esc(c.d)})</li>`).join("")}${(AUTO.changes.markets || []).map(c => `<li>${esc(c.l)} ${esc(String(c.from))} → <b>${esc(String(c.to))}</b> (${c.pct > 0 ? "+" : ""}${c.pct}%)</li>`).join("")}</ul></div>` : ""}
     ${RFI_.length ? `<div class="block"><h3>열린 정보 요청 (RFI) ${RFI_.length}건</h3><span class="meta">GitHub Issue · 닫히면 사라집니다</span>
@@ -1383,6 +1408,7 @@ function renderBluf(){
     <div class="block"><h3>방법</h3><p class="cap">${esc(IW.meta.method)} 이전 스냅숏: ${esc(IW.meta.prev)}.</p></div>`;
   $("#p-bluf").querySelectorAll("[data-th]").forEach(el => el.addEventListener("click", e => { const id = el.dataset.th; if (id && TH[id]) { e.stopPropagation(); select(id); } }));
   $("#p-bluf").querySelectorAll(".tabgo2").forEach(b => b.onclick = () => setTab(b.dataset.tab));
+  try { if (typeof firstBind === "function") firstBind($("#p-bluf")); } catch(e) { console.warn("first", e); }
 }
 
 /* ---------- 사건 목록 + 타임라인 ---------- */
@@ -1984,7 +2010,7 @@ stopBtn.addEventListener("click", () => ctl && ctl.abort());
 /*__ANALYST__*/
 
 /* ---------- 시작 ---------- */
-applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderBluf(); repoActivity(); setStatus("snapshot");
+applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderSensors(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
 resize();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();

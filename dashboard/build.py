@@ -44,6 +44,6 @@ auto = ("\nconst INTEL_AUTO = " + opt_json("intel.auto.json", None) + ";\nconst 
         + ";\nconst BRIEFS = " + opt_json("data/theater_briefs.json", None) + ";\nconst FEEDS = " + opt_json("data/feeds.json", None) + ";\nconst FIRMS = " + opt_json("data/firms.json", None) + ";\nconst OPEN = " + opt_json("data/openfeeds.json", None) + ";\nconst RISK = " + opt_json("data/risk.json", None) + ";\nconst RISK_HIST = " + opt_json("data/risk_history.json", []) + ";\n" + rd("ach.js") + "\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
 out = (app.replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
           .replace("/*__DATA__*/", rd("data_snapshot.json")).replace("/*__THEATERS__*/", theaters)
-          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("risk.js") + "\n" + rd("ops.js") + "\n" + rd("live.js")))
+          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("risk.js") + "\n" + rd("ops.js") + "\n" + rd("first.js") + "\n" + rd("live.js")))
 (B / "index.html").write_text(out)
 print("built", len(out), "bytes")
