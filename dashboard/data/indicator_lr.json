@@ -1,5 +1,5 @@
 {
- "note": "시나리오별 증거와 우도비(LR). tw: 트립와이어 발동, ind: 전역 징후 상태(obs=LR, partial=√LR, no=1/√LR), risk: 경제 위험 지수. 같은 전역 안에서는 재정규화되므로 한 시나리오의 상승은 다른 시나리오의 하락으로 나타난다.",
+ "note": "시나리오별 증거와 우도비(LR). tw: 트립와이어 발동, ind: 전역 징후 상태(obs=LR, partial=√LR, no=1/√LR), risk: 경제 위험 지수. 같은 전역 안에서는 재정규화되므로 한 시나리오의 상승은 다른 시나리오의 하락으로 나타난다. | 12차: metric:<경로><비교><값>(센서·정형 데이터), sens:<종류>:<전역>(FIRMS·IODA·지진·GDACS 경보) 추가. 예측시장은 prediction_map.yaml 의 w 로 반영.",
  "scenarios": {
   "hormuz_persist": [
    {
@@ -11,6 +11,11 @@
     "key": "tw:hormuz_transits_low",
     "lr": 2.5,
     "note": "일 통항 10척 미만"
+   },
+   {
+    "key": "metric:feeds.gfw.data.hormuz.chg<=-0.3",
+    "lr": 1.3,
+    "note": "호르무즈 체류 선박 30% 이상 감소 (GFW)"
    }
   ],
   "hormuz_reopen": [
@@ -23,6 +28,11 @@
     "key": "ind:iran:0",
     "lr": 0.5,
     "note": "공격 재개는 재개방과 불일치"
+   },
+   {
+    "key": "metric:feeds.gfw.data.hormuz.chg>=0.3",
+    "lr": 2.0,
+    "note": "호르무즈 체류 선박 30% 이상 증가 (GFW)"
    }
   ],
   "hormuz_war": [
@@ -45,6 +55,21 @@
     "key": "risk:index>=75",
     "lr": 1.5,
     "note": "경제 위험 심각"
+   },
+   {
+    "key": "sens:ioda:iran",
+    "lr": 1.5,
+    "note": "이란·걸프 국가 인터넷 대규모 차단 (IODA)"
+   },
+   {
+    "key": "metric:feeds.gfw.data.hormuz.chg<=-0.3",
+    "lr": 1.5,
+    "note": "호르무즈 체류 선박 전주 대비 30% 이상 감소 (GFW)"
+   },
+   {
+    "key": "sens:firms:iran",
+    "lr": 1.5,
+    "note": "이란·걸프 에너지 시설 위성 열점 경보 (FIRMS)"
    }
   ],
   "redsea_houthi": [
@@ -57,6 +82,16 @@
     "key": "tw:maritime_attacks",
     "lr": 2.0,
     "note": "해상 피격 급증"
+   },
+   {
+    "key": "sens:firms:yemen",
+    "lr": 1.5,
+    "note": "예멘·홍해 시설 위성 열점 경보 (FIRMS)"
+   },
+   {
+    "key": "metric:feeds.gfw.data.bab.chg<=-0.3",
+    "lr": 1.5,
+    "note": "바브엘만데브 통항 30% 이상 감소 (GFW)"
    }
   ],
   "redsea_calm": [
@@ -64,6 +99,16 @@
     "key": "tw:bab_transits_low",
     "lr": 0.4,
     "note": "통항 급감은 복귀와 불일치"
+   },
+   {
+    "key": "metric:feeds.gfw.data.bab.chg>=0.3",
+    "lr": 1.8,
+    "note": "바브엘만데브 통항 30% 이상 증가 (GFW)"
+   },
+   {
+    "key": "metric:feeds.gfw.data.suez_s.chg>=0.3",
+    "lr": 1.5,
+    "note": "수에즈 남단 통항 30% 이상 증가 (GFW)"
    }
   ],
   "blacksea_escalate": [
@@ -76,6 +121,16 @@
     "key": "tw:ttf_100",
     "lr": 1.5,
     "note": "TTF 100유로"
+   },
+   {
+    "key": "sens:firms:ukraine",
+    "lr": 1.4,
+    "note": "러시아 정유·터미널 위성 열점 경보 (FIRMS)"
+   },
+   {
+    "key": "metric:feeds.gfw.data.bosporus.chg<=-0.3",
+    "lr": 1.5,
+    "note": "보스포루스 통항 30% 이상 감소 (GFW)"
    }
   ],
   "blacksea_deal": [
@@ -95,6 +150,16 @@
     "key": "tw:vix_30",
     "lr": 1.3,
     "note": "VIX 30"
+   },
+   {
+    "key": "metric:feeds.gfw.data.taiwan.chg<=-0.3",
+    "lr": 1.8,
+    "note": "대만해협 체류 선박 30% 이상 감소 (GFW)"
+   },
+   {
+    "key": "sens:ioda:taiwan",
+    "lr": 1.5,
+    "note": "대만 인터넷 대규모 장애 (IODA)"
    }
   ],
   "korea_strategic": [
@@ -102,6 +167,11 @@
     "key": "tw:korea_missile",
     "lr": 1.8,
     "note": "24시간 내 발사"
+   },
+   {
+    "key": "sens:quake:korea",
+    "lr": 4.0,
+    "note": "풍계리·영변 인근 지진 — 핵실험 가능성 (USGS)"
    }
   ],
   "fed_hawkish": [
@@ -114,6 +184,11 @@
     "key": "tw:dxy_105",
     "lr": 1.8,
     "note": "DXY 105"
+   },
+   {
+    "key": "metric:feeds.fred.data.T10YIE.v>=2.6",
+    "lr": 1.4,
+    "note": "10년 기대인플레 2.6% 이상 (FRED)"
    }
   ],
   "us_recession": [
@@ -126,6 +201,16 @@
     "key": "tw:brent_85",
     "lr": 1.3,
     "note": "유가 급락"
+   },
+   {
+    "key": "metric:feeds.fred.data.STLFSI4.v>=1",
+    "lr": 1.5,
+    "note": "금융스트레스 지수 1 이상 (FRED)"
+   },
+   {
+    "key": "metric:feeds.fred.data.BAMLH0A0HYM2.v>=5",
+    "lr": 1.5,
+    "note": "하이일드 스프레드 5%p 이상 (FRED)"
    }
   ],
   "ethiopia_war": [
@@ -133,6 +218,16 @@
     "key": "tw:ethiopia_interstate",
     "lr": 3.0,
     "note": "국가 간 교전 사건 급증"
+   },
+   {
+    "key": "sens:firms:ethiopia",
+    "lr": 1.5,
+    "note": "티그라이·메켈레 위성 열점 경보 (FIRMS)"
+   },
+   {
+    "key": "sens:ioda:ethiopia",
+    "lr": 1.5,
+    "note": "에티오피아·에리트레아 인터넷 차단 (IODA)"
    }
   ],
   "bio_spread": [
@@ -148,7 +243,13 @@
    }
   ],
   "elnino_super": [],
-  "gulf_hurricane": [],
+  "gulf_hurricane": [
+   {
+    "key": "sens:gdacs_tc:namerica",
+    "lr": 2.0,
+    "note": "북미 열대성 폭풍 주황·적색 경보 (GDACS)"
+   }
+  ],
   "us_china_tariff": [
    {
     "key": "tw:dxy_105",
@@ -168,6 +269,16 @@
     "key": "tw:brent_110",
     "lr": 1.3,
     "note": "브렌트 110"
+   },
+   {
+    "key": "metric:openfeeds.summary.ofac_new_vessels>=5",
+    "lr": 1.3,
+    "note": "OFAC 신규 선박 제재 5척 이상"
+   },
+   {
+    "key": "metric:feeds.gfw.data.gulf_finland.chg<=-0.3",
+    "lr": 1.5,
+    "note": "핀란드만 통항 30% 이상 감소 (GFW)"
    }
   ],
   "us_canada_auto_tariffs": [
@@ -185,6 +296,24 @@
   "nsr_arctic_incident": [],
   "aus_china_iron_dispute": [],
   "pacific_china_base": [],
-  "india_pak_loc_escalation": []
+  "india_pak_loc_escalation": [
+   {
+    "key": "sens:ioda:southasia",
+    "lr": 1.3,
+    "note": "남아시아 인터넷 대규모 장애 (IODA)"
+   },
+   {
+    "key": "sens:ioda:afpak",
+    "lr": 1.3,
+    "note": "파키스탄 인터넷 대규모 장애 (IODA)"
+   }
+  ],
+  "venezuela_land": [
+   {
+    "key": "sens:ioda:carib",
+    "lr": 1.3,
+    "note": "카리브 국가 인터넷 대규모 장애 (IODA)"
+   }
+  ]
  }
 }

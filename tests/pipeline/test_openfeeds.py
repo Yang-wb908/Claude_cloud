@@ -118,3 +118,44 @@ def test_run_isolates_failures_and_merges_events(tmp_path, monkeypatch):
     assert not doc["ofac"]["ok"] and doc["summary"]["ioda_alerts"] == 1 and doc["summary"]["events"] == 1
     snap = json.loads((tmp_path / "data_snapshot.json").read_text())
     assert snap["events"][0]["src"] == "ioda"
+
+
+def test_bayes_metric_sensor_and_market_evidence():
+    from pipeline import bayes
+    scen = {"templates": [{"id": "a", "th": "g", "p": 30}, {"id": "b", "th": "g", "p": 70}, {"id": "k", "th": "korea", "p": 10}]}
+    house = {"scenarios": [{"id": "a", "p": 30}, {"id": "b", "p": 70}, {"id": "k", "p": 10}]}
+    lr = {"scenarios": {"a": [{"key": "metric:feeds.gfw.data.hormuz.chg<=-0.3", "lr": 2.0, "note": "x"}, {"key": "metric:feeds.gfw.data.hormuz.chg>=0.3", "lr": 9.0}],
+                        "k": [{"key": "sens:quake:korea", "lr": 4.0}, {"key": "sens:ioda:korea", "lr": 9.0}]}}
+    sources = {"feeds": {"gfw": {"data": {"hormuz": {"chg": -0.4}}}}, "openfeeds": {"quakes": {"ok": True, "data": [{"near_th": "korea"}]}, "ioda": {"ok": True, "data": {"countries": []}}}}
+    markets = {"b": {"p": 0.9, "vol": 500_000, "q": "Q", "url": "u"}}
+    res = bayes.update(house, lr, scen, {}, set(), None, sources, markets, {"b": {"w": 0.5}})
+    by = {v["id"]: v for v in res["scenarios"]}
+    assert [e["key"] for e in by["a"]["evidence"]] == ["metric:feeds.gfw.data.hormuz.chg<=-0.3"]
+    assert by["k"]["p"] > 25 and [e["key"] for e in by["k"]["evidence"]] == ["sens:quake:korea"]
+    assert any(e["key"] == "market:b" and e["f"] > 1 for e in by["b"]["evidence"]) and by["b"]["market"]["w"] == 0.5
+    assert abs(by["a"]["p"] + by["b"]["p"] - 100) < 0.5  # 같은 전역은 합이 유지
+    assert res["review"] and res["review"][0]["id"] == "b"  # 70% vs 90% 는 20%p
+    small = bayes.update(house, lr, scen, {}, set(), None, sources, {"b": {"p": 0.9, "vol": 10}}, {"b": {"w": 0.5}})
+    assert not any(e["key"].startswith("market:") for v in small["scenarios"] for e in v["evidence"])  # 거래량 작으면 표시만
+
+
+def test_market_track_resolution_and_skill(tmp_path):
+    from pipeline import bayes
+    (tmp_path / "data").mkdir()
+    track = {"series": {}, "resolved": {}}
+    for i, (sid, mk, house, out) in enumerate([("s%d" % i, 0.9, 0.5, 1) for i in range(6)]):
+        bayes.record_track(track, {"scenarios": [{"id": sid, "prior": house * 100, "p": 60}]}, {sid: {"p": mk, "mslug": "m" + sid, "end": "2026-10-01", "q": "q"}}, "2026-09-30")
+    (tmp_path / "data" / "market_track.json").write_text(json.dumps(track))
+    n = of.resolve_tracked(tmp_path, NOW, getter=lambda slug: [{"closed": True, "outcomes": '["Yes","No"]', "outcomePrices": '["1","0"]'}])
+    assert n == 6
+    sk = bayes.market_skill(json.loads((tmp_path / "data" / "market_track.json").read_text()))
+    assert sk["n"] == 6 and sk["brier"]["mkt"] < sk["brier"]["house"] and sk["factor"] == 2.0  # 시장이 더 잘 맞히면 가중 상향(상한 2배)
+    assert of.resolve_tracked(tmp_path, NOW, getter=lambda slug: 1 / 0) == 0  # 이미 해결된 건 다시 묻지 않음
+
+
+def test_quake_near_nuclear_site_flag():
+    t = int(datetime(2026, 10, 8, tzinfo=UTC).timestamp() * 1000)
+    qs = of.parse_quakes({"features": [{"properties": {"mag": 5.1, "time": t, "place": "N Korea", "url": "https://usgs/pg"}, "geometry": {"coordinates": [129.1, 41.3, 0.0]}}]}, NOW)
+    assert qs[0]["near_id"] == "punggye" and qs[0]["near_th"] == "korea"
+    ev = of.hazard_events(qs, [], NOW)
+    assert "핵실험 가능성" in ev[0]["x"] and ev[0]["th"] == "korea"

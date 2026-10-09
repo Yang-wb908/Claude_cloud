@@ -157,7 +157,7 @@ def parse_markets(payload) -> list[dict]:
             except (TypeError, ValueError):
                 vol, v24, chg = 0.0, 0.0, None
             slug = m.get("slug") or it.get("slug") or ""
-            flat.append({"q": m.get("question") or it.get("title") or "", "p": round(yes, 3), "vol": round(vol), "vol24": round(v24), "chg1d": chg,
+            flat.append({"q": m.get("question") or it.get("title") or "", "p": round(yes, 3), "vol": round(vol), "vol24": round(v24), "chg1d": chg, "mslug": m.get("slug") or "",
                          "end": (m.get("endDate") or it.get("endDate") or "")[:10], "url": f"https://polymarket.com/event/{it.get('slug') or slug}"})
     seen, out = set(), []
     for m in sorted(flat, key=lambda m: -m["vol"]):
@@ -196,6 +196,39 @@ def fetch_poly() -> dict:
     return {"n_markets": len(markets), "matched": match_scenarios(markets, mapping), "top": top}
 
 
+def resolve_tracked(dash: Path, now: datetime, getter=None) -> int:
+    """market_track.json 의 마감일 지난 시장 결과를 Gamma 에서 확인해 resolved 에 기록한다(Yes=1, No=0)."""
+    path = dash / "data" / "market_track.json"
+    if not path.exists():
+        return 0
+    getter = getter or (lambda slug: _get_json(POLY_API + "/markets", {"slug": slug}))
+    track = json.loads(path.read_text())
+    res = track.setdefault("resolved", {})
+    today, n = now.strftime("%Y-%m-%d"), 0
+    for sid, ser in (track.get("series") or {}).items():
+        for slug, end in {(r["mslug"], r["end"]) for r in ser if r.get("mslug") and r.get("end")}:
+            key = f"{sid}|{slug}"
+            if key in res or end >= today:
+                continue
+            try:
+                items = getter(slug)
+            except Exception as e:  # noqa: BLE001
+                log.warning("polymarket resolve %s: %s", slug, e); continue
+            for m in (items if isinstance(items, list) else [items]):
+                if not isinstance(m, dict) or not m.get("closed"):
+                    continue
+                outs, prices = _jl(m.get("outcomes")), _jl(m.get("outcomePrices"))
+                try:
+                    yes = float(prices[[o.lower() for o in outs].index("yes")])
+                except (ValueError, TypeError, IndexError):
+                    continue
+                if yes >= 0.99 or yes <= 0.01:
+                    res[key] = {"outcome": 1 if yes >= 0.99 else 0, "end": end, "at": today}; n += 1
+    if n:
+        path.write_text(json.dumps(track, ensure_ascii=False, separators=(",", ":")))
+    return n
+
+
 # ── USGS · GDACS ─────────────────────────────────────────────────────────────
 def nearest_theater(lon: float, lat: float, km: float = 900) -> str | None:
     """가장 가까운 감시 국가 중심점의 전역(theater). 멀리 떨어진 바다·무관 지역은 None."""
@@ -208,17 +241,23 @@ def nearest_theater(lon: float, lat: float, km: float = 900) -> str | None:
     return best[1] if best else None
 
 
-def _near_watch(lon: float, lat: float, km: float = 300) -> str | None:
+def _near(lon: float, lat: float, km: float = 300) -> tuple[str, str | None, str | None] | None:
+    """(라벨 'X 37km', 전역, 시설 id) — 가장 가까운 감시 시설·해협."""
     best = None
     for s in load_watch()["sites"]:
         d = haversine_km(lat, lon, s["lat"], s["lon"])
         if d <= km and (best is None or d < best[0]):
-            best = (d, s["n"])
+            best = (d, s["n"], s["th"], s["id"])
     for n, (clon, clat) in CHOKE_PTS.items():
         d = haversine_km(lat, lon, clat, clon)
         if d <= km and (best is None or d < best[0]):
-            best = (d, n)
-    return f"{best[1]} {best[0]:.0f}km" if best else None
+            best = (d, n, None, None)
+    return (f"{best[1]} {best[0]:.0f}km", best[2], best[3]) if best else None
+
+
+def _near_watch(lon: float, lat: float, km: float = 300) -> str | None:
+    n = _near(lon, lat, km)
+    return n[0] if n else None
 
 
 def parse_quakes(payload: dict, now: datetime) -> list[dict]:
@@ -229,10 +268,13 @@ def parse_quakes(payload: dict, now: datetime) -> list[dict]:
             mag = float(p.get("mag")); lon, lat = float(g[0]), float(g[1])
         except (TypeError, ValueError, IndexError):
             continue
-        near = _near_watch(lon, lat)
+        nr = _near(lon, lat)
+        near = nr[0] if nr else None
+        depth = float(g[2]) if len(g) > 2 and isinstance(g[2], (int, float)) else None
         if mag >= 6.0 or (mag >= 5.0 and near) or (p.get("alert") in ("orange", "red")):
             t = datetime.fromtimestamp((p.get("time") or 0) / 1000, UTC)
             out.append({"d": t.strftime("%Y-%m-%d"), "mag": mag, "place": p.get("place") or "", "lon": lon, "lat": lat, "near": near,
+                        "near_th": nr[1] if nr else None, "near_id": nr[2] if nr else None, "depth": depth,
                         "alert": p.get("alert"), "tsunami": p.get("tsunami"), "url": p.get("url") or ""})
     out.sort(key=lambda q: (q["d"], q["mag"]), reverse=True)
     return out[:20]
@@ -262,6 +304,7 @@ def parse_gdacs(payload: dict) -> list[dict]:
     return out
 
 
+NUCLEAR_TEST_SITES = {"punggye"}
 GDACS_KO = {"TC": "열대성 폭풍", "EQ": "지진", "FL": "홍수", "VO": "화산", "DR": "가뭄", "WF": "산불"}
 
 
@@ -271,6 +314,8 @@ def hazard_events(quakes: list[dict], gdacs: list[dict], now: datetime) -> list[
         if q["d"] < cut:
             continue
         x = f"규모 {q['mag']:.1f} 지진: {q['place']}" + (f" (감시 대상 {q['near']} 거리)" if q["near"] else "") + (" · 쓰나미 경보" if q.get("tsunami") else "")
+        if q.get("near_id") in NUCLEAR_TEST_SITES and (q.get("depth") is None or q["depth"] <= 5):
+            x += " · 얕은 깊이 — 핵실험 가능성 확인 필요(CTBTO·기상청 발표 대조)"
         ev.append(_ev(q["d"], "X", [round(q["lon"], 2), round(q["lat"], 2)], nearest_theater(q["lon"], q["lat"]), q["place"][:40], x, q["url"], "A1", "usgs", f"usgs-{q['url'][-12:]}", 3 if q["near"] or q["mag"] >= 7 else 2))
     for g in gdacs:
         if (g["to"] or g["from"]) < cut or g["lon"] is None or g["type"] == "DR":
@@ -352,6 +397,10 @@ def run(dash: Path, now: datetime | None = None) -> dict:
             ("gdacs", lambda: parse_gdacs(_get_json(GDACS_API, {"eventlist": "TC;EQ;FL;VO;WF", "alertlevel": "Orange;Red",
                                                                    "fromDate": (now - timedelta(days=10)).strftime("%Y-%m-%d"), "toDate": now.strftime("%Y-%m-%d")}))),
             ("ofac", lambda: fetch_ofac(dash, now)))
+    try:
+        doc["resolved_markets"] = resolve_tracked(dash, now)
+    except Exception as e:  # noqa: BLE001
+        log.warning("resolve_tracked: %s", e)
     for name, fn in jobs:
         try:
             data = fn()

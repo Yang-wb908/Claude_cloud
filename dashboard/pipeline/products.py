@@ -112,6 +112,8 @@ def dib(dash: Path, now: datetime | None = None) -> tuple[str, str]:
         moved = [v for v in hv_auto.get("scenarios", []) if abs(v["p"] - v["prior"]) >= 1]
         if moved:
             L += ["", "### 징후 기반 확률 갱신 (자동 뷰)", ""] + [f"- {v['id']}: {v['prior']}% → {v['p']}% ({', '.join(e['note'] for e in v.get('evidence', [])[:3])})" for v in moved[:8]]
+        if hv_auto.get("review"):
+            L += ["", "### 예측시장과 크게 다른 판단 (재검토 요청)", ""] + [f"- {r['id']}: 하우스 뷰 {r['house']}% vs 시장 {r['market']}% — {r['q']}" for r in hv_auto["review"][:6]]
     fi = _load(dash / "data" / "firms.json", None)
     fe = _load(dash / "data" / "feeds.json", None)
     sens = []

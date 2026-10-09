@@ -1,23 +1,25 @@
 # 시나리오 ↔ Polymarket 질문 매칭. q 는 질문 문장에 대한 정규식(대소문자 무시), 가장 거래량이 큰 진행 중 시장 하나를 고른다.
 # invert: true 면 Yes 가격을 1-p 로 뒤집는다(시나리오가 질문의 반대일 때). 매칭된 질문 원문이 화면에 그대로 나오므로
 # 엉뚱한 시장이 걸리면 여기 정규식을 고친다.
+# w: 자동 뷰(징후 갱신)에 시장 확률을 얼마나 섞을지(로그오즈 가중, 0~1). 질문이 시나리오와 정확히 같으면 0.5,
+#    대리 지표면 0.1~0.2, 0 이면 표시만. 생략하면 0.25. 해결된 시장이 5건 쌓이면 적중 기록으로 0.5~2배 자동 조정.
 scenarios:
-  hormuz_war: {q: "(\\bUS\\b|U\\.S\\.|United States|Israel).*\\b(strike|attack|war|invade)s?\\b.*\\bIran|Iran.*\\b(war|military conflict)\\b"}
-  hormuz_reopen: {q: "Hormuz.*(reopen|open|resume|normal)"}
-  hormuz_persist: {q: "Hormuz.*(closed|closure|blockade)"}
-  redsea_houthi: {q: "Houthi.*(attack|strike|ship)"}
-  blacksea_deal: {q: "(Russia|Ukraine).*(ceasefire|peace deal|truce)"}
-  blacksea_escalate: {q: "(Russia|Putin).*(NATO|nuclear).*(attack|strike|use)"}
-  taiwan_quarantine: {q: "China.*(blockade|invade|invasion|quarantine).*Taiwan"}
-  korea_strategic: {q: "North Korea.*(nuclear test|ICBM|missile)"}
-  venezuela_land: {q: "(\\bUS\\b|U\\.S\\.|United States).*(invade|ground|troops|military).*Venezuela"}
-  us_mexico_land_strike: {q: "(\\bUS\\b|U\\.S\\.|United States).*(strike|military action|troops).*Mexico"}
-  us_recession: {q: "recession.*(2026|2027)|(2026|2027).*recession"}
-  fed_hawkish: {q: "Fed.*(hike|raise|increase).*(rate|rates)"}
-  brazil_bolsonaro_win: {q: "Fl[aá]vio Bolsonaro.*win|Brazil.*(election|presidential).*Fl[aá]vio"}
-  brazil_lula_win: {q: "Lula.*win|Brazil.*(election|presidential).*Lula"}
-  dem_house_win: {q: "Democrat.*(win|control|take).*House|House.*(Democrat)"}
-  us_canada_auto_tariffs: {q: "tariff.*Canad"}
-  ethiopia_war: {q: "(Ethiopia|Eritrea).*(war|invade|conflict)"}
-  india_pak_loc_escalation: {q: "(India|Pakistan).*(strike|war|military conflict)"}
-  bio_spread: {q: "(plague|pandemic|PHEIC|WHO.*emergency)"}
+  hormuz_war: {q: "(\\bUS\\b|U\\.S\\.|United States|Israel).*\\b(strike|attack|war|invade)s?\\b.*\\bIran|Iran.*\\b(war|military conflict)\\b", w: 0.1}
+  hormuz_reopen: {q: "Hormuz.*(reopen|open|resume|normal)", w: 0.3}
+  hormuz_persist: {q: "Hormuz.*(closed|closure|blockade)", w: 0.2}
+  redsea_houthi: {q: "Houthi.*(attack|strike|ship)", w: 0.2}
+  blacksea_deal: {q: "(Russia|Ukraine).*(ceasefire|peace deal|truce)", w: 0.3}
+  blacksea_escalate: {q: "(Russia|Putin).*(NATO|nuclear).*(attack|strike|use)", w: 0.1}
+  taiwan_quarantine: {q: "China.*(blockade|invade|invasion|quarantine).*Taiwan", w: 0.2}
+  korea_strategic: {q: "North Korea.*(nuclear test|ICBM|missile)", w: 0.3}
+  venezuela_land: {q: "(\\bUS\\b|U\\.S\\.|United States).*(invade|ground|troops|military).*Venezuela", w: 0.3}
+  us_mexico_land_strike: {q: "(\\bUS\\b|U\\.S\\.|United States).*(strike|military action|troops).*Mexico", w: 0.3}
+  us_recession: {q: "recession.*(2026|2027)|(2026|2027).*recession", w: 0.3}
+  fed_hawkish: {q: "Fed.*(hike|raise|increase).*(rate|rates)", w: 0.4}
+  brazil_bolsonaro_win: {q: "Fl[aá]vio Bolsonaro.*win|Brazil.*(election|presidential).*Fl[aá]vio", w: 0.5}
+  brazil_lula_win: {q: "Lula.*win|Brazil.*(election|presidential).*Lula", w: 0.5}
+  dem_house_win: {q: "Democrat.*(win|control|take).*House|House.*(Democrat)", w: 0.5}
+  us_canada_auto_tariffs: {q: "tariff.*Canad", w: 0.15}
+  ethiopia_war: {q: "(Ethiopia|Eritrea).*(war|invade|conflict)", w: 0.3}
+  india_pak_loc_escalation: {q: "(India|Pakistan).*(strike|war|military conflict)", w: 0.3}
+  bio_spread: {q: "(plague|pandemic|PHEIC|WHO.*emergency)", w: 0.05}
