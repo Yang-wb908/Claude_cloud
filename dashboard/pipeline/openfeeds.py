@@ -48,6 +48,7 @@ COUNTRY = {
     "OM": ("iran", 55.9, 21.5), "KW": ("iran", 47.5, 29.3), "BH": ("iran", 50.6, 26.0), "GE": ("ukraine", 43.4, 42.3), "AM": ("ukraine", 45.0, 40.1),
     "AZ": ("ukraine", 47.6, 40.1), "KE": ("somalia", 37.9, -0.02), "UG": ("drc", 32.3, 1.4), "CF": ("drc", 20.9, 6.6), "MZ": (None, 35.5, -18.7),
     "TN": ("sahel", 9.5, 33.9), "DZ": ("sahel", 1.7, 28.0), "HN": ("carib", -86.2, 15.2), "NI": ("carib", -85.2, 12.9), "GT": ("namerica", -90.2, 15.8),
+    "VU": ("oceania", 167.0, -15.4), "TO": ("oceania", -175.2, -21.2), "NZ": ("oceania", 172.5, -41.5), "NC": ("oceania", 165.6, -21.3),
 }
 CHOKE_PTS = {"호르무즈": (56.5, 26.4), "바브엘만데브": (43.4, 12.6), "수에즈": (32.5, 30.0), "말라카": (103.8, 1.2), "대만해협": (120.0, 24.0),
              "보스포루스": (29.0, 41.1), "파나마": (-79.9, 9.1), "대한해협": (129.0, 34.3), "덴마크 해협": (12.6, 55.7)}
@@ -273,7 +274,7 @@ def hazard_events(quakes: list[dict], gdacs: list[dict], now: datetime) -> list[
     for g in gdacs:
         if (g["to"] or g["from"]) < cut or g["lon"] is None or g["type"] == "DR":
             continue
-        x = f"GDACS {'적색' if g['level'] == 'red' else '주황'} 경보 · {GDACS_KO.get(g['type'], g['type'])} {g['name']} ({g['country']}) {g['sev']}".strip()
+        x = f"GDACS {'적색' if g['level'] == 'red' else '주황'} 경보 · {GDACS_KO.get(g['type'], g['type'])} {g['name']}{' (' + g['country'] + ')' if g['country'] else ''} {g['sev']}".strip()
         ev.append(_ev(g["to"] or g["from"], "X", [round(g["lon"], 2), round(g["lat"], 2)], next((COUNTRY[c][0] for c in g.get("iso2", []) if c in COUNTRY and COUNTRY[c][0]), None) or nearest_theater(g["lon"], g["lat"]), g["country"][:40], x, g["url"], "A2", "gdacs", f"gdacs-{g['id']}", 3 if g["level"] == "red" else 2))
     return ev
 

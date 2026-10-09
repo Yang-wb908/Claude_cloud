@@ -850,6 +850,7 @@ function touch(){ interacting = true; needDetail = true; dirty = true; clearTime
 function drawLand(detail){
   const ctx = lctx; ctx.save(); ctx.scale(DPR, DPR); ctx.clearRect(0, 0, W, H);
   const r = projection.scale(), [cx, cy] = projection.translate();
+  if (!(r > 0)) { ctx.restore(); return; } // 지도가 숨겨져 크기가 0 이하일 때(탭 전환 중)
   const glow = ctx.createRadialGradient(cx, cy, r * .96, cx, cy, r * 1.08);
   glow.addColorStop(0, COL.limb); glow.addColorStop(1, "rgba(0,0,0,0)");
   ctx.beginPath(); ctx.arc(cx, cy, r * 1.08, 0, 7); ctx.fillStyle = glow; ctx.fill();
