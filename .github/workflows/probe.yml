@@ -1,0 +1,59 @@
+name: 정형 데이터 점검 (FIRMS·GFW·EIA·FRED 단독 실행, 커밋 없음)
+
+# 키 연결·응답 형식을 빠르게 확인한다. 결과는 실행 요약과 아티팩트로만 남기고 저장소에는 커밋하지 않는다.
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "firms, feeds 중 하나만 (비우면 둘 다)"
+        type: string
+        default: ""
+  push:
+    branches: ["claude/**"]
+    paths: ["ops/PROBE"]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r dashboard/pipeline/requirements.txt
+      - name: 실행
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          GFW_TOKEN: ${{ secrets.GFW_TOKEN }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          if [ -z "$ONLY" ] || [ "$ONLY" = "feeds" ]; then python dashboard/pipeline/run.py feeds || true; fi
+          if [ -z "$ONLY" ] || [ "$ONLY" = "firms" ]; then python dashboard/pipeline/run.py firms || true; fi
+          python - <<'PY' | tee -a "$GITHUB_STEP_SUMMARY"
+          import json, os
+          for f in ("dashboard/data/feeds.json", "dashboard/data/firms.json"):
+              if not os.path.exists(f): print(f"- {f}: 없음"); continue
+              d = json.load(open(f))
+              if "eia" in d:
+                  for k in ("eia", "fred", "gfw"):
+                      v = d.get(k) or {}
+                      data = v.get("data") or {}
+                      print(f"- {k}: ok={v.get('ok')} series={len([x for x in data if not str(x).startswith('_')])} err={str(v.get('err') or '')[:600]}")
+                      for e in (data.get("_errors") or [])[:4]: print(f"  - {e[:600]}")
+              else:
+                  print(f"- firms: alerts={d.get('n_alerts')} learning={d.get('learning')} errors={d.get('errors')[:3]}")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe-${{ github.run_id }}
+          path: |
+            dashboard/data/feeds.json
+            dashboard/data/firms.json
+          retention-days: 3

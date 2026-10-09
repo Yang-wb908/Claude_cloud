@@ -138,7 +138,8 @@ def _gfw_report(token: str, dataset: str, bbox: list[float], start: str, end: st
         r = fetch.session().post(GFW_URL, params=params, json={"geojson": _poly(bbox)}, headers={"Authorization": f"Bearer {token}"}, timeout=120)
         if r.status_code == 429:  # 동시 보고서 1건 제한 → 잠시 기다렸다 재시도
             time.sleep(10 * (attempt + 1)); continue
-        r.raise_for_status()
+        if r.status_code >= 400:  # 422 등은 본문에 어떤 파라미터가 틀렸는지 나온다
+            raise RuntimeError(f"HTTP {r.status_code} {dataset}: {r.text[:400]}")
         return r.json()
     raise RuntimeError("GFW 429 반복")
 
