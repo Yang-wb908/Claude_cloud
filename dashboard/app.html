@@ -442,6 +442,7 @@ a.btn{text-decoration:none;display:inline-block}
 .grp{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:4px 12px;font-size:12.5px;cursor:pointer;font-weight:500}
 .grp[aria-selected="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .tabs{top:37px}
+.status.sync.passive{cursor:default;opacity:.8}
 .status.sync,.status.search{padding:3px 10px} .status.sync i{display:none} .status[hidden]{display:none}
 #palette{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding-top:10vh}
 #palette[hidden]{display:none}
@@ -1826,7 +1827,7 @@ function renderInfo(){
     info.innerHTML = `<p><b>스냅숏 모드.</b> ${esc(IW.meta.asofKST)} KST까지 수집한 사건 ${DATA.events.length}건, 전역 브리핑 ${DATA.theaters.length}건, 핵심판단 ${IW.bluf.judgments.length}개${INTEL ? ", 해협·경제·강대국 수집 지표" : ""}입니다.</p>
       <p>${liveErr ? "실시간 연결 실패: " + esc(liveErr) + ". " : ""}claude.ai에 게시된 페이지는 보안 정책상 외부 데이터를 불러오지 못합니다. 이 HTML 파일을 개인 주소에 올리면 위키백과 Current events로 15분마다 자동 갱신됩니다.</p>
       <button class="btn ghost" id="reload">실시간 연결 다시 시도</button>
-      ${window.claude && window.claude.use ? `<p class="note">저장소 동기화: ${typeof syncState !== "undefined" && syncState.at ? "마지막 " + syncState.at.toISOString().slice(11, 16) + "Z" : "아직 안 함"} · <label><input type="checkbox" id="autoSyncChk"${typeof autoSyncOn === "function" && autoSyncOn() ? " checked" : ""}> 열 때 자동 (허용 창이 매번 뜰 수 있음)</label></p>` : ""}`;
+      ${typeof syncState !== "undefined" && syncState.mcp ? `<p class="note">저장소 동기화: ${typeof syncState !== "undefined" && syncState.at ? "마지막 " + syncState.at.toISOString().slice(11, 16) + "Z" : "아직 안 함"} · <label><input type="checkbox" id="autoSyncChk"${typeof autoSyncOn === "function" && autoSyncOn() ? " checked" : ""}> 열 때 자동 (허용 창이 매번 뜰 수 있음)</label></p>` : ""}`;
   }
   const r = $("#reload"); if (r) r.onclick = () => goLive(true);
   const a = $("#autoSyncChk"); if (a) a.onchange = () => setAutoSync(a.checked);

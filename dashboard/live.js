@@ -104,12 +104,29 @@ const SYNC_PERIOD_MS = 30 * 60 * 1000;   // 열려 있는 동안 30분마다
 // 최신 수집분이 필요하면 상단 "저장소 동기화" 버튼을 누른다. 상태 창에서 자동을 켜면 열 때·30분마다 읽는다.
 function autoSyncOn(){ try { return localStorage.getItem("sit-autosync2") === "1"; } catch(e) { return false; } }
 function setAutoSync(on){ try { localStorage.setItem("sit-autosync2", on ? "1" : "0"); } catch(e) {} if (on && !syncState.busy) syncRepo(false); }
+/* 다음 자동 재배포 시각 (수집 직후 6시간마다: 03·09·15·21시 52분 KST) */
+function nextRepublishKST(){
+  const k = new Date(Date.now() + 9 * 3600e3), h = k.getUTCHours(), m = k.getUTCMinutes();
+  const slots = [3, 9, 15, 21]; let nh = slots.find(x => x > h || (x === h && m < 52)); if (nh == null) nh = slots[0];
+  return String(nh).padStart(2, "0") + ":52";
+}
 (function initSync(){
   const btn = $("#syncBtn"); if (!btn) return;
-  btn.addEventListener("click", () => syncRepo(true));
-  if (!(window.claude && window.claude.use)) { btn.hidden = true; return; }
-  // 자동을 켠 경우에만: 열 때 한 번, 30분마다, 탭에 돌아왔을 때(10분 경과 시)
-  if (autoSyncOn()) setTimeout(() => syncRepo(false), 1500);
-  setInterval(() => { if (autoSyncOn() && !document.hidden) syncRepo(false); }, SYNC_PERIOD_MS);
-  document.addEventListener("visibilitychange", () => { if (!document.hidden && autoSyncOn() && syncState.at && Date.now() - syncState.at.getTime() > 10 * 60 * 1000) syncRepo(false); });
+  btn.addEventListener("click", () => { if (syncState.mcp) syncRepo(true); });
+  // 저장소 동기화는 보는 사람 계정에 GitHub 커넥터가 있을 때만 쓸 수 있다(claude.ai 에는 현재 GitHub 커넥터가 없음).
+  // 없으면 버튼 대신 '다음 자동 갱신' 시각을 보여준다 — 상황판은 수집 직후 6시간마다 최신 데이터로 다시 배포된다.
+  const passive = () => { btn.hidden = false; btn.disabled = true; btn.classList.add("passive"); btn.textContent = "다음 갱신 " + nextRepublishKST() + " KST";
+    btn.title = "상황판은 6시간마다(03·09·15·21시 52분 KST) 최신 수집 데이터로 자동 재배포됩니다. 새로 열면 최신 판이 보입니다."; };
+  passive(); setInterval(() => { if (!syncState.mcp) passive(); }, 60e3);
+  if (!(window.claude && window.claude.use)) return;
+  (async () => {
+    try { syncState.mcp = await window.claude.use("mcp"); } catch(e) { syncState.mcp = null; }
+    if (!syncState.mcp) return;
+    let gh = null; try { const L = await syncState.mcp.listTools("github"); gh = (L && (L.servers || L)) ; } catch(e) { gh = null; }   // listTools 는 허용 창을 띄우지 않는다
+    const ok = Array.isArray(gh) ? gh.some(x => (x.tools || []).length) : !!(gh && gh.tools && gh.tools.length);
+    if (!ok) { syncState.mcp = null; return; }
+    btn.disabled = false; btn.classList.remove("passive"); btn.textContent = "저장소 동기화"; btn.title = "GitHub 커넥터로 저장소의 최신 수집 데이터를 불러옵니다";
+    if (autoSyncOn()) setTimeout(() => syncRepo(false), 1500);
+    setInterval(() => { if (autoSyncOn() && !document.hidden) syncRepo(false); }, SYNC_PERIOD_MS);
+  })();
 })();
