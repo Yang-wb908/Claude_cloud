@@ -98,7 +98,7 @@ function gfwHtml(){
   const chg = c => c == null ? "—" : `<span style="color:${c <= -0.2 ? "var(--s5)" : c >= 0.2 ? "var(--s1)" : "var(--ink)"}">${(c > 0 ? "+" : "") + Math.round(c * 100)}%</span>`;
   return `<div class="block sev3"><h3>선박 통항 · 암흑 선박 <span class="en">Global Fishing Watch · AIS + Sentinel-1 SAR</span></h3>
     <span class="meta">AIS 기준 해역 내 평균 체류 선박(선박·시간 ÷ 24)의 최근 7일 평균과 전주 대비, Sentinel-1 레이더로 탐지된 선박 중 AIS 와 짝이 없는 '암흑 선박' 7일 합계. GFW 공개 데이터는 3~5일 늦게 들어옵니다.</span>${feedNote(f, "GFW_TOKEN")}
-    <table class="shk"><thead><tr><th style="text-align:left">해역</th><th>기준일</th><th>평균 선박</th><th>전주 대비</th><th>SAR 7일</th><th>암흑 7일</th></tr></thead><tbody>${ids.map(k => { const v = d[k]; return `<tr><td style="text-align:left">${esc(v.n || k)}</td><td>${v.latest ? esc(md(v.latest)) : "—"}</td><td>${v.vessels_avg7 == null ? "—" : v.vessels_avg7}</td><td>${chg(v.chg)}</td><td>${v.sar_7d || 0}</td><td>${v.dark_7d ? `<b style="color:var(--s4)">${v.dark_7d}</b>` : 0}</td></tr>`; }).join("")}</tbody></table></div>`;
+    <table class="shk"><thead><tr><th style="text-align:left">해역</th><th>기준일</th><th>평균 선박</th><th>전주 대비</th><th>SAR 7일</th><th>암흑 7일</th></tr></thead><tbody>${ids.map(k => { const v = d[k]; return `<tr><td style="text-align:left">${esc(v.n || k)}</td><td>${v.latest ? esc(md(v.latest)) : "—"}</td><td>${v.vessels_avg7 == null ? "—" : v.vessels_avg7}</td><td>${chg(v.chg)}</td>${v.sar_7d ? `<td>${v.sar_7d}</td><td>${v.dark_7d ? `<b style="color:var(--s4)">${v.dark_7d}</b> <small>(${Math.round(100 * v.dark_7d / v.sar_7d)}%)</small>` : 0}</td>` : `<td colspan="2" style="color:var(--faint)">촬영 없음</td>`}</tr>`; }).join("")}</tbody></table></div>`;
 }
 /* 원유 재고 (EIA) · 금융 스트레스 (FRED) — 경제 탭 */
 function feedsEcoHtml(){

@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: daily
@@ -100,16 +98,3 @@ jobs:
           html_body: file://dashboard/brief.html
       - name: 적중 요약을 Job Summary에
         run: cat reports/RISK-latest.md reports/SCORECARD-latest.md >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dashboard
-
-  deploy:
-    needs: sync
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
