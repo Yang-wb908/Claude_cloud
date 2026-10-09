@@ -3,11 +3,11 @@
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | -1.23 | None | None | None | None |
-| wheat | 0.04 | None | None | None | None |
-| gold | 1.31 | None | None | None | None |
-| dxy | -0.06 | None | None | None | None |
-| vix | -1.23 | None | None | None | None |
+| brent | -1.38 | None | None | None | None |
+| wheat | -0.04 | None | None | None | None |
+| gold | 1.34 | None | None | None | None |
+| dxy | -0.05 | None | None | None | None |
+| vix | -1.3 | None | None | None | None |
 | kospi | None | None | None | None | None |
 | krw | 0.17 | None | None | None | None |
 | spx | None | None | None | None | None |
