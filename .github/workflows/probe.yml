@@ -80,7 +80,7 @@ jobs:
               except Exception as e:
                   print(f"- {name}: {e}")
           PY
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: probe-${{ github.run_id }}
           path: |

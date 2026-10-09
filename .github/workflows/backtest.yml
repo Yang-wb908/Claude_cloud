@@ -46,7 +46,7 @@ jobs:
             N=$(gh issue create --title "📊 주간 백테스트 결과 스레드" --label backtest --body "매주 월요일 시계열 백테스트 결과가 댓글로 쌓입니다. 사건 연구·트립와이어 발동 이력·판단 장부 보정 점수." | grep -o '[0-9]*$')
           fi
           gh issue comment "$N" --body-file reports/BACKTEST-latest.md
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: backtest-${{ github.run_id }}
           path: |

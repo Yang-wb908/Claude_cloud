@@ -105,7 +105,7 @@ jobs:
               subprocess.run(["gh", "label", "create", "tripwire", "--color", "B60205", "--force"], check=False)
               subprocess.run(["gh", "issue", "create", "--title", title, "--body", body, "--label", "tripwire"], check=False)
           EOF
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: bootstrap-${{ github.run_id }}
           path: |
