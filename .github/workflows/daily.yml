@@ -68,6 +68,7 @@ jobs:
           python dashboard/pipeline/run.py score
           python dashboard/pipeline/run.py backtest
           python dashboard/pipeline/run.py risk
+          python dashboard/pipeline/run.py resolve || echo "resolve failed (continuing)"
           python dashboard/pipeline/run.py briefs
           python dashboard/pipeline/run.py products
           python dashboard/build.py

@@ -165,7 +165,8 @@ def _walk(node, path="$"):
 def test_structured_output_schemas_use_supported_subset():
     from pipeline import enrich, redteam, advisor
     import pipeline.report as report
-    schemas = {"enrich": enrich.SCHEMA, "redteam": redteam.SCHEMA}
+    from pipeline import resolve
+    schemas = {"enrich": enrich.SCHEMA, "redteam": redteam.SCHEMA, "resolve": resolve.SCHEMA}
     for name, obj in list(vars(advisor).items()) + list(vars(report).items()):
         if name.endswith("SCHEMA") and isinstance(obj, dict):
             schemas[name] = obj

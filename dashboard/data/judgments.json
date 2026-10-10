@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-08",
+ "asof": "2026-10-10",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -1067,6 +1067,411 @@
    "conf": "보통",
    "due": "2026-12-31",
    "src": "IW.theaters.southasia",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-hormuz_persist-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 통제된 해협 지속 — 선별 통항·간헐 공격·봉쇄 병존. 유가 95~110달러 박스권, 보험료 고공.",
+   "p": 0.6,
+   "th": [
+    "iran"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-hormuz_reopen-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 중재 타결·단계적 재개방 — 카타르·오만 중재로 7~14일 내 통항 복원. 공급 프리미엄 급락.",
+   "p": 0.3,
+   "th": [
+    "iran"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-hormuz_war-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 전면 확전·장기 봉쇄 — 미·이란 직접 교전, 걸프 생산시설 타격, 30일 이상 사실상 폐쇄.",
+   "p": 0.1,
+   "th": [
+    "iran"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-redsea_houthi-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 후티 해상 반격 재개 — 바브엘만데브 상선 공격 재개, 수에즈 복귀 선사 재이탈.",
+   "p": 0.25,
+   "th": [
+    "yemen"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-redsea_calm-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 연합 조기 승리·수에즈 완전 복귀 — 후티 해안 거점 상실, 전쟁위험 할증 소멸, 선복 과잉 노출.",
+   "p": 0.3,
+   "th": [
+    "yemen"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-blacksea_escalate-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 흑해 해상 확전 — 오데사 3항·노보로시스크 동시 타격, 곡물 회랑 사실상 중단.",
+   "p": 0.15,
+   "th": [
+    "ukraine"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-blacksea_deal-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 부분 합의·터미널 복구 — 3자 회담 후 해상 휴전, 러시아 터미널 80% 재가동.",
+   "p": 0.3,
+   "th": [
+    "ukraine"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-taiwan_quarantine-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 대만 격리·봉쇄 — 중국 해경 주도 '검역' 선언, 대만해협·바시해협 통항 통제.",
+   "p": 0.05,
+   "th": [
+    "taiwan"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-us_china_tariff-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 미·중 관세·희토류 통제 재격화 — 휴전 연장 파기, 희토류·배터리 소재 수출통제 확대, 미 관세 복원.",
+   "p": 0.25,
+   "th": [
+    "taiwan"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-korea_strategic-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 북한 전략 도발(핵실험·ICBM) — 7차 핵실험 또는 정상각 ICBM. 한미 확장억제 강화 조치.",
+   "p": 0.1,
+   "th": [
+    "korea"
+   ],
+   "conf": "보통",
+   "due": "2026-10-28",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-fed_hawkish-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 연준 추가 인상·10년물 5.5% — 물가 재가속으로 인상 재개. 달러 강세·금리 민감 자산 약세.",
+   "p": 0.25,
+   "th": [
+    "macro"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-elnino_super-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 역대급 엘니뇨 확정 — 1950년 이후 최강. 동남아·인도·호주 동부·서아프리카 건조, 남미 남부 다우.",
+   "p": 0.7,
+   "th": [
+    "weather"
+   ],
+   "conf": "보통",
+   "due": "2027-01-06",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-gulf_hurricane-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 멕시코만 허리케인 상륙 — 정유 6곳·LNG·NOLA 비료 터미널 일시 가동 중단.",
+   "p": 0.35,
+   "th": [
+    "weather"
+   ],
+   "conf": "보통",
+   "due": "2026-10-18",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-ethiopia_war-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 에티오피아–에리트레아 국가 간 전쟁 — 아세브 항구 공세, 홍해 남부 추가 불안.",
+   "p": 0.5,
+   "th": [
+    "ethiopia"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-bio_spread-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 이르쿠츠크 2차 감염·격리 확대 — 접촉자 중 페스트 양성, 이르쿠츠크 봉쇄 연장, 극동 항공편·화물 검역 강화, 러시아 정보 통제 논란.",
+   "p": 0.1,
+   "th": [
+    "bio"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-brazil_bolsonaro_win-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 브라질 결선: 플라비우 볼소나루 당선 — 농업·광업 친화, 환율 약세로 대두·커피 수출 확대. 중국과 거리.",
+   "p": 0.5,
+   "th": [
+    "latam"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-brazil_lula_win-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 브라질 결선: 룰라 재선 — 현상 유지, 브릭스 노선, 재정 우려로 헤알화 약세 가능.",
+   "p": 0.5,
+   "th": [
+    "latam"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-chile_escondida_strike-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 칠레 구리 복수 광산 파업 — 에스콘디다+센티넬라 2주 이상 중단. 세계 공급의 약 6%.",
+   "p": 0.35,
+   "th": [
+    "latam_cu"
+   ],
+   "conf": "보통",
+   "due": "2026-11-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-dem_house_win-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 미 중간선거: 민주당 하원 탈환 — 분점 정부. 관세 권한·대외 작전에 의회 견제 강화, 재정 교착.",
+   "p": 0.65,
+   "th": [
+    "namerica"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-us_canada_auto_tariffs-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 캐나다 자동차·철강 50% 관세 발효 — 북미 자동차 공급망 교란, 캐나다 추가 보복.",
+   "p": 0.35,
+   "th": [
+    "na_trade"
+   ],
+   "conf": "보통",
+   "due": "2026-11-22",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-us_canada_truce-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 미–캐나다 협상 재개·관세 일부 철회 — 338조 관세 일부 철회, USMCA 3자 검토 복귀.",
+   "p": 0.25,
+   "th": [
+    "na_trade"
+   ],
+   "conf": "보통",
+   "due": "2026-11-22",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-us_mexico_land_strike-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 멕시코 영토 내 미군 타격 — 셰인바움 반발, 멕시코 보복(옥수수·에너지), 페소 급락, USMCA 위기.",
+   "p": 0.15,
+   "th": [
+    "na_mexico"
+   ],
+   "conf": "보통",
+   "due": "2026-11-22",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-baltic_interdiction-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 발트해 그림자 유조선 나포 대치 — 에스토니아·핀란드 억류, 러시아 군함 대응. 보험료 급등, 러시아 수출 차질.",
+   "p": 0.2,
+   "th": [
+    "europe"
+   ],
+   "conf": "보통",
+   "due": "2026-11-22",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-nsr_arctic_incident-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 북극항로 그림자 유조선 사고·유출 — 저빙급 유조선 좌초, 북극 유출. EU·미국 2차 제재 강화.",
+   "p": 0.15,
+   "th": [
+    "europe"
+   ],
+   "conf": "보통",
+   "due": "2026-11-22",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-aus_china_iron_dispute-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] CMRG–호주 철광석 가격 분쟁 재발 — 중국 국영 구매사가 특정 광산 구매 중단, 벤치마크 급락.",
+   "p": 0.2,
+   "th": [
+    "oceania"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-pacific_china_base-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 중국 태평양 군사 거점 확보 — 솔로몬·바누아투 안보협정국에 중국 경찰·군 상주.",
+   "p": 0.1,
+   "th": [
+    "oceania"
+   ],
+   "conf": "보통",
+   "due": "2027-01-06",
+   "src": "house_view",
+   "outcome": null,
+   "resolved": null,
+   "note": ""
+  },
+  {
+   "id": "scn-india_pak_loc_escalation-2026-10-08",
+   "d": "2026-10-08",
+   "x": "[시나리오] 인도–파키스탄 공습 교환 — 2025년식 단기 교전. 쌀·면화 수출 차질, 위험회피.",
+   "p": 0.1,
+   "th": [
+    "southasia"
+   ],
+   "conf": "보통",
+   "due": "2026-12-07",
+   "src": "house_view",
    "outcome": null,
    "resolved": null,
    "note": ""
