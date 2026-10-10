@@ -1,7 +1,9 @@
 """dashboard/ 소스를 index.html 하나로 조립한다. 자동 수집 산출물(intel.auto.json, data/*.json)과 수집원 레지스트리가 있으면 함께 주입한다."""
+import hashlib
 import json
 import pathlib
 import re
+from datetime import UTC, datetime, timedelta
 
 B = pathlib.Path(__file__).parent
 
@@ -51,8 +53,13 @@ auto = ("\nconst INTEL_AUTO = " + jopt("intel.auto.json", None) + ";\nconst RFI 
         + ";\nconst SERIES = " + jopt("data/series.json", None) + ";\nconst HOUSE = " + jopt("data/house_view.json", None) + ";\nconst SCORE = " + jopt("data/scorecard.json", None) + ";\nconst COVERAGE = " + jopt("data/coverage.json", None) + ";\nconst HOUSE_AUTO = " + jopt("data/house_view_auto.json", None) + ";\nconst CALIB = " + jopt("data/shock_calib.json", None) + ";\nconst REDTEAM = " + jopt("data/redteam.json", None)
         + ";\nconst PIRS = " + jopt("data/pirs.json", None) + ";\nconst WATCHCON = " + jopt("data/watchcon.json", None) + ";\nconst WATCHLOG = " + jopt("data/watch_log.json", None) + ";\nconst PRODUCTS = " + jopt("data/products_index.json", None)
         + ";\nconst BRIEFS = " + jopt("data/theater_briefs.json", None) + ";\nconst FEEDS = " + jopt("data/feeds.json", None) + ";\nconst FIRMS = " + jopt("data/firms.json", None) + ";\nconst OPEN = " + jopt("data/openfeeds.json", None) + ";\nconst DOMAINS = " + jopt("data/domains.json", None) + ";\nconst REVIEW = " + jopt("data/review.json", None) + ";\nconst QUALITY = " + jopt("data/quality.json", None) + ";\nconst RISK = " + jopt("data/risk.json", None) + ";\nconst RISK_HIST = " + jopt("data/risk_history.json", []) + ";\n" + rd("ach.js") + "\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
-out = (app.replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
+out = (app.replace("/*__LOADER__*/\"\"", json.dumps(rd("loader.html"), ensure_ascii=False).replace("</", "<\\/")).replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
           .replace("/*__DATA__*/", js_json(rd("data_snapshot.json"))).replace("/*__THEATERS__*/", theaters)
-          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("risk.js") + "\n" + rd("ops.js") + "\n" + rd("first.js") + "\n" + rd("live.js")))
+          .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("risk.js") + "\n" + rd("ops.js") + "\n" + rd("first.js") + "\n" + rd("standalone.js") + "\n" + rd("live.js")))
+# 빌드 표지: 단독(다운로드) 실행본이 배포본(board-dist/build.json)과 비교해 새 판을 알아본다. 시각은 빌드 시각(UTC·KST).
+now = datetime.now(UTC)
+build = {"id": hashlib.sha1(out.encode()).hexdigest()[:12], "at": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "kst": (now + timedelta(hours=9)).strftime("%Y-%m-%d %H:%M")}
+out = out.replace("/*__BUILD__*/null", json.dumps(build, ensure_ascii=False), 1)
 (B / "index.html").write_text(out)
-print("built", len(out), "bytes")
+(B / "build.json").write_text(json.dumps(build, ensure_ascii=False))
+print("built", len(out), "bytes", build["id"])

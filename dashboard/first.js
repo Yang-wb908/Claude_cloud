@@ -42,7 +42,7 @@ function alertQueue(){
   const D = typeof DOM_ === "object" ? DOM_ : null;
   if (D) {
     Object.entries((((D.adsb || {}).data || {}).areas) || {}).forEach(([k, a]) => { if (a.status === "surge") add({key: `adsb:${k}:${(D.generated || "").slice(0, 13)}`, sev: 4, src: "군용기", h: `${a.name} 정찰·급유기 ${a.key}대 (평소 ${a.base})`, x: Object.entries(a.by_role || {}).map(([r, n]) => r + " " + n).join(", ") + " · 공개 ADS-B 기준", th: a.th, at: [(a.bbox[0] + a.bbox[2]) / 2, (a.bbox[1] + a.bbox[3]) / 2]}); });
-    const cut3 = new Date(Date.now() - 3 * 86400e3).toISOString().slice(0, 10);
+    const cut3 = todayKST(Date.now() - 3 * 86400e3);
     ((((D.kev || {}).data || {}).recent) || []).filter(r => r.added >= cut3 && (r.edge || r.ransom)).forEach(r => add({key: "kev:" + r.cve, sev: r.ransom ? 3 : 2, src: "사이버", h: `악용 확인 ${r.vendor} ${r.product} (${r.cve})`, x: r.name + (r.ransom ? " · 랜섬웨어 사용" : " · 경계 장비"), url: "https://nvd.nist.gov/vuln/detail/" + r.cve, tab: "p-src"}));
     const kr = (((D.ransom || {}).data || {}).kr) || [];
     if (kr.length) add({key: `rwkr:${kr.length}:${kr[0].d}`, sev: kr.length >= 3 ? 3 : 2, src: "사이버", h: `한국 랜섬웨어 피해 게시 ${kr.length}건 (7일)`, x: kr.slice(0, 4).map(r => r.victim + " (" + r.group + ")").join(", "), th: "korea", tab: "p-src"});

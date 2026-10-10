@@ -1,0 +1,49 @@
+name: 배포본 갱신 (board-dist · 다운로드 HTML 자동 갱신용)
+
+# 수집(6시간)·일일 동기화·부트스트랩이 끝날 때마다, 그리고 대시보드 소스가 푸시될 때마다 상황판을 빌드해
+# 고아 브랜치 board-dist 에 index.html·build.json·live_bundle.json·loader.html 을 강제 푸시한다(커밋 1개만 유지 → 기록이 쌓이지 않음).
+# 'HTML 받기'로 받은 로더 파일은 열 때마다 여기서 최신 판을 받고, 열린 상황판은 10분마다 build.json 을 확인해 새 데이터를 반영한다.
+on:
+  workflow_run:
+    workflows: ["상황판 수집 (6시간 주기)", "일일 동기화 (시세·예측 스냅숏·적중 채점)", "부트스트랩 실행 (작업 브랜치에서 전체 파이프라인 1회)"]
+    types: [completed]
+  push:
+    branches: ["claude/compassionate-rubin-jmaq9e"]
+    paths: ["dashboard/*.js", "dashboard/app.html", "dashboard/loader.html", "dashboard/build.py", "dashboard/*.json", ".github/workflows/dist.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dist
+  cancel-in-progress: true
+
+jobs:
+  dist:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: 상황판 빌드
+        run: python dashboard/build.py
+      - name: board-dist 강제 푸시
+        run: |
+          set -e
+          test -s dashboard/data/live_bundle.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          B=$(git hash-object -w dashboard/build.json)
+          I=$(git hash-object -w dashboard/index.html)
+          L=$(git hash-object -w dashboard/data/live_bundle.json)
+          R=$(git hash-object -w dashboard/loader.html)
+          T=$(printf '100644 blob %s\tbuild.json\n100644 blob %s\tindex.html\n100644 blob %s\tlive_bundle.json\n100644 blob %s\tloader.html\n' "$B" "$I" "$L" "$R" | git mktree)
+          C=$(git commit-tree "$T" -m "board $(python -c 'import json;print(json.load(open("dashboard/build.json"))["kst"])') KST [skip ci]")
+          git push -f origin "$C:refs/heads/board-dist"
+          echo "board-dist ← $(cat dashboard/build.json)" >> "$GITHUB_STEP_SUMMARY"

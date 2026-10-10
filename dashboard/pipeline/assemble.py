@@ -31,11 +31,25 @@ def item_id(it: dict) -> str:
     return "a" + hashlib.sha1(key.encode()).hexdigest()[:10]
 
 
+KST = timedelta(hours=9)
+
+
+def kst_date(published: str) -> str:
+    """사건 날짜는 한국 시각(KST) 기준 날짜. 시각 정보가 없는(00:00·12:00Z로 채운) 날짜는 그대로 둔다."""
+    p = published or ""
+    if len(p) < 19 or p[11:19] in ("00:00:00", "12:00:00"):
+        return p[:10]
+    try:
+        return (datetime.fromisoformat(p[:19]) + KST).strftime("%Y-%m-%d")
+    except ValueError:
+        return p[:10]
+
+
 def to_event(it: dict) -> dict | None:
     e = it.get("enr") or {}
     if it.get("kind") not in ("news", "report") or e.get("rel", 0) < 2:
         return None
-    return {"d": it["published"][:10], "t": e.get("t") or "D", "at": e.get("at"), "th": e.get("th"), "p": e.get("p") or "", "x": e.get("x") or it["title"][:140],
+    return {"d": kst_date(it["published"]), "t": e.get("t") or "D", "at": e.get("at"), "th": e.get("th"), "p": e.get("p") or "", "x": e.get("x") or it["title"][:140],
             "s": it.get("url") or "", "g": it.get("grade"), "src": it.get("sid"), "lang": e.get("lang", "en"), "auto": True, "id": it["id"], "r": int(e.get("rel", 2))}
 
 
@@ -203,7 +217,7 @@ def collapse_duplicates(events: list[dict], max_alt: int = 6) -> list[dict]:
 
 
 def merge_events(existing: list[dict], new: list[dict], now: datetime, keep_days: int = 30, per_day_theater: int = 12) -> list[dict]:
-    cutoff = (now - timedelta(days=keep_days)).strftime("%Y-%m-%d")
+    cutoff = (now + KST - timedelta(days=keep_days)).strftime("%Y-%m-%d")  # 보존 기한도 KST 날짜 기준
     seen_url = {e.get("s") for e in existing if e.get("s")} | {u for e in existing for u in (e.get("alt") or [])}
     seen_txt = {(e.get("d"), _norm(e.get("x", ""))) for e in existing}
     out = [e for e in existing if not e.get("auto") or e.get("d", "") >= cutoff]

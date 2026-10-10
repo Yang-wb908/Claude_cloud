@@ -107,3 +107,12 @@ def test_state_media_graded_low():
     from pipeline.enrich import grade_url
     assert grade_url("https://www.rt.com/news/1") == "D4" and grade_url("https://www.presstv.ir/x") == "D4" and grade_url("https://www.reuters.com/x") == "B2"
     assert grade_url("https://www.art.com/x") != "D4"
+
+
+def test_kst_date_boundary():
+    kst_date = assemble.kst_date
+    assert kst_date("2026-10-09T16:30:00Z") == "2026-10-10"   # KST 01:30 → 다음 날
+    assert kst_date("2026-10-09T14:59:59Z") == "2026-10-09"   # KST 23:59
+    assert kst_date("2026-10-09T00:00:00Z") == "2026-10-09"   # 시각 없는 날짜는 그대로
+    assert kst_date("2026-10-09T12:00:00Z") == "2026-10-09"
+    assert kst_date("2026-10-09") == "2026-10-09"

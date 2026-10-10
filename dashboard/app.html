@@ -60,8 +60,10 @@ header{background:var(--panel);border-bottom:1px solid var(--line)}
 .lvl{display:inline-flex;align-items:center;gap:6px;padding:2px 9px 2px 6px;border-radius:999px;background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);font-size:12.5px;color:var(--ink)}
 .lvl b{font-family:var(--num);font-size:17px;font-weight:600;color:var(--c);line-height:1}
 .lvl .tr{font-family:var(--num);font-weight:600;color:var(--c)}
-.clocks{display:flex;gap:14px;align-items:center}
-.clock{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;line-height:1.3}
+.top>div:first-child{min-width:0;flex:1 1 auto}
+.clocks{display:flex;gap:14px;align-items:center;flex:none}
+.clock{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right;line-height:1.3;white-space:nowrap}
+@media (max-width:600px){.clocks{gap:8px}.clock:first-child{display:none}.clock b{font-size:14px}}
 .clock b{display:block;font-size:17px;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:.04em}
 .theme-btn{border:1px solid var(--line);background:transparent;border-radius:6px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;flex:none}
 .status{display:inline-flex;align-items:center;gap:7px;padding:3px 10px 3px 8px;border-radius:999px;border:1px solid var(--line);background:transparent;font-size:12.5px;color:var(--muted);cursor:pointer}
@@ -446,6 +448,9 @@ a.btn{text-decoration:none;display:inline-block}
 .grp[aria-selected="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .tabs{top:37px}
 .status.sync.passive{cursor:default;opacity:.8}
+.keybox{margin:0 0 10px}.keybox .note{margin:0 0 6px}.keyrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.keyrow input[type=password]{flex:1 1 220px;min-width:0;font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.keybox select{font:inherit;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);max-width:100%}
 .status.sync,.status.search{padding:3px 10px} .status.sync i{display:none} .status[hidden]{display:none}
 #palette{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;display:flex;align-items:flex-start;justify-content:center;padding-top:10vh}
 #palette[hidden]{display:none}
@@ -557,6 +562,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
         <span class="lvl" id="glvl"></span>
         <span class="dtg" id="dtg"></span>
         <button class="status" id="status" aria-expanded="false" aria-controls="info"><i></i><span id="statusText">스냅숏</span></button>
+        <button class="status sync" id="dlBtn" hidden title="열 때마다 최신 판을 받아 띄우는 작은 HTML 파일을 내려받습니다. claude.ai 밖에서도 모든 기능이 동작합니다.">HTML 받기</button>
         <button class="status sync" id="syncBtn" title="GitHub 커넥터로 저장소의 최신 시세·사건·채점·장부를 불러옵니다">저장소 동기화</button>
         <button class="status search" id="searchBtn" title="전역 검색 (Ctrl+K)">⌕ 검색</button>
       </div>
@@ -661,6 +667,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
       <section class="pane" id="p-ach" role="tabpanel" hidden></section>
       <section class="pane" id="p-ai" role="tabpanel" hidden>
         <p class="note" id="aiNote">상황판에 담긴 데이터(브리핑·핵심판단·징후·시나리오·해협·경제·강대국·사건·시장)만 근거로 답합니다. 직접 검색은 하지 않아요.</p>
+        <div class="keybox" id="keyBox" hidden></div>
         <div class="ask" id="askBox">
           <textarea id="q" placeholder="예: 호르무즈 봉쇄와 홍해 지상전이 겹치면 한국 원유·운임은?"></textarea>
           <div class="sugs" id="sugs">
@@ -684,6 +691,8 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
 <script id="world" type="application/json">/*__WORLD__*/</script>
 <script id="world110" type="application/json">/*__WORLD110__*/</script>
 <script>
+const BUILD = /*__BUILD__*/null;
+const LOADER_HTML = /*__LOADER__*/"";
 const DATA = /*__DATA__*/;
 /*__THEATERS__*/
 DATA.theaters = THEATERS;
@@ -761,6 +770,8 @@ let REF = DATES[DATES.length - 1];
 let MODE = "snapshot";
 function daysAgo(d){ return Math.round((Date.parse(REF) - Date.parse(d)) / 864e5); }
 function visibleEvents(){ return EVENTS.filter(e => { const a = daysAgo(e.d); return typeOn[e.t] && a >= 0 && a < rangeDays; }); }
+/* 날짜 기준: 하루의 경계는 한국 시각(KST) 자정. 사건 날짜도 수집 단계에서 KST 날짜로 매긴다. */
+const todayKST = (ms) => new Date((ms == null ? Date.now() : ms) + 9 * 3600e3).toISOString().slice(0, 10);
 const md = d => { if (!d) return ""; const p = d.split("-"); return p.length >= 3 ? (+p[1]) + "/" + (+p[2]) : d; };
 
 /* ---------- 헤더 ---------- */
@@ -1421,7 +1432,7 @@ function renderBluf(){
       <ul class="wl">${AUTO.changes.new_count ? `<li>새 사건 ${AUTO.changes.new_count}건 수집</li>` : ""}${(AUTO.changes.portwatch || []).map(c => `<li>${esc(CP_NAME[c.choke] || c.choke)} 통항 ${esc(String(c.from))} → <b>${esc(String(c.to))}</b>척 (${esc(c.d)})</li>`).join("")}${(AUTO.changes.markets || []).map(c => `<li>${esc(c.l)} ${esc(String(c.from))} → <b>${esc(String(c.to))}</b> (${c.pct > 0 ? "+" : ""}${c.pct}%)</li>`).join("")}</ul></div>` : ""}
     ${RFI_.length ? `<div class="block"><h3>열린 정보 요청 (RFI) ${RFI_.length}건</h3><span class="meta">GitHub Issue · 닫히면 사라집니다</span>
       <ul class="wl">${RFI_.map(i => `<li><a href="${esc(i.url)}" target="_blank" rel="noopener">#${i.number} ${esc(i.title.replace(/^\[RFI\]\s*/, ""))}</a><small>${esc((i.createdAt || "").slice(0, 10))}</small></li>`).join("")}</ul></div>` : ""}
-    ${(() => { const today = new Date().toISOString().slice(0, 10); const up = allCalendar().filter(c => c.d >= today).slice(0, 6); return up.length ? `<div class="block"><h3>다가오는 일정 <span class="en">next</span></h3><ul class="chg">${up.map(c => `<li><time>${esc(md(c.d))}</time><span></span><span><span class="en">${esc(COMMOD.calendarCats[c.cat] || c.cat)}</span> ${esc(c.x)}</span></li>`).join("")}</ul><p class="cap"><button class="thchip sev2 tabgo2" data-tab="p-cal">일정 탭 열기</button></p></div>` : ""; })()}
+    ${(() => { const today = todayKST(); const up = allCalendar().filter(c => c.d >= today).slice(0, 6); return up.length ? `<div class="block"><h3>다가오는 일정 <span class="en">next</span></h3><ul class="chg">${up.map(c => `<li><time>${esc(md(c.d))}</time><span></span><span><span class="en">${esc(COMMOD.calendarCats[c.cat] || c.cat)}</span> ${esc(c.x)}</span></li>`).join("")}</ul><p class="cap"><button class="thchip sev2 tabgo2" data-tab="p-cal">일정 탭 열기</button></p></div>` : ""; })()}
     ${extra.length ? `<div class="block"><h3>경제·강대국 판단</h3><span class="meta">수집 산출 · 근거는 괄호 안</span><ul class="kj">${extra.map(j => `<li><div class="t">${esc(j.t)}</div><span class="conf">${esc(j.tag)}</span></li>`).join("")}</ul></div>` : ""}
     <div class="block"><h3>지난 72시간 변화</h3><span class="meta">↑ 악화 · ↓ 완화 · → 태세 변화</span>
       <ul class="chg">${B.changes72.map(c => `<li${c.th && TH[c.th] ? ` data-th="${c.th}"` : ""}><time>${esc(c.d)}</time>${trendTag(c.dir)}<span>${esc(c.x)}${c.th && TH[c.th] ? ` <span class="noloc">· ${esc(TH[c.th].name)}</span>` : ""}</span></li>`).join("")}</ul></div>
@@ -1644,7 +1655,7 @@ function allCalendar(){
   return out.filter(c => c.d && c.x && !seen.has(c.d + c.x.slice(0, 14)) && seen.add(c.d + c.x.slice(0, 14))).sort((a,b) => a.d.localeCompare(b.d));
 }
 function renderCalendar(){
-  const today = new Date().toISOString().slice(0, 10);
+  const today = todayKST();
   const list = allCalendar().filter(c => !calCat || c.cat === calCat);
   const cats = COMMOD.calendarCats;
   const dday = d => { const n = Math.round((Date.parse(d) - Date.parse(today)) / 864e5); return n === 0 ? "D-DAY" : n > 0 ? "D-" + n : "D+" + (-n); };
@@ -1847,8 +1858,9 @@ function renderInfo(){
     info.innerHTML = `<p><b>실시간 모드.</b> 위키백과 Current events를 15분마다 다시 읽어 사건을 지구본에 찍습니다. 위치는 본문에 연결된 문서의 좌표로 자동 추정합니다.</p><p>원문은 영어로 표시되고, 브리핑·핵심판단·시장 지표는 스냅숏 값입니다.</p><button class="btn ghost" id="reload">지금 갱신</button>`;
   } else {
     info.innerHTML = `<p><b>스냅숏 모드.</b> ${esc(IW.meta.asofKST)} KST까지 수집한 사건 ${DATA.events.length}건, 전역 브리핑 ${DATA.theaters.length}건, 핵심판단 ${IW.bluf.judgments.length}개${INTEL ? ", 해협·경제·강대국 수집 지표" : ""}입니다.</p>
-      <p>${liveErr ? "실시간 연결 실패: " + esc(liveErr) + ". " : ""}claude.ai에 게시된 페이지는 보안 정책상 외부 데이터를 불러오지 못합니다. 이 HTML 파일을 개인 주소에 올리면 위키백과 Current events로 15분마다 자동 갱신됩니다.</p>
-      <button class="btn ghost" id="reload">실시간 연결 다시 시도</button>
+      ${typeof distInfoHtml === "function" ? distInfoHtml() : ""}
+      ${liveErr && typeof STANDALONE !== "undefined" && STANDALONE ? `<p class="note">위키백과 실시간 연결 실패: ${esc(liveErr)}</p>` : ""}
+      <button class="btn ghost" id="reload">${typeof STANDALONE !== "undefined" && STANDALONE ? "위키백과 실시간 사건 보기 (영문)" : "실시간 연결 다시 시도"}</button>
       ${typeof syncState !== "undefined" && syncState.mcp ? `<p class="note">저장소 동기화: ${typeof syncState !== "undefined" && syncState.at ? "마지막 " + syncState.at.toISOString().slice(11, 16) + "Z" : "아직 안 함"} · <label><input type="checkbox" id="autoSyncChk"${typeof autoSyncOn === "function" && autoSyncOn() ? " checked" : ""}> 열 때 자동 (허용 창이 매번 뜰 수 있음)</label></p>` : ""}`;
   }
   const r = $("#reload"); if (r) r.onclick = () => goLive(true);
@@ -2014,7 +2026,7 @@ function compact(){
     시장: {브렌트:M.brent.v + " (" + M.brent.d + ")", WTI:M.wti.v + " (" + M.wti.d + ")", WCI:M.wci.v + " (" + M.wci.d + ")", BDI:M.bdi.v + " (" + M.bdi.d + ")"},
     사건: [...EVENTS].filter(e => daysAgo(e.d) >= 0).sort((a,b) => b.d.localeCompare(a.d)).slice(0, 90).map(e => [e.d, TYPES[e.t].n, e.p, e.x, grade(e.s).g].join(" | ")) });
 }
-const errCopy = {not_granted:"분석관 사용이 허용되지 않았어요. 아티팩트 권한에서 허용하면 쓸 수 있어요.", rate_limited:"요청이 몰렸어요. 잠시 뒤에 다시 눌러 주세요.", cancelled:"중지했어요."};
+const errCopy = {not_granted:"분석관 사용이 허용되지 않았어요. 아티팩트 권한에서 허용하면 쓸 수 있어요.", rate_limited:"요청이 몰렸어요. 잠시 뒤에 다시 눌러 주세요.", cancelled:"중지했어요.", auth:"API 키가 올바르지 않거나 권한이 없어요. 분석관 탭에서 키를 다시 넣어 주세요.", credit:"API 크레딧이 부족해요. console.anthropic.com 에서 확인하세요.", overloaded:"Claude 서버가 혼잡해요. 잠시 뒤 다시 시도해 주세요.", network:"인터넷 연결 또는 API 접속에 실패했어요."};
 askBtn.addEventListener("click", async () => {
   const question = q.value.trim();
   if (!question) { q.focus(); return; }
@@ -2034,7 +2046,9 @@ askBtn.addEventListener("click", async () => {
 });
 stopBtn.addEventListener("click", () => ctl && ctl.abort());
 (async () => {
+  await 0;  // 아래 분석관 묶음(standalone.js 등)이 모두 읽힌 뒤 판단
   try { sample = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch(e) { sample = null; }
+  if (!sample && typeof keySampleInit === "function" && keySampleInit()) return;  // claude.ai 밖: 사용자 API 키로 동작
   if (!sample) { $("#askBox").hidden = true; $("#aiNote").textContent = "분석관은 Claude 안에서 이 페이지를 열 때만 쓸 수 있어요."; }
 })();
 
@@ -2055,6 +2069,6 @@ try { const t = localStorage.getItem("sit-tab"); if (t && document.querySelector
 resize();
 OVERLAY_HOLD = false; placeOverlay();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();
-goLive(false);
+if (!(typeof startDist === "function" && startDist())) goLive(false);  // 단독 실행: 배포본 자동 갱신(파이프라인 데이터) · 그 외: 위키백과 실시간 시도
 })();
 </script>
