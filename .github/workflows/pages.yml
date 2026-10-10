@@ -60,7 +60,7 @@ jobs:
           cp products/*.md site/products/ 2>/dev/null || true
           cp products/index.json site/products/ 2>/dev/null || true
           echo '<meta http-equiv="refresh" content="0; url=../index.html">' > site/products/index.html
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
         if: steps.pages.outputs.on == '1'
       - uses: actions/upload-pages-artifact@v3
         if: steps.pages.outputs.on == '1'
