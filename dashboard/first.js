@@ -4,7 +4,7 @@ const SEEN_KEY = "sit-seen-v1", ACK_KEY = "sit-ack-v1";
 const lsGet = (k, d) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e) { return d; } };
 const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} };
 const h32 = s => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); };
-const evKey = e => h32((e.s || "") + "|" + e.d + "|" + (e.x || "").slice(0, 40));
+const evKey = e => e.__k || (e.__k = h32((e.s || "") + "|" + e.d + "|" + (e.x || "").slice(0, 40)));
 const sevOfLevel = lv => Math.max(1, Math.min(5, lv || 1));
 const ago = iso => { const m = (Date.now() - Date.parse(iso)) / 60000; return m < 90 ? Math.round(m) + "분 전" : m < 60 * 36 ? Math.round(m / 60) + "시간 전" : Math.round(m / 1440) + "일 전"; };
 const kst = iso => { const d = new Date(Date.parse(iso) + 9 * 3600e3); return `${d.getUTCMonth() + 1}/${d.getUTCDate()} ${String(d.getUTCHours()).padStart(2, "0")}:${String(d.getUTCMinutes()).padStart(2, "0")} KST`; };

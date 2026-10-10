@@ -77,7 +77,10 @@ function riskGaugeHtml(r){
   return `<div class="rgauge sev${r.index >= 75 ? 5 : r.index >= 55 ? 4 : r.index >= 35 ? 3 : 2}"><svg viewBox="0 0 120 86" aria-label="경제 위험 지수 ${r.index}"><path d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="var(--line)" stroke-width="10" stroke-linecap="round"/><path d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="var(--c)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${(157 * r.index / 100).toFixed(1)} 200"/><line x1="60" y1="60" x2="60" y2="22" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" transform="rotate(${ang.toFixed(1)} 60 60)"/><circle cx="60" cy="60" r="4" fill="var(--ink)"/><text x="60" y="80" text-anchor="middle" font-size="20" font-weight="700" fill="var(--c)" font-family="Barlow Condensed, Arial Narrow, sans-serif">${r.index}</text><text x="104" y="80" text-anchor="end" font-size="8" fill="var(--muted)">${esc(r.level)}</text><text x="16" y="80" font-size="8" fill="var(--faint)">0</text><text x="60" y="12" text-anchor="middle" font-size="7" fill="var(--faint)">50</text><text x="110" y="52" text-anchor="end" font-size="7" fill="var(--faint)">100</text></svg></div>`;
 }
 function riskBlufHtml(){
-  try { if (!RISK_) RISK_ = riskModel(); } catch(e) { console.warn("risk", e); return ""; }
+  if (!RISK_) {  // 몬테카를로 계산은 첫 화면을 그린 뒤로 미룬다(시작 속도)
+    if (!riskBlufHtml._sched) { riskBlufHtml._sched = true; setTimeout(() => { try { RISK_ = riskModel(); renderBluf(); } catch(e) { console.warn("risk", e); } }, 30); }
+    return `<div class="block riskblk"><h3>경제 위험 지수 <span class="en">계산 중</span></h3><p class="note">시나리오 시뮬레이션으로 계산하고 있습니다…</p></div>`;
+  }
   const r = RISK_;
   return `<div class="block sev${r.index >= 75 ? 5 : r.index >= 55 ? 4 : r.index >= 35 ? 3 : 2} riskblk"><h3>경제 위험 지수 <span class="en">economic risk · ${r.H}d</span></h3>
     <div class="riskrow">${riskGaugeHtml(r)}<div class="rbars">${Object.entries(RISK_W).map(([k, w]) => `<div class="rb" title="${esc(r.comp[k].d)}"><span>${esc(r.comp[k].l)}</span><i><b style="width:${Math.round(100 * clamp01(r.comp[k].v))}%"></b></i><small>${Math.round(100 * clamp01(r.comp[k].v))}</small></div>`).join("")}</div></div>

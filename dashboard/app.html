@@ -608,18 +608,17 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
       <button class="tab" role="tab" aria-selected="false" data-pane="p-th" data-g="sit">분쟁</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ev" data-g="sit">사건</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-pos" data-g="sit">태세</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-net" data-g="sit">연계</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-gp" data-g="sit">강대국</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-kr" data-g="sit">한국</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-sea" data-g="mkt" hidden>해협</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-cm" data-g="mkt" hidden>상품</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-eco" data-g="mkt" hidden>경제</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-gp" data-g="mkt" hidden>강대국</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-cal" data-g="mkt" hidden>일정</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-mkt" data-g="mkt" hidden>시장</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-net" data-g="sit">연계</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-risk" data-g="mkt" hidden>위험도</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cm" data-g="mkt" hidden>상품</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-sea" data-g="mkt" hidden>해협</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-eco" data-g="mkt" hidden>경제</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-cal" data-g="mkt" hidden>일정</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-scn" data-g="an" hidden>시나리오</button>
-      <button class="tab" role="tab" aria-selected="false" data-pane="p-bt" data-g="an" hidden>백테스트</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ach" data-g="an" hidden>가설</button>
+      <button class="tab" role="tab" aria-selected="false" data-pane="p-bt" data-g="an" hidden>백테스트</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-ai" data-g="an" hidden>분석관</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-watch" data-g="ops" hidden>당직</button>
       <button class="tab" role="tab" aria-selected="false" data-pane="p-pir" data-g="ops" hidden>요구</button>
@@ -1233,7 +1232,9 @@ function onGroup(d){
   } else showCard(d.items);
 }
 
+let OVERLAY_HOLD = true, OVERLAY_PENDING = false;   // 시작하는 동안 여러 번 불려도 마지막에 한 번만 배치
 function placeOverlay(){
+  if (OVERLAY_HOLD) { OVERLAY_PENDING = true; return; }
   drawEvents();
   const boxes = [];
   const fits = b => !boxes.some(o => b.x < o.x + o.w && b.x + b.w > o.x && b.y < o.y + o.h && b.y + b.h > o.y);
@@ -1339,11 +1340,20 @@ function setGroup(g){
   document.querySelectorAll(".grp").forEach(b => b.setAttribute("aria-selected", b.dataset.g === g));
   document.querySelectorAll(".tab").forEach(t => t.hidden = t.dataset.g !== g);
 }
+/* 보이지 않는 탭은 처음 열 때 그린다 (시작 속도). 데이터가 바뀌면 각 render 함수가 그대로 다시 그린다. */
+const paneFresh = new Set();
+function lazyPanes(){ return {"p-ev": renderEventList, "p-sea": renderSea, "p-eco": renderEco, "p-gp": renderGP, "p-pos": renderPosture, "p-kr": renderKorea,
+  "p-src": () => { renderSources(); if (typeof renderOpsExtras === "function") renderOpsExtras(); }, "p-cm": renderCommod, "p-cal": renderCalendar,
+  "p-scn": () => typeof renderScenario === "function" && renderScenario(), "p-bt": () => typeof renderBacktest === "function" && renderBacktest(), "p-ach": () => typeof renderACH === "function" && renderACH(),
+  "p-risk": () => typeof renderRisk === "function" && renderRisk(), "p-pir": () => typeof renderPIR === "function" && renderPIR(),
+  "p-prod": () => typeof renderProducts === "function" && renderProducts(), "p-watch": () => typeof renderWatch === "function" && renderWatch()}; }
+function ensurePane(id){ const f = lazyPanes()[id]; if (!f || paneFresh.has(id)) return; paneFresh.add(id); try { f(); } catch(e) { console.warn("pane " + id, e); } }
 function setTab(id){
   const tab = document.querySelector(`.tab[data-pane="${id}"]`); if (tab) setGroup(tab.dataset.g);
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.pane === id));
   document.querySelectorAll(".pane").forEach(p => p.hidden = p.id !== id);
   if (id === "p-net" && !netDrawn) drawNet();
+  ensurePane(id);
   try { localStorage.setItem("sit-tab", id); if (tab) localStorage.setItem("sit-tab-" + tab.dataset.g, id); } catch(e) {}
 }
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => setTab(t.dataset.pane)));
@@ -2034,9 +2044,10 @@ function wrapWideTables(root){
 try { const mo = new MutationObserver(() => { clearTimeout(mo._t); mo._t = setTimeout(() => wrapWideTables(), 50); }); document.querySelectorAll(".pane").forEach(p => mo.observe(p, {childList: true, subtree: true})); } catch(e) {}
 
 /* ---------- 시작 ---------- */
-applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderBluf(); renderTheaters(); renderEventList(); renderTimeline(); renderSea(); renderEco(); renderGP(); renderPosture(); renderKorea(); renderSources(); renderCommod(); renderCalendar(); renderScenario(); renderBacktest(); renderACH(); renderRisk(); renderPIR(); renderProducts(); renderWatch(); renderOpsExtras(); renderCommod(); renderSensors(); renderBluf(); repoActivity(); setStatus("snapshot");
-try { const t = localStorage.getItem("sit-tab"); if (t && document.getElementById(t)) setTab(t); } catch(e) {}
+applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderTheaters(); renderTimeline(); renderSensors(); renderBluf(); repoActivity(); setStatus("snapshot");
+try { const t = localStorage.getItem("sit-tab"); if (t && document.querySelector(`.tab[data-pane="${t}"]`)) setTab(t); } catch(e) {}
 resize();
+OVERLAY_HOLD = false; placeOverlay();
 projection.scale(scaleForHalf(HOME.half)); syncZoom(); needDetail = true; dirty = true; updateReadout();
 goLive(false);
 })();

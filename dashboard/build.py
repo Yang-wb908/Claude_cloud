@@ -18,6 +18,15 @@ def opt_json(path, default):
         return json.dumps(default, ensure_ascii=False)
 
 
+def js_json(text):
+    """큰 데이터는 JS 객체 리터럴보다 JSON.parse('…') 가 빨리 해석된다(V8). </script> 가 끼지 않게 '</' 를 이스케이프."""
+    return "JSON.parse(" + json.dumps(text, ensure_ascii=False).replace("</", "<\\/").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029") + ")"
+
+
+def jopt(path, default):
+    return js_json(opt_json(path, default))
+
+
 def opt_json_raw(path):
     p = B / path
     try:
@@ -37,13 +46,13 @@ def registry():
 
 app = (B / "app.html").read_text()
 theaters = re.sub(r"^\s*<script>\s*", "", (B / "theaters.js").read_text()).rstrip()
-auto = ("\nconst INTEL_AUTO = " + opt_json("intel.auto.json", None) + ";\nconst RFI = " + opt_json("data/rfi.json", []) + ";\nconst TRIP = " + opt_json("data/tripwires.json", None)
-        + ";\nconst SOURCES = " + registry() + ";\nconst JUDG = " + opt_json("data/judgments.json", {"items": []}) + ";\nconst BT = " + opt_json("data/backtest.json", None)
-        + ";\nconst SERIES = " + opt_json("data/series.json", None) + ";\nconst HOUSE = " + opt_json("data/house_view.json", None) + ";\nconst SCORE = " + opt_json("data/scorecard.json", None) + ";\nconst COVERAGE = " + opt_json("data/coverage.json", None) + ";\nconst HOUSE_AUTO = " + opt_json("data/house_view_auto.json", None) + ";\nconst CALIB = " + opt_json("data/shock_calib.json", None) + ";\nconst REDTEAM = " + opt_json("data/redteam.json", None)
-        + ";\nconst PIRS = " + opt_json("data/pirs.json", None) + ";\nconst WATCHCON = " + opt_json("data/watchcon.json", None) + ";\nconst WATCHLOG = " + opt_json("data/watch_log.json", None) + ";\nconst PRODUCTS = " + opt_json("data/products_index.json", None)
-        + ";\nconst BRIEFS = " + opt_json("data/theater_briefs.json", None) + ";\nconst FEEDS = " + opt_json("data/feeds.json", None) + ";\nconst FIRMS = " + opt_json("data/firms.json", None) + ";\nconst OPEN = " + opt_json("data/openfeeds.json", None) + ";\nconst DOMAINS = " + opt_json("data/domains.json", None) + ";\nconst RISK = " + opt_json("data/risk.json", None) + ";\nconst RISK_HIST = " + opt_json("data/risk_history.json", []) + ";\n" + rd("ach.js") + "\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
+auto = ("\nconst INTEL_AUTO = " + jopt("intel.auto.json", None) + ";\nconst RFI = " + jopt("data/rfi.json", []) + ";\nconst TRIP = " + jopt("data/tripwires.json", None)
+        + ";\nconst SOURCES = " + registry() + ";\nconst JUDG = " + jopt("data/judgments.json", {"items": []}) + ";\nconst BT = " + jopt("data/backtest.json", None)
+        + ";\nconst SERIES = " + jopt("data/series.json", None) + ";\nconst HOUSE = " + jopt("data/house_view.json", None) + ";\nconst SCORE = " + jopt("data/scorecard.json", None) + ";\nconst COVERAGE = " + jopt("data/coverage.json", None) + ";\nconst HOUSE_AUTO = " + jopt("data/house_view_auto.json", None) + ";\nconst CALIB = " + jopt("data/shock_calib.json", None) + ";\nconst REDTEAM = " + jopt("data/redteam.json", None)
+        + ";\nconst PIRS = " + jopt("data/pirs.json", None) + ";\nconst WATCHCON = " + jopt("data/watchcon.json", None) + ";\nconst WATCHLOG = " + jopt("data/watch_log.json", None) + ";\nconst PRODUCTS = " + jopt("data/products_index.json", None)
+        + ";\nconst BRIEFS = " + jopt("data/theater_briefs.json", None) + ";\nconst FEEDS = " + jopt("data/feeds.json", None) + ";\nconst FIRMS = " + jopt("data/firms.json", None) + ";\nconst OPEN = " + jopt("data/openfeeds.json", None) + ";\nconst DOMAINS = " + jopt("data/domains.json", None) + ";\nconst RISK = " + jopt("data/risk.json", None) + ";\nconst RISK_HIST = " + jopt("data/risk_history.json", []) + ";\n" + rd("ach.js") + "\n" + rd("scenario.js") + "\n" + rd("analogs.js") + "\n")
 out = (app.replace("/*__WORLD__*/", rd("world.json")).replace("/*__WORLD110__*/", rd("world110.json"))
-          .replace("/*__DATA__*/", rd("data_snapshot.json")).replace("/*__THEATERS__*/", theaters)
+          .replace("/*__DATA__*/", js_json(rd("data_snapshot.json"))).replace("/*__THEATERS__*/", theaters)
           .replace("/*__IW__*/", rd("iw.js")).replace("/*__EN__*/", rd("labels_en.js")).replace("/*__COMMOD__*/", rd("commodities.js")).replace("/*__INTEL__*/", rd("intel.js") + auto).replace("/*__ANALYST__*/", rd("analyst.js") + "\n" + rd("agent.js") + "\n" + rd("risk.js") + "\n" + rd("ops.js") + "\n" + rd("first.js") + "\n" + rd("live.js")))
 (B / "index.html").write_text(out)
 print("built", len(out), "bytes")
