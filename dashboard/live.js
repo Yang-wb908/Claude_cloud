@@ -45,7 +45,6 @@ const SYNC_COPY = {server_not_connected: "GitHub 커넥터가 연결되어 있�
 async function syncRepo(manual){
   if (syncState.busy) return;
   const btn = $("#syncBtn");
-  if (syncState.mcp === undefined) { try { syncState.mcp = window.claude && window.claude.use ? await window.claude.use("mcp") : null; } catch(e) { syncState.mcp = null; } }
   if (!syncState.mcp) { if (btn) { btn.hidden = true; } return; }
   syncState.busy = true; if (btn) { btn.disabled = true; btn.textContent = "동기화 중…"; }
   let got = {}, errs = {};
@@ -118,15 +117,5 @@ function nextRepublishKST(){
   const passive = () => { btn.hidden = false; btn.disabled = true; btn.classList.add("passive"); btn.textContent = "다음 갱신 " + nextRepublishKST() + " KST";
     btn.title = "상황판은 6시간마다(03·09·15·21시 52분 KST) 최신 수집 데이터로 자동 재배포됩니다. 새로 열면 최신 판이 보입니다."; };
   passive(); setInterval(() => { if (!syncState.mcp) passive(); }, 60e3);
-  if (!(window.claude && window.claude.use)) return;
-  (async () => {
-    try { syncState.mcp = await window.claude.use("mcp"); } catch(e) { syncState.mcp = null; }
-    if (!syncState.mcp) return;
-    let gh = null; try { const L = await syncState.mcp.listTools("github"); gh = (L && (L.servers || L)) ; } catch(e) { gh = null; }   // listTools 는 허용 창을 띄우지 않는다
-    const ok = Array.isArray(gh) ? gh.some(x => (x.tools || []).length) : !!(gh && gh.tools && gh.tools.length);
-    if (!ok) { syncState.mcp = null; return; }
-    btn.disabled = false; btn.classList.remove("passive"); btn.textContent = "저장소 동기화"; btn.title = "GitHub 커넥터로 저장소의 최신 수집 데이터를 불러옵니다";
-    if (autoSyncOn()) setTimeout(() => syncRepo(false), 1500);
-    setInterval(() => { if (autoSyncOn() && !document.hidden) syncRepo(false); }, SYNC_PERIOD_MS);
-  })();
+  // GitHub 커넥터가 claude.ai 에 생기면 여기서 connector 동기화를 다시 켤 수 있다(syncRepo·applyLive 는 그대로 둠).
 })();
