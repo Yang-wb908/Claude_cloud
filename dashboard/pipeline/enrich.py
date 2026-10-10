@@ -238,11 +238,15 @@ def claude_enrich(items: list[dict], model: str | None = None, batch: int = 30) 
             log.warning("unparseable batch %d: %s", bi, e)
         return got
 
-    # 배치를 4개씩 동시에 보낸다 (순차로는 30여 배치에 20분 넘게 걸린다)
+    # 첫 배치를 먼저 보내 시스템 프롬프트 캐시를 써 두고, 나머지는 4개씩 동시에 보낸다(동시에 출발한 요청끼리는 캐시를 못 읽는다).
+    # 순차로는 30여 배치에 20분 넘게 걸린다.
     from concurrent.futures import ThreadPoolExecutor
     workers = int(os.environ.get("PIPELINE_ENRICH_WORKERS") or 4)
+    jobs = list(enumerate(chunks))
+    if jobs:
+        out.update(one(*jobs[0]))
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        for got in ex.map(lambda t: one(*t), list(enumerate(chunks))):
+        for got in ex.map(lambda t: one(*t), jobs[1:]):
             out.update(got)
     return out
 
