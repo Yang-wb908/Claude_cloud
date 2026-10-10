@@ -120,11 +120,14 @@ async function keySample(input, opts){
   opts = opts || {};
   if (!keyGet()) throw {code: "auth", message: "API 키 없음"};
   const turns = typeof input === "string" ? [{role: "user", content: input}] : (input || []).map(m => ({role: m.role === "assistant" ? "assistant" : "user", content: String(m.content)}));
+  // 같은 역할의 연속 턴은 한 메시지 안의 블록으로 둔다(블록 경계가 있어야 캐시 표시를 '공유 부분 끝'에 둘 수 있다)
   const msgs = [];
-  turns.forEach(m => { const l = msgs[msgs.length - 1]; if (l && l.role === m.role) l.content += "\n\n" + m.content; else msgs.push({...m}); });
+  turns.forEach(m => { const l = msgs[msgs.length - 1], blk = {type: "text", text: m.content}; if (l && l.role === m.role) l.content.push(blk); else msgs.push({role: m.role, content: [blk]}); });
   if (!msgs.length) throw {code: "invalid_request", message: "빈 입력"};
-  // 첫 턴(상황판 데이터)은 캐시 — 도구 왕복마다 다시 읽는 비용을 줄인다
-  msgs[0] = {role: msgs[0].role, content: [{type: "text", text: msgs[0].content, cache_control: {type: "ephemeral"}}]};
+  // 캐시 표시는 질문마다 똑같은 앞부분(규칙·상황판 데이터 = 첫 블록)에만. 매번 다른 질문까지 덮으면 쓰기 요금(1.25배)만 내고 다시 읽지 못한다.
+  // 입력이 한 덩어리뿐이면 공유 부분을 가를 수 없으니 표시하지 않는다.
+  if (msgs.length > 1 || msgs[0].content.length > 1) msgs[0].content[0].cache_control = {type: "ephemeral"};
+  let tail = null;  // 도구 왕복: 마지막 도구 결과에 표시를 옮겨 가며 다음 회차가 지금까지의 대화를 캐시에서 읽게 한다(표시는 최대 2개)
   const defs = opts.tools || [], byName = Object.fromEntries(defs.map(t => [t.name, t]));
   const tools = defs.map(t => ({name: t.name, description: t.description || "", input_schema: t.inputSchema || {type: "object", properties: {}}}));
   let all = "", truncated = false;
@@ -147,6 +150,8 @@ async function keySample(input, opts){
       } catch(e) { content = String((e && e.message) || e); bad = true; }
       out.push({type: "tool_result", tool_use_id: b.id, content: String(content == null ? "" : content).slice(0, 30000), ...(bad ? {is_error: true} : {})});
     }
+    if (tail) delete tail.cache_control;
+    tail = out[out.length - 1]; if (tail) tail.cache_control = {type: "ephemeral"};
     msgs.push({role: "user", content: out});
     if (round === 11) truncated = true;
   }

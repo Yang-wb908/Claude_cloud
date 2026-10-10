@@ -113,12 +113,22 @@ async function anthropic(r) {
   await p.waitForFunction(() => /시험 응답/.test(document.querySelector('#answer').textContent), null, { timeout: 10000 });
   ok('key: 분석 응답 스트리밍', true);
   const c0 = apiCalls[apiCalls.length - 1];
-  ok('key: 헤더·모델·캐시', c0.key === 'sk-ant-test-123456' && c0.direct === 'true' && c0.body.model === 'claude-opus-5-5' && c0.body.stream && c0.body.messages[0].content[0].cache_control);
+  ok('key: 헤더·모델·캐시', c0.key === 'sk-ant-test-123456' && c0.direct === 'true' && c0.body.model === 'claude-opus-5-5' && c0.body.stream);
+  // 캐시: 공유 앞부분(규칙·데이터)에만 표시, 매번 다른 질문 블록에는 없음 → 두 번째 질문이 같은 앞부분을 읽는다
+  const m0 = c0.body.messages[0].content;
+  ok('key: 캐시는 공유 부분에만', c0.body.messages.length === 1 && m0.length === 2 && m0[0].cache_control && !m0[1].cache_control && /^질문: /.test(m0[1].text));
+  await p.fill('#q', '두 번째 질문'); await p.click('#askBtn');
+  await p.waitForFunction(n => window.__n !== n, apiCalls.length).catch(() => {});
+  await p.waitForTimeout(500);
+  const c1 = apiCalls[apiCalls.length - 1];
+  ok('key: 두 질문의 앞부분 동일', c1 !== c0 && c1.body.messages[0].content[0].text === m0[0].text && c1.body.messages[0].content[1].text === '질문: 두 번째 질문');
   await p.fill('#q', '호르무즈 점검'); await p.click('#agentBtn');
   await p.waitForFunction(() => /도구 결과 확인/.test(document.querySelector('#answer').textContent), null, { timeout: 10000 });
   const c2 = apiCalls[apiCalls.length - 1];
   const tr = c2.body.messages[c2.body.messages.length - 1].content[0];
   ok('agent: 도구 왕복', tr.type === 'tool_result' && tr.tool_use_id === 'tu1' && !tr.is_error && c2.body.messages[c2.body.messages.length - 2].content[0].type === 'thinking');
+  const marks = JSON.stringify(c2.body).split('"cache_control"').length - 1;
+  ok('agent: 캐시 표시(첫 블록 + 마지막 도구 결과)', tr.cache_control && c2.body.messages[0].content[0].cache_control && !c2.body.messages[0].content[1].cache_control && marks === 2);
   ok('agent: 도구 기록', /사건 검색/.test(await p.locator('#agentLog').innerText()));
   await p.click('#keyDel'); await p.fill('#keyIn', 'sk-ant-bad'); await p.click('#keySave');
   await p.fill('#q', '오류 시험'); await p.click('#askBtn');

@@ -2034,9 +2034,10 @@ askBtn.addEventListener("click", async () => {
   askBtn.disabled = true; stopBtn.hidden = false;
   answer.className = "answer wait"; answer.textContent = "분석 중…";
   ctl = new AbortController();
-  const prompt = "너는 국가 정보기관의 선임 지정학·시장 분석관이다. 원자재 선물·환율·금리 거래에 쓰일 정보(시세·재고·포지션·기간구조·일정·분쟁 전파)를 함께 다룬다. 아래 JSON은 상황판 데이터다(종합경보, 핵심판단과 신뢰도, 전역별 징후 지표·시나리오·행위자·정보공백, 해협별 물동량·운임·보험, 전쟁 경제 지표, 강대국 경쟁 구조, 군사태세, 연계, 한국 영향, 시장, 출처 등급이 붙은 사건 목록).\n규칙: 이 데이터만 근거로 한국어로 답한다. 데이터에 없는 사실은 '상황판에 없음'이라고 밝히고, 추론은 추론이라고 표시한다. 판단에는 신뢰도(높음/보통/낮음)를 붙이고, 확률은 ICD 203 척도(거의 확실·매우 높음·높음·반반·낮음·매우 낮음)로 표현한다. 수치를 인용할 때는 날짜를 함께 적고, 출처 등급이 C 이하인 자료에 의존할 때는 그 사실을 밝힌다. 마크다운 기호 없이 평문, 핵심 판단을 첫 문장에, 6~12문장.\n\n데이터:\n" + compact() + "\n\n질문: " + question;
+  const prompt = "너는 국가 정보기관의 선임 지정학·시장 분석관이다. 원자재 선물·환율·금리 거래에 쓰일 정보(시세·재고·포지션·기간구조·일정·분쟁 전파)를 함께 다룬다. 아래 JSON은 상황판 데이터다(종합경보, 핵심판단과 신뢰도, 전역별 징후 지표·시나리오·행위자·정보공백, 해협별 물동량·운임·보험, 전쟁 경제 지표, 강대국 경쟁 구조, 군사태세, 연계, 한국 영향, 시장, 출처 등급이 붙은 사건 목록).\n규칙: 이 데이터만 근거로 한국어로 답한다. 데이터에 없는 사실은 '상황판에 없음'이라고 밝히고, 추론은 추론이라고 표시한다. 판단에는 신뢰도(높음/보통/낮음)를 붙이고, 확률은 ICD 203 척도(거의 확실·매우 높음·높음·반반·낮음·매우 낮음)로 표현한다. 수치를 인용할 때는 날짜를 함께 적고, 출처 등급이 C 이하인 자료에 의존할 때는 그 사실을 밝힌다. 마크다운 기호 없이 평문, 핵심 판단을 첫 문장에, 6~12문장.\n\n데이터:\n" + compact();
   try {
-    const r = await sample(prompt, {signal:ctl.signal, modelTier:"default", onText:({text}) => { answer.className = "answer"; answer.textContent = text; }});
+    // 규칙·데이터(질문마다 같음)와 질문(매번 다름)을 나눠 보낸다 → API 키 모드에서 앞부분만 캐시돼 다음 질문이 싸진다
+    const r = await sample([{role:"user", content:prompt}, {role:"user", content:"질문: " + question}], {signal:ctl.signal, modelTier:"default", onText:({text}) => { answer.className = "answer"; answer.textContent = text; }});
     answer.className = "answer"; answer.textContent = r.text + (r.truncated ? "\n\n(답변이 길어 잘렸어요.)" : "");
   } catch (e) {
     answer.className = "answer";
