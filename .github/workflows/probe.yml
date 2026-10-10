@@ -49,9 +49,6 @@ jobs:
                       data = v.get("data") or {}
                       print(f"- {k}: ok={v.get('ok')} series={len([x for x in data if not str(x).startswith('_')])} err={str(v.get('err') or '')[:600]}")
                       for e in (data.get("_errors") or [])[:4]: print(f"  - {e[:600]}")
-                      if k == "gfw":
-                          for cid, v in data.items():
-                              if isinstance(v, dict) and "dark_pts" in v: print(f"  - {cid}: dark7={v.get('dark_7d')} sar7={v.get('sar_7d')} cells={len(v['dark_pts'])} top={v['dark_pts'][:3]}")
               else:
                   print(f"- firms: alerts={d.get('n_alerts')} learning={d.get('learning')} errors={d.get('errors')[:3]}")
           f = "dashboard/data/openfeeds.json"

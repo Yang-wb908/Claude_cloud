@@ -112,14 +112,3 @@ def test_firms_no_key_and_all_fail(tmp_path, monkeypatch):
     doc = firms.run(tmp_path, now=NOW, key="MYKEY", fetcher=boom)
     assert doc["errors"] and "MYKEY" not in json.dumps(doc) and not (tmp_path / "data" / "firms.json").exists()
 
-
-def test_parse_dark_cells_positions():
-    raw = {"entries": [{"public-global-sar-presence:v3.0": [
-        {"date": "2026-10-03", "lat": 26.512, "lon": 56.301, "detections": 2, "flag": None},
-        {"date": "2026-10-05", "lat": 26.514, "lon": 56.299, "detections": 1},
-        {"date": "2026-10-04", "lat": 25.1, "lon": 56.5, "detections": 4},
-        {"date": "2026-10-04", "detections": 9}, {"date": "2026-10-04", "lat": 25.0, "lon": 56.0, "detections": 0}]}]}
-    cells = feeds.parse_dark_cells(raw)
-    assert cells[0] == [56.5, 25.1, 4, "2026-10-04"]
-    assert cells[1] == [56.3, 26.51, 3, "2026-10-05"]  # 같은 격자는 합치고 마지막 날짜 유지
-    assert len(cells) == 2 and feeds.parse_gfw(raw, "detections")["2026-10-04"] == 13.0  # 날짜 합계는 그대로

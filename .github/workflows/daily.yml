@@ -13,7 +13,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # 예약 실행이 늦게 도착했는데 오늘 몫이 이미 (수동·대체 실행으로) 끝났으면 건너뛴다.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.g.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 40
+      - id: g
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && git log --format=%s -40 | grep -q "일일 동기화 $(date -u +%Y-%m-%d)"; then
+            echo "skip=1" >> "$GITHUB_OUTPUT"; echo "오늘 일일 동기화 이미 완료 → 건너뜀"
+          fi
   sync:
+    needs: guard
+    if: needs.guard.outputs.skip != '1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

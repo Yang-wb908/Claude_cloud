@@ -23,7 +23,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # GitHub 예약 실행은 몇 시간씩 늦거나 빠지기도 해서, 상황판 재배포 루틴이 빠진 회차를 수동 실행으로 메운다.
+  # 그 뒤에 늦은 예약 실행이 도착하면 3시간 안에 수집된 기록이 있으니 건너뛴다.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.g.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 40
+      - id: g
+        run: |
+          last=$(git log -1 --format=%ct --grep='자동 수집' || true); now=$(date +%s)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -n "$last" ] && [ $((now - last)) -lt 10800 ]; then
+            echo "skip=1" >> "$GITHUB_OUTPUT"; echo "최근 3시간 안에 수집됨 → 늦게 도착한 예약 실행 건너뜀"
+          fi
   collect:
+    needs: guard
+    if: needs.guard.outputs.skip != '1'
     runs-on: ubuntu-latest
     outputs:
       fired: ${{ steps.trip.outputs.fired }}
