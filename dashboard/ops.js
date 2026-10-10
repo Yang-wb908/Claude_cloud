@@ -76,6 +76,7 @@ let FEEDS_ = typeof FEEDS === "object" ? FEEDS : null;
 let FIRMS_ = typeof FIRMS === "object" ? FIRMS : null;
 let OPEN_ = typeof OPEN === "object" ? OPEN : null;
 let DOM_ = typeof DOMAINS === "object" ? DOMAINS : null;
+let QUAL_ = typeof QUALITY === "object" ? QUALITY : null;
 const fmtSigned = (v, dp) => v == null ? "—" : (v > 0 ? "+" : "") + Number(v).toFixed(dp == null ? 1 : dp);
 function feedNote(f, env){ return f && f.ok === false ? `<p class="note">${esc(f.err && f.err.indexOf("미설정") >= 0 ? env + " 이 저장소 Secrets 에 없어 수집하지 않았습니다." : "최근 수집 실패: " + (f.err || ""))}${f.at ? " 아래는 " + esc(f.at.slice(0, 16)) + "Z 값." : ""}</p>` : ""; }
 /* 위성 열점 (NASA FIRMS) — 운영 탭 */
@@ -113,6 +114,15 @@ function opsOpenHtml(){
     <h4 style="margin:12px 0 4px">OFAC 신규 제재 지정 <small class="en">SDN 목록 비교 · 전체 ${od.n_total ? od.n_total.toLocaleString() : "—"}건</small></h4>${openNote(of, "OFAC")}
     ${od.baseline ? `<p class="note">첫 수집이라 기준 목록만 저장했습니다. 다음 수집부터 새로 추가된 개인·기업·선박을 보여줍니다.</p>` : od.n_new ? `<p class="meta">${esc(od.d || "")} 신규 ${od.n_new}건${od.new_vessels ? ` · 선박 ${od.new_vessels}척` : ""}${od.removed ? ` · 해제 ${od.removed}건` : ""} · ${Object.entries(od.by_program || {}).slice(0, 5).map(([k, v]) => esc(k) + " " + v).join(", ")}</p><ul class="wl">${(od.new || []).slice(0, 12).map(n => `<li><b>${esc(n.name)}</b> <small>${esc(n.type === "entity" ? "단체·기업" : n.type === "individual" ? "개인" : n.type === "vessel" ? "선박" + (n.vess_flag ? " · " + n.vess_flag : "") : n.type)} · ${esc(n.program)}</small></li>`).join("")}</ul>` : `<p class="note">지난 수집 이후 새 지정 없음.</p>`}
   </div>`;
+}
+/* 데이터 품질 — 수집원 탭 */
+function opsQualityHtml(){
+  const Q = QUAL_; if (!Q) return "";
+  const pct = (a, b) => b ? Math.round(100 * a / b) + "%" : "—";
+  return `<div class="block sev2"><h3>데이터 품질 <span class="en">quality · ${esc((Q.generated || "").slice(5, 16).replace("T", " "))}Z</span></h3>
+    <span class="meta">매 수집마다 자동 점검. 센서 사건(위성 열점·지진·재난·인터넷 장애·제재·군용기·사이버)은 중복 병합에서 제외해 서로 다른 사건이 합쳐지지 않게 함</span>
+    <div class="sctiles">${[["사건", Q.events], ["지도 표시 가능", pct(Q.auto_with_coords, Q.auto)], ["단일 출처 교전 주장", Q.single], ["신뢰도 낮은 출처", Q.lowcred]].map(([l, v]) => `<div class="sct"><span class="l">${l}</span><span class="v">${v}</span></div>`).join("")}</div>
+    <p class="note">이번 수집에서 중복 ${Q.collapsed}건을 하나로 합침 · 지명 사전으로 위치 채움 ${Q.geo_filled}건 · 어긋난 좌표 보정 ${Q.geo_fixed}건. 사건 목록의 <span class="tag warn">단일 출처</span>는 한 매체만 보도한 교전·공격·해상 주장, <span class="tag hot">출처 신뢰도 낮음</span>은 국가 선전 매체 등입니다.</p></div>`;
 }
 /* 새 수집 영역: 군용기(ADS-B) · 사이버(CISA KEV · 랜섬웨어 유출 사이트) — 운영 탭 */
 function opsDomainsHtml(){
@@ -196,5 +206,5 @@ function opsBlufHtml(){
     ${changes7.length ? `<ul class="wl">${changes7.slice(0, 4).map(c => `<li><b>${esc(c.d)}</b> ${esc(TH[c.id] ? TH[c.id].name : c.id)} ${c.from}→${c.to} <small>${esc(c.why || "")}</small></li>`).join("")}</ul>` : ""}
     <div class="btnrow"><button class="thchip" data-tab="p-watch">당직 →</button><button class="thchip" data-tab="p-pir">요구 →</button><button class="thchip" data-tab="p-prod">생산물 →</button></div></div>`;
 }
-function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsFirmsHtml() + opsOpenHtml() + opsDomainsHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
+function renderOpsExtras(){ const pane = $("#p-src"); if (!pane) return; pane.querySelectorAll(".opsx").forEach(n => n.remove()); const wrap = document.createElement("div"); wrap.className = "opsx"; wrap.innerHTML = opsQualityHtml() + opsFirmsHtml() + opsOpenHtml() + opsDomainsHtml() + opsCoverageHtml() + opsSarHtml() + opsSourceScoresHtml(); pane.prepend(wrap); }
 document.addEventListener("click", e => { const b = e.target.closest && e.target.closest("[data-tab]"); if (b && b.dataset.tab && document.getElementById(b.dataset.tab) && !b.classList.contains("tab") && !b.classList.contains("lnk")) setTab(b.dataset.tab); });

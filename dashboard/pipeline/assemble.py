@@ -52,11 +52,16 @@ def _dom(e: dict) -> str:
     return m.group(1) if m else (e.get("src") or "")
 
 
+# 센서·정형 데이터 사건은 문장 틀이 같아 서로 다른 사건(다른 태풍·다른 지진)이 '중복'으로 묶여 사라질 수 있다 → 묶지 않는다
+SENSOR_SRC = {"firms", "ioda", "usgs", "gdacs", "ofac", "adsb", "cisa_kev", "ransomware"}
+KINETIC = {"S", "G", "A", "M"}
+
+
 def corroborate(events: list[dict], window_days: int = 1, jaccard: float = 0.45) -> list[dict]:
     """Cluster near-duplicate reports (same theater, dates within `window_days`, token overlap or same place+type) across
     distinct source domains. Each event gets cc (independent domains) and its Admiralty credibility digit becomes 1 when
     corroborated by >= 2 other domains, 2 when by one, otherwise unchanged. The cluster keeps every report (no deletion)."""
-    ev = [e for e in events if e.get("x")]
+    ev = [e for e in events if e.get("x") and e.get("src") not in SENSOR_SRC]
     toks = [_toks(e["x"]) for e in ev]
     n = len(ev)
     parent = list(range(n))
@@ -100,6 +105,53 @@ def corroborate(events: list[dict], window_days: int = 1, jaccard: float = 0.45)
             elif cc == 2 and len(g) == 2 and g[1] > "2":
                 e["g"], e["g0"] = g[0] + "2", e.get("g0") or g
     return events
+
+
+def _hav(a: list[float], b: list[float]) -> float:
+    import math
+    lo1, la1, lo2, la2 = map(math.radians, (a[0], a[1], b[0], b[1]))
+    h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
+def load_gazetteer() -> dict[str, list[float]]:
+    p = Path(__file__).resolve().parent / "gazetteer.json"
+    out = {}
+    for g in (json.loads(p.read_text()) if p.exists() else []):
+        for k in (g.get("ko"), g.get("en")):
+            if k:
+                out[k.strip().lower()] = [g["lon"], g["lat"]]
+    return out
+
+
+def quality_pass(events: list[dict], gaz: dict[str, list[float]], geo_fix_km: float = 600) -> dict:
+    """뉴스 사건 품질 점검(센서 사건 제외).
+    - 위치: 지명(p)이 지명 사전에 있으면 좌표가 없을 때 채우고(geo=gaz), Claude 가 준 좌표가 지명과 600km 넘게 어긋나면 사전 좌표로 고친다(geo=fixed).
+    - 신뢰: 국가 선전 매체(D·E·F) → q=lowcred, 교차확인 없는(cc=1) 교전·공격·해상 주장이 확인 등급(1·2)도 아니면 → q=single.
+    """
+    st = {"geo_filled": 0, "geo_fixed": 0, "single": 0, "lowcred": 0, "checked": 0}
+    for e in events:
+        if not e.get("auto") or e.get("src") in SENSOR_SRC:
+            continue
+        st["checked"] += 1
+        p = (e.get("p") or "").strip().lower()
+        g_at = gaz.get(p) if p else None
+        if g_at:
+            if not e.get("at"):
+                e["at"], e["geo"] = g_at, "gaz"; st["geo_filled"] += 1
+            elif _hav(e["at"], g_at) > geo_fix_km:
+                e["at"], e["geo"] = g_at, "fixed"; st["geo_fixed"] += 1
+        g = e.get("g") or ""
+        q = None
+        if g[:1] in ("D", "E", "F"):
+            q = "lowcred"
+        elif (e.get("cc") or 1) <= 1 and e.get("t") in KINETIC and len(g) == 2 and g[1] >= "3":
+            q = "single"
+        if q:
+            e["q"] = q; st[q] += 1
+        else:
+            e.pop("q", None)
+    return st
 
 
 def source_scores(events: list[dict], status: list[dict], keep_days: int = 30, now: datetime | None = None) -> dict:
@@ -212,7 +264,14 @@ def assemble(items: list[dict], status: list[dict], now: datetime | None = None,
     snap = json.loads(snap_path.read_text()) if snap_path.exists() else {"events": [], "cities": [], "lanes": [], "chokepoints": [], "markets": {}}
     new_events = [ev for ev in (to_event(it) for it in items) if ev]
     merged, added = merge_events(snap.get("events", []), new_events, now)
+    n_before = len(merged)
     merged = collapse_duplicates(corroborate(merged))
+    qst = quality_pass(merged, load_gazetteer())
+    qst.update({"collapsed": n_before - len(merged), "events": len(merged), "generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "auto_with_coords": sum(1 for e in merged if e.get("auto") and e.get("at")), "auto": sum(1 for e in merged if e.get("auto"))})
+    if write:
+        (dash / "data").mkdir(exist_ok=True)
+        (dash / "data" / "quality.json").write_text(json.dumps(qst, ensure_ascii=False, indent=1))
     snap["events"] = merged
     snap["auto_generated"] = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     metrics = metrics_from(items)

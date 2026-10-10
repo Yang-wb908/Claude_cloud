@@ -84,3 +84,26 @@ def test_enrich_cache_skips_already_judged_items(tmp_path, monkeypatch):
     out = enrich.enrich_all([mk(1), mk(2), mk(3)], known_urls=set(), cache_path=cp)
     assert calls == [["i1", "i2"], ["i3"]]  # 두 번째 실행은 새 기사만 Claude 로
     assert all(it["enr"].get("claude") and it["enr"]["t"] == "Y" for it in out)  # 캐시 판정도 똑같이 적용, 사이버(Y) 허용
+
+
+def test_sensor_events_are_not_merged_and_quality_flags():
+    from pipeline import assemble as A
+    ev = [{"d": "2026-10-09", "th": "namerica", "t": "X", "p": "미국", "x": "GDACS 적색 경보 · 열대성 폭풍 Tropical Cyclone SIMON-26", "s": "https://gdacs/1", "src": "gdacs", "auto": True, "g": "A2"},
+          {"d": "2026-10-09", "th": "namerica", "t": "X", "p": "미국", "x": "GDACS 주황 경보 · 열대성 폭풍 Tropical Cyclone ISAIAS-26", "s": "https://gdacs/2", "src": "gdacs", "auto": True, "g": "A2"},
+          {"d": "2026-10-09", "th": "ukraine", "t": "S", "p": "Kyiv", "x": "키이우 드론 공격 3명 사망", "s": "https://a.com/1", "src": "x", "auto": True, "g": "C3"},
+          {"d": "2026-10-09", "th": "ukraine", "t": "S", "p": "키이우", "at": [100.0, 10.0], "x": "러시아 미사일 공습", "s": "https://rt.com/1", "src": "y", "auto": True, "g": "D4"},
+          {"d": "2026-10-09", "th": "ukraine", "t": "D", "p": "", "x": "회담", "s": "https://b.com/1", "src": "z", "auto": True, "g": "C3"}]
+    out = A.collapse_duplicates(A.corroborate(ev))
+    assert sum(1 for e in out if e["src"] == "gdacs") == 2  # 다른 태풍 두 건이 합쳐지지 않음
+    st = A.quality_pass(out, {"kyiv": [30.52, 50.45], "키이우": [30.52, 50.45]})
+    by = {e["s"]: e for e in out}
+    assert by["https://a.com/1"]["at"] == [30.52, 50.45] and by["https://a.com/1"]["geo"] == "gaz" and by["https://a.com/1"]["q"] == "single"
+    assert by["https://rt.com/1"]["geo"] == "fixed" and by["https://rt.com/1"]["q"] == "lowcred"
+    assert "q" not in by["https://b.com/1"] and "q" not in by["https://gdacs/1"]  # 외교 사건·센서 사건은 표시 안 함
+    assert st["geo_filled"] == 1 and st["geo_fixed"] == 1 and st["single"] == 1 and st["lowcred"] == 1
+
+
+def test_state_media_graded_low():
+    from pipeline.enrich import grade_url
+    assert grade_url("https://www.rt.com/news/1") == "D4" and grade_url("https://www.presstv.ir/x") == "D4" and grade_url("https://www.reuters.com/x") == "B2"
+    assert grade_url("https://www.art.com/x") != "D4"

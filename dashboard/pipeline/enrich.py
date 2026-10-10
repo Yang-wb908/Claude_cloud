@@ -21,6 +21,8 @@ HERE = Path(__file__).resolve().parent
 
 # ── Source grading (Admiralty). Mirrors the dashboard's SRC_GRADE table. ───
 GRADE_RULES = [
+    # 국가 선전 매체: 신뢰도 D(대체로 신뢰 어려움)·4(의심) — 주장을 그대로 사실로 쓰지 않는다
+    (r"\brt\.com|sputnik(news|globe)|presstv|tasnimnews|farsnews|kcna\.kp|rodong\.rep\.kp|globaltimes\.cn|cgtn\.com|almanar\.com|alalam\.ir", "D4"),
     (r"reuters\.com|apnews\.com|afp\.com|bbc\.com|bbc\.co\.uk|bloomberg\.com|ft\.com|wsj\.com", "B2"),
     (r"aljazeera|france24|dw\.com|theguardian|nytimes|latimes|cnbc|thehill|upi\.com|rfi\.fr|straitstimes|channelnewsasia|timesofisrael|kyivindependent|arabnews|alarabiya|gulfnews|middleeasteye|africanews|politico|economist|washingtonpost|cnn\.com|nikkei|scmp|yna\.co\.kr|koreaherald|koreatimes|npr\.org|pbs\.org|japantimes|taipeitimes|focustaiwan|thediplomat|dawn\.com", "B3"),
     (r"criticalthreats|understandingwar|csis\.org|iiss\.org|sipri|rand\.org|crisisgroup|brookings|cfr\.org|carnegie|chathamhouse|acleddata|lloydslist|usni\.org|twz\.com|janes|rusi\.org|warontherocks|thebulletin", "B2"),
