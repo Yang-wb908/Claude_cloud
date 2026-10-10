@@ -5,6 +5,7 @@ events keep their previous auto brief or the hand-written text. Model defaults t
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import os
@@ -78,11 +79,15 @@ def run(dash: Path, now: datetime | None = None, write: bool = True, only: list[
         ev = events_for(snap, t["id"], now)
         if len(ev) < 3:
             skipped += 1; continue
+        evh = hashlib.sha1("|".join(sorted(e.get("s") or e.get("x", "") for e in ev)).encode()).hexdigest()[:12]
+        old = items.get(t["id"]) or {}
+        if old.get("evh") == evh and old.get("headline"):  # 지난 브리핑 이후 사건이 그대로면 다시 쓰지 않는다(토큰 절약)
+            skipped += 1; continue
         res = brief_one(t, ev, model)
         if not res:
             skipped += 1; continue
         items[t["id"]] = {"d": now.strftime("%Y-%m-%d"), "asof": now.strftime("%m/%d").lstrip("0").replace("/0", "/"), "headline": res["headline"], "brief": res["brief"],
-                          "metrics": res["metrics"], "sources": res["sources"], "trend": res.get("trend", "flat"), "n_events": len(ev), "model": model}
+                          "metrics": res["metrics"], "sources": res["sources"], "trend": res.get("trend", "flat"), "n_events": len(ev), "model": model, "evh": evh}
         done += 1
     doc = {"generated": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "model": model, "items": items}
     if write:

@@ -13,6 +13,7 @@ import json
 import logging
 import os
 import re
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 log = logging.getLogger("pipeline.enrich")
@@ -169,7 +170,7 @@ SYSTEM = ("너는 국가 정보기관 상황실의 수집 분석관이다. 영�
           "남미·북미·오세아니아·유럽·남아시아처럼 넓은 지역 전역은 지명만으로 2를 주지 말고 안보·경제 함의가 있을 때만 2 이상을 준다.")
 
 
-def claude_enrich(items: list[dict], model: str | None = None, batch: int = 20) -> dict[str, dict]:
+def claude_enrich(items: list[dict], model: str | None = None, batch: int = 30) -> dict[str, dict]:
     """Returns {item_id: refinement}. Silently returns {} when no credentials are available."""
     from . import llm
     model = model or os.environ.get("PIPELINE_ENRICH_MODEL") or None
@@ -264,7 +265,30 @@ def claude_candidates(items: list[dict], known_urls: set[str] | None = None, sig
     return out
 
 
-def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] | None = None) -> list[dict]:
+CACHE_DAYS = 10
+
+
+def cache_key(it: dict) -> str:
+    return it.get("url") or ("t:" + (it.get("title") or "")[:160])
+
+
+def load_cache(path: Path | None) -> dict:
+    if not path or not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text())
+    except ValueError:
+        return {}
+
+
+def save_cache(path: Path | None, cache: dict) -> None:
+    if not path:
+        return
+    cut = (datetime.now(UTC) - timedelta(days=CACHE_DAYS)).strftime("%Y-%m-%dT%H:%M")
+    path.write_text(json.dumps({k: v for k, v in cache.items() if v.get("at", "") >= cut}, ensure_ascii=False, separators=(",", ":")))
+
+
+def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] | None = None, cache_path: Path | None = None) -> list[dict]:
     """Attach `enr` to each item. Rules first, Claude refinement second (when available)."""
     for it in items:
         it["enr"] = rule_enrich(it)
@@ -273,8 +297,20 @@ def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] 
     if use_claude and (llm.mode() is not None or os.environ.get("PIPELINE_FORCE_CLAUDE")):
         # 구독(cli)은 추가 비용이 없으니 새 기사 전부, API(유료)는 규칙 신호가 있는 새 기사만
         news = claude_candidates(items, known_urls, signal_only=(llm.mode() == "api"))
-        log.info("claude candidates: %d of %d news items (known urls %d)", len(news), sum(1 for it in items if it.get("kind") in ("news", "report")), len(known_urls or ()))
-        ref = claude_enrich(news)
+        # 이전 실행에서 이미 판정한 기사(RSS 에 며칠씩 남는다)는 저장된 판정을 그대로 쓰고 새 기사만 Claude 에 보낸다
+        cache = load_cache(cache_path)
+        fresh = [it for it in news if cache_key(it) not in cache]
+        log.info("claude candidates: %d of %d news items (known urls %d) — cached %d, new %d", len(news), sum(1 for it in items if it.get("kind") in ("news", "report")),
+                 len(known_urls or ()), len(news) - len(fresh), len(fresh))
+        ref = claude_enrich(fresh) if fresh else {}
+        stamp = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M")
+        for it in fresh:
+            if it["id"] in ref:
+                cache[cache_key(it)] = {"r": ref[it["id"]], "at": stamp}
+        for it in news:
+            if it["id"] not in ref and cache_key(it) in cache:
+                ref[it["id"]] = cache[cache_key(it)]["r"]
+        save_cache(cache_path, cache)
         for it in news:
             r = ref.get(it["id"])
             if not r:
@@ -282,7 +318,7 @@ def enrich_all(items: list[dict], use_claude: bool = True, known_urls: set[str] 
             e = it["enr"]
             th_ok = SCHEMA["properties"]["items"]["items"]["properties"]["th"]["anyOf"][0]["enum"]
             e["x"] = (r.get("x") or e["x"])[:140]
-            e["t"] = r.get("t") if r.get("t") in ("S", "G", "M", "A", "D", "E", "H", "X", "C") else e["t"]
+            e["t"] = r.get("t") if r.get("t") in ("S", "G", "M", "A", "D", "E", "H", "X", "C", "Y") else e["t"]
             e["th"] = r["th"] if r.get("th") in th_ok else e["th"]
             e["p"] = r.get("p") or e["p"]
             try:

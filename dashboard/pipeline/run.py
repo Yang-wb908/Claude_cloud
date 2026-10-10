@@ -91,7 +91,7 @@ def cmd_enrich(args) -> None:
             if e.get("s"):
                 known.add(e["s"])
             known.update(e.get("alt") or [])
-    items = enrich.enrich_all(raw["items"], use_claude=use_claude, known_urls=known)
+    items = enrich.enrich_all(raw["items"], use_claude=use_claude, known_urls=known, cache_path=DASH / "data" / "enrich_cache.json")
     ENR.write_text(json.dumps({"generated": raw["generated"], "items": items, "status": raw["status"]}, ensure_ascii=False))
     n_cl = sum(1 for it in items if it.get("enr", {}).get("claude"))
     n_rel = sum(1 for it in items if it.get("enr", {}).get("rel", 0) >= 2)

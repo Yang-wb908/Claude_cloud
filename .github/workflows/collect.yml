@@ -81,7 +81,6 @@ jobs:
           python dashboard/pipeline/run.py domains || echo "domains failed (continuing)"
           python dashboard/pipeline/run.py tripwires
           python dashboard/pipeline/run.py bayes
-          python dashboard/pipeline/run.py report
           python dashboard/pipeline/run.py products
       - name: RFI·수집원 제안 Issue를 데이터로 내보내기
         env:

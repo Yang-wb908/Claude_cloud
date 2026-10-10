@@ -67,3 +67,20 @@ def test_assemble_writes_files(tmp_path):
     # second run produces a diff against history
     res2 = assemble.assemble(items, status, now=datetime(2026, 10, 8, 10, tzinfo=UTC), dash=dash)
     assert res2["auto"]["changes"]["since"] == "2026-10-08T04:00:00Z" and res2["auto"]["changes"]["new_count"] == 0
+
+
+def test_enrich_cache_skips_already_judged_items(tmp_path, monkeypatch):
+    from pipeline import enrich, llm
+    calls = []
+
+    def fake_enrich(items, model=None, batch=30):
+        calls.append([it["id"] for it in items])
+        return {it["id"]: {"id": it["id"], "x": "요약 " + it["id"], "t": "Y", "th": None, "rel": 1} for it in items}
+    monkeypatch.setattr(enrich, "claude_enrich", fake_enrich)
+    monkeypatch.setattr(llm, "mode", lambda: "cli")
+    mk = lambda i: {"id": f"i{i}", "kind": "news", "url": f"https://ex.com/{i}", "title": f"hackers breach ministry {i}", "summary": "", "published": "2026-10-09T00:00:00Z", "sid": "x"}
+    cp = tmp_path / "cache.json"
+    enrich.enrich_all([mk(1), mk(2)], known_urls=set(), cache_path=cp)
+    out = enrich.enrich_all([mk(1), mk(2), mk(3)], known_urls=set(), cache_path=cp)
+    assert calls == [["i1", "i2"], ["i3"]]  # 두 번째 실행은 새 기사만 Claude 로
+    assert all(it["enr"].get("claude") and it["enr"]["t"] == "Y" for it in out)  # 캐시 판정도 똑같이 적용, 사이버(Y) 허용
