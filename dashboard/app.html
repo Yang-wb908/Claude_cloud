@@ -959,7 +959,10 @@ function rollTo(e, t){
   r[0] += dx / s * DEG; r[1] -= dy / s * DEG; projection.rotate(r);
   startBall(e);
 }
-const zoom = d3.zoom().scaleExtent([.85, 90]).filter(e => !meas.on || e.type === "wheel" || e.type.startsWith("touch"))
+// 휠·트랙패드 확대 감도: d3 기본값(마우스 휠 한 칸 ≈ 15%, 트랙패드 핀치 ×10)이 너무 민감해 약 절반으로 낮추고 한 번에 최대 ±12% 로 제한
+const WHEEL_STEP_MAX = Math.log2(1.12);
+const wheelDelta = e => { const d = -e.deltaY * (e.deltaMode === 1 ? 0.025 : e.deltaMode ? 0.5 : 0.001) * (e.ctrlKey ? 4 : 1); return Math.max(-WHEEL_STEP_MAX, Math.min(WHEEL_STEP_MAX, d)); };
+const zoom = d3.zoom().scaleExtent([.85, 90]).wheelDelta(wheelDelta).filter(e => !meas.on || e.type === "wheel" || e.type.startsWith("touch"))
   .on("start", e => { if (e.sourceEvent) { wrap.classList.add("grabbing"); stopSpin(); startBall(e); } touch(); })
   .on("zoom", e => {
     const t = e.transform, se = e.sourceEvent;
@@ -1004,8 +1007,8 @@ function resize(){
 }
 new ResizeObserver(() => resize()).observe(node);
 
-$("#zin").onclick = () => { stopSpin(); svg.transition().duration(250).call(zoom.scaleBy, 1.7); };
-$("#zout").onclick = () => { stopSpin(); svg.transition().duration(250).call(zoom.scaleBy, 1 / 1.7); };
+$("#zin").onclick = () => { stopSpin(); svg.transition().duration(250).call(zoom.scaleBy, 1.4); };
+$("#zout").onclick = () => { stopSpin(); svg.transition().duration(250).call(zoom.scaleBy, 1 / 1.4); };
 $("#zreset").onclick = () => { closeDossier(); hideCard(); flyTo(HOME.rot, scaleForHalf(HOME.half), 700); };
 const spinBtn = $("#spin");
 function stopSpin(){ if (!autoSpin) return; autoSpin = false; spinBtn.setAttribute("aria-pressed", "false"); needDetail = true; dirty = true; }
