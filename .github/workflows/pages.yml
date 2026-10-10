@@ -40,7 +40,7 @@ jobs:
             echo "::notice title=Pages 꺼짐::GitHub Pages 가 꺼져 있어 배포를 건너뜁니다. Settings → Pages → Source 를 GitHub Actions 로 바꾸면 다음 수집부터 자동 배포됩니다."
             echo "GitHub Pages 가 꺼져 있어 배포를 건너뛰었습니다 (실패 아님). Settings → Pages → Source: GitHub Actions 로 켜면 자동 배포됩니다." >> "$GITHUB_STEP_SUMMARY"
           fi
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: steps.pages.outputs.on == '1'
         with:
           ref: ${{ github.event.repository.default_branch }}
