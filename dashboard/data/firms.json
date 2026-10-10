@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T18:30:59Z",
+ "generated": "2026-10-10T12:50:14Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
@@ -35,13 +35,16 @@
    "lat": 55.07,
    "lon": 73.22,
    "r_km": 6,
-   "n": 0,
+   "n": 1,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 0,
+   "frp_max": 0.4,
    "base_frp": null,
-   "at": null,
-   "d": null,
+   "at": [
+    73.22308,
+    55.05616
+   ],
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -164,14 +167,14 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 4,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 2.1,
-   "base_frp": null,
+   "n": 1,
+   "base_days": 1,
+   "base_n": 4,
+   "frp_max": 1.3,
+   "base_frp": 2.1,
    "at": [
-    37.80162,
-    44.73799
+    37.8079,
+    44.73726
    ],
    "d": "2026-10-09",
    "status": "learning"
@@ -260,16 +263,16 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 19,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 7.5,
-   "base_frp": null,
+   "n": 3,
+   "base_days": 1,
+   "base_n": 19,
+   "frp_max": 9.7,
+   "base_frp": 7.5,
    "at": [
-    48.27387,
-    30.34662
+    48.27682,
+    30.34989
    ],
-   "d": "2026-10-08",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -281,16 +284,16 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 17,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 7.2,
-   "base_frp": null,
+   "n": 9,
+   "base_days": 1,
+   "base_n": 17,
+   "frp_max": 6.8,
+   "base_frp": 7.2,
    "at": [
-    56.09722,
-    27.16952
+    56.05714,
+    27.17028
    ],
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -302,16 +305,16 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 6,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 1.0,
-   "base_frp": null,
+   "n": 3,
+   "base_days": 1,
+   "base_n": 6,
+   "frp_max": 4.0,
+   "base_frp": 1.0,
    "at": [
-    50.31211,
-    29.2167
+    50.31029,
+    29.21456
    ],
-   "d": "2026-10-08",
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -377,16 +380,16 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 7,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 29.8,
-   "base_frp": null,
+   "n": 1,
+   "base_days": 1,
+   "base_n": 7,
+   "frp_max": 1.3,
+   "base_frp": 29.8,
    "at": [
-    49.69603,
-    25.93189
+    49.69946,
+    25.93085
    ],
-   "d": "2026-10-08",
+   "d": "2026-10-09",
    "status": "learning"
   },
   {
@@ -434,16 +437,16 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 26,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 7.1,
-   "base_frp": null,
+   "n": 36,
+   "base_days": 1,
+   "base_n": 26,
+   "frp_max": 16.3,
+   "base_frp": 5.5,
    "at": [
-    51.5493,
-    25.90297
+    51.53215,
+    25.88278
    ],
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -728,16 +731,16 @@
    "lat": 11.75,
    "lon": -70.22,
    "r_km": 8,
-   "n": 7,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 10.1,
-   "base_frp": null,
+   "n": 14,
+   "base_days": 1,
+   "base_n": 3,
+   "frp_max": 7.8,
+   "base_frp": 10.1,
    "at": [
-    -70.19431,
-    11.73876
+    -70.19489,
+    11.73889
    ],
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -821,16 +824,13 @@
    "lat": 71.27,
    "lon": 72.07,
    "r_km": 8,
-   "n": 2,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 2.7,
-   "base_frp": null,
-   "at": [
-    72.06938,
-    71.25791
-   ],
-   "d": "2026-10-08",
+   "n": 0,
+   "base_days": 1,
+   "base_n": 2,
+   "frp_max": 0,
+   "base_frp": 2.7,
+   "at": null,
+   "d": null,
    "status": "learning"
   }
  ],
@@ -845,9 +845,9 @@
     27.5,
     16.0
    ],
-   "n": 65,
-   "base_days": 0,
-   "base_n": null,
+   "n": 68,
+   "base_days": 1,
+   "base_n": 47,
    "n_hi": 7,
    "d": "2026-10-09",
    "status": "learning"
@@ -862,11 +862,11 @@
     32.5,
     14.5
    ],
-   "n": 279,
-   "base_days": 0,
-   "base_n": null,
+   "n": 280,
+   "base_days": 1,
+   "base_n": 128,
    "n_hi": 53,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -913,11 +913,11 @@
     40.0,
     14.9
    ],
-   "n": 80,
-   "base_days": 0,
-   "base_n": null,
+   "n": 81,
+   "base_days": 1,
+   "base_n": 17,
    "n_hi": 14,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -930,10 +930,10 @@
     30.0,
     1.0
    ],
-   "n": 46,
-   "base_days": 0,
-   "base_n": null,
-   "n_hi": 31,
+   "n": 75,
+   "base_days": 1,
+   "base_n": 46,
+   "n_hi": 24,
    "d": "2026-10-09",
    "status": "learning"
   },
@@ -947,11 +947,11 @@
     94.5,
     21.5
    ],
-   "n": 0,
+   "n": 1,
    "base_days": 0,
    "base_n": null,
    "n_hi": 0,
-   "d": null,
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -964,11 +964,11 @@
     39.0,
     49.5
    ],
-   "n": 243,
-   "base_days": 0,
-   "base_n": null,
+   "n": 250,
+   "base_days": 1,
+   "base_n": 135,
    "n_hi": 83,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   }
  ],
