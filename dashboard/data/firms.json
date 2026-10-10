@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T12:50:14Z",
+ "generated": "2026-10-10T18:57:12Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
@@ -620,13 +620,16 @@
    "lat": 13.63,
    "lon": 25.35,
    "r_km": 10,
-   "n": 0,
+   "n": 3,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 0,
+   "frp_max": 4.4,
    "base_frp": null,
-   "at": null,
-   "d": null,
+   "at": [
+    25.29244,
+    13.66548
+   ],
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -692,16 +695,16 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 3,
+   "n": 5,
    "base_days": 0,
    "base_n": null,
-   "frp_max": 16.7,
+   "frp_max": 36.2,
    "base_frp": null,
    "at": [
-    29.64793,
-    10.95584
+    29.71355,
+    10.95475
    ],
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -849,7 +852,7 @@
    "base_days": 1,
    "base_n": 47,
    "n_hi": 7,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -862,7 +865,7 @@
     32.5,
     14.5
    ],
-   "n": 280,
+   "n": 343,
    "base_days": 1,
    "base_n": 128,
    "n_hi": 53,
@@ -900,7 +903,7 @@
    "base_days": 0,
    "base_n": null,
    "n_hi": 0,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {
@@ -934,7 +937,7 @@
    "base_days": 1,
    "base_n": 46,
    "n_hi": 24,
-   "d": "2026-10-09",
+   "d": "2026-10-10",
    "status": "learning"
   },
   {

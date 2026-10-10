@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-10T12:50:24Z",
+ "generated": "2026-10-10T18:57:28Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-10T12:50:24Z",
+  "at": "2026-10-10T18:57:28Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 1,
-     "runs": 3,
+     "base": 1.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -67,8 +67,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 2,
-     "runs": 3,
+     "base": 1.5,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -84,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -101,8 +101,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -118,8 +118,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -133,35 +133,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
-     "by_role": {
-      "airlift": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR4254",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 59.07,
-       "lon": 10.33,
-       "alt": 29975,
-       "reg": "ZM415"
-      },
-      {
-       "flight": "FHV21",
-       "t": "DHC6",
-       "role": "other",
-       "lat": 55.65,
-       "lon": 11.84,
-       "alt": 3300,
-       "reg": "OY-FHC"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -174,20 +152,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 3,
+     "base": 0.0,
+     "runs": 4,
      "status": "learning",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 0
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-10T12:50:24Z",
+  "at": "2026-10-10T18:57:28Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -328,29 +306,29 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-10T12:50:24Z",
+  "at": "2026-10-10T18:57:28Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 30,
+    "US": 31,
     "??": 14,
     "DE": 6,
     "BR": 6,
-    "CA": 5,
     "SG": 4,
+    "CA": 4,
     "IN": 4,
     "ES": 3,
-    "FR": 3,
     "TW": 3,
+    "JP": 2,
     "CH": 2,
     "MX": 2,
     "EG": 2,
-    "AU": 2,
-    "SE": 1
+    "FR": 2,
+    "CL": 1
    },
    "by_group": {
-    "thegentlemen": 26,
-    "qilin": 10,
+    "thegentlemen": 24,
+    "qilin": 12,
     "UmBra": 8,
     "SilentRansomGroup": 5,
     "Eclipse": 5,
