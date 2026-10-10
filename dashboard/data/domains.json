@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-09T18:31:12Z",
+ "generated": "2026-10-10T05:36:39Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-09T18:31:12Z",
+  "at": "2026-10-10T05:36:39Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 1,
      "key": 1,
-     "base": 1,
-     "runs": 1,
+     "base": 1.0,
+     "runs": 2,
      "status": "learning",
      "by_role": {
       "isr": 1
@@ -61,9 +61,9 @@
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.35,
-       "lon": 126.51,
-       "alt": 40000,
+       "lat": 37.32,
+       "lon": 126.24,
+       "alt": 38000,
        "reg": "N591SR"
       }
      ]
@@ -77,42 +77,51 @@
       60.0,
       30.5
      ],
-     "n": 3,
-     "key": 2,
-     "base": 1,
-     "runs": 1,
+     "n": 4,
+     "key": 3,
+     "base": 1.5,
+     "runs": 2,
      "status": "learning",
      "by_role": {
-      "tanker": 2,
-      "airlift": 1
+      "tanker": 3,
+      "other": 1
      },
      "ac": [
       {
        "flight": "",
-       "t": "B762",
+       "t": "K35R",
        "role": "tanker",
-       "lat": 24.99,
-       "lon": 54.76,
-       "alt": 28000,
-       "reg": "20-46080"
+       "lat": 24.6,
+       "lon": 55.46,
+       "alt": 29500,
+       "reg": "63-7985"
       },
       {
-       "flight": "X",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 23.76,
-       "lon": 55.47,
-       "alt": 21975,
-       "reg": "05-5141"
+       "flight": "ZABEEL03",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.69,
+       "lon": 55.52,
+       "alt": 23000,
+       "reg": "1302"
       },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.72,
-       "lon": 55.68,
-       "alt": 29500,
-       "reg": "21-46061"
+       "lat": 24.78,
+       "lon": 55.57,
+       "alt": 27500,
+       "reg": "19-46110"
+      },
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 25.19,
+       "lon": 56.0,
+       "alt": 27525,
+       "reg": ""
       }
      ]
     },
@@ -127,8 +136,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -142,13 +151,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 1,
+     "n": 1,
+     "key": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 31.95,
+       "lon": 34.88,
+       "alt": 13125,
+       "reg": "63-8018"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -159,25 +180,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "PAAF400",
-       "t": "GLF4",
-       "role": "other",
-       "lat": 40.55,
-       "lon": 29.0,
-       "alt": 15250,
-       "reg": "J-756"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -188,25 +197,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 1,
-     "runs": 1,
+     "base": 0.5,
+     "runs": 2,
      "status": "learning",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "NAF14",
-       "t": "GLF6",
-       "role": "other",
-       "lat": 59.31,
-       "lon": 23.86,
-       "alt": 21800,
-       "reg": "V-117"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -219,8 +216,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 1,
+     "base": 0.0,
+     "runs": 2,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -232,7 +229,7 @@
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-09T18:31:12Z",
+  "at": "2026-10-10T05:36:39Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -365,82 +362,52 @@
      "due": "2026-09-30",
      "ransom": false,
      "edge": true
-    },
-    {
-     "cve": "CVE-2026-67279",
-     "vendor": "MikroTik",
-     "product": "RouterOS",
-     "name": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
-     "added": "2026-09-25",
-     "due": "2026-09-28",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-65660",
-     "vendor": "Microsoft",
-     "product": "SharePoint",
-     "name": "Microsoft SharePoint Code Injection Vulnerability",
-     "added": "2026-09-25",
-     "due": "2026-09-28",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-87902",
-     "vendor": "WordPress",
-     "product": "Core",
-     "name": "WordPress Core Remote File Inclusion Vulnerability",
-     "added": "2026-09-25",
-     "due": "2026-09-28",
-     "ransom": false,
-     "edge": false
     }
    ],
-   "n_recent": 16,
-   "n_week": 8
+   "n_recent": 13,
+   "n_week": 6
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-09T18:31:12Z",
+  "at": "2026-10-10T05:36:39Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 28,
-    "??": 19,
-    "BR": 7,
+    "US": 30,
+    "??": 14,
     "DE": 6,
-    "CH": 4,
-    "IT": 3,
-    "IN": 3,
+    "BR": 6,
+    "CA": 5,
+    "SG": 4,
+    "IN": 4,
     "ES": 3,
+    "FR": 3,
+    "TW": 3,
+    "CH": 2,
     "MX": 2,
-    "CA": 2,
-    "AE": 2,
     "EG": 2,
-    "SG": 2,
-    "TR": 2,
-    "NL": 2
+    "AU": 2,
+    "SE": 1
    },
    "by_group": {
-    "qilin": 12,
-    "safepay": 10,
-    "UmBra": 9,
-    "SilentRansomGroup": 8,
-    "akira": 5,
+    "thegentlemen": 26,
+    "qilin": 10,
+    "UmBra": 8,
+    "SilentRansomGroup": 5,
     "Eclipse": 5,
-    "incransom": 5,
-    "everest": 5,
+    "Panzer": 4,
+    "incransom": 4,
+    "Black X": 3,
     "arcusmedia": 3,
-    "Panzer": 3
+    "akira": 3
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 8,
+  "kev_week": 6,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,
