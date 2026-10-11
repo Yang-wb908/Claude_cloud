@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-11T06:02:24Z",
+ "generated": "2026-10-11T12:57:13Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-11T06:02:24Z",
+  "at": "2026-10-11T12:57:13Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -48,35 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0.5,
-     "runs": 6,
+     "n": 0,
+     "key": 0,
+     "base": 1,
+     "runs": 7,
      "status": "learning",
-     "by_role": {
-      "isr": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.36,
-       "lon": 126.61,
-       "alt": 38000,
-       "reg": "N591SR"
-      },
-      {
-       "flight": "CARD38",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.4,
-       "lon": 127.1,
-       "alt": 1200,
-       "reg": "18-20999"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -87,61 +65,32 @@
       60.0,
       30.5
      ],
-     "n": 5,
-     "key": 1,
-     "base": 1.0,
-     "runs": 6,
+     "n": 2,
+     "key": 0,
+     "base": 1,
+     "runs": 7,
      "status": "learning",
      "by_role": {
-      "airlift": 1,
-      "other": 3,
-      "tanker": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "DEMA160",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 26.36,
-       "lon": 50.16,
-       "alt": 24000,
-       "reg": "A7-MAH"
-      },
-      {
        "flight": "",
-       "t": "AS50",
+       "t": "",
        "role": "other",
-       "lat": 24.96,
-       "lon": 51.27,
-       "alt": 325,
-       "reg": "QA325"
+       "lat": 24.85,
+       "lon": 55.39,
+       "alt": 29525,
+       "reg": ""
       },
       {
-       "flight": "GNS101",
-       "t": "AS50",
+       "flight": "MJN574",
+       "t": "A320",
        "role": "other",
-       "lat": 25.1,
-       "lon": 51.38,
-       "alt": 700,
-       "reg": "QA321"
-      },
-      {
-       "flight": "GNS110",
-       "t": "AS50",
-       "role": "other",
-       "lat": 25.07,
-       "lon": 51.42,
-       "alt": 1000,
-       "reg": "QA335"
-      },
-      {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 24.59,
-       "lon": 55.32,
-       "alt": 27500,
-       "reg": "22-46099"
+       "lat": 23.36,
+       "lon": 58.34,
+       "alt": 7900,
+       "reg": "554"
       }
      ]
     },
@@ -156,8 +105,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -171,35 +120,13 @@
       37.0,
       37.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
-     "by_role": {
-      "other": 1,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "0000",
-       "t": "BTB2",
-       "role": "other",
-       "lat": 36.48,
-       "lon": 30.45,
-       "alt": 18050,
-       "reg": "TC-J3"
-      },
-      {
-       "flight": "CTM2087",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 30.66,
-       "lon": 33.59,
-       "alt": 27000,
-       "reg": "61-PR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -212,8 +139,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -229,21 +156,21 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {
       "other": 1
      },
      "ac": [
       {
-       "flight": "LYF439",
-       "t": "C27J",
+       "flight": "FHV22",
+       "t": "DHC6",
        "role": "other",
-       "lat": 55.53,
-       "lon": 23.29,
-       "alt": 17200,
-       "reg": "06 BLUE"
+       "lat": 55.41,
+       "lon": 11.03,
+       "alt": 1275,
+       "reg": "OY-FHD"
       }
      ]
     },
@@ -258,20 +185,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 6,
+     "base": 0,
+     "runs": 7,
      "status": "learning",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 10
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-11T06:02:24Z",
+  "at": "2026-10-11T12:57:13Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -412,37 +339,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-11T06:02:24Z",
+  "at": "2026-10-11T12:57:13Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 30,
-    "??": 13,
+    "??": 15,
     "BR": 6,
     "DE": 5,
-    "TW": 4,
-    "SG": 4,
-    "CA": 4,
     "IN": 4,
+    "TW": 3,
     "EG": 3,
     "ES": 3,
+    "SG": 3,
+    "CA": 3,
+    "CO": 2,
     "JP": 2,
     "CH": 2,
     "MX": 2,
-    "FR": 2,
-    "TH": 1
+    "FR": 2
    },
    "by_group": {
-    "thegentlemen": 23,
-    "qilin": 11,
+    "thegentlemen": 19,
+    "qilin": 12,
     "UmBra": 9,
     "SilentRansomGroup": 5,
     "Eclipse": 5,
+    "dragonforce": 4,
     "Panzer": 4,
     "incransom": 4,
-    "dragonforce": 3,
-    "Black X": 3,
-    "arcusmedia": 3
+    "N0n": 3,
+    "rhysida": 3
    },
    "kr": []
   }
