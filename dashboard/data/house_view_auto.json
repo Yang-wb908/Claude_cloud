@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 71.0,
+   "p": 75.2,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 6.5,
+   "p": 6.7,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.412,
+     "f": 0.4,
      "note": "예측시장 1% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 1.1,
+    "p": 1.0,
     "q": "Strait of Hormuz traffic returns to normal by October 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
-    "vol": 2118670,
+    "vol": 2198749,
     "end": "2026-11-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 22.4,
+   "p": 18.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -56,13 +56,8 @@
      "note": "해상 피격 24시간 3건"
     },
     {
-     "key": "sens:ioda:iran",
-     "f": 1.5,
-     "note": "이란·걸프 국가 인터넷 대규모 차단 (IODA)"
-    },
-    {
      "key": "market:hormuz_war",
-     "f": 0.928,
+     "f": 0.967,
      "note": "예측시장 16% (가중 0.10)"
     }
    ],
@@ -70,7 +65,7 @@
     "p": 16.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 73209548,
+    "vol": 73222607,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -139,7 +134,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 43834467,
+    "vol": 43835460,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -200,7 +195,7 @@
   },
   {
    "id": "bio_spread",
-   "p": 12.8,
+   "p": 12.9,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -216,15 +211,15 @@
     },
     {
      "key": "market:bio_spread",
-     "f": 0.884,
-     "note": "예측시장 1% (가중 0.05)"
+     "f": 0.887,
+     "note": "예측시장 2% (가중 0.05)"
     }
    ],
    "market": {
-    "p": 1.4,
+    "p": 1.5,
     "q": "Hantavirus pandemic in 2026?",
     "url": "https://polymarket.com/event/hantavirus-pandemic-in-2026",
-    "vol": 18604818,
+    "vol": 18604904,
     "end": "2027-01-01",
     "w": 0.05
    }
@@ -245,7 +240,7 @@
     "p": 87.9,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 19393755,
+    "vol": 19394796,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -266,7 +261,7 @@
     "p": 11.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 22169392,
+    "vol": 22182427,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -300,7 +295,7 @@
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 9096235,
+    "vol": 9155965,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -380,7 +375,7 @@
   {
    "id": "hormuz_reopen",
    "house": 30.0,
-   "market": 1.1,
+   "market": 1.0,
    "q": "Strait of Hormuz traffic returns to normal by October 31?",
    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
   },
@@ -416,7 +411,6 @@
  "sensors": {
   "ioda": [
    "europe",
-   "iran",
    "oceania",
    "sahel",
    "ukraine"

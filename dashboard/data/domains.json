@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-11T00:56:29Z",
+ "generated": "2026-10-11T06:02:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-11T00:56:29Z",
+  "at": "2026-10-11T06:02:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -48,13 +48,35 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 1,
-     "runs": 5,
+     "n": 2,
+     "key": 1,
+     "base": 0.5,
+     "runs": 6,
      "status": "learning",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.36,
+       "lon": 126.61,
+       "alt": 38000,
+       "reg": "N591SR"
+      },
+      {
+       "flight": "CARD38",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.4,
+       "lon": 127.1,
+       "alt": 1200,
+       "reg": "18-20999"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,23 +87,61 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 5,
      "key": 1,
-     "base": 1,
-     "runs": 5,
+     "base": 1.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {
+      "airlift": 1,
+      "other": 3,
       "tanker": 1
      },
      "ac": [
       {
+       "flight": "DEMA160",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 26.36,
+       "lon": 50.16,
+       "alt": 24000,
+       "reg": "A7-MAH"
+      },
+      {
        "flight": "",
-       "t": "K35R",
+       "t": "AS50",
+       "role": "other",
+       "lat": 24.96,
+       "lon": 51.27,
+       "alt": 325,
+       "reg": "QA325"
+      },
+      {
+       "flight": "GNS101",
+       "t": "AS50",
+       "role": "other",
+       "lat": 25.1,
+       "lon": 51.38,
+       "alt": 700,
+       "reg": "QA321"
+      },
+      {
+       "flight": "GNS110",
+       "t": "AS50",
+       "role": "other",
+       "lat": 25.07,
+       "lon": 51.42,
+       "alt": 1000,
+       "reg": "QA335"
+      },
+      {
+       "flight": "",
+       "t": "B762",
        "role": "tanker",
-       "lat": 24.36,
-       "lon": 54.46,
-       "alt": 12075,
-       "reg": "60-0363"
+       "lat": 24.59,
+       "lon": 55.32,
+       "alt": 27500,
+       "reg": "22-46099"
       }
      ]
     },
@@ -96,8 +156,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -111,13 +171,14 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {
-      "other": 1
+      "other": 1,
+      "airlift": 1
      },
      "ac": [
       {
@@ -128,6 +189,15 @@
        "lon": 30.45,
        "alt": 18050,
        "reg": "TC-J3"
+      },
+      {
+       "flight": "CTM2087",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 30.66,
+       "lon": 33.59,
+       "alt": 27000,
+       "reg": "61-PR"
       }
      ]
     },
@@ -142,8 +212,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -157,13 +227,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "LYF439",
+       "t": "C27J",
+       "role": "other",
+       "lat": 55.53,
+       "lon": 23.29,
+       "alt": 17200,
+       "reg": "06 BLUE"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -176,20 +258,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 5,
+     "base": 0.0,
+     "runs": 6,
      "status": "learning",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 10
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-11T00:56:29Z",
+  "at": "2026-10-11T06:02:24Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -330,7 +412,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-11T00:56:29Z",
+  "at": "2026-10-11T06:02:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
