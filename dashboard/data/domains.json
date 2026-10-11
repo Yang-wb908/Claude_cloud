@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-10T18:57:28Z",
+ "generated": "2026-10-11T00:56:29Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-10T18:57:28Z",
+  "at": "2026-10-11T00:56:29Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 1.0,
-     "runs": 4,
+     "base": 1,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -65,13 +65,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 1.5,
-     "runs": 4,
+     "n": 1,
+     "key": 1,
+     "base": 1,
+     "runs": 5,
      "status": "learning",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 24.36,
+       "lon": 54.46,
+       "alt": 12075,
+       "reg": "60-0363"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -84,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -99,13 +111,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "0000",
+       "t": "BTB2",
+       "role": "other",
+       "lat": 36.48,
+       "lon": 30.45,
+       "alt": 18050,
+       "reg": "TC-J3"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -118,8 +142,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -135,8 +159,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
@@ -152,20 +176,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 4,
+     "base": 0,
+     "runs": 5,
      "status": "learning",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 0
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-10T18:57:28Z",
+  "at": "2026-10-11T00:56:29Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -306,37 +330,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-10T18:57:28Z",
+  "at": "2026-10-11T00:56:29Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 31,
-    "??": 14,
-    "DE": 6,
+    "US": 30,
+    "??": 13,
     "BR": 6,
+    "DE": 5,
+    "TW": 4,
     "SG": 4,
     "CA": 4,
     "IN": 4,
+    "EG": 3,
     "ES": 3,
-    "TW": 3,
     "JP": 2,
     "CH": 2,
     "MX": 2,
-    "EG": 2,
     "FR": 2,
-    "CL": 1
+    "TH": 1
    },
    "by_group": {
-    "thegentlemen": 24,
-    "qilin": 12,
-    "UmBra": 8,
+    "thegentlemen": 23,
+    "qilin": 11,
+    "UmBra": 9,
     "SilentRansomGroup": 5,
     "Eclipse": 5,
     "Panzer": 4,
     "incransom": 4,
+    "dragonforce": 3,
     "Black X": 3,
-    "arcusmedia": 3,
-    "akira": 3
+    "arcusmedia": 3
    },
    "kr": []
   }
