@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-11T12:57:13Z",
+ "generated": "2026-10-11T18:57:19Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-11T12:57:13Z",
+  "at": "2026-10-11T18:57:19Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,9 +16,9 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     },
@@ -33,9 +33,9 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     },
@@ -50,9 +50,9 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 1,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.5,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     },
@@ -65,32 +65,42 @@
       60.0,
       30.5
      ],
-     "n": 2,
-     "key": 0,
-     "base": 1,
-     "runs": 7,
-     "status": "learning",
+     "n": 3,
+     "key": 2,
+     "base": 1.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {
-      "other": 2
+      "tanker": 2,
+      "other": 1
      },
      "ac": [
       {
        "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 24.85,
-       "lon": 55.39,
-       "alt": 29525,
-       "reg": ""
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 25.14,
+       "lon": 55.33,
+       "alt": 28000,
+       "reg": "63-7976"
       },
       {
-       "flight": "MJN574",
-       "t": "A320",
+       "flight": "ZABEEL04",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.66,
+       "lon": 55.38,
+       "alt": 21000,
+       "reg": "1302"
+      },
+      {
+       "flight": "",
+       "t": "",
        "role": "other",
-       "lat": 23.36,
-       "lon": 58.34,
-       "alt": 7900,
-       "reg": "554"
+       "lat": 24.49,
+       "lon": 55.52,
+       "alt": 30000,
+       "reg": ""
       }
      ]
     },
@@ -105,9 +115,9 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     },
@@ -120,13 +130,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
-     "by_role": {},
-     "ac": []
+     "n": 1,
+     "key": 1,
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "YETI55",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 32.06,
+       "lon": 34.78,
+       "alt": 8025,
+       "reg": "21-46061"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -139,9 +161,9 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     },
@@ -154,25 +176,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "FHV22",
-       "t": "DHC6",
-       "role": "other",
-       "lat": 55.41,
-       "lon": 11.03,
-       "alt": 1275,
-       "reg": "OY-FHD"
-      }
-     ]
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -185,20 +195,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 7,
-     "status": "learning",
+     "base": 0.0,
+     "runs": 8,
+     "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-11T12:57:13Z",
+  "at": "2026-10-11T18:57:19Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -339,12 +349,12 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-11T12:57:13Z",
+  "at": "2026-10-11T18:57:19Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 30,
-    "??": 15,
+    "US": 32,
+    "??": 13,
     "BR": 6,
     "DE": 5,
     "IN": 4,
@@ -360,16 +370,16 @@
     "FR": 2
    },
    "by_group": {
-    "thegentlemen": 19,
-    "qilin": 12,
+    "thegentlemen": 15,
+    "qilin": 14,
     "UmBra": 9,
+    "N0n": 6,
     "SilentRansomGroup": 5,
     "Eclipse": 5,
     "dragonforce": 4,
     "Panzer": 4,
-    "incransom": 4,
-    "N0n": 3,
-    "rhysida": 3
+    "rhysida": 3,
+    "Black X": 3
    },
    "kr": []
   }
