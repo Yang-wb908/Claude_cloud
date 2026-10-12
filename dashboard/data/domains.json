@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-12T12:58:38Z",
+ "generated": "2026-10-12T18:57:12Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-12T12:58:38Z",
+  "at": "2026-10-12T18:57:12Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 11,
+     "n": 1,
+     "key": 1,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.29,
+       "lon": 125.97,
+       "alt": 38000,
+       "reg": "N591SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,23 +77,33 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 0,
-     "base": 1,
-     "runs": 11,
+     "n": 2,
+     "key": 1,
+     "base": 1.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {
-      "airlift": 1
+      "other": 1,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "MJN502",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 23.67,
-       "lon": 57.6,
-       "alt": 3425,
-       "reg": "502"
+       "flight": "ZAM40",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.1,
+       "lon": 51.32,
+       "alt": 225,
+       "reg": "QA352"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.49,
+       "lon": 55.63,
+       "alt": 27500,
+       "reg": "19-46110"
       }
      ]
     },
@@ -96,8 +118,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -113,8 +135,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -130,8 +152,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -145,62 +167,13 @@
       30.5,
       61.0
      ],
-     "n": 5,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
-     "by_role": {
-      "other": 3,
-      "airlift": 2
-     },
-     "ac": [
-      {
-       "flight": "BB25",
-       "t": "",
-       "role": "other",
-       "lat": 56.27,
-       "lon": 9.19,
-       "alt": 800,
-       "reg": ""
-      },
-      {
-       "flight": "",
-       "t": "EH10",
-       "role": "other",
-       "lat": 59.26,
-       "lon": 11.24,
-       "alt": 400,
-       "reg": "0277"
-      },
-      {
-       "flight": "MMF10",
-       "t": "",
-       "role": "other",
-       "lat": 59.23,
-       "lon": 14.27,
-       "alt": 23000,
-       "reg": ""
-      },
-      {
-       "flight": "BRK92",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 59.17,
-       "lon": 15.02,
-       "alt": 750,
-       "reg": "01"
-      },
-      {
-       "flight": "GAF139",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 58.27,
-       "lon": 21.38,
-       "alt": 33975,
-       "reg": "54+09"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -213,20 +186,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 11,
+     "base": 0.0,
+     "runs": 12,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 6
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-12T12:58:38Z",
+  "at": "2026-10-12T18:57:12Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -347,39 +320,136 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-12T12:58:38Z",
+  "at": "2026-10-12T18:57:12Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 31,
-    "??": 19,
-    "BR": 6,
-    "DE": 4,
-    "CA": 3,
-    "EG": 3,
+    "US": 23,
+    "KR": 12,
+    "??": 11,
+    "ID": 5,
+    "BR": 5,
+    "JP": 4,
     "ES": 3,
-    "SG": 3,
-    "IN": 3,
-    "CO": 2,
+    "DE": 3,
+    "GB": 3,
+    "CA": 3,
+    "SG": 2,
+    "CN": 2,
     "TW": 2,
-    "JP": 2,
-    "CH": 2,
-    "MX": 2,
-    "MA": 1
+    "MA": 2,
+    "CO": 2
    },
    "by_group": {
-    "qilin": 14,
-    "N0n": 13,
-    "UmBra": 9,
-    "thegentlemen": 7,
-    "SilentRansomGroup": 5,
-    "Eclipse": 5,
-    "rhysida": 4,
-    "dragonforce": 4,
-    "Panzer": 3,
-    "Black X": 3
+    "N0n": 50,
+    "qilin": 11,
+    "thegentlemen": 5,
+    "dragonforce": 3,
+    "rhysida": 3,
+    "Black X": 3,
+    "arcusmedia": 3,
+    "metaencryptor": 2,
+    "Redact": 2,
+    "akira": 2
    },
-   "kr": []
+   "kr": [
+    {
+     "victim": "MGNP (port terminal operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/TUdOUCAocG9ydCB0ZXJtaW5hbCBvcGVyYXRpb25zKUBOMG4="
+    },
+    {
+     "victim": "Polaris Shipping (dry bulk shipping)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/UG9sYXJpcyBTaGlwcGluZyAoZHJ5IGJ1bGsgc2hpcHBpbmcpQE4wbg=="
+    },
+    {
+     "victim": "BNCT Busan New Container Terminal",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/Qk5DVCBCdXNhbiBOZXcgQ29udGFpbmVyIFRlcm1pbmFsQE4wbg=="
+    },
+    {
+     "victim": "GNCNet / DGT Busan (port community IT)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/R05DTmV0IC8gREdUIEJ1c2FuIChwb3J0IGNvbW11bml0eSBJVClATjBu"
+    },
+    {
+     "victim": "Dongkuk Steel (steel manufacturing)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Manufacturing",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/RG9uZ2t1ayBTdGVlbCAoc3RlZWwgbWFudWZhY3R1cmluZylATjBu"
+    },
+    {
+     "victim": "Saehan Marine (ship agency operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/U2FlaGFuIE1hcmluZSAoc2hpcCBhZ2VuY3kgb3BlcmF0aW9ucylATjBu"
+    },
+    {
+     "victim": "Dong-A Tanker (oil tanker operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/RG9uZy1BIFRhbmtlciAob2lsIHRhbmtlciBvcGVyYXRpb25zKUBOMG4="
+    },
+    {
+     "victim": "EUSU Logistics (logistics operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/RVVTVSBMb2dpc3RpY3MgKGxvZ2lzdGljcyBvcGVyYXRpb25zKUBOMG4="
+    },
+    {
+     "victim": "BKH ICD (inland container depot operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/QktIIElDRCAoaW5sYW5kIGNvbnRhaW5lciBkZXBvdCBvcGVyYXRpb25zKUBOMG4="
+    },
+    {
+     "victim": "Korea Ferry (ferry operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/S29yZWEgRmVycnkgKGZlcnJ5IG9wZXJhdGlvbnMpQE4wbg=="
+    },
+    {
+     "victim": "Samjoo Maritime (ship management)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/U2Ftam9vIE1hcml0aW1lIChzaGlwIG1hbmFnZW1lbnQpQE4wbg=="
+    },
+    {
+     "victim": "Pusan Newport Company (container terminal operations)",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Transportation",
+     "d": "2026-10-12",
+     "url": "https://www.ransomware.live/id/UHVzYW4gTmV3cG9ydCBDb21wYW55IChjb250YWluZXIgdGVybWluYWwgb3BlcmF0aW9ucylATjBu"
+    }
+   ]
   }
  },
  "summary": {
@@ -387,7 +457,7 @@
   "kev_week": 5,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 0,
-  "events": 0
+  "ransom_kr_week": 12,
+  "events": 12
  }
 }
