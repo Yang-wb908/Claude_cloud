@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-11T22:10:01Z",
+ "generated": "2026-10-12T06:13:05Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-11T22:10:01Z",
+  "at": "2026-10-12T06:13:05Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 9,
+     "n": 0,
+     "key": 0,
+     "base": 0.5,
+     "runs": 10,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.33,
-       "lon": 126.28,
-       "alt": 40000,
-       "reg": "N591SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,32 +65,42 @@
       60.0,
       30.5
      ],
-     "n": 2,
-     "key": 2,
-     "base": 1,
-     "runs": 9,
+     "n": 3,
+     "key": 1,
+     "base": 1.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {
-      "tanker": 2
+      "other": 2,
+      "tanker": 1
      },
      "ac": [
       {
        "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 24.73,
-       "lon": 57.44,
-       "alt": 25975,
-       "reg": "57-1508"
+       "t": "P180",
+       "role": "other",
+       "lat": 24.45,
+       "lon": 54.67,
+       "alt": "ground",
+       "reg": "1207"
       },
       {
-       "flight": "",
+       "flight": "RBDN929",
+       "t": "C295",
+       "role": "other",
+       "lat": 24.53,
+       "lon": 55.21,
+       "alt": 11975,
+       "reg": "822"
+      },
+      {
+       "flight": "YETI47",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.7,
-       "lon": 57.88,
-       "alt": 22500,
-       "reg": "19-46111"
+       "lat": 24.54,
+       "lon": 55.41,
+       "alt": 27500,
+       "reg": "21-46060"
       }
      ]
     },
@@ -117,8 +115,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -132,13 +130,43 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 3,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "AT76",
+       "role": "other",
+       "lat": 34.59,
+       "lon": 31.7,
+       "alt": 15500,
+       "reg": "TCB-751"
+      },
+      {
+       "flight": "RFR7144",
+       "t": "B350",
+       "role": "other",
+       "lat": 31.86,
+       "lon": 35.59,
+       "alt": 15175,
+       "reg": "ZZ507"
+      },
+      {
+       "flight": "SHAHD258",
+       "t": "C208",
+       "role": "other",
+       "lat": 32.16,
+       "lon": 35.99,
+       "alt": 6850,
+       "reg": "1541"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -151,8 +179,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -166,13 +194,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "MITY68",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 56.58,
+       "lon": 14.5,
+       "alt": 14500,
+       "reg": "84005"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -185,20 +225,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 9,
+     "base": 0.0,
+     "runs": 10,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 7
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-11T22:10:01Z",
+  "at": "2026-10-12T06:13:05Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -311,59 +351,39 @@
      "due": "2026-10-13",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2026-88772",
-     "vendor": "Citrix",
-     "product": "NetScaler",
-     "name": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-     "added": "2026-09-27",
-     "due": "2026-09-30",
-     "ransom": false,
-     "edge": true
-    },
-    {
-     "cve": "CVE-2026-88771",
-     "vendor": "Citrix",
-     "product": "NetScaler",
-     "name": "Citrix NetScaler Improper Input Validation Vulnerability",
-     "added": "2026-09-27",
-     "due": "2026-09-30",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 13,
-   "n_week": 6
+   "n_recent": 11,
+   "n_week": 5
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-11T22:10:01Z",
+  "at": "2026-10-12T06:13:05Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 32,
-    "??": 13,
+    "US": 29,
+    "??": 20,
     "BR": 6,
-    "DE": 5,
+    "DE": 4,
     "IN": 4,
-    "TW": 3,
+    "CA": 3,
     "EG": 3,
     "ES": 3,
     "SG": 3,
-    "CA": 3,
     "CO": 2,
+    "TW": 2,
     "JP": 2,
     "CH": 2,
     "MX": 2,
-    "FR": 2
+    "MA": 1
    },
    "by_group": {
-    "thegentlemen": 15,
     "qilin": 14,
+    "N0n": 13,
     "UmBra": 9,
-    "N0n": 6,
+    "thegentlemen": 7,
     "SilentRansomGroup": 5,
     "Eclipse": 5,
     "rhysida": 4,
@@ -376,7 +396,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 6,
+  "kev_week": 5,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,
