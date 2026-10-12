@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-10",
+ "asof": "2026-10-12",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -43,9 +43,15 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 10/8~9 에티오피아가 티그라이에 들어온 에리트레아군을 공습·드론 공격했다는 보도가 있습니다. 에티오피아는 유엔 안보리에 에리트레아를 상대로 자위권을 행사하고 있다고 공식 통보했습니다. 따라서 1개월 내 국가 간 교전은 이미 일어난 것으로 판정합니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQWFCNmFIZDM5V3F4R1QzQTM5N1V2TWZTLXRkWHg2T1h4clFpclMzVlNkQzNqd09kTHJERGsxNFlrV2hkV2JjbEtfdmNuM1FmckctcmhHd2RXcjlUMURyd3JvTGhtNFhaUW1LQ3VNaUpfVjdkZktEVi01Y3hNT29VMFpJZGlNdXlKeDhOWDV5c2YwVHZtSDFhdXd4U1lhRl9ZMVRJ?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdUFEbk42cVJWYkEtVDV0SExyQzNKUDJNTU15bU05RnVna3M2MmpoY1hGbXRQTDFNa3ROSmJ6bG1OSWVEdzlVSXRDTW1URWwyQzZOcWoxZEEwYVRkSnJ6LXJPX2lRMWNXaFNkM09NZWtWN1R0TVE5MjlTY09Bb2d5MXdqUERXRmdoX3lqZWpneXdvMWlYRTVydE1B?oc=5",
+    "https://www.aljazeera.com/news/2026/10/9/ethiopia-and-eritrea-accuse-one-another-of-launching-war?traffic_source=rss"
+   ]
   },
   {
    "id": "bluf-4",
@@ -149,9 +155,15 @@
    "conf": "높음",
    "due": "2026-11-08",
    "src": "IW.theaters.ukraine",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 우크라이나는 러시아의 정유·석유터미널과 얀덱스 데이터센터(1주 새 세 번째)를 잇달아 타격했고, 러시아도 우크라이나 후방 도시를 계속 공습하고 있습니다. 양측이 상대 후방의 에너지·통신 기반시설을 소모시키는 양상이 확인됩니다. 다만 '에너지 휴전' 발표가 변수입니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/10/11/russias-yandex-says-data-centre-in-vladimir-shut-down-after-drone-attack?traffic_source=rss",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxONWU2RWJiVUNmUUxzMHQwNm5DVjRmaVpYbVR1ME9GTW5SVzFnU04wRlVoeHFMSkRDbG1qR3JYOWZYZ1gxRTFPdGdGY2R2V3VYNWNPOVlSUHBMRjc1bFE0SFRxQzlERkYtRUFjbkh3X2NRRm5yWlhZUEpZREVuem9RSjBhRHhiaGN1YlhpM185M2NmQ09YeF9qdXNDaXhXVE0tNFZBRmRta1dTeTRBcWlEclE5RXZMVUg2Zng5bFdTRWh5WVhXb1R3Ty0ydEM0MWF0?oc=5",
+    "https://www.france24.com/en/europe/20261011-trump-says-russia-and-ukraine-agree-energy-ceasefire"
+   ]
   },
   {
    "id": "th-ukraine-2",
@@ -224,9 +236,15 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.theaters.yemen",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(높음): 후티의 공격은 사우디 남부에 그치지 않고 리야드 킹칼리드 국제공항(사망자 발생)과 담맘 킹파흐드국제공항 같은 전략 표적으로 실제 확대됐습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.france24.com/en/video/20261011-saudi-led-coalition-says-new-attack-at-riyadh-airport-causes-fire-day-after-strike-kills-12",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-authority-confirms-houthi-attack-dammam-airport",
+    "https://www.cbc.ca/news/world/saudi-houthi-fighting-riyadh-airport-9.7375292?cmp=rss"
+   ]
   },
   {
    "id": "th-ethiopia-1",
@@ -269,9 +287,15 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.theaters.ethiopia",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 이후 정부 측 지휘관 발언, DW 보도, 에티오피아 정부의 '전면 침공' 주장과 에리트레아군 공습 보도가 잇달아 나왔습니다. 에리트레아군 진입 보도의 개연성이 여러 출처로 뒷받침됐습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVkFHMjNPQy1fZnlTYkFocWx2Umg5R015dlE2ajU4T2Q1enNSNFhSTDR4X21VZ0I4VG15UnB4MC0weEpUZnFWTlZZZ002MjhoVEFOSDlpRnFzNktYS2F0SHZfOFF6RUlQSVJFaXJTRlFLdDhJMDgtS0ZPdTNnenBwZ05LSWdFTUJDMVJVbFRCcUpoQXFOOG5rMVZGTGhWM1BmOGg2NlExbjNjYmVSdDI2Tlh6UU5Qcl9ZejRxbC16ZmxpSktSTWtZaVFBSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxORGFWemFVVDlKWFhiNWRtNXFCTmNyWGhINDBId0VUbUk4bGgta3dwOUlUNXZUZ3pSTmFocG5KY2dkYWRoRktkbDdpX0hiY0w2Si1kWkhfUkhPdHRlX1M1emZVQzBnbkVNU2paNU01RmdiWDZvTHhDaXBqVHN2ZFhud05NeUxJajlJeHVrSDNTeVpFcjA2RXU0THFSeWZDOFJJT0s3UlhHclFKLWJIYmxhdXpTaGcwYm5GWHc?oc=5",
+    "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOS1NWZzdJMWZuVHhqZ2tSSlRyNXRoOC1nYmhoQks5VUd5SHEtRGlLa0p5OGtmMDE0b1I4dktCMzdHZlh0Mlk4WHpONlA2YmI1cmk1ajVoWVZYYmpEZ3NLSDhTV3BVT09wOEdGTGNFNDFoRV9wN01QMTB4bTUta0l0UFZrUXJUNUJCYzhHaXRqQWplNG9qeDloOHBBZ0k2UmNTX0R0RmxaU01rb19VeExlaUZuRTlGRDhXUzZNSUVhbzF5Yk1qejVTVVNIdHZ6MFJuVGVZUA?oc=5"
+   ]
   },
   {
    "id": "th-sudan-1",
@@ -284,9 +308,15 @@
    "conf": "높음",
    "due": "2026-11-08",
    "src": "IW.theaters.sudan",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 판단 이후에도 RSF나 RSF 연계 세력의 드론 공격이 이어졌습니다. 블루나일주(30명 사망), 에티오피아 국경 인근 피란민(41명 사망), 북코르도판 주도 엘오베이드(민간인 6명 부상)가 공격받아 민간 피해가 줄지 않았습니다. 다만 '정부군이 북코르도판에서 주도권을 잡았다'는 전제를 직접 확인할 근거는 없습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/10/9/drone-strike-kills-30-people-in-sudans-blue-nile-region?traffic_source=rss",
+    "https://www.bbc.co.uk/news/articles/c8vgx9ew571wo?at_medium=RSS&at_campaign=rss",
+    "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtN3dqSDVETGYzcHlpSGZmX2czUjl3Zmh0Q3VLOFhnelVYYjAyTzV5VTk3ZnVSN1JYdFkxeV8yNVNmbmJIVWlnLWVMcE9wd0hG?oc=5"
+   ]
   },
   {
    "id": "th-sudan-2",
@@ -374,9 +404,14 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.korea",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 당 창건일 다음 날인 10월 11일 북한의 신형 미사일 발사가 보도됐고, 트립와이어 '북한 미사일 발사(24시간 내)'도 2건으로 작동해 당 창건일 전후 추가 발사가 실제로 있었습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQjAxczEwQlVnZXUyUUxGSjVZeHN3Q1NDVV9mQmxSMWY2VU9USGhtTDVHWTFnOGVldTNZVEp5VkY3TlJOSnBHX1JJSnhmYmZZLTB5U3pYTlQ4dzRXLWJUOVV0M2N6YXh6ZmxMSm53cVVudHl5NHBXOW1DVnRkZjFNdmNHZUJvMmIzQlFWODljU0VhVjVPa1ZTbVNlWFdiTG5OdGlhREZWTU5EbFBhSEtj?oc=5",
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWUdYNnpVTUFrVzhXV2tja1RoMjlqZnFXUTQ2UndGTG5qX3hDWVQ2cWVSUXplejFQS0I5SjNtcE1iZW0xMU1DWnNUeXMwMnhWMjFjTng4aFdJbVh0NEcwMDdLTzZJaWFwYVBwckc4OU40MTdVTEFOZGtYMlpvUW1SZU1rU1NYcHRuVDJ3dGZoMnRWZVBkRDIyb3ZGTjJOSTUtMFp5MjdTQS1tVy1fcV9JR1IyUy1sMmJF?oc=5"
+   ]
   },
   {
    "id": "th-korea-2",
@@ -554,9 +589,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.taiwan",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 10/8~10/9 대만 국방부 집계에서 군용기는 3대 수준으로 적었지만 중국 함선 7척이 계속 탐지됐습니다. 10/10에는 대만 동부 해역에서 중국 해상민병 선박이 처음 포착돼, 공중 압박은 낮고 해상 회색지대 활동은 유지·확대됐다는 판단에 부합합니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5HQVdEdi1PVi1VeEo4Q2Z3ekdib1A2dmlYNEwxOTNkYmNhR1JsTk5GbDUxeTBiTzlDem40VFprNjFobTEwRjdkd2djUG4wVXJMeDZlbg?oc=5",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN1djNkpiR0FjWmE2NHBIWE1acU55Z3U4b1V5eWVqZGRNLUlla01KSjhid1lxdTNKZ2NJWUZ0Smluc2tTY1poVzFRTmk2aVFBeExWWkpfNEJPWk5nTUY5Ym4xeEUwLWdHSVd1eVRVLWJrcEFaNUd2dXMzcGZjNnpTOVc5WGw0d0lkVkJrdVVlbGs1LXFScnp6TUJIT1BoYUVQS2dn?oc=5",
+    "https://news.google.com/rss/articles/CBMiW0FVX3lxTE00MzZRSWV1cmNKUldkaVI1QXZxSUFQeFhMZVJac1BRcXZfNTFaQzQxVWZoUkFSYUJwYVB1QkJEVXQzQzJHM1U4d0VucnFIbkpXSmZjWmpEVFhhd0U?oc=5"
+   ]
   },
   {
    "id": "th-taiwan-2",
@@ -698,9 +739,11 @@
    "cm": "ags",
    "due": "2026-12-31",
    "src": "INTEL.cm.ags",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 10/9 WASDE가 발표된 뒤 옥수수 선물은 $4.7975로 5.6% 급락했습니다. $5.00 상단 저항이 유지됐고 하방 변동성이 크게 나타나 판단대로 됐습니다.",
+   "by": "auto",
+   "evidence": []
   },
   {
    "id": "cm-ags-2",
@@ -932,9 +975,15 @@
    "conf": "보통",
    "due": "2026-10-23",
    "src": "IW.theaters.bio",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): 러시아는 10월 9일 접촉자 추적을 마치고 이상 없음을 발표했다. WHO도 사망자에게서 페스트가 검출되지 않았다고 밝혀, 접촉자 중 페스트 2차 감염이 나올 근거가 사실상 사라졌다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.france24.com/en/video/20261009-russia-says-all-clear-after-contact-tracing-in-reported-plague-case",
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ESTU1VmtKSHdVTUJ4TTk2bVlJeVpRMFdHMi0yRnFLUmt5cFoxTS11M1V6cDFXdTRDbHlCTWIzY1F6TVVac3c1VEJ0dw?oc=5",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUTJWalR4UXcxMlZ0czA1Z0Y3ZGhaWERQbWFKVHMzMldqOFdwbEU0clZ1STd4NlNJcHBkNDR4Z1dCVWZ1eGdpX1FKZ2h1NHdmQWc5b0YtcE0tUnR2T3ZkTkgzNnNlMkhvVFNiVmh4akpUR0piQ1FOTllJU0h5d21oTmJCNFgxWW9PMDlidEcxaHhoUmwtUE5KSzNB?oc=5"
+   ]
   },
   {
    "id": "th-bio-2",
@@ -1292,9 +1341,15 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-10-12",
+   "note": "자동 판정(보통): WHO는 사망자에게서 페스트가 검출되지 않았다고 밝혔고, 러시아는 접촉자 추적 결과 이상이 없다고 발표했다. 2차 감염, 봉쇄 연장, 검역 강화로 이어지는 시나리오의 전제가 무너졌다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ESTU1VmtKSHdVTUJ4TTk2bVlJeVpRMFdHMi0yRnFLUmt5cFoxTS11M1V6cDFXdTRDbHlCTWIzY1F6TVVac3c1VEJ0dw?oc=5",
+    "https://www.france24.com/en/video/20261009-russia-says-all-clear-after-contact-tracing-in-reported-plague-case",
+    "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5KX1ppZGk0Q0E5eXdIcE1sUjMxeWlDNWpJLThSSnUtZVZtUHhpRjBQX2J6YTNPNmpRZHdKX2tibVdBam43MGl4VDV5X1NUNWUtMUtQa0pRV0REZnc4blFKMHF5V3FiQQ?oc=5"
+   ]
   },
   {
    "id": "scn-brazil_bolsonaro_win-2026-10-08",
