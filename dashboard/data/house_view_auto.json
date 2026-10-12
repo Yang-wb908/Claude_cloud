@@ -39,7 +39,7 @@
     "p": 14.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 14629427,
+    "vol": 14630872,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -70,7 +70,7 @@
     "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 73526309,
+    "vol": 73531707,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -118,14 +118,14 @@
     "p": 8.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2853185,
+    "vol": 2853215,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 6.2,
+   "p": 6.3,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -136,7 +136,7 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.743,
+     "f": 0.75,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -144,14 +144,14 @@
     "p": 2.2,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 43886161,
+    "vol": 43901276,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 23.8,
+   "p": 23.7,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -185,7 +185,7 @@
     "p": 16.5,
     "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-    "vol": 7241887,
+    "vol": 7279260,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -212,10 +212,16 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 50.0,
+   "p": 75.0,
    "k": 1,
    "prior": 50.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:ethiopia_interstate",
+     "f": 3.0,
+     "note": "국가 간 교전 사건 급증"
+    }
+   ]
   },
   {
    "id": "bio_spread",
@@ -237,21 +243,21 @@
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 71.3,
+   "p": 72.0,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 2.478,
-     "note": "예측시장 86% (가중 0.50)"
+     "f": 2.576,
+     "note": "예측시장 87% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 86.0,
+    "p": 86.9,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 19576393,
+    "vol": 19621405,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -272,7 +278,7 @@
     "p": 12.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 22242209,
+    "vol": 22247863,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -306,7 +312,7 @@
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026",
-    "vol": 9176442,
+    "vol": 9183052,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -393,7 +399,7 @@
   {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 86.0,
+   "market": 86.9,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
@@ -416,7 +422,6 @@
   "ioda": [
    "europe",
    "iran",
-   "korea",
    "oceania",
    "sahel",
    "ukraine"
@@ -438,6 +443,7 @@
  "fired": [
   "bio_health_events",
   "copper_6",
+  "ethiopia_interstate",
   "hormuz_transits_low",
   "ioda_outage",
   "korea_missile",
