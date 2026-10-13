@@ -1,8 +1,38 @@
 {
- "generated": "2026-10-13T06:56:54Z",
+ "generated": "2026-10-13T12:58:20Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 3,
+ "max_cluster": 3,
+ "max_key": "place:인천",
+ "clusters": [
+  {
+   "key": "place:인천",
+   "n": 3,
+   "domains": 2,
+   "types": {
+    "A": 3
+   },
+   "since": "2026-10-13",
+   "sample": [
+    {
+     "d": "2026-10-13",
+     "title": "(LEAD) 1 in cardiac arrest, 7 injured in knife attack in Incheon",
+     "url": "https://en.yna.co.kr/view/AEN20261013008251315",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-10-13",
+     "title": "1 in cardiac arrest, 7 injured in knife attack in Incheon",
+     "url": "https://en.yna.co.kr/view/AEN20261013008200315",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-10-13",
+     "title": "Man with electronic monitoring device allegedly stabs 8 in Incheon Homeplus",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mTmlOTjYtd0NlWVFTRlRkdDVMRDhyeDZ2ZjJiSFR5eWkzRU13VDkxM1RXQktiMEo3Umk5MlROZjYtek9zaTNhM085NTRxMEtzN1l4cnFiRQ?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  }
+ ]
 }
