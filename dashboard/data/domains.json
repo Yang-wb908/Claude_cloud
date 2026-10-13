@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-13T18:57:59Z",
+ "generated": "2026-10-13T22:58:27Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-13T18:57:59Z",
+  "at": "2026-10-13T22:58:27Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "TEGUH03",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 6.26,
+       "lon": 116.17,
+       "alt": 1025,
+       "reg": "M54-02"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -48,13 +60,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "n": 1,
+     "key": 1,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.54,
+       "lon": 127.68,
+       "alt": 10125,
+       "reg": "N591SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,42 +89,51 @@
       60.0,
       30.5
      ],
-     "n": 3,
+     "n": 4,
      "key": 1,
-     "base": 1.0,
-     "runs": 16,
+     "base": 1,
+     "runs": 17,
      "status": "normal",
      "by_role": {
-      "other": 2,
+      "other": 3,
       "tanker": 1
      },
      "ac": [
       {
-       "flight": "ZAM38",
-       "t": "PC21",
+       "flight": "YETI45",
+       "t": "",
        "role": "other",
-       "lat": 25.12,
-       "lon": 51.29,
-       "alt": 1525,
-       "reg": "QA358"
+       "lat": 24.81,
+       "lon": 53.25,
+       "alt": 27000,
+       "reg": ""
       },
       {
-       "flight": "ZAM40",
-       "t": "PC21",
+       "flight": "",
+       "t": "",
        "role": "other",
-       "lat": 25.15,
-       "lon": 51.32,
-       "alt": 1450,
-       "reg": "QA356"
+       "lat": 24.01,
+       "lon": 55.16,
+       "alt": 32000,
+       "reg": ""
       },
       {
-       "flight": "YETI42",
-       "t": "B762",
+       "flight": "",
+       "t": "K35R",
        "role": "tanker",
-       "lat": 24.88,
-       "lon": 55.23,
-       "alt": 28500,
-       "reg": "21-46091"
+       "lat": 25.44,
+       "lon": 55.97,
+       "alt": 28000,
+       "reg": "61-0324"
+      },
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 24.48,
+       "lon": 57.9,
+       "alt": 21500,
+       "reg": ""
       }
      ]
     },
@@ -115,8 +148,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -130,25 +163,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "GOLD03",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 32.65,
-       "lon": 33.36,
-       "alt": 33000,
-       "reg": "1227"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -161,8 +182,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -176,25 +197,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "PLF693",
-       "t": "W3",
-       "role": "other",
-       "lat": 54.61,
-       "lon": 18.73,
-       "alt": 500,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -205,24 +214,54 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 3,
      "key": 0,
-     "base": 0.0,
-     "runs": 16,
+     "base": 0,
+     "runs": 17,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3
+     },
+     "ac": [
+      {
+       "flight": "R8926140",
+       "t": "H60",
+       "role": "other",
+       "lat": 18.24,
+       "lon": -66.12,
+       "alt": 1700,
+       "reg": "89-26140"
+      },
+      {
+       "flight": "DRAG971",
+       "t": "EC45",
+       "role": "other",
+       "lat": 15.95,
+       "lon": -61.78,
+       "alt": 275,
+       "reg": "F-ZBQY"
+      },
+      {
+       "flight": "DRAG972",
+       "t": "EC45",
+       "role": "other",
+       "lat": 14.56,
+       "lon": -60.95,
+       "alt": 1000,
+       "reg": "F-ZBRA"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 9
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-13T18:57:59Z",
+  "at": "2026-10-13T22:58:27Z",
   "data": {
-   "n_total": 1740,
+   "n_total": 1741,
    "recent": [
     {
      "cve": "CVE-2026-104935",
@@ -233,6 +272,16 @@
      "due": "2026-10-16",
      "ransom": false,
      "edge": true
+    },
+    {
+     "cve": "CVE-2026-96951",
+     "vendor": "Microsoft",
+     "product": "Windows",
+     "name": "Microsoft Windows Command Injection Vulnerability",
+     "added": "2026-10-13",
+     "due": "2026-10-16",
+     "ransom": false,
+     "edge": false
     },
     {
      "cve": "CVE-2015-5477",
@@ -345,43 +394,43 @@
      "edge": false
     }
    ],
-   "n_recent": 12,
-   "n_week": 6
+   "n_recent": 13,
+   "n_week": 7
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-13T18:57:59Z",
+  "at": "2026-10-13T22:58:27Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 23,
-    "??": 13,
+    "US": 19,
     "KR": 12,
+    "SE": 10,
+    "??": 8,
     "BR": 5,
-    "GB": 5,
+    "GB": 4,
     "ID": 4,
     "DE": 3,
+    "JP": 3,
     "IN": 3,
-    "PE": 2,
+    "SG": 3,
+    "TR": 2,
+    "EC": 2,
     "ES": 2,
-    "SG": 2,
-    "CN": 2,
-    "JP": 2,
-    "HK": 2,
-    "TW": 2
+    "CN": 2
    },
    "by_group": {
-    "N0n": 47,
-    "qilin": 8,
+    "N0n": 43,
+    "Wallstreet": 11,
+    "qilin": 6,
     "interlock": 6,
     "play": 5,
-    "Orova": 4,
+    "everest": 3,
+    "Orova": 3,
     "AuditTeam": 3,
     "Dark Project": 3,
-    "akira": 3,
-    "Panzer": 2,
-    "emperador": 2
+    "incransom": 2
    },
    "kr": [
     {
@@ -485,7 +534,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 6,
+  "kev_week": 7,
   "kev_edge_3d": 1,
   "ransom_week": 100,
   "ransom_kr_week": 12,
