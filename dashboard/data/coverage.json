@@ -1,35 +1,77 @@
 {
- "generated": "2026-10-13T12:58:20Z",
+ "generated": "2026-10-13T18:57:43Z",
  "days": 3,
- "unmapped_total": 3,
- "max_cluster": 3,
- "max_key": "place:인천",
+ "unmapped_total": 6,
+ "max_cluster": 2,
+ "max_key": "topic:South Africa",
  "clusters": [
   {
-   "key": "place:인천",
-   "n": 3,
+   "key": "topic:South Africa",
+   "n": 2,
    "domains": 2,
    "types": {
-    "A": 3
+    "C": 1,
+    "E": 1
    },
    "since": "2026-10-13",
    "sample": [
     {
      "d": "2026-10-13",
-     "title": "(LEAD) 1 in cardiac arrest, 7 injured in knife attack in Incheon",
-     "url": "https://en.yna.co.kr/view/AEN20261013008251315",
-     "domain": "en.yna.co.kr"
+     "title": "South Africa suspends asylum applications amid renewed anti-immigrant protests",
+     "url": "https://www.france24.com/en/south-africa-suspends-asylum-applications-amid-renewed-anti-immigrant-protests",
+     "domain": "france24.com"
     },
     {
      "d": "2026-10-13",
-     "title": "1 in cardiac arrest, 7 injured in knife attack in Incheon",
-     "url": "https://en.yna.co.kr/view/AEN20261013008200315",
-     "domain": "en.yna.co.kr"
+     "title": "South Africa’s rare earths could shake up Western supply chain",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWDNUamZqWGV3WVh1dkxVMG9WdjBxZ3VBay1nekkwU3RJOUxELWVNLW9ReVRPTXFZNEFTTG1kYTJzVExWTkMxWDRGUi1HSlBMUUtoZGNVWThTMzJJYmdhRnBQSlF6OXM3QkZlZXltd0RtUFNoWjgtUnFCbHdJRUpOeVlvS21kc1JmZlJrdg?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "D": 1,
+    "E": 1
+   },
+   "since": "2026-10-13",
+   "sample": [
+    {
+     "d": "2026-10-13",
+     "title": "China's Magnet Export Crackdown Is Putting Companies Like Evolution Metals In The Spotlight (NASDAQ: EMAT)",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTzRaZUVNZGhxUXJBcE5sY2JoanBuU1FNRVRtUWpJWkZhYm4wSVJsbjRkOXVwanM0UXVNRF85U0l0cmVQLVF4ZU01VlBoMWZvN281dENPNVF4MTl0VS16TUVrbmlwdG82U2s4UWplS3lqX3FmSTdIUkJReHJFT2ttVnVPeXlydF8zb3RYSk01WW5aTzlYUzU1dkJMNVZEM083X1U2N3hXR1ZpdTRncVdmOWZMV0ZOclZ6N2lxQjNacW84SXNVblZfalpmWk0?oc=5",
+     "domain": "news.google.com"
     },
     {
      "d": "2026-10-13",
-     "title": "Man with electronic monitoring device allegedly stabs 8 in Incheon Homeplus",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1mTmlOTjYtd0NlWVFTRlRkdDVMRDhyeDZ2ZjJiSFR5eWkzRU13VDkxM1RXQktiMEo3Umk5MlROZjYtek9zaTNhM085NTRxMEtzN1l4cnFiRQ?oc=5",
+     "title": "Why China’s Training Center in Laos Will Not Change Vietnam’s Non-Aligned Foreign Policy",
+     "url": "https://thediplomat.com/2026/10/why-chinas-training-center-in-laos-will-not-change-vietnams-non-aligned-foreign-policy/",
+     "domain": "thediplomat.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Copper",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-13",
+   "sample": [
+    {
+     "d": "2026-10-13",
+     "title": "Copper rises for third straight session amid supply disruptions, while aluminum and zinc decline",
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNS0s3X2RiUWw5UzEyZTlwVTVvS1p3YWNRdlVXa0JvNVU3M0xLeVBQMFNYWE9YLXJCckxUc2Jwa3cwRHM1SDkyeW1VcktheDJkNmtFRjV5M2J6VkpFdUVuVGFfX0tIeHhOY3l0Y2RZMWg5Vk1EZlJJWUpvWEc3TFJ4VDFxSU0zN3l6RVRFSFNaVXV2ZXVwU1BnUkY4d3p2QU9OR2JzRkRRRTNEMHVqdDQxWTlOOUJGQ1B4NGlqeDQxOFdxNEVYbTlKRGRrSFFkZFFiakF6MFlBRnVLbEI0Y1ZqSmMyTlFZaWs?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-10-13",
+     "title": "Copper edges up on mine supply disruption, tight stocks",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHeEhOcmoxTDRZd2JmQzNnX1dRWmktOXdaWTFxYmJDSjFlQUtrSDZXS0lqYVFKbWhQZFZiUWt6eTN2N3pLeTZzOTlKTVlhaTVOVjF0Wmdn0gFWQVVfeXFMUEd4SE5yajFMNFl3YmZDM2dfV1FaaS05d1pZMXFiYkNKMWVBS2tINldLSWphUUptaFBkVmJRa3p5M3Y3ekt5NnM5OUpNWWFpNU5WMXRaZ2c?oc=5",
      "domain": "news.google.com"
     }
    ]
