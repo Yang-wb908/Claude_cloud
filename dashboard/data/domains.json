@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-12T18:57:12Z",
+ "generated": "2026-10-13T00:53:10Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-12T18:57:12Z",
+  "at": "2026-10-13T00:53:10Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 12,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.29,
-       "lon": 125.97,
-       "alt": 38000,
-       "reg": "N591SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -79,8 +67,8 @@
      ],
      "n": 2,
      "key": 1,
-     "base": 1.0,
-     "runs": 12,
+     "base": 1,
+     "runs": 13,
      "status": "normal",
      "by_role": {
       "other": 1,
@@ -88,22 +76,22 @@
      },
      "ac": [
       {
-       "flight": "ZAM40",
-       "t": "PC21",
+       "flight": "IRAN08",
+       "t": "RJ85",
        "role": "other",
-       "lat": 25.1,
-       "lon": 51.32,
-       "alt": 225,
-       "reg": "QA352"
+       "lat": 27.08,
+       "lon": 52.25,
+       "alt": 26450,
+       "reg": "EP-IGF"
       },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 25.49,
-       "lon": 55.63,
-       "alt": 27500,
-       "reg": "19-46110"
+       "lat": 24.7,
+       "lon": 57.51,
+       "alt": 26000,
+       "reg": "20-46082"
       }
      ]
     },
@@ -118,8 +106,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -135,8 +123,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -152,8 +140,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -169,8 +157,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -186,20 +174,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 12,
+     "base": 0,
+     "runs": 13,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-12T18:57:12Z",
+  "at": "2026-10-13T00:53:10Z",
   "data": {
    "n_total": 1739,
    "recent": [
@@ -320,37 +308,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-12T18:57:12Z",
+  "at": "2026-10-13T00:53:10Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 23,
+    "US": 30,
     "KR": 12,
-    "??": 11,
+    "??": 10,
     "ID": 5,
-    "BR": 5,
-    "JP": 4,
+    "BR": 4,
     "ES": 3,
+    "JP": 3,
     "DE": 3,
-    "GB": 3,
-    "CA": 3,
+    "CL": 2,
     "SG": 2,
     "CN": 2,
     "TW": 2,
+    "GB": 2,
     "MA": 2,
-    "CO": 2
+    "CA": 2
    },
    "by_group": {
     "N0n": 50,
-    "qilin": 11,
+    "qilin": 9,
+    "interlock": 6,
     "thegentlemen": 5,
+    "safepay": 3,
+    "Deadlock": 3,
+    "Dark Project": 3,
     "dragonforce": 3,
     "rhysida": 3,
-    "Black X": 3,
-    "arcusmedia": 3,
-    "metaencryptor": 2,
-    "Redact": 2,
-    "akira": 2
+    "metaencryptor": 2
    },
    "kr": [
     {
