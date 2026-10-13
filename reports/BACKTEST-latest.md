@@ -9,7 +9,7 @@
 | dxy | 0.36 | None | None | None | None |
 | vix | 2.49 | None | None | None | None |
 | kospi | -3.65 | None | None | None | None |
-| krw | -0.05 | None | None | None | None |
+| krw | 0.02 | None | None | None | None |
 | spx | -0.06 | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
