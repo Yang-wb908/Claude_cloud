@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-14T17:24:16Z",
+ "generated": "2026-10-14T21:52:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-14T17:24:16Z",
+  "at": "2026-10-14T21:52:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,70 +65,23 @@
       60.0,
       30.5
      ],
-     "n": 6,
+     "n": 1,
      "key": 1,
-     "base": 1.0,
-     "runs": 20,
+     "base": 1,
+     "runs": 21,
      "status": "normal",
      "by_role": {
-      "other": 4,
-      "airlift": 1,
       "tanker": 1
      },
      "ac": [
       {
-       "flight": "ZAM29",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.12,
-       "lon": 51.29,
-       "alt": 1500,
-       "reg": "QA369"
-      },
-      {
-       "flight": "ZAM19",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.08,
-       "lon": 51.32,
-       "alt": 650,
-       "reg": "QA363"
-      },
-      {
-       "flight": "RBDN929",
-       "t": "C295",
-       "role": "other",
-       "lat": 24.48,
-       "lon": 54.92,
-       "alt": 3000,
-       "reg": "823"
-      },
-      {
-       "flight": "GAF901",
-       "t": "A359",
-       "role": "other",
-       "lat": 25.39,
-       "lon": 55.45,
-       "alt": 41000,
-       "reg": "10+01"
-      },
-      {
-       "flight": "YASAT12",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 24.56,
-       "lon": 55.57,
-       "alt": 5950,
-       "reg": "1213"
-      },
-      {
-       "flight": "00000",
+       "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 25.37,
-       "lon": 56.05,
-       "alt": 25500,
-       "reg": "19-46110"
+       "lat": 24.77,
+       "lon": 57.69,
+       "alt": 22525,
+       "reg": "20-46082"
       }
      ]
     },
@@ -143,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -158,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 20,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR9915",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 33.96,
-       "lon": 32.77,
-       "alt": 17750,
-       "reg": "ZZ334"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -189,8 +130,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -206,8 +147,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -223,23 +164,63 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 20,
+     "base": 0,
+     "runs": 21,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 7
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-14T17:24:16Z",
+  "at": "2026-10-14T21:52:24Z",
   "data": {
-   "n_total": 1741,
+   "n_total": 1745,
    "recent": [
+    {
+     "cve": "CVE-2026-105134",
+     "vendor": "Ahsay",
+     "product": "AhsayCBS",
+     "name": "Ahsay AhsayCBS Command Injection Vulnerability",
+     "added": "2026-10-14",
+     "due": "2026-10-17",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-76519",
+     "vendor": "Cisco",
+     "product": "Secure Email Gateway",
+     "name": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+     "added": "2026-10-14",
+     "due": "2026-10-17",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-105133",
+     "vendor": "Ahsay",
+     "product": "AhsayCBS",
+     "name": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+     "added": "2026-10-14",
+     "due": "2026-10-17",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-0322",
+     "vendor": "Palo Alto Networks",
+     "product": "PAN-OS",
+     "name": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+     "added": "2026-10-14",
+     "due": "2026-10-17",
+     "ransom": false,
+     "edge": true
+    },
     {
      "cve": "CVE-2026-104935",
      "vendor": "Ivanti",
@@ -361,43 +342,43 @@
      "edge": true
     }
    ],
-   "n_recent": 12,
-   "n_week": 7
+   "n_recent": 16,
+   "n_week": 11
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-14T17:24:16Z",
+  "at": "2026-10-14T21:52:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 22,
-    "??": 10,
+    "US": 23,
+    "??": 13,
     "SE": 10,
-    "KR": 9,
-    "BR": 6,
-    "GB": 4,
-    "ES": 3,
+    "BR": 7,
+    "KR": 5,
+    "SG": 4,
     "DE": 3,
-    "IN": 3,
-    "SG": 3,
-    "ID": 3,
+    "GB": 3,
+    "ES": 2,
     "JP": 2,
+    "IN": 2,
     "TR": 2,
+    "ID": 2,
     "CN": 2,
     "AU": 1
    },
    "by_group": {
-    "N0n": 36,
+    "N0n": 29,
     "Wallstreet": 13,
-    "qilin": 7,
+    "qilin": 9,
     "interlock": 6,
     "play": 5,
     "lockbit5": 3,
+    "incransom": 3,
+    "akira": 3,
     "everest": 3,
-    "Orova": 3,
-    "AuditTeam": 3,
-    "Dark Project": 3
+    "Orova": 3
    },
    "kr": [
     {
@@ -439,48 +420,16 @@
      "sector": "Manufacturing",
      "d": "2026-10-12",
      "url": "https://www.ransomware.live/id/RG9uZ2t1ayBTdGVlbCAoc3RlZWwgbWFudWZhY3R1cmluZylATjBu"
-    },
-    {
-     "victim": "Saehan Marine (ship agency operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/U2FlaGFuIE1hcmluZSAoc2hpcCBhZ2VuY3kgb3BlcmF0aW9ucylATjBu"
-    },
-    {
-     "victim": "Dong-A Tanker (oil tanker operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/RG9uZy1BIFRhbmtlciAob2lsIHRhbmtlciBvcGVyYXRpb25zKUBOMG4="
-    },
-    {
-     "victim": "EUSU Logistics (logistics operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/RVVTVSBMb2dpc3RpY3MgKGxvZ2lzdGljcyBvcGVyYXRpb25zKUBOMG4="
-    },
-    {
-     "victim": "BKH ICD (inland container depot operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/QktIIElDRCAoaW5sYW5kIGNvbnRhaW5lciBkZXBvdCBvcGVyYXRpb25zKUBOMG4="
     }
    ]
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 7,
-  "kev_edge_3d": 1,
+  "kev_week": 11,
+  "kev_edge_3d": 3,
   "ransom_week": 100,
-  "ransom_kr_week": 9,
-  "events": 10
+  "ransom_kr_week": 5,
+  "events": 8
  }
 }
