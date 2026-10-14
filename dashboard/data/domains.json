@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-14T12:10:03Z",
+ "generated": "2026-10-14T17:24:16Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-14T12:10:03Z",
+  "at": "2026-10-14T17:24:16Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -66,69 +66,69 @@
       30.5
      ],
      "n": 6,
-     "key": 2,
-     "base": 1,
-     "runs": 19,
+     "key": 1,
+     "base": 1.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {
-      "other": 3,
-      "tanker": 2,
-      "airlift": 1
+      "other": 4,
+      "airlift": 1,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "NBS11",
+       "flight": "ZAM29",
        "t": "PC21",
        "role": "other",
-       "lat": 25.06,
-       "lon": 50.95,
-       "alt": 9375,
-       "reg": "QA350"
+       "lat": 25.12,
+       "lon": 51.29,
+       "alt": 1500,
+       "reg": "QA369"
       },
       {
-       "flight": "NBS12",
+       "flight": "ZAM19",
        "t": "PC21",
        "role": "other",
-       "lat": 25.06,
-       "lon": 50.95,
-       "alt": 9350,
-       "reg": "QA372"
+       "lat": 25.08,
+       "lon": 51.32,
+       "alt": 650,
+       "reg": "QA363"
       },
       {
-       "flight": "ZAM12",
-       "t": "PC21",
+       "flight": "RBDN929",
+       "t": "C295",
        "role": "other",
-       "lat": 25.6,
-       "lon": 51.21,
-       "alt": 8725,
-       "reg": "QA370"
+       "lat": 24.48,
+       "lon": 54.92,
+       "alt": 3000,
+       "reg": "823"
       },
       {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 24.57,
-       "lon": 55.36,
-       "alt": 29500,
-       "reg": "20-46083"
+       "flight": "GAF901",
+       "t": "A359",
+       "role": "other",
+       "lat": 25.39,
+       "lon": 55.45,
+       "alt": 41000,
+       "reg": "10+01"
       },
       {
-       "flight": "RRR9946",
-       "t": "A400",
+       "flight": "YASAT12",
+       "t": "C130",
        "role": "airlift",
-       "lat": 24.22,
-       "lon": 55.74,
-       "alt": 21500,
-       "reg": "ZM405"
+       "lat": 24.56,
+       "lon": 55.57,
+       "alt": 5950,
+       "reg": "1213"
       },
       {
-       "flight": "YETI50",
+       "flight": "00000",
        "t": "B762",
        "role": "tanker",
-       "lat": 25.49,
-       "lon": 55.76,
-       "alt": 26025,
-       "reg": "20-46082"
+       "lat": 25.37,
+       "lon": 56.05,
+       "alt": 25500,
+       "reg": "19-46110"
       }
      ]
     },
@@ -143,8 +143,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -158,13 +158,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 19,
+     "n": 1,
+     "key": 1,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "RRR9915",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 33.96,
+       "lon": 32.77,
+       "alt": 17750,
+       "reg": "ZZ334"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -177,8 +189,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -192,116 +204,13 @@
       30.5,
       61.0
      ],
-     "n": 11,
-     "key": 2,
-     "base": 0,
-     "runs": 19,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
-     "by_role": {
-      "other": 9,
-      "tanker": 2
-     },
-     "ac": [
-      {
-       "flight": "PR25",
-       "t": "",
-       "role": "other",
-       "lat": 56.3,
-       "lon": 9.22,
-       "alt": 950,
-       "reg": ""
-      },
-      {
-       "flight": "SKYNET",
-       "t": "",
-       "role": "other",
-       "lat": 54.46,
-       "lon": 9.34,
-       "alt": 7775,
-       "reg": ""
-      },
-      {
-       "flight": "TX40",
-       "t": "MF17",
-       "role": "other",
-       "lat": 55.28,
-       "lon": 9.78,
-       "alt": 725,
-       "reg": "T-429"
-      },
-      {
-       "flight": "GATOR",
-       "t": "",
-       "role": "other",
-       "lat": 54.38,
-       "lon": 9.89,
-       "alt": 1500,
-       "reg": ""
-      },
-      {
-       "flight": "PCT586",
-       "t": "D228",
-       "role": "other",
-       "lat": 53.97,
-       "lon": 9.99,
-       "alt": 1550,
-       "reg": "57+05"
-      },
-      {
-       "flight": "MMF12",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 59.2,
-       "lon": 12.42,
-       "alt": 23000,
-       "reg": "T-058"
-      },
-      {
-       "flight": "SVF601",
-       "t": "SF34",
-       "role": "other",
-       "lat": 58.95,
-       "lon": 15.38,
-       "alt": 11650,
-       "reg": "100001"
-      },
-      {
-       "flight": "PLF044",
-       "t": "C295",
-       "role": "other",
-       "lat": 57.57,
-       "lon": 16.53,
-       "alt": 15000,
-       "reg": "024"
-      },
-      {
-       "flight": "DUKE73",
-       "t": "BE20",
-       "role": "other",
-       "lat": 60.69,
-       "lon": 18.69,
-       "alt": 23000,
-       "reg": "84-00173"
-      },
-      {
-       "flight": "SVF680",
-       "t": "GLF4",
-       "role": "other",
-       "lat": 58.75,
-       "lon": 20.03,
-       "alt": 23825,
-       "reg": "102003"
-      },
-      {
-       "flight": "CTM1075",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 59.15,
-       "lon": 24.53,
-       "alt": 2525,
-       "reg": "F-UJCR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -312,34 +221,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 19,
+     "base": 0.0,
+     "runs": 20,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "VORTEX31",
-       "t": "V22",
-       "role": "other",
-       "lat": 18.48,
-       "lon": -65.94,
-       "alt": 10450,
-       "reg": "168337"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 18
+   "total_mil": 7
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-14T12:10:03Z",
+  "at": "2026-10-14T17:24:16Z",
   "data": {
    "n_total": 1741,
    "recent": [
@@ -470,37 +367,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-14T12:10:03Z",
+  "at": "2026-10-14T17:24:16Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 20,
-    "KR": 11,
+    "US": 22,
     "??": 10,
     "SE": 10,
+    "KR": 9,
     "BR": 6,
     "GB": 4,
-    "ID": 4,
+    "ES": 3,
     "DE": 3,
-    "JP": 3,
     "IN": 3,
     "SG": 3,
+    "ID": 3,
+    "JP": 2,
     "TR": 2,
-    "ES": 2,
     "CN": 2,
-    "NO": 1
+    "AU": 1
    },
    "by_group": {
-    "N0n": 42,
-    "Wallstreet": 11,
+    "N0n": 36,
+    "Wallstreet": 13,
     "qilin": 7,
     "interlock": 6,
     "play": 5,
+    "lockbit5": 3,
     "everest": 3,
     "Orova": 3,
     "AuditTeam": 3,
-    "Dark Project": 3,
-    "incransom": 2
+    "Dark Project": 3
    },
    "kr": [
     {
@@ -574,22 +471,6 @@
      "sector": "Transportation",
      "d": "2026-10-12",
      "url": "https://www.ransomware.live/id/QktIIElDRCAoaW5sYW5kIGNvbnRhaW5lciBkZXBvdCBvcGVyYXRpb25zKUBOMG4="
-    },
-    {
-     "victim": "Korea Ferry (ferry operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/S29yZWEgRmVycnkgKGZlcnJ5IG9wZXJhdGlvbnMpQE4wbg=="
-    },
-    {
-     "victim": "Samjoo Maritime (ship management)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/U2Ftam9vIE1hcml0aW1lIChzaGlwIG1hbmFnZW1lbnQpQE4wbg=="
     }
    ]
   }
@@ -599,7 +480,7 @@
   "kev_week": 7,
   "kev_edge_3d": 1,
   "ransom_week": 100,
-  "ransom_kr_week": 11,
-  "events": 12
+  "ransom_kr_week": 9,
+  "events": 10
  }
 }
