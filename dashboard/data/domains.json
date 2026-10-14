@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-14T05:05:34Z",
+ "generated": "2026-10-14T12:10:03Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-14T05:05:34Z",
+  "at": "2026-10-14T12:10:03Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,54 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 4,
-     "key": 1,
-     "base": 0.0,
-     "runs": 18,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
-     "by_role": {
-      "isr": 1,
-      "other": 2,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "MALUS20",
-       "t": "Q4",
-       "role": "isr",
-       "lat": 37.06,
-       "lon": 125.48,
-       "alt": 46000,
-       "reg": "169538"
-      },
-      {
-       "flight": "KNP970",
-       "t": "SURN",
-       "role": "other",
-       "lat": 37.49,
-       "lon": 126.75,
-       "alt": 1825,
-       "reg": "970"
-      },
-      {
-       "flight": "CARD78",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.38,
-       "lon": 127.07,
-       "alt": 1475,
-       "reg": "19-21069"
-      },
-      {
-       "flight": "",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 34.0,
-       "lon": 130.8,
-       "alt": 19075,
-       "reg": "168075"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -106,88 +65,70 @@
       60.0,
       30.5
      ],
-     "n": 8,
+     "n": 6,
      "key": 2,
-     "base": 1.0,
-     "runs": 18,
+     "base": 1,
+     "runs": 19,
      "status": "normal",
      "by_role": {
-      "airlift": 2,
-      "other": 4,
-      "tanker": 2
+      "other": 3,
+      "tanker": 2,
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "KAF3207",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 29.23,
-       "lon": 47.94,
-       "alt": "ground",
-       "reg": "KAF343"
-      },
-      {
-       "flight": "",
+       "flight": "NBS11",
        "t": "PC21",
        "role": "other",
-       "lat": 23.9,
-       "lon": 55.41,
-       "alt": 3900,
-       "reg": "934"
+       "lat": 25.06,
+       "lon": 50.95,
+       "alt": 9375,
+       "reg": "QA350"
       },
       {
-       "flight": "FRS21",
+       "flight": "NBS12",
        "t": "PC21",
        "role": "other",
-       "lat": 24.75,
-       "lon": 55.6,
-       "alt": 13375,
-       "reg": "953"
+       "lat": 25.06,
+       "lon": 50.95,
+       "alt": 9350,
+       "reg": "QA372"
       },
       {
-       "flight": "FRS22",
+       "flight": "ZAM12",
        "t": "PC21",
        "role": "other",
-       "lat": 24.75,
-       "lon": 55.6,
-       "alt": 13400,
-       "reg": "958"
-      },
-      {
-       "flight": "FR146",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.34,
-       "lon": 55.62,
-       "alt": 2875,
-       "reg": "935"
-      },
-      {
-       "flight": "YETI48",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 24.48,
-       "lon": 55.62,
-       "alt": 29525,
-       "reg": "20-46075"
-      },
-      {
-       "flight": "MJN238",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 24.29,
-       "lon": 57.34,
-       "alt": 15000,
-       "reg": "506"
+       "lat": 25.6,
+       "lon": 51.21,
+       "alt": 8725,
+       "reg": "QA370"
       },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.71,
-       "lon": 57.88,
-       "alt": 22500,
-       "reg": "22-46099"
+       "lat": 24.57,
+       "lon": 55.36,
+       "alt": 29500,
+       "reg": "20-46083"
+      },
+      {
+       "flight": "RRR9946",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 24.22,
+       "lon": 55.74,
+       "alt": 21500,
+       "reg": "ZM405"
+      },
+      {
+       "flight": "YETI50",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.49,
+       "lon": 55.76,
+       "alt": 26025,
+       "reg": "20-46082"
       }
      ]
     },
@@ -202,8 +143,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -217,43 +158,13 @@
       37.0,
       37.5
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
-     "by_role": {
-      "other": 3
-     },
-     "ac": [
-      {
-       "flight": "RFR7144",
-       "t": "B350",
-       "role": "other",
-       "lat": 34.7,
-       "lon": 30.68,
-       "alt": 27975,
-       "reg": "ZZ419"
-      },
-      {
-       "flight": "RFR7145",
-       "t": "B350",
-       "role": "other",
-       "lat": 34.44,
-       "lon": 31.94,
-       "alt": 26400,
-       "reg": "ZZ507"
-      },
-      {
-       "flight": "BK",
-       "t": "PC21",
-       "role": "other",
-       "lat": 32.45,
-       "lon": 35.59,
-       "alt": 6825,
-       "reg": "1175"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -266,8 +177,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -281,13 +192,116 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "n": 11,
+     "key": 2,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 9,
+      "tanker": 2
+     },
+     "ac": [
+      {
+       "flight": "PR25",
+       "t": "",
+       "role": "other",
+       "lat": 56.3,
+       "lon": 9.22,
+       "alt": 950,
+       "reg": ""
+      },
+      {
+       "flight": "SKYNET",
+       "t": "",
+       "role": "other",
+       "lat": 54.46,
+       "lon": 9.34,
+       "alt": 7775,
+       "reg": ""
+      },
+      {
+       "flight": "TX40",
+       "t": "MF17",
+       "role": "other",
+       "lat": 55.28,
+       "lon": 9.78,
+       "alt": 725,
+       "reg": "T-429"
+      },
+      {
+       "flight": "GATOR",
+       "t": "",
+       "role": "other",
+       "lat": 54.38,
+       "lon": 9.89,
+       "alt": 1500,
+       "reg": ""
+      },
+      {
+       "flight": "PCT586",
+       "t": "D228",
+       "role": "other",
+       "lat": 53.97,
+       "lon": 9.99,
+       "alt": 1550,
+       "reg": "57+05"
+      },
+      {
+       "flight": "MMF12",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 59.2,
+       "lon": 12.42,
+       "alt": 23000,
+       "reg": "T-058"
+      },
+      {
+       "flight": "SVF601",
+       "t": "SF34",
+       "role": "other",
+       "lat": 58.95,
+       "lon": 15.38,
+       "alt": 11650,
+       "reg": "100001"
+      },
+      {
+       "flight": "PLF044",
+       "t": "C295",
+       "role": "other",
+       "lat": 57.57,
+       "lon": 16.53,
+       "alt": 15000,
+       "reg": "024"
+      },
+      {
+       "flight": "DUKE73",
+       "t": "BE20",
+       "role": "other",
+       "lat": 60.69,
+       "lon": 18.69,
+       "alt": 23000,
+       "reg": "84-00173"
+      },
+      {
+       "flight": "SVF680",
+       "t": "GLF4",
+       "role": "other",
+       "lat": 58.75,
+       "lon": 20.03,
+       "alt": 23825,
+       "reg": "102003"
+      },
+      {
+       "flight": "CTM1075",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 59.15,
+       "lon": 24.53,
+       "alt": 2525,
+       "reg": "F-UJCR"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -298,22 +312,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 18,
+     "base": 0,
+     "runs": 19,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "VORTEX31",
+       "t": "V22",
+       "role": "other",
+       "lat": 18.48,
+       "lon": -65.94,
+       "alt": 10450,
+       "reg": "168337"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 15
+   "total_mil": 18
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-14T05:05:34Z",
+  "at": "2026-10-14T12:10:03Z",
   "data": {
    "n_total": 1741,
    "recent": [
@@ -444,14 +470,14 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-14T05:05:34Z",
+  "at": "2026-10-14T12:10:03Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 20,
-    "KR": 12,
+    "KR": 11,
+    "??": 10,
     "SE": 10,
-    "??": 9,
     "BR": 6,
     "GB": 4,
     "ID": 4,
@@ -465,7 +491,7 @@
     "NO": 1
    },
    "by_group": {
-    "N0n": 43,
+    "N0n": 42,
     "Wallstreet": 11,
     "qilin": 7,
     "interlock": 6,
@@ -564,14 +590,6 @@
      "sector": "Transportation",
      "d": "2026-10-12",
      "url": "https://www.ransomware.live/id/U2Ftam9vIE1hcml0aW1lIChzaGlwIG1hbmFnZW1lbnQpQE4wbg=="
-    },
-    {
-     "victim": "Pusan Newport Company (container terminal operations)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/UHVzYW4gTmV3cG9ydCBDb21wYW55IChjb250YWluZXIgdGVybWluYWwgb3BlcmF0aW9ucylATjBu"
     }
    ]
   }
@@ -581,7 +599,7 @@
   "kev_week": 7,
   "kev_edge_3d": 1,
   "ransom_week": 100,
-  "ransom_kr_week": 12,
-  "events": 13
+  "ransom_kr_week": 11,
+  "events": 12
  }
 }

@@ -1,30 +1,31 @@
 {
- "generated": "2026-10-14T05:05:21Z",
+ "generated": "2026-10-14T12:09:36Z",
  "days": 3,
  "unmapped_total": 2,
  "max_cluster": 2,
- "max_key": "topic:Bank",
+ "max_key": "place:서울",
  "clusters": [
   {
-   "key": "topic:Bank",
+   "key": "place:서울",
    "n": 2,
-   "domains": 2,
+   "domains": 1,
    "types": {
-    "E": 2
+    "E": 1,
+    "Y": 1
    },
    "since": "2026-10-14",
    "sample": [
     {
      "d": "2026-10-14",
-     "title": "Bank of America hit with $1.2bn fine for money laundering failings",
-     "url": "https://www.bbc.co.uk/news/articles/cm3wvxy6n3z8o?at_medium=RSS&at_campaign=rss",
-     "domain": "bbc.co.uk"
+     "title": "S. Korean won strengthens against U.S. dollar on Fed official's dovish remarks",
+     "url": "https://en.yna.co.kr/view/AEN20261014008300320",
+     "domain": "en.yna.co.kr"
     },
     {
      "d": "2026-10-14",
-     "title": "US fines Bank of America $1.2bn for money laundering, sanctions violations",
-     "url": "https://www.aljazeera.com/news/2026/10/14/us-fines-bank-of-america-1-2bn-for-money-laundering-sanctions-violations?traffic_source=rss",
-     "domain": "aljazeera.com"
+     "title": "Personal info presumed to have leaked from 16 financial institutions: regulator",
+     "url": "https://en.yna.co.kr/view/AEN20261014006900320",
+     "domain": "en.yna.co.kr"
     }
    ]
   }

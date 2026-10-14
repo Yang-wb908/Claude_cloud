@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T05:05:39Z",
+ "generated": "2026-10-14T12:10:10Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +18,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 1,
+   "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "maritime_attacks",
@@ -32,7 +32,7 @@
    "current": 31,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 9,
+   "current": 8,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.78,
+   "current": 6.74,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +62,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 9,
+   "current": 15,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "firms_site_alert",
@@ -76,7 +76,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "ioda_outage",
@@ -87,7 +87,7 @@
    "current": 6,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "quake_near_site",
@@ -98,18 +98,7 @@
    "current": 16,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
-  },
-  {
-   "id": "gdacs_red",
-   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
-   "sev": 2,
-   "th": null,
-   "why": "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다.",
-   "current": 1,
-   "threshold": 1,
-   "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "kev_edge",
@@ -120,7 +109,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   },
   {
    "id": "ransom_kr",
@@ -128,10 +117,10 @@
    "sev": 2,
    "th": null,
    "why": "범죄 집단 유출 사이트 기준(피해 사실 미확인). 특정 업종에 몰리면 표적 공격 캠페인 가능성.",
-   "current": 12,
+   "current": 11,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T05:05:39Z"
+   "at": "2026-10-14T12:10:10Z"
   }
  ]
 }
