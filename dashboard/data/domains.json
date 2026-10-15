@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-14T21:52:24Z",
+ "generated": "2026-10-15T04:55:50Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-14T21:52:24Z",
+  "at": "2026-10-15T04:55:50Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -14,13 +14,25 @@
       126.0,
       27.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "1015",
+       "t": "B738",
+       "role": "other",
+       "lat": 24.74,
+       "lon": 120.94,
+       "alt": 6950,
+       "reg": "3701"
+      }
+     ]
     },
     "scs": {
      "name": "남중국해",
@@ -31,13 +43,34 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "802",
+       "t": "S211",
+       "role": "other",
+       "lat": 14.96,
+       "lon": 120.19,
+       "alt": 9500,
+       "reg": "07002"
+      },
+      {
+       "flight": "008",
+       "t": "S211",
+       "role": "other",
+       "lat": 14.96,
+       "lon": 120.19,
+       "alt": 9600,
+       "reg": "07008"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -48,13 +81,53 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 4,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2,
+      "airlift": 2
+     },
+     "ac": [
+      {
+       "flight": "CARD99",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.45,
+       "lon": 127.11,
+       "alt": "ground",
+       "reg": "19-21042"
+      },
+      {
+       "flight": "CARD78",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.37,
+       "lon": 127.34,
+       "alt": 2275,
+       "reg": "19-21069"
+      },
+      {
+       "flight": "TREK913",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 35.17,
+       "lon": 129.32,
+       "alt": 27000,
+       "reg": "16-5843"
+      },
+      {
+       "flight": "CNV7211",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 33.51,
+       "lon": 129.87,
+       "alt": 21525,
+       "reg": "164597"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,23 +138,115 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 11,
      "key": 1,
-     "base": 1,
-     "runs": 21,
+     "base": 1.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {
+      "other": 9,
+      "airlift": 1,
       "tanker": 1
      },
      "ac": [
       {
+       "flight": "QAF7",
+       "t": "A320",
+       "role": "other",
+       "lat": 27.73,
+       "lon": 49.66,
+       "alt": 33975,
+       "reg": "A7-AAG"
+      },
+      {
+       "flight": "AUH04",
+       "t": "B788",
+       "role": "other",
+       "lat": 27.1,
+       "lon": 50.51,
+       "alt": 40975,
+       "reg": "A6-PFC"
+      },
+      {
+       "flight": "CNV4907",
+       "t": "B737",
+       "role": "other",
+       "lat": 24.12,
+       "lon": 54.48,
+       "alt": 6775,
+       "reg": "170042"
+      },
+      {
+       "flight": "NJM312",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 24.51,
+       "lon": 54.58,
+       "alt": 2000,
+       "reg": "1211"
+      },
+      {
        "flight": "",
-       "t": "B762",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.65,
+       "lon": 54.98,
+       "alt": null,
+       "reg": "939"
+      },
+      {
+       "flight": "",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.76,
+       "lon": 55.03,
+       "alt": 950,
+       "reg": "949"
+      },
+      {
+       "flight": "",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.97,
+       "lon": 55.46,
+       "alt": 3950,
+       "reg": "941"
+      },
+      {
+       "flight": "FRS22",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.65,
+       "lon": 55.53,
+       "alt": 14425,
+       "reg": "953"
+      },
+      {
+       "flight": "FRS21",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.65,
+       "lon": 55.53,
+       "alt": 14475,
+       "reg": "947"
+      },
+      {
+       "flight": "",
+       "t": "K35R",
        "role": "tanker",
-       "lat": 24.77,
-       "lon": 57.69,
-       "alt": 22525,
-       "reg": "20-46082"
+       "lat": 24.54,
+       "lon": 55.69,
+       "alt": 28025,
+       "reg": "60-0363"
+      },
+      {
+       "flight": "MJN557",
+       "t": "GLF4",
+       "role": "other",
+       "lat": 22.94,
+       "lon": 57.79,
+       "alt": 29975,
+       "reg": "557"
       }
      ]
     },
@@ -96,8 +261,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -113,8 +278,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -130,8 +295,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -147,8 +312,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -164,20 +329,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 21,
+     "base": 0.0,
+     "runs": 22,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 18
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-14T21:52:24Z",
+  "at": "2026-10-15T04:55:50Z",
   "data": {
    "n_total": 1745,
    "recent": [
@@ -330,46 +495,36 @@
      "due": "2026-10-04",
      "ransom": false,
      "edge": true
-    },
-    {
-     "cve": "CVE-2026-76504",
-     "vendor": "Cisco",
-     "product": "Catalyst SD-WAN Manager",
-     "name": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-     "added": "2026-09-30",
-     "due": "2026-10-03",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 16,
+   "n_recent": 15,
    "n_week": 11
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-14T21:52:24Z",
+  "at": "2026-10-15T04:55:50Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 23,
-    "??": 13,
+    "??": 14,
     "SE": 10,
     "BR": 7,
-    "KR": 5,
     "SG": 4,
+    "JP": 3,
     "DE": 3,
     "GB": 3,
+    "KR": 3,
+    "TW": 2,
     "ES": 2,
-    "JP": 2,
     "IN": 2,
     "TR": 2,
-    "ID": 2,
     "CN": 2,
     "AU": 1
    },
    "by_group": {
-    "N0n": 29,
+    "N0n": 27,
     "Wallstreet": 13,
     "qilin": 9,
     "interlock": 6,
@@ -404,22 +559,6 @@
      "sector": "Transportation",
      "d": "2026-10-12",
      "url": "https://www.ransomware.live/id/Qk5DVCBCdXNhbiBOZXcgQ29udGFpbmVyIFRlcm1pbmFsQE4wbg=="
-    },
-    {
-     "victim": "GNCNet / DGT Busan (port community IT)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Transportation",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/R05DTmV0IC8gREdUIEJ1c2FuIChwb3J0IGNvbW11bml0eSBJVClATjBu"
-    },
-    {
-     "victim": "Dongkuk Steel (steel manufacturing)",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Manufacturing",
-     "d": "2026-10-12",
-     "url": "https://www.ransomware.live/id/RG9uZ2t1ayBTdGVlbCAoc3RlZWwgbWFudWZhY3R1cmluZylATjBu"
     }
    ]
   }
@@ -429,7 +568,7 @@
   "kev_week": 11,
   "kev_edge_3d": 3,
   "ransom_week": 100,
-  "ransom_kr_week": 5,
-  "events": 8
+  "ransom_kr_week": 3,
+  "events": 6
  }
 }
