@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-15T17:13:00Z",
+ "generated": "2026-10-15T21:34:50Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-15T17:13:00Z",
+  "at": "2026-10-15T21:34:50Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -66,41 +66,41 @@
       30.5
      ],
      "n": 3,
-     "key": 2,
-     "base": 1.0,
-     "runs": 24,
+     "key": 1,
+     "base": 1,
+     "runs": 25,
      "status": "normal",
      "by_role": {
-      "other": 1,
-      "tanker": 2
+      "other": 2,
+      "tanker": 1
      },
      "ac": [
       {
        "flight": "",
-       "t": "A319",
+       "t": "B737",
        "role": "other",
-       "lat": 26.76,
-       "lon": 48.59,
-       "alt": 37975,
-       "reg": "3085"
-      },
-      {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 25.32,
-       "lon": 55.7,
-       "alt": 26025,
-       "reg": "22-46099"
+       "lat": 22.01,
+       "lon": 53.19,
+       "alt": 34000,
+       "reg": "PH-GOV"
       },
       {
        "flight": "",
        "t": "K35R",
        "role": "tanker",
-       "lat": 25.45,
-       "lon": 55.79,
-       "alt": 27450,
-       "reg": "63-7976"
+       "lat": 24.88,
+       "lon": 55.36,
+       "alt": 29475,
+       "reg": "58-0052"
+      },
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 25.22,
+       "lon": 55.53,
+       "alt": 27500,
+       "reg": ""
       }
      ]
     },
@@ -115,8 +115,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -130,13 +130,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "n": 1,
+     "key": 1,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 32.06,
+       "lon": 34.8,
+       "alt": 13975,
+       "reg": "57-1469"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -149,8 +161,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -164,53 +176,13 @@
       30.5,
       61.0
      ],
-     "n": 4,
-     "key": 1,
-     "base": 0.0,
-     "runs": 24,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
-     "by_role": {
-      "other": 3,
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "SINNR02",
-       "t": "MF17",
-       "role": "other",
-       "lat": 57.1,
-       "lon": 9.89,
-       "alt": 150,
-       "reg": "T-430"
-      },
-      {
-       "flight": "FHV21",
-       "t": "DHC6",
-       "role": "other",
-       "lat": 57.11,
-       "lon": 10.05,
-       "alt": 1750,
-       "reg": "OY-FHC"
-      },
-      {
-       "flight": "MMF18",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 56.05,
-       "lon": 16.71,
-       "alt": 24000,
-       "reg": "T-058"
-      },
-      {
-       "flight": "PLF693",
-       "t": "W3",
-       "role": "other",
-       "lat": 54.56,
-       "lon": 18.51,
-       "alt": 700,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -221,34 +193,43 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 24,
+     "base": 0,
+     "runs": 25,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "DRAG971",
+       "flight": "IWY774",
+       "t": "",
+       "role": "other",
+       "lat": 14.74,
+       "lon": -63.61,
+       "alt": 36000,
+       "reg": ""
+      },
+      {
+       "flight": "DRAG972",
        "t": "EC45",
        "role": "other",
-       "lat": 16.17,
-       "lon": -61.46,
-       "alt": 3050,
-       "reg": "F-ZBQY"
+       "lat": 14.59,
+       "lon": -61.0,
+       "alt": 125,
+       "reg": "F-ZBRA"
       }
      ]
     }
    },
    "n_surge": 0,
-   "total_mil": 8
+   "total_mil": 6
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-15T17:13:00Z",
+  "at": "2026-10-15T21:34:50Z",
   "data": {
    "n_total": 1746,
    "recent": [
@@ -419,39 +400,48 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-15T17:13:00Z",
+  "at": "2026-10-15T21:34:50Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 29,
-    "??": 20,
+    "US": 23,
+    "??": 21,
     "SE": 10,
     "BR": 6,
-    "GB": 4,
+    "GB": 5,
+    "MX": 3,
+    "IT": 3,
     "IN": 3,
-    "IT": 2,
+    "ES": 2,
+    "EG": 2,
     "SG": 2,
     "JP": 2,
-    "ES": 2,
     "DE": 2,
-    "NG": 1,
-    "NL": 1,
-    "AU": 1,
-    "GR": 1
+    "KR": 1,
+    "NG": 1
    },
    "by_group": {
-    "qilin": 13,
+    "qilin": 14,
+    "N0n": 14,
     "Wallstreet": 13,
-    "N0n": 12,
-    "iah6477": 6,
-    "interlock": 6,
+    "lockbit5": 8,
+    "iah6477": 7,
+    "akira": 6,
     "play": 5,
-    "akira": 4,
     "emperador": 3,
-    "lockbit5": 3,
-    "incransom": 3
+    "everest": 3,
+    "Orova": 3
    },
-   "kr": []
+   "kr": [
+    {
+     "victim": "KD Corp",
+     "group": "qilin",
+     "country": "KR",
+     "sector": "Not Found",
+     "d": "2026-10-15",
+     "url": "https://www.ransomware.live/id/S0QgQ29ycEBxaWxpbg=="
+    }
+   ]
   }
  },
  "summary": {
@@ -459,7 +449,7 @@
   "kev_week": 12,
   "kev_edge_3d": 4,
   "ransom_week": 100,
-  "ransom_kr_week": 0,
-  "events": 4
+  "ransom_kr_week": 1,
+  "events": 5
  }
 }
