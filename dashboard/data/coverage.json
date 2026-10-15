@@ -1,25 +1,49 @@
 {
- "generated": "2026-10-15T04:55:29Z",
+ "generated": "2026-10-15T11:46:38Z",
  "days": 3,
- "unmapped_total": 8,
- "max_cluster": 6,
- "max_key": "topic:China",
+ "unmapped_total": 6,
+ "max_cluster": 3,
+ "max_key": "place:싱가포르",
  "clusters": [
   {
-   "key": "topic:China",
-   "n": 6,
-   "domains": 4,
+   "key": "place:싱가포르",
+   "n": 3,
+   "domains": 3,
    "types": {
-    "E": 6
+    "X": 2,
+    "E": 1
+   },
+   "since": "2026-10-14",
+   "sample": [
+    {
+     "d": "2026-10-15",
+     "title": "Indonesia to deploy dry ice to reduce thick haze from fires",
+     "url": "https://www.abc.net.au/news/2026-10-15/indonesian-fires-smoke-haze-dry-ice-deployment/107271748",
+     "domain": "abc.net.au"
+    },
+    {
+     "d": "2026-10-15",
+     "title": "As Indonesian Fires Continue, Singapore Records Highest Air Pollution Reading Since 2015",
+     "url": "https://thediplomat.com/2026/10/as-indonesian-fires-continue-singapore-records-highest-air-pollution-reading-since-2015/",
+     "domain": "thediplomat.com"
+    },
+    {
+     "d": "2026-10-14",
+     "title": "Copper climbs to three-week high on strike threat, Fed comments",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSmNsWV9fLVFEbE1TWTk2WEVBQmE1YU9nckVGY09jUGdCWWQyQzJRZDVwMTEwMGhrRWx3WmNJZDVxZXF4M2RsT1J6V0M0QnBxM1Z1elVCMDRNWTRUaVJNYlZnWUd3ODFSVHZmR29vcEhhejZXbFlwc1E1Z0w3TkRlaFJRZzNkQTFBQkRmXzdtT3c3MWdiRGFKd3BaeUMycHNwa1VqUU9JZFBIUQ?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 3,
+   "domains": 2,
+   "types": {
+    "E": 3
    },
    "since": "2026-10-13",
    "sample": [
-    {
-     "d": "2026-10-14",
-     "title": "China P&I seeks seat at global insurance top table",
-     "url": "https://splash247.com/china-pi-seeks-seat-at-global-insurance-top-table/",
-     "domain": "splash247.com"
-    },
     {
      "d": "2026-10-14",
      "title": "China’s Exports Soar, Putting Its Trade Surplus on Track for a Record",
@@ -28,45 +52,15 @@
     },
     {
      "d": "2026-10-14",
-     "title": "China's Coal Imports Fall 6% as Prices Hit Nearly 3-Year High",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/Chinas-Coal-Imports-Fall-6-as-Prices-Hit-Nearly-3-Year-High.html",
-     "domain": "oilprice.com"
-    },
-    {
-     "d": "2026-10-14",
      "title": "China’s Weaponization of Rare Earths Was No Accident",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOU1BESVRvX0x4Um9adzlwNVpFeGNja2ZBQUhnWEotMFI2dFBycG1xSF9uWGZSZ2tlb21jVGUyTU11bWZUTjhGWi1IMmYxWHlvWnVpdzFlRVNOR2c2d09XOFNCblBhbkxDa3B1a1ZCZkluWnpYOWFlYUhpNk56VlF2WDRiVU1QaFZWVWk1TTdPWQ?oc=5",
      "domain": "news.google.com"
     },
     {
-     "d": "2026-10-14",
-     "title": "China deepens engagement in Central Asia amid global competition for strategic resources and persistent political, regul",
-     "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNTm5sUnozUFBWUU1GQkx5dFI5eDFPcWVVcUZaUTNrTVNnNlR1SjFNLWVuSHFBa2IwQnkwenZnaURIbVkydUI5OXF6S1ltTGkyMjRoR3Q1cWNsODFISnZVYm9LVklkbHR5UEhhVjY1MlBhMU9RZFhLYjJLUm5VcmFWZ3djZjVlbWtFVVc3czNRdENhOWxxaFFzWllCcnZwRkxoTy1xbzZXMGFVWXZwZmZxU2pVWDZmU0xJY09WUTBZQlJ1a21GenpCR3Z3MWFQWUtEYTZGWXRCUWdEeGFjX3lNTldELWhZcnVBMndyZWYyMkRTWTFRdThyTmhxcUd1YlpJdTV0UlNoamJsRDRjMDZaWjJzZzZCOGZSV2dr?oc=5",
+     "d": "2026-10-13",
+     "title": "China’s Magnet Export Crackdown Is Putting Companies Like Evolution Metals in the Spotlight (NASDAQ: EMAT)",
+     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNa2ppQ3BXNE1hUlFHbjFYclFPRjNiT1RQcFhiM3pnQTBRZ1NYbHVGMVFVdXZPZ0hSUmZIckptV3QzRjc4NkpVLUxEZnNCd0o0T0ZJRl83ZFdEcVJWaGFQc09JVWZkQVFyamNyamtaUTY4eHJNcDJmeEduNE1IRHdxYnJQVkpTaDMzMnRlNzFaTmZWdWdGakdKbnBPa3R4eFZ1c2FmZTZUelV6bmJmRkljV3F4MmV1MFhoZ3F5TTlhTHdkVDhELVlGaVlCQkN5alhUbFRqbERqc0E?oc=5",
      "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Indonesia",
-   "n": 2,
-   "domains": 2,
-   "types": {
-    "X": 1,
-    "E": 1
-   },
-   "since": "2026-10-14",
-   "sample": [
-    {
-     "d": "2026-10-15",
-     "title": "Indonesia fights fire with dry ice as toxic haze spreads across region",
-     "url": "https://www.theguardian.com/world/2026/oct/15/indonesia-fires-dry-ice-dropped-toxic-haze-spreads",
-     "domain": "theguardian.com"
-    },
-    {
-     "d": "2026-10-14",
-     "title": "Indonesia: Bali fuel supply delays spark panic buying and hours-long queues",
-     "url": "http://www.africanews.com/2026/10/14/indonesia-bali-fuel-supply-delays-spark-panic-buying-and-hours-long-queues/",
-     "domain": "africanews.com"
     }
    ]
   }
