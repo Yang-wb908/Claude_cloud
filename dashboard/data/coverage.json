@@ -1,40 +1,10 @@
 {
- "generated": "2026-10-15T11:46:38Z",
+ "generated": "2026-10-15T17:12:44Z",
  "days": 3,
- "unmapped_total": 6,
+ "unmapped_total": 9,
  "max_cluster": 3,
- "max_key": "place:싱가포르",
+ "max_key": "topic:China",
  "clusters": [
-  {
-   "key": "place:싱가포르",
-   "n": 3,
-   "domains": 3,
-   "types": {
-    "X": 2,
-    "E": 1
-   },
-   "since": "2026-10-14",
-   "sample": [
-    {
-     "d": "2026-10-15",
-     "title": "Indonesia to deploy dry ice to reduce thick haze from fires",
-     "url": "https://www.abc.net.au/news/2026-10-15/indonesian-fires-smoke-haze-dry-ice-deployment/107271748",
-     "domain": "abc.net.au"
-    },
-    {
-     "d": "2026-10-15",
-     "title": "As Indonesian Fires Continue, Singapore Records Highest Air Pollution Reading Since 2015",
-     "url": "https://thediplomat.com/2026/10/as-indonesian-fires-continue-singapore-records-highest-air-pollution-reading-since-2015/",
-     "domain": "thediplomat.com"
-    },
-    {
-     "d": "2026-10-14",
-     "title": "Copper climbs to three-week high on strike threat, Fed comments",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSmNsWV9fLVFEbE1TWTk2WEVBQmE1YU9nckVGY09jUGdCWWQyQzJRZDVwMTEwMGhrRWx3WmNJZDVxZXF4M2RsT1J6V0M0QnBxM1Z1elVCMDRNWTRUaVJNYlZnWUd3ODFSVHZmR29vcEhhejZXbFlwc1E1Z0w3TkRlaFJRZzNkQTFBQkRmXzdtT3c3MWdiRGFKd3BaeUMycHNwa1VqUU9JZFBIUQ?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
   {
    "key": "topic:China",
    "n": 3,
@@ -60,6 +30,75 @@
      "d": "2026-10-13",
      "title": "China’s Magnet Export Crackdown Is Putting Companies Like Evolution Metals in the Spotlight (NASDAQ: EMAT)",
      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNa2ppQ3BXNE1hUlFHbjFYclFPRjNiT1RQcFhiM3pnQTBRZ1NYbHVGMVFVdXZPZ0hSUmZIckptV3QzRjc4NkpVLUxEZnNCd0o0T0ZJRl83ZFdEcVJWaGFQc09JVWZkQVFyamNyamtaUTY4eHJNcDJmeEduNE1IRHdxYnJQVkpTaDMzMnRlNzFaTmZWdWdGakdKbnBPa3R4eFZ1c2FmZTZUelV6bmJmRkljV3F4MmV1MFhoZ3F5TTlhTHdkVDhELVlGaVlCQkN5alhUbFRqbERqc0E?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "place:싱가포르",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "X": 2
+   },
+   "since": "2026-10-15",
+   "sample": [
+    {
+     "d": "2026-10-15",
+     "title": "Indonesia's skies turn apocalyptic orange as smoke blankets Singapore",
+     "url": "http://www.africanews.com/2026/10/15/indonesias-skies-turn-apocalyptic-orange-as-smoke-blankets-singapore/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-10-15",
+     "title": "Indonesia to deploy dry ice to reduce thick haze from fires",
+     "url": "https://www.abc.net.au/news/2026-10-15/indonesian-fires-smoke-haze-dry-ice-deployment/107271748",
+     "domain": "abc.net.au"
+    }
+   ]
+  },
+  {
+   "key": "topic:Israeli",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "Y": 2
+   },
+   "since": "2026-10-15",
+   "sample": [
+    {
+     "d": "2026-10-15",
+     "title": "Israeli spyware targeted 'hundreds of millions' through zero-click ads, researchers find",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-spyware-targeted-hundreds-millions-through-zero-click-ads",
+     "domain": "middleeasteye.net"
+    },
+    {
+     "d": "2026-10-15",
+     "title": "Israeli spyware targeted 'hundreds of millions' through zero-click ads, researchers find",
+     "url": "https://www.middleeasteye.net/news/israeli-spyware-targeted-hundreds-millions-through-zero-click-ads-researchers-find",
+     "domain": "middleeasteye.net"
+    }
+   ]
+  },
+  {
+   "key": "topic:China Rare",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-15",
+   "sample": [
+    {
+     "d": "2026-10-15",
+     "title": "China Rare Earth Exports September 2026 Volume Value",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMG13Q21FZEd4N1JwbnBQMVFaa2tqMzRYdVNVWmJZVG5NRjg4bnYtRG5EUURxWExwN0ttOUM3ckVLY0NDR1E5MGw3NXkwd1hRYWx6OGpKZXNKZlpuVUs1TndPOHhjLU9aYm5MYU1oWU9zaEp6UmdiS2U2M0xzNGtTSEVwRUY?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-10-15",
+     "title": "China Rare Earth Exports September 2026 Trends",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTTIzMi1yNlU2cUNjaW5LTHZDZWlvZXVNZWoyV0tsbFBJN21FZ0xQUlpqWkpvNVdFWVVoQ05Hb3lFZ3I1czRNMV8zSEd3SHVWa1M4R0dHUTRtYkcxSzlLR0drYXhEa3RCUDJ5VzZPNVlaSHIzNmVHalVERXFIWDFGaXJB?oc=5",
      "domain": "news.google.com"
     }
    ]
