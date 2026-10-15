@@ -202,16 +202,10 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 75.0,
+   "p": 50.0,
    "k": 1,
    "prior": 50.0,
-   "evidence": [
-    {
-     "key": "tw:ethiopia_interstate",
-     "f": 3.0,
-     "note": "국가 간 교전 사건 급증"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "bio_spread",
@@ -432,13 +426,12 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-10-14",
+ "asof": "2026-10-15",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
   "copper_6",
-  "ethiopia_interstate",
   "firms_site_alert",
   "hormuz_transits_low",
   "ioda_outage",

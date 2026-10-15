@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T21:52:25Z",
+ "generated": "2026-10-15T04:51:31Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "korea_missile",
@@ -21,7 +21,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,21 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 46,
+   "current": 26,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
-  },
-  {
-   "id": "ethiopia_interstate",
-   "title": "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)",
-   "sev": 4,
-   "th": "ethiopia",
-   "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 12,
-   "threshold": 5,
-   "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "copper_6",
@@ -54,7 +43,7 @@
    "current": 6.62,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +51,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 20,
+   "current": 11,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "firms_site_alert",
@@ -76,7 +65,7 @@
    "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "ioda_outage",
@@ -87,7 +76,7 @@
    "current": 5,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "quake_near_site",
@@ -98,7 +87,7 @@
    "current": 16,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "kev_edge",
@@ -109,7 +98,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   },
   {
    "id": "ransom_kr",
@@ -120,7 +109,7 @@
    "current": 5,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-14T21:52:25Z"
+   "at": "2026-10-15T04:51:31Z"
   }
  ]
 }
