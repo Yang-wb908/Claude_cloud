@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-16T11:39:14Z",
+ "generated": "2026-10-16T17:03:49Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-16T11:39:14Z",
+  "at": "2026-10-16T17:03:49Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 27,
+     "n": 1,
+     "key": 1,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.3,
+       "lon": 126.06,
+       "alt": 38000,
+       "reg": "N591SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,13 +77,53 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 1,
-     "runs": 27,
-     "status": "normal",
-     "by_role": {},
-     "ac": []
+     "n": 4,
+     "key": 3,
+     "base": 1.0,
+     "runs": 28,
+     "status": "surge",
+     "by_role": {
+      "other": 1,
+      "tanker": 3
+     },
+     "ac": [
+      {
+       "flight": "AUH04",
+       "t": "B788",
+       "role": "other",
+       "lat": 26.88,
+       "lon": 50.84,
+       "alt": 37975,
+       "reg": "A6-PFC"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.45,
+       "lon": 55.81,
+       "alt": 27500,
+       "reg": "19-46111"
+      },
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 25.47,
+       "lon": 55.87,
+       "alt": 25500,
+       "reg": "57-1468"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.46,
+       "lon": 57.91,
+       "alt": 20500,
+       "reg": "20-46080"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -84,8 +136,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -99,25 +151,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "EM409",
-       "t": "B429",
-       "role": "other",
-       "lat": 36.89,
-       "lon": 30.79,
-       "alt": 475,
-       "reg": "EM-7112"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -128,35 +168,13 @@
       42.0,
       47.5
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0,
-     "runs": 27,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "EM415",
-       "t": "B429",
-       "role": "other",
-       "lat": 41.13,
-       "lon": 28.97,
-       "alt": 825,
-       "reg": "EM-7119"
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 42.98,
-       "lon": 30.18,
-       "alt": 34000,
-       "reg": "N159L"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -167,25 +185,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "NOW335P",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 57.68,
-       "lon": 13.47,
-       "alt": 26000,
-       "reg": "5601"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -198,20 +204,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 27,
+     "base": 0.0,
+     "runs": 28,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
-   "n_surge": 0,
-   "total_mil": 4
+   "n_surge": 1,
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-16T11:39:14Z",
+  "at": "2026-10-16T17:03:49Z",
   "data": {
    "n_total": 1746,
    "recent": [
@@ -372,37 +378,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-16T11:39:14Z",
+  "at": "2026-10-16T17:03:49Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 27,
-    "??": 21,
-    "SE": 10,
-    "BR": 6,
+    "US": 40,
+    "??": 11,
+    "BR": 9,
+    "AU": 4,
     "GB": 4,
-    "JP": 3,
+    "DE": 2,
+    "JP": 2,
     "ES": 2,
     "EG": 2,
+    "KR": 2,
     "MX": 2,
     "IT": 2,
     "IN": 2,
-    "DE": 2,
-    "PL": 1,
-    "CR": 1,
-    "KR": 1
+    "CA": 2,
+    "TH": 2
    },
    "by_group": {
-    "N0n": 17,
-    "qilin": 16,
-    "Wallstreet": 14,
-    "lockbit5": 8,
+    "thegentlemen": 31,
+    "qilin": 14,
+    "N0n": 11,
+    "THE SEVEN DEADLY SINS": 7,
     "iah6477": 7,
-    "incransom": 6,
-    "akira": 6,
-    "play": 5,
-    "emperador": 3,
-    "everest": 3
+    "lockbit5": 7,
+    "incransom": 5,
+    "Wallstreet": 3,
+    "akira": 3,
+    "pear": 3
    },
    "kr": [
     {
@@ -412,16 +418,24 @@
      "sector": "Not Found",
      "d": "2026-10-15",
      "url": "https://www.ransomware.live/id/S0QgQ29ycEBxaWxpbg=="
+    },
+    {
+     "victim": "SONGWOOI",
+     "group": "thegentlemen",
+     "country": "KR",
+     "sector": "Not Found",
+     "d": "2026-10-16",
+     "url": "https://www.ransomware.live/id/U09OR1dPT0lAdGhlZ2VudGxlbWVu"
     }
    ]
   }
  },
  "summary": {
-  "adsb_surge": 0,
+  "adsb_surge": 1,
   "kev_week": 7,
   "kev_edge_3d": 4,
   "ransom_week": 100,
-  "ransom_kr_week": 1,
-  "events": 5
+  "ransom_kr_week": 2,
+  "events": 7
  }
 }
