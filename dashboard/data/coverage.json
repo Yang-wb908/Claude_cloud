@@ -1,30 +1,112 @@
 {
- "generated": "2026-10-16T04:46:06Z",
+ "generated": "2026-10-16T11:39:01Z",
  "days": 3,
- "unmapped_total": 8,
- "max_cluster": 2,
- "max_key": "topic:Netanyahu",
+ "unmapped_total": 12,
+ "max_cluster": 3,
+ "max_key": "topic:China",
  "clusters": [
   {
-   "key": "topic:Netanyahu",
-   "n": 2,
-   "domains": 1,
+   "key": "topic:China",
+   "n": 3,
+   "domains": 2,
    "types": {
-    "S": 1,
-    "D": 1
+    "D": 1,
+    "E": 2
    },
    "since": "2026-10-14",
    "sample": [
     {
-     "d": "2026-10-15",
-     "title": "Netanyahu on Jordan border: We have plan to confront drone threat",
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNTJkaVlTcnFNMktxYXNSTjE5VkE2M2VzcWFrZGFPNTJHWEpWQlN6alI5REMwRGh1emE4aHFGQnJWRERvSVNYem1LbzJQM3NDckZWOXRVbWF4VmJXMnVJa1J0TGZRaktaN2E4SGFtTjhZTkxOU2hHVkIwTGdCdnl5TnNQZTlnZmIzSDd4OE8yeFV1c3N1QlBEUVJCem5MSlpwNTdyR3I0UkxGMkEtdVVr?oc=5",
+     "d": "2026-10-16",
+     "title": "China adds 40 technologies in AI, biomedicine and PV for export controls in draft revised catalog",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9WTjZEOW1PZXVKN0RORWdyYVppQmd0alMwUjZJMUFoeEJabFRTckpLRzM4aFB0TTdOSmhpTGNwQnhTcjZTekFOeW1vbGVJZjNNaS1PU0VzbHR2QVJycGRRYmVn?oc=5",
      "domain": "news.google.com"
     },
     {
+     "d": "2026-10-16",
+     "title": "China’s Shrinking Politburo Has a Diversity Problem",
+     "url": "https://www.irrawaddy.com/opinion/guest-column/chinas-shrinking-politburo-has-a-diversity-problem.html",
+     "domain": "irrawaddy.com"
+    },
+    {
      "d": "2026-10-14",
-     "title": "Netanyahu said worried Gur Hasidim won’t vote as allies push small parties to drop out",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZkx0SXg3X1Z2YU14WGc4X0JLVDBqQ3ptbEhwQjFmbFA2VU9fZmtkeF9teHRXVk93VF9hTC1xeTBPNHVESHl5cUVScDRNWVljVV82eW85N3U0S0ZsZVItYzE3and1NTNhMF9Lb3ZiekU2YVA2MHBDdzNEckJRdkUzVlFVay1NVmNiZHpHSTQyREhPTkhWYXUyREJXd0dsMGxUeVNXYi0wd0tRR3FTX2hxNzdhaHZ4VjDSAbwBQVVfeXFMT1VWOEpGUXo5WTFGeE9TSUVDTC00dXFFOFU0WWh0UldrbkFrcXJQV2ZlTVZ2WjVNbWJDdDVyNDFwaEkxSENLTTY1eVRsNG43czZsalpzekRfQ0puWEhOLTg2TVIzMEVqdFpIcjhPZldscTBHR0VDdzdJZ2s3VzRtaXlKd3BwY2dWc1ZTQkFhMTZDWlVHYzhNYTZoNmhzOFI4T3E5Z3ZaMWRKbGhpX0ZzMVg3TElkRHdZUW9FYVI?oc=5",
+     "title": "China’s Weaponization of Rare Earths Was No Accident",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOU1BESVRvX0x4Um9adzlwNVpFeGNja2ZBQUhnWEotMFI2dFBycG1xSF9uWGZSZ2tlb21jVGUyTU11bWZUTjhGWi1IMmYxWHlvWnVpdzFlRVNOR2c2d09XOFNCblBhbkxDa3B1a1ZCZkluWnpYOWFlYUhpNk56VlF2WDRiVU1QaFZWVWk1TTdPWQ?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "place:서울",
+   "n": 3,
+   "domains": 1,
+   "types": {
+    "E": 1,
+    "D": 2
+   },
+   "since": "2026-10-16",
+   "sample": [
+    {
+     "d": "2026-10-16",
+     "title": "S. Korean won advances to 2-year high on Fed chief's outlook, foreign inflows",
+     "url": "https://en.yna.co.kr/view/AEN20261016008500320",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-10-16",
+     "title": "(LEAD) Lee calls for constitutional revision to reflect spirit of democratization",
+     "url": "https://en.yna.co.kr/view/AEN20261016005951315",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-10-16",
+     "title": "Lee calls for constitutional revision to reflect spirit of democratization",
+     "url": "https://en.yna.co.kr/view/AEN20261016005900315",
+     "domain": "en.yna.co.kr"
+    }
+   ]
+  },
+  {
+   "key": "place:인천",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "C": 2
+   },
+   "since": "2026-10-16",
+   "sample": [
+    {
+     "d": "2026-10-16",
+     "title": "Police release identity of Incheon stabbing suspect",
+     "url": "https://en.yna.co.kr/view/AEN20261016009200320",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-10-16",
+     "title": "Suspect in Incheon knife attack attends arrest warrant hearing",
+     "url": "https://en.yna.co.kr/view/AEN20261016006700315",
+     "domain": "en.yna.co.kr"
+    }
+   ]
+  },
+  {
+   "key": "topic:Copper",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-15",
+   "sample": [
+    {
+     "d": "2026-10-15",
+     "title": "Copper hits 10-day low on profit-taking as supply worries ease",
+     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQLXRKSE50R2wtZU5qRW5ZUnM3NTZvTjRQUENFVjNtYl9XMFlPa0hNbzRPejRRVURuZlAtYTRxZ2tRRDZtLTBCdW5QRnFVUDZwVUhZS1NDZWVSczBhMXpuS0gtU05CcUs5XzlvOEREdEliaVk2THl4YlpMOFJSQjYydUU1X0JhQnk5eXFuNXdRNkNuV1VqaHlSVnhlM0NKVXliSmhIaUdpbkgtam1tbW4zVGNmYXRKRjdDUG1rMFNFMXROMVFkUC1SOG14MlJIbk9MS01sQlhxMDZ0aUnSAdsBQVVfeXFMUC10SkhOdEdsLWVOakVuWVJzNzU2b040UFBDRVYzbWJfVzBZT2tITW80T3o0UVVEbmZQLWE0cWdrUUQ2bS0wQnVuUEZxVVA2cFVIWUtTQ2VlUnMwYTF6bktILVNOQnFLOV85bzhERHRJYmlZNkx5eGJaTDhSUkI2MnVFNV9CYUJ5OXlxbjV3UTZDbldVamh5UlZ4ZTNDSlV5YkpoSGlHaW5ILWptbW1uM1RjZmF0SkY3Q1BtazBTRTF0TjFRZFAtUjhteDJSSG5PTEtNbEJYcTA2dGlJ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-10-15",
+     "title": "Copper hits 10-day low on profit-taking as supply worries ease",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOR2xsNFl5QkxVc1NrdG1uRkRWbEFlR3hSU0NleFhoN0pxbkZ4cVc5cTVnYUFKZlVvd1QxRVFDWk5saVZOSURaWGNibFNUQVBKZ3N3TG5nRUkzZFFJNkE0LUs3dlNKalFXOUtXUkgycWhsalowUnQ3eTVZN2wyVzg1LVEtQWlWQlE5VTF1dDVTV2ZBY1VzSGw3RFJ4RFBmTURIdjdzddIBVkFVX3lxTFBHSl9SODNwc2VEOVVYZGZtWjZMNUdtR2FJSDlFbWxkOENSMmxNb3huVkl5VGtnR0ZTNkx4cWVNLUltTEZFUTdPMC15UjlZelZaYTRoa3JB?oc=5",
      "domain": "news.google.com"
     }
    ]
@@ -48,52 +130,6 @@
      "d": "2026-10-15",
      "title": "China Rare Earth Exports September 2026 Trends",
      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTTIzMi1yNlU2cUNjaW5LTHZDZWlvZXVNZWoyV0tsbFBJN21FZ0xQUlpqWkpvNVdFWVVoQ05Hb3lFZ3I1czRNMV8zSEd3SHVWa1M4R0dHUTRtYkcxSzlLR0drYXhEa3RCUDJ5VzZPNVlaSHIzNmVHalVERXFIWDFGaXJB?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "place:베이징",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-15",
-   "sample": [
-    {
-     "d": "2026-10-16",
-     "title": "Rare Earth ETF Clings to 52-Week Low as Beijing Eases Licensing, Not Control - ad-hoc-news.de",
-     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQ3hSV092b1RqeWx3ZHpocmh6eGI0djNUbnF3REI2U19tR1ZfSnM0WFYzaWxRdFpmR1hOX0EwMGc5clFuVUZHS3pBZy1xNDdUeElBdW9yU0l3b1k2dUJLeWVjWDFoVDFDR3h2RkItcmtrVXpLV3dTcEJIN3R4Z1FmSXFoUzBTUlJCeERjTnI3VUhpajZwUDgxQmhPTDRlSDFqd0czOElYVU56bjZadnM3WkZEY2w5Wi1PcVZ1dVRudmdyRkJtZURlUVRWT1JiU2pyWkNvM1hB?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-15",
-     "title": "The US has $100 billion to break China’s rare-earth grip. Can it stop Beijing from holding America’s suppl",
-     "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPaHRGQTBDT1JicHRrQ1QyeURPaHVuOUJKdld2SmxsWWVvcGF5VjhjNjdVdGZsX1BFVGhHUXlIUTUxV0JmRlRuUFVGVm1jMDRQcnVuXzNFenU3ZFNKWmMtaWk5cWJBX09IMGhHS0NseTZjNnR0UGtqMUNnaWh6enhwb1o1TTFqSWducXZSaWp5QmxGdEpWbGRnOGJDZFlCS1c0emljMlVvbnQwb2E1Q0praVNFV2RsZDJOWDlJLUMyTUVNampYU3lHU0RTaHNkVDBMV1F6NlJIUmw1dENiVWtGUEJ4VncwNjVXaVhvRVNlYndYWWVzQ1I4WmdwdlZLd296MWp5YlBMalBwQldMNjAyZUhxWmZkRXZtZ1ZOZ2tNS2FHVmpPYk1OV9IBrgJBVV95cUxNV0NhcFUtNEhfRHZKd2wzRlNHaGdnamFEUkdLdWRoZmpkMjd6dGZhMi1IdGhSTjRRUUJWWEF5b1VoS2liOENnSVpCOUtfU1M2X2RDM0hyazlZemJtdDVid0NzSXhId1diT29EOVJ4QlpEQ0l5X2I0NmE3UVAxdFpsY1pmSWNhMTZoVENMdWduNVptZ0lTQld0Vmc5RnozZVFLNjI2R1ZvTk9GY3RBcEV3aTJlUDJULWRQWDljMy1wY2Zmb1ZiSHhyZGxwRnpORHNvSWU5QWNfa1dKT2c2LVo2VUMzT1paazB0aVNxVGIzWE85R3Fpbmh0WWZkSnV0LTNvYTIxaVdGXzhqN0RHSUlGMTRrQTBUay1PVVJKMW5idlQydVBQbnB5ei1nMXZrZw?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Navy",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "M": 2
-   },
-   "since": "2026-10-15",
-   "sample": [
-    {
-     "d": "2026-10-16",
-     "title": "Navy's Seahawk Drone Ship Deploys With USS Theodore Roosevelt",
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUFdaTFNualpHMHg2dmpETE9qWjgyYTlUWms4U2dNV2Q5aUdTcXI5WEhTeWtGcmRwOGh0U2NrOHpKMHJqc2NPcmJfM0x2QTVQWEgzTmZtM1loM0NRMXQ1SU9iMWVmQTk1Y29vd2Jza2d4WEhzaHBsRzVUN2xDb3ZxVlpUcHRGQmtFenc3Rnp2MFVzMnFtcGtPcA?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-15",
-     "title": "US Navy deploys carrier strike group with uncrewed vessel for first time — Anadolu Agency",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVV3bVZPbmRaUjVENkNIX0twaU05dlk2SVEzcVlvdDNIN2ZnLXJmZWE3TXhnWlgtc1FlbFk1RXpiVnNBcWZSQmljWE16eTlBWGZoMDhnTTBscHJYVkFoMWFyVlBuRnZMVENGOTM5WGV6XzJXazRic2hWWXFtZldsYzFEamZlQVcxcjloTWV5Z0NKSnpxa094aGVmckd5LTBObWVLa0EwUlhaQQ?oc=5",
      "domain": "news.google.com"
     }
    ]

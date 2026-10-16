@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-16T04:46:22Z",
+ "generated": "2026-10-16T11:39:14Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-16T04:46:22Z",
+  "at": "2026-10-16T11:39:14Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,143 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 14,
+     "n": 0,
      "key": 0,
-     "base": 1.0,
-     "runs": 26,
+     "base": 1,
+     "runs": 27,
      "status": "normal",
-     "by_role": {
-      "airlift": 1,
-      "other": 13
-     },
-     "ac": [
-      {
-       "flight": "UAF1223",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 24.96,
-       "lon": 54.09,
-       "alt": 19350,
-       "reg": "1224"
-      },
-      {
-       "flight": "FRS42",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.94,
-       "lon": 54.92,
-       "alt": 14500,
-       "reg": "938"
-      },
-      {
-       "flight": "FRS41",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.94,
-       "lon": 54.92,
-       "alt": 14450,
-       "reg": "954"
-      },
-      {
-       "flight": "FRS91",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.86,
-       "lon": 55.02,
-       "alt": 5875,
-       "reg": "957"
-      },
-      {
-       "flight": "FRS71",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.86,
-       "lon": 55.03,
-       "alt": 5925,
-       "reg": "940"
-      },
-      {
-       "flight": "FRS51",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.67,
-       "lon": 55.11,
-       "alt": 14475,
-       "reg": "958"
-      },
-      {
-       "flight": "FRS52",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.67,
-       "lon": 55.11,
-       "alt": 14375,
-       "reg": "937"
-      },
-      {
-       "flight": "FRS61",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.66,
-       "lon": 55.31,
-       "alt": 5800,
-       "reg": "949"
-      },
-      {
-       "flight": "FRS22",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.66,
-       "lon": 55.33,
-       "alt": 5875,
-       "reg": "939"
-      },
-      {
-       "flight": "FRS91",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.7,
-       "lon": 55.36,
-       "alt": 16575,
-       "reg": "955"
-      },
-      {
-       "flight": "FR133",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.79,
-       "lon": 55.38,
-       "alt": 4025,
-       "reg": "935"
-      },
-      {
-       "flight": "FRS31",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.55,
-       "lon": 55.52,
-       "alt": 13500,
-       "reg": "943"
-      },
-      {
-       "flight": "FRS22",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.75,
-       "lon": 55.61,
-       "alt": 12725,
-       "reg": "947"
-      },
-      {
-       "flight": "FRS21",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.75,
-       "lon": 55.62,
-       "alt": 12125,
-       "reg": "944"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -214,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -229,13 +99,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "EM409",
+       "t": "B429",
+       "role": "other",
+       "lat": 36.89,
+       "lon": 30.79,
+       "alt": 475,
+       "reg": "EM-7112"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -246,13 +128,35 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "n": 2,
+     "key": 1,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "EM415",
+       "t": "B429",
+       "role": "other",
+       "lat": 41.13,
+       "lon": 28.97,
+       "alt": 825,
+       "reg": "EM-7119"
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 42.98,
+       "lon": 30.18,
+       "alt": 34000,
+       "reg": "N159L"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -265,21 +169,21 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "T22",
-       "t": "PC12",
-       "role": "other",
-       "lat": 60.31,
-       "lon": 24.98,
-       "alt": "ground",
-       "reg": "PI-02"
+       "flight": "NOW335P",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 57.68,
+       "lon": 13.47,
+       "alt": 26000,
+       "reg": "5601"
       }
      ]
     },
@@ -294,20 +198,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 26,
+     "base": 0,
+     "runs": 27,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 15
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-16T04:46:22Z",
+  "at": "2026-10-16T11:39:14Z",
   "data": {
    "n_total": 1746,
    "recent": [
@@ -468,29 +372,29 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-16T04:46:22Z",
+  "at": "2026-10-16T11:39:14Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 24,
+    "US": 27,
     "??": 21,
     "SE": 10,
     "BR": 6,
     "GB": 4,
     "JP": 3,
-    "IN": 3,
     "ES": 2,
     "EG": 2,
     "MX": 2,
     "IT": 2,
-    "SG": 2,
+    "IN": 2,
     "DE": 2,
     "PL": 1,
-    "CR": 1
+    "CR": 1,
+    "KR": 1
    },
    "by_group": {
-    "N0n": 15,
-    "qilin": 15,
+    "N0n": 17,
+    "qilin": 16,
     "Wallstreet": 14,
     "lockbit5": 8,
     "iah6477": 7,
