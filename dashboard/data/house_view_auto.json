@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 75.2,
+   "p": 67.0,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 6.7,
+   "p": 11.8,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.4,
-     "note": "예측시장 1% (가중 0.30)"
+     "f": 0.861,
+     "note": "예측시장 12% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 1.0,
-    "q": "Strait of Hormuz traffic returns to normal by October 31?",
-    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
-    "vol": 2652010,
-    "end": "2026-11-01",
+    "p": 11.5,
+    "q": "Strait of Hormuz traffic returns to normal by December 31?",
+    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
+    "vol": 14902825,
+    "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 18.0,
+   "p": 21.2,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -56,8 +56,13 @@
      "note": "해상 피격 24시간 3건"
     },
     {
+     "key": "sens:ioda:iran",
+     "f": 1.5,
+     "note": "이란·걸프 국가 인터넷 대규모 차단 (IODA)"
+    },
+    {
      "key": "market:hormuz_war",
-     "f": 0.967,
+     "f": 0.928,
      "note": "예측시장 16% (가중 0.10)"
     }
    ],
@@ -65,7 +70,7 @@
     "p": 16.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 74082598,
+    "vol": 74284087,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -120,13 +125,18 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 4.2,
+   "p": 5.6,
    "k": 1,
    "prior": 5.0,
    "evidence": [
     {
+     "key": "sens:ioda:taiwan",
+     "f": 1.5,
+     "note": "대만 인터넷 대규모 장애 (IODA)"
+    },
+    {
      "key": "market:taiwan_quarantine",
-     "f": 0.836,
+     "f": 0.771,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -134,14 +144,14 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 44124625,
+    "vol": 44142384,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 25.0,
+   "p": 24.4,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -161,21 +171,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 26.0,
+   "p": 20.8,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 1.053,
-     "note": "예측시장 28% (가중 0.40)"
+     "f": 0.787,
+     "note": "예측시장 16% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 27.5,
+    "p": 15.5,
     "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-    "vol": 9763652,
+    "vol": 9847829,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -238,42 +248,42 @@
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 64.1,
+   "p": 66.1,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 1.784,
-     "note": "예측시장 76% (가중 0.50)"
+     "f": 1.951,
+     "note": "예측시장 79% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 76.1,
+    "p": 79.2,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 20761684,
+    "vol": 20918112,
     "end": "2026-10-05",
     "w": 0.5
    }
   },
   {
    "id": "brazil_lula_win",
-   "p": 35.7,
+   "p": 33.7,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_lula_win",
-     "f": 0.554,
-     "note": "예측시장 24% (가중 0.50)"
+     "f": 0.508,
+     "note": "예측시장 20% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 23.5,
+    "p": 20.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 24668902,
+    "vol": 24822495,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -307,7 +317,7 @@
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 10220540,
+    "vol": 10229083,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -363,18 +373,18 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 10.1,
+   "p": 10.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
      "key": "market:india_pak_loc_escalation",
-     "f": 1.016,
-     "note": "예측시장 10% (가중 0.30)"
+     "f": 1.032,
+     "note": "예측시장 11% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 11.0,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
     "vol": 333595,
@@ -385,13 +395,6 @@
  ],
  "review": [
   {
-   "id": "hormuz_reopen",
-   "house": 30.0,
-   "market": 1.0,
-   "q": "Strait of Hormuz traffic returns to normal by October 31?",
-   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
-  },
-  {
    "id": "blacksea_deal",
    "house": 30.0,
    "market": 6.5,
@@ -401,14 +404,14 @@
   {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 76.1,
+   "market": 79.2,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
   {
    "id": "brazil_lula_win",
    "house": 50.0,
-   "market": 23.5,
+   "market": 20.5,
    "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election"
   },
@@ -422,13 +425,20 @@
  ],
  "sensors": {
   "firms": [
-   "drc",
    "ethiopia",
    "sudan"
   ],
   "ioda": [
+   "carib",
    "europe",
+   "gaza",
+   "iran",
+   "latam",
+   "lebanon",
    "oceania",
+   "sahel",
+   "sudan",
+   "taiwan",
    "ukraine"
   ],
   "gdacs": [
@@ -451,6 +461,7 @@
   "eia_crude_draw",
   "ethiopia_interstate",
   "firms_site_alert",
+  "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
