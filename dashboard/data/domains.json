@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-17T15:45:10Z",
+ "generated": "2026-10-17T20:47:04Z",
  "adsb": {
   "ok": false,
   "at": "2026-10-17T10:59:14Z",
@@ -196,11 +196,11 @@
    "n_surge": 0,
    "total_mil": 3
   },
-  "err": "ReadTimeout: HTTPSConnectionPool(host='api.adsb.lol', port=443): Read timed out. (read timeout=40)"
+  "err": "ConnectionError: HTTPSConnectionPool(host='api.adsb.lol', port=443): Max retries exceeded with url: /v2/mil (Caused by NewConnectionError(\"HTTPSConnection(host='api.adsb.lol', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-17T15:45:10Z",
+  "at": "2026-10-17T20:47:04Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -361,7 +361,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-17T15:45:10Z",
+  "at": "2026-10-17T20:47:04Z",
   "data": {
    "n_week": 100,
    "by_country": {
