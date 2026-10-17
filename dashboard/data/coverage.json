@@ -1,53 +1,52 @@
 {
- "generated": "2026-10-17T10:59:03Z",
+ "generated": "2026-10-17T15:44:59Z",
  "days": 3,
  "unmapped_total": 4,
  "max_cluster": 2,
- "max_key": "place:베이징",
+ "max_key": "topic:Egypt",
  "clusters": [
   {
-   "key": "place:베이징",
+   "key": "topic:Egypt",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-10-17",
+   "sample": [
+    {
+     "d": "2026-10-17",
+     "title": "Egypt's President Sisi will step down when term expires in 2030",
+     "url": "http://www.africanews.com/2026/10/17/egypts-president-sisi-will-step-down-when-term-expires-in-2030/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-10-17",
+     "title": "Egypt's President Sisi pledges to leave office when term ends in 2030",
+     "url": "https://www.dawn.com/news/2037828/egypts-president-sisi-pledges-to-leave-office-when-term-ends-in-2030",
+     "domain": "dawn.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
    "n": 2,
    "domains": 1,
    "types": {
     "E": 2
    },
-   "since": "2026-10-15",
+   "since": "2026-10-16",
    "sample": [
     {
      "d": "2026-10-16",
-     "title": "Rare Earth ETF Clings to 52-Week Low as Beijing Eases Licensing, Not Control - ad-hoc-news.de",
-     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNR0MxT2M2ejF4VkFNZ3I5LVQ5RkZNSlV2SHVDRklXaDU1Y0NZM0dqa3JlaExrR2J5X29ia19tMDZXVUJsbFhNanhkWExLUXBMUHZHekRGY1JjaC1NRkltaHNEWG5CRmFwTlRiMUdpYU02emNvRm5pbTRaWENxNUhKMXBWd2lIcm1QSnFzZ3lyaWlqcjdhTjZmZGhveXU2aF9Uc2UyWThZbHpkdXhoOUIzLTg4S25FTUsxeG5uSDIxWWIzV0d5eDZZdEJHejdzVkduZjBxbnB6aVVYUmk1bHZoZA?oc=5",
+     "title": "China unveils draft export controls on AI technologies and chips",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZFJrS1d0QjRNNDFCeDlGc2x2cHJhTWN6SEJtWjFucjRFWnc2LWlUMFFMbjFuX3BOWGpJcVhLdnVRRnFjaUVpRXh0UHNQcWl6UkF3clZ3VExPc1dVX1hvc2o4Tnl3Mm15VE03Y1h6NHJzU3hnUmlFWlpha0hkeElUaUg1SFY?oc=5",
      "domain": "news.google.com"
     },
-    {
-     "d": "2026-10-15",
-     "title": "The US has $100 billion to break China’s rare-earth grip. Can it stop Beijing from holding America’s suppl",
-     "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPaHRGQTBDT1JicHRrQ1QyeURPaHVuOUJKdld2SmxsWWVvcGF5VjhjNjdVdGZsX1BFVGhHUXlIUTUxV0JmRlRuUFVGVm1jMDRQcnVuXzNFenU3ZFNKWmMtaWk5cWJBX09IMGhHS0NseTZjNnR0UGtqMUNnaWh6enhwb1o1TTFqSWducXZSaWp5QmxGdEpWbGRnOGJDZFlCS1c0emljMlVvbnQwb2E1Q0praVNFV2RsZDJOWDlJLUMyTUVNampYU3lHU0RTaHNkVDBMV1F6NlJIUmw1dENiVWtGUEJ4VncwNjVXaVhvRVNlYndYWWVzQ1I4WmdwdlZLd296MWp5YlBMalBwQldMNjAyZUhxWmZkRXZtZ1ZOZ2tNS2FHVmpPYk1OV9IBrgJBVV95cUxNV0NhcFUtNEhfRHZKd2wzRlNHaGdnamFEUkdLdWRoZmpkMjd6dGZhMi1IdGhSTjRRUUJWWEF5b1VoS2liOENnSVpCOUtfU1M2X2RDM0hyazlZemJtdDVid0NzSXhId1diT29EOVJ4QlpEQ0l5X2I0NmE3UVAxdFpsY1pmSWNhMTZoVENMdWduNVptZ0lTQld0Vmc5RnozZVFLNjI2R1ZvTk9GY3RBcEV3aTJlUDJULWRQWDljMy1wY2Zmb1ZiSHhyZGxwRnpORHNvSWU5QWNfa1dKT2c2LVo2VUMzT1paazB0aVNxVGIzWE85R3Fpbmh0WWZkSnV0LTNvYTIxaVdGXzhqN0RHSUlGMTRrQTBUay1PVVJKMW5idlQydVBQbnB5ei1nMXZrZw?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "place:워싱턴",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "D": 1,
-    "M": 1
-   },
-   "since": "2026-10-15",
-   "sample": [
     {
      "d": "2026-10-16",
-     "title": "Managed Rivalry, Deferred Questions: What Washington Left for Shenzhen and Miami",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNc0o2Qy1QNnFnVHptbEZyWVlBRkdQelNQVWZ0d3Voek5ZellTTUhkeFJrSWVOU3Rab1NtY0lhNWlGN2hzcFF6cXdfempuLWp2UjdvcmlfZWxTWUNHcHZMYzZhX1p4dGpXN0hOQlg4U3pCTEVWWkR6X1NJdFlkaTNPbXFlbmRkRnFabkpTMUp1V2pqSmhycUFQbmZYS3BycDBLZnBsUW9TTlg2WTRRZWNfRFR6aGhDdzdaQ1FTSV93VVhzVVVmWUE?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-15",
-     "title": "Navy confirms sailor’s death in Middle East one month later, but still won’t reveal identity or what happened",
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUGRGdmRQUW04UHJ4X1JkYWtRRmw5OEdmTmxzczdGR3dZNjV2Vk8wbHl5MVJYQ1k1RS1ESGRTNDU5ZHV1aG9xSDFhT3N6ci1tSm1GM3pjajhzZjJqZUNzaWJWYTh2WTdzTEdrRm50MmZiWUxLbjQwRFRUekxuT25ZckM1TkFPdjhTc20yMi1Bdl9Qd1VWU0cxcF91NWRDQ25pOUp2Q1VZbDNEaTB2N0g5Q2pBMA?oc=5",
+     "title": "China puts ASML supplier under pressure",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZ290aTN6TXJCM0ZZY3J0UW1SdjZTSlo3Rno2clBWd1pWeU8zMmwwaVRVanhlRXlST1RsVzRkOWpiVExyd2h2SVUzZm5OUkxHZmtQYXRNMTlpNHZjRVg4TWxtZGhVVzltYmtpMWp6SGRqQk5mR1JmcHo3S3F6aTBURUVXcmNFdTZISndtYlZkeFlZbzN5NWpxSlB1RVQ4MDQ?oc=5",
      "domain": "news.google.com"
     }
    ]
