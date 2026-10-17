@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-17T04:41:59Z",
+ "generated": "2026-10-17T10:59:14Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-17T04:41:59Z",
+  "at": "2026-10-17T10:59:14Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "n": 1,
+     "key": 1,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 34.68,
+       "lon": 126.82,
+       "alt": 27000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -67,8 +79,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 1.0,
-     "runs": 30,
+     "base": 1,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -84,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -101,8 +113,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -118,8 +130,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -133,13 +145,35 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "n": 2,
+     "key": 1,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "FHV22",
+       "t": "DHC6",
+       "role": "other",
+       "lat": 55.6,
+       "lon": 11.7,
+       "alt": 2775,
+       "reg": "OY-FHD"
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 58.56,
+       "lon": 26.26,
+       "alt": 36000,
+       "reg": "N159L"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -152,20 +186,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 30,
+     "base": 0,
+     "runs": 31,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 0
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-17T04:41:59Z",
+  "at": "2026-10-17T10:59:14Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -326,39 +360,47 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-17T04:41:59Z",
+  "at": "2026-10-17T10:59:14Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 40,
-    "??": 20,
+    "??": 21,
     "BR": 7,
     "GB": 4,
+    "KR": 2,
+    "JP": 2,
     "AU": 2,
     "EG": 2,
-    "KR": 2,
     "MX": 2,
     "IT": 2,
-    "CA": 2,
+    "AT": 1,
     "BE": 1,
     "HK": 1,
     "DE": 1,
-    "PL": 1,
-    "CR": 1
+    "PL": 1
    },
    "by_group": {
-    "N0n": 24,
-    "thegentlemen": 22,
+    "N0n": 26,
+    "thegentlemen": 16,
     "qilin": 12,
     "THE SEVEN DEADLY SINS": 7,
     "iah6477": 7,
     "lockbit5": 5,
+    "everest": 4,
     "play": 4,
     "incransom": 4,
-    "akira": 3,
-    "Redact": 2
+    "akira": 3
    },
    "kr": [
+    {
+     "victim": "Taekwang Network",
+     "group": "everest",
+     "country": "KR",
+     "sector": "Technology",
+     "d": "2026-10-17",
+     "url": "https://www.ransomware.live/id/VGFla3dhbmcgTmV0d29ya0BldmVyZXN0"
+    },
     {
      "victim": "KD Corp",
      "group": "qilin",
@@ -366,14 +408,6 @@
      "sector": "Not Found",
      "d": "2026-10-15",
      "url": "https://www.ransomware.live/id/S0QgQ29ycEBxaWxpbg=="
-    },
-    {
-     "victim": "SONGWOOI",
-     "group": "thegentlemen",
-     "country": "KR",
-     "sector": "Not Found",
-     "d": "2026-10-16",
-     "url": "https://www.ransomware.live/id/U09OR1dPT0lAdGhlZ2VudGxlbWVu"
     }
    ]
   }
