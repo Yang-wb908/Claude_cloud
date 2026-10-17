@@ -1094,72 +1094,62 @@
    "serial": "WR-26-1017-07",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "미분류 사건 군집 급증 (어느 전역에도 속하지 않는 보도 5건 이상)",
+   "title": "위성 열점 경보 (감시 시설·분쟁 지역에서 평소의 3배 이상, NASA FIRMS)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1017-07.md",
-   "key": "WR:tripwire:coverage_surge:2026-10-17"
+   "key": "WR:tripwire:firms_site_alert:2026-10-17"
   },
   {
    "serial": "WR-26-1017-08",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "위성 열점 경보 (감시 시설·분쟁 지역에서 평소의 3배 이상, NASA FIRMS)",
+   "title": "미 상업 원유 재고 주간 500만 배럴 이상 감소 (EIA)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1017-08.md",
-   "key": "WR:tripwire:firms_site_alert:2026-10-17"
+   "key": "WR:tripwire:eia_crude_draw:2026-10-17"
   },
   {
    "serial": "WR-26-1017-09",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "미 상업 원유 재고 주간 500만 배럴 이상 감소 (EIA)",
+   "title": "감시 국가 인터넷 대규모 장애·차단 (IODA)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1017-09.md",
-   "key": "WR:tripwire:eia_crude_draw:2026-10-17"
+   "key": "WR:tripwire:ioda_outage:2026-10-17"
   },
   {
    "serial": "WR-26-1017-10",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "감시 국가 인터넷 대규모 장애·차단 (IODA)",
+   "title": "감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1017-10.md",
-   "key": "WR:tripwire:ioda_outage:2026-10-17"
+   "key": "WR:tripwire:quake_near_site:2026-10-17"
   },
   {
    "serial": "WR-26-1017-11",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)",
+   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1017-11.md",
-   "key": "WR:tripwire:quake_near_site:2026-10-17"
+   "key": "WR:tripwire:gdacs_red:2026-10-17"
   },
   {
    "serial": "WR-26-1017-12",
    "kind": "WR",
    "d": "2026-10-17",
-   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
-   "th": null,
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1017-12.md",
-   "key": "WR:tripwire:gdacs_red:2026-10-17"
-  },
-  {
-   "serial": "WR-26-1017-13",
-   "kind": "WR",
-   "d": "2026-10-17",
    "title": "VPN·방화벽 등 경계 장비 취약점 실제 악용 확인 (CISA KEV, 3일 내)",
    "th": null,
    "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1017-13.md",
+   "path": "products/WR-26-1017-12.md",
    "key": "WR:tripwire:kev_edge:2026-10-17"
   }
  ],
- "generated": "2026-10-17T04:40:53Z"
+ "generated": "2026-10-17T04:42:01Z"
 }

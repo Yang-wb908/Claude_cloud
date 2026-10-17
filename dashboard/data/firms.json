@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-16T21:23:44Z",
+ "generated": "2026-10-17T04:41:48Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
- "n_alerts": 4,
+ "n_alerts": 3,
  "errors": [],
- "learning": 29,
+ "learning": 28,
  "sites": [
   {
    "id": "salavat",
@@ -17,14 +17,14 @@
    "lat": 53.38,
    "lon": 55.97,
    "r_km": 6,
-   "n": 5,
-   "base_days": 4,
-   "base_n": 2.5,
-   "frp_max": 2.8,
-   "base_frp": 1.05,
+   "n": 7,
+   "base_days": 5,
+   "base_n": 4,
+   "frp_max": 2.1,
+   "base_frp": 1.1,
    "at": [
-    55.9029,
-    53.40884
+    55.91108,
+    53.41133
    ],
    "d": "2026-10-16",
    "status": "normal"
@@ -39,10 +39,10 @@
    "lon": 73.22,
    "r_km": 6,
    "n": 0,
-   "base_days": 6,
-   "base_n": 1.0,
+   "base_days": 7,
+   "base_n": 1,
    "frp_max": 0,
-   "base_frp": 0.5,
+   "base_frp": 0.4,
    "at": null,
    "d": null,
    "status": "normal"
@@ -56,17 +56,17 @@
    "lat": 54.59,
    "lon": 39.73,
    "r_km": 5,
-   "n": 3,
-   "base_days": 3,
-   "base_n": 0,
-   "frp_max": 18.8,
-   "base_frp": 0,
+   "n": 2,
+   "base_days": 4,
+   "base_n": 1.0,
+   "frp_max": 4.1,
+   "base_frp": 0.55,
    "at": [
-    39.75943,
-    54.55457
+    39.75785,
+    54.55607
    ],
    "d": "2026-10-16",
-   "status": "learning"
+   "status": "normal"
   },
   {
    "id": "volgograd",
@@ -131,16 +131,16 @@
    "lat": 59.47,
    "lon": 32.03,
    "r_km": 5,
-   "n": 1,
-   "base_days": 6,
-   "base_n": 0.5,
-   "frp_max": 0.9,
-   "base_frp": 0.4,
+   "n": 3,
+   "base_days": 7,
+   "base_n": 1,
+   "frp_max": 1.7,
+   "base_frp": 0.8,
    "at": [
-    32.0847,
-    59.50435
+    32.08007,
+    59.50243
    ],
-   "d": "2026-10-15",
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -170,13 +170,16 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 0,
-   "base_days": 7,
-   "base_n": 3,
-   "frp_max": 0,
-   "base_frp": 1.5,
-   "at": null,
-   "d": null,
+   "n": 2,
+   "base_days": 8,
+   "base_n": 3.0,
+   "frp_max": 1.6,
+   "base_frp": 1.4,
+   "at": [
+    37.81023,
+    44.73551
+   ],
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -225,10 +228,10 @@
    "lon": 46.2,
    "r_km": 5,
    "n": 0,
-   "base_days": 6,
-   "base_n": 0.0,
+   "base_days": 7,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -260,11 +263,11 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 15,
-   "base_days": 7,
-   "base_n": 7,
+   "n": 12,
+   "base_days": 8,
+   "base_n": 7.5,
    "frp_max": 9.5,
-   "base_frp": 5.1,
+   "base_frp": 6.25,
    "at": [
     48.27635,
     30.34722
@@ -281,11 +284,11 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 10,
-   "base_days": 7,
-   "base_n": 15,
+   "n": 17,
+   "base_days": 8,
+   "base_n": 13.5,
    "frp_max": 8.6,
-   "base_frp": 6.1,
+   "base_frp": 6.15,
    "at": [
     56.05958,
     27.17048
@@ -302,16 +305,16 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 7,
-   "base_days": 7,
-   "base_n": 3,
-   "frp_max": 2.5,
-   "base_frp": 1.0,
+   "n": 2,
+   "base_days": 8,
+   "base_n": 3.5,
+   "frp_max": 1.3,
+   "base_frp": 1.05,
    "at": [
-    50.30904,
-    29.2157
+    50.31108,
+    29.21467
    ],
-   "d": "2026-10-15",
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -360,15 +363,15 @@
    "lon": 50.16,
    "r_km": 7,
    "n": 2,
-   "base_days": 4,
-   "base_n": 1.0,
-   "frp_max": 1.6,
-   "base_frp": 2.45,
+   "base_days": 5,
+   "base_n": 1,
+   "frp_max": 2.7,
+   "base_frp": 2.1,
    "at": [
-    50.11447,
-    26.68229
+    50.11245,
+    26.68298
    ],
-   "d": "2026-10-15",
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -380,16 +383,16 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 4,
-   "base_days": 7,
-   "base_n": 2,
-   "frp_max": 2.4,
-   "base_frp": 1.3,
+   "n": 5,
+   "base_days": 8,
+   "base_n": 2.0,
+   "frp_max": 2.2,
+   "base_frp": 1.4500000000000002,
    "at": [
-    49.70054,
-    25.92797
+    49.69826,
+    25.93191
    ],
-   "d": "2026-10-15",
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -437,14 +440,14 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 52,
-   "base_days": 7,
-   "base_n": 26,
-   "frp_max": 25.7,
-   "base_frp": 6.0,
+   "n": 43,
+   "base_days": 8,
+   "base_n": 30.0,
+   "frp_max": 12.3,
+   "base_frp": 6.55,
    "at": [
-    51.55105,
-    25.90347
+    51.54523,
+    25.89915
    ],
    "d": "2026-10-16",
    "status": "normal"
@@ -621,10 +624,10 @@
    "lon": 25.35,
    "r_km": 10,
    "n": 0,
-   "base_days": 5,
-   "base_n": 0,
+   "base_days": 6,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -693,13 +696,13 @@
    "lon": 29.72,
    "r_km": 10,
    "n": 39,
-   "base_days": 6,
-   "base_n": 4.0,
-   "frp_max": 33.7,
-   "base_frp": 11.95,
+   "base_days": 7,
+   "base_n": 5,
+   "frp_max": 17.2,
+   "base_frp": 16.4,
    "at": [
-    29.72119,
-    10.95922
+    29.77875,
+    11.05277
    ],
    "d": "2026-10-16",
    "status": "alert"
@@ -731,14 +734,14 @@
    "lat": 11.75,
    "lon": -70.22,
    "r_km": 8,
-   "n": 19,
-   "base_days": 7,
-   "base_n": 10,
-   "frp_max": 21.0,
-   "base_frp": 7.8,
+   "n": 20,
+   "base_days": 8,
+   "base_n": 10.5,
+   "frp_max": 20.9,
+   "base_frp": 8.95,
    "at": [
-    -70.19485,
-    11.73653
+    -70.19336,
+    11.74208
    ],
    "d": "2026-10-16",
    "status": "normal"
@@ -825,10 +828,10 @@
    "lon": 72.07,
    "r_km": 8,
    "n": 1,
-   "base_days": 7,
-   "base_n": 0,
+   "base_days": 8,
+   "base_n": 0.0,
    "frp_max": 1.0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": [
     72.06534,
     71.25598
@@ -848,9 +851,9 @@
     27.5,
     16.0
    ],
-   "n": 1570,
-   "base_days": 7,
-   "base_n": 68,
+   "n": 1580,
+   "base_days": 8,
+   "base_n": 102.5,
    "n_hi": 318,
    "d": "2026-10-16",
    "status": "alert"
@@ -865,9 +868,9 @@
     32.5,
     14.5
    ],
-   "n": 2543,
-   "base_days": 7,
-   "base_n": 280,
+   "n": 2578,
+   "base_days": 8,
+   "base_n": 324.5,
    "n_hi": 386,
    "d": "2026-10-16",
    "status": "alert"
@@ -883,8 +886,8 @@
     31.6
    ],
    "n": 0,
-   "base_days": 6,
-   "base_n": 0.0,
+   "base_days": 7,
+   "base_n": 0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -899,11 +902,11 @@
     35.9,
     33.6
    ],
-   "n": 1,
-   "base_days": 6,
-   "base_n": 0.0,
+   "n": 0,
+   "base_days": 7,
+   "base_n": 0,
    "n_hi": 0,
-   "d": "2026-10-15",
+   "d": null,
    "status": "normal"
   },
   {
@@ -916,12 +919,12 @@
     40.0,
     14.9
    ],
-   "n": 137,
-   "base_days": 7,
-   "base_n": 33,
-   "n_hi": 29,
+   "n": 71,
+   "base_days": 8,
+   "base_n": 39.5,
+   "n_hi": 15,
    "d": "2026-10-16",
-   "status": "alert"
+   "status": "normal"
   },
   {
    "id": "east_drc",
@@ -933,10 +936,10 @@
     30.0,
     1.0
    ],
-   "n": 160,
-   "base_days": 7,
-   "base_n": 104,
-   "n_hi": 72,
+   "n": 1,
+   "base_days": 8,
+   "base_n": 131.5,
+   "n_hi": 1,
    "d": "2026-10-16",
    "status": "normal"
   },
@@ -950,11 +953,11 @@
     94.5,
     21.5
    ],
-   "n": 0,
-   "base_days": 5,
-   "base_n": 0,
+   "n": 4,
+   "base_days": 6,
+   "base_n": 0.0,
    "n_hi": 0,
-   "d": null,
+   "d": "2026-10-16",
    "status": "normal"
   },
   {
@@ -968,8 +971,8 @@
     49.5
    ],
    "n": 0,
-   "base_days": 7,
-   "base_n": 135,
+   "base_days": 8,
+   "base_n": 87.0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -980,13 +983,13 @@
    "d": "2026-10-16",
    "t": "X",
    "at": [
-    29.721,
-    10.959
+    29.779,
+    11.053
    ],
    "th": "sudan",
    "p": "카두글리",
-   "x": "위성 열점: 카두글리 반경 10km 안 39건, 최대 FRP 34MW (평소 4건·12MW). 원인 미상, 피격·화재 여부 확인 필요",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-16;@29.721,10.959,12.0z",
+   "x": "위성 열점: 카두글리 반경 10km 안 39건, 최대 FRP 17MW (평소 5건·16MW). 원인 미상, 피격·화재 여부 확인 필요",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-16;@29.779,11.053,12.0z",
    "g": "B2",
    "src": "firms",
    "lang": "ko",
@@ -1003,7 +1006,7 @@
    ],
    "th": "sudan",
    "p": "다르푸르",
-   "x": "위성 열점 급증: 다르푸르 하루 1570건 (평소 68건, FRP 10MW 이상 318건). 방화·포격 화재 가능성",
+   "x": "위성 열점 급증: 다르푸르 하루 1580건 (평소 102건, FRP 10MW 이상 318건). 방화·포격 화재 가능성",
    "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-16;@24.750,13.000,8.0z",
    "g": "B2",
    "src": "firms",
@@ -1021,31 +1024,13 @@
    ],
    "th": "sudan",
    "p": "코르도판",
-   "x": "위성 열점 급증: 코르도판 하루 2543건 (평소 280건, FRP 10MW 이상 386건). 방화·포격 화재 가능성",
+   "x": "위성 열점 급증: 코르도판 하루 2578건 (평소 324건, FRP 10MW 이상 386건). 방화·포격 화재 가능성",
    "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-16;@30.000,12.000,8.0z",
    "g": "B2",
    "src": "firms",
    "lang": "ko",
    "auto": true,
    "id": "firms-aoi-kordofan-2026-10-16",
-   "r": 3
-  },
-  {
-   "d": "2026-10-16",
-   "t": "X",
-   "at": [
-    38.25,
-    13.55
-   ],
-   "th": "ethiopia",
-   "p": "티그라이",
-   "x": "위성 열점 급증: 티그라이 하루 137건 (평소 33건, FRP 10MW 이상 29건). 방화·포격 화재 가능성",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-16;@38.250,13.550,8.0z",
-   "g": "B2",
-   "src": "firms",
-   "lang": "ko",
-   "auto": true,
-   "id": "firms-aoi-tigray-2026-10-16",
    "r": 3
   }
  ]
