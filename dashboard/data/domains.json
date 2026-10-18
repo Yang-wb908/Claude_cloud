@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-18T11:24:49Z",
+ "generated": "2026-10-18T16:03:09Z",
  "adsb": {
-  "ok": false,
-  "at": "2026-10-18T05:01:13Z",
+  "ok": true,
+  "at": "2026-10-18T16:03:09Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,35 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
-     "by_role": {
-      "airlift": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 36.78,
-       "lon": 127.13,
-       "alt": 5300,
-       "reg": "168075"
-      },
-      {
-       "flight": "GRACE02",
-       "t": "KC2",
-       "role": "other",
-       "lat": 33.01,
-       "lon": 131.78,
-       "alt": 19000,
-       "reg": "38-1217"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -87,70 +65,33 @@
       60.0,
       30.5
      ],
-     "n": 6,
-     "key": 2,
-     "base": 1.0,
-     "runs": 32,
+     "n": 2,
+     "key": 1,
+     "base": 1,
+     "runs": 33,
      "status": "normal",
      "by_role": {
-      "tanker": 2,
-      "other": 3,
-      "airlift": 1
+      "other": 1,
+      "tanker": 1
      },
      "ac": [
+      {
+       "flight": "DU203",
+       "t": "A139",
+       "role": "other",
+       "lat": 24.99,
+       "lon": 55.18,
+       "alt": 1050,
+       "reg": "DU-203"
+      },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.69,
-       "lon": 54.11,
-       "alt": 27000,
-       "reg": "19-46108"
-      },
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 24.61,
-       "lon": 54.37,
-       "alt": 30000,
-       "reg": ""
-      },
-      {
-       "flight": "ZABEEL03",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 24.72,
-       "lon": 55.23,
-       "alt": 22600,
-       "reg": "1302"
-      },
-      {
-       "flight": "YETI47",
-       "t": "",
-       "role": "other",
-       "lat": 25.46,
-       "lon": 55.82,
-       "alt": 25525,
-       "reg": ""
-      },
-      {
-       "flight": "MJN502",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 25.84,
-       "lon": 56.52,
-       "alt": 11750,
-       "reg": "502"
-      },
-      {
-       "flight": "MJN575",
-       "t": "A320",
-       "role": "other",
-       "lat": 23.05,
-       "lon": 57.86,
-       "alt": 16275,
-       "reg": "554"
+       "lat": 24.88,
+       "lon": 55.3,
+       "alt": 29500,
+       "reg": "19-46110"
       }
      ]
     },
@@ -165,8 +106,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -180,25 +121,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 32,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "RCH259",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 33.99,
-       "lon": 31.49,
-       "alt": 37000,
-       "reg": "60-0322"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -211,8 +140,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -226,13 +155,34 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "SVF649",
+       "t": "SF34",
+       "role": "other",
+       "lat": 58.56,
+       "lon": 16.03,
+       "alt": 10700,
+       "reg": "100008"
+      },
+      {
+       "flight": "RSD806",
+       "t": "T204",
+       "role": "other",
+       "lat": 59.77,
+       "lon": 24.59,
+       "alt": 35025,
+       "reg": "RA-64057"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -245,21 +195,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 32,
+     "base": 0,
+     "runs": 33,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 9
-  },
-  "err": "ConnectionError: HTTPSConnectionPool(host='api.adsb.lol', port=443): Max retries exceeded with url: /v2/mil (Caused by NewConnectionError(\"HTTPSConnection(host='api.adsb.lol', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+   "total_mil": 4
+  }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-18T11:24:49Z",
+  "at": "2026-10-18T16:03:09Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -420,15 +369,17 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-18T11:24:49Z",
+  "at": "2026-10-18T16:03:09Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 45,
-    "??": 22,
+    "??": 20,
     "BR": 4,
     "IT": 3,
+    "MY": 2,
     "NL": 2,
+    "DE": 2,
     "KR": 2,
     "TH": 2,
     "JP": 2,
@@ -436,17 +387,15 @@
     "MX": 2,
     "AT": 1,
     "SG": 1,
-    "BE": 1,
-    "HK": 1,
-    "AD": 1
+    "BE": 1
    },
    "by_group": {
-    "N0n": 31,
-    "qilin": 11,
+    "N0n": 29,
+    "qilin": 15,
     "THE SEVEN DEADLY SINS": 7,
-    "iah6477": 7,
+    "Helix": 6,
     "lockbit5": 6,
-    "Helix": 5,
+    "iah6477": 6,
     "everest": 4,
     "play": 4,
     "thegentlemen": 4,
