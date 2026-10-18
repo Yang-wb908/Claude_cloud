@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 69.5,
+   "p": 71.2,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 13.9,
+   "p": 6.4,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -28,12 +28,25 @@
      "key": "ind:iran:0",
      "f": 0.5,
      "note": "공격 재개는 재개방과 불일치"
+    },
+    {
+     "key": "market:hormuz_reopen",
+     "f": 0.4,
+     "note": "예측시장 1% (가중 0.30)"
     }
-   ]
+   ],
+   "market": {
+    "p": 1.0,
+    "q": "Strait of Hormuz traffic returns to normal by October 31?",
+    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
+    "vol": 2822381,
+    "end": "2026-11-01",
+    "w": 0.3
+   }
   },
   {
    "id": "hormuz_war",
-   "p": 16.6,
+   "p": 22.4,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -43,8 +56,13 @@
      "note": "해상 피격 24시간 3건"
     },
     {
+     "key": "sens:ioda:iran",
+     "f": 1.5,
+     "note": "이란·걸프 국가 인터넷 대규모 차단 (IODA)"
+    },
+    {
      "key": "market:hormuz_war",
-     "f": 0.959,
+     "f": 0.921,
      "note": "예측시장 16% (가중 0.10)"
     }
    ],
@@ -52,7 +70,7 @@
     "p": 15.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 74446878,
+    "vol": 74505861,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -121,7 +139,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 44206253,
+    "vol": 44258853,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -142,21 +160,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 19.7,
+   "p": 7.6,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 0.738,
-     "note": "예측시장 14% (가중 0.40)"
+     "f": 0.247,
+     "note": "예측시장 1% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 13.5,
-    "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-    "vol": 10178910,
+    "p": 1.0,
+    "q": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033",
+    "vol": 6365498,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -208,42 +226,42 @@
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 64.4,
+   "p": 66.8,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 1.825,
-     "note": "예측시장 77% (가중 0.50)"
+     "f": 2.013,
+     "note": "예측시장 80% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 76.9,
+    "p": 80.2,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 21501778,
+    "vol": 22310838,
     "end": "2026-10-05",
     "w": 0.5
    }
   },
   {
    "id": "brazil_lula_win",
-   "p": 35.6,
+   "p": 33.0,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_lula_win",
-     "f": 0.554,
-     "note": "예측시장 24% (가중 0.50)"
+     "f": 0.492,
+     "note": "예측시장 20% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 23.5,
+    "p": 19.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 25400426,
+    "vol": 26096839,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -277,7 +295,7 @@
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 10579352,
+    "vol": 10609765,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -333,13 +351,18 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 10.3,
+   "p": 12.1,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
+     "key": "sens:ioda:southasia",
+     "f": 1.3,
+     "note": "남아시아 인터넷 대규모 장애 (IODA)"
+    },
+    {
      "key": "market:india_pak_loc_escalation",
-     "f": 1.032,
+     "f": 0.954,
      "note": "예측시장 11% (가중 0.30)"
     }
    ],
@@ -355,6 +378,13 @@
  ],
  "review": [
   {
+   "id": "hormuz_reopen",
+   "house": 30.0,
+   "market": 1.0,
+   "q": "Strait of Hormuz traffic returns to normal by October 31?",
+   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
+  },
+  {
    "id": "blacksea_deal",
    "house": 30.0,
    "market": 7.0,
@@ -362,16 +392,23 @@
    "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
   },
   {
+   "id": "fed_hawkish",
+   "house": 25.0,
+   "market": 1.0,
+   "q": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
+   "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033"
+  },
+  {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 76.9,
+   "market": 80.2,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
   {
    "id": "brazil_lula_win",
    "house": 50.0,
-   "market": 23.5,
+   "market": 19.5,
    "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election"
   },
@@ -388,15 +425,20 @@
    "sudan"
   ],
   "ioda": [
+   "carib",
    "europe",
+   "gaza",
+   "iran",
+   "latam",
    "oceania",
+   "scs",
+   "southasia",
    "ukraine"
   ],
   "gdacs": [
    "namerica",
    "oceania",
-   "scs",
-   "southasia"
+   "scs"
   ],
   "gdacs_tc": [
    "namerica"
