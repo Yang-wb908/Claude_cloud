@@ -1,21 +1,21 @@
-### 주간 백테스트 2026-10-17
-시계열 26개 · 사건 연구 66건 · 판단 장부 104건(판정 10건)
+### 주간 백테스트 2026-10-18
+시계열 26개 · 사건 연구 75건 · 판단 장부 104건(판정 10건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | 3.72 | None | None | None | None |
-| wheat | -1.42 | None | None | None | None |
-| gold | 0.26 | None | None | None | None |
-| dxy | -0.16 | None | None | None | None |
-| vix | 21.45 | None | None | None | None |
-| kospi | 2.05 | None | None | None | None |
+| brent | None | None | None | None | None |
+| wheat | None | None | None | None | None |
+| gold | None | None | None | None | None |
+| dxy | None | None | None | None | None |
+| vix | None | None | None | None | None |
+| kospi | None | None | None | None | None |
 | krw | -0.85 | None | None | None | None |
-| spx | -1.09 | None | None | None | None |
+| spx | None | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
 |---|---|---|---|---|---|
 | 브렌트유 110달러 돌파 | 5 | -22.33 | -22.33 | 5.35 | - |
-| 브렌트유 85달러 하회 | 4 | 18.38 | 18.38 | 1.18 | - |
+| 브렌트유 85달러 하회 | 4 | 20.84 | 20.84 | 0.87 | - |
 | 원/달러 1,400원 돌파 | 9 | 2.69 | 2.42 | 2.06 | - |
 | 미 10년물 5.5% 돌파 | 0 | None | None | None | - |
 | 유럽 TTF 가스 100유로/MWh 돌파 | 0 | None | None | None | - |
