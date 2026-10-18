@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-18T05:01:13Z",
+ "generated": "2026-10-18T11:24:49Z",
  "adsb": {
-  "ok": true,
+  "ok": false,
   "at": "2026-10-18T05:01:13Z",
   "data": {
    "areas": {
@@ -254,11 +254,12 @@
    },
    "n_surge": 0,
    "total_mil": 9
-  }
+  },
+  "err": "ConnectionError: HTTPSConnectionPool(host='api.adsb.lol', port=443): Max retries exceeded with url: /v2/mil (Caused by NewConnectionError(\"HTTPSConnection(host='api.adsb.lol', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-18T05:01:13Z",
+  "at": "2026-10-18T11:24:49Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -419,15 +420,15 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-18T05:01:13Z",
+  "at": "2026-10-18T11:24:49Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 43,
+    "US": 45,
     "??": 22,
     "BR": 4,
     "IT": 3,
-    "GB": 3,
+    "NL": 2,
     "KR": 2,
     "TH": 2,
     "JP": 2,
@@ -440,15 +441,15 @@
     "AD": 1
    },
    "by_group": {
-    "N0n": 28,
-    "qilin": 13,
+    "N0n": 31,
+    "qilin": 11,
     "THE SEVEN DEADLY SINS": 7,
     "iah6477": 7,
     "lockbit5": 6,
-    "thegentlemen": 5,
-    "Helix": 4,
+    "Helix": 5,
     "everest": 4,
     "play": 4,
+    "thegentlemen": 4,
     "incransom": 4
    },
    "kr": [

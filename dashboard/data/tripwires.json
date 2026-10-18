@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T05:01:37Z",
+ "generated": "2026-10-18T11:26:10Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "maritime_attacks",
@@ -18,10 +18,21 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 29,
+   "current": 31,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
+  },
+  {
+   "id": "ethiopia_interstate",
+   "title": "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)",
+   "sev": 4,
+   "th": "ethiopia",
+   "why": "국가 간 전쟁 공식화 가능성.",
+   "current": 5,
+   "threshold": 5,
+   "op": ">=",
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "copper_6",
@@ -32,7 +43,7 @@
    "current": 6.57,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "bio_health_events",
@@ -40,10 +51,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 12,
+   "current": 14,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "firms_site_alert",
@@ -54,7 +65,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "eia_crude_draw",
@@ -65,7 +76,7 @@
    "current": -8557.0,
    "threshold": -5000,
    "op": "<=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "ioda_outage",
@@ -76,7 +87,7 @@
    "current": 76,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "quake_near_site",
@@ -87,7 +98,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "gdacs_red",
@@ -98,7 +109,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   },
   {
    "id": "kev_edge",
@@ -109,7 +120,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-18T05:01:37Z"
+   "at": "2026-10-18T11:26:10Z"
   }
  ]
 }

@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 71.2,
+   "p": 70.9,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 6.4,
+   "p": 6.8,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.4,
+     "f": 0.433,
      "note": "예측시장 1% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 1.0,
+    "p": 1.3,
     "q": "Strait of Hormuz traffic returns to normal by October 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
-    "vol": 2822381,
+    "vol": 2831216,
     "end": "2026-11-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 22.4,
+   "p": 22.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -70,7 +70,7 @@
     "p": 15.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 74505861,
+    "vol": 74542249,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -139,7 +139,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 44258853,
+    "vol": 44264556,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -174,7 +174,7 @@
     "p": 1.0,
     "q": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033",
-    "vol": 6365498,
+    "vol": 6369437,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -201,14 +201,20 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 50.0,
+   "p": 75.0,
    "k": 1,
    "prior": 50.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:ethiopia_interstate",
+     "f": 3.0,
+     "note": "국가 간 교전 사건 급증"
+    }
+   ]
   },
   {
    "id": "bio_spread",
-   "p": 14.3,
+   "p": 13.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -221,33 +227,46 @@
      "key": "ind:bio:0",
      "f": 0.5,
      "note": "접촉자 2차 발병"
+    },
+    {
+     "key": "market:bio_spread",
+     "f": 0.896,
+     "note": "예측시장 2% (가중 0.05)"
     }
-   ]
+   ],
+   "market": {
+    "p": 1.8,
+    "q": "Plague pandemic in 2026?",
+    "url": "https://polymarket.com/event/plague-pandemic-in-2026",
+    "vol": 492741,
+    "end": "2027-01-01",
+    "w": 0.05
+   }
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 66.8,
+   "p": 67.1,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 2.013,
-     "note": "예측시장 80% (가중 0.50)"
+     "f": 2.051,
+     "note": "예측시장 81% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 80.2,
+    "p": 80.8,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 22310838,
+    "vol": 22417981,
     "end": "2026-10-05",
     "w": 0.5
    }
   },
   {
    "id": "brazil_lula_win",
-   "p": 33.0,
+   "p": 32.9,
    "k": 1,
    "prior": 50.0,
    "evidence": [
@@ -261,7 +280,7 @@
     "p": 19.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 26096839,
+    "vol": 26120752,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -295,7 +314,7 @@
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 10609765,
+    "vol": 10646932,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -380,7 +399,7 @@
   {
    "id": "hormuz_reopen",
    "house": 30.0,
-   "market": 1.0,
+   "market": 1.3,
    "q": "Strait of Hormuz traffic returns to normal by October 31?",
    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
   },
@@ -401,7 +420,7 @@
   {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 80.2,
+   "market": 80.8,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
@@ -430,6 +449,7 @@
    "gaza",
    "iran",
    "latam",
+   "lebanon",
    "oceania",
    "scs",
    "southasia",
@@ -452,6 +472,7 @@
   "bio_health_events",
   "copper_6",
   "eia_crude_draw",
+  "ethiopia_interstate",
   "firms_site_alert",
   "gdacs_red",
   "hormuz_transits_low",
