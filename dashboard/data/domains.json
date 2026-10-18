@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-18T16:03:09Z",
+ "generated": "2026-10-18T20:56:12Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-18T16:03:09Z",
+  "at": "2026-10-18T20:56:12Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -66,32 +66,31 @@
       30.5
      ],
      "n": 2,
-     "key": 1,
-     "base": 1,
-     "runs": 33,
+     "key": 2,
+     "base": 1.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {
-      "other": 1,
-      "tanker": 1
+      "tanker": 2
      },
      "ac": [
-      {
-       "flight": "DU203",
-       "t": "A139",
-       "role": "other",
-       "lat": 24.99,
-       "lon": 55.18,
-       "alt": 1050,
-       "reg": "DU-203"
-      },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.88,
+       "lat": 24.74,
+       "lon": 55.15,
+       "alt": 27525,
+       "reg": "20-46082"
+      },
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 24.89,
        "lon": 55.3,
        "alt": 29500,
-       "reg": "19-46110"
+       "reg": "59-1474"
       }
      ]
     },
@@ -106,8 +105,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -123,8 +122,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -140,8 +139,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -155,34 +154,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "SVF649",
-       "t": "SF34",
-       "role": "other",
-       "lat": 58.56,
-       "lon": 16.03,
-       "alt": 10700,
-       "reg": "100008"
-      },
-      {
-       "flight": "RSD806",
-       "t": "T204",
-       "role": "other",
-       "lat": 59.77,
-       "lon": 24.59,
-       "alt": 35025,
-       "reg": "RA-64057"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -195,20 +173,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 33,
+     "base": 0.0,
+     "runs": 34,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-18T16:03:09Z",
+  "at": "2026-10-18T20:56:12Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -369,14 +347,14 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-18T16:03:09Z",
+  "at": "2026-10-18T20:56:12Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 45,
+    "US": 48,
     "??": 20,
-    "BR": 4,
     "IT": 3,
+    "BR": 3,
     "MY": 2,
     "NL": 2,
     "DE": 2,
@@ -390,12 +368,12 @@
     "BE": 1
    },
    "by_group": {
-    "N0n": 29,
-    "qilin": 15,
+    "N0n": 30,
+    "qilin": 16,
     "THE SEVEN DEADLY SINS": 7,
+    "iah6477": 6,
     "Helix": 6,
     "lockbit5": 6,
-    "iah6477": 6,
     "everest": 4,
     "play": 4,
     "thegentlemen": 4,

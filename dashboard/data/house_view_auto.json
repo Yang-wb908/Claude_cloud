@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 67.0,
+   "p": 75.3,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 12.1,
+   "p": 6.7,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.885,
-     "note": "예측시장 12% (가중 0.30)"
+     "f": 0.4,
+     "note": "예측시장 1% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 12.5,
-    "q": "Strait of Hormuz traffic returns to normal by December 31?",
-    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 15060064,
-    "end": "2027-01-01",
+    "p": 1.0,
+    "q": "Strait of Hormuz traffic returns to normal by October 31?",
+    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
+    "vol": 2839277,
+    "end": "2026-11-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 20.9,
+   "p": 18.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -56,21 +56,16 @@
      "note": "해상 피격 24시간 3건"
     },
     {
-     "key": "sens:ioda:iran",
-     "f": 1.5,
-     "note": "이란·걸프 국가 인터넷 대규모 차단 (IODA)"
-    },
-    {
      "key": "market:hormuz_war",
-     "f": 0.914,
-     "note": "예측시장 14% (가중 0.10)"
+     "f": 0.959,
+     "note": "예측시장 16% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 14.5,
+    "p": 15.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 74581060,
+    "vol": 74598213,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -139,7 +134,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 44266951,
+    "vol": 44287879,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -153,28 +148,34 @@
   },
   {
    "id": "korea_strategic",
-   "p": 10.0,
+   "p": 16.7,
    "k": 1,
    "prior": 10.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:korea_missile",
+     "f": 1.8,
+     "note": "24시간 내 발사"
+    }
+   ]
   },
   {
    "id": "fed_hawkish",
-   "p": 7.6,
+   "p": 19.7,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 0.247,
-     "note": "예측시장 1% (가중 0.40)"
+     "f": 0.738,
+     "note": "예측시장 14% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 1.0,
-    "q": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
-    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033",
-    "vol": 6379689,
+    "p": 13.5,
+    "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
+    "vol": 10301416,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -214,7 +215,7 @@
   },
   {
    "id": "bio_spread",
-   "p": 13.0,
+   "p": 14.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -227,60 +228,47 @@
      "key": "ind:bio:0",
      "f": 0.5,
      "note": "접촉자 2차 발병"
-    },
-    {
-     "key": "market:bio_spread",
-     "f": 0.896,
-     "note": "예측시장 2% (가중 0.05)"
     }
-   ],
-   "market": {
-    "p": 1.8,
-    "q": "Plague pandemic in 2026?",
-    "url": "https://polymarket.com/event/plague-pandemic-in-2026",
-    "vol": 492991,
-    "end": "2027-01-01",
-    "w": 0.05
-   }
+   ]
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 66.9,
+   "p": 66.1,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 2.019,
-     "note": "예측시장 80% (가중 0.50)"
+     "f": 1.951,
+     "note": "예측시장 79% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 80.3,
+    "p": 79.2,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 22490615,
+    "vol": 22579796,
     "end": "2026-10-05",
     "w": 0.5
    }
   },
   {
    "id": "brazil_lula_win",
-   "p": 33.0,
+   "p": 33.7,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_lula_win",
-     "f": 0.492,
+     "f": 0.508,
      "note": "예측시장 20% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 19.5,
+    "p": 20.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 26195136,
+    "vol": 26348476,
     "end": "2026-10-05",
     "w": 0.5
    }
@@ -313,8 +301,8 @@
    "market": {
     "p": 90.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-    "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 10650059,
+    "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026",
+    "vol": 10661332,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -370,18 +358,13 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 12.1,
+   "p": 10.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
-     "key": "sens:ioda:southasia",
-     "f": 1.3,
-     "note": "남아시아 인터넷 대규모 장애 (IODA)"
-    },
-    {
      "key": "market:india_pak_loc_escalation",
-     "f": 0.954,
+     "f": 1.032,
      "note": "예측시장 11% (가중 0.30)"
     }
    ],
@@ -397,6 +380,13 @@
  ],
  "review": [
   {
+   "id": "hormuz_reopen",
+   "house": 30.0,
+   "market": 1.0,
+   "q": "Strait of Hormuz traffic returns to normal by October 31?",
+   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
+  },
+  {
    "id": "blacksea_deal",
    "house": 30.0,
    "market": 7.0,
@@ -404,23 +394,16 @@
    "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
   },
   {
-   "id": "fed_hawkish",
-   "house": 25.0,
-   "market": 1.0,
-   "q": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
-   "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-october-2026-meeting-20260617190324033"
-  },
-  {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 80.3,
+   "market": 79.2,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
   {
    "id": "brazil_lula_win",
    "house": 50.0,
-   "market": 19.5,
+   "market": 20.5,
    "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election"
   },
@@ -429,23 +412,12 @@
    "house": 65.0,
    "market": 90.5,
    "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-   "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
+   "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026"
   }
  ],
  "sensors": {
   "firms": [
    "sudan"
-  ],
-  "ioda": [
-   "carib",
-   "europe",
-   "gaza",
-   "iran",
-   "latam",
-   "lebanon",
-   "oceania",
-   "southasia",
-   "ukraine"
   ],
   "gdacs": [
    "namerica",
@@ -468,8 +440,8 @@
   "firms_site_alert",
   "gdacs_red",
   "hormuz_transits_low",
-  "ioda_outage",
   "kev_edge",
+  "korea_missile",
   "maritime_attacks",
   "quake_near_site"
  ],
