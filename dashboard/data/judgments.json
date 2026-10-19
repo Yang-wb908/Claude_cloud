@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-18",
+ "asof": "2026-10-19",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -151,9 +151,9 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 0,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 판단 이후 대만 압박이 늘어난 징후가 잇따랐습니다. 대만 동부 해역에서 중국 해상민병 선박이 처음 포착됐고, 랴오닝 항모전단이 필리핀해에서 훈련했으며, 대만은 '해상 괴롭힘'에 가담한 중국 선박 16척을 퇴거시켰습니다. 다만 이 압박이 미 항모 공백을 노린 것인지는 근거로 확인되지 않아 확신도는 '보통'으로 둡니다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -167,6 +167,12 @@
       "필리핀 보급 임무에 대한 중국 해경의 물대포·충돌 사건이 재발함(필리핀 해경 발표 기준)"
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/10/18/taiwan-drives-away-16-chinese-ships-accused-of-maritime-harassment?traffic_source=rss",
+    "https://news.usni.org/2026/10/14/chinese-carrier-strike-group-drills-in-the-philippine-sea",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNN1djNkpiR0FjWmE2NHBIWE1acU55Z3U4b1V5eWVqZGRNLUlla01KSjhid1lxdTNKZ2NJWUZ0Smluc2tTY1poVzFRTmk2aVFBeExWWkpfNEJPWk5nTUY5Ym4xeEUwLWdHSVd1eVRVLWJrcEFaNUd2dXMzcGZjNnpTOVc5WGw0d0lkVkJrdVVlbGs1LXFScnp6TUJIT1BoYUVQS2dn?oc=5"
    ]
   },
   {
@@ -180,9 +186,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.iran",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 10월에 유조선 피격이 이어지는 가운데, 이란은 카타르를 통해 7일 내 해협 재개방안을 제시했습니다. 해협 통항을 협상 카드로 쓰는 양상과 맞습니다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -196,6 +202,12 @@
       "공격 이후 이란 내 IRGC 지휘관 교체·해임 보도나 최고국가안보회의 인사 개편이 나옴"
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://www.middleeasteye.net/live-blog/live-blog-update/araghchi-says-iran-has-presented-concrete-hormuz-reopening-proposal",
+    "https://www.aljazeera.com/news/liveblog/2026/10/18/iran-war-live-tankers-hit-in-hormuz-israeli-settlers-attack-eu-diplomats?traffic_source=rss",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/ukmto-says-unknown-projectile-hit-tanker-saudi-arabias-coast"
    ]
   },
   {
@@ -224,9 +236,14 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.theaters.iran",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 하루 통항이 2척으로 극히 적지만 0은 아니고, 간헐적 피격과 이란의 오만 근해 환적 수출이 함께 나타납니다. 완전 봉쇄가 아니라 통제된 해협이라는 판단과 맞습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.middleeasteye.net/live-blog/live-blog-update/iran-ships-some-lpg-jet-fuel-despite-us-blockade-data-shows",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/one-injured-projectiles-hit-tugboat-uae-coast-ukmto-says"
+   ]
   },
   {
    "id": "th-ukraine-1",
@@ -305,9 +322,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.yemen",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 이집트가 군사지원을 약속하고 수니파 국가들이 사우디 방어를 위해 결집했으며, 프랑스 해군도 해협에서 작전 중입니다. 분쟁이 다국적화된 것은 확인됩니다. 다만 튀르키예·파키스탄 병력이 합류했다는 직접 근거는 없습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.nytimes.com/2026/10/18/world/middleeast/egypt-saudi-defense-houthis.html",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQVkyMWR4SDh3bnZ1SEJLM0RkaWFydnJVeTg0aU9jTTVHMy1MUHoxQ0dhb0RwejBkZGJ1cXlzMEVoWGk1U0dUdC1TQkIxWVkyR1R1LTBWcmlNMUw4aXhSTnFzQUl6SS1HZ2hveGM0Tlo1RWx2R09ld2V3d2RmUXVxanBnSUU?oc=5",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxNak5WbDhfVkxPblVXQ29tN29QSEEwNkwtS3BWdXNSRDZTOW5pLTZTWm8weWZYdDBFU0YtdFl5MXpVcTZGcTR4UjBDdHhySFJoTkM1VVhtd2tEMmdmLV8za0N6Y3p1ZE82dl9yTURUN1ExQmo3TUh4U3JLbTBIaWpMOFNza3oySE9Pd2x5emZqXzdQMENvUmRHb2VRNk5VU0xldjlSUg?oc=5"
+   ]
   },
   {
    "id": "th-yemen-3",
@@ -428,9 +451,15 @@
    "conf": "높음",
    "due": "2026-11-08",
    "src": "IW.theaters.gaza",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 근거에 따르면 휴전은 형식적으로 유지되고 있습니다. 휴전 이후 1,501명이 숨졌다는 집계가 있고, 10월 중순에도 칸유니스·라파·가자시티 등에서 이스라엘의 공습이 매일 이어졌습니다. 다만 하마스 지휘부를 겨냥한 표적 제거를 휴전 예외로 운용한다는 부분은 수집된 근거에서 직접 확인되지 않아 신뢰도를 낮췄습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.middleeasteye.net/live-blog/live-blog-update/gaza-health-ministry-says-1501-palestinians-killed-october-2025",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/six-palestinians-killed-israeli-strikes-across-gaza-day",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/five-palestinians-killed-israel-gaza"
+   ]
   },
   {
    "id": "th-gaza-2",
@@ -443,9 +472,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.gaza",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 10월 11~19일 미크마스·베이타의 모스크 방화, 투르무스아이야·부르카·나블루스의 올리브 수확민 공격, 외교관 일행 공격 등 서안 정착민 폭력이 잇따랐습니다. 이스라엘군 참모총장도 전 전선 확전 가능성을 경고하며 정착민 폭력을 규탄해, 서안이 가자 휴전과 별개의 분쟁축으로 커지고 있다는 판단과 맞습니다. 다만 '분쟁축 확대'는 해석에 가까운 판단이어서 신뢰도는 보통으로 두었습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.theguardian.com/world/2026/oct/18/guardian-reporter-filmed-masked-militants-seconds-before-west-bank-attack-on-french-mayor",
+    "https://www.aljazeera.com/news/2026/10/14/settlers-set-fire-to-mosque-in-west-bank-as-israeli-forces-raid-villages?traffic_source=rss",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/settler-attacks-injures-several-west-bank-including-washington-post"
+   ]
   },
   {
    "id": "th-afpak-1",
@@ -458,9 +493,15 @@
    "conf": "높음",
    "due": "2026-11-08",
    "src": "IW.theaters.afpak",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 10월 11일 쿠람 침투 교전, 10월 18일 쿠람 국경 교전과 어퍼 쿠람 미사일 피격, 9월 한 달 탈레반 드론의 영공 침입 23건, 파키스탄의 무조건 대화 거부가 이어졌습니다. 국가 간 저강도 분쟁이 고착됐다는 판단에 맞습니다. 다만 이번 근거에서 파키스탄이 아프간 영토를 직접 공습했다는 보도는 확인되지 않습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.dawn.com/news/2037853/security-forces-respond-to-unprovoked-firing-by-afghan-taliban-along-kurram-border-state-media",
+    "https://www.dawn.com/news/2037221/afghan-talibans-cheap-but-deadly-drone-campaign",
+    "https://www.dawn.com/news/2037780/pakistan-rules-out-unconditional-talks-with-afghanistan"
+   ]
   },
   {
    "id": "th-afpak-2",
@@ -568,9 +609,15 @@
    "conf": "높음",
    "due": "2026-11-08",
    "src": "IW.theaters.sahel",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 판단 이후 JNIM과 IS 사이에 전례 없는 교전이 벌어졌고(IS는 400명 사살 주장), 지하디스트 경쟁은 나이지리아로 번져 군인 15명이 숨졌습니다. 니제르 군 내부 반란이 쿠데타 시도로 커진 일까지 겹쳐, 사헬 안보가 나아지지 않았다는 판단과 들어맞습니다.",
+   "by": "auto",
+   "evidence": [
+    "http://www.africanews.com/2026/10/16/rival-jnim-and-islamic-state-jihadists-clash-in-intensifying-sahel-turf-war/",
+    "https://www.riotimesonline.com/jnim-islamic-state-sahel-rivalry-explained-2026/",
+    "https://www.crisisgroup.org/qna/africa/niger/niger-wrestles-aftermath-military-revolt"
+   ]
   },
   {
    "id": "th-sahel-2",
@@ -658,9 +705,14 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.myanmar",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 10월 13일 보도에 따르면 라카인주에서 군정의 공습이 거세져 민간인 보호에 공백이 생겼습니다. 같은 날 응아삐섬 상륙 시도가 실패하고 아라칸군(AA)의 포위가 이어졌다는 보도도 있어, 군부가 지상 열세를 공습으로 만회한다는 판단과 맞습니다. 다만 아라칸군 통제 지역의 민간 시설을 직접 공습했다는 구체적 사건 기록은 없어서 확신도는 보통으로 둡니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.irrawaddy.com/opinion/guest-column/running-for-cover-the-limits-of-early-warning-in-rakhine-air-war.html",
+    "https://www.irrawaddy.com/news/war-against-the-junta/myanmar-regime-forces-beached-in-battle-for-sittwe.html"
+   ]
   },
   {
    "id": "th-taiwan-1",
@@ -694,9 +746,15 @@
    "conf": "낮음",
    "due": "2026-11-08",
    "src": "IW.theaters.taiwan",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 10/4 이후 중국은 10/12 실사격 구역 5곳을 설정했고, 대만 동부 해역에 해상민병 선박이 처음 나타났습니다. 랴오닝 항모전단도 필리핀해에서 훈련했고, 대만은 '해상 괴롭힘'에 가담한 중국 선박 16척을 퇴거시키는 등 대만 압박이 실제로 늘었습니다. 다만 대만 국방부장은 중국군 훈련이 대만 인근은 아니라고 밝혀 확신도는 '보통'으로 둡니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.riotimesonline.com/taiwan-strait-drills-shipping-risk-trade/",
+    "https://www.aljazeera.com/news/2026/10/18/taiwan-drives-away-16-chinese-ships-accused-of-maritime-harassment?traffic_source=rss",
+    "https://news.usni.org/2026/10/14/chinese-carrier-strike-group-drills-in-the-philippine-sea"
+   ]
   },
   {
    "id": "th-scs-1",
@@ -956,9 +1014,15 @@
    "p": 0.65,
    "due": "2026-12-31",
    "src": "INTEL.economy",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-19",
+   "note": "자동 판정(보통): 현재 브렌트는 $109.86으로 $100선 위에 있습니다. 후티의 사우디 공격 격화와 24시간 내 해상 피격·피랍 15건, 호르무즈 일일 통항 2척이라는 상황을 보면 전쟁 리스크 프리미엄이 유지된다는 판단은 지금까지 맞습니다. 다만 기한(12/31)이 남아 있고, 수출이 90%대까지 회복됐다는 부분은 제공된 근거로 확인할 수 없습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-forces-launch-110-attacks-yemen-day-houthis-say",
+    "https://gcaptain.com/iran-urges-us-to-accept-proposal-to-reopen-strait-of-hormuz/",
+    "https://www.nytimes.com/2026/10/17/world/middleeast/houthi-saudi-clashes-in-yemen.html"
+   ]
   },
   {
    "id": "eco-2",
@@ -1397,9 +1461,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 멕시코만 허리케인 상륙이나 정유·LNG·비료 터미널 가동 중단을 보여 주는 수집 사건이 없습니다. 휘발유(RB=F -4.5%)와 천연가스(NG=F -1.6%) 시세도 공급 차질 신호를 보이지 않지만, GDACS 적색 경보 1건의 내용을 알 수 없어 반대로 확정하기도 어렵습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-10-25"
+   "note": "판정 보류: 기한(2026-10-18)은 지났지만 멕시코만 허리케인 상륙이나 정유·LNG·비료 터미널 가동 중단을 다룬 수집 사건이 없다. GDACS 적색 경보 1건은 지역과 유형이 나와 있지 않고 휘발유·난방유·천연가스 선물이 내렸지만, 이것만으로 상륙이 없었다고 확정할 수는 없다.",
+   "auto_tries": 2,
+   "auto_next": "2026-10-26"
   },
   {
    "id": "scn-ethiopia_war-2026-10-08",
