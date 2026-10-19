@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-19T18:59:02Z",
+ "generated": "2026-10-19T22:31:00Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-19T18:59:02Z",
+  "at": "2026-10-19T22:31:00Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 37,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "TRK9",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 37.45,
-       "lon": 127.18,
-       "alt": 7825,
-       "reg": "TC-CBK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,23 +65,32 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 1,
-     "runs": 37,
+     "n": 2,
+     "key": 2,
+     "base": 1.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "tanker": 2
      },
      "ac": [
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.81,
-       "lon": 55.55,
-       "alt": 28025,
-       "reg": "11-46059"
+       "lat": 25.05,
+       "lon": 55.78,
+       "alt": 27000,
+       "reg": "21-46061"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.5,
+       "lon": 57.88,
+       "alt": 21500,
+       "reg": "19-46110"
       }
      ]
     },
@@ -108,8 +105,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -123,13 +120,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "RCH408",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 32.35,
+       "lon": 32.44,
+       "alt": 28000,
+       "reg": "06-6156"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -142,8 +151,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -157,34 +166,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "GNY4370",
-       "t": "",
-       "role": "other",
-       "lat": 54.33,
-       "lon": 9.78,
-       "alt": -50,
-       "reg": ""
-      },
-      {
-       "flight": "",
-       "t": "SF34",
-       "role": "other",
-       "lat": 59.35,
-       "lon": 17.95,
-       "alt": "ground",
-       "reg": "100008"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -197,20 +185,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 37,
+     "base": 0.0,
+     "runs": 38,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-19T18:59:02Z",
+  "at": "2026-10-19T22:31:00Z",
   "data": {
    "n_total": 1748,
    "recent": [
@@ -361,37 +349,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-19T18:59:02Z",
+  "at": "2026-10-19T22:31:00Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 52,
+    "US": 50,
     "??": 16,
+    "DE": 4,
     "BR": 3,
-    "DE": 3,
     "KR": 2,
     "MY": 2,
     "NL": 2,
     "IT": 2,
     "TH": 2,
+    "IN": 1,
+    "AE": 1,
+    "GB": 1,
     "AR": 1,
     "MX": 1,
-    "CN": 1,
-    "PT": 1,
-    "PE": 1,
-    "CH": 1
+    "CN": 1
    },
    "by_group": {
     "N0n": 38,
-    "qilin": 11,
+    "qilin": 15,
     "Helix": 7,
     "THE SEVEN DEADLY SINS": 7,
     "everest": 4,
     "play": 4,
     "thegentlemen": 4,
-    "incransom": 4,
     "Storm": 3,
-    "emperador": 2
+    "emperador": 2,
+    "cloak": 2
    },
    "kr": [
     {
