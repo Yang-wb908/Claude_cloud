@@ -1,19 +1,25 @@
 {
- "generated": "2026-10-20T17:21:41Z",
+ "generated": "2026-10-20T21:46:12Z",
  "days": 3,
- "unmapped_total": 13,
- "max_cluster": 4,
+ "unmapped_total": 9,
+ "max_cluster": 5,
  "max_key": "topic:China",
  "clusters": [
   {
    "key": "topic:China",
-   "n": 4,
+   "n": 5,
    "domains": 2,
    "types": {
-    "E": 4
+    "E": 5
    },
    "since": "2026-10-19",
    "sample": [
+    {
+     "d": "2026-10-20",
+     "title": "China's rare earth truce runs out on November 10 with no renewal in sight",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbDMtTFBOQVRCTHQ0VktCM1J6bWdESDVlUjJtckFZMGNYOExqQVo4WHpJaUNaemdKWVJXZk9Od3FqMTdRVXB1WG1zVVdmczYtcW9UajRFYVJZQm93eWhrRTYzT1d6cVQ5ODRxUnltT3hnVVRyeWkwanl5RTh1clA2WWpaRjRqeEJMX00tWWN5ZnN3ZHNQanBKMzU5ZlpCNzVyVnc?oc=5",
+     "domain": "news.google.com"
+    },
     {
      "d": "2026-10-20",
      "title": "China’s rare earth magnet exports to EU and US rebound in September",
@@ -41,13 +47,36 @@
    ]
   },
   {
-   "key": "topic:Copper",
-   "n": 3,
+   "key": "place:싱가포르",
+   "n": 2,
    "domains": 2,
    "types": {
-    "E": 3
+    "E": 2
    },
-   "since": "2026-10-19",
+   "since": "2026-10-20",
+   "sample": [
+    {
+     "d": "2026-10-20",
+     "title": "ENGINE: East of Suez Bunker Fuel Availability Outlook",
+     "url": "https://www.hellenicshippingnews.com/engine-east-of-suez-bunker-fuel-availability-outlook-206/",
+     "domain": "hellenicshippingnews.com"
+    },
+    {
+     "d": "2026-10-20",
+     "title": "Copper mines need US$332 bil new investment to ease shortfall",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQllPbFFuR2VMRE9mX2N6QUNMaFM0UlZqNDlvWlJSWExiWm1yU0NmZ29ucEhiN1F0a0Z2bjMzN1JmUS05WnpuOU82YkItcXcwdVRhWTZVWml3OWJqT0tIN2JyMldUaktyM2R1UDFUT1g3LTA3cnhMNUlIWE9tVGttUVNJV3JVS2huWGNQeU1NM1BrVzhnMHpuNnhVTkV4ZWdONHY4MmxGOHcwaDQ?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Copper",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-20",
    "sample": [
     {
      "d": "2026-10-20",
@@ -59,82 +88,6 @@
      "d": "2026-10-20",
      "title": "Copper price flat despite Goldman upgrade, US stockpiling",
      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUi1UTEJ6SjB6VTBMZVVBaVAwb3RGMktPa3hFSHo3SWlmclQxbVJfcUZUamdXYi14Vm9rUXNJN1JjNDgyZ1ZMTFUwSzIxY1d3NHpndFB6anh5ZENGVWdBN2xnRGRnREZLZGdHX3FKRGtnZGVkeTlqb1NQelRpNFZ2TXl5ZFlVZw?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-19",
-     "title": "Copper falls as LME stocks edge higher and mine supply concerns ease",
-     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1NS1ZUS0x6M1p0SGZhMWd5c2VjT1EwVUYtTTBvcDBQRUM1NVdkSUxzMFRSX010ODZaQnBRRnNjVUYtY2Vpa0pEUlpLd2pNNjhJ0gFWQVVfeXFMTTVrYzBRZzgwVUN0Ump2WG1hMVJQbVhDN0VDTWNZY0JOTTlQSWlqRU8wMXpJOFlfNFNIRmF0dC10MnE3Wml3YTdYSXJKWnFUQlZVMTM4ZHc?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Asia",
-   "n": 2,
-   "domains": 2,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-20",
-   "sample": [
-    {
-     "d": "2026-10-20",
-     "title": "Asia’s Coal Prices To Stay High as Supply Drops and Demand Firms",
-     "url": "https://oilprice.com/Latest-Energy-News/World-News/Asias-Coal-Prices-To-Stay-High-as-Supply-Drops-and-Demand-Firms.html",
-     "domain": "oilprice.com"
-    },
-    {
-     "d": "2026-10-20",
-     "title": "Asia's Coal Prices To Stay High as Supply Drops and Demand Firms",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcjB1WmpEYjA0X2RYUVUzV0ZxdjBWaEsya1VzYkljTVRkUTNYMGRhUlJUdlZLVFhsZmtLUVlHYU1La1JwYW5DVlgyUFhKMURpNHVYSEdfZ0VFczlrUV9wZzFfZENZVWo3VnI5TDNFTnpiZl9tUVczdGdrczE4M1FVVV9EQTRxcVVpOXEwMmtVV2ZlbW5CenY3UGNnMG5JbkdnQ0FBblhyWmlmUFRHaXMtWVN2TGtMYTBNTXo40gHAAUFVX3lxTFAydkhSTTE5dlFQQkRqcThNdkhreVl6MmEta2dxVl9Zc3JzYXFLUGw5QkRhTDJvaHk2YVYtbV9xaUkyX0FpTm5BSUZkYXR2Y1dURkhyR3lzMkNKSU96LUZWaVFEd0YxUGxIZzBxSXI2eTUwd1E2bzNOM1FwVmxaWFo1X29jUHRfdTFVNXdQdzFtcjk5VDkxQUd6NkVnUGFKZTM4TVRDdEd6a19oWVhhaDVDNWJQYzU1SzByVE1iQXpLbQ?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Energy",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-20",
-   "sample": [
-    {
-     "d": "2026-10-20",
-     "title": "Energy markets unlikely to normalise in 2027: IEA Birol",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVY3S085aUlRUk5DR3oycHR6MkJSVDh4QmRRR3FOenZ1U0Z5MXoyMENzTGRPRGs2TERWdlN1N0xkY1QyRVdWVncxQV9ZVGZ0NFNkc2dKcS1LUHRMbUg0aGNaZi1tNHBxUms2N1J5Q0liNW9FeGMwZWo3TnRQOTBjYVNzaDlFc1JRRlNtcWx0b2dmTVg2MzBuUi1reXlwNkFzQmU0MHpUTFg2ck40UzFkOTZZOFJqUGNnLVFicHFBa3pWcGlrLWo2dQ?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-20",
-     "title": "Energy markets unlikely to normalise in 2027: IEA Birol",
-     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxObWNvalQwemwta2ZhclZDemZOX0RtUFhJQjZwYmFDbDZYcmdLZnozMEhkTFEtZEhQdFE1LVZUVmRSZ0RocFNmbXhoSG9USVZydDQta0ZNY2Vmc2VQenRFa3NFN3BGR1YxeEZ2dU5fbVZPN2N5c3UzeDZLUTFWbDVibFBEMzRmZV85UV95bmRKNFoydkc1VDhNUnE0SlRienVlaE00T3VWaFBhQjFhSE43U21Nd2lXU1B6VWwtVHF6MFV2VE5r?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Japan",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 1,
-    "S": 1
-   },
-   "since": "2026-10-20",
-   "sample": [
-    {
-     "d": "2026-10-20",
-     "title": "Japan scrambles fighters over Chinese aircraft and drones between islands — South China Morning Post",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMnU4ZTJIbmgzM2cyMF9VMS1xNHY4WnZibm43cFFPLVlrSW91US1fdGtJVWc3YmFycjVjaTN4R2x0WGVDa25JR2RNOUlIWThhVWtqTV9LNWJUaGRqZGw0NzIza1JSVk5HWlo0WlN0SkhVSVRJSmM5UXBBckFpeVhFcEgwWjNnenNMY0MxVFlBVHJYQWZERFVrODJ1Q1Z1NGRVTHl5d1lwUU45bmxKakktVTRzT2hKYzVGcXBRbDJ3ajhsbzdrNGF3?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-20",
-     "title": "Japan faces rare earth supply squeeze as yttrium shortages threaten key industries",
-     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZU53eXpmN2U1eDJUTHZwWUhMZTVaU2RYVHhybHBOS3VQc0YxN1FCdzhubjhmYmVpeDROV2plWnZONEFheEZLRVdPeDN1X2VGY3UxTHdyaVc3S3Q4UFVDZmFpV0RtUk5KUlJEdkFOUnRzT2swa3pXSmRWVmJ4NkJhTHJNdXVMaGtEaEhR?oc=5",
      "domain": "news.google.com"
     }
    ]

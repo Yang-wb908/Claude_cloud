@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-20T17:21:50Z",
+ "generated": "2026-10-20T21:46:27Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-20T17:21:50Z",
+  "at": "2026-10-20T21:46:27Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 1,
      "key": 1,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
      "by_role": {
       "isr": 1
@@ -61,8 +61,8 @@
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.6,
-       "lon": 127.52,
+       "lat": 37.16,
+       "lon": 124.69,
        "alt": 38000,
        "reg": "N291SR"
       }
@@ -77,35 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 1,
-     "runs": 41,
+     "base": 1.0,
+     "runs": 42,
      "status": "normal",
-     "by_role": {
-      "airlift": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "KAF3215",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 22.53,
-       "lon": 54.82,
-       "alt": 31000,
-       "reg": "KAF343"
-      },
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 25.23,
-       "lon": 55.45,
-       "alt": 27500,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -118,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -133,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "X",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 31.72,
-       "lon": 36.0,
-       "alt": 13900,
-       "reg": "94-7320"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -164,8 +130,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -179,35 +145,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0,
-     "runs": 41,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
-     "by_role": {
-      "tanker": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "MMF47",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 53.94,
-       "lon": 11.84,
-       "alt": 2925,
-       "reg": "T-060"
-      },
-      {
-       "flight": "DRAGN11",
-       "t": "BE20",
-       "role": "other",
-       "lat": 58.22,
-       "lon": 17.04,
-       "alt": 24175,
-       "reg": "83-0497"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -218,25 +162,97 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 41,
+     "base": 0.0,
+     "runs": 42,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "DRAG972",
+       "t": "EC45",
+       "role": "other",
+       "lat": 14.71,
+       "lon": -61.04,
+       "alt": 1800,
+       "reg": "F-ZBRA"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 6
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-20T17:21:50Z",
+  "at": "2026-10-20T21:46:27Z",
   "data": {
-   "n_total": 1748,
+   "n_total": 1754,
    "recent": [
+    {
+     "cve": "CVE-2026-106931",
+     "vendor": "EG Secure Solutions",
+     "product": "SiteGuard Server Edition",
+     "name": "EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-10-23",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-96656",
+     "vendor": "Plex",
+     "product": "Media Server",
+     "name": "Plex Media Server External Control of File Name or Path Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-10-23",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-96655",
+     "vendor": "Plex",
+     "product": "Media Server",
+     "name": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-11-03",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-96654",
+     "vendor": "Plex",
+     "product": "Media Server",
+     "name": "Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-10-23",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-96652",
+     "vendor": "Plex",
+     "product": "Media Server",
+     "name": "Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-11-03",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-110936",
+     "vendor": "Siemens",
+     "product": "Software Center",
+     "name": "Siemens Software Center Uncontrolled Search Path Element Vulnerability",
+     "added": "2026-10-20",
+     "due": "2026-11-03",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-102764",
      "vendor": "BeyondTrust",
@@ -378,43 +394,43 @@
      "edge": false
     }
    ],
-   "n_recent": 14,
-   "n_week": 9
+   "n_recent": 20,
+   "n_week": 15
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-20T17:21:50Z",
+  "at": "2026-10-20T21:46:27Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 49,
-    "??": 15,
+    "US": 51,
+    "??": 11,
     "DE": 4,
+    "GB": 2,
     "CH": 2,
     "BR": 2,
     "KR": 2,
     "NL": 2,
     "IT": 2,
     "TH": 2,
+    "CA": 1,
     "ET": 1,
     "TN": 1,
     "TT": 1,
-    "ES": 1,
-    "IN": 1,
-    "AE": 1
+    "ES": 1
    },
    "by_group": {
-    "N0n": 40,
+    "N0n": 34,
     "qilin": 15,
     "Helix": 7,
+    "Booba Project": 6,
     "everest": 4,
     "play": 4,
     "thegentlemen": 4,
-    "Redact": 3,
     "Storm": 3,
-    "payload": 2,
-    "Global Secret Group": 2
+    "SilentRansomGroup": 2,
+    "Mimori": 2
    },
    "kr": [
     {
@@ -438,7 +454,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 9,
+  "kev_week": 15,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 2,
