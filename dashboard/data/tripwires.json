@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T04:59:28Z",
+ "generated": "2026-10-21T05:02:35Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,18 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
+  },
+  {
+   "id": "brent_110",
+   "title": "브렌트유 110달러 돌파",
+   "sev": 4,
+   "th": null,
+   "why": "한국 원유 도입가·물가 직결.",
+   "current": 110.28,
+   "threshold": 110,
+   "op": ">",
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "korea_missile",
@@ -21,7 +32,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +40,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 31,
+   "current": 34,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +51,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 9,
+   "current": 11,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +62,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.62,
+   "current": 6.6,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "bio_health_events",
@@ -65,7 +76,7 @@
    "current": 11,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "coverage_surge",
@@ -76,7 +87,7 @@
    "current": 5,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "firms_site_alert",
@@ -84,10 +95,10 @@
    "sev": 3,
    "th": null,
    "why": "정유·터미널·기지 주변 열점 급증은 피격·화재 신호. 사건 목록의 '위성 열점' 항목과 FIRMS 지도로 확인.",
-   "current": 2,
+   "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "eia_crude_draw",
@@ -98,7 +109,7 @@
    "current": -8557.0,
    "threshold": -5000,
    "op": "<=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   },
   {
    "id": "gdacs_red",
@@ -109,7 +120,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-21T04:59:28Z"
+   "at": "2026-10-21T05:02:35Z"
   }
  ]
 }
