@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-21T12:06:23Z",
+ "generated": "2026-10-21T17:25:19Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-21T12:06:23Z",
+  "at": "2026-10-21T17:25:19Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -49,22 +49,22 @@
       40.5
      ],
      "n": 1,
-     "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "key": 1,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "CARD38",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.06,
-       "lon": 127.14,
-       "alt": 975,
-       "reg": "19-21040"
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.24,
+       "lon": 125.42,
+       "alt": 38000,
+       "reg": "N291SR"
       }
      ]
     },
@@ -77,78 +77,60 @@
       60.0,
       30.5
      ],
-     "n": 7,
-     "key": 0,
-     "base": 1.0,
-     "runs": 44,
+     "n": 5,
+     "key": 1,
+     "base": 1,
+     "runs": 45,
      "status": "normal",
      "by_role": {
-      "other": 6,
-      "airlift": 1
+      "other": 4,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "ZAM15",
+       "flight": "ZAM38",
        "t": "PC21",
        "role": "other",
-       "lat": 25.2,
-       "lon": 50.94,
-       "alt": 9500,
+       "lat": 25.17,
+       "lon": 51.01,
+       "alt": 4575,
        "reg": "QA351"
       },
       {
-       "flight": "ZAM49",
+       "flight": "",
        "t": "PC21",
        "role": "other",
-       "lat": 25.05,
-       "lon": 50.95,
-       "alt": 8525,
-       "reg": "QA360"
+       "lat": 25.12,
+       "lon": 51.29,
+       "alt": 1575,
+       "reg": "QA350"
       },
       {
-       "flight": "NBS21",
+       "flight": "ZAM19",
        "t": "PC21",
        "role": "other",
-       "lat": 25.41,
-       "lon": 51.08,
-       "alt": 9650,
-       "reg": "QA358"
+       "lat": 25.14,
+       "lon": 51.3,
+       "alt": 1025,
+       "reg": "QA359"
       },
       {
-       "flight": "NBS22",
-       "t": "PC21",
+       "flight": "RBDN929",
+       "t": "C295",
        "role": "other",
-       "lat": 25.41,
-       "lon": 51.08,
-       "alt": 9625,
-       "reg": "QA368"
+       "lat": 24.53,
+       "lon": 55.03,
+       "alt": 1975,
+       "reg": "823"
       },
       {
-       "flight": "ZAM20",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.78,
-       "lon": 51.2,
-       "alt": 8250,
-       "reg": "QA355"
-      },
-      {
-       "flight": "AUH06",
-       "t": "B789",
-       "role": "other",
-       "lat": 24.45,
-       "lon": 54.63,
-       "alt": "ground",
-       "reg": "A6-PFG"
-      },
-      {
-       "flight": "GOLD42",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 24.45,
-       "lon": 54.67,
-       "alt": "ground",
-       "reg": "1225"
+       "flight": "ZABEEL04",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.65,
+       "lon": 55.31,
+       "alt": 23000,
+       "reg": "1302"
       }
      ]
     },
@@ -163,8 +145,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -178,42 +160,33 @@
       37.0,
       37.5
      ],
-     "n": 3,
+     "n": 2,
      "key": 1,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {
-      "other": 2,
-      "isr": 1
+      "tanker": 1,
+      "other": 1
      },
      "ac": [
       {
-       "flight": "STNGR89",
-       "t": "",
-       "role": "other",
-       "lat": 34.6,
-       "lon": 33.0,
-       "alt": 175,
-       "reg": ""
+       "flight": "CTM001",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 33.48,
+       "lon": 30.94,
+       "alt": 38000,
+       "reg": "F-RARF"
       },
       {
-       "flight": "CODY13",
-       "t": "Q9",
-       "role": "isr",
-       "lat": 34.27,
-       "lon": 33.18,
-       "alt": 17000,
-       "reg": "PR008"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
+       "flight": "CTM005",
+       "t": "FA7X",
        "role": "other",
-       "lat": 31.74,
-       "lon": 34.8,
-       "alt": 23850,
-       "reg": ""
+       "lat": 33.42,
+       "lon": 31.02,
+       "alt": 40000,
+       "reg": "F-RAFA"
       }
      ]
     },
@@ -228,8 +201,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -243,61 +216,23 @@
       30.5,
       61.0
      ],
-     "n": 5,
-     "key": 2,
-     "base": 0.0,
-     "runs": 44,
+     "n": 1,
+     "key": 0,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {
-      "other": 2,
-      "isr": 2,
       "airlift": 1
      },
      "ac": [
       {
-       "flight": "UKN1154",
-       "t": "A319",
-       "role": "other",
-       "lat": 56.48,
-       "lon": 15.96,
-       "alt": 35000,
-       "reg": "UR-ABA"
-      },
-      {
-       "flight": "",
-       "t": "AN28",
-       "role": "other",
-       "lat": 54.49,
-       "lon": 18.65,
-       "alt": "ground",
-       "reg": "0215"
-      },
-      {
-       "flight": "NATO01",
-       "t": "E3TF",
-       "role": "isr",
-       "lat": 53.75,
-       "lon": 20.17,
-       "alt": 31975,
-       "reg": "LX-N90444"
-      },
-      {
-       "flight": "BAF645",
+       "flight": "GAF128",
        "t": "A400",
        "role": "airlift",
-       "lat": 53.72,
-       "lon": 20.18,
-       "alt": 29975,
-       "reg": "CT-07"
-      },
-      {
-       "flight": "@@@@@@@@",
-       "t": "P8",
-       "role": "isr",
-       "lat": 60.59,
-       "lon": 26.13,
-       "alt": 33000,
-       "reg": "ZP806"
+       "lat": 56.17,
+       "lon": 9.75,
+       "alt": 32975,
+       "reg": "54+04"
       }
      ]
     },
@@ -312,20 +247,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 44,
+     "base": 0,
+     "runs": 45,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 16
+   "total_mil": 9
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-21T12:06:23Z",
+  "at": "2026-10-21T17:25:19Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -536,37 +471,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-21T12:06:23Z",
+  "at": "2026-10-21T17:25:19Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 53,
-    "??": 11,
+    "US": 55,
+    "??": 13,
     "DE": 4,
+    "PT": 2,
     "MY": 2,
     "GB": 2,
     "CH": 2,
-    "BR": 2,
     "KR": 2,
     "NL": 2,
+    "VN": 1,
+    "GA": 1,
     "CA": 1,
     "ET": 1,
     "TN": 1,
-    "TT": 1,
-    "ES": 1,
-    "IN": 1
+    "TT": 1
    },
    "by_group": {
-    "N0n": 30,
-    "qilin": 15,
+    "N0n": 35,
+    "qilin": 14,
     "Helix": 7,
     "Booba Project": 6,
     "SilentRansomGroup": 4,
-    "everest": 4,
-    "play": 4,
     "emperador": 3,
     "Global Secret Group": 3,
-    "Storm": 3
+    "Storm": 3,
+    "HYFLOCK": 2,
+    "Dark Project": 2
    },
    "kr": [
     {
