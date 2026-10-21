@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-21T17:25:19Z",
+ "generated": "2026-10-21T21:53:20Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-21T17:25:19Z",
+  "at": "2026-10-21T21:53:20Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 45,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.24,
-       "lon": 125.42,
-       "alt": 38000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,62 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 5,
-     "key": 1,
-     "base": 1,
-     "runs": 45,
+     "n": 0,
+     "key": 0,
+     "base": 1.0,
+     "runs": 46,
      "status": "normal",
-     "by_role": {
-      "other": 4,
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "ZAM38",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.17,
-       "lon": 51.01,
-       "alt": 4575,
-       "reg": "QA351"
-      },
-      {
-       "flight": "",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.12,
-       "lon": 51.29,
-       "alt": 1575,
-       "reg": "QA350"
-      },
-      {
-       "flight": "ZAM19",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.14,
-       "lon": 51.3,
-       "alt": 1025,
-       "reg": "QA359"
-      },
-      {
-       "flight": "RBDN929",
-       "t": "C295",
-       "role": "other",
-       "lat": 24.53,
-       "lon": 55.03,
-       "alt": 1975,
-       "reg": "823"
-      },
-      {
-       "flight": "ZABEEL04",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 24.65,
-       "lon": 55.31,
-       "alt": 23000,
-       "reg": "1302"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -145,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -160,35 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0,
-     "runs": 45,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
-     "by_role": {
-      "tanker": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "CTM001",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 33.48,
-       "lon": 30.94,
-       "alt": 38000,
-       "reg": "F-RARF"
-      },
-      {
-       "flight": "CTM005",
-       "t": "FA7X",
-       "role": "other",
-       "lat": 33.42,
-       "lon": 31.02,
-       "alt": 40000,
-       "reg": "F-RAFA"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -201,8 +118,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -216,25 +133,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "GAF128",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 56.17,
-       "lon": 9.75,
-       "alt": 32975,
-       "reg": "54+04"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -245,22 +150,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 45,
+     "base": 0.0,
+     "runs": 46,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "IWY328",
+       "t": "",
+       "role": "other",
+       "lat": 16.54,
+       "lon": -63.33,
+       "alt": 36000,
+       "reg": ""
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-21T17:25:19Z",
+  "at": "2026-10-21T21:53:20Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -471,37 +388,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-21T17:25:19Z",
+  "at": "2026-10-21T21:53:20Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 55,
-    "??": 13,
-    "DE": 4,
+    "US": 53,
+    "??": 14,
+    "DE": 5,
     "PT": 2,
     "MY": 2,
     "GB": 2,
     "CH": 2,
-    "KR": 2,
     "NL": 2,
     "VN": 1,
     "GA": 1,
+    "SG": 1,
     "CA": 1,
     "ET": 1,
     "TN": 1,
     "TT": 1
    },
    "by_group": {
-    "N0n": 35,
+    "N0n": 32,
     "qilin": 14,
     "Helix": 7,
     "Booba Project": 6,
     "SilentRansomGroup": 4,
+    "everest": 3,
     "emperador": 3,
     "Global Secret Group": 3,
     "Storm": 3,
-    "HYFLOCK": 2,
-    "Dark Project": 2
+    "HYFLOCK": 2
    },
    "kr": [
     {
@@ -511,14 +428,6 @@
      "sector": "Not Found",
      "d": "2026-10-18",
      "url": "https://www.ransomware.live/id/Q29tcGFueSAjOTJATjBu"
-    },
-    {
-     "victim": "Taekwang Network",
-     "group": "everest",
-     "country": "KR",
-     "sector": "Technology",
-     "d": "2026-10-17",
-     "url": "https://www.ransomware.live/id/VGFla3dhbmcgTmV0d29ya0BldmVyZXN0"
     }
    ]
   }
@@ -528,7 +437,7 @@
   "kev_week": 13,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 2,
-  "events": 2
+  "ransom_kr_week": 1,
+  "events": 1
  }
 }
