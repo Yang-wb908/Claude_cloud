@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T17:22:28Z",
+ "generated": "2026-10-22T21:46:56Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "brent_110",
@@ -18,10 +18,10 @@
    "sev": 4,
    "th": null,
    "why": "한국 원유 도입가·물가 직결.",
-   "current": 112.34,
+   "current": 112.87,
    "threshold": 110,
    "op": ">",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "korea_missile",
@@ -32,7 +32,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "maritime_attacks",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 40,
+   "current": 46,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -51,10 +51,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 19,
+   "current": 21,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "copper_6",
@@ -65,7 +65,7 @@
    "current": 6.4,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "bio_health_events",
@@ -73,10 +73,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 14,
+   "current": 17,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "coverage_surge",
@@ -87,7 +87,7 @@
    "current": 6,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "firms_site_alert",
@@ -98,7 +98,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "ioda_outage",
@@ -109,7 +109,7 @@
    "current": 6,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   },
   {
    "id": "gdacs_red",
@@ -120,7 +120,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-22T17:22:28Z"
+   "at": "2026-10-22T21:46:56Z"
   }
  ]
 }
