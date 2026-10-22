@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-21T21:53:20Z",
+ "generated": "2026-10-22T05:06:01Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-21T21:53:20Z",
+  "at": "2026-10-22T05:06:01Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,13 +48,34 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "CATS95",
+       "t": "BE20",
+       "role": "other",
+       "lat": 36.81,
+       "lon": 127.13,
+       "alt": 7200,
+       "reg": "84-00157"
+      },
+      {
+       "flight": "CATS01",
+       "t": "BE20",
+       "role": "other",
+       "lat": 37.11,
+       "lon": 127.34,
+       "alt": 4400,
+       "reg": "84-00165"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,13 +86,126 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 1.0,
-     "runs": 46,
+     "n": 12,
+     "key": 1,
+     "base": 1,
+     "runs": 47,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 2,
+      "other": 9,
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "LHOB01",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 24.96,
+       "lon": 51.29,
+       "alt": 4025,
+       "reg": "A7-MAO"
+      },
+      {
+       "flight": "DU111",
+       "t": "A139",
+       "role": "other",
+       "lat": 25.14,
+       "lon": 55.12,
+       "alt": 900,
+       "reg": "DU-111"
+      },
+      {
+       "flight": "FRS61",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.56,
+       "lon": 55.34,
+       "alt": 12950,
+       "reg": "944"
+      },
+      {
+       "flight": "FRS62",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.55,
+       "lon": 55.34,
+       "alt": 12925,
+       "reg": "943"
+      },
+      {
+       "flight": "FRS71",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.22,
+       "lon": 55.46,
+       "alt": 4850,
+       "reg": "942"
+      },
+      {
+       "flight": "FRS31",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.4,
+       "lon": 55.51,
+       "alt": 2550,
+       "reg": "937"
+      },
+      {
+       "flight": "FR144",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.48,
+       "lon": 55.54,
+       "alt": 2450,
+       "reg": "953"
+      },
+      {
+       "flight": "YETI59",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.53,
+       "lon": 55.54,
+       "alt": 27525,
+       "reg": "20-46075"
+      },
+      {
+       "flight": "FRS52",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.73,
+       "lon": 55.6,
+       "alt": 13500,
+       "reg": "958"
+      },
+      {
+       "flight": "FRS51",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.75,
+       "lon": 55.6,
+       "alt": 13625,
+       "reg": "948"
+      },
+      {
+       "flight": "FR148",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.43,
+       "lon": 55.63,
+       "alt": 2325,
+       "reg": "949"
+      },
+      {
+       "flight": "IFC1476",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 23.04,
+       "lon": 58.19,
+       "alt": 36000,
+       "reg": "CB-8001"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -84,8 +218,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -101,8 +235,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -118,8 +252,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -133,13 +267,35 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1,
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "FNY5111",
+       "t": "ATLA",
+       "role": "other",
+       "lat": 54.67,
+       "lon": 12.03,
+       "alt": 21000,
+       "reg": "25"
+      },
+      {
+       "flight": "BRK19",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 55.09,
+       "lon": 12.59,
+       "alt": 29975,
+       "reg": "02"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -150,34 +306,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 46,
+     "base": 0,
+     "runs": 47,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "IWY328",
-       "t": "",
-       "role": "other",
-       "lat": 16.54,
-       "lon": -63.33,
-       "alt": 36000,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 16
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-21T21:53:20Z",
+  "at": "2026-10-22T05:06:01Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -383,44 +527,52 @@
     }
    ],
    "n_recent": 20,
-   "n_week": 13
+   "n_week": 9
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-21T21:53:20Z",
+  "at": "2026-10-22T05:06:01Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 53,
+    "US": 48,
     "??": 14,
-    "DE": 5,
+    "DE": 8,
+    "GB": 4,
+    "AR": 2,
+    "KR": 2,
     "PT": 2,
-    "MY": 2,
-    "GB": 2,
     "CH": 2,
-    "NL": 2,
+    "FR": 1,
+    "IE": 1,
     "VN": 1,
     "GA": 1,
+    "MY": 1,
     "SG": 1,
-    "CA": 1,
-    "ET": 1,
-    "TN": 1,
-    "TT": 1
+    "CA": 1
    },
    "by_group": {
-    "N0n": 32,
-    "qilin": 14,
-    "Helix": 7,
+    "N0n": 27,
+    "qilin": 9,
+    "BrainCipher": 8,
+    "SilentRansomGroup": 6,
     "Booba Project": 6,
-    "SilentRansomGroup": 4,
+    "lamashtu": 5,
+    "Helix": 3,
     "everest": 3,
-    "emperador": 3,
-    "Global Secret Group": 3,
-    "Storm": 3,
-    "HYFLOCK": 2
+    "aurora": 3,
+    "Global Secret Group": 3
    },
    "kr": [
+    {
+     "victim": "Hanjin Information Systems & Telecommunication Co., Ltd.",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Technology",
+     "d": "2026-10-21",
+     "url": "https://www.ransomware.live/id/SGFuamluIEluZm9ybWF0aW9uIFN5c3RlbXMgJiBUZWxlY29tbXVuaWNhdGlvbiBDby4sIEx0ZC5ATjBu"
+    },
     {
      "victim": "Company #92",
      "group": "N0n",
@@ -434,10 +586,10 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 13,
+  "kev_week": 9,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 1,
-  "events": 1
+  "ransom_kr_week": 2,
+  "events": 2
  }
 }
