@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-22T12:08:30Z",
+ "generated": "2026-10-22T17:22:26Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-22T12:08:30Z",
+  "at": "2026-10-22T17:22:26Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,32 +48,23 @@
       132.0,
       40.5
      ],
-     "n": 2,
-     "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "n": 1,
+     "key": 1,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {
-      "other": 2
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "H60",
-       "role": "other",
-       "lat": 36.94,
-       "lon": 127.02,
-       "alt": 675,
-       "reg": "18-21021"
-      },
-      {
-       "flight": "CARD10",
-       "t": "H60",
-       "role": "other",
-       "lat": 36.95,
-       "lon": 127.05,
-       "alt": 475,
-       "reg": "18-21006"
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.2,
+       "lon": 125.02,
+       "alt": 38000,
+       "reg": "N291SR"
       }
      ]
     },
@@ -86,43 +77,23 @@
       60.0,
       30.5
      ],
-     "n": 3,
-     "key": 2,
-     "base": 1.0,
-     "runs": 48,
+     "n": 1,
+     "key": 1,
+     "base": 1,
+     "runs": 49,
      "status": "normal",
      "by_role": {
-      "isr": 1,
-      "tanker": 1,
-      "other": 1
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "THICK10",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 24.14,
-       "lon": 55.22,
-       "alt": 8250,
-       "reg": "1350"
-      },
-      {
        "flight": "",
-       "t": "B762",
+       "t": "K35R",
        "role": "tanker",
-       "lat": 25.42,
-       "lon": 55.68,
-       "alt": 27500,
-       "reg": "21-46091"
-      },
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 24.67,
-       "lon": 57.83,
-       "alt": 24500,
-       "reg": ""
+       "lat": 24.6,
+       "lon": 54.53,
+       "alt": 26050,
+       "reg": "63-8018"
       }
      ]
     },
@@ -137,8 +108,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -152,25 +123,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 31.75,
-       "lon": 34.73,
-       "alt": 25950,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -183,8 +142,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -198,124 +157,42 @@
       30.5,
       61.0
      ],
-     "n": 12,
-     "key": 3,
-     "base": 0.0,
-     "runs": 48,
-     "status": "surge",
+     "n": 3,
+     "key": 1,
+     "base": 0,
+     "runs": 49,
+     "status": "normal",
      "by_role": {
-      "other": 6,
-      "isr": 3,
-      "airlift": 3
+      "other": 2,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "GNY4569",
-       "t": "",
+       "flight": "CF01",
+       "t": "SB39",
        "role": "other",
-       "lat": 57.58,
-       "lon": 9.09,
-       "alt": 6500,
-       "reg": ""
+       "lat": 54.12,
+       "lon": 14.14,
+       "alt": 32975,
+       "reg": "9238"
       },
       {
-       "flight": "IGOR14",
-       "t": "MF17",
+       "flight": "SVF650",
+       "t": "SF34",
        "role": "other",
-       "lat": 55.62,
-       "lon": 9.27,
-       "alt": 1125,
-       "reg": "T-429"
+       "lat": 58.13,
+       "lon": 16.69,
+       "alt": 22000,
+       "reg": "100001"
       },
       {
-       "flight": "PR26",
-       "t": "MF17",
-       "role": "other",
-       "lat": 56.86,
-       "lon": 9.66,
-       "alt": 1275,
-       "reg": "T-417"
-      },
-      {
-       "flight": "DAF7678",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 57.22,
-       "lon": 10.18,
-       "alt": 2225,
-       "reg": "C-168"
-      },
-      {
-       "flight": "SVF857",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 57.71,
-       "lon": 12.71,
-       "alt": 15100,
-       "reg": "84004"
-      },
-      {
-       "flight": "BR301",
-       "t": "LJ35",
-       "role": "other",
-       "lat": 56.53,
-       "lon": 12.9,
-       "alt": 6150,
-       "reg": "35-075"
-      },
-      {
-       "flight": "SVF680",
-       "t": "GLF4",
-       "role": "other",
-       "lat": 59.06,
-       "lon": 16.18,
-       "alt": 12050,
-       "reg": "102003"
-      },
-      {
-       "flight": "BRK88",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 54.27,
-       "lon": 16.66,
-       "alt": 35000,
-       "reg": "01"
-      },
-      {
-       "flight": "NATO03",
-       "t": "E3TF",
-       "role": "isr",
-       "lat": 53.68,
-       "lon": 18.12,
-       "alt": 31075,
-       "reg": "LX-N90448"
-      },
-      {
-       "flight": "PLF693",
-       "t": "W3",
-       "role": "other",
-       "lat": 54.57,
-       "lon": 18.52,
-       "alt": 500,
-       "reg": ""
-      },
-      {
-       "flight": "GAF119",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 53.95,
-       "lon": 20.46,
-       "alt": 33975,
-       "reg": "54+32"
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 54.07,
-       "lon": 23.22,
-       "alt": 36000,
-       "reg": "N159L"
+       "flight": "MMF22",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 56.03,
+       "lon": 17.31,
+       "alt": 28000,
+       "reg": "T-062"
       }
      ]
     },
@@ -330,20 +207,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 48,
+     "base": 0,
+     "runs": 49,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
-   "n_surge": 1,
-   "total_mil": 18
+   "n_surge": 0,
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-22T12:08:30Z",
+  "at": "2026-10-22T17:22:26Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -554,7 +431,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-22T12:08:30Z",
+  "at": "2026-10-22T17:22:26Z",
   "data": {
    "n_week": 99,
    "by_country": {
@@ -575,7 +452,7 @@
     "SG": 1
    },
    "by_group": {
-    "N0n": 26,
+    "N0n": 27,
     "BrainCipher": 8,
     "SilentRansomGroup": 7,
     "qilin": 7,
@@ -599,11 +476,11 @@
   }
  },
  "summary": {
-  "adsb_surge": 1,
+  "adsb_surge": 0,
   "kev_week": 9,
   "kev_edge_3d": 0,
   "ransom_week": 99,
   "ransom_kr_week": 1,
-  "events": 2
+  "events": 1
  }
 }
