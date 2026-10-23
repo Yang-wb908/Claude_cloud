@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T05:06:42Z",
+ "generated": "2026-10-23T11:53:08Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,18 +10,7 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-23T05:06:42Z"
-  },
-  {
-   "id": "brent_110",
-   "title": "브렌트유 110달러 돌파",
-   "sev": 4,
-   "th": null,
-   "why": "한국 원유 도입가·물가 직결.",
-   "current": 114.0,
-   "threshold": 110,
-   "op": ">",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "korea_missile",
@@ -32,7 +21,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "maritime_attacks",
@@ -40,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 27,
+   "current": 30,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -51,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 8,
+   "current": 11,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "copper_6",
@@ -62,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.42,
+   "current": 6.48,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "bio_health_events",
@@ -73,10 +62,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 12,
+   "current": 14,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "firms_site_alert",
@@ -87,7 +76,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "ioda_outage",
@@ -98,7 +87,7 @@
    "current": 5,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   },
   {
    "id": "gdacs_red",
@@ -109,7 +98,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T05:06:42Z"
+   "at": "2026-10-23T11:53:08Z"
   }
  ]
 }

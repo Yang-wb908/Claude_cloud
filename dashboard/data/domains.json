@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-23T05:06:40Z",
+ "generated": "2026-10-23T11:53:06Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-23T05:06:40Z",
+  "at": "2026-10-23T11:53:06Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 51,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.82,
-       "lon": 128.09,
-       "alt": 39000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,143 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 14,
+     "n": 0,
      "key": 0,
-     "base": 1,
-     "runs": 51,
+     "base": 1.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {
-      "airlift": 2,
-      "other": 12
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 26.76,
-       "lon": 49.0,
-       "alt": 22000,
-       "reg": "312"
-      },
-      {
-       "flight": "UAF1242",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 24.45,
-       "lon": 54.67,
-       "alt": "ground",
-       "reg": "1226"
-      },
-      {
-       "flight": "FRS82",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.53,
-       "lon": 55.22,
-       "alt": 15300,
-       "reg": "935"
-      },
-      {
-       "flight": "FRS81",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.57,
-       "lon": 55.25,
-       "alt": 15100,
-       "reg": "957"
-      },
-      {
-       "flight": "FRS52",
-       "t": "PC21",
-       "role": "other",
-       "lat": 23.76,
-       "lon": 55.27,
-       "alt": 9925,
-       "reg": "940"
-      },
-      {
-       "flight": "",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.05,
-       "lon": 55.3,
-       "alt": 1525,
-       "reg": "948"
-      },
-      {
-       "flight": "FR148",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.03,
-       "lon": 55.32,
-       "alt": 3400,
-       "reg": "939"
-      },
-      {
-       "flight": "FRS62",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.09,
-       "lon": 55.4,
-       "alt": 6550,
-       "reg": "958"
-      },
-      {
-       "flight": "FRS31",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.28,
-       "lon": 55.51,
-       "alt": 4900,
-       "reg": "945"
-      },
-      {
-       "flight": "FR137",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.26,
-       "lon": 55.54,
-       "alt": 3925,
-       "reg": "949"
-      },
-      {
-       "flight": "FR144",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.47,
-       "lon": 55.54,
-       "alt": 2450,
-       "reg": "950"
-      },
-      {
-       "flight": "FRS71",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.53,
-       "lon": 55.56,
-       "alt": 13325,
-       "reg": "944"
-      },
-      {
-       "flight": "FRS72",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.54,
-       "lon": 55.56,
-       "alt": 13075,
-       "reg": "937"
-      },
-      {
-       "flight": "FR111",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.71,
-       "lon": 55.72,
-       "alt": 9025,
-       "reg": "954"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -226,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -241,13 +99,35 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 51,
+     "n": 2,
+     "key": 1,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "RRR4281",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 34.34,
+       "lon": 31.54,
+       "alt": 24000,
+       "reg": "ZM408"
+      },
+      {
+       "flight": "CODY15",
+       "t": "Q9",
+       "role": "isr",
+       "lat": 34.39,
+       "lon": 33.02,
+       "alt": 20000,
+       "reg": "PR008"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -258,13 +138,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "EM408",
+       "t": "B429",
+       "role": "other",
+       "lat": 40.96,
+       "lon": 28.83,
+       "alt": 525,
+       "reg": "EM-7111"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -275,13 +167,63 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 51,
+     "n": 5,
+     "key": 1,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3,
+      "airlift": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "EH10",
+       "role": "other",
+       "lat": 59.37,
+       "lon": 10.56,
+       "alt": 3550,
+       "reg": "0264"
+      },
+      {
+       "flight": "CFC2927",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 58.32,
+       "lon": 12.84,
+       "alt": 23000,
+       "reg": "130615"
+      },
+      {
+       "flight": "BR301",
+       "t": "LJ35",
+       "role": "other",
+       "lat": 58.65,
+       "lon": 16.23,
+       "alt": 625,
+       "reg": "35-075"
+      },
+      {
+       "flight": "",
+       "t": "AN28",
+       "role": "other",
+       "lat": 54.32,
+       "lon": 18.18,
+       "alt": 1900,
+       "reg": "0215"
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 53.84,
+       "lon": 20.72,
+       "alt": 35000,
+       "reg": "N159L"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -294,20 +236,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 15
+   "total_mil": 8
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-23T05:06:40Z",
+  "at": "2026-10-23T11:53:06Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -468,7 +410,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-23T05:06:40Z",
+  "at": "2026-10-23T11:53:06Z",
   "data": {
    "n_week": 99,
    "by_country": {
@@ -479,14 +421,14 @@
     "FR": 2,
     "AU": 2,
     "CA": 2,
+    "IT": 1,
     "MX": 1,
     "TR": 1,
     "BG": 1,
     "IE": 1,
     "AR": 1,
     "KR": 1,
-    "PT": 1,
-    "VN": 1
+    "PT": 1
    },
    "by_group": {
     "N0n": 23,
