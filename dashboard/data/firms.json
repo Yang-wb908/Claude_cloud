@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-22T21:46:41Z",
+ "generated": "2026-10-23T05:06:22Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
- "n_alerts": 3,
+ "n_alerts": 2,
  "errors": [],
  "learning": 28,
  "sites": [
@@ -18,10 +18,10 @@
    "lon": 55.97,
    "r_km": 6,
    "n": 0,
-   "base_days": 10,
-   "base_n": 1.0,
+   "base_days": 11,
+   "base_n": 1,
    "frp_max": 0,
-   "base_frp": 0.75,
+   "base_frp": 0.5,
    "at": null,
    "d": null,
    "status": "normal"
@@ -36,10 +36,10 @@
    "lon": 73.22,
    "r_km": 6,
    "n": 0,
-   "base_days": 12,
-   "base_n": 0.0,
+   "base_days": 13,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -53,16 +53,13 @@
    "lat": 54.59,
    "lon": 39.73,
    "r_km": 5,
-   "n": 1,
-   "base_days": 9,
-   "base_n": 0,
-   "frp_max": 14.2,
-   "base_frp": 0,
-   "at": [
-    39.73415,
-    54.5523
-   ],
-   "d": "2026-10-21",
+   "n": 0,
+   "base_days": 10,
+   "base_n": 0.0,
+   "frp_max": 0,
+   "base_frp": 0.0,
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -128,16 +125,13 @@
    "lat": 59.47,
    "lon": 32.03,
    "r_km": 5,
-   "n": 2,
-   "base_days": 12,
-   "base_n": 1.0,
-   "frp_max": 1.1,
-   "base_frp": 1.25,
-   "at": [
-    32.08446,
-    59.50513
-   ],
-   "d": "2026-10-21",
+   "n": 0,
+   "base_days": 13,
+   "base_n": 1,
+   "frp_max": 0,
+   "base_frp": 1.1,
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -167,16 +161,16 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 4,
-   "base_days": 13,
-   "base_n": 2,
-   "frp_max": 1.8,
+   "n": 1,
+   "base_days": 14,
+   "base_n": 2.5,
+   "frp_max": 1.9,
    "base_frp": 1.5,
    "at": [
-    37.81171,
-    44.73162
+    37.80865,
+    44.73483
    ],
-   "d": "2026-10-21",
+   "d": "2026-10-23",
    "status": "normal"
   },
   {
@@ -225,10 +219,10 @@
    "lon": 46.2,
    "r_km": 5,
    "n": 0,
-   "base_days": 12,
-   "base_n": 0.0,
+   "base_days": 13,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -260,14 +254,14 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 14,
-   "base_days": 13,
-   "base_n": 9,
-   "frp_max": 8.5,
-   "base_frp": 7.4,
+   "n": 9,
+   "base_days": 14,
+   "base_n": 10.0,
+   "frp_max": 4.9,
+   "base_frp": 7.45,
    "at": [
-    48.27879,
-    30.35165
+    48.27647,
+    30.34538
    ],
    "d": "2026-10-22",
    "status": "normal"
@@ -281,11 +275,11 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 16,
-   "base_days": 13,
-   "base_n": 15,
+   "n": 22,
+   "base_days": 14,
+   "base_n": 15.5,
    "frp_max": 9.8,
-   "base_frp": 6.2,
+   "base_frp": 6.15,
    "at": [
     56.05026,
     27.17023
@@ -302,16 +296,16 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 3,
-   "base_days": 13,
-   "base_n": 3,
-   "frp_max": 2.3,
-   "base_frp": 1.1,
+   "n": 5,
+   "base_days": 14,
+   "base_n": 3.0,
+   "frp_max": 1.9,
+   "base_frp": 1.15,
    "at": [
-    50.30945,
-    29.21978
+    50.30468,
+    29.24211
    ],
-   "d": "2026-10-21",
+   "d": "2026-10-22",
    "status": "normal"
   },
   {
@@ -360,15 +354,15 @@
    "lon": 50.16,
    "r_km": 7,
    "n": 2,
-   "base_days": 10,
-   "base_n": 1.0,
-   "frp_max": 3.1,
-   "base_frp": 2.6500000000000004,
+   "base_days": 11,
+   "base_n": 1,
+   "frp_max": 0.6,
+   "base_frp": 2.7,
    "at": [
-    50.11086,
-    26.68403
+    50.11131,
+    26.68475
    ],
-   "d": "2026-10-21",
+   "d": "2026-10-22",
    "status": "normal"
   },
   {
@@ -380,16 +374,16 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 3,
-   "base_days": 13,
-   "base_n": 2,
-   "frp_max": 1.8,
-   "base_frp": 1.6,
+   "n": 2,
+   "base_days": 14,
+   "base_n": 2.5,
+   "frp_max": 0.9,
+   "base_frp": 1.7000000000000002,
    "at": [
-    49.70064,
-    25.93406
+    49.70096,
+    25.93121
    ],
-   "d": "2026-10-21",
+   "d": "2026-10-22",
    "status": "normal"
   },
   {
@@ -437,14 +431,14 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 20,
-   "base_days": 13,
-   "base_n": 29,
-   "frp_max": 6.5,
-   "base_frp": 8.1,
+   "n": 19,
+   "base_days": 14,
+   "base_n": 28.5,
+   "frp_max": 9.2,
+   "base_frp": 7.65,
    "at": [
-    51.5536,
-    25.90144
+    51.53955,
+    25.90574
    ],
    "d": "2026-10-22",
    "status": "normal"
@@ -530,16 +524,13 @@
    "lat": 15.46,
    "lon": 45.32,
    "r_km": 10,
-   "n": 3,
-   "base_days": 1,
-   "base_n": 6,
-   "frp_max": 10.5,
-   "base_frp": 12.7,
-   "at": [
-    45.28669,
-    15.46933
-   ],
-   "d": "2026-10-21",
+   "n": 0,
+   "base_days": 2,
+   "base_n": 4.5,
+   "frp_max": 0,
+   "base_frp": 11.6,
+   "at": null,
+   "d": null,
    "status": "learning"
   },
   {
@@ -624,10 +615,10 @@
    "lon": 25.35,
    "r_km": 10,
    "n": 0,
-   "base_days": 11,
-   "base_n": 0,
+   "base_days": 12,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -659,16 +650,13 @@
    "lat": 19.6,
    "lon": 37.22,
    "r_km": 8,
-   "n": 1,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 1.9,
-   "base_frp": null,
-   "at": [
-    37.22144,
-    19.53975
-   ],
-   "d": "2026-10-21",
+   "n": 0,
+   "base_days": 1,
+   "base_n": 1,
+   "frp_max": 0,
+   "base_frp": 1.9,
+   "at": null,
+   "d": null,
    "status": "learning"
   },
   {
@@ -698,17 +686,17 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 39,
-   "base_days": 12,
-   "base_n": 6.5,
-   "frp_max": 60.8,
-   "base_frp": 15.049999999999999,
+   "n": 4,
+   "base_days": 13,
+   "base_n": 8,
+   "frp_max": 7.2,
+   "base_frp": 16.4,
    "at": [
-    29.69386,
-    10.94354
+    29.67762,
+    10.97794
    ],
-   "d": "2026-10-22",
-   "status": "alert"
+   "d": "2026-10-23",
+   "status": "normal"
   },
   {
    "id": "mekelle",
@@ -719,14 +707,14 @@
    "lat": 13.5,
    "lon": 39.47,
    "r_km": 10,
-   "n": 2,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 2.5,
-   "base_frp": null,
+   "n": 1,
+   "base_days": 1,
+   "base_n": 2,
+   "frp_max": 1.4,
+   "base_frp": 2.5,
    "at": [
-    39.42738,
-    13.51471
+    39.55038,
+    13.48286
    ],
    "d": "2026-10-22",
    "status": "learning"
@@ -741,10 +729,10 @@
    "lon": -70.22,
    "r_km": 8,
    "n": 7,
-   "base_days": 13,
-   "base_n": 14,
+   "base_days": 14,
+   "base_n": 12.5,
    "frp_max": 15.8,
-   "base_frp": 11.7,
+   "base_frp": 11.55,
    "at": [
     -70.20042,
     11.7386
@@ -834,10 +822,10 @@
    "lon": 72.07,
    "r_km": 8,
    "n": 0,
-   "base_days": 13,
-   "base_n": 1,
+   "base_days": 14,
+   "base_n": 0.5,
    "frp_max": 0,
-   "base_frp": 0.8,
+   "base_frp": 0.4,
    "at": null,
    "d": null,
    "status": "normal"
@@ -854,11 +842,11 @@
     27.5,
     16.0
    ],
-   "n": 2556,
-   "base_days": 13,
-   "base_n": 431,
+   "n": 2572,
+   "base_days": 14,
+   "base_n": 567.0,
    "n_hi": 473,
-   "d": "2026-10-22",
+   "d": "2026-10-23",
    "status": "alert"
   },
   {
@@ -871,11 +859,11 @@
     32.5,
     14.5
    ],
-   "n": 3835,
-   "base_days": 13,
-   "base_n": 1009,
-   "n_hi": 1093,
-   "d": "2026-10-22",
+   "n": 4146,
+   "base_days": 14,
+   "base_n": 1082.0,
+   "n_hi": 1124,
+   "d": "2026-10-23",
    "status": "alert"
   },
   {
@@ -889,8 +877,8 @@
     31.6
    ],
    "n": 8,
-   "base_days": 12,
-   "base_n": 0.0,
+   "base_days": 13,
+   "base_n": 0,
    "n_hi": 2,
    "d": "2026-10-22",
    "status": "normal"
@@ -906,10 +894,10 @@
     33.6
    ],
    "n": 3,
-   "base_days": 12,
-   "base_n": 0.0,
+   "base_days": 13,
+   "base_n": 0,
    "n_hi": 0,
-   "d": "2026-10-21",
+   "d": "2026-10-23",
    "status": "normal"
   },
   {
@@ -922,10 +910,10 @@
     40.0,
     14.9
    ],
-   "n": 138,
-   "base_days": 13,
-   "base_n": 46,
-   "n_hi": 34,
+   "n": 124,
+   "base_days": 14,
+   "base_n": 50.0,
+   "n_hi": 17,
    "d": "2026-10-22",
    "status": "normal"
   },
@@ -939,11 +927,11 @@
     30.0,
     1.0
    ],
-   "n": 26,
-   "base_days": 13,
-   "base_n": 75,
-   "n_hi": 11,
-   "d": "2026-10-21",
+   "n": 0,
+   "base_days": 14,
+   "base_n": 72.5,
+   "n_hi": 0,
+   "d": null,
    "status": "normal"
   },
   {
@@ -956,11 +944,11 @@
     94.5,
     21.5
    ],
-   "n": 1,
-   "base_days": 11,
-   "base_n": 0,
+   "n": 0,
+   "base_days": 12,
+   "base_n": 0.0,
    "n_hi": 0,
-   "d": "2026-10-21",
+   "d": null,
    "status": "normal"
   },
   {
@@ -973,9 +961,9 @@
     39.0,
     49.5
    ],
-   "n": 11,
-   "base_days": 13,
-   "base_n": 24,
+   "n": 9,
+   "base_days": 14,
+   "base_n": 19.0,
    "n_hi": 2,
    "d": "2026-10-22",
    "status": "normal"
@@ -983,25 +971,7 @@
  ],
  "alerts": [
   {
-   "d": "2026-10-22",
-   "t": "X",
-   "at": [
-    29.694,
-    10.944
-   ],
-   "th": "sudan",
-   "p": "카두글리",
-   "x": "위성 열점: 카두글리 반경 10km 안 39건, 최대 FRP 61MW (평소 6건·15MW). 원인 미상, 피격·화재 여부 확인 필요",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-22;@29.694,10.944,12.0z",
-   "g": "B2",
-   "src": "firms",
-   "lang": "ko",
-   "auto": true,
-   "id": "firms-kadugli-2026-10-22",
-   "r": 3
-  },
-  {
-   "d": "2026-10-22",
+   "d": "2026-10-23",
    "t": "X",
    "at": [
     24.75,
@@ -1009,17 +979,17 @@
    ],
    "th": "sudan",
    "p": "다르푸르",
-   "x": "위성 열점 급증: 다르푸르 하루 2556건 (평소 431건, FRP 10MW 이상 473건). 방화·포격 화재 가능성",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-22;@24.750,13.000,8.0z",
+   "x": "위성 열점 급증: 다르푸르 하루 2572건 (평소 567건, FRP 10MW 이상 473건). 방화·포격 화재 가능성",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-23;@24.750,13.000,8.0z",
    "g": "B2",
    "src": "firms",
    "lang": "ko",
    "auto": true,
-   "id": "firms-aoi-darfur-2026-10-22",
+   "id": "firms-aoi-darfur-2026-10-23",
    "r": 3
   },
   {
-   "d": "2026-10-22",
+   "d": "2026-10-23",
    "t": "X",
    "at": [
     30.0,
@@ -1027,13 +997,13 @@
    ],
    "th": "sudan",
    "p": "코르도판",
-   "x": "위성 열점 급증: 코르도판 하루 3835건 (평소 1009건, FRP 10MW 이상 1093건). 방화·포격 화재 가능성",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-22;@30.000,12.000,8.0z",
+   "x": "위성 열점 급증: 코르도판 하루 4146건 (평소 1082건, FRP 10MW 이상 1124건). 방화·포격 화재 가능성",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-23;@30.000,12.000,8.0z",
    "g": "B2",
    "src": "firms",
    "lang": "ko",
    "auto": true,
-   "id": "firms-aoi-kordofan-2026-10-22",
+   "id": "firms-aoi-kordofan-2026-10-23",
    "r": 3
   }
  ]

@@ -1,26 +1,42 @@
 {
- "generated": "2026-10-22T21:46:41Z",
+ "generated": "2026-10-23T05:06:21Z",
  "days": 3,
- "unmapped_total": 8,
- "max_cluster": 6,
- "max_key": "topic:China",
+ "unmapped_total": 6,
+ "max_cluster": 2,
+ "max_key": "topic:Tibet",
  "clusters": [
   {
-   "key": "topic:China",
-   "n": 6,
-   "domains": 5,
+   "key": "topic:Tibet",
+   "n": 2,
+   "domains": 2,
    "types": {
-    "E": 5,
-    "X": 1
+    "X": 2
    },
-   "since": "2026-10-19",
+   "since": "2026-10-23",
    "sample": [
     {
-     "d": "2026-10-22",
-     "title": "China: Panic as 7.0-magnitude earthquake rocks Tibet",
-     "url": "http://www.africanews.com/2026/10/22/china-panic-as-70-magnitude-earthquake-rocks-tibet/",
-     "domain": "africanews.com"
+     "d": "2026-10-23",
+     "title": "Tibet rocked by 7.0-magnitude earthquake",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/tibet-rocked-by-7-0-magnitude-earthquake?traffic_source=rss",
+     "domain": "aljazeera.com"
     },
+    {
+     "d": "2026-10-23",
+     "title": "Tibet earthquake kills at least 16",
+     "url": "https://www.cbc.ca/news/world/tibet-earthquake-9.7392563?cmp=rss",
+     "domain": "cbc.ca"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-10-21",
+   "sample": [
     {
      "d": "2026-10-21",
      "title": "China’s AI Industry Brings Both Gains and Challenges for Its Fragile Economy",
@@ -32,25 +48,13 @@
      "title": "China cites 'remilitarisation' fears to justify rare-earth curbs on Japan",
      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5qNmhCMVlfd2VKSHFpRG9fdlZ4d1YxU1ZVTEJQU1lIS2NySFdjckJhWGZ6dk9yb1RCemZFUjBlYUJpYWVCREQtTUc1UDN4U0dMQ2ZFUWtkMWw?oc=5",
      "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-21",
-     "title": "China’s Free A.I. Models Are Thrown Into Uncertainty",
-     "url": "https://www.nytimes.com/2026/10/21/world/asia/china-exports-ai-controls.html",
-     "domain": "nytimes.com"
-    },
-    {
-     "d": "2026-10-21",
-     "title": "China’s rare earth magnet exports to EU and US rebound in September",
-     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWnUtOUJzdlMxRl9TXzdabEhTOHRWVmUyYjRXSmNsc0E5WVQ3TVVVQWU5V1lJWjNOR2hnbl9LLXY2T251Y2NrWXZwRk1jeThHREVWZ09QRTA5LVd0UVlqbWNCUzdhUUpUc3JxZ0F2N0lMOGpZWGZ6d1VrNDZQYWFSc292X0V3cGQ4QjY4OGc2Ukp3REZlcE1scjQwVzBEQXk0eVRmTlBoRUxYUnpUXzNObFZwdVpKRGhlajVkV9IBwgFBVV95cUxQZGF1VG9yWDBFSU5tX09qb29HNi1hQkMwcVhMNjFJN2dYbmVaMDNQWERhLVA3U2kwUnJtQWk5dDdvWkpJRUNCUHFVUUFKcXlnTWo3UTJTX0pfTXo0SUtGWGVpRjlJOHhPX3R1dXpBeVhGMk4zbnlKNkQ0Y0hqM04wcjZYWHEzUEI4Y2ZfWG1vQ2dFTVpaRkJzbFE4TFlzTkZyeVNTb29CdHNCM3lia1VRMEFReDZJdHRTUEo5T2RnWldEZw?oc=5",
-     "domain": "news.google.com"
     }
    ]
   },
   {
-   "key": "topic:WoodMac",
+   "key": "place:베이징",
    "n": 2,
-   "domains": 2,
+   "domains": 1,
    "types": {
     "E": 2
    },
@@ -58,15 +62,15 @@
    "sample": [
     {
      "d": "2026-10-22",
-     "title": "AI boom could overwhelm metals supply: WoodMac",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9RZlVDcVgyamw1ZmlYbjRaOThXX191WExya2IyYVJMejYxa1NHR1pvVGF4cmdfQW1IajM4MUdPYkgzZ2lnNzRkLUw2U2lCbmlNa0FRaXMtRWVidEx2QmRLbmhwRFE4anB0SEIxQWVUWnVUdEVfa18tbg?oc=5",
+     "title": "Yttrium: Beijing rejects calls to ease export controls",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQQUMyY0liV0RrT3lOSVRnMnNkdlNDSUxuS2VValQ1NURqT2dZR2pwRWxIVk9FTkZVdGpLU21oMmliZjVubW5Bdm1fR1ctZHpWWHVvYkZFbHRxY2QyMzJ0REk2ZEIyWVRyX1lMX1RlZkRyOVVlMFBYNk84SVN0TG1VazYyTXo2dmVzTXEwNUdGN2M?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-10-22",
-     "title": "AI boom could overwhelm metals supply: WoodMac",
-     "url": "https://www.mining.com/ai-boom-could-overwhelm-metals-supply-woodmac/",
-     "domain": "mining.com"
+     "title": "Rare Earth ETF Sinks to Fresh Low as Beijing's Export Squeeze Meets Weak Metal Prices",
+     "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOak1XY0VRYWx3UUZJeTVGZHZteTg5YUh3NWZlc0VRak1zUjd5RlFIMVFDOHpQWnR0VmNJZmI1ZnpST3hwTV9wbVVWV1FjTFJRa2ZPc2tpSmdBNElualFjRUppU0NCX1RqZGpaUElpbERKQTdDVDBOUlI4VmVtNG9aMFlhRUhFbUt6Qm1NU1ZsR0lXamZVWjdpR2xuamZDeGUxS0ZxOUhVa3M4SXFUWFpOOFBhTnExNUVMR3ZYNHpkdWwzdW5INWgwSHVJT0YyTXZZZU1PdnQzc0JNYnVoRjZUYjB6ZUFQWUF5cDY1cjN3?oc=5",
+     "domain": "news.google.com"
     }
    ]
   }

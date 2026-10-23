@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-22T21:46:54Z",
+ "generated": "2026-10-23T05:06:40Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-22T21:46:54Z",
+  "at": "2026-10-23T05:06:40Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,33 +48,23 @@
       132.0,
       40.5
      ],
-     "n": 2,
+     "n": 1,
      "key": 1,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {
-      "isr": 1,
-      "other": 1
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
+       "flight": "",
        "t": "GLEX",
        "role": "isr",
-       "lat": 36.91,
-       "lon": 127.1,
-       "alt": 1250,
+       "lat": 37.82,
+       "lon": 128.09,
+       "alt": 39000,
        "reg": "N291SR"
-      },
-      {
-       "flight": "CARD97",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "19-21067"
       }
      ]
     },
@@ -87,13 +77,143 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 14,
      "key": 0,
-     "base": 1.0,
-     "runs": 50,
+     "base": 1,
+     "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 2,
+      "other": 12
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 26.76,
+       "lon": 49.0,
+       "alt": 22000,
+       "reg": "312"
+      },
+      {
+       "flight": "UAF1242",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 24.45,
+       "lon": 54.67,
+       "alt": "ground",
+       "reg": "1226"
+      },
+      {
+       "flight": "FRS82",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.53,
+       "lon": 55.22,
+       "alt": 15300,
+       "reg": "935"
+      },
+      {
+       "flight": "FRS81",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.57,
+       "lon": 55.25,
+       "alt": 15100,
+       "reg": "957"
+      },
+      {
+       "flight": "FRS52",
+       "t": "PC21",
+       "role": "other",
+       "lat": 23.76,
+       "lon": 55.27,
+       "alt": 9925,
+       "reg": "940"
+      },
+      {
+       "flight": "",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.05,
+       "lon": 55.3,
+       "alt": 1525,
+       "reg": "948"
+      },
+      {
+       "flight": "FR148",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.03,
+       "lon": 55.32,
+       "alt": 3400,
+       "reg": "939"
+      },
+      {
+       "flight": "FRS62",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.09,
+       "lon": 55.4,
+       "alt": 6550,
+       "reg": "958"
+      },
+      {
+       "flight": "FRS31",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.28,
+       "lon": 55.51,
+       "alt": 4900,
+       "reg": "945"
+      },
+      {
+       "flight": "FR137",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.26,
+       "lon": 55.54,
+       "alt": 3925,
+       "reg": "949"
+      },
+      {
+       "flight": "FR144",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.47,
+       "lon": 55.54,
+       "alt": 2450,
+       "reg": "950"
+      },
+      {
+       "flight": "FRS71",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.53,
+       "lon": 55.56,
+       "alt": 13325,
+       "reg": "944"
+      },
+      {
+       "flight": "FRS72",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.54,
+       "lon": 55.56,
+       "alt": 13075,
+       "reg": "937"
+      },
+      {
+       "flight": "FR111",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.71,
+       "lon": 55.72,
+       "alt": 9025,
+       "reg": "954"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -106,8 +226,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -123,8 +243,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -140,8 +260,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -157,8 +277,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -172,43 +292,22 @@
       -58.0,
       18.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 50,
+     "base": 0,
+     "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "GTMO844",
-       "t": "BE20",
-       "role": "other",
-       "lat": 18.04,
-       "lon": -65.51,
-       "alt": 22000,
-       "reg": "163844"
-      },
-      {
-       "flight": "IWY774",
-       "t": "",
-       "role": "other",
-       "lat": 15.29,
-       "lon": -64.82,
-       "alt": 36000,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 15
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-22T21:46:54Z",
+  "at": "2026-10-23T05:06:40Z",
   "data": {
    "n_total": 1754,
    "recent": [
@@ -361,89 +460,39 @@
      "due": "2026-10-16",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2015-5477",
-     "vendor": "ISC",
-     "product": "BIND",
-     "name": " ISC BIND Data Processing Errors Vulnerability",
-     "added": "2026-10-08",
-     "due": "2026-10-11",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2016-3081",
-     "vendor": "Apache",
-     "product": "Struts",
-     "name": "Apache Struts Command Injection Vulnerability",
-     "added": "2026-10-08",
-     "due": "2026-10-11",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2023-22894",
-     "vendor": "Strapi",
-     "product": "Strapi",
-     "name": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
-     "added": "2026-10-08",
-     "due": "2026-10-11",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2021-3199",
-     "vendor": "ONLYOFFICE",
-     "product": "Docs",
-     "name": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
-     "added": "2026-10-08",
-     "due": "2026-10-11",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2015-3306",
-     "vendor": "ProFTPD",
-     "product": "ProFTPD",
-     "name": "ProFTPD Improper Access Control Vulnerability",
-     "added": "2026-10-08",
-     "due": "2026-10-11",
-     "ransom": false,
-     "edge": false
     }
    ],
-   "n_recent": 20,
-   "n_week": 9
+   "n_recent": 15,
+   "n_week": 8
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-22T21:46:54Z",
+  "at": "2026-10-23T05:06:40Z",
   "data": {
    "n_week": 99,
    "by_country": {
     "US": 39,
-    "??": 23,
+    "??": 24,
     "DE": 9,
-    "GB": 5,
+    "GB": 4,
     "FR": 2,
     "AU": 2,
     "CA": 2,
-    "AR": 2,
+    "MX": 1,
+    "TR": 1,
     "BG": 1,
     "IE": 1,
+    "AR": 1,
     "KR": 1,
     "PT": 1,
-    "VN": 1,
-    "GA": 1,
-    "MY": 1
+    "VN": 1
    },
    "by_group": {
     "N0n": 23,
-    "qilin": 9,
-    "SilentRansomGroup": 8,
+    "SilentRansomGroup": 9,
     "BrainCipher": 8,
+    "qilin": 7,
     "lamashtu": 6,
     "Booba Project": 6,
     "everest": 5,
@@ -465,7 +514,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 9,
+  "kev_week": 8,
   "kev_edge_3d": 0,
   "ransom_week": 99,
   "ransom_kr_week": 1,
