@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-23T17:20:07Z",
+ "generated": "2026-10-23T21:34:09Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-23T17:20:07Z",
+  "at": "2026-10-23T21:34:09Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -61,8 +61,8 @@
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.73,
-       "lon": 127.86,
+       "lat": 37.25,
+       "lon": 125.55,
        "alt": 40000,
        "reg": "N291SR"
       }
@@ -77,35 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 1.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "A7HHK",
-       "t": "A342",
-       "role": "other",
-       "lat": 25.39,
-       "lon": 51.74,
-       "alt": 8375,
-       "reg": "A7-HHK"
-      },
-      {
-       "flight": "ZABEEL04",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 24.73,
-       "lon": 55.49,
-       "alt": 22000,
-       "reg": "1302"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -133,52 +111,23 @@
       37.0,
       37.5
      ],
-     "n": 4,
-     "key": 1,
+     "n": 1,
+     "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
-      "other": 2,
-      "isr": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "CFC4266",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 31.41,
-       "lon": 31.39,
-       "alt": 28000,
-       "reg": "130610"
-      },
-      {
-       "flight": "RAAD39",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 31.24,
-       "lon": 35.76,
-       "alt": 11900,
-       "reg": "2552"
-      },
-      {
-       "flight": "SHAHD270",
+       "flight": "SHAHD275",
        "t": "C208",
        "role": "other",
-       "lat": 31.28,
-       "lon": 35.89,
-       "alt": 9850,
-       "reg": "1540"
-      },
-      {
-       "flight": "SHUCK81",
-       "t": "E3TF",
-       "role": "isr",
-       "lat": 31.83,
-       "lon": 35.99,
-       "alt": 30000,
-       "reg": "76-1605"
+       "lat": 31.23,
+       "lon": 35.84,
+       "alt": 7875,
+       "reg": "1538"
       }
      ]
     },
@@ -191,25 +140,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "SSG004",
-       "t": "A319",
-       "role": "other",
-       "lat": 40.98,
-       "lon": 28.81,
-       "alt": "ground",
-       "reg": "OM-BYK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -220,25 +157,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "CFC2927",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 59.81,
-       "lon": 11.81,
-       "alt": 10475,
-       "reg": "130615"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -259,15 +184,35 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-23T17:20:07Z",
+  "at": "2026-10-23T21:34:09Z",
   "data": {
-   "n_total": 1754,
+   "n_total": 1756,
    "recent": [
+    {
+     "cve": "CVE-2026-114625",
+     "vendor": "Arista",
+     "product": "VeloCloud Orchestrator",
+     "name": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+     "added": "2026-10-23",
+     "due": "2026-10-26",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-110447",
+     "vendor": "Collabora",
+     "product": "Collabora Online – Built-in CODE Server",
+     "name": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+     "added": "2026-10-23",
+     "due": "2026-10-26",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-106931",
      "vendor": "EG Secure Solutions",
@@ -419,43 +364,43 @@
      "edge": false
     }
    ],
-   "n_recent": 15,
-   "n_week": 8
+   "n_recent": 17,
+   "n_week": 10
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-23T17:20:07Z",
+  "at": "2026-10-23T21:34:09Z",
   "data": {
    "n_week": 99,
    "by_country": {
-    "US": 35,
-    "??": 26,
-    "DE": 8,
-    "GB": 4,
-    "ET": 2,
-    "TN": 2,
-    "CH": 2,
+    "US": 28,
+    "??": 25,
+    "DE": 9,
+    "AR": 3,
+    "AU": 3,
+    "GB": 3,
+    "TR": 2,
+    "ES": 2,
+    "MX": 2,
+    "IT": 2,
+    "MY": 2,
     "FR": 2,
-    "AU": 2,
-    "CA": 2,
-    "IT": 1,
-    "ES": 1,
-    "MX": 1,
-    "TR": 1,
-    "BG": 1
+    "BD": 1,
+    "CL": 1,
+    "LI": 1
    },
    "by_group": {
-    "N0n": 24,
-    "SilentRansomGroup": 9,
+    "N0n": 19,
+    "qilin": 13,
+    "akira": 8,
     "BrainCipher": 8,
-    "qilin": 6,
+    "SilentRansomGroup": 7,
     "lamashtu": 6,
-    "Booba Project": 6,
+    "lockbit5": 5,
     "everest": 5,
-    "akira": 5,
-    "bravox": 3,
-    "rhysida": 2
+    "emperador": 3,
+    "bravox": 3
    },
    "kr": [
     {
@@ -471,7 +416,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 8,
+  "kev_week": 10,
   "kev_edge_3d": 0,
   "ransom_week": 99,
   "ransom_kr_week": 1,
