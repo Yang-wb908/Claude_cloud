@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T11:53:08Z",
+ "generated": "2026-10-23T17:20:10Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,18 @@
    "current": 4,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
+  },
+  {
+   "id": "brent_110",
+   "title": "브렌트유 110달러 돌파",
+   "sev": 4,
+   "th": null,
+   "why": "한국 원유 도입가·물가 직결.",
+   "current": 111.51,
+   "threshold": 110,
+   "op": ">",
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +29,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 1,
+   "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +40,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 30,
+   "current": 34,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +51,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 11,
+   "current": 18,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +62,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.48,
+   "current": 6.5,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +73,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 14,
+   "current": 15,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "firms_site_alert",
@@ -76,7 +87,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "ioda_outage",
@@ -84,10 +95,10 @@
    "sev": 3,
    "th": null,
    "why": "정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인.",
-   "current": 5,
+   "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   },
   {
    "id": "gdacs_red",
@@ -98,7 +109,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-23T11:53:08Z"
+   "at": "2026-10-23T17:20:10Z"
   }
  ]
 }

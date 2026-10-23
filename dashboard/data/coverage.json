@@ -1,77 +1,60 @@
 {
- "generated": "2026-10-23T11:52:31Z",
+ "generated": "2026-10-23T17:19:52Z",
  "days": 3,
- "unmapped_total": 6,
- "max_cluster": 2,
- "max_key": "topic:Powerful",
+ "unmapped_total": 5,
+ "max_cluster": 3,
+ "max_key": "place:나이로비",
  "clusters": [
   {
-   "key": "topic:Powerful",
-   "n": 2,
+   "key": "place:나이로비",
+   "n": 3,
    "domains": 2,
    "types": {
-    "X": 2
+    "X": 3
    },
-   "since": "2026-10-22",
+   "since": "2026-10-23",
    "sample": [
     {
      "d": "2026-10-23",
-     "title": "Powerful earthquake hits Tibet killing 16 people, reports say",
-     "url": "https://www.bbc.co.uk/news/articles/ck5ynd1z6e83o?at_medium=RSS&at_campaign=rss",
-     "domain": "bbc.co.uk"
+     "title": "Many feared trapped after Kenya building collapse",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/10/23/many-feared-trapped-after-kenya-building-collapse?traffic_source=rss",
+     "domain": "aljazeera.com"
     },
     {
-     "d": "2026-10-22",
-     "title": "Powerful earthquake in China’s Tibet collapses hundreds of homes and kills at least 16 people",
-     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVGdwZE96Uno1Yk1sVHZGUVMwYmNzUFJaa0ZuR2JWYlZRYl9Ob3R5eUx1bElxd3NTOHhWYnU1a3F2TklmdnVneWdVQmdfY0hoUVdHemxwaDdzblNmNEZFWEtXSVVBNFlRQ2l6OEU3bHFhWVhhRUh3MmlibWFkUjNjd3FzQnJOVjRWc1RNckpDOUpSVDBSMHB3dEJHcTZhWFdtY3p2M0FvQkl2WXRFbUlsdGFRc3ZrbnJXQjZtNWVReE1XblVGUmdxUC16TQ?oc=5",
-     "domain": "news.google.com"
+     "d": "2026-10-23",
+     "title": "Nairobi building collapse raises safety concerns as rescuers search rubble",
+     "url": "http://www.africanews.com/2026/10/23/several-feared-trapped-as-multi-storey-building-collapses-in-nairobi/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-10-23",
+     "title": "Kenya: huge piles of rubble after high-rise building collapses",
+     "url": "http://www.africanews.com/2026/10/23/kenya-huge-piles-of-rubble-after-high-rise-building-collapses/",
+     "domain": "africanews.com"
     }
    ]
   },
   {
-   "key": "topic:China",
+   "key": "topic:South Africa",
    "n": 2,
    "domains": 2,
    "types": {
-    "X": 1,
+    "E": 1,
     "D": 1
    },
    "since": "2026-10-23",
    "sample": [
     {
      "d": "2026-10-23",
-     "title": "China orders 'all-out' rescue after Tibet quake kills 16",
-     "url": "https://www.dawn.com/news/2039229/china-orders-all-out-rescue-after-tibet-quake-kills-16",
-     "domain": "dawn.com"
+     "title": "South Africa Election Body Fights Fake News",
+     "url": "https://www.riotimesonline.com/south-africa-election-commission-disinformation-partners/",
+     "domain": "riotimesonline.com"
     },
     {
      "d": "2026-10-23",
-     "title": "With a civilian excuse, China is collecting militarily useful weather data abroad",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeHRZOEl0SFY5QU9yVDhrTjlDSHlDVlBlMkI1cU9oSDR2LUJaeHd4T0ptRWFBcEVKd1g1WkxOeWVZcnFYQ0ctSWVRc0dvNGREMUdlRTRjUkp2VXlCR0gwWGpZWm9NcVRxRXJfSEE4Rm1uWTNJcW44WnluTmJKUHg1eXVlQkk5Q0ZncUFFYVkwd2NPNTc1Nmx2a3AxT1lVTDllNXZCOUQ1eHh1Sl9HQlVnQkNUNjZTQQ?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:What",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-23",
-   "sample": [
-    {
-     "d": "2026-10-23",
-     "title": "What the coming copper crunch means for the global economy",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNjdGamJsMUlncDFNNDR3WWVhUnh0QkFZbFpQTlRLdFA4S2E5Zm9BREhKb3ZJMExBZVhZZTJnNWVQYXRQakNZWnNIOWpiUkZnRFJ6TVVuX3JlVUo5Vko0eC1rajc5RnczNG1hLXFsUkI5VFRQcDlFaWoxdmNobTAwRDRNV0M?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-23",
-     "title": "What price oil? Q3 2026 in review",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE8zczI2SnJCR3F1NXRibnpXcEM0SFowREgtcFhtMmFlX29nYVdxS1RRV256eW9QN2tUS04yUnZxUWhKZkI5ajlUa2xfb0FTSG8tc3ZOTm5pTTd3VmpMVWxLdE5QUUxBU3RyT2FiTEdtcy1zdl9lVWc?oc=5",
-     "domain": "news.google.com"
+     "title": "South Africa's bilateral trade with China surges after zero-tariff deal",
+     "url": "http://www.africanews.com/2026/10/23/south-africas-bilateral-trade-with-china-surges-after-zero-tariff-deal/",
+     "domain": "africanews.com"
     }
    ]
   }
