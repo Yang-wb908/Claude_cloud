@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-23T21:34:09Z",
+ "generated": "2026-10-24T04:50:53Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-23T21:34:09Z",
+  "at": "2026-10-24T04:50:53Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 52,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.25,
-       "lon": 125.55,
-       "alt": 40000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,13 +65,35 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 1.0,
-     "runs": 52,
+     "n": 2,
+     "key": 1,
+     "base": 1,
+     "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1,
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "UAF311",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 26.76,
+       "lon": 50.05,
+       "alt": 21975,
+       "reg": "311"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.79,
+       "lon": 58.04,
+       "alt": 24500,
+       "reg": "21-46061"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -96,8 +106,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -111,23 +121,32 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "SHAHD275",
-       "t": "C208",
+       "flight": "MARTI47",
+       "t": "AT76",
        "role": "other",
-       "lat": 31.23,
-       "lon": 35.84,
-       "alt": 7875,
-       "reg": "1538"
+       "lat": 36.98,
+       "lon": 30.68,
+       "alt": 9625,
+       "reg": "TCB-702"
+      },
+      {
+       "flight": "RAAD27",
+       "t": "AT8T",
+       "role": "other",
+       "lat": 31.17,
+       "lon": 35.89,
+       "alt": 9800,
+       "reg": "2551"
       }
      ]
     },
@@ -142,8 +161,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -159,8 +178,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -176,20 +195,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-23T21:34:09Z",
+  "at": "2026-10-24T04:50:53Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -365,41 +384,41 @@
     }
    ],
    "n_recent": 17,
-   "n_week": 10
+   "n_week": 8
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-23T21:34:09Z",
+  "at": "2026-10-24T04:50:53Z",
   "data": {
-   "n_week": 99,
+   "n_week": 100,
    "by_country": {
-    "US": 28,
-    "??": 25,
-    "DE": 9,
+    "US": 26,
+    "??": 24,
+    "DE": 10,
+    "ES": 4,
     "AR": 3,
     "AU": 3,
-    "GB": 3,
     "TR": 2,
-    "ES": 2,
     "MX": 2,
     "IT": 2,
+    "CH": 2,
     "MY": 2,
     "FR": 2,
-    "BD": 1,
-    "CL": 1,
-    "LI": 1
+    "GB": 2,
+    "PK": 1,
+    "BD": 1
    },
    "by_group": {
-    "N0n": 19,
-    "qilin": 13,
-    "akira": 8,
+    "N0n": 20,
+    "qilin": 15,
     "BrainCipher": 8,
-    "SilentRansomGroup": 7,
+    "SilentRansomGroup": 6,
     "lamashtu": 6,
     "lockbit5": 5,
-    "everest": 5,
-    "emperador": 3,
+    "akira": 5,
+    "rhysida": 3,
+    "Whitearmor": 3,
     "bravox": 3
    },
    "kr": [
@@ -416,9 +435,9 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 10,
+  "kev_week": 8,
   "kev_edge_3d": 0,
-  "ransom_week": 99,
+  "ransom_week": 100,
   "ransom_kr_week": 1,
   "events": 1
  }
