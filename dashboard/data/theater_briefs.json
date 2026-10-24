@@ -1,991 +1,989 @@
 {
- "generated": "2026-10-23T05:01:40Z",
+ "generated": "2026-10-24T04:46:17Z",
  "model": "claude-sonnet-5-5",
  "items": {
   "iran": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "미국의 대이란 해상봉쇄가 10/23 100일째에 들어선 가운데, 미국은 사우디 주재 외교 인력 철수를 명령했고 이란은 '공세적' 교리를 공개해 군사 충돌 우려가 커졌습니다. 호르무즈 일대에서는 유조선 피격이 이어지고 있으나 걸프 산유국 수출은 전쟁 전 수준을 웃돈다는 보도가 나왔습니다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "미 해상봉쇄가 100일째에 접어든 가운데 이란이 재공격 시 걸프 해저케이블과 사우디 정유시설을 노리겠다고 밝혀 확전 우려가 커졌습니다. 양측 모두 양보 의사가 없어 2차 전쟁 위험이 높아졌고, 브렌트유는 5개월 최고 수준입니다.",
    "brief": [
-    "10/23 미 중부사령부: 봉쇄 100일째, 인도적 지원 외 해상 수출입 전면 차단",
-    "10/22 미국, 사우디 주재 외교 인력 철수 명령. 이란은 '공세적' 교리 공개",
-    "10/22 오만 부카 앞바다 유조선 피격·화재(선원 무사). 10/21 IRGC 기뢰 피격 주장은 증거 불명확",
-    "10/22 미 재무부, 이란 그림자선단 선박 9척 등 신규 제재. 트럼프 '협상 안 해'"
+    "10/23 미 중부사령부, 대이란 해상봉쇄 100일째…인도적 지원 외 수출입 차단",
+    "10/24 이란 관리들, 재공격 시 걸프 해저 통신케이블 공격 계획 있다고 밝힘",
+    "10/22 오만 부카 앞바다 11해리서 유조선 피격·화재, 선원 무사",
+    "10/24 트럼프, 전쟁 신속 종결과 자연 소멸 방치 사이 고민 중이라 발언"
    ],
    "metrics": [
     {
      "v": "111.70달러",
      "l": "브렌트유 12월물 가격",
-     "n": "10/23, 2.65% 상승, OilPrice"
-    },
-    {
-     "v": "37달러",
-     "l": "걸프-아시아 원유 운송비(배럴당)",
-     "n": "10/22, IEA, 전쟁 전 5배(gCaptain)"
+     "n": "10/23, oilprice.com, 2.65% 상승"
     },
     {
      "v": "2,460만 배럴",
-     "l": "걸프 산유국 일 수출량",
-     "n": "10/22, 전쟁 전 상회 보도(MEE)"
+     "l": "걸프 산유국 일일 원유 수출량",
+     "n": "10/22, Middle East Eye, 전쟁 전 수준 상회"
+    },
+    {
+     "v": "9척",
+     "l": "미 재무부 신규 제재 대상 선박",
+     "n": "10/22, 개인 5명·기관 4곳 포함"
     }
    ],
    "sources": [
     {
-     "name": "Middle East Eye - 미 중부사령부 봉쇄 100일",
+     "name": "Middle East Eye - 미 해상봉쇄 100일째",
      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/us-military-says-iran-naval-blockade-reaches-100-days"
     },
     {
-     "name": "Al Jazeera - 이란 공세적 교리·미 외교인력 철수 명령",
-     "url": "https://www.aljazeera.com/news/2026/10/22/iran-reveals-offensive-doctrine-us-issues-alert-is-war-imminent?traffic_source=rss"
+     "name": "Middle East Eye - 이란 해저케이블 공격 계획",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-has-plans-target-gulf-undersea-cables-if-attacked-again-officials"
     },
     {
-     "name": "gCaptain - 이란 기뢰 피격 주장, 증거 불명확",
-     "url": "https://gcaptain.com/iran-claims-more-tankers-hit-mines-in-hormuz-but-evidence-remains-elusive/"
+     "name": "Middle East Eye - 걸프 원유 수출 및 호르무즈 공격",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/gulf-exports-more-oil-it-did-iran-war-despite-surge-hormuz-attacks-0"
     },
     {
-     "name": "OilPrice - 브렌트유 111.70달러",
+     "name": "Oilprice - 브렌트유 111달러",
      "url": "https://oilprice.com/Latest-Energy-News/World-News/Citis-60-Oil-Call-Meets-112-Brent.html"
     }
    ],
    "trend": "up",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "6616ed718cd0"
+   "evh": "582c463583e7"
   },
   "ukraine": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "푸틴이 10/22 위트코프 美 특사와 회동한 뒤 이르면 11월 미·우·러 3자 평화회담 재개에 합의했다는 보도가 나왔으나, 10/22~23 양측의 대규모 공습은 계속됐다. 미국의 러시아산 디젤 제재 유예에 EU가 신규 에너지 제재로 맞서며 서방 내 균열이 드러났다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "러시아가 10/22 키이우 등에 대규모 공습을 가하고 흑해 해운을 공격하는 가운데, 10/23 크렘린은 11월 UAE에서 미국 중재 러·우 회담이 열릴 예정이라고 밝혔습니다. 미국이 러시아산 디젤 거래를 진행하며 EU·체코의 반발이 이어지고 있습니다.",
    "brief": [
-    "10/22 푸틴, 위트코프와 회동 후 이르면 내달 3자 회담 재개 합의 보도",
-    "10/22 키이우 대규모 공습 등으로 우크라 전역 최소 9명 사망·57명 부상",
-    "10/23 우·러 공방으로 우크라 7명 사망, 러 드론 630기 요격 주장",
-    "10/23 미국 러 디젤 제재 유예, EU는 러 에너지 신규 제재 발표"
+    "10/22 러 공습으로 우크라 전역 최소 9명 사망·57명 부상, 키이우 대규모 공습",
+    "10/22~23 루마니아 연안 민간 화물선 침몰, 루마니아 F-16이 드론 2대 격추",
+    "10/23 크렘린, 러·우 회담 11월 UAE 개최 예정…올해 협상 중단 후 처음",
+    "10/23 러 디젤 첫 유조선 미국행 출항, EU 신규 제재·체코 대통령 비판"
    ],
    "metrics": [
     {
-     "v": "630기",
-     "l": "러시아가 요격했다고 주장한 드론 수",
-     "n": "10/23 France24, 러시아 측 주장"
+     "v": "9명 사망·57명 부상",
+     "l": "러시아 공격에 따른 우크라이나 전역 최소 피해",
+     "n": "10/22, 키이우 공습 관련 보도"
     },
     {
-     "v": "9명",
-     "l": "10/22 러시아 공격 우크라 전역 최소 사망자",
-     "n": "10/22 부상 57명 별도"
+     "v": "3만 가구",
+     "l": "하르키우주·드니프로 기반시설 타격에 따른 정전",
+     "n": "10/22, 보도"
     },
     {
-     "v": "359만 배럴",
-     "l": "러 해상 원유수출 4주 평균",
-     "n": "10/21 oilprice, 프리모르스크 선적 중단 영향"
+     "v": "2대",
+     "l": "루마니아 F-16 격추 러시아 드론",
+     "n": "10/22, EU 고위대표 성명"
     }
    ],
    "sources": [
     {
-     "name": "ABC News 호주 – 푸틴 3자 회담 재개 합의",
-     "url": "https://www.abc.net.au/news/2026-10-22/putin-agrees-to-resume-three-way-talks-on-ukraine-war/107294994"
+     "name": "알자지라 – 러·우 회담 11월 UAE 개최 예정",
+     "url": "https://www.aljazeera.com/news/2026/10/23/russia-ukraine-talks-planned-for-november-in-uae-kremlin?traffic_source=rss"
     },
     {
-     "name": "France24 – 미 특사 방러 후 우·러 공방",
-     "url": "https://www.france24.com/en/ukraine-and-russia-exchange-strikes-after-us-envoy-visit-to-the-kremlin"
+     "name": "Hellenic Shipping News – EU 고위대표 흑해 해운 공격 규탄",
+     "url": "https://www.hellenicshippingnews.com/statement-by-the-hr-vp-on-the-escalation-of-russian-strikes-in-the-eu-particularly-on-black-sea-shipping-threatening-human-life-regional-stability-and-food-security/"
     },
     {
-     "name": "Guardian – 나토 흑해 전력 증강·러 상선 공격",
-     "url": "https://www.theguardian.com/world/2026/oct/20/nato-black-sea-deployment-escalating-russian-attacks-ships"
+     "name": "oilprice.com – 러시아산 디젤 첫 화물 미국행 출항",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/US-Diesel-at-630-a-Gallon-as-First-Russian-Cargo-Sets-Sail-for-New-York.html"
     },
     {
-     "name": "Politico – 체코 대통령 미·러 디젤 거래 비판",
+     "name": "Politico – 체코 대통령, 미·러 디젤 거래 비판",
      "url": "https://www.politico.eu/article/donald-trump-diesel-deal-derailed-ukraine-russia-peace-progress-says-czech-president-petr-pavel/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "1f76e8560c68"
-  },
-  "yemen": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "후티의 사우디 본토 공격이 공항·유전으로 확대되면서 사우디 내 사망자가 발생했고, 미국이 사우디 주재 외교관 일부에 철수를 명령했습니다. 예멘 타이즈 등 남서부 지상전도 격화되어 UN은 약 26만 명 피란을 경고했습니다.",
-   "brief": [
-    "10/22 미 국무부, 후티 공격 속 사우디 주재 일부 외교관 철수 명령",
-    "10/22 사우디 동부 담맘 공항 등 피격, 샤이바 유전 드론 공격 2명 사망(보도)",
-    "10/22 타이즈 교전 격화, UN 약 26만 명 피란 경고",
-    "10/22 마윤섬 후티 장악 유지, 바브엘만데브 통항 47% 감소(보도)"
-   ],
-   "metrics": [
-    {
-     "v": "26만",
-     "l": "타이즈 일대 피란민(UN 추산)",
-     "n": "10/22 알자지라"
-    },
-    {
-     "v": "47%",
-     "l": "바브엘만데브 통항 감소율",
-     "n": "10/22 보도, 낮은 신빙성"
-    },
-    {
-     "v": "835회",
-     "l": "예멘 정부군 24시간 작전 횟수(주장)",
-     "n": "10/22 미들이스트아이, 정부군 주장"
-    }
-   ],
-   "sources": [
-    {
-     "name": "가디언 - 미국 사우디 주재 외교관 철수 명령",
-     "url": "https://www.theguardian.com/world/2026/oct/22/us-diplomats-told-to-leave-saudi-arabia-amid-houthi-attacks"
-    },
-    {
-     "name": "알자지라 - 타이즈 교전 및 UN 피란 경고",
-     "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced?traffic_source=rss"
-    },
-    {
-     "name": "BBC - 사우디 동부 공항 공격",
-     "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro?at_medium=RSS&at_campaign=rss"
-    },
-    {
-     "name": "미들이스트아이 - 샤이바 유전 공격",
-     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/two-killed-attack-saudi-arabias-shaybah-oilfield"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "6df9c94e4b85"
-  },
-  "ethiopia": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "에티오피아군이 10/23 에리트레아 접경 잘람베사를 장악하고 접경 마을에 진입해 양국 전면전 우려가 한층 커졌다. 티그라이에서는 드론·공습으로 민간인 피해가 이어지고 있으며, 아비 총리는 에리트레아에 '매우 심각한 결과'를 경고했다.",
-   "brief": [
-    "10/23 에티오피아, 국경도시 잘람베사 장악 보도·접경 마을 진입, 전쟁 우려 고조",
-    "10/23 티그라이 드론 공습으로 어린이 2명 포함 민간인 4명 사망 보도",
-    "10/21 아비 총리, 에리트레아에 경고·티그라이 무장청년에 무장해제 촉구",
-    "10/20~21 티그라이 위성 열점 하루 178건 급증, 방화·포격 화재 가능성"
-   ],
-   "metrics": [
-    {
-     "v": "178건",
-     "l": "티그라이 일일 위성 열점(평소 46건)",
-     "n": "10/20·10/21, NASA FIRMS"
-    },
-    {
-     "v": "4명",
-     "l": "티그라이 드론 공습 민간인 사망자",
-     "n": "10/23, 보도(신빙성 낮음)"
-    },
-    {
-     "v": "161명",
-     "l": "ICRC 메켈레→아파르 세메라 대피 인원",
-     "n": "10/21, ICRC 관련 보도"
-    }
-   ],
-   "sources": [
-    {
-     "name": "France24 에티오피아-에리트레아 확전 위험",
-     "url": "https://www.france24.com/en/tv-shows/perspective/20261022-ethiopia-eritrea-is-there-a-risk-of-a-wider-conflict"
-    },
-    {
-     "name": "NASA FIRMS 티그라이 열점 급증",
-     "url": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-21;@38.250,13.550,8.0z"
-    },
-    {
-     "name": "UN뉴스 WHO 긴급보건 대응 확대",
-     "url": "https://news.un.org/feed/view/en/story/2026/10/1168643"
-    }
-   ],
-   "trend": "up",
-   "n_events": 26,
-   "model": "claude-sonnet-5-5",
-   "evh": "f188f2c7a75e"
-  },
-  "sudan": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "수단군의 드론 공격이 아비에이 시장에서 최소 153명 사망(10/21)으로 이어지며 남수단과의 외교 갈등이 커졌고, 전국에서 민간인 피해가 급증했습니다. 한편 수단군은 블루나일 군기지를 탈환(10/22)하고 다르푸르·코르도판 RSF 진지 공습을 강화(10/23)했습니다.",
-   "brief": [
-    "10/21 아비에이 시장 드론 공격 최소 153명 사망, 남수단은 수단군 지목",
-    "10/20 남수단, 아비에이 공습 관련 수단 대사 초치",
-    "10/20 RSF 드론이 텐델티 발전소 타격, 북코르도판 전력 차단 보도",
-    "10/22 수단군 블루나일 군기지 탈환, 10/23 다르푸르·코르도판 공습 강화"
-   ],
-   "metrics": [
-    {
-     "v": "153명",
-     "l": "아비에이 시장 드론 공격 최소 사망자",
-     "n": "10/21 알자지라 보도"
-    },
-    {
-     "v": "160명",
-     "l": "수단 전역 드론 공격 사망 보고",
-     "n": "10/19~20 알자지라, 보고치"
-    },
-    {
-     "v": "3835건",
-     "l": "코르도판 하루 위성 열점 (평소 1009건)",
-     "n": "10/22 NASA FIRMS, 원인 미상"
-    }
-   ],
-   "sources": [
-    {
-     "name": "알자지라 - 아비에이 시장 드론 공격",
-     "url": "https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153?traffic_source=rss"
-    },
-    {
-     "name": "알자지라 - 수단 전역 드론 공격 격화",
-     "url": "https://www.aljazeera.com/news/2026/10/19/160-reported-killed-in-escalating-drone-attacks-across-sudan?traffic_source=rss"
-    },
-    {
-     "name": "UN뉴스 - 제네바 수단 평화 논의",
-     "url": "https://news.un.org/feed/view/en/story/2026/10/1168638"
-    },
-    {
-     "name": "NASA FIRMS - 코르도판 열점",
-     "url": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-22;@30.000,12.000,8.0z"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "bbd3495f9543"
-  },
-  "gaza": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "휴전 체제에도 가자지구에서 이스라엘 공습·발포로 사망자가 계속 나오고 있으며(10/21~10/23), 유엔 식량 지원 삭감으로 기근 우려가 커졌습니다. 서안에서는 정착민 공격이 올리브 수확기에 격화되는 가운데 용의자 석방이 이어졌습니다.",
-   "brief": [
-    "10/23 가자 공격으로 소녀 포함 4명 사망, 누세이라트 드론 공격에 1명 사망·13명 부상",
-    "10/22 가자 보건부, 24시간 새 7명 사망·24명 부상 집계",
-    "10/22 유엔 식량 지원 삭감으로 가자 50만 명 지원 끊길 위기, 기근 우려",
-    "10/22~10/23 서안 정착민 공격 용의자 석방 보도, 올리브 수확기 공격 격화"
-   ],
-   "metrics": [
-    {
-     "v": "7명",
-     "l": "가자 24시간 사망자 (부상 24명)",
-     "n": "10/22 가자 보건부 발표, Middle East Eye"
-    },
-    {
-     "v": "50만 명",
-     "l": "유엔 식량 지원 중단 위기 가자 주민",
-     "n": "10/22 Middle East Eye"
-    },
-    {
-     "v": "9명",
-     "l": "이스라엘 법원 석방 서안 정착민 공격 용의자",
-     "n": "10/23 Al Jazeera"
-    }
-   ],
-   "sources": [
-    {
-     "name": "Al Jazeera 가자 공격 사망",
-     "url": "https://www.aljazeera.com/news/2026/10/22/israeli-attacks-in-gaza-kill-four-including-a-young-girl?traffic_source=rss"
-    },
-    {
-     "name": "Middle East Eye 가자 보건부 24시간 사망자",
-     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/seven-killed-israeli-attacks-gaza-past-24-hours"
-    },
-    {
-     "name": "Middle East Eye 유엔 식량 지원 삭감",
-     "url": "https://www.middleeasteye.net/news/gaza-families-brace-renewed-hunger-un-cuts-food-aid"
-    },
-    {
-     "name": "Al Jazeera 서안 정착민 용의자 석방",
-     "url": "https://www.aljazeera.com/news/2026/10/22/israel-frees-suspects-in-two-settler-attacks-as-west-bank-pogroms-intensify?traffic_source=rss"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "c1255ddd5735"
-  },
-  "afpak": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "10/22 NYT는 아프간·파키스탄 분쟁이 8개월째 '전면전' 양상이며 양측이 대리 무장세력을 동원하고 민간인 피해가 크다고 보도했다. 10/23 KP주 카라크에서 교전으로 경찰 4명과 테러리스트 2명이 숨졌다.",
-   "brief": [
-    "10/22 NYT: 아프간·파키스탄 8개월째 전면전, 대리세력 동원·민간 피해 큼",
-    "10/23 KP주 카라크 교전, 경찰 4명·테러리스트 2명 사망",
-    "10/21 북와지리스탄 미란샤서 근무 중 경찰관 1명 괴한 총격에 사망",
-    "10/21 발루치스탄 정부, 테러범 1,100명 사살 등 대테러 성과 주장"
-   ],
-   "metrics": [
-    {
-     "v": "4명",
-     "l": "카라크 교전 사망 경찰 수(테러리스트 2명 별도 사망)",
-     "n": "10/23 Dawn"
-    },
-    {
-     "v": "1,100명",
-     "l": "발루치스탄 정부 주장 테러범 사살 수",
-     "n": "10/21 Dawn, 정부 주장"
-    }
-   ],
-   "sources": [
-    {
-     "name": "NYT 아프간·파키스탄 대리전",
-     "url": "https://www.nytimes.com/2026/10/22/world/asia/afghanistan-pakistan-proxy-war.html"
-    },
-    {
-     "name": "Dawn 카라크 교전",
-     "url": "https://www.dawn.com/news/2039039/4-cops-including-dsp-martyred-2-terrorists-killed-during-exchange-of-fire-in-kps-karak-police"
-    },
-    {
-     "name": "Dawn 발루치스탄 대테러 지출",
-     "url": "https://www.dawn.com/news/2038671/balochistan-says-rs14bn-spent-to-counter-terrorism"
-    },
-    {
-     "name": "DW 인도·카불 관계 재구축",
-     "url": "https://www.dw.com/en/pakistan-taliban-conflict-how-india-could-benefit-from-shifting-regional-dynamics/a-79721426?maca=en-rss-en-world-4025-rdf"
     }
    ],
    "trend": "flat",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "55ef77b86e27"
+   "evh": "b09985aa9d21"
   },
-  "korea": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "북한이 남북 경계 요새화와 대남 확성기 재가동 경고로 긴장을 높이고 있습니다. 한국은 DMZ 지뢰 폭발 사과를 요구하는 서한을 유엔 안보리에 보낼 계획입니다.",
+  "yemen": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "후티가 사우디 공항·유전·리야드·메디나 방면으로 공격을 이어가 사우디 내 사망자가 늘고 있고, 미국은 사우디 주재 일부 외교관에 철수를 명령했습니다. 브렌트유는 10/23 배럴당 115달러로 5개월여 만의 최고치를 기록했고, 10/24 보도는 120달러 근접을 전했습니다.",
    "brief": [
-    "10/22 김여정, 수일 내 경계선 전역 대남 확성기 재가동 준비 완료 경고",
-    "10/21 북 관영매체, 국경 요새화 현장 시찰 및 '새 화력 구분대' 배치 완료 발표",
-    "10/22 한국, 지뢰 폭발 사과 촉구 서한 안보리 송부 계획",
-    "10/22 한미 연합 도하훈련, 해병대 서북도서 합동훈련 실시"
+    "10/22 담맘 킹파드 공항·샤이바 유전 피격, 사우디 내 사망 다수 보도",
+    "10/23 리야드·메디나 상공 드론 4기 격추, 후티 공격으로 4명 추가 사망",
+    "10/22 타이즈 교전 격화, UN은 약 26만 명 피란 경고",
+    "10/22 미 국무부 사우디 주재 일부 외교관 철수 명령, 걸프 대사관 철수 준비 보도"
    ],
-   "metrics": [],
+   "metrics": [
+    {
+     "v": "115달러",
+     "l": "브렌트유 배럴당 가격",
+     "n": "10/23 Dawn, 5개월여 만의 최고치"
+    },
+    {
+     "v": "약 26만 명",
+     "l": "타이즈 피란민(UN 경고)",
+     "n": "10/22 알자지라"
+    },
+    {
+     "v": "47%",
+     "l": "바브엘만데브 통항 감소(미확인 보도)",
+     "n": "10/22 구글뉴스 집계, 신빙성 C3"
+    }
+   ],
    "sources": [
     {
-     "name": "가디언 - 북한 대남 확성기 재가동 경고",
-     "url": "https://www.theguardian.com/world/2026/oct/22/north-korea-to-restart-propaganda-loudspeakers-south-korea"
+     "name": "Dawn - 후티 사우디 공격 사망 4명 추가",
+     "url": "https://www.dawn.com/news/2039176/houthi-attacks-on-saudi-sites-claim-four-more-lives"
     },
     {
-     "name": "연합뉴스 - 한국, 안보리에 DMZ 지뢰 서한 송부 계획",
-     "url": "https://en.yna.co.kr/view/AEN20261022007500315"
+     "name": "가디언 - 미 외교관 사우디 철수 명령",
+     "url": "https://www.theguardian.com/world/2026/oct/22/us-diplomats-told-to-leave-saudi-arabia-amid-houthi-attacks"
     },
     {
-     "name": "연합뉴스 - 김여정 국경 요새화 현장 시찰",
-     "url": "https://en.yna.co.kr/view/AEN20261021007800315"
+     "name": "알자지라 - 타이즈 교전·26만 명 피란",
+     "url": "https://www.aljazeera.com/news/2026/10/22/fighting-rages-in-yemens-taiz-as-un-warns-nearly-260000-now-displaced?traffic_source=rss"
     },
     {
-     "name": "ABC 호주 - 북한 남북 경계 요새화",
-     "url": "https://www.abc.net.au/news/2026-10-23/tensions-rise-on-korea-border/107299192"
+     "name": "Dawn - 브렌트유 5개월여 최고",
+     "url": "https://www.dawn.com/news/2039269/brent-crude-hits-more-than-five-month-high-on-concern-over-middle-east-escalation"
     }
    ],
    "trend": "up",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "34333ce24e05"
+   "evh": "a0bd9685b542"
   },
-  "lebanon": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "이스라엘이 레바논 남부 공습·폭파와 시리아 남부 진입을 이어가며 10/23 시리아 다라주에서 민간인 사망이 보고됐다. 한편 레바논·이스라엘 실무·군사회담은 미국에서 진행 중이다.",
+  "ethiopia": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "에티오피아가 에리트레아 접경 도시 잘람베사를 장악했다는 보도가 나오며 국가 간 전쟁 우려가 커졌다. 티그라이에서는 TPLF 지도자가 정부군과의 교전 지속을 주장하고 드론 공습으로 민간인 피해가 보도됐다.",
    "brief": [
-    "10/22 이스라엘, 레바논 남부 여러 곳 공습, 크파르 테브니트 대규모 폭파",
-    "10/23 이스라엘군, 시리아 다라주 잠라 진입 중 장애인 민간인 사살(현지 당국 주장)",
-    "10/22 이스라엘군, 쿠네이트라 타랑가 마을에 다수 차량으로 진입",
-    "10/23 다마스쿠스 인근 IS 조직 급습, 보안요원 2명·용의자 5명 사망"
+    "10/23 에티오피아, 국경도시 잘람베사 장악…에리트레아와 전쟁 우려 고조",
+    "10/23 TPLF 지도자 데브레치온, 티그라이는 전쟁 중이라며 교전 지속 주장",
+    "10/23 티그라이 드론 공습으로 어린이 2명 포함 민간인 4명 사망 보도",
+    "10/23 이집트, 에티오피아 외교관 추방…이집트 등 4개국 안보 공조 합의(10/22)"
    ],
    "metrics": [
     {
-     "v": "2",
-     "l": "다마스쿠스 인근 IS 급습 중 사망한 시리아 보안요원 수",
-     "n": "10/23 알자지라"
+     "v": "178",
+     "l": "티그라이 일일 위성 열점 건수(평소 46건)",
+     "n": "10/21, NASA FIRMS"
     },
     {
-     "v": "5",
-     "l": "같은 급습에서 사망한 용의자 수(6명 체포)",
-     "n": "10/23 알자지라"
+     "v": "4",
+     "l": "티그라이 드론 공습 민간인 사망자(어린이 2명 포함)",
+     "n": "10/23, 보도"
+    },
+    {
+     "v": "71",
+     "l": "WHO가 북부에 전달한 의료물자(톤 이상)",
+     "n": "10/22, UN뉴스"
     }
    ],
    "sources": [
     {
-     "name": "미들이스트아이 - 레바논 남부 공습·폭파",
+     "name": "프랑스24 - 에티오피아·에리트레아 확전 위험",
+     "url": "https://www.france24.com/en/tv-shows/perspective/20261022-ethiopia-eritrea-is-there-a-risk-of-a-wider-conflict"
+    },
+    {
+     "name": "알자지라 - 티그라이 반군 무장해제 촉구",
+     "url": "https://www.aljazeera.com/news/2026/10/23/tigray-official-urges-rebels-to-disarm?traffic_source=rss"
+    },
+    {
+     "name": "아프리카뉴스 - 티그라이 여전히 전쟁 중",
+     "url": "http://www.africanews.com/2026/10/23/tigray-is-still-at-war-rebel-leader-warns-claiming-tactical-victories/"
+    },
+    {
+     "name": "NASA FIRMS - 티그라이 위성 열점 급증",
+     "url": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-21;@38.250,13.550,8.0z"
+    }
+   ],
+   "trend": "up",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "a72082bfbe77"
+  },
+  "sudan": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "수단군이 블루나일·에티오피아 국경 인근 기지를 탈환했다고 보도됐으나(미확인), 아비에이 시장 드론 공격으로 최소 153명이 숨지고 유엔은 10월 3주간 드론 공격 사망자를 최소 306명으로 집계했다. 다르푸르·코르도판 위성 열점이 평소의 4~6배로 급증해 전투 격화가 이어지고 있다.",
+   "brief": [
+    "10/21~22 아비에이 시장 드론 공격 최소 153명 사망, 남수단은 수단군 지목",
+    "10/23 유엔 인권대표, 10월 3주간 드론 공격 사망 최소 306명 규탄",
+    "10/22~23 수단군, 블루나일·에티오피아 국경 인근 기지 탈환 보도(미확인)",
+    "10/21~23 제네바서 유엔 특사 주도 휴전 논의, 부르한은 10/22 RSF 대화 거부"
+   ],
+   "metrics": [
+    {
+     "v": "306",
+     "l": "10월 3주간 드론 공격 사망자(최소)",
+     "n": "10/23 유엔 인권대표"
+    },
+    {
+     "v": "4146",
+     "l": "코르도판 하루 위성 열점 건수(평소 1082)",
+     "n": "10/23 NASA FIRMS"
+    },
+    {
+     "v": "2572",
+     "l": "다르푸르 하루 위성 열점 건수(평소 567)",
+     "n": "10/23 NASA FIRMS"
+    }
+   ],
+   "sources": [
+    {
+     "name": "UN뉴스 – 드론 공격 사망 306명 규탄",
+     "url": "https://news.un.org/feed/view/en/story/2026/10/1168661"
+    },
+    {
+     "name": "알자지라 – 아비에이 시장 드론 공격",
+     "url": "https://www.aljazeera.com/news/2026/10/21/drone-attack-in-disputed-sudan-south-sudan-border-region-kills-at-least-153?traffic_source=rss"
+    },
+    {
+     "name": "UN뉴스 – 제네바 휴전 논의 재개",
+     "url": "https://news.un.org/feed/view/en/story/2026/10/1168638"
+    },
+    {
+     "name": "NASA FIRMS – 코르도판 열점 급증",
+     "url": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-23;@30.000,12.000,8.0z"
+    }
+   ],
+   "trend": "up",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "dbe051c787d7"
+  },
+  "gaza": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "10/23 헤브론 등 서안 총격으로 양측 사망자가 났고, 네타냐후는 헤브론 봉쇄와 서안 전면 봉쇄를 지시했습니다. 가자에서는 휴전 중에도 이스라엘 공습·드론 공격이 계속되고, 밀가루 반입 차단과 유엔 식량 지원 삭감으로 기근 우려가 커졌습니다.",
+   "brief": [
+    "10/23 서안 공격: 이스라엘인 5명 부상, 총격범 2명 사망, 헤브론 봉쇄 지시",
+    "10/23 가자시티·누세이라트 등 공습·드론 공격으로 사망자 잇따라 보도",
+    "10/23 밀가루 반입 차단으로 가자 상업 제빵소 대부분 폐쇄, 기근 경고",
+    "10/22 유엔 식량 지원 삭감으로 가자 50만 명 지원 중단 위기"
+   ],
+   "metrics": [
+    {
+     "v": "50만 명",
+     "l": "유엔 식량 지원 삭감으로 지원이 끊길 위기에 놓인 가자 주민",
+     "n": "10/22 Middle East Eye"
+    },
+    {
+     "v": "7명",
+     "l": "가자 보건부 집계, 24시간 내 이스라엘 공격 사망자",
+     "n": "10/22 Middle East Eye"
+    },
+    {
+     "v": "5명",
+     "l": "10/23 서안 공격으로 부상한 이스라엘인",
+     "n": "10/23 NYT·Dawn"
+    }
+   ],
+   "sources": [
+    {
+     "name": "NYT 서안 총격 사건",
+     "url": "https://www.nytimes.com/2026/10/23/world/middleeast/west-bank-shooting-israel.html"
+    },
+    {
+     "name": "Middle East Eye 네타냐후 헤브론 봉쇄 지시",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/netanyahu-orders-hebron-closure-seeks-full-west-bank-lockdown"
+    },
+    {
+     "name": "Middle East Eye 가자 제빵소 폐쇄",
+     "url": "https://www.middleeasteye.net/news/gaza-bakeries-shut-israel-blocks-flour-shipments"
+    },
+    {
+     "name": "Middle East Eye 유엔 식량 지원 삭감",
+     "url": "https://www.middleeasteye.net/news/gaza-families-brace-renewed-hunger-un-cuts-food-aid"
+    }
+   ],
+   "trend": "up",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "d6ae9c6c1122"
+  },
+  "afpak": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "파키스탄이 10/23 카라크와 과다르에서 무장세력과 잇따라 교전해 경찰 4명이 숨지고 무장세력 다수를 사살했다고 밝혔다. 같은 시기 무니르 총사령관은 대테러 작전 지속을 천명했고, 파키스탄은 튀르키예·카타르·인도네시아와 방위협정을 체결했다.",
+   "brief": [
+    "10/23 KP주 카라크 교전: 경찰 4명, 테러리스트 2명 사망",
+    "10/23 과다르 건설사 캠프 공격 저지: 테러범 3명 사살",
+    "10/23 ISPR, 과다르서 '인도 지원' 무장세력 10명 사살 발표",
+    "10/22 NYT, 아프간·파키스탄 8개월째 '전면전'·대리세력 동원 보도"
+   ],
+   "metrics": [
+    {
+     "v": "4",
+     "l": "카라크 교전 사망 경찰 수",
+     "n": "10/23, Dawn"
+    },
+    {
+     "v": "10",
+     "l": "과다르서 사살된 무장세력 수(ISPR 발표)",
+     "n": "10/23, Dawn, 군 발표로 독자 확인 안 됨"
+    },
+    {
+     "v": "8개월",
+     "l": "아프간·파키스탄 충돌 지속 기간(NYT 보도)",
+     "n": "10/22, NYT"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Dawn 카라크 교전 경찰 4명 사망",
+     "url": "https://www.dawn.com/news/2039039/4-cops-including-dsp-martyred-2-terrorists-killed-during-exchange-of-fire-in-kps-karak-police"
+    },
+    {
+     "name": "Dawn ISPR 과다르 무장세력 10명 사살",
+     "url": "https://www.dawn.com/news/2039254/10-india-sponsored-terrorists-killed-as-bid-to-undermine-states-writ-in-gwadar-foiled-ispr"
+    },
+    {
+     "name": "NYT 아프간-파키스탄 대리전",
+     "url": "https://www.nytimes.com/2026/10/22/world/asia/afghanistan-pakistan-proxy-war.html"
+    },
+    {
+     "name": "Middle East Eye 바드르 방산협정",
+     "url": "https://www.middleeasteye.net/news/turkey-qatar-pakistan-and-indonesia-forge-badr-deal-jointly-produce-weapons"
+    }
+   ],
+   "trend": "up",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "3c4e51cc730d"
+  },
+  "korea": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "한국이 10/23 북한에 국경 군사회담을 제안했으나, 북한은 접경 지역에 새 화력 구분대 배치를 완료했다고 발표했습니다. DMZ 지뢰 폭발 이후 남북 긴장이 이어지는 가운데, 한국은 유엔 안보리에 사과 촉구 서한을 보낼 계획입니다.",
+   "brief": [
+    "10/23 한국, 북한에 국경 군사회담 제안. 북한 신규 부대 배치 발표 수일 후",
+    "10/22 한국, DMZ 지뢰 폭발 사과 촉구 서한 유엔 안보리 송부 계획",
+    "10/21 북한, 접경 새 화력 구분대 배치 완료 발표. 김여정 국경 요새화 현장 시찰",
+    "10/23 호주, 북한 위장 IT 노동자 사업 관련 2명 제재"
+   ],
+   "metrics": [
+    {
+     "v": "약 96만 개",
+     "l": "2024년 이후 북한이 군사분계선 일대에 매설한 것으로 추정되는 지뢰",
+     "n": "10/23 연합뉴스, 의원들 추정. 군은 약 100만 발로 언급"
+    },
+    {
+     "v": "2명",
+     "l": "호주가 제재한 북한 IT 노동자 사업 관련 대상",
+     "n": "10/23 호주 외교장관 발표"
+    }
+   ],
+   "sources": [
+    {
+     "name": "알자지라 – 한국의 북한 군사회담 제안",
+     "url": "https://www.aljazeera.com/news/2026/10/23/south-korea-invites-north-for-military-talks-over-border?traffic_source=rss"
+    },
+    {
+     "name": "연합뉴스 – 안보리 서한 송부 계획",
+     "url": "https://en.yna.co.kr/view/AEN20261022007500315"
+    },
+    {
+     "name": "연합뉴스 – 김여정 국경 요새화 시찰",
+     "url": "https://en.yna.co.kr/view/AEN20261021007800315"
+    },
+    {
+     "name": "연합뉴스 – DMZ 지뢰 매설 추정",
+     "url": "https://en.yna.co.kr/view/AEN20261023002100315"
+    }
+   ],
+   "trend": "flat",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "8de57ebaa0fc"
+  },
+  "lebanon": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "미국에서 열린 레바논·이스라엘 군사회담이 성과 없이 끝나 이스라엘 철수가 정체됐다(10/24). 이스라엘은 레바논 남부 공습·폭파와 시리아 남부 진입을 이어가고 있다.",
+   "brief": [
+    "10/24 미국 개최 레바논·이스라엘 군사회담, 성과 없이 종료",
+    "10/22 이스라엘, 레바논 남부 곳곳 공습, 크파르 테브니트 대규모 폭파",
+    "10/23 이스라엘군, 시리아 다라주 잠라 진입 중 장애인 민간인 사살(당국 주장)",
+    "10/23 다마스쿠스 인근 IS 조직 급습, 보안요원 2명 사망"
+   ],
+   "metrics": [
+    {
+     "v": "2명",
+     "l": "다마스쿠스 인근 IS 급습 중 사망한 시리아 보안요원",
+     "n": "10/23, 알자지라(용의자 5명 사망·6명 체포)"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Middle East Eye - 레바논·이스라엘 군사회담 종료",
+     "url": "https://www.middleeasteye.net/news/lebanon-israel-military-talks-us-end-without-a-breakthrough"
+    },
+    {
+     "name": "Middle East Eye - 레바논 남부 공습·폭파",
      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-launches-air-strikes-demolitions-across-southern-lebanon"
     },
     {
-     "name": "미들이스트아이 - 잠라 민간인 사살",
+     "name": "Middle East Eye - 시리아 남부 장애인 사살",
      "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-kill-man-disability-southern-syria-authorities-say"
     },
     {
      "name": "알자지라 - 다마스쿠스 인근 IS 급습",
      "url": "https://www.aljazeera.com/news/2026/10/22/two-syrian-security-officers-killed-in-raid-on-isil-cell-near-damascus?traffic_source=rss"
-    },
-    {
-     "name": "미들이스트아이 - 레바논·이스라엘 군사회담 탬파 이동",
-     "url": "https://www.middleeasteye.net/news/lebanon-israel-boycott-law-renewed-pressure-military-talks-move-tampa"
     }
    ],
    "trend": "up",
-   "n_events": 24,
+   "n_events": 22,
    "model": "claude-sonnet-5-5",
-   "evh": "f9a733c81f31"
+   "evh": "f1651aa6a90b"
   },
   "sahel": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "말리 메나카에서 IS 소행으로 지목된 민간인 40여 명 피살이 보도됐고, HRW는 말리군·아프리카군단 공습으로 민간인 89명이 숨졌다고 발표했습니다. 니제르·말리·부르키나파소는 ECOWAS와 대화를 재개해 협력 기본협정 추진에 합의했습니다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "니제르에서 1년 반가량 억류됐던 스위스·오스트리아 여성 2명이 10/22~23 리비아에서 석방됐다. 같은 기간 말리·차드에서는 대규모 인터넷 장애가 연이어 관측됐다.",
    "brief": [
-    "10/20 말리 메나카서 민간인 40여 명 피살, 공동체 지도자들 IS 지목",
-    "10/20 HRW, 말리군·아프리카군단 공습 민간인 89명 사망 발표",
-    "10/20 니제르·말리·부르키나, ECOWAS와 대화 재개·기본협정 추진",
-    "10/22 니제르서 억류된 유럽 여성 2명 리비아서 석방"
+    "10/23 니제르서 피랍된 유럽 여성 2명 리비아서 석방, 스위스인은 귀국 중",
+    "10/22~23 말리·차드 IODA 인터넷 대규모 장애 탐지, 원인은 미확인",
+    "10/23 휴먼라이츠워치, 말리군과 반군의 인권 침해 고발",
+    "10/21 부르키나파소 법무부 사형제 부활 발표, 세네갈 노동계 3일 총파업 예고"
    ],
    "metrics": [
     {
-     "v": "89명",
-     "l": "HRW 발표 말리군·아프리카군단 공습 민간인 사망자",
-     "n": "10/20, Rio Times 보도"
+     "v": "2934",
+     "l": "차드 인터넷 장애 IODA 24시간 점수",
+     "n": "10/23, IODA"
     },
     {
-     "v": "40여 명",
-     "l": "말리 메나카 공격 민간인 사망자",
-     "n": "10/20, Africanews, IS 소행은 지역 지도자 주장"
-    },
-    {
-     "v": "8명",
-     "l": "차드 뎅기열 사망자(확진 250명)",
-     "n": "10/20, 뉴스 집계"
+     "v": "2547",
+     "l": "말리 인터넷 장애 IODA 24시간 점수",
+     "n": "10/23, IODA"
     }
    ],
    "sources": [
     {
-     "name": "Africanews 말리 메나카 민간인 피살",
-     "url": "http://www.africanews.com/2026/10/20/more-than-40-civilians-killed-in-mali-attack-blamed-on-islamic-state/"
-    },
-    {
-     "name": "Rio Times 말리 공습 민간인 사망(HRW)",
-     "url": "https://www.riotimesonline.com/mali-air-strikes-killed-89-civilians-2026/"
-    },
-    {
-     "name": "France24 AES-ECOWAS 대화 재개",
-     "url": "https://www.france24.com/en/video/20261020-niger-mali-and-burkina-faso-resume-dialogue-with-ecowas-regional-bloc"
-    },
-    {
-     "name": "BBC 니제르 억류 유럽 여성 석방",
+     "name": "BBC 니제르 피랍 유럽 여성 리비아 석방",
      "url": "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "name": "IODA 말리 인터넷 장애",
+     "url": "https://ioda.inetintel.cc.gatech.edu/country/ML?d=2026-10-23"
+    },
+    {
+     "name": "IODA 차드 인터넷 장애",
+     "url": "https://ioda.inetintel.cc.gatech.edu/country/TD?d=2026-10-23"
+    },
+    {
+     "name": "Africanews 부르키나파소 사형제 부활",
+     "url": "http://www.africanews.com/2026/10/21/burkina-faso-reinstates-death-penalty-justice-ministry/"
     }
    ],
    "trend": "flat",
-   "n_events": 21,
+   "n_events": 19,
    "model": "claude-sonnet-5-5",
-   "evh": "16c7ee9ce25b"
+   "evh": "89ec3f125617"
   },
   "drc": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "콩고민주공화국 에볼라가 8번째 주로 확산했고 나이지리아 전파 위험 조사가 진행 중입니다(10/22). 지원금 7억 달러 행방 불명 보도가 나오며 대응 역량 우려가 커졌습니다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "10/22 벨기에가 카빌라 전 대통령의 정치·군사 조직 결성을 규탄했습니다. 10/23에는 에볼라 대응에서 교회 목회자들이 공포와 허위정보 차단을 돕고 있다는 보도가 나왔습니다.",
    "brief": [
-    "10/22 DRC 에볼라 8번째 주로 확산, 나이지리아 전파 위험 조사 착수",
-    "10/20 에볼라 지원금 7억 달러 행방 불명 보도, 발병은 확산 중(신빙성 낮음, 미확인)",
     "10/22 벨기에, 카빌라 전 대통령의 정치·군사 조직 결성 규탄",
-    "10/21 MSF, 부룬디 부수마 콩고 난민 지원 자금 고갈로 위협 증가 경고"
+    "10/23 에볼라 대응에 교회 목회자들이 공포·허위정보 차단 지원",
+    "10/21 FDLR 전 전투원, 무장단체 이탈 후 르완다 무토보 재정착",
+    "10/21 MSF, 부룬디 부수마 콩고 난민 지원 자금 고갈로 위협 증가"
    ],
-   "metrics": [
-    {
-     "v": "8",
-     "l": "에볼라 확산 주(州) 수",
-     "n": "10/22 UN 뉴스"
-    },
-    {
-     "v": "7억 달러",
-     "l": "행방 불명 보도된 에볼라 지원금",
-     "n": "10/20 보도, 미확인"
-    }
-   ],
+   "metrics": [],
    "sources": [
     {
-     "name": "UN 뉴스 - DRC 에볼라 8번째 주 확산",
-     "url": "https://news.un.org/feed/view/en/story/2026/10/1168647"
+     "name": "NYT 콩고 에볼라 대응과 교회 목회자",
+     "url": "https://www.nytimes.com/2026/10/23/world/africa/congo-ebola-catholic-church-rumors.html"
     },
     {
-     "name": "아프리카뉴스 - 벨기에, 카빌라 조직 결성 규탄",
+     "name": "Africanews 벨기에의 카빌라 조직 규탄",
      "url": "http://www.africanews.com/2026/10/22/deplorable-belgium-condemns-ex-drc-leader-kabilas-launch-of-political-military-group/"
     },
     {
-     "name": "구글뉴스 - 에볼라 지원금 7억 달러 행방 불명",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYjVtWW5iMVVGQjNCOV9ta2wzVUNHTkpHMzZCV1poU0tKSzZPOThNSGs0REVYRnZsZ1E4RUhJc0RYZXQ3Mm9kc3NlTGlQb3RvZTdTeGw5MzJ2d2ZwYmd2M2JQZnJob2pieThreXE1bmZNRG40M1VXQUZQclYyb0VoaWlTd3V2d2V6SjN1OThjRkh2UmxXTDN0bFd3UHpGWW9ZX21F0gGoAUFVX3lxTFA1SmxxRVBGeUJHMERSbld2MHltTWlmUDVXVXRlU2tNM1E4aTYwcFZ1YXpqWVBPNGs0N0ZhQVNBYVkzLVhiaTJFbVNJcDBBeDRPVHUtTlZFbTQ0V2pPcVYtQS1OU3hta1cxbWJhUUNfZnQwZ19XOHZEcmZtVnlfYWZLNlRtWk01NXhITGdNU25DU0pvVUJMNU9pQU9ldGVjUDE5WnB0UkNhbA?oc=5"
+     "name": "알자지라 FDLR 전 전투원 르완다 귀환",
+     "url": "https://www.aljazeera.com/news/2026/10/21/why-former-fdlr-fighters-are-returning-to-rwanda?traffic_source=rss"
+    },
+    {
+     "name": "Google News MSF 부수마 콩고 난민 지원 자금난",
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNRlgyYmVLWDl5NmdrTEQ2Uml0a3had0JjZTY1MFRKSEVtUUVNeW9qSlE3cWJFMnJwNXR6WVYzdVJrSHNoVndGMzBIZFhBU09aQkg4RnAyVlJBOTJzVVdRa25qTmVyQXB6V3VTRDc4S2d4TG00cG5Hb3lEZlUxemNYNFJfanF3WDVNemltV2JlN29OT2VfZlp4STVIeGk0U2h2ODRpUnVjck1FYWo5bHZjdWFzR1VwU05LLXdsclNlRQ?oc=5"
     }
    ],
-   "trend": "up",
-   "n_events": 9,
+   "trend": "flat",
+   "n_events": 7,
    "model": "claude-sonnet-5-5",
-   "evh": "47a76336ec4d"
+   "evh": "080336ea1a78"
   },
   "bio": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "에볼라가 민주콩고에서 나이지리아로 번져 서아프리카 첫 확진이 나왔고, 케냐 확진도 늘고 있다. 시베리아 페스트는 러시아 의심 사례 보고뿐 확인된 사실이 없다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "분디부교 에볼라가 민주콩고·케냐에 이어 나이지리아까지 번져 서아프리카 첫 사례가 나왔다. 10/24 케냐 사망자가 2명째로 보도됐고 각국이 입국 검역을 강화하고 있다.",
    "brief": [
-    "10/22 나이지리아 첫 에볼라 환자, 민주콩고 분디부교 변종과 일치",
-    "10/21 케냐 에볼라 확진 9명으로 증가 보도, 한국은 케냐발 입국자 검역 의무화",
-    "10/21 러시아 페스트 의심 사례 보고로 국제 우려 확산, 사실 여부 미확인",
-    "10/21 미 CDC 올해 세 번째 홍역 사망 보고, 누적 환자 4,400명 초과"
+    "10/21 나이지리아, 우간다 입국 여성 에볼라 첫 확진",
+    "10/22 나이지리아 환자, 민주콩고 분디부교 변종과 일치",
+    "10/23 유엔, 민주콩고 확산 지속·자원 부족 호소, 케냐 봉쇄 강화",
+    "10/24 케냐 에볼라 사망 2명째 보도, 10/21 한국 케냐발 검역 의무화"
    ],
    "metrics": [
     {
-     "v": "9",
-     "l": "케냐 에볼라 확진자 수(명)",
-     "n": "10/21 보도, 신빙성 낮음"
+     "v": "9명",
+     "l": "케냐 에볼라 확진자",
+     "n": "10/21 보도, 신빙성 C3"
     },
     {
-     "v": "4,400+",
-     "l": "미국 올해 홍역 누적 환자(명)",
-     "n": "10/21 CDC 발표, 알자지라 인용"
+     "v": "2명",
+     "l": "케냐 에볼라 사망자",
+     "n": "10/24 프랑스24 보도"
     },
     {
-     "v": "1,286",
-     "l": "펜실베이니아 홍역 환자(명, 42개 카운티)",
-     "n": "10/20 보도"
+     "v": "4,588명",
+     "l": "미국 홍역 누적 환자",
+     "n": "10/24 미 CDC 발표 인용 보도"
     }
    ],
    "sources": [
     {
-     "name": "알자지라 - 나이지리아 첫 에볼라 환자, 콩고 변종 일치",
+     "name": "UN뉴스 민주콩고 에볼라 확산·케냐 봉쇄",
+     "url": "https://news.un.org/feed/view/en/story/2026/10/1168655"
+    },
+    {
+     "name": "알자지라 나이지리아 첫 에볼라 변종 일치",
      "url": "https://www.aljazeera.com/news/2026/10/21/nigerias-first-ebola-case-matches-dr-congo-strain-health-officials-say?traffic_source=rss"
     },
     {
-     "name": "가디언 - 아부자 에볼라 확진, 서아프리카 확산",
+     "name": "가디언 나이지리아 첫 에볼라 확진",
      "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest"
     },
     {
-     "name": "구글뉴스 - 케냐 에볼라 확진 9명, 한국 검역 의무화",
-     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE95MHpHUUhncUEyYzd5WEIwQmpJcmFKVnBDT24wRERVdU9kYS1JR1lMSElYLVRnSXEzaGxmaXQ5c3JKX2lGZXpzZk8tMEt4MTN5bEc2LV8yT3R6WVJhc2R2UmRR?oc=5"
-    },
-    {
-     "name": "구글뉴스 - 러시아 페스트 의심 사례 보고",
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPX0NjRXVjbzIzQnVic1lwVkdvS3NmRjNnZi1LelJuNVJWZHRNQXY0MnZRVWRBQW5DYjhfUDRDVW9LeFRNa0RiWHA2RUU5NWd0eTNjSkxvaFVyV0tKS2RmaHNMMXBNWFkySzZtWldOUUdEQUR4UlVnUHdjTi1ENDVzbVIycEN6S1BiNUFGU0lmcVphb1NuU0E?oc=5"
+     "name": "프랑스24 나이로비 건물 붕괴·케냐 에볼라 사망",
+     "url": "https://www.france24.com/en/building-collapse-in-nairobi-search-for-survivors-under-way"
     }
    ],
    "trend": "up",
-   "n_events": 26,
+   "n_events": 25,
    "model": "claude-sonnet-5-5",
-   "evh": "7d0b02aa6f6e"
+   "evh": "45661247bab6"
   },
   "somalia": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "UAE가 약 1년 만에 알샤바브 겨냥 드론 공습을 단행했다는 보도가 10/22 나왔다(미확인). 미국의 소말리아 공습 급증으로 민간인 사상·피란 증언도 10/20 제기됐다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "UAE가 약 1년 만에 소말리아 알샤바브를 겨냥한 드론 공습을 했다는 보도가 10/22에 나왔습니다(미확인). 10/23에는 IOM이 엘니뇨 홍수로 87만4천명이 이재 위험에 놓였다고 경고했습니다.",
    "brief": [
-    "10/22 UAE, 약 1년 만에 알샤바브 겨냥 드론 공습 보도(신빙성 낮음, 미확인)",
-    "10/20 미국 공습 급증, 민간인 사상·피란 증언 알자지라 보도",
-    "10/20 해적이 무장세력과 연계해 기술·무기 확보했다는 보도(미확인)",
-    "10/21 푼틀란드 보건장관 다하르 병원 시찰 등 민간 행정 활동 지속"
+    "10/22 UAE, 약 1년 만에 알샤바브 겨냥 드론 공습 보도(미확인)",
+    "10/23 IOM, 엘니뇨 홍수로 소말리아인 87만4천명 이재 위험 경고",
+    "10/23 소말리아, 소아마비 유행 종식 위해 프로그램 개편",
+    "10/23 소말리아 남서부 야권 공세 언급 보도, 세부는 미확인"
    ],
-   "metrics": [],
+   "metrics": [
+    {
+     "v": "874,000명",
+     "l": "엘니뇨 홍수로 이재 위험에 놓인 소말리아인",
+     "n": "10/23 IOM 경고, Africanews"
+    }
+   ],
    "sources": [
     {
-     "name": "구글뉴스 – UAE 알샤바브 겨냥 드론 공습 보도",
+     "name": "Africanews - IOM 소말리아 홍수 이재 위험 경고",
+     "url": "http://www.africanews.com/2026/10/23/un-migration-agency-warns-874000-somalians-at-risk-of-displacement-from-flooding/"
+    },
+    {
+     "name": "Google News - UAE 알샤바브 겨냥 드론 공습 보도",
      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5mcXNJVWJzSG5wWjd1VG5SUHd4ZU1TM3JzVlV6VWpDcjJ5RFpSNzFzQmU5bWhQME9OWFpQR2d4b1Nud0x6WGJDanNMVHFTNUZ0WXc?oc=5"
     },
     {
-     "name": "알자지라 – 미국 소말리아 공습 급증과 민간인 피해",
-     "url": "https://www.aljazeera.com/news/2026/10/20/us-air-strikes-surge-in-somalia-as-families-seek-answers?traffic_source=rss"
-    },
-    {
-     "name": "구글뉴스 – 해적과 무장세력 연계",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNak9DbTBnMkFYN045WHFJQjU2X1JDRHlsbFVJdlZaUXROTWVNZmNqU3FiSWpnVEZhMEJRZWYxSTdHbnA1aHN6QVlBaGFrWE83dWxBUmFJdGxjbzVGM09pOVlRb2hpY0hZS1B4cXdTc2pfZ2lKd0lMN25zZ3F3UklkTWxVaWNqM0w4cEx1WUd3TlNyQlRnRGJrRUk2RkVjTU1QWndZ?oc=5"
+     "name": "Google News - 소말리아 소아마비 프로그램 개편",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQREkwRGdVR2NqdVFKbU5GV21iUjJoVzNhYkxZbXVtcUlDbXNabWRIS3VQUVVSZkVULTZtcnRTVFJiRlpYZWJnaXZoVWFHeVY4VFh5SC0xSWRjQ3RCSWNRRm11YWxEQmlucmFiMHhOZC14dW5CenNtdC1Db2pBQy1jMXR0dVlaTkZtdkkyTi1pSXRrcTU1bWRGWm9jZ04yaHlDYkxNaU5zMkU1UUxXdUc1RU14QVBCZ3UtaDh4SEVzVEYzb2M?oc=5"
     }
    ],
-   "trend": "up",
+   "trend": "flat",
    "n_events": 7,
    "model": "claude-sonnet-5-5",
-   "evh": "61baf9fb3cc0"
+   "evh": "7759e8669ad1"
   },
   "myanmar": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "군정이 마궤주 먀잉 유전지대와 친주 남부 등 여러 전선에서 공세를 이어가 수천 명이 피란했습니다. 한편 구금 중인 아웅산수치의 아들이 5년여 만에 모친과 처음 통화해 구금 제한이 일부 완화된 것으로 전해졌습니다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "군정이 친주 남부 4개 전선에서 저항세력 거점 공세를 벌이고 라카인주에서는 아라칸군과의 교전이 격화되고 있습니다. 한편 아웅산 수치의 아들이 약 5~6년 만에 구금 중인 모친과 통화해 구금 제한이 일부 완화된 것으로 보도됐습니다.",
    "brief": [
-    "10/20 군정, 마궤주 먀잉 유전지대 공세로 수천 명 피란",
     "10/22 군정, 친주 남부·마궤 지역 4개 전선서 저항세력 거점 공세",
-    "10/21 이라와디, 군정의 라카인주 민간인 공습 문제 제기",
-    "10/22 수치 아들, 모친과 5년여 만에 첫 통화…구금 제한 완화"
+    "10/22 라카인주 아라칸군과 교전 격화, 일본재단 평화 지원 재약속",
+    "10/22~23 수치 아들, 구금 중인 모친과 통화…구금 제한 완화 보도",
+    "10/21 러시아 가스 협상·위성통신 협정, 군정 감시능력 강화 우려"
    ],
    "metrics": [],
    "sources": [
     {
-     "name": "이라와디 - 먀잉 유전지대 공세와 피란",
-     "url": "https://www.irrawaddy.com/news/burma/thousands-flee-as-regime-troops-push-into-myanmars-oil-hub.html"
-    },
-    {
-     "name": "이라와디 - 친주 남부 4개 전선 공세",
+     "name": "이라와디 - 친주 남부 군정 4개 전선 공세",
      "url": "https://www.irrawaddy.com/news/burma/myanmar-regime-pushes-on-four-fronts-in-southern-chin-state.html"
     },
     {
-     "name": "가디언 - 수치 아들 모친과 통화",
+     "name": "가디언 - 수치 아들 모친과 첫 통화",
      "url": "https://www.theguardian.com/world/2026/oct/22/aung-san-suu-kyi-son-speaks-former-myanmar-leader"
     },
     {
-     "name": "이라와디 - 라카인주 민간인 공습 논의",
-     "url": "https://www.irrawaddy.com/video/why-is-the-regime-targeting-civilians-in-rakhine.html"
+     "name": "이라와디 - 일본재단 라카인 교전 속 평화 지원",
+     "url": "https://www.irrawaddy.com/news/burma/japans-sasakawa-renews-myanmar-peace-pledge-as-regime-battles-arakan-army.html"
     }
    ],
-   "trend": "up",
-   "n_events": 8,
+   "trend": "flat",
+   "n_events": 9,
    "model": "claude-sonnet-5-5",
-   "evh": "067cef2581f4"
+   "evh": "24f620e61acd"
   },
   "taiwan": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "10/21 중국이 대만해협에 군용기 29대·함정 15척을 파견했고 미 군함 추적 해군도 별도로 보내 대만 인근 해상 대치가 벌어졌습니다. 일본 대상 희토류 수출통제와 미 해병대의 요나구니섬 NMESIS 배치 계획 등 역내 긴장 요인도 겹쳤습니다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "10/21 중국이 대만해협에 군용기 29대·함정 15척을 보냈고, 10/23에는 대만 주변에서 중국 해군 함정 3척이 탐지됐다. 같은 날 슈퍼태풍 참피 접근으로 대만이 사실상 전면 휴업에 들어가 군사·해상 활동 해석에 변수가 됐다.",
    "brief": [
     "10/21 중국, 대만해협에 군용기 29대·함정 15척 파견",
-    "10/21 중국, 미 군함 추적 해군 파견…대만 인근 별도 해상 대치",
-    "10/21 중국, 일본에 디스프로슘·테르븀 수출 제한…외교부는 재군사화 방지 목적 주장",
-    "10/21 미 해병대, 요나구니섬에 NMESIS 지대함미사일 첫 배치 계획"
+    "10/23 대만, 자국 주변 중국 해군 함정 3척 탐지 발표",
+    "10/23 대만, 펑후 인근서 중국이 일본 해상보안청 선박 8척 추적했다고 밝힘",
+    "10/21 미 해병대 요나구니섬 NMESIS 첫 배치 계획, 중국 대일 희토류 수출 제한"
    ],
    "metrics": [
     {
      "v": "29대·15척",
-     "l": "중국이 대만해협에 파견한 군용기·함정",
-     "n": "10/21, 뉴스 보도"
+     "l": "중국 군용기·함정 대만해협 파견",
+     "n": "10/21, Google News 보도"
+    },
+    {
+     "v": "3척",
+     "l": "대만 주변 탐지된 중국 해군 함정",
+     "n": "10/23, Google News 보도"
     },
     {
      "v": "442회",
-     "l": "일본 항공자위대 긴급발진(4~9월)",
-     "n": "10/21, USNI News, 전년 동기 265회"
+     "l": "일본 항공자위대 긴급발진(4~9월, 전년 동기 265회)",
+     "n": "10/21, USNI News"
     }
    ],
    "sources": [
     {
-     "name": "뉴스 보도 - 중국, 대만해협에 군용기·함정 파견",
+     "name": "Google News 중국 군용기·함정 대만해협 파견",
      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZFR5OWxoYU9xcUt2YVBMQkszSDZyNmx2VXpLNmlaSW5RelI2b0NxUVh2ZUlQdEQzOUFfcWFIMU5CYXYyRENhUkpoV0hDd2RVVjYzMWJjRWpsV2dEYUJtaFBpZEZxZzNIdmRrZG1STW5HdDNOZlI4NUM2M2ltbWs2UTh0M1FwRl9VMUlzeGM3cTNNRUUxT21JbUFtNFNVcE9VdE02YWJBVks5dw?oc=5"
     },
     {
-     "name": "USNI News - 일본 긴급발진 급증",
+     "name": "Google News 대만 주변 중국 함정 3척 탐지",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQLXFrX0VmdXJTUGxZYnlsNHd5VDBZeDExemV5WFg2Q19pbGM1UjNxUmh1MWxvYzRLODlybXNuOHpnMUJyOHF4SUFqX29pZWw2aDMtZWtZVTd4Y3NodHZKVWRNTVd4aHd4Z1pTYm9MVnktVW01UDVpaEN2U2Nvb2RHY3I4UG5pazB4T3dIaVpNd3dWenRvSUpBamVUeHE3dGdYTTlYS0pERFBpdUVfRlpHSTFrTdIBswFBVV95cUxQLXFrX0VmdXJTUGxZYnlsNHd5VDBZeDExemV5WFg2Q19pbGM1UjNxUmh1MWxvYzRLODlybXNuOHpnMUJyOHF4SUFqX29pZWw2aDMtZWtZVTd4Y3NodHZKVWRNTVd4aHd4Z1pTYm9MVnktVW01UDVpaEN2U2Nvb2RHY3I4UG5pazB4T3dIaVpNd3dWenRvSUpBamVUeHE3dGdYTTlYS0pERFBpdUVfRlpHSTFrTQ?oc=5"
+    },
+    {
+     "name": "USNI News 일본 긴급발진 급증",
      "url": "https://news.usni.org/2026/10/20/japan-reports-surge-in-airspace-violations-by-chinese-russian-aircraft"
     },
     {
-     "name": "OilPrice - 중국 대일 희토류 수출 제한",
-     "url": "https://oilprice.com/Energy/Energy-General/How-Bad-Would-It-Get-If-China-Blocks-Rare-Earths-to-America.html"
-    },
-    {
-     "name": "뉴스 보도 - 중국, 미 군함 추적 해군 파견",
-     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcTNYandLUE0xd0lXVHZkZ1FLQVVsbE4xYk5TOS1ZSXNHWVNQcXhNd0xnNFJrclh1alN1aUFRNmEzOER5OS1lN0p2bXYxQnlVRmYtNy1VekVSXzl2Qm1xbjVTYlYyNWVmZWhEZEM5U1RhUzVwejVXbmJRc1RHT2xHOHVOdDVLMlJLSndpN0swcjhmRlAyRW9HYVFuc1dPZFhXNFJiTXIxdjRUVmhGRjJDbEpQdGVXWlJSTzF3SGhvZGg5Y213NzE1clNpRQ?oc=5"
+     "name": "Dawn 태풍 참피 대만 휴업·항공편 결항",
+     "url": "https://www.dawn.com/news/2039238/taiwan-shuts-down-ahead-of-typhoon-champi-nearly-1000-flights-cancelled"
     }
    ],
    "trend": "flat",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "07d47a484a3e"
+   "evh": "aec770ba3dea"
   },
   "carib": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "아이티 갱단이 유엔 지원 다국적군을 상대로 최대 규모 공격을 벌였고, 10/22 엘살바도르가 억류된 자국 군인 4명 구출 작전에 나섰다. 쿠바에 대한 미국의 압박도 10/20 플로리다주의 라울 카스트로 체포영장 확보로 커졌다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "베네수엘라에서 약 2년 만의 첫 전국 시위가 열려 선거를 요구했고, 마두로 미군 체포 후 후계 일정은 정해지지 않았다. 아이티에서는 10/19~22일 아르티보니트 프티트리비에르에서 무장폭력으로 주민이 피란했고, 엘살바도르가 억류된 자국민 구출 작전에 나섰다.",
    "brief": [
-    "10/20 아이티 갱단, 신규 다국적군 상대 최대 규모 공격…엘살바도르 군인 4명 실종",
-    "10/22 부켈레 대통령, 갱단 억류 자국민 4명 구출 군사작전 개시 발표",
-    "10/20 켄스코프 시장, 갱단 학살로 수십 명과 함께 사망했다는 보도",
-    "10/20 플로리다주, 1996년 항공기 격추 관련 카스트로 체포영장 확보"
+    "10/23 베네수엘라 약 2년 만의 첫 전국 시위, 선거 요구…후계 일정 미정",
+    "10/19~22 아이티 프티트리비에르 무장폭력으로 주민 피란",
+    "10/22 부켈레, 아이티 갱단 억류 자국민 4명 구출 군사작전 개시",
+    "10/22 베네수엘라 원유 교역 재개, 제재 위험이 선박 단위 심사로 이동"
    ],
-   "metrics": [
-    {
-     "v": "4",
-     "l": "갱단에 억류·실종된 엘살바도르 군인 수",
-     "n": "10/20~10/22, CBC·Africanews"
-    }
-   ],
+   "metrics": [],
    "sources": [
     {
-     "name": "CBC 부켈레 아이티 구출 군사작전",
+     "name": "알자지라 베네수엘라 전국 시위",
+     "url": "https://www.aljazeera.com/news/2026/10/23/venezuelans-demand-elections-in-first-national-protest-in-nearly-two-years?traffic_source=rss"
+    },
+    {
+     "name": "CBC 엘살바도르 아이티 구출작전",
      "url": "https://www.cbc.ca/news/world/el-salvador-president-military-haiti-un-gang-suppression-force-9.7390568?cmp=rss"
     },
     {
-     "name": "Africanews 아이티 갱단 다국적군 공격",
-     "url": "http://www.africanews.com/2026/10/20/haitian-gangs-target-foreign-troops-in-biggest-attack-on-new-force/"
+     "name": "구글뉴스 아이티 프티트리비에르 폭력",
+     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPVGMxVVIwVk55WU55UFctWEphTi1FaUpoWjBsQWdVODFMazJ3S2dkUkNmc2lLcDhsMVdvX2hhSG4wWVRGeWRIcGQxRl9vYnJPZFJWa05FcVJJcW13WGZybm8ybXlxM1RRZ0FrVkdieklWZk94ZGFvX0h0Q3JISHhvWVhuSVNIcW5RdW9Hak1md0lsT0lKVF9PTGpUVGp0eEhLMEJ3ejNFM1F5a082YkRNSVhLaXctTlBYLUwzOGtOR1hBX1VwLS13SzFpMzRSbVY3QU5JSjcwNTNpZ1d2SjBKX3J4VVd0SzgyQk9NN2ZyNXlqTlFaVVE?oc=5"
     },
     {
-     "name": "뉴욕타임스 켄스코프 시장 학살",
-     "url": "https://www.nytimes.com/2026/10/20/world/americas/mayor-kenscoff-haiti-gangs-massacre.html"
-    },
-    {
-     "name": "알자지라 플로리다 카스트로 체포영장",
-     "url": "https://www.aljazeera.com/news/2026/10/19/florida-issues-arrest-warrant-for-cuban-leader-raul-castro?traffic_source=rss"
+     "name": "헬레닉쉬핑뉴스 베네수엘라 원유 교역",
+     "url": "https://www.hellenicshippingnews.com/venezuelas-oil-trade-reopened-the-risk-moved-to-the-vessel/"
     }
    ],
    "trend": "up",
-   "n_events": 19,
+   "n_events": 15,
    "model": "claude-sonnet-5-5",
-   "evh": "772b8a004ee6"
+   "evh": "e07729d2da0d"
   },
   "latam": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "브라질 대선 결선(10/25)을 앞두고 룰라 캠프가 보우소나루 후보 자격 박탈·등록 무효를 청구할 것이라는 보도가 이어지며 헤지 비용과 멕시코 페소가 흔들렸다. 볼리비아는 연료가격 83% 급등 속 노동자들이 비상을 선포하고 총파업에 나섰다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "브라질 대선 결선(10/25)을 앞두고 데이타폴랴 조사에서 플라비우 보우소나루 46%, 룰라 45%로 오차범위 내 접전이 이어지고 있다. 에콰도르에서는 좌파 대선후보 루이사 곤살레스에 대한 구속 명령이 나와 정치 긴장이 커졌다.",
    "brief": [
-    "10/21~22 룰라 캠프, 메타 '알고리즘 조작'을 이유로 후보 자격 박탈·등록 무효 청구 준비 보도",
-    "10/22~23 브라질 대선 불안에 헤지 비용 급등, 멕시코 페소 하락",
-    "10/20 볼리비아 노동자 비상 선포, 전국 총파업·연료가격 83% 급등",
+    "10/23 데이타폴랴: 브라질 결선 플라비우 46%, 룰라 45%, 오차범위 내 접전",
+    "10/21 룰라 캠프, 메타 '알고리즘 조작' 이유로 플라비우 후보 자격 박탈 청구 준비 보도",
+    "10/24 에콰도르 법원, 좌파 대선후보 루이사 곤살레스 구속 명령",
     "10/22 아르헨티나 국채, 선거 우려 속 2개월간 신흥국 최악 성과"
    ],
    "metrics": [
     {
-     "v": "83%",
-     "l": "볼리비아 연료가격 급등폭",
-     "n": "10/20, 뉴스 보도"
+     "v": "46% vs 45%",
+     "l": "브라질 결선 지지율 플라비우 보우소나루 대 룰라",
+     "n": "10/23 데이타폴랴 조사, 오차범위 내"
     },
     {
-     "v": "350달러/톤",
-     "l": "코델코 제시 2027년 유럽 구리 프리미엄(사상 최고)",
-     "n": "10/21, Rio Times, 보도"
+     "v": "약 39%",
+     "l": "콜롬비아 가스 확인매장량 감소폭",
+     "n": "10/21 Rio Times 보도"
     }
    ],
    "sources": [
     {
-     "name": "France24 - 룰라 캠프 후보 자격 박탈 추진",
+     "name": "Rio Times 브라질 결선 데이타폴랴 여론조사",
+     "url": "https://www.riotimesonline.com/datafolha-rejection-flavio-46-lula-45-runoff-2026/"
+    },
+    {
+     "name": "France24 룰라 캠프 후보 자격 박탈 청구",
      "url": "https://www.france24.com/en/americas/20261020-lula-campaign-seeks-disqualify-bolsonoro-from-brazil-presidential-vote-over-meta-interference"
     },
     {
-     "name": "Rio Times - 라틴아메리카 10/22 동향",
-     "url": "https://www.riotimesonline.com/latin-american-pulse-for-thursday-october-22-2026/"
+     "name": "Al Jazeera 에콰도르 좌파 후보 구속 명령",
+     "url": "https://www.aljazeera.com/news/2026/10/23/ecuador-judge-orders-pre-trial-detention-of-leftist-presidential-candidate?traffic_source=rss"
     },
     {
-     "name": "BA Times - 아르헨티나 국채 매도세",
+     "name": "BA Times 아르헨티나 국채 매도세",
      "url": "https://www.batimes.com.ar/news/economy/argentinas-bond-sell-off-blindsides-bulls-as-election-fears-grow.phtml"
     }
    ],
-   "trend": "down",
-   "n_events": 24,
+   "trend": "up",
+   "n_events": 23,
    "model": "claude-sonnet-5-5",
-   "evh": "458dfabe1ea1"
+   "evh": "f62f01c5786a"
   },
   "namerica": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "미국의 캐나다산 50% 관세를 둘러싼 법적·정치적 충돌이 확대되고 있다. 미국 식품 수입업체들의 제소가 잇따르는 가운데 미국은 중간선거를 앞두고 캐나다의 선거개입을 주장하고 있다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "미국이 캐나다산 일부 제품 관세를 해제하고 메인주를 예외로 두는 등 대캐나다 관세 완화 신호가 10/24 나왔으나, 미국 내 소송과 선거개입 공방은 계속되고 있습니다. 멕시코와는 금속·자동차 관세 쟁점으로 무역협상이 교착 상태입니다.",
    "brief": [
-    "10/21~22 미 식품 수입업체(뉴저지 등), 캐나다산 50% 관세 두고 정부 제소",
-    "10/21 미 국제무역법원에 대캐나다 관세 반발 소송, 권한 초과 혐의 피소",
-    "10/22 미국, 캐나다 선거개입 주장; 카니 총리는 관세가 미국인 피해라 반박",
-    "10/21 미·멕시코 무역협상 금속·자동차 관세 쟁점으로 교착"
+    "10/24 백악관, 일부 캐나다산 제품 관세 해제 발표·콜린스 의원은 메인주 예외 발표",
+    "10/21~22 미 식품 수입업체, 캐나다산 50% 관세 두고 정부 상대 소송 제기",
+    "10/22 미국의 캐나다 선거개입 주장 제기, 카니 총리는 관세가 미국인 피해라고 반박",
+    "10/21·23 미-멕시코 금속·자동차 관세 교착, 멕시코는 철강 수입허가 1,000건 취소"
    ],
    "metrics": [
     {
      "v": "50%",
-     "l": "미국의 캐나다산 제품 관세율",
-     "n": "10/22 식품 수입업체 제소 보도"
+     "l": "캐나다산 제품 관세율(식품 수입업체 소송 대상)",
+     "n": "10/22 보도"
+    },
+    {
+     "v": "1,000건",
+     "l": "멕시코가 취소한 철강 수입허가",
+     "n": "10/23, 불법 환적 이유"
     },
     {
      "v": "11명",
      "l": "미 투표사기 단속으로 기소된 캐나다인(최소)",
      "n": "10/22 CBC"
-    },
-    {
-     "v": "76%",
-     "l": "앨버타 주민투표 잔류 득표율",
-     "n": "10/20 개표 33% 시점, Dawn"
     }
    ],
    "sources": [
     {
-     "name": "CBC 대캐나다 관세 소송",
-     "url": "https://www.cbc.ca/news/world/trump-tariffs-lawsuit-9.7388900?cmp=rss"
+     "name": "구글뉴스 - 백악관 캐나다산 일부 관세 해제",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBrNnNzMVdVUEVmTDc1QVB0aGpSWTREdWFMY2g2QUQ5RExzMUxrdlNhdnd6ZGxJWWhnRGltX0kxOFZOMXNhVWI2aWhsaU1DMS1fR1FTT1E0V2lnVFU?oc=5"
     },
     {
-     "name": "알자지라 미국의 캐나다 선거개입 주장",
+     "name": "알자지라 - 미국의 캐나다 선거개입 주장",
      "url": "https://www.aljazeera.com/news/2026/10/21/us-accuses-canada-of-election-interference-ahead-of-midterms?traffic_source=rss"
     },
     {
-     "name": "CBC 캐나다인 투표사기 기소",
+     "name": "CBC - 캐나다인 투표사기 단속 기소",
      "url": "https://www.cbc.ca/news/canada/canadians-caught-up-in-trump-crackdown-on-noncitizen-voting-midterms-9.7390326?cmp=rss"
     },
     {
-     "name": "Dawn 앨버타 주민투표",
-     "url": "https://www.dawn.com/news/2038496/alberta-votes-to-remain-part-of-canada"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "9ec461886c54"
-  },
-  "oceania": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "호주 포테스큐가 중국 국영 구매사(CMRG)와의 협상 난항 속에 조업 차질 가능성을 경고했고(10/22), 같은 날 CMRG는 리오 틴토와 신규 철광석 공급 계약을 체결했다. 한편 무소속 헬렌 헤인스 의원이 10/19 차량 공격으로 두 다리를 잃은 뒤 위독한 상태여서 정치인 보안 우려가 커지고 있다.",
-   "brief": [
-    "10/22 포테스큐, CMRG와 협상 난항으로 조업 차질 경고. 분기 선적 6% 감소",
-    "10/22 CMRG, 리오 틴토와 신규 철광석 공급 계약 체결",
-    "10/21 헤인스 의원 두 다리 절단, 용의자 3개 혐의 기소. 10/22 사흘째 위독",
-    "10/22 호주, 동티모르에 4,400만 달러 지원. 10/21 피지에 무인선박 제공"
-   ],
-   "metrics": [
-    {
-     "v": "6%",
-     "l": "포테스큐 분기 철광석 선적 감소",
-     "n": "10/22, 구글뉴스 보도"
-    },
-    {
-     "v": "4,400만 달러",
-     "l": "호주의 동티모르 사이버·해양안보 지원",
-     "n": "10/22, 구글뉴스 보도"
-    },
-    {
-     "v": "1억3800만 달러",
-     "l": "시드니 업체 사기 의혹 투자자 피해 최대액",
-     "n": "10/21, ABC 보도"
-    }
-   ],
-   "sources": [
-    {
-     "name": "구글뉴스 - 포테스큐, 중국 국영 구매사와 협상 난항",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaHItRjFDUXJ6ek01NzBFUHhPMXpyakZHSTNxcTNFVDF0aUppRTRvdHFqcmc3TmlxTmZRaVlQeVliY3RyRFoyQmJUamRjMEVmbENiUlpxSFh4eW5zWGJxSmhpMnpOUTUwOENfdDFJSVQ3aUJaNDUtc1JDbUtVV2pmcTNtMWhoYnNGZWZjNnQ2dGNYYTJGdkxJQ0Z4bjY3X21fYlZJbEVnZzFwNDV0T1dzQ3BEQ0lyVlU2?oc=5"
-    },
-    {
-     "name": "구글뉴스 - CMRG, 리오 틴토와 신규 공급 계약",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTWxzU2FmaHZHREhtY3ctWXh4QjZ1UWMwUEZRUUJ5TWNNc3poQUtQWFNrZmEySS1RZWo3Yk1lbEFxSXFkWGlfak1nZzhIVzY1OWFOajdKbHJBNEpudmowamhYMXE4aVg0ODBkV0NwcW9jSjFKanNha2JfLU00dzdxWkx3blQwM2VsZGZxVXhWdG9JR0tyRV80RHBDLWIxd3ZWVmZZcFVqRDJneEtOY0ZFUXB3MnM2MXVoWVE?oc=5"
-    },
-    {
-     "name": "가디언 - 헤인스 의원 양다리 절단",
-     "url": "https://www.theguardian.com/australia-news/2026/oct/21/helen-haines-loses-both-legs-after-mondays-alleged-attack-ntwnfb"
-    },
-    {
-     "name": "ABC - 헤인스 의원 사흘째 위독",
-     "url": "https://www.abc.net.au/news/2026-10-22/helen-haines-three-days-since-attack/107297946"
+     "name": "구글뉴스 - 미-멕시코 무역협상 교착",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSmJSd3BGYktaQVZvSFZ6UDRFUWZLdVZyMFUzZzFSLVRtQkFweGlBTjZmclA3RWdUSDE5M1Z4eVZsbmx5Mk1yQm96UzhjWk5Ed05fdzEwUDVldUVzS3JENTlTVnlqLUlYczR4Q1N0OTZWT0tOeWxNd1pNd2xidTdiQjlPXzg3UnJXQjJSMnNfNDFtdw?oc=5"
     }
    ],
    "trend": "flat",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "3569d9f7cd5a"
+   "evh": "964bec43c001"
   },
-  "europe": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "유럽에서는 러시아발 사보타주·해저케이블 위협이 부각됐습니다(독일군 위협 '상당' 등급 상향, 리투아니아 스타링크 시설 화재 사보타주 판명). 동시에 연료값 급등이 프랑스·이탈리아의 시위와 물류 차질로 번지고 있습니다.",
+  "oceania": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "호주 철광석 업계가 중국 국영 구매사와의 협상 난항으로 조업 차질 가능성을 경고했고(10/22), 헬렌 헤인스 의원 피습(10/19 발생 추정) 여파로 정치인 보안 우려가 커졌다. 호주는 피지·동티모르 등 태평양·동남아 파트너와 해양안보 협력을 확대했다.",
    "brief": [
-    "10/22 독일군, 러시아 사보타주 위협을 처음으로 '상당' 등급으로 분류",
-    "10/20 리투아니아 스타링크 시설 화재는 사보타주로 판명, 불가리아·폴란드서도 유사 사건",
-    "10/23 러시아 트롤선의 해저 케이블 노린 활동 의혹 보도(미확인)",
-    "10/23 이탈리아 트럭 운전사 봉쇄로 남부 식료품·연료 부족, 파리·마르세유 시위 금지"
+    "10/22 포테스큐 등 호주 철광석 업체, 중국과 합의 없으면 생산 둔화 경고",
+    "10/21 헤인스 의원 차량 공격으로 두 다리 절단, 용의자 3개 혐의 기소",
+    "10/21~23 피지에 무인선박 제공, 10/22 동티모르 사이버·해양 지원 합의",
+    "10/22~23 오커스 자율 수중전 협력 순조 발표, 고스트 샤크 영상 공개"
    ],
    "metrics": [
     {
-     "v": "87.95유로",
-     "l": "유럽 가스 TTF 가격",
-     "n": "10/22, Hellenic Shipping News, 3% 넘게 급등"
+     "v": "6%",
+     "l": "포테스큐 분기 철광석 출하량 감소",
+     "n": "10/22 보도"
+    },
+    {
+     "v": "4.9%",
+     "l": "포트헤들랜드항 철광석 수출 전월 대비 증가",
+     "n": "10/22 보도"
+    },
+    {
+     "v": "4,400만 달러",
+     "l": "호주의 동티모르 사이버·해양안보 지원",
+     "n": "10/22 보도"
+    }
+   ],
+   "sources": [
+    {
+     "name": "구글뉴스 – 포테스큐, 중국 구매사 협상 난항 조업 차질 경고",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaHItRjFDUXJ6ek01NzBFUHhPMXpyakZHSTNxcTNFVDF0aUppRTRvdHFqcmc3TmlxTmZRaVlQeVliY3RyRFoyQmJUamRjMEVmbENiUlpxSFh4eW5zWGJxSmhpMnpOUTUwOENfdDFJSVQ3aUJaNDUtc1JDbUtVV2pmcTNtMWhoYnNGZWZjNnQ2dGNYYTJGdkxJQ0Z4bjY3X21fYlZJbEVnZzFwNDV0T1dzQ3BEQ0lyVlU2?oc=5"
+    },
+    {
+     "name": "가디언 – 헤인스 의원 피습·양다리 절단",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/21/helen-haines-loses-both-legs-after-mondays-alleged-attack-ntwnfb"
+    },
+    {
+     "name": "USNI – 오커스 자율 수중전 협력",
+     "url": "https://news.usni.org/2026/10/23/collaboration-on-autonomous-undersea-warfare-is-on-track-aukus-officials-say"
+    },
+    {
+     "name": "구글뉴스 – 호주, 동티모르 4,400만 달러 지원",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPMzRoR1Z2U0JkTjVOQ3VDUG5ub3dKU1QzZWRuUGNkNktWMHZTTi16Yy01blFPMHVsdi1WREd3WHFSc2syN29seEtiSDVWREptdnBBUGdzY3RIMzlmYzNNcTFLYWlRNS14MGpsZHAzZnJKWUFjS1Y1bk5JeXZEaUhoN3dreFNNektjSEs5RDZSeHF3cV9iR25vX1VBR285eDBycThqejJycDhCUGUzOTNJejFYVXNkMnJQSFBEWGUzaUE1X2RacXBtS1pxTdIBywFBVV95cUxQM3NKcWZ2QklXeUc5SndiMU11N0tycFU2MzNRWDlTX256NERCSjRSVTJTbG1qQlM4dVZBQ1JBajhQd25Fc1loZVBMUnl6SlN3N3VxOGdsdlZkZUZCcmwwUnFDMDRxS3d6amNwZ0JDdlFLeC01cjJ6LTNrcjlVZ0hnS0o4WUJsM0ZkOWc5dFA2WGJDRlFXdDY3YXA4VE8walVOQmQ2UlNKbnhUWmo2dkF5OS1wZHBaMzJuTTB6ekN3MURtTFdYQXpUYmM2SQ?oc=5"
+    }
+   ],
+   "trend": "flat",
+   "n_events": 30,
+   "model": "claude-sonnet-5-5",
+   "evh": "baea5c3899a7"
+  },
+  "europe": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "중동 분쟁 격화로 유럽 가스가격이 93.40유로/MWh까지 올라 2022년 말 이후 최고를 기록했고, 이탈리아 화물차 시위와 프랑스 전역 소요로 사회 불안이 커졌습니다. 발트해에서는 군용기 활동이 급증하고 러시아 해저 케이블 위협 의혹이 이어졌습니다.",
+   "brief": [
+    "10/24 유럽 가스 93.40유로/MWh, 2022년 말 이후 최고 (10/22 TTF 87.95유로)",
+    "10/23 이탈리아 트럭 운전사 유가 항의 봉쇄, 남부 식료품·연료 부족",
+    "10/24 프랑스 시위 폭동 변질·통금, 경찰 7만명 배치, 마르세유 시위 금지",
+    "10/22 발트해 정찰·급유기 3대 포착(평소 0대), 10/23 러 트롤선 케이블 위협 의혹 보도"
+   ],
+   "metrics": [
+    {
+     "v": "93.40유로/MWh",
+     "l": "유럽 가스가격",
+     "n": "10/24 Hellenic Shipping News, 2022년 말 이후 최고"
     },
     {
      "v": "12.6%",
      "l": "노르웨이 9월 가스 생산 전월比 감소",
-     "n": "10/21, Oilprice"
+     "n": "10/21 OilPrice"
     },
     {
-     "v": "100만 개",
-     "l": "핀란드 추진 지뢰 확보 규모",
-     "n": "10/20, 알자지라"
+     "v": "7만명",
+     "l": "프랑스 토요일 소요 대비 경찰 배치",
+     "n": "10/24 Guardian"
     }
    ],
    "sources": [
     {
-     "name": "NYT 리투아니아 스타링크 사보타주",
-     "url": "https://www.nytimes.com/2026/10/19/world/europe/lithuania-starlink-sabotage-ukraine-russia.html"
+     "name": "Hellenic Shipping News 유럽 가스가격 급등",
+     "url": "https://www.hellenicshippingnews.com/european-gas-caps-strong-weekly-gain-on-middle-east-supply-escalation/"
     },
     {
-     "name": "Hellenic Shipping News 유럽 가스 급등",
-     "url": "https://www.hellenicshippingnews.com/european-gas-rallies-on-persian-gulf-disruption-pressure-hot-uk-inflation-dents/"
+     "name": "France24 이탈리아 화물차 경유값 항의",
+     "url": "https://www.france24.com/en/video/20261022-italian-truckers-block-roads-to-protest-against-soaring-diesel-prices"
     },
     {
-     "name": "NYT 이탈리아 트럭 시위 물자 부족",
-     "url": "https://www.nytimes.com/2026/10/22/world/europe/italy-protests-shortages-truckers.html"
+     "name": "Guardian 프랑스 경찰 7만명 배치",
+     "url": "https://www.theguardian.com/world/2026/oct/23/france-police-demonstrations-civil-unrest"
     },
     {
-     "name": "France24 파리 시위 금지",
-     "url": "https://www.france24.com/en/europe/20261022-live-paris-bans-protests-after-violent-unrest-as-macron-takes-swipe-at-trump"
+     "name": "adsb.lol 발트해 군용기 활동 급증",
+     "url": "https://globe.adsb.lol/?lat=57.25&lon=19.75&zoom=6&mil#2026-10-22-baltic"
     }
    ],
    "trend": "up",
    "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "a1c0fd035a3a"
+   "evh": "f4789e694a85"
   },
   "southasia": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "파키스탄 핵 고문과 키드와이가 인도의 핵 선제사용 태세 전환 가능성을 잇달아 경고했고(10/20~21), 인도는 아루나찰 국경에서 중국과의 대치가 지속된다고 밝혔다(10/23). 인도 내에서는 '바퀴벌레 운동' 청년 시위와 유권자명부 대규모 삭제 논란이 이어지고 있다.",
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "인도 내 청년 주도 '바퀴벌레' 시위가 대규모 단속 속에서도 이어지고 있고, 10/21 파키스탄이 인도의 핵 태세 변화를 공개 경고해 양국 긴장이 높아졌다. 아루나찰 국경에서는 중국과의 대치가 여러 지점에서 계속되고 있다.",
    "brief": [
-    "10/21 파키스탄 키드와이, 인도 핵 선제사용 태세 경고·배치 옵션 재검토 시사",
-    "10/23 ITBP 청장, 아루나찰 여러 지점 중국과 대치 지속 밝힘",
-    "10/22 인도 법원, 수감된 '바퀴벌레 운동' 지도자 2명 석방 명령",
-    "10/20 루비오 미 국무장관 방인, 인도의 러시아산 원유 탈피 '상당한 진전' 평가"
-   ],
-   "metrics": [
-    {
-     "v": "1억3천만 명",
-     "l": "인도 유권자명부 특별개정 삭제 규모",
-     "n": "10/20 Dawn 보도"
-    },
-    {
-     "v": "4명",
-     "l": "마니푸르 폭력 민간인 사망자",
-     "n": "10/21 The Hindu, 국민회의당 주장 기반"
-    },
-    {
-     "v": "5,000톤",
-     "l": "인도의 방글라데시 경유 공급량",
-     "n": "10/21 파이프라인 경유 보도"
-    }
-   ],
-   "sources": [
-    {
-     "name": "Dawn - 파키스탄, 인도에 전략균형 변경 시도 경고",
-     "url": "https://www.dawn.com/news/2038662/pakistan-warns-india-against-attempt-to-alter-strategic-balance"
-    },
-    {
-     "name": "The Hindu - 아루나찰 국경 중국과 대치 지속",
-     "url": "https://www.thehindu.com/news/national/face-off-with-china-continues-at-multiple-locations-along-arunachal-border-itbp-d-g/article71612994.ece"
-    },
-    {
-     "name": "Guardian - 인도 바퀴벌레 운동 지도자 석방",
-     "url": "https://www.theguardian.com/world/2026/oct/21/india-cockroach-movement-leaders-released-protests-government-crackdown"
-    },
-    {
-     "name": "Dawn - 루비오, 인도 원유 구매 다변화 평가",
-     "url": "https://www.dawn.com/news/2038486/rubio-says-india-made-substantial-progress-in-diversifying-oil-purchases"
-    }
-   ],
-   "trend": "up",
-   "n_events": 30,
-   "model": "claude-sonnet-5-5",
-   "evh": "f0dcbbb1bc52"
-  },
-  "scs": {
-   "d": "2026-10-23",
-   "asof": "10/23",
-   "headline": "중국 해군·해경이 사비나 암초와 아융인 암초에서 미 군함과 필리핀 보급 임무를 감시하며 남중국해 대치가 이어졌습니다. 필리핀에서는 중국대사 추방 결의안이 제출됐고, 필리핀해에서는 미 항모강습단이 동맹국과 훈련에 들어갔습니다.",
-   "brief": [
-    "10/21 중국군, 사비나 암초 인근 진입한 미 연안전투함 찰스턴함 감시",
-    "10/22 중국 해경, 아융인 암초의 필리핀 군함 보급 임무 감시 발표",
-    "10/20 필리핀 상원의원, 중국대사 추방 결의안 제출",
-    "10/23 미 루스벨트 항모강습단, 日·호·加·佛과 킨소드 27 훈련"
+    "10/21~22 인도 청년 시위 지속, 법원이 수감된 지도자 2명 석방 명령",
+    "10/21·23 파키스탄, 인도의 전략 균형 변경 시도에 핵 오판 위험 경고",
+    "10/23 ITBP 청장, 아루나찰 국경 여러 지점서 중국과 대치 지속 밝힘",
+    "10/24 IMD, 사이클론 10/28 북부 안드라프라데시 상륙 예상, 적색경보"
    ],
    "metrics": [],
    "sources": [
     {
-     "name": "USNI News 찰스턴함 사비나 암초 감시",
-     "url": "https://news.usni.org/2026/10/20/chinese-navy-shadows-uss-charleston-near-contested-sabina-shoal"
+     "name": "Guardian 인도 '바퀴벌레' 운동 지도자 석방 명령",
+     "url": "https://www.theguardian.com/world/2026/oct/21/india-cockroach-movement-leaders-released-protests-government-crackdown"
     },
     {
-     "name": "The Diplomat 아융인 암초 보급 임무 감시",
-     "url": "https://thediplomat.com/2026/10/china-coast-guard-says-it-monitored-philippine-resupply-mission-at-contested-shoal/"
+     "name": "Dawn 파키스탄, 인도 전략 균형 변경 시도 경고",
+     "url": "https://www.dawn.com/news/2038662/pakistan-warns-india-against-attempt-to-alter-strategic-balance"
     },
     {
-     "name": "The Diplomat 중국대사 추방 결의안",
-     "url": "https://thediplomat.com/2026/10/philippine-senator-files-resolution-seeking-chinese-ambassadors-expulsion/"
+     "name": "The Hindu ITBP 청장 아루나찰 국경 대치",
+     "url": "https://www.thehindu.com/news/national/face-off-with-china-continues-at-multiple-locations-along-arunachal-border-itbp-d-g/article71612994.ece"
     },
     {
-     "name": "USNI News 루스벨트 항모강습단 킨소드 훈련",
-     "url": "https://news.usni.org/2026/10/22/theodore-roosevelt-carrier-strike-group-sails-in-the-philippine-sea-for-keen-sword-drills"
+     "name": "The Hindu IMD 사이클론 안드라프라데시 상륙 예상",
+     "url": "https://www.thehindu.com/news/national/andhra-pradesh/cyclonic-storm-likely-to-hit-north-andhra-pradesh-coast-on-october-28-says-imd/article71617203.ece"
     }
    ],
    "trend": "up",
-   "n_events": 13,
+   "n_events": 30,
    "model": "claude-sonnet-5-5",
-   "evh": "481837c41f40"
+   "evh": "8d16b9860a01"
+  },
+  "scs": {
+   "d": "2026-10-24",
+   "asof": "10/24",
+   "headline": "중국 해경과 해군이 아융인 암초와 사비나 암초 일대에서 필리핀 보급 임무와 미 연안전투함을 잇달아 감시했다. 중국 첫 항모의 분쟁 해역 항해도 보도됐고, 태풍 CHAMPI-26이 필리핀 일대에 적색 경보를 유지하고 있다.",
+   "brief": [
+    "10/22 중국 해경, 아융인 암초 필리핀 보급 임무 감시 발표",
+    "10/21 중국군, 사비나 암초 인근 미 찰스턴함 감시",
+    "10/23 중국 첫 항모, 분쟁 해역서 항해 패턴 형성 보도",
+    "10/23 미 루스벨트 항모강습단, 필리핀해서 킨소드 27 훈련"
+   ],
+   "metrics": [
+    {
+     "v": "296 km/h",
+     "l": "태풍 CHAMPI-26 최대 풍속",
+     "n": "10/23 GDACS 적색 경보"
+    }
+   ],
+   "sources": [
+    {
+     "name": "The Diplomat - 아융인 암초 보급 감시",
+     "url": "https://thediplomat.com/2026/10/china-coast-guard-says-it-monitored-philippine-resupply-mission-at-contested-shoal/"
+    },
+    {
+     "name": "USNI News - 사비나 암초 찰스턴함 감시",
+     "url": "https://news.usni.org/2026/10/20/chinese-navy-shadows-uss-charleston-near-contested-sabina-shoal"
+    },
+    {
+     "name": "USNI News - 루스벨트 항모강습단 킨소드 훈련",
+     "url": "https://news.usni.org/2026/10/22/theodore-roosevelt-carrier-strike-group-sails-in-the-philippine-sea-for-keen-sword-drills"
+    },
+    {
+     "name": "GDACS - 태풍 CHAMPI-26 적색 경보",
+     "url": "https://www.gdacs.org/report.aspx?eventid=1001338&episodeid=35&eventtype=TC"
+    }
+   ],
+   "trend": "flat",
+   "n_events": 12,
+   "model": "claude-sonnet-5-5",
+   "evh": "660981ad249d"
   }
  }
 }
