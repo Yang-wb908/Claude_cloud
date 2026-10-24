@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-24T16:19:20Z",
+ "generated": "2026-10-24T21:01:59Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-24T16:19:20Z",
+  "at": "2026-10-24T21:01:59Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -75,13 +75,13 @@
      },
      "ac": [
       {
-       "flight": "ZABEEL04",
-       "t": "A332",
+       "flight": "",
+       "t": "B762",
        "role": "tanker",
-       "lat": 24.5,
-       "lon": 55.55,
-       "alt": 22000,
-       "reg": "1302"
+       "lat": 24.89,
+       "lon": 55.27,
+       "alt": 29500,
+       "reg": "20-46083"
       }
      ]
     },
@@ -117,27 +117,26 @@
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
-      "other": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "RRR4229",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 34.53,
-       "lon": 33.21,
-       "alt": 2125,
-       "reg": "ZM415"
-      },
-      {
-       "flight": "RAAD29",
+       "flight": "RAAD39",
        "t": "AT8T",
        "role": "other",
-       "lat": 31.34,
-       "lon": 35.84,
-       "alt": 9000,
+       "lat": 31.29,
+       "lon": 35.82,
+       "alt": 9900,
        "reg": "2551"
+      },
+      {
+       "flight": "SHAHD278",
+       "t": "AT8T",
+       "role": "other",
+       "lat": 31.7,
+       "lon": 35.97,
+       "alt": 8900,
+       "reg": "2560"
       }
      ]
     },
@@ -150,25 +149,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "TRK5",
-       "t": "GA5C",
-       "role": "other",
-       "lat": 40.76,
-       "lon": 30.44,
-       "alt": 27000,
-       "reg": "TC-GAP"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -206,12 +193,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-24T16:19:20Z",
+  "at": "2026-10-24T21:01:59Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -392,48 +379,39 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-24T16:19:20Z",
+  "at": "2026-10-24T21:01:59Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 26,
-    "??": 21,
-    "DE": 10,
+    "US": 23,
+    "??": 20,
+    "DE": 12,
     "AR": 4,
     "ES": 4,
+    "GB": 3,
+    "FR": 3,
     "MX": 3,
     "AU": 3,
+    "NL": 2,
     "MY": 2,
     "CA": 2,
     "TR": 2,
     "IT": 2,
-    "CH": 2,
-    "FR": 2,
-    "GB": 2,
-    "EG": 1
+    "CH": 2
    },
    "by_group": {
-    "N0n": 18,
-    "qilin": 16,
-    "BrainCipher": 8,
+    "qilin": 18,
+    "N0n": 17,
+    "lamashtu": 7,
     "krybit": 6,
-    "lamashtu": 6,
     "lockbit5": 5,
     "akira": 5,
     "SilentRansomGroup": 5,
-    "rhysida": 3,
-    "Whitearmor": 3
+    "BrainCipher": 5,
+    "emperador": 4,
+    "rhysida": 3
    },
-   "kr": [
-    {
-     "victim": "Hanjin Information Systems & Telecommunication Co., Ltd.",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Technology",
-     "d": "2026-10-21",
-     "url": "https://www.ransomware.live/id/SGFuamluIEluZm9ybWF0aW9uIFN5c3RlbXMgJiBUZWxlY29tbXVuaWNhdGlvbiBDby4sIEx0ZC5ATjBu"
-    }
-   ]
+   "kr": []
   }
  },
  "summary": {
@@ -441,7 +419,7 @@
   "kev_week": 8,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 1,
-  "events": 1
+  "ransom_kr_week": 0,
+  "events": 0
  }
 }
