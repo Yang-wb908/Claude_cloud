@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-24T11:19:20Z",
+ "generated": "2026-10-24T16:19:20Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-24T11:19:20Z",
+  "at": "2026-10-24T16:19:20Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,52 +65,23 @@
       60.0,
       30.5
      ],
-     "n": 4,
+     "n": 1,
      "key": 1,
      "base": 1,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "airlift": 2,
-      "other": 1,
       "tanker": 1
      },
      "ac": [
       {
-       "flight": "XXXX",
-       "t": "C5M",
-       "role": "airlift",
-       "lat": 24.06,
-       "lon": 55.58,
-       "alt": 18275,
-       "reg": "86-0023"
-      },
-      {
-       "flight": "UAF312",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 25.15,
-       "lon": 55.62,
-       "alt": 2125,
-       "reg": "312"
-      },
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 24.57,
-       "lon": 55.7,
-       "alt": 29500,
-       "reg": ""
-      },
-      {
-       "flight": "",
-       "t": "B762",
+       "flight": "ZABEEL04",
+       "t": "A332",
        "role": "tanker",
-       "lat": 25.39,
-       "lon": 56.03,
-       "alt": 27500,
-       "reg": "19-46111"
+       "lat": 24.5,
+       "lon": 55.55,
+       "alt": 22000,
+       "reg": "1302"
       }
      ]
     },
@@ -140,77 +111,32 @@
       37.0,
       37.5
      ],
-     "n": 7,
-     "key": 2,
+     "n": 2,
+     "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 2,
-      "other": 5
+      "airlift": 1,
+      "other": 1
      },
      "ac": [
       {
-       "flight": "RRR2272",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 34.44,
-       "lon": 32.04,
-       "alt": 16300,
-       "reg": "ZZ335"
+       "flight": "RRR4229",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 34.53,
+       "lon": 33.21,
+       "alt": 2125,
+       "reg": "ZM415"
       },
       {
-       "flight": "RRR2300",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 34.33,
-       "lon": 32.74,
-       "alt": 9875,
-       "reg": "ZZ337"
-      },
-      {
-       "flight": "COBRA66",
-       "t": "BE20",
+       "flight": "RAAD29",
+       "t": "AT8T",
        "role": "other",
-       "lat": 34.01,
-       "lon": 35.3,
-       "alt": 6600,
-       "reg": "73-1216"
-      },
-      {
-       "flight": "SHAHD261",
-       "t": "C208",
-       "role": "other",
-       "lat": 31.24,
-       "lon": 35.78,
-       "alt": 8875,
-       "reg": "1540"
-      },
-      {
-       "flight": "SHAHD274",
-       "t": "C208",
-       "role": "other",
-       "lat": 31.3,
+       "lat": 31.34,
        "lon": 35.84,
-       "alt": 9875,
-       "reg": "1538"
-      },
-      {
-       "flight": "RAAD25",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 31.3,
-       "lon": 35.9,
-       "alt": 11900,
-       "reg": "2552"
-      },
-      {
-       "flight": "RAAD28",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 31.81,
-       "lon": 36.11,
-       "alt": 9600,
+       "alt": 9000,
        "reg": "2551"
       }
      ]
@@ -225,22 +151,22 @@
       47.5
      ],
      "n": 1,
-     "key": 1,
+     "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "CFC01",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 40.97,
-       "lon": 28.81,
-       "alt": "ground",
-       "reg": "330003"
+       "flight": "TRK5",
+       "t": "GA5C",
+       "role": "other",
+       "lat": 40.76,
+       "lon": 30.44,
+       "alt": 27000,
+       "reg": "TC-GAP"
       }
      ]
     },
@@ -253,34 +179,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "airlift": 2
-     },
-     "ac": [
-      {
-       "flight": "CFC2927",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 59.09,
-       "lon": 12.3,
-       "alt": 22075,
-       "reg": "130615"
-      },
-      {
-       "flight": "IAM4669",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 55.9,
-       "lon": 23.19,
-       "alt": 7200,
-       "reg": "MM62186"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -301,12 +206,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 14
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-24T11:19:20Z",
+  "at": "2026-10-24T16:19:20Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -487,37 +392,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-24T11:19:20Z",
+  "at": "2026-10-24T16:19:20Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 28,
-    "??": 23,
+    "US": 26,
+    "??": 21,
     "DE": 10,
+    "AR": 4,
     "ES": 4,
-    "AR": 3,
+    "MX": 3,
     "AU": 3,
+    "MY": 2,
+    "CA": 2,
     "TR": 2,
-    "MX": 2,
     "IT": 2,
     "CH": 2,
     "FR": 2,
     "GB": 2,
-    "PK": 1,
-    "BD": 1,
-    "CL": 1
+    "EG": 1
    },
    "by_group": {
-    "N0n": 20,
+    "N0n": 18,
     "qilin": 16,
     "BrainCipher": 8,
-    "SilentRansomGroup": 6,
+    "krybit": 6,
     "lamashtu": 6,
     "lockbit5": 5,
     "akira": 5,
+    "SilentRansomGroup": 5,
     "rhysida": 3,
-    "Whitearmor": 3,
-    "Deadlock": 2
+    "Whitearmor": 3
    },
    "kr": [
     {

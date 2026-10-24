@@ -1,18 +1,31 @@
 {
- "generated": "2026-10-24T11:18:29Z",
+ "generated": "2026-10-24T16:19:07Z",
  "resolved_markets": 0,
  "ioda": {
   "ok": true,
-  "at": "2026-10-24T11:18:29Z",
+  "at": "2026-10-24T16:19:07Z",
   "data": {
    "window_h": 24,
    "countries": [
     {
+     "code": "NF",
+     "name": "Norfolk Island",
+     "score": 38574001.3,
+     "sources": {
+      "gtr.sarima": 7137.9,
+      "bgp.median": 5404.1
+     },
+     "events": 2,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
      "code": "LT",
      "name": "Lithuania",
-     "score": 855429.5,
+     "score": 867842.1,
      "sources": {
-      "gtr.sarima": 855429.5
+      "gtr.sarima": 867842.1
      },
      "events": 1,
      "th": "europe",
@@ -25,9 +38,9 @@
     {
      "code": "GU",
      "name": "Guam",
-     "score": 203752.9,
+     "score": 210049.3,
      "sources": {
-      "ping-slash24.median": 203752.9
+      "ping-slash24.median": 210049.3
      },
      "events": 1,
      "th": null,
@@ -37,9 +50,9 @@
     {
      "code": "BB",
      "name": "Barbados",
-     "score": 21332.7,
+     "score": 21683.1,
      "sources": {
-      "bgp.median": 21332.7
+      "bgp.median": 21683.1
      },
      "events": 1,
      "th": null,
@@ -49,9 +62,9 @@
     {
      "code": "AI",
      "name": "Anguilla",
-     "score": 18684.4,
+     "score": 19721.1,
      "sources": {
-      "bgp.median": 18684.4
+      "bgp.median": 19721.1
      },
      "events": 1,
      "th": null,
@@ -61,9 +74,9 @@
     {
      "code": "BI",
      "name": "Burundi",
-     "score": 18179.0,
+     "score": 18965.0,
      "sources": {
-      "bgp.median": 18179.0
+      "bgp.median": 18965.0
      },
      "events": 1,
      "th": null,
@@ -73,9 +86,9 @@
     {
      "code": "CK",
      "name": "Cook Islands",
-     "score": 17201.5,
+     "score": 18155.9,
      "sources": {
-      "bgp.median": 17201.5
+      "bgp.median": 18155.9
      },
      "events": 1,
      "th": null,
@@ -85,9 +98,9 @@
     {
      "code": "FM",
      "name": "Federated States Of Micronesia",
-     "score": 13717.7,
+     "score": 14478.8,
      "sources": {
-      "bgp.median": 13717.7
+      "bgp.median": 14478.8
      },
      "events": 1,
      "th": null,
@@ -107,11 +120,23 @@
      "alert": false
     },
     {
+     "code": "PM",
+     "name": "St. Pierre And Miquelon",
+     "score": 12862.0,
+     "sources": {
+      "gtr.sarima": 12862.0
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
      "code": "KM",
      "name": "Comoros",
-     "score": 11553.1,
+     "score": 12030.3,
      "sources": {
-      "bgp.median": 11553.1
+      "bgp.median": 12030.3
      },
      "events": 1,
      "th": null,
@@ -121,9 +146,9 @@
     {
      "code": "KW",
      "name": "Kuwait",
-     "score": 10540.2,
+     "score": 11118.5,
      "sources": {
-      "bgp.median": 10540.2
+      "bgp.median": 11118.5
      },
      "events": 1,
      "th": "iran",
@@ -136,9 +161,9 @@
     {
      "code": "PW",
      "name": "Palau",
-     "score": 8972.0,
+     "score": 9481.6,
      "sources": {
-      "bgp.median": 8972.0
+      "bgp.median": 9481.6
      },
      "events": 1,
      "th": null,
@@ -148,9 +173,9 @@
     {
      "code": "LC",
      "name": "Saint Lucia",
-     "score": 6528.3,
+     "score": 6890.5,
      "sources": {
-      "bgp.median": 6528.3
+      "bgp.median": 6890.5
      },
      "events": 1,
      "th": null,
@@ -158,11 +183,11 @@
      "alert": false
     },
     {
-     "code": "GL",
-     "name": "Greenland",
-     "score": 6452.0,
+     "code": "FK",
+     "name": "Falkland Islands (Malvinas)",
+     "score": 5836.5,
      "sources": {
-      "bgp.median": 6452.0
+      "bgp.median": 5836.5
      },
      "events": 1,
      "th": null,
@@ -172,9 +197,9 @@
     {
      "code": "TD",
      "name": "Chad",
-     "score": 4992.6,
+     "score": 5334.2,
      "sources": {
-      "bgp.median": 4992.6
+      "bgp.median": 5334.2
      },
      "events": 1,
      "th": "sahel",
@@ -185,35 +210,11 @@
      "alert": true
     },
     {
-     "code": "FK",
-     "name": "Falkland Islands (Malvinas)",
-     "score": 4633.9,
-     "sources": {
-      "bgp.median": 4633.9
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
-     "code": "NF",
-     "name": "Norfolk Island",
-     "score": 4290.7,
-     "sources": {
-      "bgp.median": 4290.7
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
      "code": "NU",
      "name": "Niue",
-     "score": 4137.4,
+     "score": 5211.1,
      "sources": {
-      "bgp.median": 4137.4
+      "bgp.median": 5211.1
      },
      "events": 1,
      "th": null,
@@ -223,9 +224,9 @@
     {
      "code": "AQ",
      "name": "Antarctica",
-     "score": 3737.0,
+     "score": 4706.8,
      "sources": {
-      "bgp.median": 3737.0
+      "bgp.median": 4706.8
      },
      "events": 1,
      "th": null,
@@ -235,9 +236,9 @@
     {
      "code": "VE",
      "name": "Venezuela",
-     "score": 2577.0,
+     "score": 4425.2,
      "sources": {
-      "bgp.median": 2577.0
+      "bgp.median": 4425.2
      },
      "events": 2,
      "th": "carib",
@@ -250,9 +251,9 @@
     {
      "code": "ER",
      "name": "Eritrea",
-     "score": 2145.3,
+     "score": 2702.1,
      "sources": {
-      "bgp.median": 2145.3
+      "bgp.median": 2702.1
      },
      "events": 1,
      "th": "ethiopia",
@@ -265,9 +266,9 @@
     {
      "code": "CV",
      "name": "Cape Verde",
-     "score": 2002.7,
+     "score": 2456.0,
      "sources": {
-      "bgp.median": 2002.7
+      "bgp.median": 2456.0
      },
      "events": 1,
      "th": null,
@@ -277,9 +278,9 @@
     {
      "code": "NR",
      "name": "Nauru",
-     "score": 1631.7,
+     "score": 2055.1,
      "sources": {
-      "bgp.median": 1631.7
+      "bgp.median": 2055.1
      },
      "events": 1,
      "th": null,
@@ -289,11 +290,11 @@
     {
      "code": "SS",
      "name": "South Sudan",
-     "score": 1289.5,
+     "score": 1105.3,
      "sources": {
-      "bgp.median": 1289.5
+      "bgp.median": 1105.3
      },
-     "events": 2,
+     "events": 1,
      "th": "sudan",
      "at": [
       31.3,
@@ -304,11 +305,11 @@
     {
      "code": "NG",
      "name": "Nigeria",
-     "score": 1108.6,
+     "score": 967.6,
      "sources": {
-      "bgp.median": 1108.6
+      "bgp.median": 967.6
      },
-     "events": 5,
+     "events": 3,
      "th": "sahel",
      "at": [
       8.7,
@@ -322,6 +323,18 @@
      "score": 640.0,
      "sources": {
       "merit-nt.median": 640.0
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
+     "code": "TL",
+     "name": "Timor-Leste",
+     "score": 295.7,
+     "sources": {
+      "bgp.median": 295.7
      },
      "events": 1,
      "th": null,
@@ -344,42 +357,18 @@
      "alert": false
     },
     {
-     "code": "BL",
-     "name": "Saint Barthelemy",
-     "score": 241.4,
-     "sources": {
-      "bgp.median": 241.4
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
      "code": "ET",
      "name": "Ethiopia",
-     "score": 165.3,
+     "score": 248.0,
      "sources": {
-      "bgp.median": 165.3
+      "bgp.median": 248.0
      },
-     "events": 1,
+     "events": 2,
      "th": "ethiopia",
      "at": [
       39.6,
       9.1
      ],
-     "alert": false
-    },
-    {
-     "code": "TL",
-     "name": "Timor-Leste",
-     "score": 127.8,
-     "sources": {
-      "bgp.median": 127.8
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
      "alert": false
     },
     {
@@ -393,6 +382,18 @@
      "th": null,
      "at": null,
      "alert": false
+    },
+    {
+     "code": "SV",
+     "name": "El Salvador",
+     "score": 82.5,
+     "sources": {
+      "bgp.median": 82.5
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
     }
    ],
    "n_alerts": 5
@@ -400,39 +401,51 @@
  },
  "poly": {
   "ok": true,
-  "at": "2026-10-24T11:18:29Z",
+  "at": "2026-10-24T16:19:07Z",
   "data": {
-   "n_markets": 649,
+   "n_markets": 638,
    "matched": {
     "hormuz_war": {
      "q": "Will the U.S. invade Iran before 2027?",
-     "p": 0.185,
-     "vol": 75141282,
-     "vol24": 86874,
-     "chg1d": 0.02,
+     "p": 0.21,
+     "vol": 75159486,
+     "vol24": 143901,
+     "chg1d": 0.045,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
      "inverted": false,
      "n_candidates": 1
     },
+    "hormuz_reopen": {
+     "q": "Strait of Hormuz traffic returns to normal by October 31?",
+     "p": 0.004,
+     "vol": 3266734,
+     "vol24": 141398,
+     "chg1d": 0.001,
+     "mslug": "strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
+     "end": "2026-11-01",
+     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
+     "inverted": false,
+     "n_candidates": 1
+    },
     "blacksea_deal": {
      "q": "Ukraine signs peace deal with Russia before 2027?",
      "p": 0.105,
-     "vol": 2878964,
-     "vol24": 8531,
-     "chg1d": 0.015,
+     "vol": 2879798,
+     "vol24": 5443,
+     "chg1d": 0.01,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
      "inverted": false,
-     "n_candidates": 2
+     "n_candidates": 1
     },
     "taiwan_quarantine": {
      "q": "Will China invade Taiwan by end of 2026?",
      "p": 0.022,
-     "vol": 44733735,
-     "vol24": 55448,
+     "vol": 44737961,
+     "vol24": 45229,
      "chg1d": 0.001,
      "mslug": "will-china-invade-taiwan-before-2027",
      "end": "2027-01-01",
@@ -443,8 +456,8 @@
     "venezuela_land": {
      "q": "Will the U.S. invade Venezuela by December 31, 2026?",
      "p": 0.033,
-     "vol": 274059,
-     "vol24": 158,
+     "vol": 274111,
+     "vol24": 191,
      "chg1d": null,
      "mslug": "will-the-us-invade-venezuela-by-december-31-2026",
      "end": "2027-01-01",
@@ -454,10 +467,10 @@
     },
     "fed_hawkish": {
      "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-     "p": 0.065,
-     "vol": 14078705,
-     "vol24": 1226160,
-     "chg1d": null,
+     "p": 0.045,
+     "vol": 14297497,
+     "vol24": 690258,
+     "chg1d": -0.03,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
      "end": "2026-10-29",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
@@ -466,10 +479,10 @@
     },
     "brazil_bolsonaro_win": {
      "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
-     "p": 0.801,
-     "vol": 26287450,
-     "vol24": 1044636,
-     "chg1d": 0.0255,
+     "p": 0.827,
+     "vol": 26666738,
+     "vol24": 1244485,
+     "chg1d": 0.067,
      "mslug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
      "end": "2026-10-05",
      "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
@@ -478,21 +491,21 @@
     },
     "brazil_lula_win": {
      "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
-     "p": 0.2,
-     "vol": 29545614,
-     "vol24": 809346,
-     "chg1d": -0.025,
+     "p": 0.175,
+     "vol": 29751224,
+     "vol24": 945908,
+     "chg1d": -0.06,
      "mslug": "will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
      "end": "2026-10-05",
      "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
      "inverted": false,
-     "n_candidates": 3
+     "n_candidates": 1
     },
     "dem_house_win": {
      "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
      "p": 0.915,
-     "vol": 12355985,
-     "vol24": 308741,
+     "vol": 12412930,
+     "vol24": 334169,
      "chg1d": -0.01,
      "mslug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
      "end": "2026-11-04",
@@ -516,10 +529,10 @@
    "top": [
     {
      "q": "Will the U.S. invade Iran before 2027?",
-     "p": 0.185,
-     "vol": 75141282,
-     "vol24": 86874,
-     "chg1d": 0.02,
+     "p": 0.21,
+     "vol": 75159486,
+     "vol24": 143901,
+     "chg1d": 0.045,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027"
@@ -527,8 +540,8 @@
     {
      "q": "Will China invade Taiwan by end of 2026?",
      "p": 0.022,
-     "vol": 44733735,
-     "vol24": 55448,
+     "vol": 44737961,
+     "vol24": 45229,
      "chg1d": 0.001,
      "mslug": "will-china-invade-taiwan-before-2027",
      "end": "2027-01-01",
@@ -536,10 +549,10 @@
     },
     {
      "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
-     "p": 0.2,
-     "vol": 29545614,
-     "vol24": 809346,
-     "chg1d": -0.025,
+     "p": 0.175,
+     "vol": 29751224,
+     "vol24": 945908,
+     "chg1d": -0.06,
      "mslug": "will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
      "end": "2026-10-05",
      "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election"
@@ -547,49 +560,49 @@
     {
      "q": "Will the Iranian regime fall before 2027?",
      "p": 0.055,
-     "vol": 27936183,
-     "vol24": 123559,
+     "vol": 27941253,
+     "vol24": 62959,
      "chg1d": null,
      "mslug": "will-the-iranian-regime-fall-by-the-end-of-2026",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-the-end-of-2026"
     },
     {
+     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+     "p": 0.827,
+     "vol": 26666738,
+     "vol24": 1244485,
+     "chg1d": 0.067,
+     "mslug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
+     "end": "2026-10-05",
+     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
+    },
+    {
      "q": "Putin out as President of Russia by December 31, 2026?",
-     "p": 0.021,
-     "vol": 26408497,
-     "vol24": 113662,
+     "p": 0.022,
+     "vol": 26487844,
+     "vol24": 131480,
      "chg1d": 0.003,
      "mslug": "putin-out-before-2027-346",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/putin-out-before-2027-346"
     },
     {
-     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
-     "p": 0.801,
-     "vol": 26287450,
-     "vol24": 1044636,
-     "chg1d": 0.0255,
-     "mslug": "will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-     "end": "2026-10-05",
-     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
-    },
-    {
      "q": "Will there be no change in Fed interest rates after the October 2026 meeting?",
-     "p": 0.935,
-     "vol": 18113422,
-     "vol24": 1352103,
-     "chg1d": null,
+     "p": 0.945,
+     "vol": 18365652,
+     "vol24": 650390,
+     "chg1d": 0.03,
      "mslug": "will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031",
      "end": "2026-10-29",
      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-october-2026-meeting-20260617190324031"
     },
     {
      "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-     "p": 0.065,
-     "vol": 14078705,
-     "vol24": 1226160,
-     "chg1d": null,
+     "p": 0.045,
+     "vol": 14297497,
+     "vol24": 690258,
+     "chg1d": -0.03,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
      "end": "2026-10-29",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
@@ -597,8 +610,8 @@
     {
      "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
      "p": 0.915,
-     "vol": 12355985,
-     "vol24": 308741,
+     "vol": 12412930,
+     "vol24": 334169,
      "chg1d": -0.01,
      "mslug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
      "end": "2026-11-04",
@@ -606,10 +619,10 @@
     },
     {
      "q": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
-     "p": 0.265,
-     "vol": 10711139,
-     "vol24": 239574,
-     "chg1d": -0.03,
+     "p": 0.275,
+     "vol": 10724796,
+     "vol24": 224282,
+     "chg1d": -0.02,
      "mslug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
@@ -617,8 +630,8 @@
     {
      "q": "Will the Republican Party control the House after the 2026 Midterm elections?",
      "p": 0.085,
-     "vol": 8832070,
-     "vol24": 281925,
+     "vol": 8853797,
+     "vol24": 300848,
      "chg1d": 0.01,
      "mslug": "will-the-republican-party-control-the-house-after-the-2026-midterm-elections",
      "end": "2026-11-04",
@@ -626,10 +639,10 @@
     },
     {
      "q": "US x Iran ceasefire continues through October 31?",
-     "p": 0.79,
-     "vol": 5859134,
-     "vol24": 345045,
-     "chg1d": 0.015,
+     "p": 0.785,
+     "vol": 5883794,
+     "vol24": 296565,
+     "chg1d": 0.02,
      "mslug": "us-x-iran-ceasefire-continues-through-october-31-20260917",
      "end": "2026-10-31",
      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917"
@@ -637,19 +650,19 @@
     {
      "q": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
      "p": 0.675,
-     "vol": 5191669,
-     "vol24": 94948,
+     "vol": 5211881,
+     "vol24": 104165,
      "chg1d": null,
      "mslug": "will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections",
      "end": "2026-11-04",
-     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections"
+     "url": "https://polymarket.com/event/which-party-will-win-the-senate-in-2026"
     },
     {
      "q": "Will Naftali Bennett be the next Prime Minister of Israel?",
      "p": 0.145,
-     "vol": 4112217,
-     "vol24": 17164,
-     "chg1d": -0.01,
+     "vol": 4114330,
+     "vol24": 17547,
+     "chg1d": null,
      "mslug": "will-naftali-bennett-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
@@ -657,9 +670,9 @@
     {
      "q": "NATO x Russia military clash by October 31, 2026?",
      "p": 0.022,
-     "vol": 4052793,
-     "vol24": 1345142,
-     "chg1d": -0.143,
+     "vol": 4069893,
+     "vol24": 1046810,
+     "chg1d": -0.3325,
      "mslug": "nato-x-russia-military-clash-by-october-31-2026",
      "end": "2026-11-01",
      "url": "https://polymarket.com/event/nato-x-russia-military-clash-by-october-31-2026"
@@ -667,18 +680,18 @@
     {
      "q": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
      "p": 0.325,
-     "vol": 3677816,
-     "vol24": 117922,
+     "vol": 3699247,
+     "vol24": 108146,
      "chg1d": null,
      "mslug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
      "end": "2026-11-04",
-     "url": "https://polymarket.com/event/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections"
+     "url": "https://polymarket.com/event/which-party-will-win-the-senate-in-2026"
     },
     {
      "q": "Zelenskyy out as Ukraine president by end of 2026?",
      "p": 0.065,
-     "vol": 3652341,
-     "vol24": 6216,
+     "vol": 3652652,
+     "vol24": 4003,
      "chg1d": null,
      "mslug": "zelenskyy-out-as-ukraine-president-before-2027",
      "end": "2027-01-01",
@@ -686,59 +699,59 @@
     },
     {
      "q": "Will Gadi Eizenkot be the next Prime Minister of Israel?",
-     "p": 0.514,
-     "vol": 3576315,
-     "vol24": 42741,
-     "chg1d": 0.022,
+     "p": 0.515,
+     "vol": 3582875,
+     "vol24": 45446,
+     "chg1d": 0.024,
      "mslug": "will-gadi-eizenkot-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
      "q": "Will Steve Hilton win the California Governor Election in 2026?",
-     "p": 0.024,
-     "vol": 3552150,
-     "vol24": 77068,
-     "chg1d": -0.008,
+     "p": 0.026,
+     "vol": 3552833,
+     "vol24": 77637,
+     "chg1d": -0.0045,
      "mslug": "will-steve-hilton-win-the-california-governor-election-in-2026",
      "end": "2026-11-04",
      "url": "https://polymarket.com/event/california-governor-election-2026"
     },
     {
      "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
-     "p": 0.021,
-     "vol": 3508365,
-     "vol24": 42556,
-     "chg1d": -0.0025,
+     "p": 0.023,
+     "vol": 3509240,
+     "vol24": 12855,
+     "chg1d": -0.0045,
      "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
      "q": "China x Taiwan military clash before 2027?",
-     "p": 0.037,
+     "p": 0.036,
      "vol": 3488468,
      "vol24": 0,
-     "chg1d": 0.001,
+     "chg1d": 0.0005,
      "mslug": "china-x-taiwan-military-clash-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/china-x-taiwan-military-clash-before-2027"
     },
     {
      "q": "NATO x Russia military clash by December 31, 2026?",
-     "p": 0.185,
-     "vol": 3391524,
-     "vol24": 256865,
-     "chg1d": -0.185,
+     "p": 0.175,
+     "vol": 3395073,
+     "vol24": 225028,
+     "chg1d": -0.275,
      "mslug": "nato-x-russia-military-clash-by-december-31-2026-244-538-582",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/nato-x-russia-military-clash-by-december-31-2026-244-538-582"
     },
     {
      "q": "Will Ukraine recapture Crimean territory by December 31, 2026?",
-     "p": 0.03,
-     "vol": 3357889,
-     "vol24": 10339,
+     "p": 0.031,
+     "vol": 3358889,
+     "vol24": 1126,
      "chg1d": null,
      "mslug": "will-ukraine-recapture-crimean-territory-by-december-31-2026",
      "end": "2027-01-01",
@@ -746,10 +759,10 @@
     },
     {
      "q": "Will Nithya Raman win the 2026 Los Angeles mayoral election?",
-     "p": 0.527,
-     "vol": 3101017,
-     "vol24": 21769,
-     "chg1d": 0.0055,
+     "p": 0.533,
+     "vol": 3102775,
+     "vol24": 11207,
+     "chg1d": 0.0215,
      "mslug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
      "end": "2026-06-03",
      "url": "https://polymarket.com/event/los-angeles-mayoral-election-117"
@@ -757,9 +770,9 @@
     {
      "q": "Ukraine signs peace deal with Russia before 2027?",
      "p": 0.105,
-     "vol": 2878964,
-     "vol24": 8531,
-     "chg1d": 0.015,
+     "vol": 2879798,
+     "vol24": 5443,
+     "chg1d": 0.01,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
@@ -769,7 +782,7 @@
  },
  "quakes": {
   "ok": true,
-  "at": "2026-10-24T11:18:29Z",
+  "at": "2026-10-24T16:19:07Z",
   "data": [
    {
     "d": "2026-10-24",
@@ -844,8 +857,8 @@
   ]
  },
  "gdacs": {
-  "ok": false,
-  "at": "2026-10-24T04:50:42Z",
+  "ok": true,
+  "at": "2026-10-24T16:19:07Z",
   "data": [
    {
     "type": "TC",
@@ -898,12 +911,11 @@
     "url": "https://www.gdacs.org/report.aspx?eventid=1001335&episodeid=38&eventtype=TC",
     "id": "TC1001335-38"
    }
-  ],
-  "err": "ReadTimeout: HTTPSConnectionPool(host='www.gdacs.org', port=443): Read timed out. (read timeout=40)"
+  ]
  },
  "ofac": {
   "ok": true,
-  "at": "2026-10-24T11:18:29Z",
+  "at": "2026-10-24T16:19:07Z",
   "data": {
    "n_total": 19471,
    "baseline": false,
@@ -918,9 +930,9 @@
  "summary": {
   "ioda_alerts": 5,
   "quakes_near": 0,
-  "gdacs_red": 0,
+  "gdacs_red": 2,
   "ofac_new": 0,
   "ofac_new_vessels": 0,
-  "events": 8
+  "events": 10
  }
 }
