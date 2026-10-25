@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25T16:36:38Z",
+ "generated": "2026-10-25T21:04:31Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-25T16:36:38Z",
+  "at": "2026-10-25T21:04:31Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -66,22 +66,22 @@
       30.5
      ],
      "n": 1,
-     "key": 1,
+     "key": 0,
      "base": 1,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 25.06,
-       "lon": 55.04,
-       "alt": 28000,
-       "reg": "16-46016"
+       "flight": "OTBH",
+       "t": "",
+       "role": "other",
+       "lat": 24.89,
+       "lon": 55.03,
+       "alt": 27525,
+       "reg": ""
       }
      ]
     },
@@ -111,53 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 4,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "isr": 1,
-      "other": 3
-     },
-     "ac": [
-      {
-       "flight": "HUNTER",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 32.66,
-       "lon": 34.3,
-       "alt": 39025,
-       "reg": "452"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 32.05,
-       "lon": 34.83,
-       "alt": 25050,
-       "reg": ""
-      },
-      {
-       "flight": "SHD271",
-       "t": "C208",
-       "role": "other",
-       "lat": 31.24,
-       "lon": 35.82,
-       "alt": 8925,
-       "reg": "1538"
-      },
-      {
-       "flight": "RAAD28",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 31.29,
-       "lon": 35.84,
-       "alt": 10000,
-       "reg": "2552"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -185,25 +145,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "SSG004",
-       "t": "A319",
-       "role": "other",
-       "lat": 56.92,
-       "lon": 17.38,
-       "alt": 36000,
-       "reg": "OM-BYK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -224,12 +172,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 6
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-25T16:36:38Z",
+  "at": "2026-10-25T21:04:31Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -410,17 +358,17 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-25T16:36:38Z",
+  "at": "2026-10-25T21:04:31Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 24,
+    "US": 25,
     "??": 21,
-    "DE": 11,
+    "DE": 8,
+    "AR": 4,
     "ES": 4,
     "CH": 3,
     "MX": 3,
-    "AR": 3,
     "AU": 3,
     "BG": 2,
     "GB": 2,
@@ -432,15 +380,15 @@
    },
    "by_group": {
     "N0n": 22,
-    "qilin": 20,
-    "emperador": 6,
+    "qilin": 21,
+    "emperador": 7,
     "krybit": 6,
     "lockbit5": 5,
-    "lamashtu": 4,
-    "akira": 4,
-    "SilentRansomGroup": 4,
-    "Whitearmor": 3,
-    "rhysida": 3
+    "Whitearmor": 4,
+    "rhysida": 3,
+    "thegentlemen": 3,
+    "akira": 3,
+    "SilentRansomGroup": 3
    },
    "kr": []
   }

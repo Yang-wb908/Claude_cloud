@@ -1,11 +1,22 @@
 {
- "generated": "2026-10-25T16:36:13Z",
+ "generated": "2026-10-25T20:59:23Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
  "n_alerts": 3,
- "errors": [],
+ "errors": [
+  "salavat: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "omsk: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "ryazan: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "volgograd: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "saratov: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "syzran: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "kirishi: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "tuapse: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "novorossiysk: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
+  "ust_luga: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):"
+ ],
  "learning": 27,
  "sites": [
   {
@@ -728,14 +739,14 @@
    "lat": 11.75,
    "lon": -70.22,
    "r_km": 8,
-   "n": 6,
+   "n": 7,
    "base_days": 16,
    "base_n": 10.5,
-   "frp_max": 6.2,
+   "frp_max": 8.5,
    "base_frp": 11.55,
    "at": [
-    -70.22914,
-    11.73547
+    -70.19407,
+    11.7378
    ],
    "d": "2026-10-25",
    "status": "normal"
