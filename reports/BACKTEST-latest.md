@@ -1,9 +1,9 @@
-### 주간 백테스트 2026-10-24
-시계열 26개 · 사건 연구 75건 · 판단 장부 104건(판정 21건)
+### 주간 백테스트 2026-10-25
+시계열 26개 · 사건 연구 71건 · 판단 장부 104건(판정 21건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | 3.14 | None | None | None | None |
+| brent | -1.3 | None | None | None | None |
 | wheat | 0.04 | None | None | None | None |
 | gold | -1.29 | None | None | None | None |
 | dxy | 0.2 | None | None | None | None |
