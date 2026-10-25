@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-24T21:01:59Z",
+ "generated": "2026-10-25T04:56:45Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-24T21:01:59Z",
+  "at": "2026-10-25T04:56:45Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,23 +65,51 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 4,
+     "key": 0,
      "base": 1,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "other": 3,
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
+       "flight": "ZAM105",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.54,
+       "lon": 51.02,
+       "alt": 11275,
+       "reg": "QA366"
+      },
+      {
+       "flight": "ZAM106",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.95,
+       "lon": 51.28,
+       "alt": 4900,
+       "reg": "QA359"
+      },
+      {
+       "flight": "LHOB01",
+       "t": "C17",
+       "role": "airlift",
        "lat": 24.89,
-       "lon": 55.27,
-       "alt": 29500,
-       "reg": "20-46083"
+       "lon": 51.32,
+       "alt": 1375,
+       "reg": "A7-MAO"
+      },
+      {
+       "flight": "ORFB",
+       "t": "EC45",
+       "role": "other",
+       "lat": 23.62,
+       "lon": 58.27,
+       "alt": 575,
+       "reg": "A4O-HB"
       }
      ]
     },
@@ -111,32 +139,23 @@
       37.0,
       37.5
      ],
-     "n": 2,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "other": 2
+      "other": 1
      },
      "ac": [
       {
-       "flight": "RAAD39",
+       "flight": "RAAD32",
        "t": "AT8T",
        "role": "other",
-       "lat": 31.29,
-       "lon": 35.82,
-       "alt": 9900,
+       "lat": 31.33,
+       "lon": 35.83,
+       "alt": 10000,
        "reg": "2551"
-      },
-      {
-       "flight": "SHAHD278",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 31.7,
-       "lon": 35.97,
-       "alt": 8900,
-       "reg": "2560"
       }
      ]
     },
@@ -193,12 +212,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-24T21:01:59Z",
+  "at": "2026-10-25T04:56:45Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -379,7 +398,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-24T21:01:59Z",
+  "at": "2026-10-25T04:56:45Z",
   "data": {
    "n_week": 100,
    "by_country": {
@@ -407,8 +426,8 @@
     "lockbit5": 5,
     "akira": 5,
     "SilentRansomGroup": 5,
-    "BrainCipher": 5,
     "emperador": 4,
+    "BrainCipher": 4,
     "rhysida": 3
    },
    "kr": []
