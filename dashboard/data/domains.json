@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25T04:56:45Z",
+ "generated": "2026-10-25T11:49:03Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-25T04:56:45Z",
+  "at": "2026-10-25T11:49:03Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,51 +65,32 @@
       60.0,
       30.5
      ],
-     "n": 4,
-     "key": 0,
+     "n": 2,
+     "key": 2,
      "base": 1,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "other": 3,
-      "airlift": 1
+      "tanker": 2
      },
      "ac": [
       {
-       "flight": "ZAM105",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.54,
-       "lon": 51.02,
-       "alt": 11275,
-       "reg": "QA366"
+       "flight": "YETI60",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.19,
+       "lon": 55.88,
+       "alt": 28000,
+       "reg": "19-46111"
       },
       {
-       "flight": "ZAM106",
-       "t": "PC21",
-       "role": "other",
-       "lat": 24.95,
-       "lon": 51.28,
-       "alt": 4900,
-       "reg": "QA359"
-      },
-      {
-       "flight": "LHOB01",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 24.89,
-       "lon": 51.32,
-       "alt": 1375,
-       "reg": "A7-MAO"
-      },
-      {
-       "flight": "ORFB",
-       "t": "EC45",
-       "role": "other",
-       "lat": 23.62,
-       "lon": 58.27,
-       "alt": 575,
-       "reg": "A4O-HB"
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 24.78,
+       "lon": 57.6,
+       "alt": 24025,
+       "reg": "64-14839"
       }
      ]
     },
@@ -139,22 +120,50 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 0,
+     "n": 4,
+     "key": 1,
      "base": 0,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 3,
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "RAAD32",
+       "flight": "BOOSTER",
+       "t": "HRON",
+       "role": "other",
+       "lat": 31.87,
+       "lon": 35.02,
+       "alt": 25050,
+       "reg": ""
+      },
+      {
+       "flight": "IRON",
+       "t": "GLF5",
+       "role": "isr",
+       "lat": 32.37,
+       "lon": 35.08,
+       "alt": 39225,
+       "reg": "452"
+      },
+      {
+       "flight": "SH275",
+       "t": "C208",
+       "role": "other",
+       "lat": 31.31,
+       "lon": 35.77,
+       "alt": 11925,
+       "reg": "1540"
+      },
+      {
+       "flight": "RAAD33",
        "t": "AT8T",
        "role": "other",
-       "lat": 31.33,
+       "lat": 31.4,
        "lon": 35.83,
-       "alt": 10000,
+       "alt": 9900,
        "reg": "2551"
       }
      ]
@@ -185,13 +194,35 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "BRK88",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 55.77,
+       "lon": 17.34,
+       "alt": 37000,
+       "reg": "01"
+      },
+      {
+       "flight": "LYF345",
+       "t": "L410",
+       "role": "other",
+       "lat": 53.82,
+       "lon": 22.84,
+       "alt": 10000,
+       "reg": "02 BLUE"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -212,12 +243,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 8
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-25T04:56:45Z",
+  "at": "2026-10-25T11:49:03Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -398,36 +429,36 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-25T04:56:45Z",
+  "at": "2026-10-25T11:49:03Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 23,
-    "??": 20,
+    "US": 24,
+    "??": 21,
     "DE": 12,
-    "AR": 4,
     "ES": 4,
-    "GB": 3,
-    "FR": 3,
     "MX": 3,
+    "AR": 3,
     "AU": 3,
+    "BG": 2,
+    "GB": 2,
+    "FR": 2,
     "NL": 2,
     "MY": 2,
-    "CA": 2,
     "TR": 2,
     "IT": 2,
     "CH": 2
    },
    "by_group": {
-    "qilin": 18,
-    "N0n": 17,
-    "lamashtu": 7,
+    "N0n": 23,
+    "qilin": 19,
     "krybit": 6,
+    "emperador": 5,
+    "lamashtu": 5,
     "lockbit5": 5,
     "akira": 5,
-    "SilentRansomGroup": 5,
-    "emperador": 4,
-    "BrainCipher": 4,
+    "SilentRansomGroup": 4,
+    "Whitearmor": 3,
     "rhysida": 3
    },
    "kr": []
