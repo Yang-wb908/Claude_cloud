@@ -62,7 +62,7 @@
     "p": 19.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 75345801,
+    "vol": 75356122,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -116,7 +116,7 @@
     "p": 10.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2880603,
+    "vol": 2880747,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -137,7 +137,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 44942745,
+    "vol": 44962240,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -164,21 +164,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 13.2,
+   "p": 14.2,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 0.457,
-     "note": "예측시장 4% (가중 0.40)"
+     "f": 0.498,
+     "note": "예측시장 6% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 4.5,
+    "p": 5.5,
     "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-    "vol": 14520936,
+    "vol": 14765135,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -235,43 +235,43 @@
   },
   {
    "id": "brazil_bolsonaro_win",
-   "p": 65.5,
+   "p": 67.1,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_bolsonaro_win",
-     "f": 1.9,
-     "note": "예측시장 78% (가중 0.50)"
+     "f": 2.051,
+     "note": "예측시장 81% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 78.3,
+    "p": 80.8,
     "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election",
-    "vol": 28072521,
-    "end": "2026-10-05",
+    "vol": 28656991,
+    "end": "2026-10-26",
     "w": 0.5
    }
   },
   {
    "id": "brazil_lula_win",
-   "p": 34.4,
+   "p": 32.9,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
      "key": "market:brazil_lula_win",
-     "f": 0.523,
-     "note": "예측시장 22% (가중 0.50)"
+     "f": 0.492,
+     "note": "예측시장 20% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 21.5,
+    "p": 19.5,
     "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
     "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election",
-    "vol": 30881433,
-    "end": "2026-10-05",
+    "vol": 31219478,
+    "end": "2026-10-26",
     "w": 0.5
    }
   },
@@ -290,21 +290,21 @@
   },
   {
    "id": "dem_house_win",
-   "p": 81.7,
+   "p": 82.7,
    "k": 1,
    "prior": 65.0,
    "evidence": [
     {
      "key": "market:dem_house_win",
-     "f": 2.408,
+     "f": 2.577,
      "note": "예측시장 92% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 91.5,
+    "p": 92.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-    "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 12469487,
+    "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026",
+    "vol": 12493923,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -388,32 +388,25 @@
  ],
  "review": [
   {
-   "id": "fed_hawkish",
-   "house": 25.0,
-   "market": 4.5,
-   "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
-   "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032"
-  },
-  {
    "id": "brazil_bolsonaro_win",
    "house": 50.0,
-   "market": 78.3,
+   "market": 80.8,
    "q": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-flvio-bolsonaro-win-the-2026-brazilian-presidential-election"
   },
   {
    "id": "brazil_lula_win",
    "house": 50.0,
-   "market": 21.5,
+   "market": 19.5,
    "q": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
    "url": "https://polymarket.com/event/will-luiz-incio-lula-da-silva-win-the-2026-brazilian-presidential-election"
   },
   {
    "id": "dem_house_win",
    "house": 65.0,
-   "market": 91.5,
+   "market": 92.5,
    "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
-   "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
+   "url": "https://polymarket.com/event/which-party-will-win-the-house-in-2026"
   }
  ],
  "sensors": {
@@ -422,17 +415,19 @@
    "ukraine"
   ],
   "ioda": [
-   "carib",
    "ethiopia",
    "iran",
    "sahel"
   ],
   "gdacs": [
+   "korea",
    "scs",
    "taiwan"
   ],
   "gdacs_tc": [
-   "scs"
+   "korea",
+   "scs",
+   "taiwan"
   ]
  },
  "market_skill": 1.0,

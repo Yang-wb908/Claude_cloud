@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-25T11:49:03Z",
+ "generated": "2026-10-25T16:36:38Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-25T11:49:03Z",
+  "at": "2026-10-25T16:36:38Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,32 +65,23 @@
       60.0,
       30.5
      ],
-     "n": 2,
-     "key": 2,
+     "n": 1,
+     "key": 1,
      "base": 1,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 2
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "YETI60",
+       "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 25.19,
-       "lon": 55.88,
+       "lat": 25.06,
+       "lon": 55.04,
        "alt": 28000,
-       "reg": "19-46111"
-      },
-      {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 24.78,
-       "lon": 57.6,
-       "alt": 24025,
-       "reg": "64-14839"
+       "reg": "16-46016"
       }
      ]
     },
@@ -126,45 +117,45 @@
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "other": 3,
-      "isr": 1
+      "isr": 1,
+      "other": 3
      },
      "ac": [
+      {
+       "flight": "HUNTER",
+       "t": "GLF5",
+       "role": "isr",
+       "lat": 32.66,
+       "lon": 34.3,
+       "alt": 39025,
+       "reg": "452"
+      },
       {
        "flight": "BOOSTER",
        "t": "HRON",
        "role": "other",
-       "lat": 31.87,
-       "lon": 35.02,
+       "lat": 32.05,
+       "lon": 34.83,
        "alt": 25050,
        "reg": ""
       },
       {
-       "flight": "IRON",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 32.37,
-       "lon": 35.08,
-       "alt": 39225,
-       "reg": "452"
-      },
-      {
-       "flight": "SH275",
+       "flight": "SHD271",
        "t": "C208",
        "role": "other",
-       "lat": 31.31,
-       "lon": 35.77,
-       "alt": 11925,
-       "reg": "1540"
+       "lat": 31.24,
+       "lon": 35.82,
+       "alt": 8925,
+       "reg": "1538"
       },
       {
-       "flight": "RAAD33",
+       "flight": "RAAD28",
        "t": "AT8T",
        "role": "other",
-       "lat": 31.4,
-       "lon": 35.83,
-       "alt": 9900,
-       "reg": "2551"
+       "lat": 31.29,
+       "lon": 35.84,
+       "alt": 10000,
+       "reg": "2552"
       }
      ]
     },
@@ -194,33 +185,23 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
       "other": 1
      },
      "ac": [
       {
-       "flight": "BRK88",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 55.77,
-       "lon": 17.34,
-       "alt": 37000,
-       "reg": "01"
-      },
-      {
-       "flight": "LYF345",
-       "t": "L410",
+       "flight": "SSG004",
+       "t": "A319",
        "role": "other",
-       "lat": 53.82,
-       "lon": 22.84,
-       "alt": 10000,
-       "reg": "02 BLUE"
+       "lat": 56.92,
+       "lon": 17.38,
+       "alt": 36000,
+       "reg": "OM-BYK"
       }
      ]
     },
@@ -243,12 +224,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 8
+   "total_mil": 6
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-25T11:49:03Z",
+  "at": "2026-10-25T16:36:38Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -429,14 +410,15 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-25T11:49:03Z",
+  "at": "2026-10-25T16:36:38Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 24,
     "??": 21,
-    "DE": 12,
+    "DE": 11,
     "ES": 4,
+    "CH": 3,
     "MX": 3,
     "AR": 3,
     "AU": 3,
@@ -446,17 +428,16 @@
     "NL": 2,
     "MY": 2,
     "TR": 2,
-    "IT": 2,
-    "CH": 2
+    "IT": 2
    },
    "by_group": {
-    "N0n": 23,
-    "qilin": 19,
+    "N0n": 22,
+    "qilin": 20,
+    "emperador": 6,
     "krybit": 6,
-    "emperador": 5,
-    "lamashtu": 5,
     "lockbit5": 5,
-    "akira": 5,
+    "lamashtu": 4,
+    "akira": 4,
     "SilentRansomGroup": 4,
     "Whitearmor": 3,
     "rhysida": 3
