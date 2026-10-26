@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-25",
+ "asof": "2026-10-26",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -13,9 +13,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 10월 26일 기준 PortWatch 호르무즈 일일 통항은 4척으로 트립와이어 기준(10척 미만)에 걸려 있고, 해협 봉쇄와 사상 최고 유조선 운임이 계속 보도되고 있습니다. 10월 말까지 남은 5일 안에 정상화될 수는 사실상 없다고 판단합니다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -41,6 +41,12 @@
       "로이드 합동전쟁위원회(JWC)나 주요 P&I 클럽이 호르무즈 전쟁위험 할증료를 인하하거나 조건을 완화한다고 공지한다."
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNT201NUtENmNmeVh1X1lYa01nWDR5TjZzd2t1ZGQwRVRlZ0RPamdVdDBydlp6U2pVX0FBOVRfQUd2aXdtUFB3eVVFUVFyMjhXTy02blNRVDdkRERoTk96RVNEZWNhZTBnNHFSTkhLWjZoZlhKOTlZWERLXzVyNFpoVG5tZ3pTT3BwY2V2c2tKNnlSeVpGdy1SRE9VQkI2Nmlm?oc=5",
+    "https://news.google.com/rss/articles/CBMipgFBVV95cUxPWUEwbGQzcGczbVRKcXRoNHB3QmtLMENVMzFfd0xnWmN3aWRILU5CRTRWR0pFdnhQdGFsLXJwa01WR2N1S0JCQUxxdFRkRGZHaWFlakYxMk1YdDBCRDFXQjhDeFNMZmlyWnFsVjFaY21FZUdNdDg1RXdKM1JSb19jVVFTVTJFREFfRFN3TTRVbzNpY21mYXdZVmhwYl9wM0JrTGRvLUJ30gGrAUFVX3lxTE13aGdnRGlNem9jTGFaMTYwZjc3SVZ3bGFhYVhQVnVXVVJQZ2lzVHFqT3VONnBFbWpGVUw2VE52U0xSTmozSGJSM2d6dEF6Z2FiZjF3VWdMdHRUcWRYYjhKRjltNGVNeElDNGY2UVlvLVZRUkJrZGxvTERNRDF0MUk1dTRUWWFMNnpTWTM0b1BHU0JLeTBBZVJON2s2dE5jblB5Nzl5dEFiMnNPcw?oc=5",
+    "https://oilprice.com/Energy/Crude-Oil/Record-Tanker-Rates-Cripple-US-Crude-Oil-Flows-to-Asia.html"
    ]
   },
   {
@@ -339,9 +345,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.ukraine",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): NATO 회원국인 루마니아의 흑해 연안에서 드론 공격으로 화물선이 침몰했고, 10월에만 상선 약 50척이 피격돼 NATO가 경비를 강화했습니다. 해상 피격 범위가 NATO 연안까지 넓어진 것은 확인됩니다. 다만 보험료·곡물 경로에 준 영향을 직접 보여주는 근거는 없습니다.",
    "dissent": [
     {
      "d": "2026-10-20",
@@ -355,6 +361,11 @@
       "루마니아·불가리아 정부가 사건 원인을 기뢰나 미확인 원인으로 발표하고, NATO 4조 협의를 요청하지 않는다."
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://gcaptain.com/romania-blames-russia-for-drone-that-sinks-cargo-ship-1-killed-3-missing/",
+    "https://www.cbc.ca/news/world/black-sea-attacks-deadly-9.7393312?cmp=rss"
    ]
   },
   {
@@ -455,9 +466,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.ethiopia",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 티그라이, 아파르·암하라(WHO가 교전 지속 확인), 소말리주·모얄레 교전, 핀차아 설탕공장 공격, 에리트레아 접경 대치가 동시에 벌어지고 있어 다정면 전쟁 상태가 확인된다. 수도 드론 공격도 루비오가 테러로 규정하며 사실로 확인됐다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.un.org/feed/view/en/story/2026/10/1168643",
+    "https://www.aljazeera.com/news/2026/10/22/hundreds-of-ethiopians-cross-into-kenya-to-flee-regional-fighting?traffic_source=rss",
+    "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1PYWZOWklWMmI4aEUzLUNqRzlJdFZWNFF6b1EzOV9FX2FCMDlkb0dMZHB2aE9tcXlTTUlDeEtMTFRkV3JGUDlTN0I5MnpOUQ?oc=5"
+   ]
   },
   {
    "id": "th-ethiopia-3",
@@ -655,9 +672,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.lebanon",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 휴전이 공식적으로 깨지지는 않았습니다. 그러나 이스라엘은 10월 내내 레바논 남부를 포격·공습했고, 미국에서 열린 군사회담도 성과 없이 끝나 이스라엘 철수가 멈춰 있습니다. 판단한 '깨지지도 지켜지지도 않는 상태'가 그대로 이어지고 있습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.middleeasteye.net/news/lebanon-israel-military-talks-us-end-without-a-breakthrough",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-artillery-shells-town-southern-lebanons-tyre-district",
+    "https://www.aljazeera.com/news/2026/10/11/two-killed-near-israeli-occupied-area-in-south-lebanon?traffic_source=rss"
+   ]
   },
   {
    "id": "th-lebanon-2",
@@ -751,9 +774,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.somalia",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 10월 중순 이후 남서부주에서 야권 공세와 무력 분쟁이 이어졌고, 연방정부는 전 남서부주 수장 라프타가린을 알샤바브 연계 혐의로 제재했습니다. 같은 분쟁 속에서 알샤바브가 남서부주 마을을 장악했다는 보도도 있어, 연방-주 갈등이 대테러 역량을 잠식했다는 판단에 부합합니다. 다만 바이도아 시내 교전을 직접 확인한 보도는 없습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://horseedmedia.net/ethiopia-accused-of-role-in-somalias-southwest-conflict/426573/",
+    "https://www.riotimesonline.com/somalia-sanctions-laftagareen-al-shabaab-2026/",
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNbnJNX1JEOHNKc1pOYUFjdXpQZXdZSlpMVHhjWHNCS216UDdyclZiOGxVdDM2TkFuMHEyUWhUcnhlNHhJdDgzRVdDX2lmamVTNjlsQXBUN3JzdXZ1dUFTa3BBbEtwYVROSGstbXhLbTJtYk9mRnExX0ppcFk2bUJxalVRelJRM1hfN1ZvLWhCTUg1b25BNXI2dEE2eXZiMVZtQVBRLV9aN2c?oc=5"
+   ]
   },
   {
    "id": "th-somalia-2",
@@ -873,9 +902,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.carib",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 아이티 제재는 갱신됐지만, 유엔은 갱단이 단속에 적응해 농촌으로 퍼지고 있다고 평가했습니다. 같은 기간 신규 다국적군에 대한 최대 규모 공격과 켄스코프 학살이 이어져 치안이 나아지지 않았습니다. 콜롬비아 쪽은 근거가 없어 아이티 사례만으로 판정했습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.un.org/feed/view/en/story/2026/10/1168626",
+    "http://www.africanews.com/2026/10/20/haitian-gangs-target-foreign-troops-in-biggest-attack-on-new-force/",
+    "https://www.nytimes.com/2026/10/20/world/americas/mayor-kenscoff-haiti-gangs-massacre.html"
+   ]
   },
   {
    "id": "cm-energy-1",
@@ -1043,9 +1078,14 @@
    "cm": "macro",
    "due": "2026-12-31",
    "src": "INTEL.cm.macro",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): 이란·미국 선박 공격으로 호르무즈 사건이 재발했고, 브렌트는 111.7달러로 110달러 트립와이어를 넘었습니다. 지금까지는 지정학이 가격을 떠받친다는 판단대로 가고 있지만, 기한(12/31)이 남아 있습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxNT201NUtENmNmeVh1X1lYa01nWDR5TjZzd2t1ZGQwRVRlZ0RPamdVdDBydlp6U2pVX0FBOVRfQUd2aXdtUFB3eVVFUVFyMjhXTy02blNRVDdkRERoTk96RVNEZWNhZTBnNHFSTkhLWjZoZlhKOTlZWERLXzVyNFpoVG5tZ3pTT3BwY2V2c2tKNnlSeVpGdy1SRE9VQkI2Nmlm?oc=5",
+    "https://oilprice.com/Energy/Crude-Oil/Record-Tanker-Rates-Cripple-US-Crude-Oil-Flows-to-Asia.html"
+   ]
   },
   {
    "id": "cm-macro-3",
@@ -1055,9 +1095,11 @@
    "cm": "macro",
    "due": "2026-12-31",
    "src": "INTEL.cm.macro",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-10-26",
+   "note": "자동 판정(보통): USDKRW는 1,323.66으로, 판단 당시의 50일선 1,382보다 크게 내려와 원화 강세가 이어지고 있습니다. 다만 한은 10/22 인상 여부는 근거에서 확인되지 않고, 기한이 남아 있습니다.",
+   "by": "auto",
+   "evidence": []
   },
   {
    "id": "cm-macro-4",
@@ -1237,9 +1279,9 @@
    "src": "IW.theaters.latam",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 결선투표는 오늘(10/25) 치러지며, 제공된 근거에는 개표 결과가 아직 없고 결선 전날 집회와 접전 여론조사(비토율 46% 대 45%)만 있다. 플라비우 볼소나루의 승패가 확정되지 않아 판정할 수 없다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-01"
+   "note": "판정 보류: 10/25 결선 관련 근거는 투표 시간 연장과 실시간 개표 기사 제목뿐이고, 당선자가 누구인지는 제공된 근거에 나오지 않는다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-02"
   },
   {
    "id": "th-latam-2",
@@ -1539,9 +1581,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 기한(2026-10-18)은 지났지만 멕시코만 허리케인 상륙이나 정유·LNG·비료 터미널 가동 중단을 다룬 수집 사건이 없다. GDACS 적색 경보 1건은 지역과 유형이 나와 있지 않고 휘발유·난방유·천연가스 선물이 내렸지만, 이것만으로 상륙이 없었다고 확정할 수는 없다.",
-   "auto_tries": 2,
-   "auto_next": "2026-10-26"
+   "note": "판정 보류: 기한(2026-10-18)은 지났지만 수집된 사건 목록이 비어 있어 멕시코만 허리케인 상륙이나 정유·LNG·비료 터미널 가동 중단을 확인하거나 반증할 근거가 없습니다. 난방유(-2.8%)·휘발유(+0.4%) 시세 변동도 허리케인 영향을 가리키지 않아 판정을 보류합니다.",
+   "auto_tries": 3,
+   "auto_next": "2026-11-02"
   },
   {
    "id": "scn-ethiopia_war-2026-10-08",
