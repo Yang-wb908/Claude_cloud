@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-26T13:18:56Z",
+ "generated": "2026-10-26T13:26:22Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-26T13:18:56Z",
+  "at": "2026-10-26T13:26:22Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -61,8 +61,8 @@
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.27,
-       "lon": 125.71,
+       "lat": 37.46,
+       "lon": 127.17,
        "alt": 38000,
        "reg": "N591SR"
       }
@@ -77,35 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 1.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RBDN901",
-       "t": "C295",
-       "role": "other",
-       "lat": 24.9,
-       "lon": 55.26,
-       "alt": 4000,
-       "reg": "823"
-      },
-      {
-       "flight": "CTM2081",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 23.14,
-       "lon": 58.4,
-       "alt": 25025,
-       "reg": "5836"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -133,41 +111,32 @@
       37.0,
       37.5
      ],
-     "n": 3,
+     "n": 2,
      "key": 1,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
      "by_role": {
-      "other": 2,
-      "tanker": 1
+      "tanker": 1,
+      "other": 1
      },
      "ac": [
-      {
-       "flight": "HUF555",
-       "t": "FA7X",
-       "role": "other",
-       "lat": 31.25,
-       "lon": 31.18,
-       "alt": 38975,
-       "reg": "607"
-      },
       {
        "flight": "",
        "t": "K35R",
        "role": "tanker",
-       "lat": 32.09,
-       "lon": 34.21,
-       "alt": 13850,
+       "lat": 31.6,
+       "lon": 34.52,
+       "alt": 18950,
        "reg": "62-3561"
       },
       {
        "flight": "BOOSTER",
        "t": "HRON",
        "role": "other",
-       "lat": 31.73,
+       "lat": 31.76,
        "lon": 34.9,
-       "alt": 17025,
+       "alt": 17050,
        "reg": ""
       }
      ]
@@ -198,41 +167,32 @@
       30.5,
       61.0
      ],
-     "n": 3,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
      "by_role": {
-      "other": 3
+      "other": 2
      },
      "ac": [
       {
        "flight": "BB27",
        "t": "",
        "role": "other",
-       "lat": 56.29,
-       "lon": 9.45,
-       "alt": 2175,
+       "lat": 56.3,
+       "lon": 9.22,
+       "alt": 1425,
        "reg": ""
       },
       {
-       "flight": "SVF680",
-       "t": "GLF4",
+       "flight": "@@@@@@@@",
+       "t": "BE20",
        "role": "other",
-       "lat": 58.41,
-       "lon": 15.53,
-       "alt": 800,
-       "reg": "102003"
-      },
-      {
-       "flight": "SVF653",
-       "t": "SF34",
-       "role": "other",
-       "lat": 59.36,
-       "lon": 17.94,
+       "lat": 60.2,
+       "lon": 11.08,
        "alt": "ground",
-       "reg": "100001"
+       "reg": "83-0497"
       }
      ]
     },
@@ -255,12 +215,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-26T13:18:56Z",
+  "at": "2026-10-26T13:26:22Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -441,7 +401,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-26T13:18:56Z",
+  "at": "2026-10-26T13:26:22Z",
   "data": {
    "n_week": 100,
    "by_country": {
