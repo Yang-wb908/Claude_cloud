@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-26T18:59:19Z",
+ "generated": "2026-10-26T22:48:38Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-26T18:59:19Z",
+  "at": "2026-10-26T22:48:38Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "008",
+       "t": "S211",
+       "role": "other",
+       "lat": 14.99,
+       "lon": 120.38,
+       "alt": 5700,
+       "reg": "07008"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -65,13 +77,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 1,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.54,
+       "lon": 55.54,
+       "alt": 29500,
+       "reg": "20-46075"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -99,25 +123,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "RAAD35",
-       "t": "AT8T",
-       "role": "other",
-       "lat": 32.42,
-       "lon": 36.18,
-       "alt": 8000,
-       "reg": "2551"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -145,34 +157,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "RAPTR1",
-       "t": "",
-       "role": "other",
-       "lat": 53.55,
-       "lon": 9.38,
-       "alt": 1700,
-       "reg": ""
-      },
-      {
-       "flight": "PCT610",
-       "t": "D228",
-       "role": "other",
-       "lat": 54.76,
-       "lon": 12.72,
-       "alt": 2050,
-       "reg": "57+05"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -193,12 +184,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-26T18:59:19Z",
+  "at": "2026-10-26T22:48:38Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -379,37 +370,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-26T18:59:19Z",
+  "at": "2026-10-26T22:48:38Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 34,
-    "??": 12,
+    "US": 35,
+    "??": 13,
     "DE": 11,
-    "ES": 4,
     "AR": 4,
     "GB": 3,
+    "ES": 3,
     "MX": 3,
     "IT": 3,
-    "CH": 3,
     "TR": 2,
     "MY": 2,
+    "CH": 2,
     "AU": 1,
     "BJ": 1,
     "BG": 1,
     "BE": 1
    },
    "by_group": {
-    "qilin": 33,
+    "qilin": 32,
     "N0n": 15,
     "emperador": 8,
-    "Whitearmor": 6,
+    "Whitearmor": 7,
     "krybit": 6,
     "lockbit5": 4,
+    "Falcon": 3,
     "payload": 3,
     "thegentlemen": 3,
-    "Doommageddon": 2,
-    "aurora": 2
+    "Doommageddon": 2
    },
    "kr": []
   }
