@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-26T13:26:22Z",
+ "generated": "2026-10-26T18:59:19Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-26T13:26:22Z",
+  "at": "2026-10-26T18:59:19Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 52,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.46,
-       "lon": 127.17,
-       "alt": 38000,
-       "reg": "N591SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -79,8 +67,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 1.0,
-     "runs": 52,
+     "base": 1,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -96,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -111,33 +99,23 @@
       37.0,
       37.5
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0.0,
-     "runs": 52,
+     "n": 1,
+     "key": 0,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {
-      "tanker": 1,
       "other": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 31.6,
-       "lon": 34.52,
-       "alt": 18950,
-       "reg": "62-3561"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
+       "flight": "RAAD35",
+       "t": "AT8T",
        "role": "other",
-       "lat": 31.76,
-       "lon": 34.9,
-       "alt": 17050,
-       "reg": ""
+       "lat": 32.42,
+       "lon": 36.18,
+       "alt": 8000,
+       "reg": "2551"
       }
      ]
     },
@@ -152,8 +130,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -169,30 +147,30 @@
      ],
      "n": 2,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {
       "other": 2
      },
      "ac": [
       {
-       "flight": "BB27",
+       "flight": "RAPTR1",
        "t": "",
        "role": "other",
-       "lat": 56.3,
-       "lon": 9.22,
-       "alt": 1425,
+       "lat": 53.55,
+       "lon": 9.38,
+       "alt": 1700,
        "reg": ""
       },
       {
-       "flight": "@@@@@@@@",
-       "t": "BE20",
+       "flight": "PCT610",
+       "t": "D228",
        "role": "other",
-       "lat": 60.2,
-       "lon": 11.08,
-       "alt": "ground",
-       "reg": "83-0497"
+       "lat": 54.76,
+       "lon": 12.72,
+       "alt": 2050,
+       "reg": "57+05"
       }
      ]
     },
@@ -207,20 +185,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 52,
+     "base": 0,
+     "runs": 53,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-26T13:26:22Z",
+  "at": "2026-10-26T18:59:19Z",
   "data": {
    "n_total": 1756,
    "recent": [
@@ -401,37 +379,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-26T13:26:22Z",
+  "at": "2026-10-26T18:59:19Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 27,
-    "??": 16,
+    "US": 34,
+    "??": 12,
     "DE": 11,
-    "AR": 4,
     "ES": 4,
-    "IT": 3,
-    "MY": 3,
-    "CH": 3,
+    "AR": 4,
+    "GB": 3,
     "MX": 3,
-    "AU": 3,
-    "FR": 2,
-    "NL": 2,
+    "IT": 3,
+    "CH": 3,
+    "TR": 2,
+    "MY": 2,
+    "AU": 1,
     "BJ": 1,
     "BG": 1,
     "BE": 1
    },
    "by_group": {
-    "qilin": 23,
+    "qilin": 33,
     "N0n": 15,
-    "emperador": 7,
+    "emperador": 8,
     "Whitearmor": 6,
     "krybit": 6,
     "lockbit5": 4,
     "payload": 3,
-    "rhysida": 3,
     "thegentlemen": 3,
-    "akira": 3
+    "Doommageddon": 2,
+    "aurora": 2
    },
    "kr": []
   }
