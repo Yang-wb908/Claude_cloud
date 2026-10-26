@@ -1,23 +1,12 @@
 {
- "generated": "2026-10-25T20:59:23Z",
+ "generated": "2026-10-26T05:01:37Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
- "n_alerts": 3,
- "errors": [
-  "salavat: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "omsk: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "ryazan: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "volgograd: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "saratov: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "syzran: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "kirishi: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "tuapse: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "novorossiysk: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "ust_luga: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):"
- ],
- "learning": 27,
+ "n_alerts": 1,
+ "errors": [],
+ "learning": 25,
  "sites": [
   {
    "id": "salavat",
@@ -29,10 +18,10 @@
    "lon": 55.97,
    "r_km": 6,
    "n": 0,
-   "base_days": 13,
-   "base_n": 0,
+   "base_days": 14,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -46,17 +35,14 @@
    "lat": 55.07,
    "lon": 73.22,
    "r_km": 6,
-   "n": 11,
-   "base_days": 15,
-   "base_n": 0,
-   "frp_max": 6.0,
-   "base_frp": 0,
-   "at": [
-    73.28567,
-    55.08542
-   ],
-   "d": "2026-10-24",
-   "status": "alert"
+   "n": 0,
+   "base_days": 16,
+   "base_n": 0.0,
+   "frp_max": 0,
+   "base_frp": 0.0,
+   "at": null,
+   "d": null,
+   "status": "normal"
   },
   {
    "id": "ryazan",
@@ -67,16 +53,13 @@
    "lat": 54.59,
    "lon": 39.73,
    "r_km": 5,
-   "n": 2,
-   "base_days": 12,
-   "base_n": 0.0,
-   "frp_max": 13.7,
-   "base_frp": 0.0,
-   "at": [
-    39.71872,
-    54.58948
-   ],
-   "d": "2026-10-24",
+   "n": 0,
+   "base_days": 13,
+   "base_n": 0,
+   "frp_max": 0,
+   "base_frp": 0,
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -143,10 +126,10 @@
    "lon": 32.03,
    "r_km": 5,
    "n": 0,
-   "base_days": 15,
-   "base_n": 1,
+   "base_days": 16,
+   "base_n": 1.0,
    "frp_max": 0,
-   "base_frp": 1.1,
+   "base_frp": 1.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -178,16 +161,16 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 7,
-   "base_days": 16,
-   "base_n": 2.5,
-   "frp_max": 2.7,
+   "n": 2,
+   "base_days": 17,
+   "base_n": 3,
+   "frp_max": 1.2,
    "base_frp": 1.5,
    "at": [
-    37.80248,
-    44.7348
+    37.80647,
+    44.73438
    ],
-   "d": "2026-10-24",
+   "d": "2026-10-25",
    "status": "normal"
   },
   {
@@ -236,10 +219,10 @@
    "lon": 46.2,
    "r_km": 5,
    "n": 0,
-   "base_days": 15,
-   "base_n": 0,
+   "base_days": 16,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -271,14 +254,14 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 9,
-   "base_days": 16,
-   "base_n": 9.0,
-   "frp_max": 5.4,
-   "base_frp": 6.85,
+   "n": 15,
+   "base_days": 17,
+   "base_n": 9,
+   "frp_max": 4.3,
+   "base_frp": 6.3,
    "at": [
-    48.27543,
-    30.34748
+    48.27026,
+    30.34866
    ],
    "d": "2026-10-25",
    "status": "normal"
@@ -292,11 +275,11 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 16,
-   "base_days": 16,
-   "base_n": 16.5,
+   "n": 24,
+   "base_days": 17,
+   "base_n": 16,
    "frp_max": 7.0,
-   "base_frp": 6.300000000000001,
+   "base_frp": 6.2,
    "at": [
     56.10285,
     27.16069
@@ -314,15 +297,15 @@
    "lon": 50.31,
    "r_km": 6,
    "n": 4,
-   "base_days": 16,
-   "base_n": 3.0,
-   "frp_max": 3.0,
-   "base_frp": 1.15,
+   "base_days": 17,
+   "base_n": 3,
+   "frp_max": 1.3,
+   "base_frp": 1.2,
    "at": [
-    50.30938,
-    29.21689
+    50.3148,
+    29.21444
    ],
-   "d": "2026-10-24",
+   "d": "2026-10-25",
    "status": "normal"
   },
   {
@@ -370,13 +353,16 @@
    "lat": 26.64,
    "lon": 50.16,
    "r_km": 7,
-   "n": 0,
-   "base_days": 13,
-   "base_n": 1,
-   "frp_max": 0,
-   "base_frp": 2.6,
-   "at": null,
-   "d": null,
+   "n": 1,
+   "base_days": 14,
+   "base_n": 1.0,
+   "frp_max": 2.2,
+   "base_frp": 2.55,
+   "at": [
+    50.11593,
+    26.68423
+   ],
+   "d": "2026-10-25",
    "status": "normal"
   },
   {
@@ -388,14 +374,14 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 1,
-   "base_days": 16,
-   "base_n": 2.0,
-   "frp_max": 1.1,
+   "n": 4,
+   "base_days": 17,
+   "base_n": 2,
+   "frp_max": 1.5,
    "base_frp": 1.6,
    "at": [
-    49.70068,
-    25.93058
+    49.70036,
+    25.92927
    ],
    "d": "2026-10-25",
    "status": "normal"
@@ -445,14 +431,14 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 36,
-   "base_days": 16,
-   "base_n": 28.5,
-   "frp_max": 26.4,
-   "base_frp": 8.649999999999999,
+   "n": 34,
+   "base_days": 17,
+   "base_n": 29,
+   "frp_max": 10.2,
+   "base_frp": 9.2,
    "at": [
-    51.55107,
-    25.9043
+    51.53571,
+    25.88408
    ],
    "d": "2026-10-25",
    "status": "normal"
@@ -539,10 +525,10 @@
    "lon": 45.32,
    "r_km": 10,
    "n": 0,
-   "base_days": 4,
-   "base_n": 1.5,
+   "base_days": 5,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 5.25,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -629,10 +615,10 @@
    "lon": 25.35,
    "r_km": 10,
    "n": 0,
-   "base_days": 14,
-   "base_n": 0.0,
+   "base_days": 15,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -665,13 +651,13 @@
    "lon": 37.22,
    "r_km": 8,
    "n": 0,
-   "base_days": 3,
-   "base_n": 0,
+   "base_days": 4,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
-   "status": "learning"
+   "status": "normal"
   },
   {
    "id": "khartoum_refinery",
@@ -700,17 +686,17 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 7,
-   "base_days": 15,
-   "base_n": 8,
-   "frp_max": 61.5,
-   "base_frp": 14.4,
+   "n": 2,
+   "base_days": 16,
+   "base_n": 7.5,
+   "frp_max": 51.8,
+   "base_frp": 15.399999999999999,
    "at": [
-    29.69468,
-    10.92533
+    29.76475,
+    10.99822
    ],
    "d": "2026-10-25",
-   "status": "alert"
+   "status": "normal"
   },
   {
    "id": "mekelle",
@@ -722,13 +708,13 @@
    "lon": 39.47,
    "r_km": 10,
    "n": 0,
-   "base_days": 3,
-   "base_n": 1,
+   "base_days": 4,
+   "base_n": 0.5,
    "frp_max": 0,
-   "base_frp": 1.4,
+   "base_frp": 0.7,
    "at": null,
    "d": null,
-   "status": "learning"
+   "status": "normal"
   },
   {
    "id": "amuay",
@@ -740,10 +726,10 @@
    "lon": -70.22,
    "r_km": 8,
    "n": 7,
-   "base_days": 16,
-   "base_n": 10.5,
+   "base_days": 17,
+   "base_n": 10,
    "frp_max": 8.5,
-   "base_frp": 11.55,
+   "base_frp": 11.4,
    "at": [
     -70.19407,
     11.7378
@@ -833,10 +819,10 @@
    "lon": 72.07,
    "r_km": 8,
    "n": 0,
-   "base_days": 16,
-   "base_n": 0.0,
+   "base_days": 17,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -853,10 +839,10 @@
     27.5,
     16.0
    ],
-   "n": 1581,
-   "base_days": 16,
-   "base_n": 708.0,
-   "n_hi": 267,
+   "n": 1207,
+   "base_days": 17,
+   "base_n": 713,
+   "n_hi": 260,
    "d": "2026-10-25",
    "status": "normal"
   },
@@ -870,10 +856,10 @@
     32.5,
     14.5
    ],
-   "n": 3381,
-   "base_days": 16,
-   "base_n": 1184.0,
-   "n_hi": 768,
+   "n": 2037,
+   "base_days": 17,
+   "base_n": 1213,
+   "n_hi": 417,
    "d": "2026-10-25",
    "status": "normal"
   },
@@ -888,8 +874,8 @@
     31.6
    ],
    "n": 0,
-   "base_days": 15,
-   "base_n": 0,
+   "base_days": 16,
+   "base_n": 0.0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -904,10 +890,10 @@
     35.9,
     33.6
    ],
-   "n": 7,
-   "base_days": 15,
-   "base_n": 1,
-   "n_hi": 4,
+   "n": 6,
+   "base_days": 16,
+   "base_n": 1.0,
+   "n_hi": 0,
    "d": "2026-10-25",
    "status": "normal"
   },
@@ -922,8 +908,8 @@
     14.9
    ],
    "n": 88,
-   "base_days": 16,
-   "base_n": 62.5,
+   "base_days": 17,
+   "base_n": 58,
    "n_hi": 30,
    "d": "2026-10-25",
    "status": "normal"
@@ -938,10 +924,10 @@
     30.0,
     1.0
    ],
-   "n": 159,
-   "base_days": 16,
-   "base_n": 72.5,
-   "n_hi": 35,
+   "n": 103,
+   "base_days": 17,
+   "base_n": 75,
+   "n_hi": 8,
    "d": "2026-10-25",
    "status": "normal"
   },
@@ -956,8 +942,8 @@
     21.5
    ],
    "n": 4,
-   "base_days": 14,
-   "base_n": 0.0,
+   "base_days": 15,
+   "base_n": 0,
    "n_hi": 1,
    "d": "2026-10-25",
    "status": "normal"
@@ -972,51 +958,15 @@
     39.0,
     49.5
    ],
-   "n": 97,
-   "base_days": 16,
-   "base_n": 18.5,
+   "n": 149,
+   "base_days": 17,
+   "base_n": 23,
    "n_hi": 30,
    "d": "2026-10-25",
    "status": "alert"
   }
  ],
  "alerts": [
-  {
-   "d": "2026-10-24",
-   "t": "X",
-   "at": [
-    73.286,
-    55.085
-   ],
-   "th": "ukraine",
-   "p": "옴스크 정유공장",
-   "x": "위성 열점: 옴스크 정유공장 반경 6km 안 11건, 최대 FRP 6MW (평소 0건·0MW). 원인 미상, 피격·화재 여부 확인 필요",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-24;@73.286,55.085,12.0z",
-   "g": "B2",
-   "src": "firms",
-   "lang": "ko",
-   "auto": true,
-   "id": "firms-omsk-2026-10-24",
-   "r": 3
-  },
-  {
-   "d": "2026-10-25",
-   "t": "X",
-   "at": [
-    29.695,
-    10.925
-   ],
-   "th": "sudan",
-   "p": "카두글리",
-   "x": "위성 열점: 카두글리 반경 10km 안 7건, 최대 FRP 62MW (평소 8건·14MW). 원인 미상, 피격·화재 여부 확인 필요",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-25;@29.695,10.925,12.0z",
-   "g": "B2",
-   "src": "firms",
-   "lang": "ko",
-   "auto": true,
-   "id": "firms-kadugli-2026-10-25",
-   "r": 3
-  },
   {
    "d": "2026-10-25",
    "t": "X",
@@ -1026,7 +976,7 @@
    ],
    "th": "ukraine",
    "p": "우크라이나 동부 전선",
-   "x": "위성 열점 급증: 우크라이나 동부 전선 하루 97건 (평소 18건, FRP 10MW 이상 30건). 방화·포격 화재 가능성",
+   "x": "위성 열점 급증: 우크라이나 동부 전선 하루 149건 (평소 23건, FRP 10MW 이상 30건). 방화·포격 화재 가능성",
    "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-25;@37.000,48.000,8.0z",
    "g": "B2",
    "src": "firms",
