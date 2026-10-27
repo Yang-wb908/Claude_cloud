@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-27T05:32:00Z",
+ "generated": "2026-10-27T12:30:23Z",
  "adsb": {
-  "ok": false,
-  "at": "2026-10-26T22:48:38Z",
+  "ok": true,
+  "at": "2026-10-27T12:30:23Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,21 +33,21 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {
       "other": 1
      },
      "ac": [
       {
-       "flight": "008",
-       "t": "S211",
+       "flight": "TANOM05",
+       "t": "A139",
        "role": "other",
-       "lat": 14.99,
-       "lon": 120.38,
-       "alt": 5700,
-       "reg": "07008"
+       "lat": 6.08,
+       "lon": 116.1,
+       "alt": 100,
+       "reg": "M503-2"
       }
      ]
     },
@@ -60,13 +60,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "KEEP99",
+       "t": "H47",
+       "role": "other",
+       "lat": 37.71,
+       "lon": 127.13,
+       "alt": 1400,
+       "reg": "16-08212"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -79,21 +91,21 @@
      ],
      "n": 1,
      "key": 1,
-     "base": 1,
-     "runs": 53,
+     "base": 1.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {
       "tanker": 1
      },
      "ac": [
       {
-       "flight": "",
+       "flight": "YETI54",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.54,
-       "lon": 55.54,
-       "alt": 29500,
-       "reg": "20-46075"
+       "lat": 25.23,
+       "lon": 55.71,
+       "alt": 26000,
+       "reg": "11-46060"
       }
      ]
     },
@@ -108,8 +120,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -123,13 +135,45 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 53,
+     "n": 3,
+     "key": 2,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1,
+      "isr": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "RRR2302",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 33.79,
+       "lon": 31.47,
+       "alt": 30425,
+       "reg": "ZZ343"
+      },
+      {
+       "flight": "RFR7331",
+       "t": "Q9",
+       "role": "isr",
+       "lat": 34.3,
+       "lon": 33.15,
+       "alt": 13000,
+       "reg": "PR008"
+      },
+      {
+       "flight": "IRL290",
+       "t": "FA6X",
+       "role": "other",
+       "lat": 34.01,
+       "lon": 34.66,
+       "alt": 26525,
+       "reg": "290"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -140,13 +184,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "MARTI07",
+       "t": "AT76",
+       "role": "other",
+       "lat": 40.63,
+       "lon": 31.76,
+       "alt": 20425,
+       "reg": "TCB-702"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -157,13 +213,109 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 53,
+     "n": 10,
+     "key": 2,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 7,
+      "airlift": 1,
+      "isr": 1,
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "PCT612",
+       "t": "D228",
+       "role": "other",
+       "lat": 53.81,
+       "lon": 9.36,
+       "alt": 4050,
+       "reg": "57+05"
+      },
+      {
+       "flight": "HERKY10",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 56.3,
+       "lon": 9.4,
+       "alt": 2150,
+       "reg": "B-537"
+      },
+      {
+       "flight": "SKYNET",
+       "t": "",
+       "role": "other",
+       "lat": 54.49,
+       "lon": 9.68,
+       "alt": 4000,
+       "reg": ""
+      },
+      {
+       "flight": "",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 55.63,
+       "lon": 12.64,
+       "alt": "ground",
+       "reg": "C-215"
+      },
+      {
+       "flight": "TR12",
+       "t": "G12T",
+       "role": "other",
+       "lat": 58.31,
+       "lon": 15.31,
+       "alt": 2150,
+       "reg": "40212"
+      },
+      {
+       "flight": "TR16",
+       "t": "G12T",
+       "role": "other",
+       "lat": 58.57,
+       "lon": 15.48,
+       "alt": 3550,
+       "reg": "40216"
+      },
+      {
+       "flight": "MMF48",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 58.7,
+       "lon": 22.99,
+       "alt": 20750,
+       "reg": "T-060"
+      },
+      {
+       "flight": "LYF468",
+       "t": "L410",
+       "role": "other",
+       "lat": 55.34,
+       "lon": 23.23,
+       "alt": 10000,
+       "reg": "02 BLUE"
+      },
+      {
+       "flight": "IAM1497",
+       "t": "B350",
+       "role": "other",
+       "lat": 54.91,
+       "lon": 23.61,
+       "alt": 14225,
+       "reg": "MM62317"
+      },
+      {
+       "flight": "NAM001",
+       "t": "FA7X",
+       "role": "other",
+       "lat": 53.56,
+       "lon": 26.85,
+       "alt": 43000,
+       "reg": "V5-GON"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -176,21 +328,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 2
-  },
-  "err": "RuntimeError: HTTP 400: "
+   "total_mil": 17
+  }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-27T05:32:00Z",
+  "at": "2026-10-27T12:30:23Z",
   "data": {
    "n_total": 1758,
    "recent": [
@@ -391,37 +542,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-27T05:32:00Z",
+  "at": "2026-10-27T12:30:23Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 34,
-    "??": 14,
+    "US": 32,
+    "??": 18,
     "DE": 11,
-    "ES": 4,
-    "AR": 4,
-    "MY": 3,
+    "MY": 4,
+    "IT": 3,
+    "ES": 3,
     "GB": 3,
-    "MX": 3,
     "FR": 2,
+    "MX": 2,
     "TR": 2,
-    "IT": 2,
-    "AU": 1,
-    "BJ": 1,
-    "BG": 1,
-    "BE": 1
+    "AR": 2,
+    "AE": 1,
+    "PH": 1,
+    "SG": 1,
+    "AU": 1
    },
    "by_group": {
-    "qilin": 31,
-    "N0n": 13,
+    "qilin": 27,
+    "N0n": 14,
+    "everest": 8,
+    "Whitearmor": 8,
     "emperador": 8,
-    "Whitearmor": 7,
     "krybit": 6,
-    "lockbit5": 4,
-    "rhysida": 3,
     "Falcon": 3,
     "payload": 3,
-    "thegentlemen": 3
+    "crypto24": 2,
+    "ULose": 2
    },
    "kr": []
   }

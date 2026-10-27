@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T22:48:15Z",
+ "generated": "2026-10-27T12:29:29Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
@@ -18,10 +18,10 @@
    "lon": 55.97,
    "r_km": 6,
    "n": 0,
-   "base_days": 14,
-   "base_n": 0.0,
+   "base_days": 15,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -35,13 +35,16 @@
    "lat": 55.07,
    "lon": 73.22,
    "r_km": 6,
-   "n": 0,
-   "base_days": 16,
-   "base_n": 0.0,
-   "frp_max": 0,
-   "base_frp": 0.0,
-   "at": null,
-   "d": null,
+   "n": 1,
+   "base_days": 17,
+   "base_n": 0,
+   "frp_max": 0.9,
+   "base_frp": 0,
+   "at": [
+    73.29043,
+    55.08249
+   ],
+   "d": "2026-10-26",
    "status": "normal"
   },
   {
@@ -54,10 +57,10 @@
    "lon": 39.73,
    "r_km": 5,
    "n": 0,
-   "base_days": 13,
-   "base_n": 0,
+   "base_days": 14,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -126,10 +129,10 @@
    "lon": 32.03,
    "r_km": 5,
    "n": 0,
-   "base_days": 16,
-   "base_n": 1.0,
+   "base_days": 17,
+   "base_n": 1,
    "frp_max": 0,
-   "base_frp": 1.0,
+   "base_frp": 0.9,
    "at": null,
    "d": null,
    "status": "normal"
@@ -161,16 +164,16 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 2,
-   "base_days": 17,
-   "base_n": 3,
-   "frp_max": 1.2,
+   "n": 1,
+   "base_days": 18,
+   "base_n": 2.5,
+   "frp_max": 1.1,
    "base_frp": 1.5,
    "at": [
-    37.80647,
-    44.73438
+    37.81083,
+    44.73736
    ],
-   "d": "2026-10-25",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -219,10 +222,10 @@
    "lon": 46.2,
    "r_km": 5,
    "n": 0,
-   "base_days": 16,
-   "base_n": 0.0,
+   "base_days": 17,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -254,16 +257,16 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 15,
-   "base_days": 17,
-   "base_n": 9,
-   "frp_max": 7.2,
-   "base_frp": 6.3,
+   "n": 3,
+   "base_days": 18,
+   "base_n": 9.0,
+   "frp_max": 9.1,
+   "base_frp": 5.85,
    "at": [
-    48.2736,
-    30.34631
+    48.27773,
+    30.35102
    ],
-   "d": "2026-10-26",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -275,16 +278,16 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 24,
-   "base_days": 17,
-   "base_n": 16,
-   "frp_max": 7.0,
-   "base_frp": 6.2,
+   "n": 22,
+   "base_days": 18,
+   "base_n": 16.5,
+   "frp_max": 7.4,
+   "base_frp": 6.300000000000001,
    "at": [
-    56.10285,
-    27.16069
+    56.0569,
+    27.1674
    ],
-   "d": "2026-10-26",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -296,16 +299,13 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 4,
-   "base_days": 17,
-   "base_n": 3,
-   "frp_max": 1.3,
+   "n": 0,
+   "base_days": 18,
+   "base_n": 3.5,
+   "frp_max": 0,
    "base_frp": 1.2,
-   "at": [
-    50.3148,
-    29.21444
-   ],
-   "d": "2026-10-25",
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -354,15 +354,15 @@
    "lon": 50.16,
    "r_km": 7,
    "n": 1,
-   "base_days": 14,
-   "base_n": 1.0,
-   "frp_max": 2.2,
-   "base_frp": 2.55,
+   "base_days": 15,
+   "base_n": 1,
+   "frp_max": 5.9,
+   "base_frp": 2.5,
    "at": [
-    50.11593,
-    26.68423
+    50.11054,
+    26.68443
    ],
-   "d": "2026-10-25",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -374,16 +374,16 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 4,
-   "base_days": 17,
-   "base_n": 2,
-   "frp_max": 1.5,
-   "base_frp": 1.6,
+   "n": 3,
+   "base_days": 18,
+   "base_n": 2.0,
+   "frp_max": 1.9,
+   "base_frp": 1.55,
    "at": [
-    49.70036,
-    25.92927
+    49.69888,
+    25.92901
    ],
-   "d": "2026-10-25",
+   "d": "2026-10-26",
    "status": "normal"
   },
   {
@@ -431,16 +431,16 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 34,
-   "base_days": 17,
-   "base_n": 29,
-   "frp_max": 10.2,
-   "base_frp": 9.2,
+   "n": 15,
+   "base_days": 18,
+   "base_n": 29.0,
+   "frp_max": 7.3,
+   "base_frp": 9.35,
    "at": [
-    51.53571,
-    25.88408
+    51.55227,
+    25.90509
    ],
-   "d": "2026-10-26",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -525,10 +525,10 @@
    "lon": 45.32,
    "r_km": 10,
    "n": 0,
-   "base_days": 5,
-   "base_n": 0,
+   "base_days": 6,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -615,10 +615,10 @@
    "lon": 25.35,
    "r_km": 10,
    "n": 0,
-   "base_days": 15,
-   "base_n": 0,
+   "base_days": 16,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -651,10 +651,10 @@
    "lon": 37.22,
    "r_km": 8,
    "n": 0,
-   "base_days": 4,
-   "base_n": 0.0,
+   "base_days": 5,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -687,13 +687,13 @@
    "lon": 29.72,
    "r_km": 10,
    "n": 9,
-   "base_days": 16,
-   "base_n": 7.5,
-   "frp_max": 51.8,
-   "base_frp": 15.399999999999999,
+   "base_days": 17,
+   "base_n": 7,
+   "frp_max": 6.3,
+   "base_frp": 16.4,
    "at": [
-    29.76475,
-    10.99822
+    29.65926,
+    11.07113
    ],
    "d": "2026-10-26",
    "status": "normal"
@@ -708,10 +708,10 @@
    "lon": 39.47,
    "r_km": 10,
    "n": 1,
-   "base_days": 4,
-   "base_n": 0.5,
+   "base_days": 5,
+   "base_n": 0,
    "frp_max": 1.6,
-   "base_frp": 0.7,
+   "base_frp": 0,
    "at": [
     39.54938,
     13.4834
@@ -728,16 +728,16 @@
    "lat": 11.75,
    "lon": -70.22,
    "r_km": 8,
-   "n": 13,
-   "base_days": 17,
-   "base_n": 10,
+   "n": 16,
+   "base_days": 18,
+   "base_n": 9.0,
    "frp_max": 22.9,
-   "base_frp": 11.4,
+   "base_frp": 10.75,
    "at": [
     -70.19678,
     11.73857
    ],
-   "d": "2026-10-26",
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -822,10 +822,10 @@
    "lon": 72.07,
    "r_km": 8,
    "n": 0,
-   "base_days": 17,
-   "base_n": 0,
+   "base_days": 18,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -842,11 +842,11 @@
     27.5,
     16.0
    ],
-   "n": 1330,
-   "base_days": 17,
-   "base_n": 713,
-   "n_hi": 451,
-   "d": "2026-10-26",
+   "n": 1368,
+   "base_days": 18,
+   "base_n": 956.0,
+   "n_hi": 452,
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -859,9 +859,9 @@
     32.5,
     14.5
    ],
-   "n": 2155,
-   "base_days": 17,
-   "base_n": 1213,
+   "n": 2194,
+   "base_days": 18,
+   "base_n": 1231.0,
    "n_hi": 821,
    "d": "2026-10-26",
    "status": "normal"
@@ -877,8 +877,8 @@
     31.6
    ],
    "n": 0,
-   "base_days": 16,
-   "base_n": 0.0,
+   "base_days": 17,
+   "base_n": 0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -893,11 +893,11 @@
     35.9,
     33.6
    ],
-   "n": 6,
-   "base_days": 16,
-   "base_n": 1.0,
+   "n": 0,
+   "base_days": 17,
+   "base_n": 1,
    "n_hi": 0,
-   "d": "2026-10-25",
+   "d": null,
    "status": "normal"
   },
   {
@@ -910,11 +910,11 @@
     40.0,
     14.9
    ],
-   "n": 88,
-   "base_days": 17,
-   "base_n": 58,
-   "n_hi": 30,
-   "d": "2026-10-26",
+   "n": 25,
+   "base_days": 18,
+   "base_n": 64.5,
+   "n_hi": 2,
+   "d": "2026-10-27",
    "status": "normal"
   },
   {
@@ -927,10 +927,10 @@
     30.0,
     1.0
    ],
-   "n": 103,
-   "base_days": 17,
-   "base_n": 75,
-   "n_hi": 8,
+   "n": 208,
+   "base_days": 18,
+   "base_n": 89.0,
+   "n_hi": 63,
    "d": "2026-10-26",
    "status": "normal"
   },
@@ -944,11 +944,11 @@
     94.5,
     21.5
    ],
-   "n": 4,
-   "base_days": 15,
-   "base_n": 0,
-   "n_hi": 1,
-   "d": "2026-10-25",
+   "n": 0,
+   "base_days": 16,
+   "base_n": 0.0,
+   "n_hi": 0,
+   "d": null,
    "status": "normal"
   },
   {
@@ -961,17 +961,17 @@
     39.0,
     49.5
    ],
-   "n": 149,
-   "base_days": 17,
-   "base_n": 23,
-   "n_hi": 30,
-   "d": "2026-10-26",
+   "n": 101,
+   "base_days": 18,
+   "base_n": 23.5,
+   "n_hi": 7,
+   "d": "2026-10-27",
    "status": "alert"
   }
  ],
  "alerts": [
   {
-   "d": "2026-10-26",
+   "d": "2026-10-27",
    "t": "X",
    "at": [
     37.0,
@@ -979,13 +979,13 @@
    ],
    "th": "ukraine",
    "p": "우크라이나 동부 전선",
-   "x": "위성 열점 급증: 우크라이나 동부 전선 하루 149건 (평소 23건, FRP 10MW 이상 30건). 방화·포격 화재 가능성",
-   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-26;@37.000,48.000,8.0z",
+   "x": "위성 열점 급증: 우크라이나 동부 전선 하루 101건 (평소 24건, FRP 10MW 이상 7건). 방화·포격 화재 가능성",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-27;@37.000,48.000,8.0z",
    "g": "B2",
    "src": "firms",
    "lang": "ko",
    "auto": true,
-   "id": "firms-aoi-ukraine_front-2026-10-26",
+   "id": "firms-aoi-ukraine_front-2026-10-27",
    "r": 3
   }
  ]
