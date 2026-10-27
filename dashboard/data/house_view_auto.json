@@ -123,13 +123,18 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 4.1,
+   "p": 6.2,
    "k": 1,
    "prior": 5.0,
    "evidence": [
     {
+     "key": "metric:feeds.gfw.data.taiwan.chg<=-0.3",
+     "f": 1.8,
+     "note": "대만해협 체류 선박 30% 이상 감소 (GFW)"
+    },
+    {
      "key": "market:taiwan_quarantine",
-     "f": 0.819,
+     "f": 0.728,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -144,7 +149,7 @@
   },
   {
    "id": "us_china_tariff",
-   "p": 25.0,
+   "p": 23.8,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -398,7 +403,7 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-10-26",
+ "asof": "2026-10-27",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
