@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-27T18:59:04Z",
+ "generated": "2026-10-27T22:28:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-27T18:59:04Z",
+  "at": "2026-10-27T22:28:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,32 +65,22 @@
       60.0,
       30.5
      ],
-     "n": 2,
+     "n": 1,
      "key": 0,
      "base": 1.0,
      "runs": 52,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
       "other": 1
      },
      "ac": [
       {
-       "flight": "RSF4028",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 24.39,
-       "lon": 54.53,
-       "alt": 8825,
-       "reg": "1623"
-      },
-      {
        "flight": "",
        "t": "",
        "role": "other",
-       "lat": 23.92,
-       "lon": 59.59,
-       "alt": 4475,
+       "lat": 22.68,
+       "lon": 57.98,
+       "alt": 32000,
        "reg": ""
       }
      ]
@@ -121,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 32.16,
-       "lon": 35.07,
-       "alt": 3075,
-       "reg": "62-3529"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -167,35 +145,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "EH10",
-       "role": "other",
-       "lat": 59.13,
-       "lon": 11.35,
-       "alt": 550,
-       "reg": "0264"
-      },
-      {
-       "flight": "SVF657",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 59.98,
-       "lon": 23.49,
-       "alt": 27325,
-       "reg": "106178"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -206,25 +162,66 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "R8926140",
+       "t": "H60",
+       "role": "other",
+       "lat": 18.47,
+       "lon": -66.1,
+       "alt": 400,
+       "reg": "89-26140"
+      },
+      {
+       "flight": "G26538",
+       "t": "H60",
+       "role": "other",
+       "lat": 18.46,
+       "lon": -65.97,
+       "alt": 500,
+       "reg": "94-26538"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-27T18:59:04Z",
+  "at": "2026-10-27T22:28:24Z",
   "data": {
-   "n_total": 1758,
+   "n_total": 1760,
    "recent": [
+    {
+     "cve": "CVE-2026-48356",
+     "vendor": "Adobe",
+     "product": "Commerce and Magento",
+     "name": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+     "added": "2026-10-27",
+     "due": "2026-11-10",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-111497",
+     "vendor": "Google",
+     "product": "Brotli",
+     "name": "Google Brotli Unchecked Return Value Vulnerability",
+     "added": "2026-10-27",
+     "due": "2026-11-10",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-109618",
      "vendor": "PHP Group",
@@ -416,18 +413,18 @@
      "edge": false
     }
    ],
-   "n_recent": 19,
-   "n_week": 10
+   "n_recent": 21,
+   "n_week": 12
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-27T18:59:04Z",
+  "at": "2026-10-27T22:28:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 35,
-    "??": 17,
+    "US": 34,
+    "??": 19,
     "DE": 9,
     "GB": 4,
     "MY": 4,
@@ -437,29 +434,29 @@
     "BE": 2,
     "FR": 2,
     "ES": 2,
-    "AR": 2,
     "PK": 1,
     "AE": 1,
-    "PH": 1
+    "PH": 1,
+    "SG": 1
    },
    "by_group": {
     "qilin": 25,
-    "N0n": 13,
     "Booba Project": 10,
+    "N0n": 10,
+    "Whitearmor": 8,
     "everest": 8,
-    "Whitearmor": 7,
     "emperador": 7,
     "krybit": 6,
     "Falcon": 3,
     "payload": 3,
-    "crypto24": 2
+    "play": 2
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 10,
+  "kev_week": 12,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,
