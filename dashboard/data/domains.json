@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-26T22:48:38Z",
+ "generated": "2026-10-27T05:32:00Z",
  "adsb": {
-  "ok": true,
+  "ok": false,
   "at": "2026-10-26T22:48:38Z",
   "data": {
    "areas": {
@@ -185,14 +185,35 @@
    },
    "n_surge": 0,
    "total_mil": 2
-  }
+  },
+  "err": "RuntimeError: HTTP 400: "
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-26T22:48:38Z",
+  "at": "2026-10-27T05:32:00Z",
   "data": {
-   "n_total": 1756,
+   "n_total": 1758,
    "recent": [
+    {
+     "cve": "CVE-2026-109618",
+     "vendor": "PHP Group",
+     "product": "PHP",
+     "name": "PHP Memory Corruption Vulnerability",
+     "added": "2026-10-26",
+     "due": "2026-10-29",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-109619",
+     "vendor": "PHP Group",
+     "product": "PHP",
+     "name": "PHP Stale Internal Request-State Vulnerability",
+     "added": "2026-10-26",
+     "due": "2026-10-29",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-114625",
      "vendor": "Arista",
@@ -364,50 +385,50 @@
      "edge": false
     }
    ],
-   "n_recent": 17,
-   "n_week": 8
+   "n_recent": 19,
+   "n_week": 10
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-26T22:48:38Z",
+  "at": "2026-10-27T05:32:00Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 35,
-    "??": 13,
+    "US": 34,
+    "??": 14,
     "DE": 11,
+    "ES": 4,
     "AR": 4,
+    "MY": 3,
     "GB": 3,
-    "ES": 3,
     "MX": 3,
-    "IT": 3,
+    "FR": 2,
     "TR": 2,
-    "MY": 2,
-    "CH": 2,
+    "IT": 2,
     "AU": 1,
     "BJ": 1,
     "BG": 1,
     "BE": 1
    },
    "by_group": {
-    "qilin": 32,
-    "N0n": 15,
+    "qilin": 31,
+    "N0n": 13,
     "emperador": 8,
     "Whitearmor": 7,
     "krybit": 6,
     "lockbit5": 4,
+    "rhysida": 3,
     "Falcon": 3,
     "payload": 3,
-    "thegentlemen": 3,
-    "Doommageddon": 2
+    "thegentlemen": 3
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 8,
+  "kev_week": 10,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,

@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 59.5,
+   "p": 65.8,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 11.9,
+   "p": 13.2,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -33,15 +33,10 @@
   },
   {
    "id": "hormuz_war",
-   "p": 28.6,
+   "p": 21.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
-    {
-     "key": "tw:brent_110",
-     "f": 2.0,
-     "note": "브렌트 110달러 돌파"
-    },
     {
      "key": "tw:maritime_attacks",
      "f": 2.5,
@@ -54,15 +49,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.884,
-     "note": "예측시장 20% (가중 0.10)"
+     "f": 0.941,
+     "note": "예측시장 18% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 19.5,
+    "p": 18.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 75541637,
+    "vol": 75547440,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -123,7 +118,7 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 6.2,
+   "p": 4.2,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -134,15 +129,15 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.728,
+     "f": 0.836,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.9,
+    "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45050102,
+    "vol": 45061764,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -183,7 +178,7 @@
     "p": 6.5,
     "q": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-october-2026-meeting-20260617190324032",
-    "vol": 16625199,
+    "vol": 16706800,
     "end": "2026-10-29",
     "w": 0.4
    }
@@ -281,7 +276,7 @@
     "p": 91.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 13606917,
+    "vol": 13647354,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -309,20 +304,14 @@
   },
   {
    "id": "baltic_interdiction",
-   "p": 21.7,
+   "p": 20.0,
    "k": 1,
    "prior": 20.0,
-   "evidence": [
-    {
-     "key": "tw:brent_110",
-     "f": 1.3,
-     "note": "브렌트 110"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "nsr_arctic_incident",
-   "p": 13.3,
+   "p": 15.0,
    "k": 1,
    "prior": 15.0,
    "evidence": []
@@ -343,18 +332,18 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 9.5,
+   "p": 9.4,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
      "key": "market:india_pak_loc_escalation",
-     "f": 0.948,
+     "f": 0.929,
      "note": "예측시장 8% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 8.5,
+    "p": 8.0,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
     "vol": 346192,
@@ -388,18 +377,6 @@
    "ethiopia",
    "iran",
    "sahel"
-  ],
-  "gdacs": [
-   "korea",
-   "scs",
-   "southasia",
-   "taiwan"
-  ],
-  "gdacs_tc": [
-   "korea",
-   "scs",
-   "southasia",
-   "taiwan"
   ]
  },
  "market_skill": 1.0,
@@ -408,11 +385,9 @@
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
-  "brent_110",
   "copper_6",
   "ethiopia_interstate",
   "firms_site_alert",
-  "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
   "korea_missile",
