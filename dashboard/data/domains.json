@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-28T22:44:51Z",
+ "generated": "2026-10-29T06:02:32Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-28T22:44:51Z",
+  "at": "2026-10-29T06:02:32Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "R204",
+       "t": "C295",
+       "role": "other",
+       "lat": 14.49,
+       "lon": 120.99,
+       "alt": 225,
+       "reg": "204"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -48,23 +60,32 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 2,
+     "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.23,
-       "lon": 125.33,
-       "alt": 40000,
-       "reg": "N591SR"
+       "flight": "CARD42",
+       "t": "H60",
+       "role": "other",
+       "lat": 36.95,
+       "lon": 127.07,
+       "alt": 1150,
+       "reg": "18-21004"
+      },
+      {
+       "flight": "CARD41",
+       "t": "H60",
+       "role": "other",
+       "lat": 36.95,
+       "lon": 127.07,
+       "alt": 1100,
+       "reg": "19-21066"
       }
      ]
     },
@@ -77,13 +98,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 1,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "ZABEEL03",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.88,
+       "lon": 55.23,
+       "alt": 23000,
+       "reg": "1302"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -111,25 +144,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RCH739",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 34.09,
-       "lon": 30.67,
-       "alt": 32975,
-       "reg": "03-3114"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -184,12 +205,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-28T22:44:51Z",
+  "at": "2026-10-29T06:02:32Z",
   "data": {
    "n_total": 1762,
    "recent": [
@@ -362,61 +383,21 @@
      "due": "2026-10-18",
      "ransom": false,
      "edge": true
-    },
-    {
-     "cve": "CVE-2026-105134",
-     "vendor": "Ahsay",
-     "product": "AhsayCBS",
-     "name": "Ahsay AhsayCBS Command Injection Vulnerability",
-     "added": "2026-10-14",
-     "due": "2026-10-17",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-76519",
-     "vendor": "Cisco",
-     "product": "Secure Email Gateway",
-     "name": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
-     "added": "2026-10-14",
-     "due": "2026-10-17",
-     "ransom": false,
-     "edge": true
-    },
-    {
-     "cve": "CVE-2026-105133",
-     "vendor": "Ahsay",
-     "product": "AhsayCBS",
-     "name": "Ahsay AhsayCBS Improper Authentication Vulnerability",
-     "added": "2026-10-14",
-     "due": "2026-10-17",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-0322",
-     "vendor": "Palo Alto Networks",
-     "product": "PAN-OS",
-     "name": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
-     "added": "2026-10-14",
-     "due": "2026-10-17",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 21,
+   "n_recent": 17,
    "n_week": 8
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-28T22:44:51Z",
+  "at": "2026-10-29T06:02:32Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 35,
-    "??": 27,
-    "DE": 9,
+    "US": 39,
+    "??": 25,
+    "DE": 8,
     "GB": 4,
     "MY": 3,
     "IT": 3,
@@ -424,23 +405,23 @@
     "MX": 2,
     "CA": 2,
     "ES": 2,
+    "IL": 1,
     "DK": 1,
     "PK": 1,
     "AE": 1,
-    "PH": 1,
-    "SG": 1
+    "PH": 1
    },
    "by_group": {
-    "qilin": 20,
+    "qilin": 19,
     "Whitearmor": 11,
     "Booba Project": 10,
     "everest": 8,
     "play": 7,
+    "SilentRansomGroup": 6,
     "payload": 5,
-    "N0n": 5,
-    "emperador": 5,
-    "rhysida": 4,
-    "aurora": 4
+    "aurora": 4,
+    "rhysida": 3,
+    "N0n": 3
    },
    "kr": []
   }

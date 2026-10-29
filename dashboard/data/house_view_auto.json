@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 63.8,
+   "p": 66.9,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 5.7,
+   "p": 11.8,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,30 +31,25 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.4,
-     "note": "예측시장 1% (가중 0.30)"
+     "f": 0.861,
+     "note": "예측시장 12% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 1.0,
-    "q": "Strait of Hormuz traffic returns to normal by October 31?",
-    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583",
-    "vol": 3620200,
-    "end": "2026-11-01",
+    "p": 11.5,
+    "q": "Strait of Hormuz traffic returns to normal by December 31?",
+    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
+    "vol": 15761767,
+    "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 30.5,
+   "p": 21.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
-    {
-     "key": "tw:brent_110",
-     "f": 2.0,
-     "note": "브렌트 110달러 돌파"
-    },
     {
      "key": "tw:maritime_attacks",
      "f": 2.5,
@@ -67,7 +62,7 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.878,
+     "f": 0.941,
      "note": "예측시장 18% (가중 0.10)"
     }
    ],
@@ -75,7 +70,7 @@
     "p": 18.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 75692519,
+    "vol": 75747163,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -141,7 +136,7 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 7.9,
+   "p": 6.2,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -151,13 +146,8 @@
      "note": "대만해협 체류 선박 30% 이상 감소 (GFW)"
     },
     {
-     "key": "sens:ioda:taiwan",
-     "f": 1.5,
-     "note": "대만 인터넷 대규모 장애 (IODA)"
-    },
-    {
      "key": "market:taiwan_quarantine",
-     "f": 0.685,
+     "f": 0.743,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -165,14 +155,14 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45112559,
+    "vol": 45124261,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 22.1,
+   "p": 23.8,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -192,21 +182,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 46.8,
+   "p": 45.9,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 2.636,
-     "note": "예측시장 79% (가중 0.40)"
+     "f": 2.545,
+     "note": "예측시장 78% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 79.0,
+    "p": 77.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 1637249,
+    "vol": 1739709,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -304,7 +294,7 @@
     "p": 92.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 14573030,
+    "vol": 14968223,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -332,20 +322,14 @@
   },
   {
    "id": "baltic_interdiction",
-   "p": 21.7,
+   "p": 20.0,
    "k": 1,
    "prior": 20.0,
-   "evidence": [
-    {
-     "key": "tw:brent_110",
-     "f": 1.3,
-     "note": "브렌트 110"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "nsr_arctic_incident",
-   "p": 13.3,
+   "p": 15.0,
    "k": 1,
    "prior": 15.0,
    "evidence": []
@@ -388,13 +372,6 @@
  ],
  "review": [
   {
-   "id": "hormuz_reopen",
-   "house": 30.0,
-   "market": 1.0,
-   "q": "Strait of Hormuz traffic returns to normal by October 31?",
-   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-october-31-20260810151043583"
-  },
-  {
    "id": "blacksea_deal",
    "house": 30.0,
    "market": 8.5,
@@ -404,7 +381,7 @@
   {
    "id": "fed_hawkish",
    "house": 25.0,
-   "market": 79.0,
+   "market": 77.5,
    "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
   },
@@ -418,28 +395,15 @@
  ],
  "sensors": {
   "firms": [
+   "europe",
    "ukraine",
    "yemen"
   ],
   "ioda": [
    "carib",
-   "drc",
    "ethiopia",
    "europe",
-   "iran",
-   "taiwan"
-  ],
-  "gdacs": [
-   "korea",
-   "scs",
-   "southasia",
-   "taiwan"
-  ],
-  "gdacs_tc": [
-   "korea",
-   "scs",
-   "southasia",
-   "taiwan"
+   "iran"
   ]
  },
  "market_skill": 1.0,
@@ -448,11 +412,9 @@
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
-  "brent_110",
   "copper_6",
   "ethiopia_interstate",
   "firms_site_alert",
-  "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
