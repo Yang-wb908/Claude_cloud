@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T06:02:34Z",
+ "generated": "2026-10-29T13:16:10Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,18 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
+  },
+  {
+   "id": "brent_110",
+   "title": "브렌트유 110달러 돌파",
+   "sev": 4,
+   "th": null,
+   "why": "한국 원유 도입가·물가 직결.",
+   "current": 110.03,
+   "threshold": 110,
+   "op": ">",
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "korea_missile",
@@ -18,10 +29,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 2,
+   "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +40,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 23,
+   "current": 35,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +51,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 12,
+   "current": 11,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +62,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.66,
+   "current": 6.59,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +73,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 12,
+   "current": 14,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "firms_site_alert",
@@ -76,7 +87,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "ioda_outage",
@@ -87,7 +98,7 @@
    "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "quake_near_site",
@@ -98,7 +109,18 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
+  },
+  {
+   "id": "gdacs_red",
+   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
+   "sev": 2,
+   "th": null,
+   "why": "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다.",
+   "current": 3,
+   "threshold": 1,
+   "op": ">=",
+   "at": "2026-10-29T13:16:10Z"
   },
   {
    "id": "kev_edge",
@@ -109,7 +131,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-29T06:02:34Z"
+   "at": "2026-10-29T13:16:10Z"
   }
  ]
 }

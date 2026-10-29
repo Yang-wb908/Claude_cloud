@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 66.9,
+   "p": 60.5,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 11.8,
+   "p": 10.7,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -39,17 +39,22 @@
     "p": 11.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 15761767,
+    "vol": 15767623,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 21.3,
+   "p": 28.8,
    "k": 1,
    "prior": 10.0,
    "evidence": [
+    {
+     "key": "tw:brent_110",
+     "f": 2.0,
+     "note": "브렌트 110달러 돌파"
+    },
     {
      "key": "tw:maritime_attacks",
      "f": 2.5,
@@ -62,15 +67,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.941,
+     "f": 0.872,
      "note": "예측시장 18% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 18.5,
+    "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 75747163,
+    "vol": 75820222,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -129,7 +134,7 @@
     "p": 8.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2909879,
+    "vol": 2909889,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -155,7 +160,7 @@
     "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45124261,
+    "vol": 45125760,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -196,7 +201,7 @@
     "p": 77.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 1739709,
+    "vol": 1864869,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -294,7 +299,7 @@
     "p": 92.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 14968223,
+    "vol": 15481614,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -322,14 +327,20 @@
   },
   {
    "id": "baltic_interdiction",
-   "p": 20.0,
+   "p": 21.7,
    "k": 1,
    "prior": 20.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:brent_110",
+     "f": 1.3,
+     "note": "브렌트 110"
+    }
+   ]
   },
   {
    "id": "nsr_arctic_incident",
-   "p": 15.0,
+   "p": 13.3,
    "k": 1,
    "prior": 15.0,
    "evidence": []
@@ -364,7 +375,7 @@
     "p": 8.0,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
-    "vol": 346259,
+    "vol": 346269,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -404,6 +415,18 @@
    "ethiopia",
    "europe",
    "iran"
+  ],
+  "gdacs": [
+   "korea",
+   "scs",
+   "southasia",
+   "taiwan"
+  ],
+  "gdacs_tc": [
+   "korea",
+   "scs",
+   "southasia",
+   "taiwan"
   ]
  },
  "market_skill": 1.0,
@@ -412,9 +435,11 @@
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
+  "brent_110",
   "copper_6",
   "ethiopia_interstate",
   "firms_site_alert",
+  "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
