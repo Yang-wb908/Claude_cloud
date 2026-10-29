@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-29T13:16:07Z",
+ "generated": "2026-10-29T19:02:02Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-29T13:16:07Z",
+  "at": "2026-10-29T19:02:02Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,71 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 6,
+     "n": 0,
      "key": 0,
      "base": 1,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "airlift": 3,
-      "other": 3
-     },
-     "ac": [
-      {
-       "flight": "KAF3202",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 28.81,
-       "lon": 47.95,
-       "alt": 13000,
-       "reg": "KAF327"
-      },
-      {
-       "flight": "KAF3226",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 28.66,
-       "lon": 48.6,
-       "alt": 13650,
-       "reg": "KAF326"
-      },
-      {
-       "flight": "BAH3",
-       "t": "B764",
-       "role": "other",
-       "lat": 25.89,
-       "lon": 50.54,
-       "alt": 2550,
-       "reg": "A9C-HMH"
-      },
-      {
-       "flight": "CTM1468",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 24.34,
-       "lon": 54.11,
-       "alt": 8925,
-       "reg": "F-RBAK"
-      },
-      {
-       "flight": "QAF3",
-       "t": "A345",
-       "role": "other",
-       "lat": 24.57,
-       "lon": 57.6,
-       "alt": 40000,
-       "reg": "A7-HHH"
-      },
-      {
-       "flight": "MJN575",
-       "t": "A320",
-       "role": "other",
-       "lat": 23.59,
-       "lon": 58.2,
-       "alt": 1225,
-       "reg": "554"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -191,95 +133,23 @@
       30.5,
       61.0
      ],
-     "n": 9,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
      "by_role": {
-      "other": 9
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "SKYNET",
-       "t": "",
-       "role": "other",
-       "lat": 54.57,
-       "lon": 9.2,
-       "alt": 23025,
-       "reg": ""
-      },
-      {
-       "flight": "PR57",
-       "t": "MF17",
-       "role": "other",
-       "lat": 56.16,
-       "lon": 9.28,
-       "alt": 2750,
-       "reg": ""
-      },
-      {
-       "flight": "SINNR02",
-       "t": "MF17",
-       "role": "other",
-       "lat": 57.31,
-       "lon": 9.77,
-       "alt": 400,
-       "reg": "T-417"
-      },
-      {
-       "flight": "SINNR01",
-       "t": "MF17",
-       "role": "other",
-       "lat": 56.68,
-       "lon": 9.98,
-       "alt": 3025,
-       "reg": "T-430"
-      },
-      {
-       "flight": "GAM900",
-       "t": "EC35",
-       "role": "other",
-       "lat": 54.22,
-       "lon": 10.59,
-       "alt": 250,
-       "reg": "D-HABV"
-      },
-      {
-       "flight": "DUKE60",
-       "t": "BE20",
-       "role": "other",
-       "lat": 54.21,
-       "lon": 22.69,
-       "alt": 28000,
-       "reg": "84-00162"
-      },
-      {
-       "flight": "LYF02",
-       "t": "L410",
-       "role": "other",
-       "lat": 55.62,
-       "lon": 23.59,
-       "alt": 7975,
-       "reg": "02 BLUE"
-      },
-      {
-       "flight": "CROSS75",
-       "t": "H60",
-       "role": "other",
-       "lat": 56.71,
-       "lon": 24.75,
-       "alt": 3675,
-       "reg": "08-20118"
-      },
-      {
-       "flight": "W31",
-       "t": "LJ35",
-       "role": "other",
-       "lat": 60.81,
-       "lon": 25.25,
-       "alt": 6825,
-       "reg": "LJ-3"
+       "flight": "HUSKY31",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 60.21,
+       "lon": 11.1,
+       "alt": "ground",
+       "reg": "5629"
       }
      ]
     },
@@ -302,12 +172,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 15
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-29T13:16:07Z",
+  "at": "2026-10-29T19:02:02Z",
   "data": {
    "n_total": 1762,
    "recent": [
@@ -488,36 +358,36 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-29T13:16:07Z",
+  "at": "2026-10-29T19:02:02Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 38,
-    "??": 23,
+    "US": 40,
+    "??": 25,
     "DE": 8,
-    "IT": 4,
     "GB": 4,
     "MX": 3,
-    "MY": 3,
-    "SG": 2,
+    "IT": 3,
     "FR": 2,
+    "MY": 2,
     "CA": 2,
     "ES": 2,
+    "AT": 1,
+    "TH": 1,
     "IL": 1,
     "DK": 1,
-    "BE": 1,
-    "PK": 1
+    "BE": 1
    },
    "by_group": {
-    "qilin": 19,
-    "Whitearmor": 10,
-    "Booba Project": 10,
+    "Booba Project": 16,
+    "qilin": 16,
+    "Whitearmor": 8,
     "everest": 8,
     "play": 7,
     "SilentRansomGroup": 6,
     "payload": 5,
-    "aurora": 4,
-    "rhysida": 3,
+    "rhysida": 4,
+    "emperador": 4,
     "N0n": 3
    },
    "kr": []

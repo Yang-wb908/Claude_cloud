@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 60.5,
+   "p": 60.3,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 10.7,
+   "p": 10.6,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -39,14 +39,14 @@
     "p": 11.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 15767623,
+    "vol": 15851808,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 28.8,
+   "p": 29.1,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -67,15 +67,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.872,
-     "note": "예측시장 18% (가중 0.10)"
+     "f": 0.892,
+     "note": "예측시장 21% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 17.5,
+    "p": 21.0,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 75820222,
+    "vol": 75894623,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -134,14 +134,14 @@
     "p": 8.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2909889,
+    "vol": 2910383,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 6.2,
+   "p": 6.3,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -152,22 +152,22 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.743,
+     "f": 0.75,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 2.1,
+    "p": 2.2,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45125760,
+    "vol": 45199649,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 23.8,
+   "p": 23.7,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -187,21 +187,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 45.9,
+   "p": 45.3,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 2.545,
-     "note": "예측시장 78% (가중 0.40)"
+     "f": 2.488,
+     "note": "예측시장 76% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 77.5,
+    "p": 76.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 1864869,
+    "vol": 1925962,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -299,7 +299,7 @@
     "p": 92.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 15481614,
+    "vol": 16177677,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -392,7 +392,7 @@
   {
    "id": "fed_hawkish",
    "house": 25.0,
-   "market": 77.5,
+   "market": 76.5,
    "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
   },
@@ -407,11 +407,11 @@
  "sensors": {
   "firms": [
    "europe",
+   "sudan",
    "ukraine",
    "yemen"
   ],
   "ioda": [
-   "carib",
    "ethiopia",
    "europe",
    "iran"

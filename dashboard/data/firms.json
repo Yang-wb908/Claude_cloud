@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-29T13:15:32Z",
+ "generated": "2026-10-29T19:01:35Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
- "n_alerts": 3,
+ "n_alerts": 4,
  "errors": [],
  "learning": 25,
  "sites": [
@@ -683,7 +683,7 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 9,
+   "n": 10,
    "base_days": 19,
    "base_n": 7,
    "frp_max": 12.6,
@@ -692,7 +692,7 @@
     29.72841,
     10.97193
    ],
-   "d": "2026-10-28",
+   "d": "2026-10-29",
    "status": "normal"
   },
   {
@@ -839,10 +839,10 @@
     27.5,
     16.0
    ],
-   "n": 218,
+   "n": 1513,
    "base_days": 20,
    "base_n": 1203.0,
-   "n_hi": 47,
+   "n_hi": 363,
    "d": "2026-10-29",
    "status": "normal"
   },
@@ -856,12 +856,12 @@
     32.5,
     14.5
    ],
-   "n": 2856,
+   "n": 4956,
    "base_days": 20,
    "base_n": 1231.0,
-   "n_hi": 622,
+   "n_hi": 1072,
    "d": "2026-10-29",
-   "status": "normal"
+   "status": "alert"
   },
   {
    "id": "gaza",
@@ -907,10 +907,10 @@
     40.0,
     14.9
    ],
-   "n": 29,
+   "n": 109,
    "base_days": 20,
    "base_n": 56.0,
-   "n_hi": 4,
+   "n_hi": 35,
    "d": "2026-10-29",
    "status": "normal"
   },
@@ -1001,6 +1001,24 @@
    "lang": "ko",
    "auto": true,
    "id": "firms-sabetta-2026-10-28",
+   "r": 3
+  },
+  {
+   "d": "2026-10-29",
+   "t": "X",
+   "at": [
+    30.0,
+    12.0
+   ],
+   "th": "sudan",
+   "p": "코르도판",
+   "x": "위성 열점 급증: 코르도판 하루 4956건 (평소 1231건, FRP 10MW 이상 1072건). 방화·포격 화재 가능성",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-10-29;@30.000,12.000,8.0z",
+   "g": "B2",
+   "src": "firms",
+   "lang": "ko",
+   "auto": true,
+   "id": "firms-aoi-kordofan-2026-10-29",
    "r": 3
   },
   {
