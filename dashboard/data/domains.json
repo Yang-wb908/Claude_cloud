@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-29T19:02:02Z",
+ "generated": "2026-10-29T22:54:16Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-29T19:02:02Z",
+  "at": "2026-10-29T22:54:16Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -99,13 +99,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "UAF1350",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 30.74,
+       "lon": 31.27,
+       "alt": 37000,
+       "reg": "1351"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -116,13 +128,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "IAM9004",
+       "t": "A319",
+       "role": "other",
+       "lat": 41.13,
+       "lon": 28.89,
+       "alt": 36975,
+       "reg": "MM62174"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -133,25 +157,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "HUSKY31",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 60.21,
-       "lon": 11.1,
-       "alt": "ground",
-       "reg": "5629"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -172,15 +184,35 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-29T19:02:02Z",
+  "at": "2026-10-29T22:54:16Z",
   "data": {
-   "n_total": 1762,
+   "n_total": 1764,
    "recent": [
+    {
+     "cve": "CVE-2026-97229",
+     "vendor": "GitLab",
+     "product": "Community Edition and Enterprise Edition",
+     "name": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+     "added": "2026-10-29",
+     "due": "2026-11-01",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-76418",
+     "vendor": "Cisco",
+     "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+     "name": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+     "added": "2026-10-29",
+     "due": "2026-11-01",
+     "ransom": false,
+     "edge": true
+    },
     {
      "cve": "CVE-2026-41709",
      "vendor": "Broadcom",
@@ -352,53 +384,53 @@
      "edge": true
     }
    ],
-   "n_recent": 17,
-   "n_week": 8
+   "n_recent": 19,
+   "n_week": 10
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-29T19:02:02Z",
+  "at": "2026-10-29T22:54:16Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 40,
-    "??": 25,
-    "DE": 8,
-    "GB": 4,
-    "MX": 3,
-    "IT": 3,
+    "US": 37,
+    "??": 26,
+    "DE": 5,
+    "GB": 5,
+    "IT": 4,
+    "CA": 3,
+    "ES": 3,
+    "MX": 2,
     "FR": 2,
     "MY": 2,
-    "CA": 2,
-    "ES": 2,
     "AT": 1,
+    "IN": 1,
+    "JP": 1,
     "TH": 1,
-    "IL": 1,
-    "DK": 1,
-    "BE": 1
+    "IL": 1
    },
    "by_group": {
+    "qilin": 19,
     "Booba Project": 16,
-    "qilin": 16,
     "Whitearmor": 8,
     "everest": 8,
     "play": 7,
     "SilentRansomGroup": 6,
-    "payload": 5,
-    "rhysida": 4,
     "emperador": 4,
-    "N0n": 3
+    "rhysida": 4,
+    "N0n": 3,
+    "akira": 3
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 8,
-  "kev_edge_3d": 1,
+  "kev_week": 10,
+  "kev_edge_3d": 2,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 1
+  "events": 2
  }
 }
