@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-30T06:04:14Z",
+ "generated": "2026-10-30T12:59:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-30T06:04:14Z",
+  "at": "2026-10-30T12:59:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "CARD70",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "18-21001"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -111,35 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "TURNA01",
-       "t": "AT76",
-       "role": "other",
-       "lat": 34.25,
-       "lon": 32.03,
-       "alt": 15500,
-       "reg": "TCB-751"
-      },
-      {
-       "flight": "RRR9915",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 32.09,
-       "lon": 33.11,
-       "alt": 33000,
-       "reg": "ZZ335"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -150,13 +116,35 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 2,
+     "key": 1,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 43.68,
+       "lon": 29.67,
+       "alt": 34000,
+       "reg": "N159L"
+      },
+      {
+       "flight": "KGC4002",
+       "t": "A320",
+       "role": "other",
+       "lat": 40.9,
+       "lon": 39.99,
+       "alt": 36975,
+       "reg": "EX-10001"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -167,13 +155,44 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 3,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2,
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "30588",
+       "t": "A148",
+       "role": "other",
+       "lat": 56.03,
+       "lon": 20.08,
+       "alt": 28625,
+       "reg": "RA-61729"
+      },
+      {
+       "flight": "BAF638",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 53.83,
+       "lon": 20.98,
+       "alt": 35975,
+       "reg": "CT-01"
+      },
+      {
+       "flight": "FNF498",
+       "t": "PC12",
+       "role": "other",
+       "lat": 60.56,
+       "lon": 21.2,
+       "alt": 21000,
+       "reg": "PI-03"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -194,12 +213,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-30T06:04:14Z",
+  "at": "2026-10-30T12:59:24Z",
   "data": {
    "n_total": 1764,
    "recent": [
@@ -390,7 +409,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-30T06:04:14Z",
+  "at": "2026-10-30T12:59:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
@@ -398,29 +417,29 @@
     "US": 31,
     "GB": 5,
     "IT": 4,
-    "DE": 4,
+    "MY": 3,
     "CA": 3,
-    "ES": 3,
+    "DE": 3,
+    "AE": 2,
     "MX": 2,
     "FR": 2,
-    "MY": 2,
+    "ES": 2,
     "AT": 1,
     "IN": 1,
     "JP": 1,
-    "TH": 1,
-    "IL": 1
+    "TH": 1
    },
    "by_group": {
     "Booba Project": 16,
-    "qilin": 9,
     "Whitearmor": 8,
     "everest": 8,
     "SilentRansomGroup": 7,
+    "qilin": 7,
     "play": 7,
+    "rhysida": 5,
+    "N0n": 4,
     "Shiba": 4,
-    "everstake": 4,
-    "emperador": 4,
-    "rhysida": 4
+    "everstake": 4
    },
    "kr": []
   }

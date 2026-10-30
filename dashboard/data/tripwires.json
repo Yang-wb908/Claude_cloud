@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T06:04:15Z",
+ "generated": "2026-10-30T12:59:26Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "brent_110",
@@ -18,10 +18,10 @@
    "sev": 4,
    "th": null,
    "why": "한국 원유 도입가·물가 직결.",
-   "current": 112.3,
+   "current": 113.4,
    "threshold": 110,
    "op": ">",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "korea_missile",
@@ -29,10 +29,10 @@
    "sev": 3,
    "th": "korea",
    "why": "한반도 긴장 수위.",
-   "current": 4,
+   "current": 5,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "maritime_attacks",
@@ -43,7 +43,7 @@
    "current": 40,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -51,10 +51,21 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 12,
+   "current": 13,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
+  },
+  {
+   "id": "ttf_100",
+   "title": "유럽 TTF 가스 100유로/MWh 돌파",
+   "sev": 4,
+   "th": null,
+   "why": "JKM 연동 → 한국 현물 LNG 도입가 급등.",
+   "current": 102.79,
+   "threshold": 100,
+   "op": ">",
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "copper_6",
@@ -62,10 +73,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.57,
+   "current": 6.53,
    "threshold": 6,
    "op": ">",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "bio_health_events",
@@ -73,21 +84,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 8,
+   "current": 13,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
-  },
-  {
-   "id": "coverage_surge",
-   "title": "미분류 사건 군집 급증 (어느 전역에도 속하지 않는 보도 5건 이상)",
-   "sev": 3,
-   "th": null,
-   "why": "새 위기가 전역 밖에서 터지고 있을 가능성. 수집원 탭의 미분류 군집을 보고 새 전역 등록(PIR Issue)을 검토.",
-   "current": 6,
-   "threshold": 5,
-   "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "firms_site_alert",
@@ -98,7 +98,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "ioda_outage",
@@ -109,7 +109,7 @@
    "current": 5,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "quake_near_site",
@@ -120,7 +120,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "gdacs_red",
@@ -131,7 +131,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   },
   {
    "id": "kev_edge",
@@ -142,7 +142,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-10-30T06:04:15Z"
+   "at": "2026-10-30T12:59:26Z"
   }
  ]
 }
