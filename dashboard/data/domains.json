@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-30T18:58:25Z",
+ "generated": "2026-10-30T22:31:04Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-30T18:58:25Z",
+  "at": "2026-10-30T22:31:04Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "R204",
+       "t": "C295",
+       "role": "other",
+       "lat": 14.49,
+       "lon": 120.96,
+       "alt": 5050,
+       "reg": "204"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -58,12 +70,12 @@
      },
      "ac": [
       {
-       "flight": "",
+       "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 38.2,
-       "lon": 129.54,
-       "alt": 38000,
+       "lat": 37.1,
+       "lon": 125.3,
+       "alt": 12125,
        "reg": "N291SR"
       }
      ]
@@ -77,13 +89,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 1,
+     "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 24.05,
+       "lon": 58.55,
+       "alt": 10475,
+       "reg": ""
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -162,22 +186,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "CFC3414",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 10.6,
+       "lon": -61.34,
+       "alt": 125,
+       "reg": "330004"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-30T18:58:25Z",
+  "at": "2026-10-30T22:31:04Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -388,37 +424,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-30T18:58:25Z",
+  "at": "2026-10-30T22:31:04Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "??": 34,
+    "??": 31,
     "US": 29,
-    "MX": 5,
-    "GB": 4,
+    "MX": 6,
+    "GB": 5,
     "IT": 4,
     "CA": 3,
     "DE": 3,
     "MY": 2,
     "AE": 2,
     "PH": 2,
+    "CI": 1,
     "RO": 1,
     "AT": 1,
     "IN": 1,
-    "JP": 1,
-    "TH": 1
+    "JP": 1
    },
    "by_group": {
     "Booba Project": 16,
-    "qilin": 8,
+    "qilin": 11,
     "everest": 8,
-    "Whitearmor": 7,
+    "SilentRansomGroup": 7,
     "play": 7,
-    "SilentRansomGroup": 6,
-    "akira": 5,
+    "akira": 6,
+    "Whitearmor": 5,
     "rhysida": 4,
-    "Shiba": 4,
-    "everstake": 4
+    "aurora": 4,
+    "Shiba": 4
    },
    "kr": []
   }
