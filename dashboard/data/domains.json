@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-30T12:59:24Z",
+ "generated": "2026-10-30T18:58:25Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-30T12:59:24Z",
+  "at": "2026-10-30T18:58:25Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 38.2,
+       "lon": 129.54,
+       "alt": 38000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -116,35 +128,13 @@
       42.0,
       47.5
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "isr": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 43.68,
-       "lon": 29.67,
-       "alt": 34000,
-       "reg": "N159L"
-      },
-      {
-       "flight": "KGC4002",
-       "t": "A320",
-       "role": "other",
-       "lat": 40.9,
-       "lon": 39.99,
-       "alt": 36975,
-       "reg": "EX-10001"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -155,44 +145,13 @@
       30.5,
       61.0
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 2,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "30588",
-       "t": "A148",
-       "role": "other",
-       "lat": 56.03,
-       "lon": 20.08,
-       "alt": 28625,
-       "reg": "RA-61729"
-      },
-      {
-       "flight": "BAF638",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 53.83,
-       "lon": 20.98,
-       "alt": 35975,
-       "reg": "CT-01"
-      },
-      {
-       "flight": "FNF498",
-       "t": "PC12",
-       "role": "other",
-       "lat": 60.56,
-       "lon": 21.2,
-       "alt": 21000,
-       "reg": "PI-03"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -213,15 +172,35 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-30T12:59:24Z",
+  "at": "2026-10-30T18:58:25Z",
   "data": {
-   "n_total": 1764,
+   "n_total": 1766,
    "recent": [
+    {
+     "cve": "CVE-2026-118527",
+     "vendor": "Ivanti",
+     "product": "Connect Secure",
+     "name": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+     "added": "2026-10-30",
+     "due": "2026-11-13",
+     "ransom": false,
+     "edge": true
+    },
+    {
+     "cve": "CVE-2026-111357",
+     "vendor": "Ivanti",
+     "product": "Connect Secure",
+     "name": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+     "added": "2026-10-30",
+     "due": "2026-11-02",
+     "ransom": false,
+     "edge": true
+    },
     {
      "cve": "CVE-2026-97229",
      "vendor": "GitLab",
@@ -403,27 +382,27 @@
      "edge": true
     }
    ],
-   "n_recent": 18,
-   "n_week": 10
+   "n_recent": 20,
+   "n_week": 12
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-30T12:59:24Z",
+  "at": "2026-10-30T18:58:25Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "??": 33,
-    "US": 31,
-    "GB": 5,
+    "??": 34,
+    "US": 29,
+    "MX": 5,
+    "GB": 4,
     "IT": 4,
-    "MY": 3,
     "CA": 3,
     "DE": 3,
+    "MY": 2,
     "AE": 2,
-    "MX": 2,
-    "FR": 2,
-    "ES": 2,
+    "PH": 2,
+    "RO": 1,
     "AT": 1,
     "IN": 1,
     "JP": 1,
@@ -431,13 +410,13 @@
    },
    "by_group": {
     "Booba Project": 16,
-    "Whitearmor": 8,
+    "qilin": 8,
     "everest": 8,
-    "SilentRansomGroup": 7,
-    "qilin": 7,
+    "Whitearmor": 7,
     "play": 7,
-    "rhysida": 5,
-    "N0n": 4,
+    "SilentRansomGroup": 6,
+    "akira": 5,
+    "rhysida": 4,
     "Shiba": 4,
     "everstake": 4
    },
@@ -446,10 +425,10 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 10,
-  "kev_edge_3d": 2,
+  "kev_week": 12,
+  "kev_edge_3d": 4,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 2
+  "events": 4
  }
 }

@@ -1,25 +1,42 @@
 {
- "generated": "2026-10-30T12:59:08Z",
+ "generated": "2026-10-30T18:58:05Z",
  "days": 3,
- "unmapped_total": 8,
- "max_cluster": 4,
- "max_key": "topic:China",
+ "unmapped_total": 4,
+ "max_cluster": 2,
+ "max_key": "topic:Japan",
  "clusters": [
   {
-   "key": "topic:China",
-   "n": 4,
-   "domains": 3,
+   "key": "topic:Japan",
+   "n": 2,
+   "domains": 1,
    "types": {
-    "E": 4
+    "E": 2
+   },
+   "since": "2026-10-30",
+   "sample": [
+    {
+     "d": "2026-10-30",
+     "title": "Japan to Overtake China As World’s Top LNG Importer This Year",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Japan-to-Overtake-China-As-Worlds-Top-LNG-Importer-This-Year.html",
+     "domain": "oilprice.com"
+    },
+    {
+     "d": "2026-10-30",
+     "title": "Japan to Tap $7 Billion from Government Fund to Subsidize Gasoline Prices",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Japan-to-Tap-7-Billion-from-Government-Fund-to-Subsidize-Gasoline-Prices.html",
+     "domain": "oilprice.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
    },
    "since": "2026-10-29",
    "sample": [
-    {
-     "d": "2026-10-29",
-     "title": "China’s Battery Factories May Sit Atop Lithium Resources",
-     "url": "https://oilprice.com/Energy/Energy-General/Chinas-Battery-Factories-May-Sit-Atop-Lithium-Resources.html",
-     "domain": "oilprice.com"
-    },
     {
      "d": "2026-10-29",
      "title": "China to continue suspending export quota management for phosphate rock, silver in 2027; policy facilitates compliant tr",
@@ -28,60 +45,8 @@
     },
     {
      "d": "2026-10-29",
-     "title": "China's Rare Earth Truce Runs Out January 10, Not November",
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNWg0eExsM0hadGtiSFN6Mm1QU3MwNzFRWC1BQXZldkhMY2drZmxBZk0tM2tVQ2RyZDdreGdQS2VWaTRuR0pvdGowUVlWYVcwanl3eTVNWnZsakJZbk1qVTc0ZVN6dDFMNC1XRDR6V2hRY3M5NG1tdWZrdDJDVmYzSG1URVkwUWhRS3BSMw?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-29",
-     "title": "China’s Risky Plan to Restrict Hi-Tech Exports",
-     "url": "https://www.irrawaddy.com/opinion/guest-column/chinas-risky-plan-to-restrict-hi-tech-exports.html",
-     "domain": "irrawaddy.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:What Could",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-29",
-   "sample": [
-    {
-     "d": "2026-10-29",
-     "title": "What Could Rare Earth Supply Risks Mean For L3Harris Technologies (LHX)?",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZzJ6ZmFkRkdaQjRVTkdXUDJ5cXA3eEhuVVFWclA2TzRQRHUxVERfdGNyUTE2cHRGUldvZWxHbi1XQXp1b1ZxZFUzOUhRN3hLTkw5cXFjUnI5NGRoR18yemtabG8yOHlsR2x6NDdtTWZVSzRPLThzR01BSmt3Ni1KNnM0dnVDZHBZamphU003YkF3R1RhR0Zjdkh3?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-29",
-     "title": "What Could China’s Rare Earth Curbs Mean For L3Harris Technologies (LHX)?",
-     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTGppUG9fQVkzNUJtZXIyNHpiQmEtYUUxY25WSmZVRm1vVl9GcEdVNk1zVURLT0Q5Z1pRWHFrdEQzSF90MFpWeG5EbnVsODdWY0pDRjZZWlA1Ynh3N3pTSzBHM24wdU41cUVTb19LLUZsa21BMmwyZmtqZk1qbGFjRllFNVZDbHBPdzNNSmFOb0ZkVmZKU0t1WFNQSS04UDRpLVV1Q1Z4a0F5eUU0aW5lYll3STh6VUl3RGZrTFlQWkk0Z21lWE1XaTdaaW1TUUF0VWtrM3VFZlZ3MWJUVW1n0gHfAUFVX3lxTE5MamlQb19BWTM1Qm1lcjI0emJCYS1hRTFjblZKZlVGbW9WX0ZwR1U2TXNVREtPRDlnWlFYcWt0RDNIX3QwWlZ4bkRudWw4N1ZjSkNGNllaUDVieHc3elNLMEczbjB1TjVxRVNvX0stRmxrbUEybDJma2pmTWpsYWNGWUU1VkNscE93M01KYU5vRmRWZkpTS3VYU1BJLThQNGktVXVDVnhrQXl5RTRpbmViWXdJOHpVSXdEZmtMWVBaSTRnbWVYTVdpN1ppbVNRQXRVa2szdUVmVncxYlRVbWc?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:China Rare",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-10-29",
-   "sample": [
-    {
-     "d": "2026-10-30",
-     "title": "China Rare Earth Index Masks 16x Dysprosium Gap Ahead of November Deadline",
-     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOelIwQW0xTEp5Skl6b2JWRUJwNEtoZ213WkpXVTdyYkRDQjRxT0JMRmdtTVhqeGp4VWpwZkc1cS1JTEwzOHhuT3hOQjc3OHhJLUN1VVI5c2tja1JJdEVGdy02aTBtckUxbF9QTjd6SW5JOGU0OXVKWTR6QUxmZ3plbnl1aU9nWlNUMUROcFdpdDdQY3V2V0ZPSkkzQ2NzdEdBNHZqeEtGREZUeVV4VTZXTDhXRTBkUTdkcWVqdTVtX3ZoUVVS?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-10-29",
-     "title": "China Rare Earth Price Index October 2026 Explained",
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdjVYd3dCVlFWM2J5NWsyTXlsWkpYd3lMUzNveDVYaUdYYkVqc0gtOW55MWtPX2FYRG43OGpnUjRkVmE2NE53Wm5QYUNOaE9WYl84SUJQTDFIaWE0ZVI4RXdTRTdGZVQ3R1B1VHNScVFvUEdTUFcySXEwOXhGMjk1WHhmaGpoSENpYXFSNw?oc=5",
+     "title": "China AI Export Controls: 40 Technologies Listed [2026] - https://tech-insider.org/",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNMmwtT0hEdmRudnBqV3Y3RTB2ZjcyZXVuWlFXTk1KUTBhc3htd0EzQXdObW01NE9iTGNBUnY5QWlmQjhzQlREWlh3SkdteDJ4WkVZbnVBbmJwY0ZKdkRnR2FmS2p2N1pmRl9RWmdGOVdxNk40Q2dNZWUweGJvd3JSNzRtOEN0RTQ?oc=5",
      "domain": "news.google.com"
     }
    ]
