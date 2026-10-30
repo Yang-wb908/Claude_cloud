@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-29T22:54:16Z",
+ "generated": "2026-10-30T06:04:14Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-29T22:54:16Z",
+  "at": "2026-10-30T06:04:14Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "CARD70",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.45,
+       "lon": 127.11,
+       "alt": "ground",
+       "reg": "18-21001"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -99,23 +111,33 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 1,
      "base": 0,
      "runs": 51,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 1,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "UAF1350",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 30.74,
-       "lon": 31.27,
-       "alt": 37000,
-       "reg": "1351"
+       "flight": "TURNA01",
+       "t": "AT76",
+       "role": "other",
+       "lat": 34.25,
+       "lon": 32.03,
+       "alt": 15500,
+       "reg": "TCB-751"
+      },
+      {
+       "flight": "RRR9915",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 32.09,
+       "lon": 33.11,
+       "alt": 33000,
+       "reg": "ZZ335"
       }
      ]
     },
@@ -128,25 +150,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "IAM9004",
-       "t": "A319",
-       "role": "other",
-       "lat": 41.13,
-       "lon": 28.89,
-       "alt": 36975,
-       "reg": "MM62174"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -184,12 +194,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-29T22:54:16Z",
+  "at": "2026-10-30T06:04:14Z",
   "data": {
    "n_total": 1764,
    "recent": [
@@ -372,33 +382,23 @@
      "due": "2026-10-19",
      "ransom": false,
      "edge": true
-    },
-    {
-     "cve": "CVE-2026-21589",
-     "vendor": "Atlassian",
-     "product": "Multiple Products",
-     "name": "Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability",
-     "added": "2026-10-15",
-     "due": "2026-10-18",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 19,
+   "n_recent": 18,
    "n_week": 10
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-29T22:54:16Z",
+  "at": "2026-10-30T06:04:14Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 37,
-    "??": 26,
-    "DE": 5,
+    "??": 33,
+    "US": 31,
     "GB": 5,
     "IT": 4,
+    "DE": 4,
     "CA": 3,
     "ES": 3,
     "MX": 2,
@@ -411,16 +411,16 @@
     "IL": 1
    },
    "by_group": {
-    "qilin": 19,
     "Booba Project": 16,
+    "qilin": 9,
     "Whitearmor": 8,
     "everest": 8,
+    "SilentRansomGroup": 7,
     "play": 7,
-    "SilentRansomGroup": 6,
+    "Shiba": 4,
+    "everstake": 4,
     "emperador": 4,
-    "rhysida": 4,
-    "N0n": 3,
-    "akira": 3
+    "rhysida": 4
    },
    "kr": []
   }
