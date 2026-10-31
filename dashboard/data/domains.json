@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-30T22:31:04Z",
+ "generated": "2026-10-31T05:58:34Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-30T22:31:04Z",
+  "at": "2026-10-31T05:58:34Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,25 +31,13 @@
       121.0,
       18.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "R204",
-       "t": "C295",
-       "role": "other",
-       "lat": 14.49,
-       "lon": 120.96,
-       "alt": 5050,
-       "reg": "204"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "korea": {
      "name": "한반도 주변",
@@ -61,22 +49,22 @@
       40.5
      ],
      "n": 1,
-     "key": 1,
+     "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.1,
-       "lon": 125.3,
-       "alt": 12125,
-       "reg": "N291SR"
+       "flight": "TORII11",
+       "t": "B350",
+       "role": "other",
+       "lat": 35.8,
+       "lon": 128.6,
+       "alt": 21000,
+       "reg": "168209"
       }
      ]
     },
@@ -89,25 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 24.05,
-       "lon": 58.55,
-       "alt": 10475,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -135,13 +111,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "X",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 31.33,
+       "lon": 35.38,
+       "alt": 4900,
+       "reg": "94-6707"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -186,34 +174,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "CFC3414",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 10.6,
-       "lon": -61.34,
-       "alt": 125,
-       "reg": "330004"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-30T22:31:04Z",
+  "at": "2026-10-31T05:58:34Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -396,72 +372,52 @@
      "due": "2026-11-03",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2026-102764",
-     "vendor": "BeyondTrust",
-     "product": "Remote Support",
-     "name": "BeyondTrust Remote Support Authentication Bypass by Spoofing Vulnerability",
-     "added": "2026-10-16",
-     "due": "2026-10-19",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2025-61624",
-     "vendor": "Fortinet",
-     "product": "Multiple Products",
-     "name": "Fortinet Multiple Products Path Traversal Vulnerability",
-     "added": "2026-10-16",
-     "due": "2026-10-19",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 20,
-   "n_week": 12
+   "n_recent": 18,
+   "n_week": 10
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-30T22:31:04Z",
+  "at": "2026-10-31T05:58:34Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "??": 31,
-    "US": 29,
+    "US": 36,
+    "??": 29,
     "MX": 6,
-    "GB": 5,
-    "IT": 4,
-    "CA": 3,
-    "DE": 3,
-    "MY": 2,
-    "AE": 2,
+    "DE": 4,
+    "GB": 4,
+    "IT": 3,
     "PH": 2,
+    "MY": 2,
+    "CA": 2,
+    "AE": 1,
+    "TW": 1,
     "CI": 1,
     "RO": 1,
     "AT": 1,
-    "IN": 1,
-    "JP": 1
+    "IN": 1
    },
    "by_group": {
-    "Booba Project": 16,
-    "qilin": 11,
-    "everest": 8,
-    "SilentRansomGroup": 7,
+    "qilin": 14,
+    "SilentRansomGroup": 11,
+    "genesis": 9,
     "play": 7,
+    "Whitearmor": 6,
     "akira": 6,
-    "Whitearmor": 5,
-    "rhysida": 4,
-    "aurora": 4,
-    "Shiba": 4
+    "Booba Project": 6,
+    "everstake": 5,
+    "rhysida": 5,
+    "emperador": 4
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 12,
+  "kev_week": 10,
   "kev_edge_3d": 4,
   "ransom_week": 100,
   "ransom_kr_week": 0,
