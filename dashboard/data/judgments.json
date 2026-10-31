@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-28",
+ "asof": "2026-10-31",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -1340,7 +1340,9 @@
    "src": "IW.theaters.bio",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 제공된 사건 목록에는 러시아가 사망자의 병원체 검사 결과를 WHO에 공유했다거나 공유하지 않았다는 직접적인 보도가 없다. 10월 29일 페스트 실험실 유출 가능성 기사만으로는 러시아와 관련이 있는지, WHO에 공유했는지 확인할 수 없어 판정을 보류한다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-07"
   },
   {
    "id": "th-latam-1",
@@ -1370,9 +1372,14 @@
    "conf": "보통",
    "due": "2026-10-31",
    "src": "IW.theaters.latam",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-10-31",
+   "note": "자동 판정(보통): 10월 15일에 BHP와 에스콘디다 감독직 노조가 예비 합의에 이르러 파업을 피했다는 보도가 있다. 10월 17일 '파업 위험' 기사가 나왔지만, 10월 말까지 실제로 파업에 들어갔다는 근거는 없어서 판단과 반대로 된 것으로 본다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZ2RzSVhvZXM2bl9Dc25SQlhkS2lEaW1abl8xNkVqMEROU0lpa0tiNlRPMW81TUdoMW1hVHhuaXNQNDJtUm1VWHRRdk1fYTJJZFZyMWN0dU9pMWhucDhPQTE0a0FHTWVXajEtbjhZS25uLWh3YzJDUzJkTGg5TnZPS2lhY3hMZnJVLUNJV3FITElKTmg4enM4WmZ4S2V1TjBjS0JMWWY5YllzMmJtRXIyMEJqZkF3Vi1VX3JoWm8zZkRkTGdJT2w5Tk9pcw?oc=5",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdVkwWG00S29NT19zWmF6Z0REZnpMZHFuUnFPNWhuMWxOQ3FLX0wySjROTVRGeGZQNnZueDk0M0hReVNXUTFzNzhDaHZ5ZEx3X2FyclZmSmZoUkVJLTJqZjZJVi00NUxMck9mZU9GYVNSdThid1FEdzhyOVNVY3Fyb0dOUlQ0aHN3UEsyTC1tMFpLa1VELW1JYkx1T1c3VFMyUEJVY2RiT0ZPR083UE5kNWpOYVdZRm9DYldpcWxKNHVfN1Y3cTRyX25weU9qeW9TUFHSAdIBQVVfeXFMTnVZMFhtNEtvTU9fc1phemdERGZ6TGRxblJxTzVobjFsTkNxS19MMko0Tk1URnhmUDZ2bng5NDNIUXlTV1Exczc4Q2h2eWRMd19hcnJWZkpmaFJFSS0yamY2SVYtNDVMTHJPZmVPRmFTUnU4YndRRHc4cjlTVWNxcm9HTlJUNGhzd1BLMkwtbTBaS2tVRC1tSWJMdU9XN1RTMlBCVWNkYk9GT0dPN1BOZDVqTmFXWUZvQ2JXaXFsSjR1XzdWN3E0cl9ucHlPanlvU1BR?oc=5"
+   ]
   },
   {
    "id": "th-namerica-1",
