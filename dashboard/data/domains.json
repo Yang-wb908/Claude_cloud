@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-31T12:49:05Z",
+ "generated": "2026-10-31T18:57:56Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-31T12:49:05Z",
+  "at": "2026-10-31T18:57:56Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,52 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 4,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {
-      "other": 4
-     },
-     "ac": [
-      {
-       "flight": "BAH16",
-       "t": "GA6C",
-       "role": "other",
-       "lat": 25.88,
-       "lon": 50.54,
-       "alt": 2525,
-       "reg": "A9C-BHR"
-      },
-      {
-       "flight": "BAH3",
-       "t": "B764",
-       "role": "other",
-       "lat": 26.1,
-       "lon": 50.68,
-       "alt": 3950,
-       "reg": "A9C-HMH"
-      },
-      {
-       "flight": "BAH1",
-       "t": "B744",
-       "role": "other",
-       "lat": 24.86,
-       "lon": 53.51,
-       "alt": 20500,
-       "reg": "A9C-HMK"
-      },
-      {
-       "flight": "A7HHK",
-       "t": "A342",
-       "role": "other",
-       "lat": 24.92,
-       "lon": 56.66,
-       "alt": 38000,
-       "reg": "A7-HHK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -123,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -140,8 +101,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -157,8 +118,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -172,13 +133,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "PCT622",
+       "t": "D228",
+       "role": "other",
+       "lat": 54.39,
+       "lon": 11.93,
+       "alt": 4500,
+       "reg": "57+05"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -189,22 +162,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 51,
+     "base": 0.0,
+     "runs": 52,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "RRR6239",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 14.55,
+       "lon": -61.28,
+       "alt": 24500,
+       "reg": "ZZ173"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-31T12:49:05Z",
+  "at": "2026-10-31T18:57:56Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -395,37 +380,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-31T12:49:05Z",
+  "at": "2026-10-31T18:57:56Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 34,
-    "??": 22,
-    "MX": 8,
-    "TW": 3,
-    "MY": 3,
+    "US": 33,
+    "??": 25,
+    "MX": 7,
     "DE": 3,
+    "PH": 3,
+    "TW": 3,
     "JP": 2,
     "AR": 2,
     "IL": 2,
-    "SG": 2,
+    "MY": 2,
     "IT": 2,
-    "PH": 2,
-    "FR": 2,
     "CA": 2,
-    "GB": 2
+    "GB": 2,
+    "CH": 1,
+    "EC": 1
    },
    "by_group": {
     "qilin": 12,
-    "SilentRansomGroup": 11,
+    "SilentRansomGroup": 10,
     "safepay": 9,
-    "thegentlemen": 9,
     "genesis": 9,
     "Booba Project": 6,
-    "everstake": 5,
     "rhysida": 5,
-    "Shiba": 4,
-    "N0n": 3
+    "everstake": 5,
+    "emperador": 4,
+    "thegentlemen": 4,
+    "AuditTeam": 4
    },
    "kr": []
   }
