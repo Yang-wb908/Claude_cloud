@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-31T05:58:34Z",
+ "generated": "2026-10-31T12:49:05Z",
  "adsb": {
   "ok": true,
-  "at": "2026-10-31T05:58:34Z",
+  "at": "2026-10-31T12:49:05Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "TORII11",
-       "t": "B350",
-       "role": "other",
-       "lat": 35.8,
-       "lon": 128.6,
-       "alt": 21000,
-       "reg": "168209"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,13 +65,52 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 4,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 4
+     },
+     "ac": [
+      {
+       "flight": "BAH16",
+       "t": "GA6C",
+       "role": "other",
+       "lat": 25.88,
+       "lon": 50.54,
+       "alt": 2525,
+       "reg": "A9C-BHR"
+      },
+      {
+       "flight": "BAH3",
+       "t": "B764",
+       "role": "other",
+       "lat": 26.1,
+       "lon": 50.68,
+       "alt": 3950,
+       "reg": "A9C-HMH"
+      },
+      {
+       "flight": "BAH1",
+       "t": "B744",
+       "role": "other",
+       "lat": 24.86,
+       "lon": 53.51,
+       "alt": 20500,
+       "reg": "A9C-HMK"
+      },
+      {
+       "flight": "A7HHK",
+       "t": "A342",
+       "role": "other",
+       "lat": 24.92,
+       "lon": 56.66,
+       "alt": 38000,
+       "reg": "A7-HHK"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -111,25 +138,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 51,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "X",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 31.33,
-       "lon": 35.38,
-       "alt": 4900,
-       "reg": "94-6707"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -184,12 +199,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-10-31T05:58:34Z",
+  "at": "2026-10-31T12:49:05Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -380,37 +395,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-10-31T05:58:34Z",
+  "at": "2026-10-31T12:49:05Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 36,
-    "??": 29,
-    "MX": 6,
-    "DE": 4,
-    "GB": 4,
-    "IT": 3,
+    "US": 34,
+    "??": 22,
+    "MX": 8,
+    "TW": 3,
+    "MY": 3,
+    "DE": 3,
+    "JP": 2,
+    "AR": 2,
+    "IL": 2,
+    "SG": 2,
+    "IT": 2,
     "PH": 2,
-    "MY": 2,
+    "FR": 2,
     "CA": 2,
-    "AE": 1,
-    "TW": 1,
-    "CI": 1,
-    "RO": 1,
-    "AT": 1,
-    "IN": 1
+    "GB": 2
    },
    "by_group": {
-    "qilin": 14,
+    "qilin": 12,
     "SilentRansomGroup": 11,
+    "safepay": 9,
+    "thegentlemen": 9,
     "genesis": 9,
-    "play": 7,
-    "Whitearmor": 6,
-    "akira": 6,
     "Booba Project": 6,
     "everstake": 5,
     "rhysida": 5,
-    "emperador": 4
+    "Shiba": 4,
+    "N0n": 3
    },
    "kr": []
   }
