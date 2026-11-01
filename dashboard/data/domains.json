@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T06:24:47Z",
+ "generated": "2026-11-01T12:57:38Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-01T06:24:47Z",
+  "at": "2026-11-01T12:57:38Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,32 +65,42 @@
       60.0,
       30.5
      ],
-     "n": 2,
+     "n": 3,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {
+      "airlift": 1,
       "other": 2
      },
      "ac": [
       {
+       "flight": "LHOB257",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 27.72,
+       "lon": 49.98,
+       "alt": 25000,
+       "reg": "A7-MAB"
+      },
+      {
        "flight": "QAF7",
        "t": "A320",
        "role": "other",
-       "lat": 25.31,
-       "lon": 54.4,
-       "alt": 28000,
+       "lat": 25.8,
+       "lon": 51.6,
+       "alt": 17125,
        "reg": "A7-AAG"
       },
       {
-       "flight": ".A6-CJE",
-       "t": "A319",
+       "flight": "LIWA21",
+       "t": "A139",
        "role": "other",
-       "lat": 25.25,
-       "lon": 55.38,
-       "alt": "ground",
-       "reg": "A6-CJE"
+       "lat": 24.64,
+       "lon": 54.57,
+       "alt": 675,
+       "reg": "2021"
       }
      ]
     },
@@ -105,8 +115,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -120,25 +130,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "REDX20",
-       "t": "PC21",
-       "role": "other",
-       "lat": 32.25,
-       "lon": 36.67,
-       "alt": 8125,
-       "reg": "1172"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -151,8 +149,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -166,23 +164,33 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 2,
      "key": 1,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {
+      "other": 1,
       "isr": 1
      },
      "ac": [
       {
-       "flight": "PLF105",
-       "t": "GLF5",
+       "flight": "BALERION",
+       "t": "",
+       "role": "other",
+       "lat": 54.3,
+       "lon": 11.73,
+       "alt": 2500,
+       "reg": ""
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
        "role": "isr",
-       "lat": 54.09,
-       "lon": 16.66,
-       "alt": 41050,
-       "reg": "0001"
+       "lat": 55.1,
+       "lon": 23.67,
+       "alt": 36000,
+       "reg": "N159L"
       }
      ]
     },
@@ -197,20 +205,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 53,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-01T06:24:47Z",
+  "at": "2026-11-01T12:57:38Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -401,7 +409,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-01T06:24:47Z",
+  "at": "2026-11-01T12:57:38Z",
   "data": {
    "n_week": 100,
    "by_country": {
@@ -427,8 +435,8 @@
     "genesis": 9,
     "SilentRansomGroup": 7,
     "Booba Project": 6,
-    "emperador": 5,
     "rhysida": 5,
+    "emperador": 5,
     "everstake": 5,
     "thegentlemen": 4,
     "AuditTeam": 4
