@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T00:57:17Z",
+ "generated": "2026-11-01T06:24:47Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-01T00:57:17Z",
+  "at": "2026-11-01T06:24:47Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,35 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {
-      "airlift": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "TUAF159",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 37.35,
-       "lon": 123.7,
-       "alt": 26575,
-       "reg": "18-0094"
-      },
-      {
-       "flight": "A7HHK",
-       "t": "A342",
-       "role": "other",
-       "lat": 33.59,
-       "lon": 131.96,
-       "alt": 33000,
-       "reg": "A7-HHK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -87,13 +65,34 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "QAF7",
+       "t": "A320",
+       "role": "other",
+       "lat": 25.31,
+       "lon": 54.4,
+       "alt": 28000,
+       "reg": "A7-AAG"
+      },
+      {
+       "flight": ".A6-CJE",
+       "t": "A319",
+       "role": "other",
+       "lat": 25.25,
+       "lon": 55.38,
+       "alt": "ground",
+       "reg": "A6-CJE"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -121,13 +120,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "REDX20",
+       "t": "PC21",
+       "role": "other",
+       "lat": 32.25,
+       "lon": 36.67,
+       "alt": 8125,
+       "reg": "1172"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -155,13 +166,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0,
      "runs": 53,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "PLF105",
+       "t": "GLF5",
+       "role": "isr",
+       "lat": 54.09,
+       "lon": 16.66,
+       "alt": 41050,
+       "reg": "0001"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -182,12 +205,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-01T00:57:17Z",
+  "at": "2026-11-01T06:24:47Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -378,7 +401,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-01T00:57:17Z",
+  "at": "2026-11-01T06:24:47Z",
   "data": {
    "n_week": 100,
    "by_country": {
@@ -394,15 +417,15 @@
     "IT": 2,
     "CA": 2,
     "GB": 2,
+    "TR": 1,
     "BD": 1,
-    "BG": 1,
-    "BR": 1
+    "BG": 1
    },
    "by_group": {
-    "qilin": 12,
+    "qilin": 13,
     "safepay": 9,
     "genesis": 9,
-    "SilentRansomGroup": 8,
+    "SilentRansomGroup": 7,
     "Booba Project": 6,
     "emperador": 5,
     "rhysida": 5,
