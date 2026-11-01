@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T12:57:38Z",
+ "generated": "2026-11-01T18:02:20Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-01T12:57:38Z",
+  "at": "2026-11-01T18:02:20Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,42 +65,23 @@
       60.0,
       30.5
      ],
-     "n": 3,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
-      "other": 2
+      "other": 1
      },
      "ac": [
       {
-       "flight": "LHOB257",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 27.72,
-       "lon": 49.98,
-       "alt": 25000,
-       "reg": "A7-MAB"
-      },
-      {
-       "flight": "QAF7",
-       "t": "A320",
+       "flight": "",
+       "t": "",
        "role": "other",
-       "lat": 25.8,
-       "lon": 51.6,
-       "alt": 17125,
-       "reg": "A7-AAG"
-      },
-      {
-       "flight": "LIWA21",
-       "t": "A139",
-       "role": "other",
-       "lat": 24.64,
-       "lon": 54.57,
-       "alt": 675,
-       "reg": "2021"
+       "lat": 24.12,
+       "lon": 58.15,
+       "alt": 10450,
+       "reg": ""
       }
      ]
     },
@@ -147,13 +128,34 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "EM415",
+       "t": "B429",
+       "role": "other",
+       "lat": 41.01,
+       "lon": 28.8,
+       "alt": 950,
+       "reg": "EM-7119"
+      },
+      {
+       "flight": "TRK1",
+       "t": "B748",
+       "role": "other",
+       "lat": 40.98,
+       "lon": 28.82,
+       "alt": "ground",
+       "reg": "TC-TRK"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -164,35 +166,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "BALERION",
-       "t": "",
-       "role": "other",
-       "lat": 54.3,
-       "lon": 11.73,
-       "alt": 2500,
-       "reg": ""
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 55.1,
-       "lon": 23.67,
-       "alt": 36000,
-       "reg": "N159L"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -213,12 +193,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-01T12:57:38Z",
+  "at": "2026-11-01T18:02:20Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -409,37 +389,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-01T12:57:38Z",
+  "at": "2026-11-01T18:02:20Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 32,
-    "??": 24,
-    "MX": 7,
-    "DE": 3,
+    "US": 33,
+    "??": 21,
+    "MX": 6,
+    "DE": 5,
+    "GB": 3,
     "PH": 3,
     "TW": 3,
     "JP": 2,
+    "AT": 2,
     "AR": 2,
     "MY": 2,
     "IT": 2,
-    "CA": 2,
-    "GB": 2,
     "TR": 1,
-    "BD": 1,
-    "BG": 1
+    "HU": 1,
+    "BD": 1
    },
    "by_group": {
-    "qilin": 13,
+    "qilin": 19,
     "safepay": 9,
     "genesis": 9,
-    "SilentRansomGroup": 7,
-    "Booba Project": 6,
-    "rhysida": 5,
-    "emperador": 5,
+    "SilentRansomGroup": 6,
     "everstake": 5,
-    "thegentlemen": 4,
-    "AuditTeam": 4
+    "Booba Project": 5,
+    "Whitearmor": 4,
+    "rhysida": 4,
+    "emperador": 4,
+    "thegentlemen": 4
    },
    "kr": []
   }

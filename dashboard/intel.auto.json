@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-01T12:57:25Z",
+ "generated": "2026-11-01T18:02:00Z",
  "counts": {
-  "raw": 2080,
-  "candidates": 857,
-  "added": 245,
-  "claude": 1281
+  "raw": 2019,
+  "candidates": 816,
+  "added": 217,
+  "claude": 1263
  },
  "markets": [
   {
@@ -56,7 +56,7 @@
    "l": "유럽 TTF 가스 (€/MWh)",
    "v": 103.94,
    "d": "2026-10-30",
-   "chg": "+8.2%",
+   "chg": "+6.2%",
    "sym": "TTF=F",
    "src": "https://finance.yahoo.com/quote/TTF%3DF",
    "g": "B2"
@@ -207,9 +207,9 @@
   },
   {
    "l": "원/달러",
-   "v": 1335.1,
-   "d": "2026-10-31",
-   "chg": "+1.0%",
+   "v": 1333.44,
+   "d": "2026-11-01",
+   "chg": "+0.9%",
    "sym": "KRW=X",
    "src": "https://finance.yahoo.com/quote/KRW%3DX",
    "g": "B2"
@@ -225,9 +225,9 @@
   },
   {
    "l": "위안/달러",
-   "v": 6.65,
+   "v": 6.64,
    "d": "2026-11-01",
-   "chg": "-0.4%",
+   "chg": "-0.5%",
    "sym": "CNY=X",
    "src": "https://finance.yahoo.com/quote/CNY%3DX",
    "g": "B2"
@@ -245,7 +245,7 @@
    "l": "호주달러/달러",
    "v": 0.7,
    "d": "2026-11-01",
-   "chg": "+0.1%",
+   "chg": "+0.0%",
    "sym": "AUDUSD=X",
    "src": "https://finance.yahoo.com/quote/AUDUSD%3DX",
    "g": "B2"
@@ -253,7 +253,7 @@
   {
    "l": "헤알/달러",
    "v": 5.44,
-   "d": "2026-10-30",
+   "d": "2026-11-01",
    "chg": "+9.7%",
    "sym": "BRL=X",
    "src": "https://finance.yahoo.com/quote/BRL%3DX",
@@ -351,9 +351,9 @@
   },
   {
    "l": "비트코인 ($)",
-   "v": 77749.32,
+   "v": 77893.25,
    "d": "2026-11-01",
-   "chg": "-4.3%",
+   "chg": "-4.2%",
    "sym": "BTC-USD",
    "src": "https://finance.yahoo.com/quote/BTC-USD",
    "g": "B2"
@@ -1487,7 +1487,7 @@
    "ok": true,
    "n": 25,
    "err": null,
-   "ms": 352,
+   "ms": 300,
    "note": null,
    "verify": true,
    "tags": [
@@ -1501,10 +1501,10 @@
    "kind": "rss",
    "grade": "C3",
    "ok": true,
-   "n": 18,
+   "n": 40,
    "err": null,
-   "ms": 4982,
-   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://addisstandard.com/feed/ → Google News site:addisstandard.com 대체 18건",
+   "ms": 4951,
+   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://addisstandard.com/feed/ → Google News site:addisstandard.com 대체 40건",
    "verify": false,
    "tags": [
     "ethiopia"
@@ -1519,7 +1519,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 234,
+   "ms": 176,
    "note": null,
    "verify": true,
    "tags": [],
@@ -1531,10 +1531,10 @@
    "kind": "rss",
    "grade": "C3",
    "ok": true,
-   "n": 18,
+   "n": 20,
    "err": null,
-   "ms": 5582,
-   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.agweb.com/rss → Google News site:agweb.com 대체 18건",
+   "ms": 5119,
+   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.agweb.com/rss → Google News site:agweb.com 대체 20건",
    "verify": true,
    "tags": [
     "ags"
@@ -1549,7 +1549,7 @@
    "ok": true,
    "n": 25,
    "err": null,
-   "ms": 252,
+   "ms": 127,
    "note": null,
    "verify": false,
    "tags": [],
@@ -1563,7 +1563,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5119,
+   "ms": 5100,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.arabnews.com/rss.xml → Google News site:arabnews.com 대체 40건",
    "verify": false,
    "tags": [
@@ -1580,7 +1580,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 345,
+   "ms": 323,
    "note": "empty feed → Google News site:argusmedia.com 대체 40건",
    "verify": true,
    "tags": [
@@ -1596,10 +1596,10 @@
    "kind": "rss",
    "grade": "B3",
    "ok": true,
-   "n": 2,
+   "n": 0,
    "err": null,
-   "ms": 5375,
-   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.thebarentsobserver.c → Google News site:thebarentsobserver.com 대체 2건",
+   "ms": 5299,
+   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.thebarentsobserver.c → Google News site:thebarentsobserver.com 대체 0건",
    "verify": true,
    "tags": [
     "europe",
@@ -1615,7 +1615,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 295,
+   "ms": 485,
    "note": null,
    "verify": true,
    "tags": [
@@ -1629,9 +1629,9 @@
    "kind": "rss",
    "grade": "B2",
    "ok": true,
-   "n": 25,
+   "n": 26,
    "err": null,
-   "ms": 263,
+   "ms": 324,
    "note": null,
    "verify": false,
    "tags": [],
@@ -1643,10 +1643,10 @@
    "kind": "rss",
    "grade": "B2",
    "ok": true,
-   "n": 3,
+   "n": 1,
    "err": null,
-   "ms": 5141,
-   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://thebulletin.org/feed/ → Google News site:thebulletin.org 대체 3건",
+   "ms": 5040,
+   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://thebulletin.org/feed/ → Google News site:thebulletin.org 대체 1건",
    "verify": false,
    "tags": [
     "nuclear"
@@ -1661,7 +1661,7 @@
    "ok": true,
    "n": 20,
    "err": null,
-   "ms": 227,
+   "ms": 221,
    "note": null,
    "verify": true,
    "tags": [
@@ -1677,7 +1677,7 @@
    "ok": true,
    "n": 1,
    "err": null,
-   "ms": 572,
+   "ms": 578,
    "note": "empty feed → Google News site:centcom.mil 대체 1건",
    "verify": true,
    "tags": [
@@ -1695,7 +1695,7 @@
    "ok": true,
    "n": 12,
    "err": null,
-   "ms": 1768,
+   "ms": 2802,
    "note": "RuntimeError: COT header columns not found → CFTC 공개 데이터 API 대체 12건",
    "verify": true,
    "tags": [
@@ -1710,10 +1710,10 @@
    "kind": "rss",
    "grade": "B2",
    "ok": true,
-   "n": 6,
+   "n": 4,
    "err": null,
-   "ms": 5443,
-   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.cidrap.umn.edu/news/ → Google News site:cidrap.umn.edu 대체 6건",
+   "ms": 5458,
+   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.cidrap.umn.edu/news/ → Google News site:cidrap.umn.edu 대체 4건",
    "verify": true,
    "tags": [
     "health",
@@ -1729,7 +1729,7 @@
    "ok": true,
    "n": 29,
    "err": null,
-   "ms": 288,
+   "ms": 296,
    "note": null,
    "verify": true,
    "tags": [],
@@ -1743,7 +1743,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 688,
+   "ms": 291,
    "note": null,
    "verify": true,
    "tags": [],
@@ -1755,10 +1755,10 @@
    "kind": "rss",
    "grade": "B2",
    "ok": true,
-   "n": 6,
+   "n": 5,
    "err": null,
-   "ms": 5008,
-   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.criticalthreats.org/ → Google News site:criticalthreats.org 대체 6건",
+   "ms": 475,
+   "note": "empty feed → Google News site:criticalthreats.org 대체 5건",
    "verify": false,
    "tags": [
     "iran",
@@ -1776,7 +1776,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 3086,
+   "ms": 118,
    "note": null,
    "verify": true,
    "tags": [
@@ -1792,7 +1792,7 @@
    "ok": true,
    "n": 29,
    "err": null,
-   "ms": 380,
+   "ms": 359,
    "note": null,
    "verify": true,
    "tags": [
@@ -1808,7 +1808,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 124,
+   "ms": 146,
    "note": null,
    "verify": false,
    "tags": [
@@ -1827,7 +1827,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 472,
+   "ms": 717,
    "note": null,
    "verify": false,
    "tags": [],
@@ -1841,7 +1841,7 @@
    "ok": true,
    "n": 22,
    "err": null,
-   "ms": 196,
+   "ms": 151,
    "note": null,
    "verify": false,
    "tags": [
@@ -1857,7 +1857,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 630,
+   "ms": 574,
    "note": null,
    "verify": true,
    "tags": [
@@ -1870,10 +1870,10 @@
    "name": "Freightos FBX",
    "kind": "html",
    "grade": "B2",
-   "ok": true,
-   "n": 13,
-   "err": null,
-   "ms": 724,
+   "ok": false,
+   "n": 0,
+   "err": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://terminal.freightos.com/freightos-baltic-index-global-container-pricing-index/",
+   "ms": 5298,
    "note": null,
    "verify": true,
    "tags": [
@@ -1890,7 +1890,7 @@
    "ok": true,
    "n": 21,
    "err": null,
-   "ms": 7135,
+   "ms": 5358,
    "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://focustaiwan.tw/rss/polit → Google News site:focustaiwan.tw 대체 21건",
    "verify": true,
    "tags": [
@@ -1906,7 +1906,7 @@
    "ok": true,
    "n": 24,
    "err": null,
-   "ms": 275,
+   "ms": 332,
    "note": null,
    "verify": false,
    "tags": [],
@@ -1918,10 +1918,10 @@
    "kind": "rss",
    "grade": "C3",
    "ok": true,
-   "n": 6,
+   "n": 5,
    "err": null,
-   "ms": 5554,
-   "note": "RuntimeError: HTTPError: 500 Server Error: Internal Server Error for url: https://www.garoweon → Google News site:garoweonline.com 대체 6건",
+   "ms": 5654,
+   "note": "RuntimeError: HTTPError: 500 Server Error: Internal Server Error for url: https://www.garoweon → Google News site:garoweonline.com 대체 5건",
    "verify": true,
    "tags": [
     "somalia"
@@ -1936,7 +1936,7 @@
    "ok": true,
    "n": 12,
    "err": null,
-   "ms": 96,
+   "ms": 173,
    "note": null,
    "verify": false,
    "tags": [
@@ -1953,7 +1953,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 42343,
+   "ms": 101893,
    "note": "GDELT 429 연속 → 나머지 질의 생략",
    "verify": false,
    "tags": [],
@@ -1965,9 +1965,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 40,
+   "n": 30,
    "err": null,
-   "ms": 367,
+   "ms": 300,
    "note": null,
    "verify": false,
    "tags": [
@@ -1984,7 +1984,7 @@
    "ok": true,
    "n": 24,
    "err": null,
-   "ms": 338,
+   "ms": 303,
    "note": null,
    "verify": false,
    "tags": [
@@ -1998,9 +1998,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 6,
+   "n": 4,
    "err": null,
-   "ms": 230,
+   "ms": 256,
    "note": null,
    "verify": false,
    "tags": [
@@ -2014,9 +2014,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 39,
+   "n": 18,
    "err": null,
-   "ms": 315,
+   "ms": 321,
    "note": null,
    "verify": false,
    "tags": [
@@ -2032,7 +2032,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 199,
+   "ms": 215,
    "note": null,
    "verify": false,
    "tags": [
@@ -2048,7 +2048,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 396,
+   "ms": 489,
    "note": null,
    "verify": false,
    "tags": [
@@ -2065,7 +2065,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 336,
+   "ms": 442,
    "note": null,
    "verify": false,
    "tags": [
@@ -2079,9 +2079,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 40,
+   "n": 36,
    "err": null,
-   "ms": 406,
+   "ms": 391,
    "note": null,
    "verify": false,
    "tags": [
@@ -2097,7 +2097,7 @@
    "ok": true,
    "n": 6,
    "err": null,
-   "ms": 189,
+   "ms": 202,
    "note": null,
    "verify": false,
    "tags": [
@@ -2113,7 +2113,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 531,
+   "ms": 518,
    "note": null,
    "verify": false,
    "tags": [
@@ -2127,9 +2127,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 27,
+   "n": 26,
    "err": null,
-   "ms": 313,
+   "ms": 382,
    "note": null,
    "verify": false,
    "tags": [
@@ -2143,9 +2143,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 19,
+   "n": 3,
    "err": null,
-   "ms": 272,
+   "ms": 232,
    "note": null,
    "verify": false,
    "tags": [
@@ -2159,9 +2159,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 26,
+   "n": 40,
    "err": null,
-   "ms": 305,
+   "ms": 348,
    "note": null,
    "verify": false,
    "tags": [
@@ -2176,9 +2176,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 2,
+   "n": 7,
    "err": null,
-   "ms": 214,
+   "ms": 213,
    "note": null,
    "verify": false,
    "tags": [
@@ -2193,9 +2193,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 7,
+   "n": 8,
    "err": null,
-   "ms": 228,
+   "ms": 218,
    "note": null,
    "verify": false,
    "tags": [
@@ -2211,9 +2211,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 18,
+   "n": 12,
    "err": null,
-   "ms": 257,
+   "ms": 231,
    "note": null,
    "verify": false,
    "tags": [
@@ -2230,7 +2230,7 @@
    "ok": true,
    "n": 22,
    "err": null,
-   "ms": 278,
+   "ms": 286,
    "note": null,
    "verify": false,
    "tags": [
@@ -2245,9 +2245,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 2,
+   "n": 1,
    "err": null,
-   "ms": 242,
+   "ms": 218,
    "note": null,
    "verify": false,
    "tags": [
@@ -2261,9 +2261,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 40,
+   "n": 27,
    "err": null,
-   "ms": 395,
+   "ms": 340,
    "note": null,
    "verify": false,
    "tags": [
@@ -2279,7 +2279,7 @@
    "ok": true,
    "n": 5,
    "err": null,
-   "ms": 231,
+   "ms": 177,
    "note": null,
    "verify": false,
    "tags": [
@@ -2293,9 +2293,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 4,
+   "n": 3,
    "err": null,
-   "ms": 232,
+   "ms": 213,
    "note": null,
    "verify": false,
    "tags": [
@@ -2309,9 +2309,9 @@
    "kind": "gnews",
    "grade": "C3",
    "ok": true,
-   "n": 5,
+   "n": 4,
    "err": null,
-   "ms": 236,
+   "ms": 214,
    "note": null,
    "verify": false,
    "tags": [
@@ -2327,7 +2327,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 188,
+   "ms": 279,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2341,7 +2341,7 @@
    "ok": true,
    "n": 20,
    "err": null,
-   "ms": 270,
+   "ms": 335,
    "note": null,
    "verify": false,
    "tags": [
@@ -2355,10 +2355,10 @@
    "kind": "rss",
    "grade": "A2",
    "ok": true,
-   "n": 6,
+   "n": 3,
    "err": null,
-   "ms": 4924,
-   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.iea.org/news/rss → Google News site:iea.org 대체 6건",
+   "ms": 4937,
+   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.iea.org/news/rss → Google News site:iea.org 대체 3건",
    "verify": true,
    "tags": [
     "energy"
@@ -2373,7 +2373,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 153,
+   "ms": 215,
    "note": null,
    "verify": true,
    "tags": [
@@ -2389,7 +2389,7 @@
    "ok": true,
    "n": 6,
    "err": null,
-   "ms": 5171,
+   "ms": 5282,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.understandingwar.org → Google News site:understandingwar.org 대체 6건",
    "verify": true,
    "tags": [
@@ -2406,7 +2406,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 1330,
+   "ms": 1292,
    "note": "empty feed → Google News site:koreaherald.com 대체 40건",
    "verify": true,
    "tags": [
@@ -2422,7 +2422,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5582,
+   "ms": 5513,
    "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://kyivindependent.com/feed → Google News site:kyivindependent.com 대체 40건",
    "verify": false,
    "tags": [
@@ -2436,10 +2436,10 @@
    "kind": "rss",
    "grade": "B3",
    "ok": true,
-   "n": 28,
+   "n": 23,
    "err": null,
-   "ms": 6492,
-   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://maritime-executive.com/r → Google News site:maritime-executive.com 대체 28건",
+   "ms": 6609,
+   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://maritime-executive.com/r → Google News site:maritime-executive.com 대체 23건",
    "verify": true,
    "tags": [
     "maritime"
@@ -2454,7 +2454,7 @@
    "ok": true,
    "n": 39,
    "err": null,
-   "ms": 2802,
+   "ms": 2367,
    "note": null,
    "verify": false,
    "tags": [
@@ -2470,7 +2470,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 268,
+   "ms": 273,
    "note": null,
    "verify": true,
    "tags": [
@@ -2486,7 +2486,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 127,
+   "ms": 149,
    "note": null,
    "verify": true,
    "tags": [
@@ -2502,7 +2502,7 @@
    "ok": true,
    "n": 20,
    "err": null,
-   "ms": 254,
+   "ms": 186,
    "note": null,
    "verify": true,
    "tags": [],
@@ -2516,7 +2516,7 @@
    "ok": true,
    "n": 36,
    "err": null,
-   "ms": 962,
+   "ms": 1050,
    "note": null,
    "verify": false,
    "tags": [
@@ -2532,7 +2532,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 1412,
+   "ms": 1394,
    "note": null,
    "verify": false,
    "tags": [
@@ -2548,7 +2548,7 @@
    "ok": true,
    "n": 1,
    "err": null,
-   "ms": 248,
+   "ms": 417,
    "note": null,
    "verify": true,
    "tags": [
@@ -2565,7 +2565,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 324,
+   "ms": 113,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2579,7 +2579,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 237,
+   "ms": 177,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2593,7 +2593,7 @@
    "ok": true,
    "n": 15,
    "err": null,
-   "ms": 447,
+   "ms": 696,
    "note": null,
    "verify": false,
    "tags": [
@@ -2609,7 +2609,7 @@
    "ok": true,
    "n": 1,
    "err": null,
-   "ms": 4957,
+   "ms": 5075,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.opec.org/opec_web/en → Google News site:opec.org 대체 1건",
    "verify": true,
    "tags": [
@@ -2625,7 +2625,7 @@
    "ok": true,
    "n": 30,
    "err": null,
-   "ms": 330,
+   "ms": 198,
    "note": null,
    "verify": true,
    "tags": [
@@ -2641,7 +2641,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 262,
+   "ms": 103,
    "note": null,
    "verify": true,
    "tags": [
@@ -2657,7 +2657,7 @@
    "ok": true,
    "n": 135,
    "err": null,
-   "ms": 8727,
+   "ms": 14620,
    "note": null,
    "verify": true,
    "tags": [
@@ -2673,7 +2673,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 512,
+   "ms": 630,
    "note": "HTTPError: 403 Client Error: Forbidden for url: https://api.reliefweb.i → Google News site:reliefweb.int 대체 40건",
    "verify": false,
    "tags": [
@@ -2689,7 +2689,7 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 135,
+   "ms": 187,
    "note": null,
    "verify": true,
    "tags": [
@@ -2706,7 +2706,7 @@
    "ok": true,
    "n": 17,
    "err": null,
-   "ms": 489,
+   "ms": 101,
    "note": null,
    "verify": true,
    "tags": [
@@ -2722,7 +2722,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 9622,
+   "ms": 1990,
    "note": "empty feed → Google News site:southcom.mil 대체 0건",
    "verify": true,
    "tags": [
@@ -2738,8 +2738,8 @@
    "ok": true,
    "n": 10,
    "err": null,
-   "ms": 423,
-   "note": null,
+   "ms": 5326,
+   "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://splash247.com/feed/ → Google News site:splash247.com 대체 10건",
    "verify": false,
    "tags": [
     "maritime"
@@ -2754,7 +2754,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5627,
+   "ms": 5699,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://sudantribune.com/feed/ → Google News site:sudantribune.com 대체 40건",
    "verify": false,
    "tags": [
@@ -2770,7 +2770,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 2106,
+   "ms": 1617,
    "note": null,
    "verify": true,
    "tags": [
@@ -2786,7 +2786,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 128,
+   "ms": 138,
    "note": null,
    "verify": true,
    "tags": [
@@ -2802,7 +2802,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5347,
+   "ms": 5273,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.timesofisrael.com/fe → Google News site:timesofisrael.com 대체 40건",
    "verify": false,
    "tags": [
@@ -2818,9 +2818,9 @@
    "kind": "rss",
    "grade": "B2",
    "ok": true,
-   "n": 33,
+   "n": 32,
    "err": null,
-   "ms": 494,
+   "ms": 871,
    "note": null,
    "verify": true,
    "tags": [
@@ -2836,7 +2836,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 170,
+   "ms": 160,
    "note": null,
    "verify": true,
    "tags": [
@@ -2853,7 +2853,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 582,
+   "ms": 949,
    "note": null,
    "verify": true,
    "tags": [
@@ -2869,7 +2869,7 @@
    "ok": true,
    "n": 30,
    "err": null,
-   "ms": 159,
+   "ms": 237,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2881,10 +2881,10 @@
    "kind": "rss",
    "grade": "A2",
    "ok": true,
-   "n": 2,
+   "n": 4,
    "err": null,
-   "ms": 5284,
-   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.ers.usda.gov/rss/ → Google News site:ers.usda.gov 대체 2건",
+   "ms": 5876,
+   "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.ers.usda.gov/rss/ → Google News site:ers.usda.gov 대체 4건",
    "verify": true,
    "tags": [
     "ags"
@@ -2899,7 +2899,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5101,
+   "ms": 5080,
    "note": "RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://www.usda.gov/rss/latest- → Google News site:usda.gov 대체 40건",
    "verify": true,
    "tags": [
@@ -2915,7 +2915,7 @@
    "ok": true,
    "n": 30,
    "err": null,
-   "ms": 354,
+   "ms": 574,
    "note": null,
    "verify": false,
    "tags": [
@@ -2931,7 +2931,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 334,
+   "ms": 507,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2945,7 +2945,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 5803,
+   "ms": 5514,
    "note": "RuntimeError: HTTPError: 404 Client Error: Not Found for url: https://www.who.int/feeds/entity → Google News site:who.int 대체 40건",
    "verify": true,
    "tags": [
@@ -2961,7 +2961,7 @@
    "ok": true,
    "n": 0,
    "err": null,
-   "ms": 1997,
+   "ms": 3498,
    "note": null,
    "verify": false,
    "tags": [],
@@ -2973,10 +2973,10 @@
    "kind": "rss",
    "grade": "C3",
    "ok": true,
-   "n": 10,
+   "n": 5,
    "err": null,
-   "ms": 394,
-   "note": "empty feed → Google News site:world-grain.com 대체 10건",
+   "ms": 364,
+   "note": "empty feed → Google News site:world-grain.com 대체 5건",
    "verify": true,
    "tags": [
     "ags"
@@ -2991,7 +2991,7 @@
    "ok": true,
    "n": 40,
    "err": null,
-   "ms": 1512,
+   "ms": 977,
    "note": null,
    "verify": false,
    "tags": [
@@ -3001,87 +3001,136 @@
   }
  ],
  "source_scores": {
-  "middleeasteye": {
-   "n": 416,
-   "corroborated": 0.01,
-   "cred": 2.68,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "nyt_world": {
-   "n": 119,
-   "corroborated": 0.02,
-   "cred": 2.49,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "africanews": {
-   "n": 181,
-   "corroborated": 0.02,
-   "cred": 2.69,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "dawn_pk": {
-   "n": 324,
-   "corroborated": 0.01,
-   "cred": 2.75,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "kyivindependent": {
-   "n": 183,
-   "corroborated": 0.01,
-   "cred": 3.72,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "abc_au": {
-   "n": 71,
-   "corroborated": 0.01,
-   "cred": 3.59,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "gn_opec": {
-   "n": 39,
-   "corroborated": 0.0,
-   "cred": 2.97,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "gn_carrier": {
-   "n": 135,
-   "corroborated": 0.01,
-   "cred": 2.96,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "npr_world": {
-   "n": 28,
-   "corroborated": 0.0,
-   "cred": 2.5,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "timesofisrael": {
-   "n": 169,
-   "corroborated": 0.01,
-   "cred": 3.67,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
   "aljazeera": {
-   "n": 380,
+   "n": 384,
    "corroborated": 0.01,
    "cred": 2.61,
    "hint": "단독 보도 많음",
    "ok": true
   },
+  "guardian_world": {
+   "n": 165,
+   "corroborated": 0.02,
+   "cred": 2.52,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "middleeasteye": {
+   "n": 418,
+   "corroborated": 0.01,
+   "cred": 2.67,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_opec": {
+   "n": 38,
+   "corroborated": 0.0,
+   "cred": 2.97,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_korea": {
+   "n": 149,
+   "corroborated": 0.0,
+   "cred": 2.89,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_piracy": {
+   "n": 11,
+   "corroborated": 0.0,
+   "cred": 3.0,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "dawn_pk": {
+   "n": 325,
+   "corroborated": 0.01,
+   "cred": 2.75,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gcaptain": {
+   "n": 74,
+   "corroborated": 0.01,
+   "cred": 2.55,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "sudantribune": {
+   "n": 108,
+   "corroborated": 0.0,
+   "cred": 3.95,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
   "gn_rareearth": {
-   "n": 131,
+   "n": 133,
    "corroborated": 0.0,
    "cred": 2.95,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "rnz_pacific": {
+   "n": 28,
+   "corroborated": 0.0,
+   "cred": 3.86,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_southasia": {
+   "n": 242,
+   "corroborated": 0.0,
+   "cred": 2.93,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_carrier": {
+   "n": 136,
+   "corroborated": 0.01,
+   "cred": 2.96,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "abc_au": {
+   "n": 72,
+   "corroborated": 0.03,
+   "cred": 3.54,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "nknews": {
+   "n": 76,
+   "corroborated": 0.04,
+   "cred": 2.67,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "nyt_world": {
+   "n": 117,
+   "corroborated": 0.0,
+   "cred": 2.49,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "africanews": {
+   "n": 182,
+   "corroborated": 0.01,
+   "cred": 2.69,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "kyivindependent": {
+   "n": 185,
+   "corroborated": 0.01,
+   "cred": 3.71,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "npr_world": {
+   "n": 27,
+   "corroborated": 0.0,
+   "cred": 2.56,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3093,7 +3142,7 @@
    "ok": true
   },
   "gn_outbreak": {
-   "n": 210,
+   "n": 213,
    "corroborated": 0.0,
    "cred": 2.97,
    "hint": "단독 보도 많음",
@@ -3102,7 +3151,7 @@
   "riotimes": {
    "n": 143,
    "corroborated": 0.01,
-   "cred": 3.58,
+   "cred": 3.57,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3117,34 +3166,6 @@
    "n": 114,
    "corroborated": 0.0,
    "cred": 3.68,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "gn_southasia": {
-   "n": 240,
-   "corroborated": 0.01,
-   "cred": 2.93,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "guardian_world": {
-   "n": 168,
-   "corroborated": 0.02,
-   "cred": 2.51,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "gcaptain": {
-   "n": 73,
-   "corroborated": 0.01,
-   "cred": 2.55,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "sudantribune": {
-   "n": 107,
-   "corroborated": 0.0,
-   "cred": 3.95,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3170,15 +3191,15 @@
    "ok": true
   },
   "france24": {
-   "n": 212,
-   "corroborated": 0.0,
+   "n": 213,
+   "corroborated": 0.01,
    "cred": 2.6,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "bbc_world": {
-   "n": 107,
-   "corroborated": 0.01,
+   "n": 106,
+   "corroborated": 0.0,
    "cred": 1.85,
    "hint": "단독 보도 많음",
    "ok": true
@@ -3191,7 +3212,7 @@
    "ok": true
   },
   "maritime_exec": {
-   "n": 78,
+   "n": 79,
    "corroborated": 0.0,
    "cred": 4.0,
    "hint": "단독 보도 많음",
@@ -3218,17 +3239,17 @@
    "hint": "단독 보도 많음",
    "ok": null
   },
-  "nknews": {
-   "n": 80,
-   "corroborated": 0.04,
-   "cred": 2.69,
+  "gn_taiwan": {
+   "n": 72,
+   "corroborated": 0.01,
+   "cred": 2.96,
    "hint": "단독 보도 많음",
    "ok": true
   },
-  "gn_taiwan": {
-   "n": 71,
-   "corroborated": 0.03,
-   "cred": 2.96,
+  "cbc_world": {
+   "n": 56,
+   "corroborated": 0.02,
+   "cred": 2.88,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3240,14 +3261,14 @@
    "ok": true
   },
   "arabnews": {
-   "n": 167,
+   "n": 170,
    "corroborated": 0.0,
    "cred": 3.81,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "who_don": {
-   "n": 60,
+   "n": 61,
    "corroborated": 0.0,
    "cred": 3.82,
    "hint": "단독 보도 많음",
@@ -3261,7 +3282,7 @@
    "ok": true
   },
   "gn_baltic": {
-   "n": 233,
+   "n": 237,
    "corroborated": 0.0,
    "cred": 2.96,
    "hint": "단독 보도 많음",
@@ -3276,15 +3297,15 @@
   },
   "gn_ethiopia": {
    "n": 119,
-   "corroborated": 0.01,
+   "corroborated": 0.0,
    "cred": 2.83,
    "hint": "단독 보도 많음",
    "ok": true
   },
-  "gn_piracy": {
-   "n": 11,
-   "corroborated": 0.0,
-   "cred": 3.0,
+  "timesofisrael": {
+   "n": 171,
+   "corroborated": 0.01,
+   "cred": 3.68,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3303,30 +3324,65 @@
    "ok": true
   },
   "mining_com": {
-   "n": 56,
+   "n": 57,
    "corroborated": 0.0,
-   "cred": 3.73,
+   "cred": 3.74,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "argus_news": {
-   "n": 78,
+   "n": 73,
    "corroborated": 0.0,
    "cred": 3.97,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "gn_plague_kr": {
-   "n": 19,
-   "corroborated": 0.11,
-   "cred": 2.84,
+   "n": 20,
+   "corroborated": 0.05,
+   "cred": 2.85,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "gn_latam": {
-   "n": 52,
+   "n": 53,
    "corroborated": 0.0,
    "cred": 2.87,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gdacs": {
+   "n": 51,
+   "corroborated": 0.0,
+   "cred": 2.0,
+   "hint": "단독 보도 많음",
+   "ok": null
+  },
+  "usgs": {
+   "n": 38,
+   "corroborated": 0.0,
+   "cred": 1.0,
+   "hint": "단독 보도 많음",
+   "ok": null
+  },
+  "addisstandard": {
+   "n": 104,
+   "corroborated": 0.0,
+   "cred": 3.91,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "gn_lng": {
+   "n": 33,
+   "corroborated": 0.0,
+   "cred": 2.94,
+   "hint": "단독 보도 많음",
+   "ok": true
+  },
+  "un_news": {
+   "n": 74,
+   "corroborated": 0.01,
+   "cred": 1.99,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3345,7 +3401,7 @@
    "ok": true
   },
   "twz": {
-   "n": 46,
+   "n": 43,
    "corroborated": 0.02,
    "cred": 1.93,
    "hint": "단독 보도 많음",
@@ -3358,31 +3414,17 @@
    "hint": "단독 보도 많음",
    "ok": true
   },
-  "gn_korea": {
-   "n": 148,
-   "corroborated": 0.0,
-   "cred": 2.89,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
   "diplomat": {
    "n": 116,
-   "corroborated": 0.01,
+   "corroborated": 0.0,
    "cred": 2.7,
    "hint": "단독 보도 많음",
    "ok": true
   },
   "usni": {
-   "n": 52,
+   "n": 49,
    "corroborated": 0.0,
    "cred": 1.92,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "cbc_world": {
-   "n": 55,
-   "corroborated": 0.0,
-   "cred": 2.89,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3401,16 +3443,9 @@
    "ok": true
   },
   "garowe": {
-   "n": 19,
+   "n": 18,
    "corroborated": 0.0,
-   "cred": 3.68,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "un_news": {
-   "n": 74,
-   "corroborated": 0.0,
-   "cred": 1.99,
+   "cred": 3.67,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3421,31 +3456,10 @@
    "hint": "단독 보도 많음",
    "ok": true
   },
-  "addisstandard": {
-   "n": 102,
-   "corroborated": 0.0,
-   "cred": 3.91,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "usgs": {
-   "n": 37,
-   "corroborated": 0.0,
-   "cred": 1.0,
-   "hint": "단독 보도 많음",
-   "ok": null
-  },
   "gn_tariff": {
    "n": 10,
    "corroborated": 0.0,
    "cred": 3.0,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
-  "rnz_pacific": {
-   "n": 27,
-   "corroborated": 0.0,
-   "cred": 3.85,
    "hint": "단독 보도 많음",
    "ok": true
   },
@@ -3505,13 +3519,6 @@
    "hint": "단독 보도 많음",
    "ok": true
   },
-  "gn_lng": {
-   "n": 32,
-   "corroborated": 0.0,
-   "cred": 2.94,
-   "hint": "단독 보도 많음",
-   "ok": true
-  },
   "gn_hormuz": {
    "n": 37,
    "corroborated": 0.0,
@@ -3527,10 +3534,10 @@
    "ok": true
   },
   "eia_tie": {
-   "n": 5,
+   "n": 4,
    "corroborated": 0.0,
    "cred": 2.0,
-   "hint": "단독 보도 많음",
+   "hint": "표본 적음",
    "ok": true
   },
   "southcom": {
@@ -3539,13 +3546,6 @@
    "cred": 4.0,
    "hint": "단독 보도 많음",
    "ok": true
-  },
-  "gdacs": {
-   "n": 50,
-   "corroborated": 0.0,
-   "cred": 2.0,
-   "hint": "단독 보도 많음",
-   "ok": null
   },
   "iea_news": {
    "n": 14,
@@ -3569,7 +3569,7 @@
    "ok": true
   },
   "warontherocks": {
-   "n": 22,
+   "n": 21,
    "corroborated": 0.0,
    "cred": 2.0,
    "hint": "단독 보도 많음",
@@ -3653,92 +3653,94 @@
    "ok": true
   }
  },
- "gaps": [],
+ "gaps": [
+  "Freightos FBX: RuntimeError: HTTPError: 403 Client Error: Forbidden for url: https://terminal.freightos.com/freightos-baltic-index-global-container-pricing-index/"
+ ],
  "changes": {
-  "since": "2026-11-01T09:29:18Z",
+  "since": "2026-11-01T12:57:25Z",
   "new_events": [
-   "af2be14ff34",
-   "aeae64def12",
-   "ab42ae36a3b",
-   "a9947d97157",
-   "a18c6985db8",
-   "a4c1e1d02df",
-   "af90aa69ea0",
-   "a5a936712c1",
-   "a25a3b68620",
-   "a2489b75488",
-   "a048f99e75f",
-   "a6938e0323c",
-   "a8e099ac755",
-   "af7eb04ec3a",
-   "a534a7d25ba",
-   "afe80c798e6",
-   "a1976e19a08",
-   "aa07abe81f8",
-   "a325bf9aefa",
-   "abff7a6f829",
-   "a35cecf2e13",
-   "ab45f277e5a",
-   "abc59295b32",
-   "adfee2290df",
-   "a7e046318dd",
-   "aed2f0465ca",
-   "a5a41fa7fa7",
-   "a0877c77241",
-   "a23db95827e",
-   "ad235ca5499",
-   "af4fb9fe2ac",
-   "a3936bcf052",
-   "a0a66fe283b",
-   "a2be717a5f9",
-   "a29facb9939",
-   "aaab8462843",
-   "a52d5e06ad1",
-   "a8af1fa2eed",
-   "a74bb21adea",
-   "a3729a0252e",
-   "ac0b37687d8",
-   "a56c00bc2ad",
-   "a6b3623ea8d",
-   "a8001b60766",
-   "a4516a3c51f",
-   "a4c01c7df4c",
-   "a6baccbcedb",
-   "a922dfa5610",
-   "aa715aa4683",
-   "ac1cf0a3457",
-   "ad841f9bae0",
-   "a43eecdc86a",
-   "a706ca13123",
-   "a8fc4c1fd55",
-   "a0aad557eb7",
-   "abc3b53cb07",
-   "ae1970bbc38",
-   "abac2b22bd7",
-   "a1bc2e1eb97",
-   "afc2ec2b24f",
-   "aee81e79081",
-   "aa5a75b8b72",
-   "aa212500044",
-   "a28b5f07aac",
-   "aef27b82d60",
-   "afad225c711",
-   "a1f1d7d6edf",
-   "a68b782d1e4",
-   "aeda0cdff89",
-   "a61014f1dc7",
-   "a5b7192f813",
-   "a5a27af13fa",
-   "ad239ca329a",
-   "ae8b5d3c552",
-   "aef12cc73f3",
-   "ae62b167183",
-   "a7e93f61545",
-   "abe101160d3",
-   "a34051bfba8",
-   "aac8b759ef0"
+   "a43faee3697",
+   "a17d074ce2b",
+   "ae3c4701e74",
+   "aef7cf00fc0",
+   "a6ceda7d262",
+   "a4e5cd8ac31",
+   "a95fbf0e0f2",
+   "a444d79bd62",
+   "a9281a000fd",
+   "a1911576e72",
+   "aa5a2fa28b2",
+   "a695eaaa6fd",
+   "ab28a81c434",
+   "a9e0fb4e295",
+   "ac53a3e005f",
+   "a16cbf62631",
+   "a7fd279f6dc",
+   "abd7751fc46",
+   "aa458d51070",
+   "aa47b8237b9",
+   "af525b2df60",
+   "ae734d6762a",
+   "a21b48715e2",
+   "a03ef1d8958",
+   "gdacs-TC1001346-2",
+   "usgs-e/us7000tupl",
+   "a75368c83fb",
+   "ad10d5b592d",
+   "abb14d35bc5",
+   "ae1130524f9",
+   "aab49ff33b6",
+   "aac96cc94f9",
+   "a5f9c08303f",
+   "a658652c21e",
+   "a525e581049",
+   "ae420bbb40e",
+   "a567c5e5cd9",
+   "acf930e22b8",
+   "ad7162a4049",
+   "a23be916ef0",
+   "a3c35331486",
+   "a11da2affdd",
+   "a2dd8a18ce2",
+   "ab10211212e",
+   "a6d8386b345",
+   "a3b84e199b5",
+   "aabaae17b99",
+   "a26c6d13a76",
+   "a8df67f84b8",
+   "af106b436ba",
+   "ac703984901",
+   "a4a363c8bf9",
+   "ac6a19220ac",
+   "a29103cec77",
+   "a9a092c6c04",
+   "a5ee929e9b2",
+   "ae538f7c5a5",
+   "ae1a1b31431",
+   "a1ad45c7bf4",
+   "a126e6fd83d",
+   "a3c1344ef90",
+   "ab06c588d7d",
+   "a387e3e76d1",
+   "abbb36ee048",
+   "a70a79f79be",
+   "ae4f2edc529",
+   "a6fc99df6d2",
+   "a8d47c641d8",
+   "aef56963c3b",
+   "a1f36631e4c",
+   "a61b1ebd5ed",
+   "a149f422cfb",
+   "a5d8bb61684",
+   "a4a9afe9164",
+   "ab92d5f5e98",
+   "a9e07735258",
+   "a77cddecad7",
+   "a58ceefcc42",
+   "a545b6783e5",
+   "a014ed407c9"
   ],
-  "new_count": 6800,
+  "new_count": 6824,
   "markets": [],
   "portwatch": []
  }
