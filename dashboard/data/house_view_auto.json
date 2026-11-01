@@ -62,7 +62,7 @@
     "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76138833,
+    "vol": 76149828,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -116,14 +116,14 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2915639,
+    "vol": 2915674,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 6.1,
+   "p": 7.7,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -133,8 +133,13 @@
      "note": "대만해협 체류 선박 30% 이상 감소 (GFW)"
     },
     {
+     "key": "sens:ioda:taiwan",
+     "f": 1.5,
+     "note": "대만 인터넷 대규모 장애 (IODA)"
+    },
+    {
      "key": "market:taiwan_quarantine",
-     "f": 0.72,
+     "f": 0.664,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -142,14 +147,14 @@
     "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45497160,
+    "vol": 45502731,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 23.9,
+   "p": 22.3,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -262,7 +267,7 @@
     "p": 94.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 19895532,
+    "vol": 20079667,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -366,7 +371,8 @@
   ],
   "ioda": [
    "europe",
-   "iran"
+   "iran",
+   "taiwan"
   ],
   "quake": [
    "iran"

@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T18:02:20Z",
+ "generated": "2026-11-01T22:13:58Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-01T18:02:20Z",
+  "at": "2026-11-01T22:13:58Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -75,13 +75,13 @@
      },
      "ac": [
       {
-       "flight": "",
-       "t": "",
+       "flight": ".A6-CJE",
+       "t": "A319",
        "role": "other",
-       "lat": 24.12,
-       "lon": 58.15,
-       "alt": 10450,
-       "reg": ""
+       "lat": 25.25,
+       "lon": 55.38,
+       "alt": "ground",
+       "reg": "A6-CJE"
       }
      ]
     },
@@ -128,34 +128,13 @@
       42.0,
       47.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "EM415",
-       "t": "B429",
-       "role": "other",
-       "lat": 41.01,
-       "lon": 28.8,
-       "alt": 950,
-       "reg": "EM-7119"
-      },
-      {
-       "flight": "TRK1",
-       "t": "B748",
-       "role": "other",
-       "lat": 40.98,
-       "lon": 28.82,
-       "alt": "ground",
-       "reg": "TC-TRK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -193,12 +172,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-01T18:02:20Z",
+  "at": "2026-11-01T22:13:58Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -389,14 +368,14 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-01T18:02:20Z",
+  "at": "2026-11-01T22:13:58Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 33,
-    "??": 21,
+    "US": 30,
+    "??": 22,
+    "DE": 7,
     "MX": 6,
-    "DE": 5,
     "GB": 3,
     "PH": 3,
     "TW": 3,
@@ -410,12 +389,12 @@
     "BD": 1
    },
    "by_group": {
-    "qilin": 19,
+    "qilin": 21,
     "safepay": 9,
     "genesis": 9,
     "SilentRansomGroup": 6,
+    "Shiba": 5,
     "everstake": 5,
-    "Booba Project": 5,
     "Whitearmor": 4,
     "rhysida": 4,
     "emperador": 4,
