@@ -1,15 +1,15 @@
-### 주간 백테스트 2026-10-31
-시계열 26개 · 사건 연구 72건 · 판단 장부 104건(판정 30건)
+### 주간 백테스트 2026-11-01
+시계열 26개 · 사건 연구 54건 · 판단 장부 104건(판정 31건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | 2.4 | None | None | None | None |
+| brent | -1.26 | None | None | None | None |
 | wheat | -0.04 | None | None | None | None |
 | gold | -3.29 | None | None | None | None |
 | dxy | -0.16 | None | None | None | None |
 | vix | 12.91 | None | None | None | None |
 | kospi | -3.48 | None | None | None | None |
-| krw | -0.18 | None | None | None | None |
+| krw | -0.22 | None | None | None | None |
 | spx | -1.82 | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
@@ -25,4 +25,4 @@
 | VIX 30 돌파 | 3 | -43.94 | -4.32 | 15.53 | - |
 | 달러인덱스 105 돌파 | 2 | 2.55 | 2.83 | 1.66 | - |
 
-판단 장부 Brier 0.172 (기저율 0.9) · 기한 경과 미판정 2건
+판단 장부 Brier 0.171 (기저율 0.87) · 기한 경과 미판정 3건
