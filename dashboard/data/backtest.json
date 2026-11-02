@@ -1,95 +1,90 @@
 {
- "generated": "2026-11-01T06:20:16Z",
+ "generated": "2026-11-02T06:21:38Z",
  "series": {
   "BZ=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "CL=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "HO=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "NG=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
-   "n": 502
-  },
-  "TTF=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "GC=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "SI=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "HG=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "ZW=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 501
   },
   "ZC=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 501
   },
   "ZS=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 501
   },
   "ZR=F": {
-   "from": "2024-11-01",
+   "from": "2024-11-04",
+   "to": "2026-10-30",
+   "n": 500
+  },
+  "SB=F": {
+   "from": "2024-11-04",
    "to": "2026-10-30",
    "n": 501
   },
-  "SB=F": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
-   "n": 502
-  },
   "KC=F": {
-   "from": "2024-11-01",
+   "from": "2024-11-04",
    "to": "2026-10-30",
-   "n": 502
+   "n": 501
   },
   "CC=F": {
-   "from": "2024-11-01",
+   "from": "2024-11-04",
    "to": "2026-10-30",
-   "n": 502
+   "n": 501
   },
   "CT=F": {
-   "from": "2024-11-01",
+   "from": "2024-11-04",
    "to": "2026-10-30",
-   "n": 502
+   "n": 501
   },
   "DX-Y.NYB": {
-   "from": "2024-11-01",
-   "to": "2026-10-30",
+   "from": "2024-11-04",
+   "to": "2026-11-02",
    "n": 502
   },
   "KRW=X": {
-   "from": "2024-10-30",
-   "to": "2026-10-31",
-   "n": 519
+   "from": "2024-11-04",
+   "to": "2026-11-02",
+   "n": 516
   },
   "^TNX": {
    "from": "2024-10-30",
@@ -102,9 +97,9 @@
    "n": 504
   },
   "^KS11": {
-   "from": "2024-10-30",
-   "to": "2026-10-30",
-   "n": 487
+   "from": "2024-11-04",
+   "to": "2026-11-02",
+   "n": 485
   },
   "^GSPC": {
    "from": "2024-10-31",
@@ -127,40 +122,40 @@
    "n": 501
   },
   "BTC-USD": {
-   "from": "2024-11-01",
-   "to": "2026-11-01",
+   "from": "2024-11-02",
+   "to": "2026-11-02",
    "n": 730
   }
  },
  "events": {
-  "n": 54,
+  "n": 69,
   "rows": [
    {
-    "d": "2026-10-30",
-    "th": "iran",
-    "t": "M",
-    "x": "UKMTO, 호르무즈 해협 유조선에 소형 보트 폭발물 2개 공격, 기관실 화재·일시 기능 상실",
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러시아, 우크라이나 대규모 드론 공격으로 정유시설 큰 피해에 테러 수사 착수",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -172,13 +167,2141 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "iran",
+    "t": "M",
+    "x": "카타르, 걸프서 자국 유조선 피격을 에너지 안보 위협하는 위험한 확전으로 규탄",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "iran",
+    "t": "M",
+    "x": "카타르 LNG 운반선, 걸프 해역서 '미확인 물체'에 피격…인명·환경 피해 없어",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "gaza",
+    "t": "S",
+    "x": "가자 전역 이스라엘 공습으로 팔레스타인인 최소 4명 사망, 텐트 화재로 소녀 2명 숨져",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "A",
+    "x": "미국, 모스크바 외곽 역사적 궁전에서 대량 인명피해 사건 위협 있다고 러시아에 경고",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "S",
+    "x": "우크라이나군, 로스토프주 러시아 다연장로켓 연료 생산 공장 타격",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "gaza",
+    "t": "A",
+    "x": "서안지구서 이스라엘군·정착민 공격으로 팔레스타인인 최소 4명 부상",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "sudan",
+    "t": "S",
+    "x": "수단 동부 전력·석유 시설에 드론 공습",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "yemen",
+    "t": "S",
+    "x": "사우디 방공망, 리야드 상공에서 드론 요격",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "A",
+    "x": "젤렌스키 \"러시아가 성직자 120명 살해\"",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "yemen",
+    "t": "S",
+    "x": "사우디 연합군, 호데이다 바질 석유시설 공습 2회…민간인 3명 부상(후티 주장)",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "iran",
+    "t": "M",
+    "x": "센트컴, 10월 31일 기준 대이란 해상봉쇄로 상선 144척 회항…조지워싱턴 항모 지원",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러시아 공습으로 크라마토르스크 시의회 건물 파괴",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "M",
+    "x": "벨기에, 불가리아에 첫 기뢰탐색함 BNS 벨리스 인도…흑해 NATO 7척 증강 시작",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러시아, 드론이 모스크바 인근 산업시설 타격 발표…우크라는 대형 정유소 타격 주장",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ethiopia",
+    "t": "S",
+    "x": "티그라이 라마서 드론 공습, 곡물 줍던 젊은 노동자 최소 12명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "ukraine",
+    "t": "M",
+    "x": "러시아 그림자 선단, 그물·고무타이어로 임시 대드론 방호",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-11-01",
+    "th": "iran",
+    "t": "M",
+    "x": "이란, 미·이스라엘의 자국 해양 인프라 공격 증거 IMO에 제출",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "S",
+    "x": "예멘군, 후티 목표 1,087회 타격·전투원 336명 무력화 주장",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ethiopia",
+    "t": "S",
+    "x": "에티오피아 티그라이서 드론 공습으로 곡물 수집하던 민간인 12명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "S",
+    "x": "예멘 정부 소재지 아덴서 폭발음 2회, 후티는 수요일 공항 외곽 타격",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러 군사위성 코스모스-2612, 우크라 상업위성 Iceye-X36 궤도 접근…美 \"위협적\"",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "gaza",
+    "t": "A",
+    "x": "칸유니스서 이스라엘군 총격 부상 8세 팔레스타인 소년 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "S",
+    "x": "사우디 연합군, 메카·메디나 상공 후티 드론 요격 발표…후티는 부인",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "iran",
+    "t": "M",
+    "x": "IRGC 위협 속 제재 대상 이란 연계 유조선 3척, 오만만 해저케이블 해역서 신호 끊어",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "M",
+    "x": "인도, 예멘 해역 요트 사건 관련 자국민 14명 상황 확인 요청",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "gaza",
+    "t": "S",
+    "x": "가자시티 텔알하와 공습 부상자 사망, 드론 공격으로 12명 부상",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ethiopia",
+    "t": "S",
+    "x": "에티오피아 북부 지역에 목요일부터 드론 공습, 어린이 포함 민간인 최소 25명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러시아 칼리닌그라드주 정전, 드론 경보 속 우파서 폭발음 보고",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "M",
+    "x": "사우디·예멘, 이란 지원 후티의 호르무즈·바브엘만데브 해운 위협 경고",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "yemen",
+    "t": "S",
+    "x": "사우디 민방위, 지잔주 위험경보 발령 수분 만에 위험 해소 발표",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "iran",
+    "t": "S",
+    "x": "이란 매체, 게심섬 남쪽서 드론이 어선 공격 보도",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "afpak",
+    "t": "A",
+    "x": "노셰라 판나코트에서 괴한 총격으로 만세라 부행정관 부상, 상태 안정",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ethiopia",
+    "t": "S",
+    "x": "에티오피아 피란민 캠프에 드론 공격, 최소 15명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ukraine",
+    "t": "M",
+    "x": "아르카스 라인, 흑해 위험으로 러시아 익스프레스 항로를 발트해로 이전",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ukraine",
+    "t": "S",
+    "x": "우크라이나, 드니프로·체르니히우·크레멘추크 러 공격에 안보리 긴급회의 요청",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "iran",
+    "t": "M",
+    "x": "오만, 유조선 선원 대피…이란은 잇단 신규 공격 주장",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-31",
+    "th": "ukraine",
+    "t": "M",
+    "x": "지중해 유조선 공격에 러시아 정부 재차 비판",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "iran",
+    "t": "M",
+    "x": "UKMTO, 호르무즈 해협 유조선에 소형 보트 폭발물 2개 공격, 기관실 화재·일시 기능 상실",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -198,25 +2321,25 @@
     "x": "우크라이나, 트럼프 압박에 정유시설 공격을 중단, 러시아 공격으로 최소 20명 사망",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -228,1133 +2351,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "afpak",
-    "t": "S",
-    "x": "파키스탄 보안군, 발루치스탄서 '인도 지원' 무장세력 드론 공격 저지",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "gaza",
-    "t": "A",
-    "x": "가자 보건부, 2025년 10월 휴전 이후 이스라엘 공격으로 1,574명 사망",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "yemen",
-    "t": "A",
-    "x": "후티가 타이즈에서 화학무기를 쓴 혐의, 지방 당국은 유엔 조사 요청",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "gaza",
-    "t": "S",
-    "x": "이스라엘 공습으로 가자 북부 할라와 캠프서 팔레스타인인 1명 사망",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "M",
-    "x": "짐(Zim), 불가리아 앞 흑해에서 공격받은 컨테이너선 손실 확인",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "yemen",
-    "t": "M",
-    "x": "레드시벙커링, 지부티 항만서 VLSFO 공급 재개",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "M",
-    "x": "흑해 불가리아 앞바다서 그리스 컨테이너선 드론 3기 피격 침몰…러시아제 추정",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "iran",
-    "t": "M",
-    "x": "걸프·오만만 29개 항만 벌크선 265척 대기, 푸자이라 74척(28%) 최다",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ethiopia",
-    "t": "S",
-    "x": "티그라이 라마 일대 공습 3일째 보고",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티, 사우디 공항·석유시설 6차례 공격 주장, 테헤란서 이란-메카 협정국 회담 직후",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "iran",
-    "t": "S",
-    "x": "KAN, 미국이 대이란 작전 대비해 군 수송기 10대를 네게브 오브다·네바팀 기지로 보냈다고 보도",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티, 라스타누라·라비그 정유소·압까이크 등 사우디 6곳 공격 주장",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러시아의 체르니히우 공습으로 15세 소녀 2명 사망, 25명 부상",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "M",
-    "x": "미국으로 경유 운송 중인 러시아 유조선 7척 식별·위치 확인",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "sudan",
-    "t": "S",
-    "x": "신속지원군(RSF), 수단 블루나일주 금광에 드론 공격",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ethiopia",
-    "t": "A",
-    "x": "에티오피아서 기독교인 최소 60명 피살, 가옥 20여채 방화…반군·지방정부 상호 책임 전가",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러 공습으로 드니프로페트로우스크주 20만명 정전, 국지휴전 따라 올레시키에 구호차량 진입",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "S",
-    "x": "우크라 드론 공격 재개로 러 정유소 피격…러, 드론 1000여대 요격 주장",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "sudan",
-    "t": "A",
-    "x": "CIR 조사, 수단 전시 성폭력 5개 현장 관련 지휘관 25명 특정",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러 점령 자포리자 원전서 드론 공격으로 작업자 1명 사망 보도",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1374,25 +2377,25 @@
     "x": "우크라 해군, 넵튠 미사일로 비행장 공격해 러 Su-34 2대 파괴 발표",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1404,13 +2407,1133 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "yemen",
+    "t": "A",
+    "x": "후티가 타이즈에서 화학무기를 쓴 혐의, 지방 당국은 유엔 조사 요청",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "afpak",
+    "t": "S",
+    "x": "파키스탄 보안군, 발루치스탄서 '인도 지원' 무장세력 드론 공격 저지",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "gaza",
+    "t": "A",
+    "x": "가자 보건부, 2025년 10월 휴전 이후 이스라엘 공격으로 1,574명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "gaza",
+    "t": "S",
+    "x": "이스라엘 공습으로 가자 북부 할라와 캠프서 팔레스타인인 1명 사망",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "M",
+    "x": "짐(Zim), 불가리아 앞 흑해에서 공격받은 컨테이너선 손실 확인",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "yemen",
+    "t": "M",
+    "x": "레드시벙커링, 지부티 항만서 VLSFO 공급 재개",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "M",
+    "x": "흑해 불가리아 앞바다서 그리스 컨테이너선 드론 3기 피격 침몰…러시아제 추정",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "iran",
+    "t": "M",
+    "x": "걸프·오만만 29개 항만 벌크선 265척 대기, 푸자이라 74척(28%) 최다",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ethiopia",
+    "t": "S",
+    "x": "티그라이 라마 일대 공습 3일째 보고",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "yemen",
+    "t": "S",
+    "x": "후티, 사우디 공항·석유시설 6차례 공격 주장, 테헤란서 이란-메카 협정국 회담 직후",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "iran",
+    "t": "S",
+    "x": "KAN, 미국이 대이란 작전 대비해 군 수송기 10대를 네게브 오브다·네바팀 기지로 보냈다고 보도",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "yemen",
+    "t": "S",
+    "x": "후티, 라스타누라·라비그 정유소·압까이크 등 사우디 6곳 공격 주장",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러시아의 체르니히우 공습으로 15세 소녀 2명 사망, 25명 부상",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "M",
+    "x": "미국으로 경유 운송 중인 러시아 유조선 7척 식별·위치 확인",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "sudan",
+    "t": "S",
+    "x": "신속지원군(RSF), 수단 블루나일주 금광에 드론 공격",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ethiopia",
+    "t": "A",
+    "x": "에티오피아서 기독교인 최소 60명 피살, 가옥 20여채 방화…반군·지방정부 상호 책임 전가",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러 공습으로 드니프로페트로우스크주 20만명 정전, 국지휴전 따라 올레시키에 구호차량 진입",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "S",
+    "x": "우크라 드론 공격 재개로 러 정유소 피격…러, 드론 1000여대 요격 주장",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "sudan",
+    "t": "A",
+    "x": "CIR 조사, 수단 전시 성폭력 5개 현장 관련 지휘관 25명 특정",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
+   {
+    "d": "2026-10-30",
+    "th": "ukraine",
+    "t": "S",
+    "x": "러 점령 자포리자 원전서 드론 공격으로 작업자 1명 사망 보도",
+    "moves": {
+     "brent": {
+      "d1": -6.58,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -0.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": 0.62,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": -0.05,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": null,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": 2.78,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1430,25 +3553,25 @@
     "x": "KP주 바자우르서 테러범 경찰초소 공격, 경찰관 1명 사망",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1460,13 +3583,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1486,25 +3609,25 @@
     "x": "후티, 사우디 라스타누라·라비그 정유소와 아브카이크 아람코 시설 공격 주장",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1516,13 +3639,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1542,25 +3665,25 @@
     "x": "오만 해군, 무산담 앞바다 선박에서 선원 25명 대피",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1572,13 +3695,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1598,25 +3721,25 @@
     "x": "이스라엘군 총격에 머리 맞은 팔레스타인 아동 이마드 살렘 자흐라 생존",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1628,13 +3751,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1654,25 +3777,25 @@
     "x": "예멘 내 난민, 분쟁·이주·위험한 이동 사이에 갇혀",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1684,13 +3807,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1710,25 +3833,25 @@
     "x": "보도: 신베트, 하마스 대원에 단독 또는 가족과 함께 살해될지 선택하게 해",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1740,13 +3863,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1766,25 +3889,25 @@
     "x": "우크라 총참모부, 러 쿠르스크주서 이스칸데르-M 발사대 파괴",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1796,13 +3919,13 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1822,25 +3945,25 @@
     "x": "유엔, 팔레스타인 아동 대상 연령 기반 박해 확인",
     "moves": {
      "brent": {
-      "d1": null,
+      "d1": -6.58,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "wheat": {
-      "d1": null,
+      "d1": -0.21,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "gold": {
-      "d1": null,
+      "d1": 0.62,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "dxy": {
-      "d1": null,
+      "d1": -0.05,
       "d5": null,
       "d20": null,
       "d60": null
@@ -1852,1307 +3975,19 @@
       "d60": null
      },
      "kospi": {
-      "d1": null,
+      "d1": 2.78,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "krw": {
-      "d1": -0.22,
+      "d1": 0.3,
       "d5": null,
       "d20": null,
       "d60": null
      },
      "spx": {
       "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ethiopia",
-    "t": "S",
-    "x": "에티오피아 암하라주 드론 공습으로 어린이 포함 14명 사망(목격자)",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-30",
-    "th": "ukraine",
-    "t": "M",
-    "x": "불가리아 앞바다서 드론 공격 받은 선박 침몰, 흑해 위기로 NATO 개입 우려",
-    "moves": {
-     "brent": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.22,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": null,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러시아 드론, 드니프로 기차역 타격해 최소 13명 사망…젤렌스키 대러 제재 유지 촉구",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "yemen",
-    "t": "S",
-    "x": "리야드 공항 공격, 역내·역외에 대한 경고라는 분석",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "yemen",
-    "t": "M",
-    "x": "BofA \"홍해 컨테이너 통항 정상 대비 65%로 회복\"…9월 50%",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "iran",
-    "t": "S",
-    "x": "WSJ \"미국, 11월 3일 중간선거 후 이란 단기 집중 공격 대비하라고 걸프국에 경고\"",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "gaza",
-    "t": "A",
-    "x": "요르단강 서안 4개 주서 12시간 동안 이스라엘의 농민 공격 7건 보고",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "gaza",
-    "t": "S",
-    "x": "이스라엘, 라파 알마와시 경제부 시설 공습…팔레스타인인 3명 사망·10명 부상",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "iran",
-    "t": "S",
-    "x": "WSJ 보도: 미국, 중간선거 이후 이란에 강도 높은 공습을 하겠다고 걸프국에 경고",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "sudan",
-    "t": "S",
-    "x": "수단 남다르푸르 니알라 시장 드론 공격으로 어린이 5명 사망·2명 부상",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "sudan",
-    "t": "S",
-    "x": "수단, 에티오피아가 민간 기반시설·발전소에 드론 공격했다고 비난",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러시아, 우크라 모스크바 '대규모' 드론 공격 후 전쟁 '지속돼야' 밝혀",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "iran",
-    "t": "S",
-    "x": "IRGC, 호르무즈 해협 동쪽 상공서 미국산 MQ-1 드론 격추 주장",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "yemen",
-    "t": "S",
-    "x": "사우디 연합군, 동부 향한 후티 탄도미사일 격추…나즈란·동부주 경보",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "gaza",
-    "t": "A",
-    "x": "서안 움알카이르서 이스라엘 정착민이 미국 기자·활동가 폭행 혐의",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "yemen",
-    "t": "M",
-    "x": "후티 감시 속 연료유 10만t 방글라데시 도착",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "gaza",
-    "t": "S",
-    "x": "이스라엘 드론, 가자시티 알사프타위 지역 공습…사상자 다수, 규모 미확인",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "gaza",
-    "t": "S",
-    "x": "이스라엘 드론, 가자 중부 마가지 난민촌 차량 공습…2명 사망",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티 매체: 예멘 도바브·모카 지역에 연쇄 공습",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "sudan",
-    "t": "S",
-    "x": "수단 청나일주 금광·시설에 드론 공격",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "sudan",
-    "t": "S",
-    "x": "RSF 드론 공습으로 북다르푸르 카르노이 지역서 5명 사망",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "sudan",
-    "t": "S",
-    "x": "드론 공격으로 수단 움다바케르 발전소 피격, 2개 주 전력 차단",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-10-29",
-    "th": "ukraine",
-    "t": "S",
-    "x": "흑해서 화물선 드론 피격, 불가리아 해군이 선원 18명 구조",
-    "moves": {
-     "brent": {
-      "d1": -1.26,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -3.29,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": -0.16,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 12.91,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -3.48,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.18,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -1.82,
       "d5": null,
       "d20": null,
       "d60": null
@@ -3163,7 +3998,7 @@
   "summary": {
    "brent": {
     "d1": {
-     "median": -1.26,
+     "median": -6.58,
      "hit_up": 0.0
     },
     "d5": {
@@ -3181,7 +4016,7 @@
    },
    "wheat": {
     "d1": {
-     "median": -0.04,
+     "median": -0.21,
      "hit_up": 0.0
     },
     "d5": {
@@ -3199,8 +4034,8 @@
    },
    "gold": {
     "d1": {
-     "median": -3.29,
-     "hit_up": 0.0
+     "median": 0.62,
+     "hit_up": 1.0
     },
     "d5": {
      "median": null,
@@ -3217,7 +4052,7 @@
    },
    "dxy": {
     "d1": {
-     "median": -0.16,
+     "median": -0.05,
      "hit_up": 0.0
     },
     "d5": {
@@ -3235,8 +4070,8 @@
    },
    "vix": {
     "d1": {
-     "median": 12.91,
-     "hit_up": 1.0
+     "median": null,
+     "hit_up": null
     },
     "d5": {
      "median": null,
@@ -3253,8 +4088,8 @@
    },
    "kospi": {
     "d1": {
-     "median": -3.48,
-     "hit_up": 0.0
+     "median": 2.78,
+     "hit_up": 1.0
     },
     "d5": {
      "median": null,
@@ -3271,8 +4106,8 @@
    },
    "krw": {
     "d1": {
-     "median": -0.22,
-     "hit_up": 0.0
+     "median": 0.3,
+     "hit_up": 1.0
     },
     "d5": {
      "median": null,
@@ -3289,8 +4124,8 @@
    },
    "spx": {
     "d1": {
-     "median": -1.82,
-     "hit_up": 0.0
+     "median": null,
+     "hit_up": null
     },
     "d5": {
      "median": null,
@@ -3374,7 +4209,7 @@
    "median_self_60": -22.33,
    "median_brent_60": -22.33,
    "median_spx_60": 5.35,
-   "active_now": true
+   "active_now": false
   },
   {
    "id": "brent_85",
@@ -3385,13 +4220,13 @@
    "episodes": 4,
    "rows": [
     {
-     "d": "2024-11-01",
-     "v": 73.1,
-     "self_20": -1.74,
-     "self_60": 5.16,
-     "brent_60": 5.16,
-     "wheat_60": -0.26,
-     "spx_60": 5.44
+     "d": "2024-11-04",
+     "v": 75.08,
+     "self_20": -1.94,
+     "self_60": 2.24,
+     "brent_60": 2.24,
+     "wheat_60": -1.63,
+     "spx_60": 4.93
     },
     {
      "d": "2026-06-15",
@@ -3533,38 +4368,6 @@
    "median_brent_60": null,
    "median_spx_60": null,
    "active_now": false
-  },
-  {
-   "id": "ttf_100",
-   "title": "유럽 TTF 가스 100유로/MWh 돌파",
-   "sym": "TTF=F",
-   "op": ">",
-   "value": 100,
-   "episodes": 2,
-   "rows": [
-    {
-     "d": "2026-10-28",
-     "v": 100.72,
-     "self_20": null,
-     "self_60": null,
-     "brent_60": null,
-     "wheat_60": null,
-     "spx_60": null
-    },
-    {
-     "d": "2026-10-30",
-     "v": 103.944,
-     "self_20": null,
-     "self_60": null,
-     "brent_60": null,
-     "wheat_60": null,
-     "spx_60": null
-    }
-   ],
-   "median_self_60": null,
-   "median_brent_60": null,
-   "median_spx_60": null,
-   "active_now": true
   },
   {
    "id": "wheat_800",

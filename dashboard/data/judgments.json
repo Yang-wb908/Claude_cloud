@@ -1,5 +1,5 @@
 {
- "asof": "2026-10-31",
+ "asof": "2026-11-02",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -134,9 +134,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): 10월 말이 지났는데 전면 휴전은 없었고, 공습과 드론 공격도 계속되고 있다. 헤르손 국지 휴전도 러시아가 연장을 거부해 끝날 예정이어서 '휴전으로 이어지지 않는다'는 핵심 판단은 맞았다. 겨울까지 교착이 이어질지는 아직 판정할 수 없다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -174,6 +174,11 @@
       "튀르키예나 루마니아가 흑해 항행 안전 메커니즘 재가동 또는 보증국 역할을 공식 발표"
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://www.france24.com/en/europe/20261101-localised-ceasefire-in-ukraine-s-kherson-region-set-to-end",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWmx4djdfS3JLS2hBRXhsZHllZTFQYng5c1NCeW80MlE0VTJsbmRQUjFOZmdPOTRid1NyZUZqbUpsNGZkOVBuR0MwdzNkVGNlU01LX3JwYmVEQUNfdjFRU0VlTXZaMTcwdEp0M2ljUWU0eG9MbkRzWTBjcm03bXhaTXdleXlmX0NJV3lnYlo4M0M1c2c0MEFhTExwSmZsN0FlcDdtYjlZWk13Z0FhUkhlcmhJTndlQmZvb3c?oc=5"
    ]
   },
   {
@@ -456,9 +461,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.yemen",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): 판단 후 약 4주가 지난 11월 초에도 타이즈·알자우프 교전과 연합군의 대규모 타격, 후티의 사우디 본토 공격이 계속되고 있습니다. 휴전안 보도는 있었지만 합의로 이어지지 않아 단기 결판 없이 전쟁이 길어지는 흐름이 확인됩니다.",
    "dissent": [
     {
      "d": "2026-10-27",
@@ -472,6 +477,12 @@
       "사우디와 후티 사이 오만 경유 휴전·포로교환 채널이 재가동됨"
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNenhhUHQyVFkxbGxKeTJnTW5NYTlFc3YyYzZ6Y2xtVmJlUF9oMzVHdDNNM09vOXBIM3RJVVZWWVpwNGJ3SF83SFUwbVFkYURESm80ZFJJZDhoczBvREYtYnZPdFNKV2VaYXMxNTZFblg5OUoxcWFoU3kyWnpNdU9fWmhnX2Z4X19QenFzMWN4cjF1Y2RoUDRzMEEtYnpkd1M5eE8tZU13Q3ZVTmlnRlJLOThNWnJTNGtrZFEwY25IWWVqRktYTEtDVQ?oc=5",
+    "https://news.un.org/feed/view/en/story/2026/10/1168706",
+    "https://www.aljazeera.com/news/2026/10/29/fighting-rages-near-yemens-taiz-as-un-urges-humanitarian-access?traffic_source=rss"
    ]
   },
   {
@@ -820,9 +831,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.drc",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): 10월 26일 보도에 따르면 에볼라가 케냐와 나이지리아로 번졌고, 미 CDC는 발병이 통제되지 않는다고 경고했습니다. 분쟁지역을 넘어 역내로 확산됐다는 판단과 맞으며, 백신 임상시험도 시작돼 백신이 핵심 변수로 부각됐습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE9sT0xEamlXM09fY1g3MC1CMzI2R3k4MjN6UmdyUjhCd1JGcG8tTUVHdDA3VEpwYXRQRURic1U0SmYzdzV4Q0RmRklnekdzRUs5bFRkbjZpMlI5YXZibHkzbmF0enU4UWM0LVdN?oc=5",
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxQLW5DY25ia1d2WEJuV0VnNHpGZnd1X0VqbmVGb1FNbWtkWWFlYjRvS2NKTHZmYWtjZ3JqTDlJc010S3dPNlVLYUJRRTZ5MUNoYzlnQnZnZHZFUDJMbDZ1T0NQQ2gtRHY2X1ZuQ2VyYVpFbUVXUFdDajgyaVNsS1k5WDF3RHVUN1Z1V1pHNllDQnJUT3fSAZgBQVVfeXFMUFFVX01aQjJoa0w5c0NHY3BVeHdBc0ZkNUdUMFNUak5fNWR6YURhbjhNNFcwRGZmVWdQWTN1RUM0TUI0QXpTZHUzbGM4cjM3bWRpenhnQmNnX18tWFpWbExPcF9ucUUzMWh2RG8yaElPbHJVMlNCQm5iV21MQ0Z6YmhlaldYQ2wzQU43NlhUWE5IcG8wem43N0k?oc=5",
+    "http://www.africanews.com/2026/10/24/new-tumaini-ebola-vaccine-trial-launches-in-bunia-as-drc-struggles/"
+   ]
   },
   {
    "id": "th-drc-2",
@@ -963,9 +980,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.carib",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): 10월 27일 동태평양 마약선 공습으로 5명이 사망해 2025년 9월 이후 누적 사망자가 243명에 이르렀고, 승조원 체포 후 선박을 폭파하는 방식으로 전술도 바뀌었다. 공습이 상시 작전으로 굳어졌다는 판단은 맞았다. 베네수엘라와는 원유 도입과 '51번째 주' 발언 등 관여가 이어졌지만 임시정부와의 회담을 직접 보여주는 근거가 없어 신뢰도를 보통으로 둔다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/10/27/us-says-it-killed-five-people-in-strike-on-alleged-drug-boat?traffic_source=rss",
+    "https://news.usni.org/2026/10/27/u-s-forces-kill-5-in-strike-on-suspected-narco-boat",
+    "https://en.mercopress.com/2026/10/28/trump-suggests-venezuela-become-the-51st-us-state-and-elect-a-governor?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss"
+   ]
   },
   {
    "id": "th-carib-2",
@@ -1032,9 +1055,14 @@
    "cm": "energy",
    "due": "2026-12-31",
    "src": "INTEL.cm.energy",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): TTF는 103.94유로로 100유로 트립와이어를 넘으며 판단 시점의 75유로보다 크게 올랐습니다. HH는 2.90달러로 떨어져 TTF 상방과 HH-TTF 스프레드 확대가 실제로 나타났고, 카타르 LNG선 피격도 상방 요인으로 작용했습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.aljazeera.com/news/2026/11/1/qatar-lng-carrier-struck-by-unidentified-objects-in-gulf?traffic_source=rss",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/qatar-condemns-tanker-attack-gulf-threat-global-energy-security"
+   ]
   },
   {
    "id": "cm-energy-5",
@@ -1340,9 +1368,9 @@
    "src": "IW.theaters.bio",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 제공된 사건 목록에는 러시아가 사망자의 병원체 검사 결과를 WHO에 공유했다거나 공유하지 않았다는 직접적인 보도가 없다. 10월 29일 페스트 실험실 유출 가능성 기사만으로는 러시아와 관련이 있는지, WHO에 공유했는지 확인할 수 없어 판정을 보류한다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-07"
+   "note": "판정 보류: 제공된 사건 중 러시아 병원체 검사 결과를 WHO에 공유했는지에 관한 보도가 없다. 기한(10/31)은 지났지만, 공유했는지 안 했는지 확인할 근거가 없어 판정을 보류한다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-09"
   },
   {
    "id": "th-latam-1",
@@ -1355,11 +1383,16 @@
    "conf": "낮음",
    "due": "2026-10-25",
    "src": "IW.theaters.latam",
-   "outcome": null,
-   "resolved": null,
-   "note": "판정 보류: 10/25 결선 관련 근거는 투표 시간 연장과 실시간 개표 기사 제목뿐이고, 당선자가 누구인지는 제공된 근거에 나오지 않는다.",
+   "outcome": 0,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(높음): 10/25 결선에서 룰라가 이겼다는 보도가 여럿이다. 따라서 플라비우 볼소나루가 승리한다는 판단은 빗나갔다. 판단에서 대등하다고 본 확률이 아니라, 볼소나루가 실제로 이겼는지로 판정했다.",
    "auto_tries": 2,
-   "auto_next": "2026-11-02"
+   "auto_next": "2026-11-02",
+   "by": "auto",
+   "evidence": [
+    "https://en.mercopress.com/2026/10/26/brazil-s-real-plunges-more-than-8-and-s-o-paulo-stocks-slump-after-lula-s-victory?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss",
+    "https://www.mining.com/lulas-brazil-win-puts-rare-earths-in-trumps-crosshairs/"
+   ]
   },
   {
    "id": "th-latam-2",
@@ -1497,9 +1530,15 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(보통): 판단 후 25일이 지난 11월 2일에도 도하 재개방 협상은 타결되지 않았고, 하루 통항은 2척에 그치며 공격도 계속되고 있습니다. 기한(11-07) 안에 통항이 복원되고 공급 프리미엄이 급락하기는 사실상 불가능합니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.theguardian.com/world/2026/nov/01/negotiators-braced-for-worst-over-us-iran-talks-to-reopen-strait-of-hormuz",
+    "https://www.hellenicshippingnews.com/dry-bulk-shipping-escalating-attacks-on-ships-heighten-uncertainty/",
+    "https://oilprice.com/Energy/Oil-Prices/Oil-Traders-Brace-for-a-Wild-Week-as-Brent-Approaches-120.html"
+   ]
   },
   {
    "id": "scn-hormuz_war-2026-10-08",
@@ -1670,9 +1709,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 기한(2026-10-18)은 지났지만 수집된 사건 목록이 비어 있어 멕시코만 허리케인 상륙이나 정유·LNG·비료 터미널 가동 중단을 확인하거나 반증할 근거가 없습니다. 난방유(-2.8%)·휘발유(+0.4%) 시세 변동도 허리케인 영향을 가리키지 않아 판정을 보류합니다.",
-   "auto_tries": 3,
-   "auto_next": "2026-11-02"
+   "note": "자동 판정 불가 — 분석관 판정 필요",
+   "auto_tries": 4,
+   "auto_next": "2026-11-09"
   },
   {
    "id": "scn-ethiopia_war-2026-10-08",
@@ -1721,9 +1760,14 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(높음): 결선에서 룰라가 승리해 플라비우 볼소나루 당선 시나리오는 일어날 수 없게 확정됐다.",
+   "by": "auto",
+   "evidence": [
+    "https://en.mercopress.com/2026/10/26/brazil-s-real-plunges-more-than-8-and-s-o-paulo-stocks-slump-after-lula-s-victory?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss",
+    "https://www.mining.com/lulas-brazil-win-puts-rare-earths-in-trumps-crosshairs/"
+   ]
   },
   {
    "id": "scn-brazil_lula_win-2026-10-08",
@@ -1736,9 +1780,14 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-02",
+   "note": "자동 판정(높음): 룰라가 재선됐다. 승리 직후 헤알화가 8% 넘게 급락했고 BRL=X도 +8.5%를 기록해 시나리오에 적힌 헤알화 약세까지 실제로 나타났다.",
+   "by": "auto",
+   "evidence": [
+    "https://en.mercopress.com/2026/10/26/brazil-s-real-plunges-more-than-8-and-s-o-paulo-stocks-slump-after-lula-s-victory?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss",
+    "https://www.mining.com/lulas-brazil-win-puts-rare-earths-in-trumps-crosshairs/"
+   ]
   },
   {
    "id": "scn-chile_escondida_strike-2026-10-08",
