@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 66.0,
+   "p": 65.9,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -33,7 +33,7 @@
   },
   {
    "id": "hormuz_war",
-   "p": 20.8,
+   "p": 20.9,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -49,15 +49,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.928,
-     "note": "예측시장 16% (가중 0.10)"
+     "f": 0.935,
+     "note": "예측시장 18% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 16.5,
+    "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76612167,
+    "vol": 76638804,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -96,21 +96,21 @@
   },
   {
    "id": "blacksea_deal",
-   "p": 20.6,
+   "p": 22.8,
    "k": 1,
    "prior": 30.0,
    "evidence": [
     {
      "key": "market:blacksea_deal",
-     "f": 0.607,
-     "note": "예측시장 8% (가중 0.30)"
+     "f": 0.689,
+     "note": "예측시장 11% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 7.5,
+    "p": 11.0,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2916515,
+    "vol": 2925484,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -136,7 +136,7 @@
     "p": 1.9,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45529968,
+    "vol": 45537601,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -163,10 +163,24 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 25.0,
+   "p": 43.8,
    "k": 1,
    "prior": 25.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "market:fed_hawkish",
+     "f": 2.334,
+     "note": "예측시장 74% (가중 0.40)"
+    }
+   ],
+   "market": {
+    "p": 73.5,
+    "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
+    "vol": 2595826,
+    "end": "2026-12-09",
+    "w": 0.4
+   }
   },
   {
    "id": "elnino_super",
@@ -242,21 +256,21 @@
   },
   {
    "id": "dem_house_win",
-   "p": 85.0,
+   "p": 86.3,
    "k": 1,
    "prior": 65.0,
    "evidence": [
     {
      "key": "market:dem_house_win",
-     "f": 3.042,
-     "note": "예측시장 94% (가중 0.50)"
+     "f": 3.38,
+     "note": "예측시장 96% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 94.5,
+    "p": 95.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 21335334,
+    "vol": 22265634,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -334,16 +348,16 @@
  ],
  "review": [
   {
-   "id": "blacksea_deal",
-   "house": 30.0,
-   "market": 7.5,
-   "q": "Ukraine signs peace deal with Russia before 2027?",
-   "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
+   "id": "fed_hawkish",
+   "house": 25.0,
+   "market": 73.5,
+   "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+   "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
   },
   {
    "id": "dem_house_win",
    "house": 65.0,
-   "market": 94.5,
+   "market": 95.5,
    "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
    "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
   }
@@ -372,9 +386,6 @@
    "scs",
    "southasia",
    "taiwan"
-  ],
-  "adsb": [
-   "gaza"
   ]
  },
  "market_skill": 1.0,
@@ -392,7 +403,6 @@
   "kev_edge",
   "korea_missile",
   "maritime_attacks",
-  "mil_air_surge",
   "quake_near_site"
  ],
  "market_record": {
