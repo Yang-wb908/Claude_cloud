@@ -1,29 +1,83 @@
 {
- "generated": "2026-11-02T06:27:40Z",
+ "generated": "2026-11-02T13:13:51Z",
  "days": 3,
- "unmapped_total": 2,
- "max_cluster": 2,
+ "unmapped_total": 7,
+ "max_cluster": 3,
  "max_key": "topic:China",
  "clusters": [
   {
    "key": "topic:China",
+   "n": 3,
+   "domains": 2,
+   "types": {
+    "E": 1,
+    "D": 1,
+    "M": 1
+   },
+   "since": "2026-11-02",
+   "sample": [
+    {
+     "d": "2026-11-02",
+     "title": "China holds US Navy hostage: The secret November 10 ultimatum for the unprecedented submarine nightmare",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQSXhreEtYOW00eTFYV0ZxLUFWYy14aU5ua21iYjVXYjlPS1kwMk1Wb1IxYk1vd3kwWG9FRDFhUUwxQ0lOVGhidFZlUTc5aks0Z241LVdpclU1dHpFcERXOXNJRjJVMGljU2tDRW9GVnk0N3VLUWpEdmh2R3ZuTV8wVFl5eDNETUtBUS1sd2dwdjlLRjhOa1B0SGw5bW8zSDNQMTc2NjJHdDRXVEpDQkFMNWp6cGNBMnhTdEJuMi13ajJUWjh1ZERlajhTMEtVZ2FSZUwxUnlhSHBPWHM2aFZNcEk5WU1LYlV6?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-02",
+     "title": "China has likely resumed making weapon-grade uranium at Emeishan",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSC1NbnNfaUJxSTJpOXZPbGd6SFNDb05hbExzRWYyejRoRVh3QUVKODl3b2tfcmdDcEtSVkpZdklmN1BwdmZYdUVjM1lQQWFjVkUyTkpTR0F1QU1FSTFISlZGQkRKRlJmY0FtWi1mTm5IUmpLZkNpTmJuOHdnS2V3Q1BfekR4VWVZYm1hTWkwSk10S2U0bkdGYm9RRTB0Zw?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-02",
+     "title": "China’s Message to Its Rivals: You Need What We Make",
+     "url": "https://www.nytimes.com/2026/11/02/world/asia/china-us-exports-ai-solar.html",
+     "domain": "nytimes.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:TotalEnergies",
    "n": 2,
    "domains": 2,
    "types": {
     "E": 2
    },
-   "since": "2026-11-01",
+   "since": "2026-11-02",
    "sample": [
     {
      "d": "2026-11-02",
-     "title": "China’s Message to Its Rivals: You Need What We Make",
-     "url": "https://www.nytimes.com/2026/11/02/world/asia/chinas-message-to-its-rivals-you-need-what-we-make.html",
-     "domain": "nytimes.com"
+     "title": "TotalEnergies to Acquire 30% Stake in Two Major Malaysian Gas Fields",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/TotalEnergies-to-Acquire-30-Stake-in-Two-Major-Malaysian-Gas-Fields.html",
+     "domain": "oilprice.com"
     },
     {
-     "d": "2026-11-01",
-     "title": "How China’s mineral export controls could put $6.5 trillion in output at risk",
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQakI4d1JTdDEwTWdfVmtxTkxPX293WElqdHR5bmJKMzV6Sm5UM01YcG9IWmFSU3hKOE1ZSmR0WjhjNV9hNTEweDcxMy1ZT1hIWlJuOF82WjFaWkdwRFNpa19ocmUxQk5idmRhbkE4d1poR3M5UXVfeVZpbHRra2FtX0YyVnpJZFZsMmVWSk1TeTk3Rk5WaFZRR2dQVWI4NmJTSDI5QXc4UkZkMEZmVzBR?oc=5",
+     "d": "2026-11-02",
+     "title": "TotalEnergies buys stake in Malaysia gas fields",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNcnJfcHZjdjNyMC1sejFkb1pFY29KWW8zeGIweHFDV25oaExxNUZIdXdscEhrSWFTUW1US01ISDJCTXR2eVBXak9Vb2NrdThiMTJZNFY1dXFMWXZVd3dmV2E5ZVczMEgzeF82cFg0cXVrTUphc192WmJpRlpZZ0tieF9iUXJLYktOZ3I4OHNVRGFiMXRfMHpKRy1lc0VqSlE2SEMxRW5acXF4V2VNNGhTamlhalM1SkFLOGFF?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Japan",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-02",
+   "sample": [
+    {
+     "d": "2026-11-02",
+     "title": "EU steps up subsea cable buildout to Japan and South Korea",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORUwtVDdWbDhyU0V0VGJjQm1nWUkwMy1LcEZsZGNnZC1vTVhTZGpVZFFSUUM4QTlBN3ZrMmhnSGhXWGNsM1RKV1FhSVJRbDFFVFg5eUJSQ2sxcWtFcU5pdjVXdFBSRDd1bGF1SnFKb29LZkEyZTFKMjQ5aWVQMUFMdjdrNGpDQUVSTjZMYkRTRnVxRnZuZDFPU2JDWXhSa2dlTGZycDhFV01qS3UzSXc?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-02",
+     "title": "Japan's Sojitz to import rare earth yttrium from Malaysia — report",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOX3VOUTRTODBfR3dOdzkyRXpTbTZZRzluYmVxTjZWR0EyajZkOWw1MDkyaDRZZ2JiSzZFRzJ2bHZaYzltdk5sZ2M1YnJHRGplemgxdTFnXy01T3EtSnFzalBvb2tFUFlXUUpwd05yTjlWLUl2aWNBRzkwVURQTWU3UWVicFRraGVpSlJRaUJyRi1DQnlJdlh6bzV1Y240RGw4NTFZWHdNWmU3ZXlXcG1GS1BIdzQ?oc=5",
      "domain": "news.google.com"
     }
    ]
