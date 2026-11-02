@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-01T22:13:58Z",
+ "generated": "2026-11-02T06:27:57Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-01T22:13:58Z",
+  "at": "2026-11-02T06:27:57Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,43 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 3,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3
+     },
+     "ac": [
+      {
+       "flight": "KNP973",
+       "t": "SURN",
+       "role": "other",
+       "lat": 37.29,
+       "lon": 126.87,
+       "alt": 1275,
+       "reg": "973"
+      },
+      {
+       "flight": "CATS09",
+       "t": "BE20",
+       "role": "other",
+       "lat": 37.09,
+       "lon": 127.05,
+       "alt": 0,
+       "reg": "84-00157"
+      },
+      {
+       "flight": "CATS82",
+       "t": "BE20",
+       "role": "other",
+       "lat": 37.1,
+       "lon": 127.15,
+       "alt": 1600,
+       "reg": "84-00181"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,23 +95,69 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 6,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "airlift": 2,
+      "other": 4
      },
      "ac": [
       {
-       "flight": ".A6-CJE",
-       "t": "A319",
+       "flight": "MBK01",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 29.15,
+       "lon": 47.64,
+       "alt": 3875,
+       "reg": "KAF328"
+      },
+      {
+       "flight": "BAH17",
+       "t": "GA6C",
        "role": "other",
-       "lat": 25.25,
-       "lon": 55.38,
+       "lat": 26.34,
+       "lon": 50.64,
+       "alt": 8650,
+       "reg": "A9C-BRN"
+      },
+      {
+       "flight": "",
+       "t": "AS50",
+       "role": "other",
+       "lat": 25.18,
+       "lon": 51.29,
+       "alt": 875,
+       "reg": "QA334"
+      },
+      {
+       "flight": "AUH08",
+       "t": "B77W",
+       "role": "other",
+       "lat": 24.5,
+       "lon": 54.74,
+       "alt": 5925,
+       "reg": "A6-PFK"
+      },
+      {
+       "flight": "YASAT11",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 25.11,
+       "lon": 56.15,
+       "alt": 6925,
+       "reg": "1208"
+      },
+      {
+       "flight": "MJN558",
+       "t": "GLF4",
+       "role": "other",
+       "lat": 23.6,
+       "lon": 58.27,
        "alt": "ground",
-       "reg": "A6-CJE"
+       "reg": "558"
       }
      ]
     },
@@ -111,13 +187,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "CHLE1D",
+       "t": "PC21",
+       "role": "other",
+       "lat": 32.38,
+       "lon": 36.07,
+       "alt": 16775,
+       "reg": "1176"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -145,13 +233,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "FNF351",
+       "t": "C295",
+       "role": "other",
+       "lat": 54.7,
+       "lon": 11.38,
+       "alt": 22000,
+       "reg": "CC-2"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -172,12 +272,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 11
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-01T22:13:58Z",
+  "at": "2026-11-02T06:27:57Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -368,11 +468,11 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-01T22:13:58Z",
+  "at": "2026-11-02T06:27:57Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 30,
+    "US": 29,
     "??": 22,
     "DE": 7,
     "MX": 6,
@@ -384,9 +484,9 @@
     "AR": 2,
     "MY": 2,
     "IT": 2,
+    "ID": 1,
     "TR": 1,
-    "HU": 1,
-    "BD": 1
+    "HU": 1
    },
    "by_group": {
     "qilin": 21,
@@ -406,9 +506,9 @@
  "summary": {
   "adsb_surge": 0,
   "kev_week": 10,
-  "kev_edge_3d": 3,
+  "kev_edge_3d": 2,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 3
+  "events": 2
  }
 }

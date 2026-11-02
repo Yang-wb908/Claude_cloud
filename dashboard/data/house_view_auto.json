@@ -62,14 +62,14 @@
     "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76149828,
+    "vol": 76284446,
     "end": "2027-01-01",
     "w": 0.1
    }
   },
   {
    "id": "redsea_houthi",
-   "p": 31.4,
+   "p": 34.4,
    "k": 1,
    "prior": 25.0,
    "evidence": [
@@ -77,12 +77,17 @@
      "key": "tw:maritime_attacks",
      "f": 2.0,
      "note": "해상 피격 급증"
+    },
+    {
+     "key": "sens:firms:yemen",
+     "f": 1.5,
+     "note": "예멘·홍해 시설 위성 열점 경보 (FIRMS)"
     }
    ]
   },
   {
    "id": "redsea_calm",
-   "p": 23.6,
+   "p": 20.6,
    "k": 1,
    "prior": 30.0,
    "evidence": []
@@ -116,14 +121,14 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2915674,
+    "vol": 2916362,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 7.7,
+   "p": 7.8,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -139,22 +144,22 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.664,
+     "f": 0.671,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.8,
+    "p": 1.9,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45502731,
+    "vol": 45526236,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 22.3,
+   "p": 22.2,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -195,16 +200,10 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 75.0,
+   "p": 50.0,
    "k": 1,
    "prior": 50.0,
-   "evidence": [
-    {
-     "key": "tw:ethiopia_interstate",
-     "f": 3.0,
-     "note": "국가 간 교전 사건 급증"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "bio_spread",
@@ -267,7 +266,7 @@
     "p": 94.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 20079667,
+    "vol": 21035467,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -343,7 +342,7 @@
     "p": 9.0,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
-    "vol": 346766,
+    "vol": 346846,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -367,7 +366,8 @@
  ],
  "sensors": {
   "firms": [
-   "europe"
+   "europe",
+   "yemen"
   ],
   "ioda": [
    "europe",
@@ -391,14 +391,13 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-01",
+ "asof": "2026-11-02",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
   "brent_110",
   "copper_6",
-  "ethiopia_interstate",
   "firms_site_alert",
   "gdacs_red",
   "hormuz_transits_low",
