@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-03T00:57:51Z",
+ "generated": "2026-11-03T06:58:50Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-03T00:57:51Z",
+  "at": "2026-11-03T06:58:50Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,25 +31,13 @@
       121.0,
       18.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 5.98,
-       "lon": 116.09,
-       "alt": 32000,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "korea": {
      "name": "한반도 주변",
@@ -60,23 +48,50 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 4,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 4
      },
      "ac": [
       {
-       "flight": "CATS77",
+       "flight": "CATS00",
        "t": "BE20",
        "role": "other",
-       "lat": 36.63,
-       "lon": 126.83,
-       "alt": 13150,
-       "reg": "84-00165"
+       "lat": 37.08,
+       "lon": 126.94,
+       "alt": 2500,
+       "reg": "84-00181"
+      },
+      {
+       "flight": "HOIST10",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.72,
+       "lon": 127.1,
+       "alt": -50,
+       "reg": "18-21024"
+      },
+      {
+       "flight": "CARD00",
+       "t": "H60",
+       "role": "other",
+       "lat": 36.88,
+       "lon": 127.15,
+       "alt": 1700,
+       "reg": "18-21021"
+      },
+      {
+       "flight": "MAGIC28",
+       "t": "BE20",
+       "role": "other",
+       "lat": 35.13,
+       "lon": 128.14,
+       "alt": 23000,
+       "reg": "169539"
       }
      ]
     },
@@ -89,23 +104,42 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 3,
+     "key": 2,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "tanker": 2,
+      "other": 1
      },
      "ac": [
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.5,
-       "lon": 55.5,
-       "alt": 27475,
-       "reg": "19-46111"
+       "lat": 24.88,
+       "lon": 54.08,
+       "alt": 26000,
+       "reg": "19-46108"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 25.21,
+       "lon": 55.33,
+       "alt": 25525,
+       "reg": "11-46060"
+      },
+      {
+       "flight": "MJN557",
+       "t": "GLF4",
+       "role": "other",
+       "lat": 23.63,
+       "lon": 58.15,
+       "alt": 3150,
+       "reg": "557"
       }
      ]
     },
@@ -135,13 +169,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "UNO264",
+       "t": "A169",
+       "role": "other",
+       "lat": 33.29,
+       "lon": 35.11,
+       "alt": 875,
+       "reg": "MM82197"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -152,13 +198,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 42.97,
+       "lon": 30.38,
+       "alt": 29000,
+       "reg": "N159L"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -169,13 +227,34 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "PNY5999",
+       "t": "SF34",
+       "role": "other",
+       "lat": 54.34,
+       "lon": 18.06,
+       "alt": 2500,
+       "reg": "3401"
+      },
+      {
+       "flight": "CEF05L",
+       "t": "C295",
+       "role": "other",
+       "lat": 57.8,
+       "lon": 21.55,
+       "alt": 20000,
+       "reg": "0481"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -196,12 +275,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 11
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-03T00:57:51Z",
+  "at": "2026-11-03T06:58:50Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -392,33 +471,33 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-03T00:57:51Z",
+  "at": "2026-11-03T06:58:50Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 35,
     "??": 17,
     "DE": 7,
-    "MX": 4,
     "MY": 3,
     "PH": 3,
     "TW": 3,
+    "AR": 3,
+    "MX": 3,
     "TR": 2,
     "SG": 2,
     "GB": 2,
     "JP": 2,
-    "AR": 2,
     "BE": 1,
     "CL": 1,
     "ID": 1
    },
    "by_group": {
-    "qilin": 20,
+    "qilin": 19,
     "safepay": 10,
     "genesis": 9,
+    "SilentRansomGroup": 7,
     "N0n": 7,
-    "akira": 6,
-    "SilentRansomGroup": 6,
+    "akira": 5,
     "thegentlemen": 4,
     "AuditTeam": 4,
     "everstake": 3,

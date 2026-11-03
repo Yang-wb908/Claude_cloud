@@ -57,7 +57,7 @@
     "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76697027,
+    "vol": 76713955,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -91,54 +91,49 @@
   },
   {
    "id": "blacksea_deal",
-   "p": 22.8,
+   "p": 22.5,
    "k": 1,
    "prior": 30.0,
    "evidence": [
     {
      "key": "market:blacksea_deal",
-     "f": 0.689,
-     "note": "예측시장 11% (가중 0.30)"
+     "f": 0.678,
+     "note": "예측시장 10% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 11.0,
+    "p": 10.5,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2927791,
+    "vol": 2928186,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 5.5,
+   "p": 4.2,
    "k": 1,
    "prior": 5.0,
    "evidence": [
     {
-     "key": "sens:ioda:taiwan",
-     "f": 1.5,
-     "note": "대만 인터넷 대규모 장애 (IODA)"
-    },
-    {
      "key": "market:taiwan_quarantine",
-     "f": 0.755,
+     "f": 0.836,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.9,
+    "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45541712,
+    "vol": 45557140,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 24.5,
+   "p": 25.0,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -172,7 +167,7 @@
     "p": 72.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 2613854,
+    "vol": 2621081,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -265,7 +260,7 @@
     "p": 94.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 23351709,
+    "vol": 24919123,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -361,8 +356,7 @@
   "ioda": [
    "europe",
    "iran",
-   "sahel",
-   "taiwan"
+   "sahel"
   ],
   "quake": [
    "iran"
