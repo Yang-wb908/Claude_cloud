@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-03T12:58:36Z",
+ "generated": "2026-11-03T19:00:22Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-03T12:58:36Z",
+  "at": "2026-11-03T19:00:22Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,25 +31,13 @@
       121.0,
       18.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "TANOM03",
-       "t": "A139",
-       "role": "other",
-       "lat": 6.05,
-       "lon": 116.07,
-       "alt": 325,
-       "reg": "M503-2"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "korea": {
      "name": "한반도 주변",
@@ -61,22 +49,22 @@
       40.5
      ],
      "n": 1,
-     "key": 0,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "KEEP77",
-       "t": "H47",
-       "role": "other",
-       "lat": 37.59,
-       "lon": 127.31,
-       "alt": 2100,
-       "reg": "16-08210"
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.06,
+       "lon": 124.26,
+       "alt": 38000,
+       "reg": "N291SR"
       }
      ]
     },
@@ -89,43 +77,23 @@
       60.0,
       30.5
      ],
-     "n": 3,
+     "n": 1,
      "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "tanker": 1,
-      "airlift": 1,
-      "other": 1
+      "tanker": 1
      },
      "ac": [
       {
        "flight": "",
        "t": "K35R",
        "role": "tanker",
-       "lat": 25.46,
-       "lon": 55.5,
+       "lat": 24.98,
+       "lon": 55.12,
        "alt": 27475,
-       "reg": "58-0052"
-      },
-      {
-       "flight": "MJN505",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 23.68,
-       "lon": 57.48,
-       "alt": 3900,
-       "reg": "505"
-      },
-      {
-       "flight": "MJN575",
-       "t": "A320",
-       "role": "other",
-       "lat": 23.59,
-       "lon": 58.27,
-       "alt": 100,
-       "reg": "554"
+       "reg": "63-7981"
       }
      ]
     },
@@ -155,72 +123,13 @@
       37.0,
       37.5
      ],
-     "n": 6,
-     "key": 3,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
-     "status": "surge",
-     "by_role": {
-      "tanker": 2,
-      "other": 3,
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR2302",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 34.45,
-       "lon": 28.78,
-       "alt": 30000,
-       "reg": "ZZ335"
-      },
-      {
-       "flight": "RKAS102",
-       "t": "SU95",
-       "role": "other",
-       "lat": 34.62,
-       "lon": 34.06,
-       "alt": 36000,
-       "reg": "95100"
-      },
-      {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 32.03,
-       "lon": 34.32,
-       "alt": 14800,
-       "reg": "64-14839"
-      },
-      {
-       "flight": "BOLT",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 32.16,
-       "lon": 34.78,
-       "alt": 38950,
-       "reg": "569"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 31.77,
-       "lon": 34.91,
-       "alt": 17925,
-       "reg": ""
-      },
-      {
-       "flight": "MFO692",
-       "t": "BE20",
-       "role": "other",
-       "lat": 30.7,
-       "lon": 35.25,
-       "alt": 15000,
-       "reg": "95-00101"
-      }
-     ]
+     "status": "normal",
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -248,133 +157,41 @@
       30.5,
       61.0
      ],
-     "n": 13,
-     "key": 1,
+     "n": 3,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "airlift": 4,
-      "other": 8,
-      "tanker": 1
+      "other": 3
      },
      "ac": [
       {
-       "flight": "LONGL02",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 56.06,
-       "lon": 9.01,
-       "alt": 5000,
-       "reg": "B-537"
-      },
-      {
-       "flight": "PR22",
-       "t": "MF17",
-       "role": "other",
-       "lat": 56.42,
-       "lon": 9.06,
-       "alt": 2275,
-       "reg": "T-428"
-      },
-      {
-       "flight": "HYDRA55",
+       "flight": "RAPTOR",
        "t": "",
        "role": "other",
-       "lat": 54.37,
-       "lon": 9.28,
-       "alt": 23000,
+       "lat": 56.97,
+       "lon": 10.04,
+       "alt": 15000,
        "reg": ""
       },
       {
-       "flight": "PR51",
+       "flight": "SKULL1",
        "t": "",
        "role": "other",
-       "lat": 56.43,
-       "lon": 9.29,
-       "alt": 2500,
+       "lat": 53.88,
+       "lon": 11.76,
+       "alt": 2425,
        "reg": ""
       },
       {
-       "flight": "BR301",
-       "t": "LJ35",
+       "flight": "CEF6028",
+       "t": "C295",
        "role": "other",
-       "lat": 56.68,
-       "lon": 12.74,
-       "alt": 5275,
-       "reg": "35-075"
-      },
-      {
-       "flight": "EA01",
-       "t": "",
-       "role": "other",
-       "lat": 53.9,
-       "lon": 12.92,
-       "alt": 9950,
-       "reg": ""
-      },
-      {
-       "flight": "BR301",
-       "t": "LJ35",
-       "role": "other",
-       "lat": 58.4,
-       "lon": 15.52,
-       "alt": "ground",
-       "reg": "35-195"
-      },
-      {
-       "flight": "RK08",
-       "t": "G12T",
-       "role": "other",
-       "lat": 58.4,
-       "lon": 15.52,
-       "alt": -325,
-       "reg": "40208"
-      },
-      {
-       "flight": "SVF669",
-       "t": "SF34",
-       "role": "other",
-       "lat": 56.08,
-       "lon": 15.68,
-       "alt": 22000,
-       "reg": "100001"
-      },
-      {
-       "flight": "MMF18",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 53.68,
-       "lon": 17.12,
-       "alt": 23000,
-       "reg": "T-059"
-      },
-      {
-       "flight": "CFC2926",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 60.94,
-       "lon": 18.21,
-       "alt": 25000,
-       "reg": "130617"
-      },
-      {
-       "flight": "BAF647",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 53.64,
-       "lon": 18.88,
-       "alt": 31975,
-       "reg": "CT-07"
-      },
-      {
-       "flight": "IAM4668",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 55.06,
-       "lon": 23.19,
-       "alt": 13375,
-       "reg": "MM62186"
+       "lat": 56.94,
+       "lon": 14.46,
+       "alt": 21000,
+       "reg": "0482"
       }
      ]
     },
@@ -396,13 +213,13 @@
      "ac": []
     }
    },
-   "n_surge": 1,
-   "total_mil": 24
+   "n_surge": 0,
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-03T12:58:36Z",
+  "at": "2026-11-03T19:00:22Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -593,39 +410,47 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-03T12:58:36Z",
+  "at": "2026-11-03T19:00:22Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 33,
-    "??": 19,
+    "US": 29,
+    "??": 22,
     "DE": 7,
-    "MY": 4,
+    "MY": 3,
     "SG": 3,
     "AR": 3,
+    "GB": 2,
     "IT": 2,
-    "AE": 2,
+    "KR": 2,
     "TR": 2,
     "JP": 2,
     "PH": 2,
     "TW": 2,
     "MX": 2,
-    "KR": 1,
-    "BE": 1
+    "FR": 1
    },
    "by_group": {
-    "N0n": 12,
+    "N0n": 16,
     "qilin": 12,
     "safepay": 10,
     "SilentRansomGroup": 7,
-    "genesis": 6,
-    "rhysida": 4,
+    "akira": 6,
+    "Booba Project": 4,
     "payload": 4,
     "Orova": 4,
-    "thegentlemen": 4,
-    "AuditTeam": 4
+    "AuditTeam": 4,
+    "rhysida": 3
    },
    "kr": [
+    {
+     "victim": "SK Global Software",
+     "group": "akira",
+     "country": "KR",
+     "sector": "Technology",
+     "d": "2026-11-03",
+     "url": "https://www.ransomware.live/id/U0sgR2xvYmFsIFNvZnR3YXJlQGFraXJh"
+    },
     {
      "victim": "Company #2",
      "group": "OBSOFT",
@@ -638,11 +463,11 @@
   }
  },
  "summary": {
-  "adsb_surge": 1,
+  "adsb_surge": 0,
   "kev_week": 8,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 1,
+  "ransom_kr_week": 2,
   "events": 2
  }
 }
