@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-03T06:58:41Z",
+ "generated": "2026-11-03T07:04:09Z",
  "resolved_markets": 0,
  "ioda": {
   "ok": true,
-  "at": "2026-11-03T06:58:41Z",
+  "at": "2026-11-03T07:04:09Z",
   "data": {
    "window_h": 24,
    "countries": [
     {
      "code": "FI",
      "name": "Finland",
-     "score": 174524.7,
+     "score": 174718.6,
      "sources": {
-      "gtr.sarima": 174524.7
+      "gtr.sarima": 174718.6
      },
      "events": 1,
      "th": "europe",
@@ -25,9 +25,9 @@
     {
      "code": "NF",
      "name": "Norfolk Island",
-     "score": 109301.7,
+     "score": 109513.7,
      "sources": {
-      "gtr.sarima": 109301.7
+      "gtr.sarima": 109513.7
      },
      "events": 1,
      "th": null,
@@ -37,9 +37,9 @@
     {
      "code": "TL",
      "name": "Timor-Leste",
-     "score": 74852.9,
+     "score": 75003.0,
      "sources": {
-      "gtr.sarima": 74852.9
+      "gtr.sarima": 75003.0
      },
      "events": 2,
      "th": null,
@@ -49,9 +49,9 @@
     {
      "code": "BI",
      "name": "Burundi",
-     "score": 55146.9,
+     "score": 55161.2,
      "sources": {
-      "bgp.median": 55146.9
+      "bgp.median": 55161.2
      },
      "events": 1,
      "th": null,
@@ -61,9 +61,9 @@
     {
      "code": "LT",
      "name": "Lithuania",
-     "score": 40380.9,
+     "score": 40638.9,
      "sources": {
-      "gtr.sarima": 40380.9
+      "gtr.sarima": 40638.9
      },
      "events": 2,
      "th": "europe",
@@ -76,9 +76,9 @@
     {
      "code": "KW",
      "name": "Kuwait",
-     "score": 37744.7,
+     "score": 37755.3,
      "sources": {
-      "bgp.median": 37744.7
+      "bgp.median": 37755.3
      },
      "events": 1,
      "th": "iran",
@@ -91,9 +91,9 @@
     {
      "code": "AX",
      "name": "Aland Islands",
-     "score": 37506.8,
+     "score": 37743.0,
      "sources": {
-      "gtr.sarima": 37506.8
+      "gtr.sarima": 37743.0
      },
      "events": 2,
      "th": null,
@@ -103,9 +103,9 @@
     {
      "code": "KM",
      "name": "Comoros",
-     "score": 33997.9,
+     "score": 34006.6,
      "sources": {
-      "bgp.median": 33997.9
+      "bgp.median": 34006.6
      },
      "events": 1,
      "th": null,
@@ -115,9 +115,9 @@
     {
      "code": "MP",
      "name": "Northern Mariana Islands",
-     "score": 19836.7,
+     "score": 19963.2,
      "sources": {
-      "gtr.sarima": 19836.7
+      "gtr.sarima": 19963.2
      },
      "events": 2,
      "th": null,
@@ -290,6 +290,21 @@
      "alert": false
     },
     {
+     "code": "NG",
+     "name": "Nigeria",
+     "score": 108.5,
+     "sources": {
+      "bgp.median": 108.5
+     },
+     "events": 2,
+     "th": "sahel",
+     "at": [
+      8.7,
+      9.1
+     ],
+     "alert": false
+    },
+    {
      "code": "BO",
      "name": "Bolivia",
      "score": 108.2,
@@ -337,9 +352,9 @@
  },
  "poly": {
   "ok": true,
-  "at": "2026-11-03T06:58:41Z",
+  "at": "2026-11-03T07:04:09Z",
   "data": {
-   "n_markets": 688,
+   "n_markets": 690,
    "matched": {
     "hormuz_war": {
      "q": "Will the U.S. invade Iran before 2027?",
@@ -489,10 +504,10 @@
     },
     {
      "q": "US x Iran ceasefire continues through October 31?",
-     "p": 0.748,
+     "p": 0.746,
      "vol": 10091080,
      "vol24": 1203185,
-     "chg1d": -0.2445,
+     "chg1d": -0.2465,
      "mslug": "us-x-iran-ceasefire-continues-through-october-31-20260917",
      "end": "2026-10-31",
      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-october-31-20260917"
@@ -519,20 +534,20 @@
     },
     {
      "q": "Will Gadi Eizenkot be the next Prime Minister of Israel?",
-     "p": 0.434,
+     "p": 0.438,
      "vol": 8103557,
      "vol24": 78956,
-     "chg1d": 0.0305,
+     "chg1d": 0.0475,
      "mslug": "will-gadi-eizenkot-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
      "q": "Will Naftali Bennett be the next Prime Minister of Israel?",
-     "p": 0.041,
+     "p": 0.042,
      "vol": 5635815,
      "vol24": 29473,
-     "chg1d": -0.002,
+     "chg1d": -0.0025,
      "mslug": "will-naftali-bennett-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
@@ -549,10 +564,10 @@
     },
     {
      "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
-     "p": 0.042,
+     "p": 0.043,
      "vol": 4892110,
      "vol24": 152475,
-     "chg1d": -0.004,
+     "chg1d": -0.003,
      "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
@@ -572,7 +587,7 @@
      "p": 0.423,
      "vol": 3736736,
      "vol24": 57332,
-     "chg1d": -0.0145,
+     "chg1d": -0.014,
      "mslug": "will-nithya-raman-win-the-2026-los-angeles-mayoral-election-876",
      "end": "2026-06-03",
      "url": "https://polymarket.com/event/los-angeles-mayoral-election-117"
@@ -599,10 +614,10 @@
     },
     {
      "q": "China x Taiwan military clash before 2027?",
-     "p": 0.035,
+     "p": 0.034,
      "vol": 3504290,
      "vol24": 2258,
-     "chg1d": -0.003,
+     "chg1d": -0.0035,
      "mslug": "china-x-taiwan-military-clash-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/china-x-taiwan-military-clash-before-2027"
@@ -649,10 +664,10 @@
     },
     {
      "q": "US x Iran ceasefire continues through November 2?",
-     "p": 0.738,
+     "p": 0.741,
      "vol": 1806221,
      "vol24": 1161748,
-     "chg1d": -0.2405,
+     "chg1d": -0.2375,
      "mslug": "us-x-iran-ceasefire-continues-through-november-2",
      "end": "2026-11-03",
      "url": "https://polymarket.com/event/us-x-iran-ceasefire-continues-through-november-2"
@@ -682,7 +697,7 @@
  },
  "quakes": {
   "ok": true,
-  "at": "2026-11-03T06:58:41Z",
+  "at": "2026-11-03T07:04:09Z",
   "data": [
    {
     "d": "2026-11-01",
@@ -800,7 +815,7 @@
  },
  "gdacs": {
   "ok": true,
-  "at": "2026-11-03T06:58:41Z",
+  "at": "2026-11-03T07:04:09Z",
   "data": [
    {
     "type": "TC",
@@ -861,7 +876,7 @@
  },
  "ofac": {
   "ok": true,
-  "at": "2026-11-03T06:58:41Z",
+  "at": "2026-11-03T07:04:09Z",
   "data": {
    "n_total": 19484,
    "baseline": false,
