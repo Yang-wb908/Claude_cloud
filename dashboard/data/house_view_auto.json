@@ -57,14 +57,14 @@
     "p": 17.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76638804,
+    "vol": 76697027,
     "end": "2027-01-01",
     "w": 0.1
    }
   },
   {
    "id": "redsea_houthi",
-   "p": 34.4,
+   "p": 31.4,
    "k": 1,
    "prior": 25.0,
    "evidence": [
@@ -72,17 +72,12 @@
      "key": "tw:maritime_attacks",
      "f": 2.0,
      "note": "해상 피격 급증"
-    },
-    {
-     "key": "sens:firms:yemen",
-     "f": 1.5,
-     "note": "예멘·홍해 시설 위성 열점 경보 (FIRMS)"
     }
    ]
   },
   {
    "id": "redsea_calm",
-   "p": 20.6,
+   "p": 23.6,
    "k": 1,
    "prior": 30.0,
    "evidence": []
@@ -110,7 +105,7 @@
     "p": 11.0,
     "q": "Ukraine signs peace deal with Russia before 2027?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2925484,
+    "vol": 2927791,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -136,7 +131,7 @@
     "p": 1.9,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45537601,
+    "vol": 45541712,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -163,21 +158,21 @@
   },
   {
    "id": "fed_hawkish",
-   "p": 43.8,
+   "p": 43.3,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 2.334,
-     "note": "예측시장 74% (가중 0.40)"
+     "f": 2.287,
+     "note": "예측시장 72% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 73.5,
+    "p": 72.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 2595826,
+    "vol": 2613854,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -256,21 +251,21 @@
   },
   {
    "id": "dem_house_win",
-   "p": 86.3,
+   "p": 85.0,
    "k": 1,
    "prior": 65.0,
    "evidence": [
     {
      "key": "market:dem_house_win",
-     "f": 3.38,
-     "note": "예측시장 96% (가중 0.50)"
+     "f": 3.042,
+     "note": "예측시장 94% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 95.5,
+    "p": 94.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 22265634,
+    "vol": 23351709,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -350,26 +345,23 @@
   {
    "id": "fed_hawkish",
    "house": 25.0,
-   "market": 73.5,
+   "market": 72.5,
    "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
   },
   {
    "id": "dem_house_win",
    "house": 65.0,
-   "market": 95.5,
+   "market": 94.5,
    "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
    "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
   }
  ],
  "sensors": {
-  "firms": [
-   "europe",
-   "yemen"
-  ],
   "ioda": [
    "europe",
    "iran",
+   "sahel",
    "taiwan"
   ],
   "quake": [
@@ -389,18 +381,16 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-02",
+ "asof": "2026-11-03",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
   "copper_6",
   "ethiopia_interstate",
-  "firms_site_alert",
   "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
-  "kev_edge",
   "korea_missile",
   "maritime_attacks",
   "quake_near_site"

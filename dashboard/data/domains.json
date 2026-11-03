@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-02T18:58:36Z",
+ "generated": "2026-11-03T00:57:51Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-02T18:58:36Z",
+  "at": "2026-11-03T00:57:51Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 5.98,
+       "lon": 116.09,
+       "alt": 32000,
+       "reg": ""
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -49,22 +61,22 @@
       40.5
      ],
      "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 55,
+     "key": 0,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.29,
-       "lon": 125.92,
-       "alt": 40000,
-       "reg": "N291SR"
+       "flight": "CATS77",
+       "t": "BE20",
+       "role": "other",
+       "lat": 36.63,
+       "lon": 126.83,
+       "alt": 13150,
+       "reg": "84-00165"
       }
      ]
     },
@@ -79,8 +91,8 @@
      ],
      "n": 1,
      "key": 1,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {
       "tanker": 1
@@ -90,10 +102,10 @@
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 25.05,
-       "lon": 55.16,
-       "alt": 22000,
-       "reg": "20-46075"
+       "lat": 24.5,
+       "lon": 55.5,
+       "alt": 27475,
+       "reg": "19-46111"
       }
      ]
     },
@@ -108,8 +120,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -125,8 +137,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -142,8 +154,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -159,8 +171,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -176,20 +188,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 54,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-02T18:58:36Z",
+  "at": "2026-11-03T00:57:51Z",
   "data": {
    "n_total": 1766,
    "recent": [
@@ -375,52 +387,52 @@
     }
    ],
    "n_recent": 18,
-   "n_week": 10
+   "n_week": 8
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-02T18:58:36Z",
+  "at": "2026-11-03T00:57:51Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 35,
-    "??": 16,
+    "??": 17,
     "DE": 7,
-    "MX": 6,
-    "GB": 3,
+    "MX": 4,
+    "MY": 3,
     "PH": 3,
     "TW": 3,
     "TR": 2,
+    "SG": 2,
+    "GB": 2,
     "JP": 2,
     "AR": 2,
-    "MY": 2,
     "BE": 1,
-    "ID": 1,
-    "HU": 1,
-    "AT": 1
+    "CL": 1,
+    "ID": 1
    },
    "by_group": {
-    "qilin": 21,
+    "qilin": 20,
     "safepay": 10,
     "genesis": 9,
     "N0n": 7,
+    "akira": 6,
     "SilentRansomGroup": 6,
-    "Shiba": 5,
     "thegentlemen": 4,
     "AuditTeam": 4,
-    "Whitearmor": 3,
-    "payload": 3
+    "everstake": 3,
+    "Whitearmor": 3
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 10,
-  "kev_edge_3d": 2,
+  "kev_week": 8,
+  "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 2
+  "events": 0
  }
 }
