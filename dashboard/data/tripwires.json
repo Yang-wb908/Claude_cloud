@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T06:43:18Z",
+ "generated": "2026-11-04T13:04:50Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "korea_missile",
@@ -21,7 +21,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "maritime_attacks",
@@ -32,7 +32,7 @@
    "current": 40,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 15,
+   "current": 20,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.38,
+   "current": 6.44,
    "threshold": 6,
    "op": ">",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "bio_health_events",
@@ -62,10 +62,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 19,
+   "current": 21,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "ioda_outage",
@@ -76,7 +76,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   },
   {
    "id": "quake_near_site",
@@ -87,7 +87,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-04T06:43:18Z"
+   "at": "2026-11-04T13:04:50Z"
   }
  ]
 }
