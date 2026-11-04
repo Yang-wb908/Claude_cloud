@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 66.9,
+   "p": 67.1,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 11.8,
+   "p": 11.5,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.861,
-     "note": "예측시장 12% (가중 0.30)"
+     "f": 0.835,
+     "note": "예측시장 10% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 11.5,
+    "p": 10.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 16375389,
+    "vol": 16452054,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 21.3,
+   "p": 21.4,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -62,15 +62,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.935,
+     "f": 0.941,
      "note": "예측시장 18% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 17.5,
+    "p": 18.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 76907531,
+    "vol": 76971538,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -104,21 +104,21 @@
   },
   {
    "id": "blacksea_deal",
-   "p": 22.5,
+   "p": 21.3,
    "k": 1,
    "prior": 30.0,
    "evidence": [
     {
      "key": "market:blacksea_deal",
-     "f": 0.678,
-     "note": "예측시장 10% (가중 0.30)"
+     "f": 0.632,
+     "note": "예측시장 8% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 8.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2929224,
+    "vol": 2931153,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -139,7 +139,7 @@
     "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45634051,
+    "vol": 45634925,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -245,21 +245,21 @@
   },
   {
    "id": "dem_house_win",
-   "p": 85.0,
+   "p": 91.7,
    "k": 1,
    "prior": 65.0,
    "evidence": [
     {
      "key": "market:dem_house_win",
-     "f": 3.042,
-     "note": "예측시장 94% (가중 0.50)"
+     "f": 5.946,
+     "note": "예측시장 98% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 94.5,
+    "p": 98.5,
     "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
     "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
-    "vol": 26397333,
+    "vol": 30227325,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -337,9 +337,16 @@
  ],
  "review": [
   {
+   "id": "blacksea_deal",
+   "house": 30.0,
+   "market": 8.5,
+   "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
+   "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
+  },
+  {
    "id": "dem_house_win",
    "house": 65.0,
-   "market": 94.5,
+   "market": 98.5,
    "q": "Will the Democratic Party control the House after the 2026 Midterm elections?",
    "url": "https://polymarket.com/event/will-the-democratic-party-control-the-house-after-the-2026-midterm-elections"
   }
@@ -355,7 +362,7 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-03",
+ "asof": "2026-11-04",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [

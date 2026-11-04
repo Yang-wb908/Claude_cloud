@@ -1,8 +1,32 @@
 {
- "generated": "2026-11-03T19:00:00Z",
+ "generated": "2026-11-04T00:58:01Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 2,
+ "max_cluster": 2,
+ "max_key": "topic:December",
+ "clusters": [
+  {
+   "key": "topic:December",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-02",
+   "sample": [
+    {
+     "d": "2026-11-03",
+     "title": "OPEC+ set to keep December oil output targets unchanged",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNOURGYmxYSFdDNGJCS3NZaVpLVm1oWmZmRVVtcS1qd2YyZWlHeVpmQkhyRGU1YlZtVHdWTkwzWkpDaVV2Z0RINU1LVnFBYjRmWmJISVNEc01DbkhQSTY0WVRsTDBIRXRCZmhLRnMwdWliWGlqczMyd0dSelpIb1JFeVBwWmFYN1lfdVRfTVNGTnN3X0JJb2VVRGR5OU8?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-02",
+     "title": "OPEC+ to maintain oil output for 3rd consecutive month in December",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPTmtZWUpJb2RtRHJzTlBlWk43bXJIWVd2MXgtY0hmYkVBUXBJWGtmVFpQMkowX1F0c2dFV2RMRG5xZGhDUXRlVlZ6UGVzS01VQ0E4ZGhQeUpSWVJPdEZvX1lHdGV1ZHBXcWJTLVlsSGxjY0IzOFRGRUlSRFdQQ0p1X3Zn?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  }
+ ]
 }
