@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-04T13:04:48Z",
+ "generated": "2026-11-04T18:58:23Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-04T13:04:48Z",
+  "at": "2026-11-04T18:58:23Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -99,44 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "airlift": 2,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "CTM2055",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 34.05,
-       "lon": 32.07,
-       "alt": 18600,
-       "reg": "0014"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 31.76,
-       "lon": 34.76,
-       "alt": 15950,
-       "reg": ""
-      },
-      {
-       "flight": "",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 32.03,
-       "lon": 36.12,
-       "alt": null,
-       "reg": "54+28"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -147,25 +116,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "P8",
-       "role": "isr",
-       "lat": 42.85,
-       "lon": 29.54,
-       "alt": 11500,
-       "reg": "170269"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -176,99 +133,13 @@
       30.5,
       61.0
      ],
-     "n": 9,
-     "key": 2,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 6,
-      "isr": 2,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "SKYNET",
-       "t": "",
-       "role": "other",
-       "lat": 54.25,
-       "lon": 9.74,
-       "alt": 20000,
-       "reg": ""
-      },
-      {
-       "flight": "GNY4324",
-       "t": "",
-       "role": "other",
-       "lat": 54.24,
-       "lon": 12.16,
-       "alt": -50,
-       "reg": ""
-      },
-      {
-       "flight": "BR301",
-       "t": "LJ35",
-       "role": "other",
-       "lat": 56.82,
-       "lon": 12.63,
-       "alt": 4250,
-       "reg": "35-075"
-      },
-      {
-       "flight": "RRR1279",
-       "t": "F900",
-       "role": "other",
-       "lat": 58.25,
-       "lon": 16.08,
-       "alt": 41000,
-       "reg": "G-ZAHS"
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 53.83,
-       "lon": 21.15,
-       "alt": 36000,
-       "reg": "N159L"
-      },
-      {
-       "flight": "@@@@@@@@",
-       "t": "P8",
-       "role": "isr",
-       "lat": 54.03,
-       "lon": 21.87,
-       "alt": 30000,
-       "reg": "ZP806"
-      },
-      {
-       "flight": "CFC2926",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 55.37,
-       "lon": 22.98,
-       "alt": 26975,
-       "reg": "130617"
-      },
-      {
-       "flight": "W31",
-       "t": "LJ35",
-       "role": "other",
-       "lat": 60.5,
-       "lon": 23.6,
-       "alt": 21350,
-       "reg": "LJ-3"
-      },
-      {
-       "flight": "VM205",
-       "t": "B350",
-       "role": "other",
-       "lat": 54.29,
-       "lon": 24.38,
-       "alt": 14050,
-       "reg": "168205"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -289,12 +160,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 13
+   "total_mil": 0
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-04T13:04:48Z",
+  "at": "2026-11-04T18:58:23Z",
   "data": {
    "n_total": 1767,
    "recent": [
@@ -435,36 +306,36 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-04T13:04:48Z",
+  "at": "2026-11-04T18:58:23Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 35,
-    "??": 17,
-    "DE": 7,
+    "US": 39,
+    "??": 19,
+    "DE": 8,
     "TR": 3,
     "GB": 3,
-    "MY": 3,
     "CL": 2,
+    "CH": 2,
     "KR": 2,
+    "MY": 2,
     "SG": 2,
-    "JP": 2,
-    "TW": 2,
-    "AR": 2,
     "SI": 1,
     "CN": 1,
-    "ES": 1
+    "ES": 1,
+    "FR": 1,
+    "SE": 1
    },
    "by_group": {
-    "N0n": 16,
+    "N0n": 20,
     "qilin": 13,
-    "safepay": 10,
+    "akira": 8,
     "incransom": 6,
-    "akira": 6,
     "Aoqin": 4,
     "Booba Project": 4,
     "payload": 4,
     "Orova": 4,
+    "rhysida": 3,
     "Whitearmor": 3
    },
    "kr": [

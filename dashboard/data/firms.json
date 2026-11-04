@@ -1,19 +1,11 @@
 {
- "generated": "2026-11-04T13:00:32Z",
+ "generated": "2026-11-04T18:58:08Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
  "n_alerts": 0,
- "errors": [
-  "omsk: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "ryazan: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "volgograd: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "saratov: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "syzran: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "kirishi: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):",
-  "tuapse: RuntimeError: ReadTimeout: HTTPSConnectionPool(host='firms.modaps.eosdis.nasa.gov', port=443):"
- ],
+ "errors": [],
  "learning": 24,
  "sites": [
   {
@@ -691,13 +683,16 @@
    "lat": 11.01,
    "lon": 29.72,
    "r_km": 10,
-   "n": 0,
+   "n": 2,
    "base_days": 25,
    "base_n": 7,
-   "frp_max": 0,
+   "frp_max": 5.8,
    "base_frp": 12.6,
-   "at": null,
-   "d": null,
+   "at": [
+    29.69018,
+    10.99325
+   ],
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
@@ -841,11 +836,11 @@
     27.5,
     16.0
    ],
-   "n": 665,
+   "n": 885,
    "base_days": 26,
    "base_n": 1287.5,
-   "n_hi": 254,
-   "d": "2026-11-03",
+   "n_hi": 344,
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
@@ -862,7 +857,7 @@
    "base_days": 26,
    "base_n": 1941.5,
    "n_hi": 334,
-   "d": "2026-11-03",
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
@@ -875,11 +870,11 @@
     34.6,
     31.6
    ],
-   "n": 0,
+   "n": 2,
    "base_days": 25,
    "base_n": 0,
    "n_hi": 0,
-   "d": null,
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
@@ -913,7 +908,7 @@
    "base_days": 26,
    "base_n": 66.0,
    "n_hi": 40,
-   "d": "2026-11-03",
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
@@ -930,7 +925,7 @@
    "base_days": 26,
    "base_n": 103.5,
    "n_hi": 34,
-   "d": "2026-11-03",
+   "d": "2026-11-04",
    "status": "normal"
   },
   {
