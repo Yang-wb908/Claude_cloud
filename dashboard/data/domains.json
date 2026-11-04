@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-04T00:58:15Z",
+ "generated": "2026-11-04T06:43:17Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-04T00:58:15Z",
+  "at": "2026-11-04T06:43:17Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,13 +31,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "TANOM03",
+       "t": "A139",
+       "role": "other",
+       "lat": 5.94,
+       "lon": 116.05,
+       "alt": 400,
+       "reg": "M503-1"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -48,41 +60,32 @@
       132.0,
       40.5
      ],
-     "n": 3,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 3
+      "other": 2
      },
      "ac": [
       {
-       "flight": "MT74",
-       "t": "B748",
+       "flight": "CARD38",
+       "t": "H60",
        "role": "other",
-       "lat": 37.57,
-       "lon": 126.6,
-       "alt": 3925,
-       "reg": "22-001"
+       "lat": 37.95,
+       "lon": 127.26,
+       "alt": 1600,
+       "reg": "19-21064"
       },
       {
-       "flight": "CATS13",
-       "t": "BE20",
+       "flight": "NINJA91",
+       "t": "C560",
        "role": "other",
-       "lat": 36.98,
-       "lon": 127.2,
-       "alt": 8500,
-       "reg": "84-00181"
-      },
-      {
-       "flight": "CATS16",
-       "t": "BE20",
-       "role": "other",
-       "lat": 36.85,
-       "lon": 127.37,
-       "alt": 10625,
-       "reg": "84-00157"
+       "lat": 35.93,
+       "lon": 129.85,
+       "alt": 26000,
+       "reg": "96-00109"
       }
      ]
     },
@@ -95,13 +98,53 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 4,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2,
+      "airlift": 2
+     },
+     "ac": [
+      {
+       "flight": "NBS32",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.46,
+       "lon": 51.19,
+       "alt": 4225,
+       "reg": "QA356"
+      },
+      {
+       "flight": "NBS31",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.46,
+       "lon": 51.19,
+       "alt": 4400,
+       "reg": "QA352"
+      },
+      {
+       "flight": "DEMA148",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 26.0,
+       "lon": 51.36,
+       "alt": 24000,
+       "reg": "A7-MAH"
+      },
+      {
+       "flight": "LHOB290",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 22.52,
+       "lon": 54.9,
+       "alt": 35000,
+       "reg": "A7-MAC"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -146,25 +189,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RCH651",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 42.56,
-       "lon": 27.51,
-       "alt": "ground",
-       "reg": "10-0213"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -202,12 +233,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 7
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-04T00:58:15Z",
+  "at": "2026-11-04T06:43:17Z",
   "data": {
    "n_total": 1767,
    "recent": [
@@ -348,37 +379,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-04T00:58:15Z",
+  "at": "2026-11-04T06:43:17Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 31,
-    "??": 22,
+    "US": 34,
+    "??": 18,
     "DE": 7,
+    "GB": 3,
     "MY": 3,
-    "SG": 3,
-    "GB": 2,
-    "IT": 2,
+    "CL": 2,
     "KR": 2,
     "TR": 2,
+    "SG": 2,
     "JP": 2,
-    "PH": 2,
     "TW": 2,
     "AR": 2,
-    "FR": 1,
-    "SE": 1
+    "SI": 1,
+    "CN": 1,
+    "ES": 1
    },
    "by_group": {
     "N0n": 16,
     "qilin": 13,
     "safepay": 10,
-    "SilentRansomGroup": 6,
+    "incransom": 6,
     "akira": 6,
-    "Whitearmor": 4,
+    "Aoqin": 4,
     "Booba Project": 4,
     "payload": 4,
     "Orova": 4,
-    "AuditTeam": 4
+    "Whitearmor": 3
    },
    "kr": [
     {
