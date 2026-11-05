@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 71.3,
+   "p": 71.1,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 12.3,
+   "p": 12.2,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -39,14 +39,14 @@
     "p": 10.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 16727078,
+    "vol": 16731630,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 16.4,
+   "p": 16.6,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -57,15 +57,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.917,
-     "note": "예측시장 10% (가중 0.10)"
+     "f": 0.936,
+     "note": "예측시장 12% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 12.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 77758756,
+    "vol": 77885208,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -120,13 +120,18 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 4.1,
+   "p": 5.5,
    "k": 1,
    "prior": 5.0,
    "evidence": [
     {
+     "key": "sens:ioda:taiwan",
+     "f": 1.5,
+     "note": "대만 인터넷 대규모 장애 (IODA)"
+    },
+    {
      "key": "market:taiwan_quarantine",
-     "f": 0.81,
+     "f": 0.747,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -134,14 +139,14 @@
     "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45695611,
+    "vol": 45731244,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 25.0,
+   "p": 24.5,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -175,7 +180,7 @@
     "p": 77.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 3193003,
+    "vol": 3254370,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -254,21 +259,21 @@
   },
   {
    "id": "dem_house_win",
-   "p": 69.7,
+   "p": 72.9,
    "k": 1,
    "prior": 65.0,
    "evidence": [
     {
      "key": "market:dem_house_win",
-     "f": 1.238,
-     "note": "예측시장 74% (가중 0.50)"
+     "f": 1.45,
+     "note": "예측시장 80% (가중 0.50)"
     }
    ],
    "market": {
-    "p": 74.0,
+    "p": 79.6,
     "q": "Will the Democratic Party win the NC-03 House seat?",
     "url": "https://polymarket.com/event/will-the-democratic-party-win-the-nc-03-house-seat",
-    "vol": 434433,
+    "vol": 447393,
     "end": "2026-11-04",
     "w": 0.5
    }
@@ -362,7 +367,8 @@
  ],
  "sensors": {
   "ioda": [
-   "europe"
+   "europe",
+   "taiwan"
   ],
   "quake": [
    "iran"

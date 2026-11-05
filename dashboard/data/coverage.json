@@ -1,8 +1,127 @@
 {
- "generated": "2026-11-05T00:57:22Z",
+ "generated": "2026-11-05T06:57:12Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 12,
+ "max_cluster": 4,
+ "max_key": "place:서울",
+ "clusters": [
+  {
+   "key": "place:서울",
+   "n": 4,
+   "domains": 1,
+   "types": {
+    "E": 3,
+    "C": 1
+   },
+   "since": "2026-11-05",
+   "sample": [
+    {
+     "d": "2026-11-05",
+     "title": "Financial policymakers to monitor U.S. AI, trade policies following election",
+     "url": "https://en.yna.co.kr/view/AEN20261105006200320",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Foreign ministry fails to take steps even after learning of job scam crimes in Cambodia: audit agency",
+     "url": "https://en.yna.co.kr/view/AEN20261105002000315",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "(LEAD) S. Korea posts record high current account surplus of over US$60 bln in Sept. on chip supercycle",
+     "url": "https://en.yna.co.kr/view/AEN20261105001051320",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "KRX activates sell-side sidecar for KOSPI on sharp fall",
+     "url": "https://en.yna.co.kr/view/AEN20261105002600320",
+     "domain": "en.yna.co.kr"
+    }
+   ]
+  },
+  {
+   "key": "topic:Hong Kong",
+   "n": 3,
+   "domains": 3,
+   "types": {
+    "C": 3
+   },
+   "since": "2026-11-05",
+   "sample": [
+    {
+     "d": "2026-11-05",
+     "title": "Hong Kong activist Joshua Wong sentenced to ten years in jail",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/5/hong-kong-activist-joshua-wong-sentenced-to-ten-years-in-jail?traffic_source=rss",
+     "domain": "aljazeera.com"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Hong Kong pro-democracy activist Joshua Wong sentenced to 10 years in prison in national security case",
+     "url": "https://www.theguardian.com/world/2026/nov/05/hong-kong-joshua-wong-sentenced-national-security-case",
+     "domain": "theguardian.com"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Hong Kong activist Joshua Wong gets 10 more years in jail for foreign collusion",
+     "url": "https://www.france24.com/en/asia-pacific/20261105-joshua-wong-hong-kong-10-years-jail-foreign-collusion",
+     "domain": "france24.com"
+    }
+   ]
+  },
+  {
+   "key": "place:베이징",
+   "n": 3,
+   "domains": 3,
+   "types": {
+    "C": 1,
+    "D": 2
+   },
+   "since": "2026-11-05",
+   "sample": [
+    {
+     "d": "2026-11-05",
+     "title": "Hong Kong activist Joshua Wong sentenced to 10 years in prison",
+     "url": "https://www.npr.org/2026/11/05/g-s1-152032/hong-kong-activist-wong-sentenced",
+     "domain": "npr.org"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Prominent Hong Kong activist Joshua Wong sentenced to 10 years in 2nd national security case",
+     "url": "https://www.cbc.ca/news/world/joshua-wong-second-sentence-9.7410128?cmp=rss",
+     "domain": "cbc.ca"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Hong Kong democracy activist Joshua Wong jailed for 10 more years",
+     "url": "https://www.abc.net.au/news/2026-11-05/hong-kong-democracy-activist-joshua-wong-jailed-for-10-years/107350986",
+     "domain": "abc.net.au"
+    }
+   ]
+  },
+  {
+   "key": "topic:Joshua Wong",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "C": 2
+   },
+   "since": "2026-11-05",
+   "sample": [
+    {
+     "d": "2026-11-05",
+     "title": "Joshua Wong, face of Hong Kong's pro-democracy protests, jailed for 10 years",
+     "url": "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo?at_medium=RSS&at_campaign=rss",
+     "domain": "bbc.co.uk"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Joshua Wong, Hong Kong Democracy Activist, Is Sentenced to 10 Years in Prison",
+     "url": "https://www.nytimes.com/2026/11/04/world/asia/joshua-wong-hong-kong-sentenced.html",
+     "domain": "nytimes.com"
+    }
+   ]
+  }
+ ]
 }

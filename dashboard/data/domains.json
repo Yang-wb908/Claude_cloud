@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-05T00:57:34Z",
+ "generated": "2026-11-05T06:57:29Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-05T00:57:34Z",
+  "at": "2026-11-05T06:57:29Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -31,23 +31,6 @@
       121.0,
       18.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0.0,
-     "runs": 54,
-     "status": "normal",
-     "by_role": {},
-     "ac": []
-    },
-    "korea": {
-     "name": "한반도 주변",
-     "th": "korea",
-     "bbox": [
-      123.0,
-      33.0,
-      132.0,
-      40.5
-     ],
      "n": 1,
      "key": 0,
      "base": 0.0,
@@ -58,13 +41,105 @@
      },
      "ac": [
       {
-       "flight": "CARD69",
+       "flight": "TANOM03",
+       "t": "A139",
+       "role": "other",
+       "lat": 6.06,
+       "lon": 116.09,
+       "alt": 400,
+       "reg": "M503-2"
+      }
+     ]
+    },
+    "korea": {
+     "name": "한반도 주변",
+     "th": "korea",
+     "bbox": [
+      123.0,
+      33.0,
+      132.0,
+      40.5
+     ],
+     "n": 8,
+     "key": 0,
+     "base": 0.0,
+     "runs": 54,
+     "status": "normal",
+     "by_role": {
+      "other": 8
+     },
+     "ac": [
+      {
+       "flight": "CARD99",
        "t": "H60",
        "role": "other",
-       "lat": 37.46,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "19-21070"
+       "lat": 37.04,
+       "lon": 126.95,
+       "alt": 3250,
+       "reg": "19-21069"
+      },
+      {
+       "flight": "HOIST02T",
+       "t": "H60",
+       "role": "other",
+       "lat": 36.86,
+       "lon": 127.02,
+       "alt": 1525,
+       "reg": "18-21018"
+      },
+      {
+       "flight": "CATS77",
+       "t": "B190",
+       "role": "other",
+       "lat": 37.12,
+       "lon": 127.08,
+       "alt": 975,
+       "reg": "86-00082"
+      },
+      {
+       "flight": "CARD38",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.66,
+       "lon": 127.14,
+       "alt": 1375,
+       "reg": "19-21064"
+      },
+      {
+       "flight": "CARD64",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.32,
+       "lon": 127.37,
+       "alt": 6075,
+       "reg": "18-21001"
+      },
+      {
+       "flight": "CATS02",
+       "t": "BE20",
+       "role": "other",
+       "lat": 36.38,
+       "lon": 127.9,
+       "alt": 21350,
+       "reg": "84-00157"
+      },
+      {
+       "flight": "MAGIC64",
+       "t": "BE20",
+       "role": "other",
+       "lat": 33.72,
+       "lon": 130.55,
+       "alt": 23000,
+       "reg": "170111"
+      },
+      {
+       "flight": "",
+       "t": "BE20",
+       "role": "other",
+       "lat": 35.73,
+       "lon": 131.83,
+       "alt": 25000,
+       "reg": "84-00181"
       }
      ]
     },
@@ -77,23 +152,70 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 0,
+     "n": 6,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "airlift": 3,
+      "other": 2,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "QAF7",
-       "t": "A320",
+       "flight": "",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 27.41,
+       "lon": 49.64,
+       "alt": 32000,
+       "reg": "A7-MAB"
+      },
+      {
+       "flight": "NBS22",
+       "t": "PC21",
        "role": "other",
-       "lat": 24.79,
-       "lon": 53.84,
-       "alt": 28875,
-       "reg": "A7-AAG"
+       "lat": 25.05,
+       "lon": 51.34,
+       "alt": 2375,
+       "reg": "QA354"
+      },
+      {
+       "flight": "NBS21",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.05,
+       "lon": 51.34,
+       "alt": 2400,
+       "reg": "QA361"
+      },
+      {
+       "flight": "LHOB296",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 22.24,
+       "lon": 55.12,
+       "alt": 33000,
+       "reg": "A7-MAE"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.53,
+       "lon": 55.44,
+       "alt": 29375,
+       "reg": "11-46060"
+      },
+      {
+       "flight": "MJN238",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 24.66,
+       "lon": 57.23,
+       "alt": 19000,
+       "reg": "506"
       }
      ]
     },
@@ -123,13 +245,44 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 3,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 2,
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "RRR4227",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 34.33,
+       "lon": 32.74,
+       "alt": 11025,
+       "reg": "ZM402"
+      },
+      {
+       "flight": "X",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 32.29,
+       "lon": 33.88,
+       "alt": 34000,
+       "reg": "96-0002"
+      },
+      {
+       "flight": "RRR9958",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 32.07,
+       "lon": 34.96,
+       "alt": 25000,
+       "reg": "ZZ337"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -140,13 +293,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "MARTI10",
+       "t": "AT76",
+       "role": "other",
+       "lat": 41.05,
+       "lon": 30.47,
+       "alt": 12950,
+       "reg": "TCB754"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -157,13 +322,53 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 4,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3,
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "EH10",
+       "role": "other",
+       "lat": 59.38,
+       "lon": 10.8,
+       "alt": -275,
+       "reg": "0277"
+      },
+      {
+       "flight": "FNF497",
+       "t": "PC12",
+       "role": "other",
+       "lat": 57.85,
+       "lon": 12.45,
+       "alt": 3950,
+       "reg": "PI-03"
+      },
+      {
+       "flight": "RCH425",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 55.11,
+       "lon": 14.3,
+       "alt": 35000,
+       "reg": "97-0042"
+      },
+      {
+       "flight": "SQF902",
+       "t": "GL5T",
+       "role": "other",
+       "lat": 58.43,
+       "lon": 24.19,
+       "alt": 31425,
+       "reg": "9633"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -184,12 +389,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 23
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-05T00:57:34Z",
+  "at": "2026-11-05T06:57:29Z",
   "data": {
    "n_total": 1768,
    "recent": [
@@ -340,37 +545,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-05T00:57:34Z",
+  "at": "2026-11-05T06:57:29Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 46,
-    "??": 18,
-    "DE": 8,
-    "TR": 3,
-    "GB": 3,
+    "US": 37,
+    "??": 27,
+    "DE": 7,
+    "GB": 4,
+    "CA": 4,
+    "CH": 2,
+    "BR": 2,
     "ES": 2,
-    "BE": 2,
-    "CL": 2,
-    "KR": 2,
-    "MY": 2,
-    "SG": 2,
+    "IN": 1,
+    "ZA": 1,
+    "AR": 1,
     "AU": 1,
+    "BE": 1,
     "SI": 1,
-    "CN": 1,
-    "CH": 1
+    "CL": 1
    },
    "by_group": {
-    "N0n": 20,
-    "BrainCipher": 9,
-    "safepay": 9,
-    "akira": 8,
+    "medusalocker": 17,
+    "N0n": 15,
+    "BrainCipher": 11,
+    "safepay": 8,
     "incransom": 6,
+    "play": 5,
+    "akira": 5,
+    "SilentRansomGroup": 4,
     "Aoqin": 4,
-    "Booba Project": 4,
-    "Orova": 4,
-    "Dark Project": 3,
-    "rhysida": 3
+    "Booba Project": 4
    },
    "kr": [
     {
@@ -380,14 +585,6 @@
      "sector": "Technology",
      "d": "2026-11-03",
      "url": "https://www.ransomware.live/id/U0sgR2xvYmFsIFNvZnR3YXJlQGFraXJh"
-    },
-    {
-     "victim": "Company #2",
-     "group": "OBSOFT",
-     "country": "KR",
-     "sector": "Not Found",
-     "d": "2026-11-03",
-     "url": "https://www.ransomware.live/id/Q29tcGFueSAjMkBPQlNPRlQ="
     }
    ]
   }
@@ -397,7 +594,7 @@
   "kev_week": 6,
   "kev_edge_3d": 0,
   "ransom_week": 100,
-  "ransom_kr_week": 2,
-  "events": 2
+  "ransom_kr_week": 1,
+  "events": 1
  }
 }
