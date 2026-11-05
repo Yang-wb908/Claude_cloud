@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-04T18:58:23Z",
+ "generated": "2026-11-05T00:57:34Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-04T18:58:23Z",
+  "at": "2026-11-05T00:57:34Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "CARD69",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.46,
+       "lon": 127.11,
+       "alt": "ground",
+       "reg": "19-21070"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,13 +77,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "QAF7",
+       "t": "A320",
+       "role": "other",
+       "lat": 24.79,
+       "lon": 53.84,
+       "alt": 28875,
+       "reg": "A7-AAG"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -160,15 +184,25 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 0
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-04T18:58:23Z",
+  "at": "2026-11-05T00:57:34Z",
   "data": {
-   "n_total": 1767,
+   "n_total": 1768,
    "recent": [
+    {
+     "cve": "CVE-2024-27834",
+     "vendor": "Apple",
+     "product": "Multiple Products",
+     "name": "Apple Multiple Products Improper Authentication Vulnerability",
+     "added": "2026-11-04",
+     "due": "2026-11-18",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-119977",
      "vendor": "WordPress",
@@ -300,43 +334,43 @@
      "edge": false
     }
    ],
-   "n_recent": 13,
-   "n_week": 7
+   "n_recent": 14,
+   "n_week": 6
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-04T18:58:23Z",
+  "at": "2026-11-05T00:57:34Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
-    "??": 19,
+    "US": 46,
+    "??": 18,
     "DE": 8,
     "TR": 3,
     "GB": 3,
+    "ES": 2,
+    "BE": 2,
     "CL": 2,
-    "CH": 2,
     "KR": 2,
     "MY": 2,
     "SG": 2,
+    "AU": 1,
     "SI": 1,
     "CN": 1,
-    "ES": 1,
-    "FR": 1,
-    "SE": 1
+    "CH": 1
    },
    "by_group": {
     "N0n": 20,
-    "qilin": 13,
+    "BrainCipher": 9,
+    "safepay": 9,
     "akira": 8,
     "incransom": 6,
     "Aoqin": 4,
     "Booba Project": 4,
-    "payload": 4,
     "Orova": 4,
-    "rhysida": 3,
-    "Whitearmor": 3
+    "Dark Project": 3,
+    "rhysida": 3
    },
    "kr": [
     {
@@ -360,7 +394,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 7,
+  "kev_week": 6,
   "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 2,
