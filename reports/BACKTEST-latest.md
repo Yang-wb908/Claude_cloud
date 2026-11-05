@@ -5,8 +5,8 @@
 |---|---|---|---|---|---|
 | brent | -1.12 | None | None | None | None |
 | wheat | -0.21 | None | None | None | None |
-| gold | 1.47 | None | None | None | None |
-| dxy | -0.24 | None | None | None | None |
+| gold | 1.56 | None | None | None | None |
+| dxy | -0.27 | None | None | None | None |
 | vix | -20.26 | None | None | None | None |
 | kospi | -3.59 | None | None | None | None |
 | krw | -0.14 | None | None | None | None |
