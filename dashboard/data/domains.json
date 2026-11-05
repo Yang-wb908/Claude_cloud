@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-05T13:00:42Z",
+ "generated": "2026-11-05T18:58:27Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-05T13:00:42Z",
+  "at": "2026-11-05T18:58:27Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,44 +65,13 @@
       60.0,
       30.5
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 2,
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "PC21",
-       "role": "other",
-       "lat": 25.17,
-       "lon": 51.29,
-       "alt": 750,
-       "reg": "QA363"
-      },
-      {
-       "flight": "MJN575",
-       "t": "A320",
-       "role": "other",
-       "lat": 23.51,
-       "lon": 58.25,
-       "alt": 5175,
-       "reg": "554"
-      },
-      {
-       "flight": "",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 23.59,
-       "lon": 58.28,
-       "alt": "ground",
-       "reg": "506"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -130,34 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "RRR1982",
-       "t": "F900",
-       "role": "other",
-       "lat": 34.98,
-       "lon": 29.77,
-       "alt": 41000,
-       "reg": "G-ZABH"
-      },
-      {
-       "flight": "SHAHD274",
-       "t": "C208",
-       "role": "other",
-       "lat": 32.5,
-       "lon": 35.86,
-       "alt": 9900,
-       "reg": "1535"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -168,25 +116,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "BAH3",
-       "t": "B764",
-       "role": "other",
-       "lat": 43.26,
-       "lon": 27.35,
-       "alt": 34000,
-       "reg": "A9C-HMH"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -197,68 +133,33 @@
       30.5,
       61.0
      ],
-     "n": 6,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 6
+      "airlift": 1,
+      "other": 1
      },
      "ac": [
       {
-       "flight": "BB23",
-       "t": "",
+       "flight": "LONGL4",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 57.0,
+       "lon": 9.58,
+       "alt": 1825,
+       "reg": "B-538"
+      },
+      {
+       "flight": "PLF693",
+       "t": "W3",
        "role": "other",
-       "lat": 56.33,
-       "lon": 9.03,
-       "alt": 2500,
+       "lat": 54.79,
+       "lon": 18.46,
+       "alt": 100,
        "reg": ""
-      },
-      {
-       "flight": "BB57",
-       "t": "",
-       "role": "other",
-       "lat": 56.3,
-       "lon": 9.35,
-       "alt": 1450,
-       "reg": ""
-      },
-      {
-       "flight": "IAM3185",
-       "t": "GLF6",
-       "role": "other",
-       "lat": 54.19,
-       "lon": 10.92,
-       "alt": 41000,
-       "reg": "MM62343"
-      },
-      {
-       "flight": "GNY4525",
-       "t": "",
-       "role": "other",
-       "lat": 53.83,
-       "lon": 12.24,
-       "alt": 7775,
-       "reg": ""
-      },
-      {
-       "flight": "FNF497",
-       "t": "PC12",
-       "role": "other",
-       "lat": 60.21,
-       "lon": 21.81,
-       "alt": 25000,
-       "reg": "PI-03"
-      },
-      {
-       "flight": "VM205",
-       "t": "B350",
-       "role": "other",
-       "lat": 54.64,
-       "lon": 25.39,
-       "alt": 10275,
-       "reg": "168205"
       }
      ]
     },
@@ -271,22 +172,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "PRHCE",
+       "t": "E550",
+       "role": "other",
+       "lat": 16.08,
+       "lon": -64.44,
+       "alt": 43000,
+       "reg": "TEST"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 12
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-05T13:00:42Z",
+  "at": "2026-11-05T18:58:27Z",
   "data": {
    "n_total": 1768,
    "recent": [
@@ -437,37 +350,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-05T13:00:42Z",
+  "at": "2026-11-05T18:58:27Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
-    "??": 23,
+    "US": 35,
+    "??": 26,
     "DE": 8,
-    "GB": 4,
-    "CA": 4,
-    "BR": 3,
+    "CA": 5,
+    "BR": 4,
+    "GB": 3,
+    "AU": 2,
     "CN": 2,
     "CH": 2,
     "ES": 2,
     "IN": 1,
     "AR": 1,
-    "AU": 1,
     "BE": 1,
     "SI": 1,
     "CL": 1
    },
    "by_group": {
-    "N0n": 17,
     "medusalocker": 17,
+    "N0n": 12,
     "BrainCipher": 11,
     "safepay": 8,
-    "incransom": 6,
+    "Aoqin": 5,
+    "akira": 5,
     "play": 5,
+    "incransom": 5,
     "Dark Project": 4,
-    "Aoqin": 4,
-    "Booba Project": 4,
-    "SilentRansomGroup": 3
+    "Booba Project": 4
    },
    "kr": []
   }
