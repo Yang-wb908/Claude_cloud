@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-05T18:58:18Z",
+ "generated": "2026-11-06T00:58:24Z",
  "resolved_markets": 0,
  "ioda": {
   "ok": true,
-  "at": "2026-11-05T18:58:18Z",
+  "at": "2026-11-06T00:58:24Z",
   "data": {
    "window_h": 24,
    "countries": [
     {
      "code": "FI",
      "name": "Finland",
-     "score": 302246.2,
+     "score": 315023.3,
      "sources": {
-      "gtr.sarima": 302246.2
+      "gtr.sarima": 315023.3
      },
      "events": 1,
      "th": "europe",
@@ -25,9 +25,9 @@
     {
      "code": "NF",
      "name": "Norfolk Island",
-     "score": 248886.1,
+     "score": 262849.9,
      "sources": {
-      "gtr.sarima": 248886.1
+      "gtr.sarima": 262849.9
      },
      "events": 1,
      "th": null,
@@ -37,9 +37,9 @@
     {
      "code": "CN",
      "name": "China",
-     "score": 85473.6,
+     "score": 108301.6,
      "sources": {
-      "gtr.sarima": 85473.6
+      "gtr.sarima": 108301.6
      },
      "events": 1,
      "th": "taiwan",
@@ -92,6 +92,30 @@
      "alert": false
     },
     {
+     "code": "AW",
+     "name": "Aruba",
+     "score": 8129.0,
+     "sources": {
+      "ping-slash24.median": 8129.0
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
+     "code": "TL",
+     "name": "Timor-Leste",
+     "score": 5090.1,
+     "sources": {
+      "bgp.median": 5090.1
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
      "code": "MP",
      "name": "Northern Mariana Islands",
      "score": 5056.2,
@@ -104,35 +128,11 @@
      "alert": false
     },
     {
-     "code": "AW",
-     "name": "Aruba",
-     "score": 3949.4,
-     "sources": {
-      "ping-slash24.median": 3949.4
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
-     "code": "TL",
-     "name": "Timor-Leste",
-     "score": 3837.6,
-     "sources": {
-      "bgp.median": 3837.6
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
      "code": "NG",
      "name": "Nigeria",
-     "score": 1940.1,
+     "score": 4000.5,
      "sources": {
-      "bgp.median": 1940.1
+      "bgp.median": 4000.5
      },
      "events": 2,
      "th": "sahel",
@@ -140,18 +140,33 @@
       8.7,
       9.1
      ],
-     "alert": false
+     "alert": true
     },
     {
      "code": "GI",
      "name": "Gibraltar",
-     "score": 534.9,
+     "score": 959.8,
      "sources": {
-      "bgp.median": 534.9
+      "bgp.median": 959.8
      },
      "events": 1,
      "th": null,
      "at": null,
+     "alert": false
+    },
+    {
+     "code": "VE",
+     "name": "Venezuela",
+     "score": 265.3,
+     "sources": {
+      "bgp.median": 265.3
+     },
+     "events": 1,
+     "th": "carib",
+     "at": [
+      -66.6,
+      6.4
+     ],
      "alert": false
     },
     {
@@ -209,20 +224,20 @@
      "alert": false
     }
    ],
-   "n_alerts": 2
+   "n_alerts": 3
   }
  },
  "poly": {
   "ok": true,
-  "at": "2026-11-05T18:58:18Z",
+  "at": "2026-11-06T00:58:24Z",
   "data": {
-   "n_markets": 580,
+   "n_markets": 573,
    "matched": {
     "hormuz_war": {
      "q": "Will the U.S. invade Iran before 2027?",
-     "p": 0.115,
-     "vol": 77962916,
-     "vol24": 246491,
+     "p": 0.125,
+     "vol": 78022741,
+     "vol24": 264046,
      "chg1d": 0.02,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
@@ -233,8 +248,8 @@
     "hormuz_reopen": {
      "q": "Strait of Hormuz traffic returns to normal by December 31?",
      "p": 0.105,
-     "vol": 16767714,
-     "vol24": 147413,
+     "vol": 16831359,
+     "vol24": 103859,
      "chg1d": null,
      "mslug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
      "end": "2027-01-01",
@@ -245,9 +260,9 @@
     "blacksea_deal": {
      "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
      "p": 0.075,
-     "vol": 2957279,
-     "vol24": 21961,
-     "chg1d": 0.02,
+     "vol": 2958805,
+     "vol24": 14363,
+     "chg1d": 0.005,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
@@ -257,8 +272,8 @@
     "taiwan_quarantine": {
      "q": "Will China invade Taiwan by end of 2026?",
      "p": 0.018,
-     "vol": 45749175,
-     "vol24": 57244,
+     "vol": 45752521,
+     "vol24": 56910,
      "chg1d": null,
      "mslug": "will-china-invade-taiwan-before-2027",
      "end": "2027-01-01",
@@ -280,33 +295,21 @@
     },
     "fed_hawkish": {
      "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
-     "p": 0.645,
-     "vol": 3843387,
-     "vol24": 669610,
-     "chg1d": -0.13,
+     "p": 0.665,
+     "vol": 4154673,
+     "vol24": 972036,
+     "chg1d": -0.11,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
      "inverted": false,
      "n_candidates": 1
     },
-    "dem_house_win": {
-     "q": "Will the Democratic Party win the NC-03 House seat?",
-     "p": 0.706,
-     "vol": 503543,
-     "vol24": 103063,
-     "chg1d": -0.0445,
-     "mslug": "will-the-democratic-party-win-the-nc-03-house-seat",
-     "end": "2026-11-04",
-     "url": "https://polymarket.com/event/will-the-democratic-party-win-the-nc-03-house-seat",
-     "inverted": false,
-     "n_candidates": 1
-    },
     "india_pak_loc_escalation": {
      "q": "Will India strike Pakistan by December 31, 2026?",
-     "p": 0.08,
-     "vol": 348470,
-     "vol24": 1334,
+     "p": 0.07,
+     "vol": 348534,
+     "vol24": 1183,
      "chg1d": -0.01,
      "mslug": "will-india-strike-pakistan-by-december-31-2026",
      "end": "2027-01-01",
@@ -318,9 +321,9 @@
    "top": [
     {
      "q": "Will the U.S. invade Iran before 2027?",
-     "p": 0.115,
-     "vol": 77962916,
-     "vol24": 246491,
+     "p": 0.125,
+     "vol": 78022741,
+     "vol24": 264046,
      "chg1d": 0.02,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
@@ -328,20 +331,20 @@
     },
     {
      "q": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
-     "p": 0.26,
-     "vol": 33678350,
-     "vol24": 474563,
-     "chg1d": -0.016,
+     "p": 0.236,
+     "vol": 33792042,
+     "vol24": 481486,
+     "chg1d": -0.067,
      "mslug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/will-benjamin-netanyahu-be-the-next-prime-minister-of-israel"
     },
     {
      "q": "Will the Iranian regime fall before 2027?",
-     "p": 0.029,
-     "vol": 29477398,
-     "vol24": 140679,
-     "chg1d": -0.0075,
+     "p": 0.027,
+     "vol": 29492641,
+     "vol24": 148875,
+     "chg1d": -0.0085,
      "mslug": "will-the-iranian-regime-fall-by-the-end-of-2026",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-iranian-regime-fall-by-the-end-of-2026"
@@ -349,8 +352,8 @@
     {
      "q": "Strait of Hormuz traffic returns to normal by December 31?",
      "p": 0.105,
-     "vol": 16767714,
-     "vol24": 147413,
+     "vol": 16831359,
+     "vol24": 103859,
      "chg1d": null,
      "mslug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
      "end": "2027-01-01",
@@ -358,70 +361,80 @@
     },
     {
      "q": "Will Gadi Eizenkot be the next Prime Minister of Israel?",
-     "p": 0.621,
-     "vol": 8980737,
-     "vol24": 223099,
-     "chg1d": 0.0315,
+     "p": 0.637,
+     "vol": 9033456,
+     "vol24": 233583,
+     "chg1d": 0.0705,
      "mslug": "will-gadi-eizenkot-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/will-gadi-eizenkot-be-the-next-prime-minister-of-israel"
     },
     {
      "q": "Will David Lisnard win the 2027 French presidential election?",
-     "p": 0.148,
-     "vol": 6710141,
-     "vol24": 131161,
-     "chg1d": -0.009,
+     "p": 0.152,
+     "vol": 6726161,
+     "vol24": 132173,
+     "chg1d": -0.006,
      "mslug": "will-david-lisnard-win-the-2027-french-presidential-election",
      "end": "2027-04-19",
      "url": "https://polymarket.com/event/will-david-lisnard-win-the-2027-french-presidential-election"
     },
     {
      "q": "Will Naftali Bennett be the next Prime Minister of Israel?",
-     "p": 0.033,
-     "vol": 5718521,
-     "vol24": 27258,
-     "chg1d": -0.0075,
+     "p": 0.025,
+     "vol": 5729978,
+     "vol24": 33526,
+     "chg1d": -0.011,
      "mslug": "will-naftali-bennett-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
-     "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
-     "p": 0.064,
-     "vol": 5025547,
-     "vol24": 62517,
-     "chg1d": 0.0205,
-     "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
-     "end": "2026-10-28",
-     "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
+     "q": "Will Marine Le Pen win the 2027 French presidential election?",
+     "p": 0.443,
+     "vol": 5089842,
+     "vol24": 105180,
+     "chg1d": 0.028,
+     "mslug": "will-marine-le-pen-win-the-2027-french-presidential-election",
+     "end": "2027-04-19",
+     "url": "https://polymarket.com/event/will-marine-le-pen-win-the-2027-french-presidential-election"
     },
     {
-     "q": "US-Iran Final Nuclear Deal by December 31, 2026?",
-     "p": 0.085,
-     "vol": 3988810,
-     "vol24": 145878,
-     "chg1d": -0.02,
-     "mslug": "us-iran-final-nuclear-deal-by-december-31-2026-191",
-     "end": "2027-01-01",
-     "url": "https://polymarket.com/event/us-iran-final-nuclear-deal-by-december-31-2026-191"
+     "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
+     "p": 0.062,
+     "vol": 5086726,
+     "vol24": 116527,
+     "chg1d": 0.0185,
+     "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
+     "end": "2026-10-28",
+     "url": "https://polymarket.com/event/will-avigdor-lieberman-be-the-next-prime-minister-of-israel"
     },
     {
      "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
-     "p": 0.645,
-     "vol": 3843387,
-     "vol24": 669610,
-     "chg1d": -0.13,
+     "p": 0.665,
+     "vol": 4154673,
+     "vol24": 972036,
+     "chg1d": -0.11,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
     },
     {
+     "q": "US-Iran Final Nuclear Deal by December 31, 2026?",
+     "p": 0.095,
+     "vol": 3996342,
+     "vol24": 113039,
+     "chg1d": 0.03,
+     "mslug": "us-iran-final-nuclear-deal-by-december-31-2026-191",
+     "end": "2027-01-01",
+     "url": "https://polymarket.com/event/us-iran-final-nuclear-deal-by-december-31-2026-191"
+    },
+    {
      "q": "Zelenskyy out as Ukraine president by end of 2026?",
      "p": 0.033,
-     "vol": 3791876,
-     "vol24": 2967,
-     "chg1d": -0.0035,
+     "vol": 3792064,
+     "vol24": 3080,
+     "chg1d": -0.0015,
      "mslug": "zelenskyy-out-as-ukraine-president-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/zelenskyy-out-as-ukraine-president-before-2027"
@@ -429,28 +442,18 @@
     {
      "q": "NATO x Russia military clash by December 31, 2026?",
      "p": 0.125,
-     "vol": 3656362,
-     "vol24": 31764,
+     "vol": 3657759,
+     "vol24": 27696,
      "chg1d": null,
      "mslug": "nato-x-russia-military-clash-by-december-31-2026-244-538-582",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/nato-x-russia-military-clash-in-2025"
     },
     {
-     "q": "Will Ukraine recapture Crimean territory by December 31, 2026?",
-     "p": 0.022,
-     "vol": 3644561,
-     "vol24": 15836,
-     "chg1d": null,
-     "mslug": "will-ukraine-recapture-crimean-territory-by-december-31-2026",
-     "end": "2027-01-01",
-     "url": "https://polymarket.com/event/will-ukraine-recapture-crimean-territory-by-june-30-2026"
-    },
-    {
      "q": "China x Taiwan military clash before 2027?",
      "p": 0.027,
      "vol": 3520611,
-     "vol24": 2829,
+     "vol24": 2825,
      "chg1d": 0.002,
      "mslug": "china-x-taiwan-military-clash-before-2027",
      "end": "2027-01-01",
@@ -458,50 +461,40 @@
     },
     {
      "q": "Will there be no change in Fed interest rates after the December 2026 meeting?",
-     "p": 0.315,
-     "vol": 3395124,
-     "vol24": 319314,
-     "chg1d": 0.1,
+     "p": 0.305,
+     "vol": 3508319,
+     "vol24": 413423,
+     "chg1d": 0.09,
      "mslug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
     },
     {
      "q": "Will Dominique de Villepin win the 2027 French presidential election?",
-     "p": 0.022,
-     "vol": 3381274,
-     "vol24": 135304,
-     "chg1d": 0.008,
+     "p": 0.021,
+     "vol": 3389984,
+     "vol24": 126685,
+     "chg1d": 0.003,
      "mslug": "will-dominique-de-villepin-win-the-2027-french-presidential-election",
      "end": "2027-04-19",
      "url": "https://polymarket.com/event/will-dominique-de-villepin-win-the-2027-french-presidential-election"
     },
     {
-     "q": "Will Jean-Luc Mélenchon win the 2027 French presidential election?",
-     "p": 0.125,
-     "vol": 3205804,
-     "vol24": 107188,
-     "chg1d": null,
-     "mslug": "will-jean-luc-mlenchon-win-the-2027-french-presidential-election",
-     "end": "2027-04-19",
-     "url": "https://polymarket.com/event/will-jean-luc-mlenchon-win-the-2027-french-presidential-election"
-    },
-    {
      "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
      "p": 0.075,
-     "vol": 2957279,
-     "vol24": 21961,
-     "chg1d": 0.02,
+     "vol": 2958805,
+     "vol24": 14363,
+     "chg1d": 0.005,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
     },
     {
      "q": "Will Hezbollah disarm by December 31?",
-     "p": 0.027,
+     "p": 0.026,
      "vol": 2092029,
      "vol24": 0,
-     "chg1d": null,
+     "chg1d": -0.0005,
      "mslug": "will-hezbollah-disarm-by-december-31-632-848",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-hezbollah-disarm-by-march-31"
@@ -511,16 +504,16 @@
      "p": 0.055,
      "vol": 1766124,
      "vol24": 0,
-     "chg1d": -0.005,
+     "chg1d": null,
      "mslug": "will-hamas-agree-to-disarm-by-december-31",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-hamaz-disarm-by-december-31"
     },
     {
      "q": "Will Chiang Wan-an win the next Taipei Mayor election?",
-     "p": 0.675,
-     "vol": 1598850,
-     "vol24": 138957,
+     "p": 0.665,
+     "vol": 1609560,
+     "vol24": 146242,
      "chg1d": null,
      "mslug": "will-chiang-wan-an-win-the-next-taipei-mayor-election-20260813125857101",
      "end": "2026-11-29",
@@ -529,9 +522,9 @@
     {
      "q": "Iran Nuke before 2027?",
      "p": 0.025,
-     "vol": 1581494,
-     "vol24": 17177,
-     "chg1d": -0.0115,
+     "vol": 1581656,
+     "vol24": 9936,
+     "chg1d": -0.01,
      "mslug": "iran-nuke-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/iran-nuke-before-2027"
@@ -541,27 +534,37 @@
      "p": 0.785,
      "vol": 1536691,
      "vol24": 82,
-     "chg1d": 0.0155,
+     "chg1d": 0.001,
      "mslug": "will-israel-strike-4-countries-in-november-2025",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/how-many-different-countries-will-israel-strike-in-2026"
     },
     {
      "q": "China x Japan military clash before 2027?",
-     "p": 0.029,
-     "vol": 1465469,
-     "vol24": 1961,
-     "chg1d": -0.002,
+     "p": 0.028,
+     "vol": 1468261,
+     "vol24": 4635,
+     "chg1d": -0.0025,
      "mslug": "china-x-japan-military-clash-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/china-x-japan-military-clash-before-2027"
     },
     {
+     "q": "Israel x Iran ceasefire continues through November 15?",
+     "p": 0.765,
+     "vol": 1111278,
+     "vol24": 224495,
+     "chg1d": 0.01,
+     "mslug": "israel-x-iran-ceasefire-continues-through-november-15",
+     "end": "2026-11-16",
+     "url": "https://polymarket.com/event/israel-x-iran-ceasefire-continues-through-november-15"
+    },
+    {
      "q": "US x Russia military clash by December 31, 2026?",
-     "p": 0.035,
+     "p": 0.037,
      "vol": 1087981,
      "vol24": 11,
-     "chg1d": null,
+     "chg1d": 0.0005,
      "mslug": "us-x-russia-military-clash-by-december-31-2026-775",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/us-x-russia-military-clash-by"
@@ -571,18 +574,18 @@
  },
  "quakes": {
   "ok": true,
-  "at": "2026-11-05T18:58:18Z",
+  "at": "2026-11-06T00:58:24Z",
   "data": [
    {
     "d": "2026-11-05",
     "mag": 6.1,
     "place": "Fiji region",
-    "lon": -178.6458,
-    "lat": -21.1692,
+    "lon": -178.7145,
+    "lat": -21.1984,
     "near": null,
     "near_th": null,
     "near_id": null,
-    "depth": 540.789,
+    "depth": 535.0,
     "alert": "green",
     "tsunami": 0,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw8r"
@@ -642,20 +645,6 @@
     "alert": null,
     "tsunami": 0,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tukm"
-   },
-   {
-    "d": "2026-10-29",
-    "mag": 6.2,
-    "place": "43 km ESE of Port-Olry, Vanuatu",
-    "lon": 167.4523,
-    "lat": -15.1891,
-    "near": null,
-    "near_th": null,
-    "near_id": null,
-    "depth": 142.833,
-    "alert": "green",
-    "tsunami": 0,
-    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tu4f"
    }
   ]
  },
@@ -723,477 +712,24 @@
  },
  "ofac": {
   "ok": true,
-  "at": "2026-11-05T18:58:18Z",
+  "at": "2026-11-06T00:58:24Z",
   "data": {
    "n_total": 19555,
    "baseline": false,
-   "new": [
-    {
-     "id": "58563",
-     "name": "ASIAN WELFARE LOTTERIES CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58564",
-     "name": "CB GENERAL INSURANCE PLC",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58565",
-     "name": "CAMBODIAN RESOURCE ENERGY DEVELOPMENT CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58566",
-     "name": "CAMBODIAN UNITE WEI YE INVESTMENT CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58567",
-     "name": "DT ZHI ZAO CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58568",
-     "name": "FIRST AQUATIC INDUSTRIAL CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58569",
-     "name": "MO NET BEAUTY CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58570",
-     "name": "PRINCE INTERNATIONAL AIRLINES CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58572",
-     "name": "RICHENG PROPERTY DEVELOPER CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58573",
-     "name": "TIAN XU INTERNATIONAL TECHNOLOGY PLC",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58574",
-     "name": "ZHX PRINTING EQUIPMENT CAMBODIA CO LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58575",
-     "name": "QIU, Yong",
-     "type": "individual",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58595",
-     "name": "HE, Yujing",
-     "type": "individual",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58597",
-     "name": "SUPER LIGHT SPEED KH TECHNOLOGY CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58625",
-     "name": "PANG, Visal",
-     "type": "individual",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58627",
-     "name": "CAMBODIA FIRST UNITE CONSTRUCTION GROUP CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58628",
-     "name": "FIRST UNITE INTERNATIONAL LOGISTICS CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58629",
-     "name": "FIRST UNITE NETWORKS ENTERTAINMENT CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58632",
-     "name": "FIRST UNITE PROPERTY CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58636",
-     "name": "FIRST UNITE DECORATION CAMBODIA CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58637",
-     "name": "CAMBODIAN FIRST UNITE CONSTRUCTION MACHINERY CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58638",
-     "name": "LINKEDUS TECHNOLOGY CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58639",
-     "name": "CAMBO DUTY FREE MERCHANDISE CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58640",
-     "name": "MARCO POLO HOTEL CO. LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58641",
-     "name": "U-LIFE GO NOW CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58642",
-     "name": "U-LIFE KH SUPER APP CO., LTD.",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58644",
-     "name": "MERITWISE GROUP PUBLIC LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58645",
-     "name": "CHEN HUA HOLDINGS PTE LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58646",
-     "name": "GREENMEADOWS PROPERTIES SDN BHD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58655",
-     "name": "ZHAO, Mengyao",
-     "type": "individual",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58656",
-     "name": "GREENBAY MULTI MEDIA PTE LTD",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58657",
-     "name": "SUN SPEED HOLDINGS LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58658",
-     "name": "PREMIUM FINANCIAL LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58659",
-     "name": "GLAD VAST LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58660",
-     "name": "GLAD SPARKLE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58661",
-     "name": "GLAD HARVEST LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58662",
-     "name": "GLAD GLORY LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58663",
-     "name": "DIRECT ASTUTE HK LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58664",
-     "name": "DIRECT ASTUTE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58665",
-     "name": "SOLAR SCAPE FINANCE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58666",
-     "name": "SOLAR SCAPE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58667",
-     "name": "VICTORY FLORA LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58668",
-     "name": "WIN APPLAUSE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58669",
-     "name": "CELESTIAL DRIVE LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58670",
-     "name": "SINO SAGACIOUS LIMITED",
-     "type": "entity",
-     "program": "TCO",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58890",
-     "name": "RODRIGUEZ LOPEZ CALLEJA, Guillermo Faustino",
-     "type": "individual",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58910",
-     "name": "GLORIA C",
-     "type": "vessel",
-     "program": "CUBA-EO14404",
-     "vess_flag": "Cuba",
-     "vess_type": "Chemical/Products Tanker"
-    },
-    {
-     "id": "58911",
-     "name": "TENTACOOL COMMERCIAL INC",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58912",
-     "name": "RODRIGUEZ LASTRES, Any",
-     "type": "individual",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58913",
-     "name": "EMPRESA IMPORTADORA Y EXPORTADORA DE PRODUCTOS DE LA ELECTRONICA Y LAS COMUNICACIONES",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58915",
-     "name": "EMPRESA COMERCIALIZADORA DE SERVICIOS TECNICOS Y TECNOLOGICOS",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "58917",
-     "name": "BEIJING H AND C TECHNOLOGIES CO., LTD",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "59052",
-     "name": "CHUI, Kok Wa",
-     "type": "individual",
-     "program": "CYBER4",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "59066",
-     "name": "INTERNACIONAL MARITIMA SA",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "59067",
-     "name": "PETROLEOS MARITIMOS DEL CARIBE S.A.",
-     "type": "entity",
-     "program": "CUBA-EO14404",
-     "vess_flag": "",
-     "vess_type": ""
-    },
-    {
-     "id": "59068",
-     "name": "EMILIA",
-     "type": "vessel",
-     "program": "CUBA-EO14404",
-     "vess_flag": "Cuba",
-     "vess_type": "LPG Tanker"
-    }
-   ],
-   "n_new": 56,
+   "new": [],
+   "n_new": 0,
    "removed": 0,
-   "new_vessels": 2,
-   "by_program": {
-    "TCO": 45,
-    "CUBA-EO14404": 10,
-    "CYBER4": 1
-   },
-   "d": "2026-11-05"
+   "new_vessels": 0,
+   "by_program": {},
+   "d": "2026-11-06"
   }
  },
  "summary": {
-  "ioda_alerts": 2,
+  "ioda_alerts": 3,
   "quakes_near": 2,
   "gdacs_red": 0,
-  "ofac_new": 56,
-  "ofac_new_vessels": 2,
-  "events": 6
+  "ofac_new": 0,
+  "ofac_new_vessels": 0,
+  "events": 4
  }
 }
