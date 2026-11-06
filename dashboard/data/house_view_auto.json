@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 71.1,
+   "p": 71.4,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 12.2,
+   "p": 11.9,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.835,
+     "f": 0.807,
      "note": "예측시장 10% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 9.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 16831359,
+    "vol": 16864734,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 16.6,
+   "p": 16.7,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -65,7 +65,7 @@
     "p": 12.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78022741,
+    "vol": 78028311,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -113,7 +113,7 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2958805,
+    "vol": 2958826,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -139,7 +139,7 @@
     "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45752521,
+    "vol": 45780265,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -174,7 +174,7 @@
     "p": 66.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 4154673,
+    "vol": 4445323,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -253,10 +253,24 @@
   },
   {
    "id": "dem_house_win",
-   "p": 65.0,
+   "p": 71.3,
    "k": 1,
    "prior": 65.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "market:dem_house_win",
+     "f": 1.335,
+     "note": "예측시장 77% (가중 0.50)"
+    }
+   ],
+   "market": {
+    "p": 76.8,
+    "q": "Will the Democratic Party win the NC-03 House seat?",
+    "url": "https://polymarket.com/event/will-the-democratic-party-win-the-nc-03-house-seat",
+    "vol": 522751,
+    "end": "2026-11-04",
+    "w": 0.5
+   }
   },
   {
    "id": "us_canada_auto_tariffs",
@@ -330,6 +344,13 @@
   }
  ],
  "review": [
+  {
+   "id": "hormuz_reopen",
+   "house": 30.0,
+   "market": 9.5,
+   "q": "Strait of Hormuz traffic returns to normal by December 31?",
+   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31"
+  },
   {
    "id": "blacksea_deal",
    "house": 30.0,

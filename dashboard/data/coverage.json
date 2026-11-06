@@ -1,8 +1,32 @@
 {
- "generated": "2026-11-06T00:58:15Z",
+ "generated": "2026-11-06T06:57:44Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 2,
+ "max_cluster": 2,
+ "max_key": "place:서울",
+ "clusters": [
+  {
+   "key": "place:서울",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-11-06",
+   "sample": [
+    {
+     "d": "2026-11-06",
+     "title": "(2nd LD) S. Korea agrees to support East Timor's economic, social development",
+     "url": "https://en.yna.co.kr/view/AEN20261106001152315",
+     "domain": "en.yna.co.kr"
+    },
+    {
+     "d": "2026-11-06",
+     "title": "(LEAD) Lee set for summit with East Timor President Horta on strengthening ties",
+     "url": "https://en.yna.co.kr/view/AEN20261106001151315",
+     "domain": "en.yna.co.kr"
+    }
+   ]
+  }
+ ]
 }
