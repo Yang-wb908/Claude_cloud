@@ -1,30 +1,88 @@
 {
- "generated": "2026-11-06T12:59:21Z",
+ "generated": "2026-11-06T18:57:42Z",
  "days": 3,
- "unmapped_total": 2,
- "max_cluster": 2,
+ "unmapped_total": 8,
+ "max_cluster": 4,
  "max_key": "topic:Tanzania",
  "clusters": [
   {
    "key": "topic:Tanzania",
-   "n": 2,
-   "domains": 2,
+   "n": 4,
+   "domains": 3,
    "types": {
-    "D": 2
+    "D": 4
    },
    "since": "2026-11-06",
    "sample": [
     {
      "d": "2026-11-06",
-     "title": "Tanzania court jails opposition leader for incitement, lifts treason charge",
-     "url": "https://www.aljazeera.com/news/2026/11/6/tanzania-court-jails-opposition-leader-for-incitement-lifts-treason-charge?traffic_source=rss",
-     "domain": "aljazeera.com"
+     "title": "Tanzania’s Opposition Leader Gets a Four-Year Sentence",
+     "url": "https://www.nytimes.com/2026/11/06/world/africa/tanzanias-opposition-leader-gets-a-four-year-sentence.html",
+     "domain": "nytimes.com"
+    },
+    {
+     "d": "2026-11-06",
+     "title": "Tanzania opposition leader jailed for four years after treason acquittal",
+     "url": "http://www.africanews.com/2026/11/06/tanzania-opposition-leader-jailed-for-four-years-after-treason-acquittal/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-11-06",
+     "title": "Tanzania: Opposition leader Tundu Lissu jailed for four years",
+     "url": "https://www.dw.com/en/tanzania-opposition-leader-tundu-lissu-jailed-for-four-years/a-79875248?maca=en-rss-en-world-4025-rdf",
+     "domain": "dw.com"
     },
     {
      "d": "2026-11-06",
      "title": "Tanzania opposition leader Tundu Lissu awaits verdict in treason trial",
      "url": "http://www.africanews.com/2026/11/06/tanzania-opposition-leader-tundu-lissu-awaits-verdict-in-treason-trial/",
      "domain": "africanews.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Corn",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-05",
+   "sample": [
+    {
+     "d": "2026-11-06",
+     "title": "Corn output decline forecast for South Africa",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM01YZ3dvaHhGN19JMnZiZHN6M3JlRlMyS1pvWGFNTmtDd2lYZlFrWE5qQlFpTHpJZ3JUdjFQRlplUVNYMXJpTG1CNk5MV2Q4QUtDY1owSVZKa0VabkVaNFFwMmRiTTktdGJTWGVvZXNXRkZGMXVVYWlBWmVRUGR4OW1MOVRxbkNVODRpZlJlSW9ZUQ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-05",
+     "title": "Corn, Soybean Futures Remain at Multi-Month Lows",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcW1zbnNIR1RaeC03a0c4aTlqX09yR0dxcU9wc1Z2Q3F5ZFFvdU5IdmhOS2d4TzFFS1RVVE1mNURfLTU2TFotUjNiX2ZCWXloc2pvdW1MTGdncGhoOTZqdVJmemRodG5obDZQd09yVmdURGhIOXR5X2dMdzdGeGNPWjZoOEs3ZEhyZ2fSAY8BQVVfeXFMTXZDdXZ5ZHJ0N2Qza0VZWFIyOUY0WnBvUEhxZDJwemhQZTBPalFLaHFPd05rRFpiSWhOTzdoN0hVUjRBUEw1enVYQm1mVldYZ1ltbzRWd2lNVVFfcTFxR3FiRkpUN2g3NUM4LWVnUFNWeGRNTmZucW1idGJ6aXNvb0phRmpsYmZTMFExRWRNV0E?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-06",
+   "sample": [
+    {
+     "d": "2026-11-06",
+     "title": "China’s Rare Earth Appetite Could Leave the Rest of Us Hungry",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVC1yaWdaQjlmLTdrWmIxWUxoWTZHV3I5eUJqcTU3OXpobEFBaW43VHhCSWhQNTVSWDhXOXNtNFdJVnpqNURCTmEwMzg2NkdKTm56SEo4OGNMcVNkcWFoeHpkT0dNcjFXelVvckFuRERKX0E1UTltekg2ejdxMXo4ZzZRX1Znb29BZTlnck54V1BzeC1uWnlCZ05FQlItUmltU2hIN3FuY3VObldQU1YwS0pKM2RSZDA?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-06",
+     "title": "China 2030 Resource Plan Rare Earth Export Deadline",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQV3lJYTRiWWRzS1luUDRPWlRWNEZ2TV9zQkFmZ1JyRTVZYzQ4OVQ2QlI2N0JtZE53eVNIQnBjaFFYTUppSEx4VGVSbncwdnJjOGRZY0NUZXQyRHd4VHRscGxyN0xDVlRDMXBsZGIxY0Z2TEVDQVh4a2ViNGdlS2MyMUNGRS1TUTA?oc=5",
+     "domain": "news.google.com"
     }
    ]
   }

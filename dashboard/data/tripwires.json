@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T12:59:37Z",
+ "generated": "2026-11-06T19:10:09Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 2,
    "threshold": 10,
    "op": "<",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "maritime_attacks",
@@ -18,10 +18,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 35,
+   "current": 43,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 11,
+   "current": 13,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "copper_6",
@@ -43,7 +43,7 @@
    "current": 6.26,
    "threshold": 6,
    "op": ">",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "bio_health_events",
@@ -54,7 +54,7 @@
    "current": 21,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "ioda_outage",
@@ -65,7 +65,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   },
   {
    "id": "quake_near_site",
@@ -76,7 +76,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-06T12:59:37Z"
+   "at": "2026-11-06T19:10:09Z"
   }
  ]
 }

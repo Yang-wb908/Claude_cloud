@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-06T12:59:35Z",
+ "generated": "2026-11-06T19:10:05Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-06T12:59:35Z",
+  "at": "2026-11-06T19:10:05Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,32 +48,23 @@
       132.0,
       40.5
      ],
-     "n": 2,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 2
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "CARD",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "18-21005"
-      },
-      {
-       "flight": "KEEP00",
-       "t": "H47",
-       "role": "other",
-       "lat": 36.47,
-       "lon": 127.35,
-       "alt": 1450,
-       "reg": "16-08212"
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.54,
+       "lon": 127.38,
+       "alt": 40000,
+       "reg": "N291SR"
       }
      ]
     },
@@ -121,22 +112,22 @@
       37.5
      ],
      "n": 1,
-     "key": 1,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "IAM1424",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 34.64,
-       "lon": 32.47,
-       "alt": 35000,
-       "reg": "MM62227"
+       "flight": "RRR6130",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 31.29,
+       "lon": 36.04,
+       "alt": 13400,
+       "reg": "ZZ174"
       }
      ]
     },
@@ -149,13 +140,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "P8",
+       "role": "isr",
+       "lat": 43.67,
+       "lon": 29.34,
+       "alt": 13500,
+       "reg": "170269"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -166,53 +169,13 @@
       30.5,
       61.0
      ],
-     "n": 4,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 3,
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "CEF6027",
-       "t": "C295",
-       "role": "other",
-       "lat": 57.31,
-       "lon": 14.26,
-       "alt": 20000,
-       "reg": "0481"
-      },
-      {
-       "flight": "RJA23H",
-       "t": "GL7T",
-       "role": "other",
-       "lat": 55.74,
-       "lon": 14.83,
-       "alt": 43000,
-       "reg": "VP-BHM"
-      },
-      {
-       "flight": "PLF042",
-       "t": "C295",
-       "role": "other",
-       "lat": 53.98,
-       "lon": 18.54,
-       "alt": 17000,
-       "reg": "022"
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 55.8,
-       "lon": 19.78,
-       "alt": 32000,
-       "reg": "N159L"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -233,12 +196,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 7
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-06T12:59:35Z",
+  "at": "2026-11-06T19:10:05Z",
   "data": {
    "n_total": 1768,
    "recent": [
@@ -389,37 +352,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-06T12:59:35Z",
+  "at": "2026-11-06T19:10:05Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 38,
-    "??": 24,
+    "US": 37,
+    "??": 25,
     "CA": 6,
     "DE": 6,
-    "BR": 4,
+    "BR": 3,
+    "IT": 2,
     "AU": 2,
     "CN": 2,
     "GB": 2,
     "CH": 2,
-    "ES": 2,
+    "SA": 1,
     "AE": 1,
     "IL": 1,
     "DK": 1,
-    "ID": 1,
-    "VN": 1
+    "ID": 1
    },
    "by_group": {
+    "N0n": 20,
     "medusalocker": 17,
-    "N0n": 15,
     "BrainCipher": 11,
+    "akira": 8,
     "safepay": 8,
-    "akira": 6,
     "Aoqin": 5,
     "play": 5,
-    "incransom": 5,
     "SilentRansomGroup": 4,
-    "Dark Project": 4
+    "Dark Project": 4,
+    "qilin": 3
    },
    "kr": []
   }
