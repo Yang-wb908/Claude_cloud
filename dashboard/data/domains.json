@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-06T06:57:53Z",
+ "generated": "2026-11-06T07:02:52Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-06T06:57:53Z",
+  "at": "2026-11-06T07:02:52Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,23 +48,32 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "airlift": 1
+      "airlift": 2
      },
      "ac": [
       {
        "flight": "",
        "t": "C30J",
        "role": "airlift",
-       "lat": 35.64,
-       "lon": 126.76,
-       "alt": 25975,
+       "lat": 35.33,
+       "lon": 126.72,
+       "alt": 26000,
        "reg": "167982"
+      },
+      {
+       "flight": "",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 35.7,
+       "lon": 128.67,
+       "alt": 22050,
+       "reg": "168075"
       }
      ]
     },
@@ -77,25 +86,13 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 25.23,
-       "lon": 55.66,
-       "alt": 27525,
-       "reg": "19-46111"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -136,8 +133,8 @@
        "flight": "TURNA01",
        "t": "AT76",
        "role": "other",
-       "lat": 34.27,
-       "lon": 32.38,
+       "lat": 34.28,
+       "lon": 32.12,
        "alt": 15500,
        "reg": "TCB-751"
       }
@@ -182,8 +179,8 @@
        "flight": "CEF6027",
        "t": "C295",
        "role": "other",
-       "lat": 53.5,
-       "lon": 13.85,
+       "lat": 53.81,
+       "lon": 13.79,
        "alt": 20025,
        "reg": "0481"
       }
@@ -213,7 +210,7 @@
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-06T06:57:53Z",
+  "at": "2026-11-06T07:02:52Z",
   "data": {
    "n_total": 1768,
    "recent": [
@@ -364,7 +361,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-06T06:57:53Z",
+  "at": "2026-11-06T07:02:52Z",
   "data": {
    "n_week": 100,
    "by_country": {
