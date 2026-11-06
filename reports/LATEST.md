@@ -1,299 +1,300 @@
-# SITREP 2026-11-05
+# SITREP 2026-11-06
 
-**DTG** 050718Z NOV 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-11-05T06:57:11Z
+**DTG** 060718Z NOV 26 · UNCLASSIFIED // OSINT · 자동 수집 2026-11-06T07:02:38Z
 
 ## BLUF
 
-미 중간선거에서 민주당이 압승하고 트럼프 대통령이 '이란 즉각 공습 계획 없음'을 밝히면서 단기 대이란 확전 위험은 낮아졌을 가능성이 높다(중간 신뢰도). 브렌트유는 94.16달러(-10.1%, B2)로 급락했고, 사건 보도의 98.76달러(-4.7%)와 차이가 나는 점은 확인이 필요하다. 다만 호르무즈 통항은 2척으로 트립와이어(10척 미만) 아래이며, 이 수치는 10월 25일 기준이라 최신성이 떨어진다. 미 재무부가 이란 그림자 선단과 인도·튀르키예 지원망을 연달아 제재하고 있어, 봉쇄에 준하는 상황은 당분간 이어질 가능성이 매우 높다(높은 신뢰도). 러시아는 아부다비 종전 협상과 백악관 헤르손 국지 휴전 논의를 앞두고도 자포리자주 코미슈바하 대피소를 폭격해 최소 37~40명이 숨졌으며, 협상과 무관하게 대규모 공습을 계속할 가능성이 높다(중간 신뢰도). 코스피(-9.3%)와 니케이(-5.5%)가 폭락했고 금은 4,133달러(+4.1%)로 올라 위험회피 흐름이 뚜렷하다. 북한 미사일 트립와이어는 발동됐지만 사건 목록에 해당 발사 기록이 없어 '미확인'으로 분류하며, 핀란드 인터넷 대규모 장애(IODA 단일 지표)와 후티 측의 '사우디 연합군 공격으로 약 20명 사망' 주장도 '미확인'이다. 에볼라 사망자가 5,300명을 넘고 미국 홍역 사망이 이어져 보건안보 경보(12건)가 발동됐으며, 해상 피격 24건과 에티오피아 국가 간 교전 9건 트립와이어는 사건 원문과 맞지 않아 과대 집계됐을 가능성이 있어 재검증해야 한다(낮은 신뢰도).
+1) 지난 24시간 가장 큰 위협은 금융시장 급락이다. AI·기술주 매도로 S&P500이 4.7%, 니케이가 9.3% 떨어졌고, 코스피는 11.7% 폭락해 서킷브레이커가 발동했다. VIX는 45% 오른 28.2, 원/달러는 2.3% 오른 1,356원이다. 다음 거래일에도 국내 증시·외환 변동성이 클 가능성이 높으며(likely, 신뢰도 중간), 지정학 사건보다 기술주 거품 조정이 주된 원인으로 판단한다(신뢰도 중간). 2) 호르무즈는 사실상 봉쇄가 이어지는 것으로 평가한다(신뢰도 높음). 일일 통항이 2척으로 트립와이어 기준 10척을 크게 밑돈다. 다만 PortWatch 자료는 10월 25일 기준이라 12일이 지났다. 카타르 앞바다에서 유조선이 발사체에 맞아 선원 1명이 숨졌고, 푸자이라 선박용 경유(LSMGO) 프리미엄은 톤당 430달러로 벌어져 걸프 해상 위협이 넓어지고 있다. 3) 유가는 미국 중간선거 뒤 이란전 종전 기대로 주간 약 12% 내렸다(브렌트 99.9달러, 당일 -4.6%). 그러나 같은 날 '브렌트 3.58% 상승 98.01달러' 보도도 있어 수치를 교차 확인해야 한다. 이란은 카타르를 통해 미국에 핵 제안을 전달했지만 '미국 7개 요구 충족 후 논의'를 조건으로 걸었다. 트럼프는 강경 발언을 이어가고 있어 단기 타결 가능성은 낮다(unlikely, 신뢰도 중간). 4) 한반도에서는 김정은이 남포조선소에서 5천t급보다 큰 신형 군함 건조를 시찰했다. 북한 해군력 증강이 계속될 것이 거의 확실하다(almost certain, 신뢰도 높음). 다만 실제 함 규격·무장은 미확인이다. 5) 러-우 협상은 트럼프가 '매우 근접'했다고 주장했으나 세부 내용이 없고, 폴리마켓 휴전 확률은 44%로 9%p 떨어져 연내 휴전 가능성은 낮다(unlikely, 신뢰도 중간). 에티오피아 트립와이어(9건)는 남부 내부 충돌에 따른 케냐 피란이 중심이고, 에리트레아와의 국가 간 교전은 미확인이다. 예멘군의 '후티 목표 1,298회 타격' 주장과 핀란드·중국·나이지리아 인터넷 대규모 장애의 원인도 미확인이다.
 
 ## 트립와이어 발동
 
 - **호르무즈 일일 통항 10척 미만 (PortWatch)** — 현재 2 (임계 < 10) · 봉쇄·공격으로 통항이 사실상 멈춘 상태. 유가·보험료 급등 선행 지표.
-- **북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)** — 현재 1 (임계 >= 1) · 한반도 긴장 수위.
-- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 24 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
+- **해상 피격·피랍 사건 24시간 내 3건 이상** — 현재 30 (임계 >= 3) · 해협 폐쇄·보험료 급등 선행.
 - **에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)** — 현재 9 (임계 >= 5) · 국가 간 전쟁 공식화 가능성.
-- **구리 6달러/lb 돌파** — 현재 6.39 (임계 > 6) · 공급 차질·재고 고갈 신호.
-- **보건안보 전역 24시간 보건(H) 사건 3건 이상** — 현재 12 (임계 >= 3) · 2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.
-- **감시 국가 인터넷 대규모 장애·차단 (IODA)** — 현재 2 (임계 >= 1) · 정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인.
+- **구리 6달러/lb 돌파** — 현재 6.21 (임계 > 6) · 공급 차질·재고 고갈 신호.
+- **보건안보 전역 24시간 보건(H) 사건 3건 이상** — 현재 20 (임계 >= 3) · 2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.
+- **감시 국가 인터넷 대규모 장애·차단 (IODA)** — 현재 3 (임계 >= 1) · 정부의 인터넷 차단은 시위 진압·쿠데타·군사작전 직전에 자주 나온다. 전력망·해저케이블 피격일 수도 있다. 사건 목록의 '인터넷 대규모 장애' 항목과 IODA 그래프로 확인.
 - **감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)** — 현재 2 (임계 >= 1) · 원전·정유·해협 인근 지진은 공급 차질과 시설 안전 문제로 이어질 수 있다. 핵실험 위장 여부(북한·이란)도 함께 확인.
 
 ## 경제 위험 지수
 
-**48 (보통)** · tail 68 · market 30 · supply 26 · crowd 51 · events 100 · model 0 · 한국 수입 바스켓 P95 +34.1%
+**50 (보통)** · tail 68 · market 37 · supply 24 · crowd 51 · events 100 · model 8 · 한국 수입 바스켓 P95 +34.1%
 
 ## 예측 적중 (시나리오 하우스 뷰, 20거래일)
 
-채점 0건 · 방향 적중 58% · 90% 구간 포함 100% · 스킬(무변동 대비) +0.14 · 판단 Brier 0.18
+채점 2건 · 방향 적중 54% · 90% 구간 포함 92% · 스킬(무변동 대비) +0.04 · 판단 Brier 0.18
 
 ## 전역별 24시간 사건
 
-### 러시아–우크라이나 (43건)
-- 2026-11-05 · 공습·드론·미사일 · 벨고로드 — 우크라 공격에 러 벨고로드서 3명 사망, 러 공습으로 우크라 도시 정전·러 드론 700대 격추 주장 [출처](https://www.aljazeera.com/news/2026/11/4/ukrainian-strikes-kill-three-in-russias-belgorod-region?traffic_source=rss) `B3`
-- 2026-11-05 · 공습·드론·미사일 · 코미슈바하 — 러시아군, 자포리자주 코미슈바하 대피소 폭격해 최소 37명 사망 [출처](http://www.africanews.com/2026/11/04/ukraine-police-footage-captures-russian-strike-on-komyshuvakha-shelter/) `B2`
-- 2026-11-05 · 외교·정치 · 스페인 — 젤렌스키, 방공 논의 위해 스페인 방문 [출처](https://news.google.com/rss/articles/CBMigAFBVV95cUxORDFxaC1Mb3k3MWlpNGx2dldBUmhvZ0h1TmxrM0ZmQ2dsdEJqcGl0MFlaNElIekNNRE5IUkFTQ0tUM1ljN1kwLWMxb2k0ODhuOW5GeFJRdWR1eE8tTEs5SlVCLWIyS1dnd0JzTWdZNXlxX0QzellvNnBPdUxzV19jOA?oc=5) `C4`
-- 2026-11-05 · 외교·정치 · 헤르손 — 멜라니아 트럼프, 11월5일 백악관서 러·우 대표와 헤르손 국지 휴전 논의 주재 [출처](https://oilprice.com/Geopolitics/Africa/Russia-and-Ukraine-Head-to-White-House-for-Melania-Trump-Led-Talks.html) `C3`
-- 2026-11-05 · 해상 · 흑해 — 미국·NATO 항공기, 지역 상공서 동시 임무 수행(불가리아 보도) [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxON1NaUUF0Qi15TWxidVh1dEVXelI2NVhiTFhGQXdTNjFKNHJmN29ETS1VY1A1UEdhT3J3c2RLWHRzSVhicmZ4VFdkVXRBNlRueVlqWm5ZSDZ1dkhkbWhJZEJvMld2UzhJMUFjTHN4c25QeE1wcG1OZHE4SU1RSFVISWJlVmJWUmg5SGVFaTBaODgzYk5zS2RDbThOejBJNmUxbzV4WF9R?oc=5) `C3`
-- 2026-11-05 · 경제·제재 · 우크라이나 — USDA/FAS, 우크라이나 곡물재고 사상 최대 3,600만t 전망 [출처](https://news.google.com/rss/articles/CBMioAFBVV95cUxPZTMxakZ3UGhqTTlZSC1WSXZFQVBUZEkyMHVqLWlsNjR0R0h2ZDVRTU5UWTRwNERKTS1LRGZ3cVlqbk5YUjBjaTNtWWtENnFabXFYblA3SXZlV3V0OVBFV0NzMDRlYmYtbkpSZVdLS1hYWGFQbVEwTENVRHRxSFZmT3RXRVRqeWtHZjh6Mm9hc1EtQWRld3ktcVo4a3V6RDFG?oc=5) `C3`
-- 2026-11-05 · 외교·정치 ·  — 국제아이스하키연맹, CAS 판결에도 러시아 복귀 반대 재확인 [출처](https://www.aljazeera.com/sports/2026/11/4/ice-hockey-federation-reiterates-opposition-to-reinstatement-of-russia?traffic_source=rss) `B3`
-- 2026-11-05 · 공습·드론·미사일 · 자포리자주 코미슈바하 — 러시아 자포리자 공습 사망 40명으로 늘어…코미슈바하 잔해 속 수십명 추정 [출처](https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people?traffic_source=rss) `B3`
+### 기타 (53건)
+- 2026-11-06 · 외교·정치 · 나미비아 — 나미비아서 CTBT 핵실험 검증 훈련 위해 전문가 집결 [출처](http://www.africanews.com/2026/11/05/experts-gather-in-namibia-for-nuclear-test-verification-exercise/) `B3`
+- 2026-11-06 · 외교·정치 ·  — IMO 이사회, 해운 공격 속 도밍게스 사무총장 연임 지지 [출처](https://gcaptain.com/imo-backs-dominguez-for-second-term-amid-shipping-attacks-and-climate-deadlock/) `C3`
+- 2026-11-06 · 경제·제재 ·  — 미국, 중국 기업 대상 수출규제 유예 연장 [출처](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNDRsdElnRGFmbW5YVDI0UlZydWQtaHZhRUlFWFdpTDZrRWxUbzJDWWVrYVlKb2NmTmJOeUhxSXNtc3FxaWRjZGhDZUxoQlJWZWZwekNUUUFiNjVBMXVQZ09jU1lJR3BWREhRbF92b1pTZHNPVmNSSjU0VnFsZWtLamRadUtEVVhnSnlFZWp4WWEwZGt1THFBMjNHWlZkbnFSSTRtTEMzQjJYNGJvUE5iYnZoTmlzN1NmOXhsR3ppd3VIdllfbzFTOWRpd2s2TmpNY3c?oc=5) `C3`
+- 2026-11-06 · 경제·제재 ·  — 미 BIS, 대중 협상 진행 속 50% '계열사 규정' 유예 연장 [출처](https://news.google.com/rss/articles/CBMidkFVX3lxTFBaQkNlMWpraDhmRGtzSUZJNlRPLVl5azBwMDdWZ1c2bGozMGlBUDhuYnM4MzhJeFpEQklJWno2ZVBtWU96X3RNWkppSTNhSkZpZXU0cnp1SE1JQVJndXk3LUhveHQ2bUctMTZzeFBNSW1mVjJreGc?oc=5) `C3`
+- 2026-11-06 · 경제·제재 ·  — 미국 50% 규정 시행일 공식 연기 [출처](https://news.google.com/rss/articles/CBMif0FVX3lxTFA4WU9GR0JMNkVZQk91aENYZmVwTTRvejZ1dU9tUXhGdDZBbE5GNXduRUFmaWNiRWlpN1hEdmgxamNwaFJCU2pvaFhCZjFEQm5CN3RLUlJuSnNvZURoVUY3enNnNDExdzlYbl9VbFN5N2wzcEpTWkMweFhmZ1FSZ1U?oc=5) `C3`
+- 2026-11-06 · 외교·정치 · 도쿄 — 일본, 장기 분쟁 대비 생산능력·방산 수출 확대 위한 새 방위산업 전략 추진 [출처](https://thediplomat.com/2026/11/japan-plans-new-defense-industrial-strategy-to-prepare-for-prolonged-conflicts/) `B3`
+- 2026-11-06 · 테러·민간인 공격 ·  — 보고서, 전 세계 유대교 회당 겨냥 치명적 공격 위협 증가 경고 [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxPR3RRV3hvaEhyYldFY2VfWG9MbmhKN0RpN3RCZjRvNV9sS0VCQlVMdHZrNUdCeFdiNldBVGtkdE5oNnA0WWdvTUJwZ0QxTGlkS2dWeFRoakFjNVJjREQ0andRdzc5dzhyTG9MbFVzd2Y4cHpJcGx6bWZzbktSLWFsU3VpVHZOVlJCbXBiczdCQ3hYblpaTXJxSkFsdHpsY0xRdnlUaGp30gGrAUFVX3lxTFB2Y3VJWXdiUlc5ck9maHhhZEFkRXlmc0tfYS04UlNKY3ozOFA4YzBIRC0zamhhbERKRzhuNjJsd0hWaVdvMHhRZk5EYXMwcXB2NzJ2WlBNcTJJbk1FUXEzQ2l2WElrTkpBREJQVGdnOGdKaUJUSUo0Zjh2WVdEaUs2ZnQySDlvSjBMek1mUVljeDRVbHBtaTQzMXpaMFRGNHhGdHdEb0tYbG0tRQ?oc=5) `C4`
+- 2026-11-06 · 외교·정치 · 아슈하바트 — 美·투르크메니스탄, 아슈하바트 협의서 카스피해 횡단 가스 경로 논의 [출처](https://oilprice.com/Energy/Energy-General/US-and-Turkmenistan-Explore-New-Gas-Routes-Across-the-Caspian.html) `C3`
 
-### 기타 (41건)
-- 2026-11-05 · 경제·제재 · 리비아 — 리비아 동부 행정부, 신임 중앙은행 총재 임명…전임 나지 이사 8월 사임 [출처](http://www.africanews.com/2026/11/04/libyas-eastern-administration-appoints-a-new-central-bank-governor/) `B3`
-- 2026-11-05 · 경제·제재 · 키르기스스탄 — 중국-키르기스스탄-우즈베키스탄 철도 2031년 개통 목표, 공정 22% 예상 [출처](https://oilprice.com/Energy/Energy-General/Chinas-Rail-Line-Into-Central-Asia-Is-Set-for-2031.html) `C3`
-- 2026-11-05 · 경제·제재 · 나미비아 — 단고테, 남부아프리카 공급용 25억달러 규모 나미비아 연료 저장 허브 착공 [출처](https://oilprice.com/Latest-Energy-News/World-News/Dangote-Breaks-Ground-on-25-Billion-Namibia-Fuel-Hub-for-Southern-Africa.html) `C3`
-- 2026-11-05 · 경제·제재 ·  — 서방 텅스텐 가격이 중국의 약 4배로 상승…수출 제한·지리 영향 [출처](https://www.mining.com/western-tungsten-prices-nearly-quadruple-chinas-report/) `C4`
-- 2026-11-05 · 외교·정치 · 중국 — 미 국방정보국, 중국이 미군 대응 위해 위성 공격무기 확대 중이라고 평가 [출처](https://news.google.com/rss/articles/CBMixwFBVV95cUxQYnMtczlnOGR4Y2xKMkllSlFiT2ZUSmsyUFY4VUR1VkpyY3VPRVJBaGdjdDNhYUdWSk56YVRWQm1xejV0VmU1aXdycHAyc1hYUWdSN01FTmNjZEZPV09faFVrNk83OGxjanlaWF8waV9ud3ZpekFfeUxLWUpOQkdfbjI1TFEyM0NGMzdnTEo0SFJFVE5rWXMzT05iVWFoOFdkNU1ic0s1R3FSNEtrRUlNdHF5U19lV1VYV1QzWVdTVmxiLW5Xd2xr?oc=5) `C3`
-- 2026-11-05 · 경제·제재 · 카자흐스탄 — 카자흐스탄, 2035년까지 원전 2기 완공 목표…中과 계약 미확정 [출처](https://thediplomat.com/2026/11/kazakhstan-eyes-ambitious-2035-goal-for-2-nuclear-power-plants/) `B3`
-- 2026-11-05 · 경제·제재 ·  — 4년 연속 성장하던 세계 LPG 교역, 2026년 증가세 꺾여 [출처](https://www.hellenicshippingnews.com/banchero-costa-weekly-market-report-week-44-2026/) `C3`
-- 2026-11-05 · 경제·제재 · 상하이 — 태평양 횡단 항로, 상하이-LA 운임 희망봉 경유 북유럽 대비 5배로 최고 수익 [출처](https://splash247.com/transpacific-emerges-as-liner-shippings-golden-trade/) `C3`
+### 러시아–우크라이나 (45건)
+- 2026-11-06 · 경제·제재 · 브뤼셀 — EU, 러시아 가스 구매 재개 계획 없어…대러 제재 완화 이유 없다 [출처](https://oilprice.com/Latest-Energy-News/World-News/EU-Not-Planning-to-Resume-Russian-Gas-Purchases.html) `C3`
+- 2026-11-06 · 외교·정치 · 우크라이나 — 러·우 양측, 포위 도시 주민 대피 주도한 측으로 멜라니아 트럼프 측 지목 [출처](https://www.nytimes.com/2026/11/05/world/europe/melania-trump-oleshky-ukraine-ceasefire.html) `B1`
+- 2026-11-06 · 외교·정치 · 아부다비 — 폴리마켓 러-우 2027년 말까지 휴전 확률 44%로 9%p 하락, 아부다비 협상 임박 [출처](https://www.riotimesonline.com/ukraine-ceasefire-odds-fall-polymarket-2026/) `C2`
+- 2026-11-06 · 외교·정치 · 워싱턴 — 트럼프, 러시아 특사 면담…러-우크라 협상 '매우 근접' 주장, 세부 無 [출처](https://www.aljazeera.com/news/2026/11/6/trump-met-russian-envoy-after-he-appeared-with-melania-trump-and-ukrainians?traffic_source=rss) `B1`
+- 2026-11-06 · 경제·제재 · 노보로시스크 — 제재 대상 러 그림자선단 유조선 7척, AIS 위장해 노보로시스크 운항 [출처](https://www.hellenicshippingnews.com/seven-shadow-fleet-tankers-spoof-ais-to-hide-novorossiysk-voyages/) `C3`
+- 2026-11-06 · 외교·정치 · 백악관 — 멜라니아 트럼프, 백악관서 러·우 관리 회담 주최하고 지속적 휴전 촉구 [출처](https://www.dawn.com/news/2042442/melania-trump-hosts-russia-ukraine-meeting-calls-for-enduring-truce) `B2`
+- 2026-11-06 · 지상전·점령 · 러시아 — 친러 라트비아인, 러시아 이주 후 러시아군에 강제 징집 [출처](https://news.google.com/rss/articles/CBMisgFBVV95cUxPcHozNDJmVU9paERsa2hUOU4wYVcyakVVSE9QYWxzR0lwS00xMFh0ekNmOGlnS0NoYXF1SU14eUxvNzludnR6Y3BmQVVnTmtaUU43dGlzbEgzU2NBLWktb2hJcFBKeG9nSy01ZXdKNnFJTkl5ay1mNjBxZ0dfUnRyRGJCLXRDMVhMTlhlOHVMdlNIYUtNNTB5c3ZxSnNyN0JuRHV3U2RCUklNZUUwcDV2VFp3?oc=5) `C4`
+- 2026-11-06 · 외교·정치 · 올레시키 — 멜라니아 트럼프 행사에 우크라·러시아 동석, 우크라만 올레시키식 임무 확대 촉구 [출처](https://news.google.com/rss/articles/CBMixgFBVV95cUxPTVlMVldjTXJ1WDR5UWNadGpyTmJiUDNrUWx0M25mWFdqT3RLYWtOZVUyN0RRcWRJdUh1Q2JPMjhVQl9vTDZ4RTZzUjl0RVRla3dlc3k2cjd4Szg2LWhBU3Y3VktzSDhSdno2UllUR2lBcnpGajFaUTc0dGVvYmNJWjlQMUNud3BaX2tsV24yTFoxaHdCRHEyTjVrakNqcTJ4Ujc2ZFo4aFZtenc5VXdDbllPdkZVbWEtY3lLT2tqd1o3X21zTkE?oc=5) `C4`
 
-### 유럽·발트·북극 (39건)
-- 2026-11-05 · 재난·사고 · 비순드 유전 — 에퀴노르 북해 비순드 플랫폼 화재로 가스 수출 일 1,320만㎥ 중단 [출처](https://oilprice.com/Latest-Energy-News/World-News/Fire-Shuts-Equinors-Visund-Platform-in-Norwegian-North-Sea.html) `C3`
-- 2026-11-05 · 외교·정치 · 유럽 — 유럽 정상들, 미 중간선거 민주당 승리 환영·대미관계 재설정 기대 [출처](https://www.france24.com/en/european-leaders-welcome-democrats-us-midterms-election-win) `B3`
-- 2026-11-05 · 재난·사고 · 마드리드 — 스페인 9개월 새 고속열차 참사 2건, 조기총선 앞두고 철도 신뢰 하락 [출처](https://www.theguardian.com/world/2026/nov/04/spains-deadly-train-crashes-have-damaged-public-trust-in-the-system) `B3`
-- 2026-11-05 · 해상 · 노르웨이 인근 해역 — 영국 항모 프린스오브웨일스 북극권, 퀸엘리자베스 지중해서 작전·훈련 [출처](https://news.usni.org/2026/11/04/royal-navy-carriers-operate-in-the-high-north-mediterranean) `B2`
-- 2026-11-05 · 해상 · 노르웨이 북극 해안 — 이란 연계 30년 된 유조선, 노르웨이 북극 해안 따라 표류 [출처](https://news.google.com/rss/articles/CBMitwFBVV95cUxOOHJaTVlqVjV1czJvRXdYc1NRZmNQMzJoNVJESkwzaFRqeTV4WER0N3NsdVFMSUxfX2VhOVhUbXFfOFppVkJhM1hieFpuQzFaZUtISWtBbnhyWm1TSWJQZFhYMXpjSE1mVG96dHFBRjZvWmtsald5c1ZQSUFSZGhKc2tyTURXbHo4YlhqUGh3WHJVTXNfcTA5cDNtRDNzRUJOeUlIREx4djVoaFFOV1M2ZXVqbGozQW8?oc=5) `C3`
-- 2026-11-05 · 해상 · 지중해 — 영국 해군 항공모함, 북극권·지중해에서 작전 [출처](https://news.google.com/rss/articles/CBMilwFBVV95cUxPS0lHTU1OU09iOXdzTWcyYnd3a0FLVXRaTTJnUTk0bVdGS0FaOU43bDE0Y2VuTVdIZ1JhaEFuUXBacGlwanFDYVFRdThpLUxSS0wtRU5OM3g3a2R2YS1JY2dfd1lsbmhEblhQVlRQUnhJeEZlbkFvMEwxY2RfUnQ0NlBzRnEybTNBZU0tM2RmSDNpTUFFaU9R?oc=5) `C3`
-- 2026-11-05 · 외교·정치 ·  — EU 국경청 프론텍스 권한 확대안, 귀환허브 추방 지원에 의원들 인권 우려 [출처](https://www.politico.eu/article/meps-fear-fundamental-rights-will-take-hit-plans-expand-eu-border-agency/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication) `B3`
-- 2026-11-05 · 경제·제재 ·  — 발틱건화물지수 4% 오른 2,694포인트로 반등…케이프사이즈 지수도 상승 [출처](https://www.hellenicshippingnews.com/baltic-dry-index-rebounds-3/) `C3`
+### 유럽·발트·북극 (33건)
+- 2026-11-06 · 범죄·치안 · 유럽 — 이탈리아·폴란드·스페인 등 유럽 항공편에 허위 폭탄 위협, 군 기지 착륙·검색 소동 [출처](https://www.nytimes.com/2026/11/05/world/europe/bomb-threats-airline-passengers.html) `B2`
+- 2026-11-06 · 외교·정치 · 파리 — 프랑스 전국 파업·시위, 파리·리옹서 일부 경찰과 충돌 [출처](https://www.dawn.com/news/2042372/largely-peaceful-marches-take-place-across-france-as-workers-stage-strike) `B3`
+- 2026-11-06 · 해상 · 아우구스타 — 미 구축함 스타우트, 10월 25일 이탈리아 아우구스타만서 전력 상실 [출처](https://news.usni.org/2026/11/05/uss-stout-loses-power-during-port-visit-due-to-engineering-casualty) `B2`
+- 2026-11-06 · 경제·제재 · 튀르키예 — 튀르키예, 2040년까지 5천억 달러 에너지 인프라 투자 계획 발표 [출처](https://oilprice.com/Latest-Energy-News/World-News/Turkey-Unveils-500-Billion-Energy-Plan-Built-on-Gas-Solar-Nuclear.html) `C3`
+- 2026-11-06 · 경제·제재 · 파리 — 프랑스 하원, 정부 예산안 만장일치 부결…재정적자 5.1%에 채권시장 우려 [출처](https://oilprice.com/Geopolitics/Europe/Frances-Debt-Crisis-Could-Trigger-a-Much-Bigger-European-Meltdown.html) `C2`
+- 2026-11-06 · 범죄·치안 · 핀란드만 — 핀란드 법원, 핀란드만 해저케이블 손상 혐의 화물선 선장·갑판장에 징역형 [출처](https://www.nytimes.com/2026/11/05/world/europe/finland-fitburg-russia-ship-baltic-cables-sabotage.html) `B2`
+- 2026-11-06 · 테러·민간인 공격 ·  — 유럽 항공편 허위 폭탄 위협 배후 분석, 러·이란 연계 증거는 아직 없어 [출처](https://www.bbc.co.uk/news/articles/cx8dzzjg3g9zo?at_medium=RSS&at_campaign=rss) `B2`
+- 2026-11-06 · 외교·정치 · Finland — 인터넷 대규모 장애·차단: Finland (IODA 24시간 점수 315023, gtr.sarima 315023). 정부 차단·전력망 피격·케이블 손상 가능 [출처](https://ioda.inetintel.cc.gatech.edu/country/FI?d=2026-11-06) `B2`
 
-### 이란·호르무즈 (30건)
-- 2026-11-05 · 경제·제재 ·  — 트럼프 중간선거 패배 후 브렌트유 4.7% 하락 98.76달러 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/brent-crude-oil-falls-under-100-barrel-after-trumps-midterm-defeats) `B3`
-- 2026-11-05 · 외교·정치 · 이집트 — 엘시시 이집트 대통령, 이란·미국에 대화 통한 분쟁 해결·확전 자제 촉구 [출처](http://www.africanews.com/2026/11/04/egyptian-president-calls-iran-us-to-resolve-conflict/) `B3`
-- 2026-11-05 · 경제·제재 ·  — 베센트 美 재무장관, 이란 그림자 선단 지원망 신규 제재 후 '우리 편이냐 적이냐' 발언 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/bessent-says-you-are-either-us-or-against-us-after-new-iran-linked) `B3`
-- 2026-11-05 · 경제·제재 ·  — 美 재무부, 이란 지원 인도인 4명·9개 업체 등 범죄망 신규 제재 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/us-issues-fresh-sanctions-against-individuals-and-entities-aiding-iran) `B3`
-- 2026-11-05 · 경제·제재 ·  — 미국, 이란 지원 혐의로 인도·튀르키예 기업·개인 제재 [출처](https://news.google.com/rss/articles/CBMitAFBVV95cUxQTVZ6MV9CM2FjcXNvSGphdWlpYVQyTTRYV0g1bnRHR1ZBaGhucTBONGt3T05ua3dqMVAtSFZzZ2ZJcTkxRzUzUFZWVk5MZ24tb0tGdmZyYk9iR3BnQWdJQkxucUg0ZEtqaUp4RnI4YWp2eVEyN0t3TTh2SFdiajZ3VnhNVlNwZkpoTUZPNzRVXzh4TXpIOGFlTDEyaTZjbW5kSDg0eWtRS1VnV2Y1RU0zc1hBeEs?oc=5) `C4`
-- 2026-11-05 · 경제·제재 ·  — 미국, 이란 그림자 선단 제재 회피 도운 허위 선박등록 네트워크 제재 [출처](https://gcaptain.com/u-s-targets-fraudulent-ship-registries-used-by-irans-shadow-fleet/) `C3`
-- 2026-11-05 · 외교·정치 ·  — 밴스 부통령, 중간선거 패배 원인으로 8개월째 이란 전쟁 지목…에너지가 상승·해운 차질 [출처](https://gcaptain.com/vance-blames-his-own-administrations-iran-war-for-republican-defeat/) `C3`
-- 2026-11-05 · 외교·정치 · 테헤란 — 이란 수석협상가 갈리바프, 미 유권자가 '전쟁 반대' 투표했다고 언급 [출처](https://www.bbc.co.uk/news/articles/c6d934npl9y8o?at_medium=RSS&at_campaign=rss) `B2`
+### 이란·호르무즈 (26건)
+- 2026-11-06 · 외교·정치 · 모스크바 — 이란 안보수장 레자이, 모스크바서 푸틴에 모즈타바 하메네이 최고지도자 메시지 전달 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/irans-security-chief-delivers-message-supreme-leader-russian-president) `B2`
+- 2026-11-06 · 해상 · 카타르 앞바다 — 카타르 앞바다 페르시아만서 유조선 발사체 피격 [출처](https://news.google.com/rss/articles/CBMilgFBVV95cUxQZERHQ3lTWV93OWtyU0o4cHdZYU1naWRZbjZ6c3JhMDcyUlN0TVdvb040bkpPZVE1Vmd6VlNnVGFKNVZqbnFUX2tjNmoza2lYOXU3eUR0M08xT3ROenpRcmRUNno5TUdndEwydEI4TmQ5T1RhZzdSTWl1US1leVc1VnFlbUs1eFJZdzh1WWZYUC1LejZOZlE?oc=5) `C3`
+- 2026-11-06 · 해상 · 페르시아만 — 유조선 공격으로 선원 1명 사망…중동 걸프 위협 확대 [출처](https://news.google.com/rss/articles/CBMitAFBVV95cUxQeXNlaVh6NGpBM1FLbXFTOEt6ejZZTVVIZkk4b3hBQ2hiVGNpVC1lbzVBbG5ibU1KNTJuQzA5RTFVa2NyZ1RjS1czbERKdVJ6RHJPdXZ5X2NTaGxJWjM5MDdUT3o3c3gybjFpQUtpajd0dGJqdmljYWV1Ukg5RENtbzFaRkdha1dvYVg5cndsZ0NsMnZlb1pJT08xRGp4cWR6SFlybXpleFV5eG9WLXd5ck5wRTM?oc=5) `C3`
+- 2026-11-06 · 외교·정치 ·  — 트럼프, 이란이 미국 승인 없이 핵 프로그램 관련 아무것도 못한다고 발언 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/trump-says-iran-not-doing-anything-nuclear-program-without-us-approval) `B3`
+- 2026-11-06 · 외교·정치 · 도하 — 이란, 카타르 통해 미국에 핵 제안 전달…미국의 7개 요구 충족 후 논의 조건 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/iran-sent-nuclear-proposal-us-qatar-senior-iranian-official-tells) `B2`
+- 2026-11-06 · 경제·제재 · 푸자이라 — 푸자이라 LSMGO 싱가포르 대비 프리미엄 톤당 430달러로 확대, 공급 제한 지속 [출처](https://www.hellenicshippingnews.com/fujairahs-lsmgo-premium-over-singapore-widens-by-around-180-mt-since-september/) `C3`
+- 2026-11-06 · 경제·제재 · 아시아 — 아시아 에너지 수입국, 美 중간선거로 중동 전쟁·연료난 종식 기대 [출처](https://oilprice.com/Energy/Energy-General/Asia-Hopes-US-Midterm-Results-Will-Ease-Energy-Crisis.html) `C3`
+- 2026-11-06 · 경제·제재 ·  — 브렌트유 3.58% 오른 98.01달러, 美 중간선거 후 이란전 종전 기대 재평가 [출처](https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Rebound-Sharply-After-Brutal-Midweek-Rout.html) `C3`
 
-### 아프간–파키스탄 (26건)
-- 2026-11-05 · 외교·정치 · 이슬라마바드 — 파키스탄 '통합 야권', 이슬라마바드 파즐 자택서 회동…카이버파크툰크와 비상사태 논의·연대 강화 합의 [출처](https://www.dawn.com/news/2042114/united-opposition-gathers-at-fazls-islamabad-residence-vows-stronger-alliance) `B3`
-- 2026-11-05 · 범죄·치안 · 카라치 — 카라치 경찰, 주총리 관저 향하던 교사 시위대 진압…38명 일시 구금 후 석방 [출처](https://www.dawn.com/news/2042079/38-briefly-detained-in-karachi-as-police-baton-charge-protesters-headed-towards-cm-house) `B3`
-- 2026-11-05 · 외교·정치 · 아보타바드 — 리즈완, 국내 크리켓 대회서 무패 더블센추리로 복귀 [출처](https://www.dawn.com/news/2042111/rizwan-stages-resounding-comeback-in-domestic-cricket-after-england-tour-controversy) `B3`
-- 2026-11-05 · 외교·정치 · 호주 — 호주 고등법원, 폴린 핸슨의 인종차별 판결 상고 심리 허가 [출처](https://www.theguardian.com/australia-news/2026/nov/05/pauline-hanson-to-appeal-mehreen-faruqi-racial-discrimination-ruling-high-court-ntwnfb) `B3`
-- 2026-11-05 · 범죄·치안 · 이슬라마바드 — 파키스탄 반부패국, 파줄 아들 우편청 4,252명 채용 비리 소환 [출처](https://www.dawn.com/news/2042205/nab-summons-fazls-son-in-pakistan-post-case) `B3`
-- 2026-11-05 · 외교·정치 · 뉴욕 — 미 연방법원, 트럼프 행정부의 아프간인 아프간·파키스탄 추방 계획 제동 [출처](https://www.dawn.com/news/2042253/us-federal-court-blocks-afghan-deportation-plan) `B3`
-- 2026-11-04 · 경제·제재 · 이슬라마바드 — 파키스탄 정부, PTCL 매각대금 미수 8억달러 회수 위해 에티살랏 상대 국제중재 검토 [출처](https://www.dawn.com/news/2041937/govt-weighs-options-to-recover-800m-from-etisalat) `B3`
-- 2026-11-04 · 경제·제재 · 파키스탄 — 이란 국경 폐쇄로 파키스탄 LPG 공급 차질, 가격 2배…정부 겨울 수요 충족 약속 [출처](https://www.dawn.com/news/2041874/govt-assures-public-of-meeting-gas-demand-in-winter-pledges-to-ensure-supply-during-mealtimes) `B3`
+### 예멘·홍해 (25건)
+- 2026-11-06 · 경제·제재 · 수에즈 운하 — 후티 홍해 위협에도 수에즈 운하 수입 94% 급증 [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxQemlfN1R5aGdXUEtILWtMWFJDbHBEMXVxQklQTEVKZ0xZSFdrVlZxUWJZdmFXU1VSd1lLbTZ1Y0haOG1mTEZIWWRMNFpNYzl4Q3RpRXB2QTVsbHVtOGk3RW5DeWpWVnVPMTd1T0NLSnlLZTVsRnFzOFJnWmx5b1NwT2FiYkxMejlfVmMyZjhERTlXZlhUWkp4cEFQeHZSeElWUEtzc3RB?oc=5) `C3`
+- 2026-11-06 · 외교·정치 · 앙카라 — 튀르키예 의회, 메카 방위협정 비준…사우디-후티 분쟁 개입 확대 기반 [출처](https://www.aljazeera.com/news/2026/11/6/turkiyes-parliament-ratifies-mecca-defence-agreement?traffic_source=rss) `B2`
+- 2026-11-06 · 공습·드론·미사일 · 나지란 — 사우디 민방위, 나지란에 비상경보 발령 후 위험 해소 발표 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/saudi-civil-defence-issues-emergency-alert-najran) `B3`
+- 2026-11-06 · 공습·드론·미사일 ·  — 예멘군, 후티 목표 1,298회 타격·전투원 440명 무력화 주장 [출처](https://news.google.com/rss/articles/CBMixwFBVV95cUxQeXc3ZXdvZEdSUDJxeWx5WVJQTGM4OXZsY2dfaTd1RmZhSTNNczFnQXdyWl9PSzF1eXprVGcyeHliSzJpeU1qNFNQS2QzN2EwQVA2YVNyY2tEZHp3aXE4aWktRE9JLVJaTVBwQWRKNDR2WUUtTmZnTVduTEZ2WlRsY3kxN3BxRmFlSDhidjV0ZENlOXJ2b2NXaGFEVHpkbmEwRjJEcXR1dXI3U0xwVnR0dzJ2VUp4TVVEaURmTXhzY2RpdVNZay1R?oc=5) `C4`
+- 2026-11-06 · 경제·제재 · 홍해 — 제네타, 홍해 항로 복귀로 2027년 컨테이너 운임 30% 하락 전망 [출처](https://www.hellenicshippingnews.com/xeneta-summit-analysts-forecast-ocean-freight-spot-rates-to-fall-30-in-2027-as-red-sea-return-sees-capacity-flooding-back/) `C3`
+- 2026-11-06 · 재난·사고 · 예멘 — 예멘 긴급대응 상황보고서 6호(2026년 11월 5일) 발간 [출처](https://news.google.com/rss/articles/CBMimgFBVV95cUxQMGZxWnNZbXViMmszZXRvRlNIT3FtUEF2V0FYT3ZKTm1qZDVqZzI1MWhLQ2pWQzJJdUlNWWZyYlJsQjEzYlh4c0VmT2s4ZHIxLWQ2ZmlaQkFPanVBNXVXdXY5SVJCUk94RzZPNmRoelRNTXhZMGpqM2tGcFBSLS1nOFRaTkdWOG92Y0R1dWJYRW9iaGZDRUthandB?oc=5) `C4`
+- 2026-11-06 · 해상 ·  — 중국 은행, 후티 선박 공격 관련 청구 기각을 법원에 요청 [출처](https://news.google.com/rss/articles/CBMitAFBVV95cUxOOS1lOWZ0OUZUTmJydWM0RmVHeWxHZ0VLZGFtN2kza0VObEZNRURld3pvckpPajl5SUwxOTBPX2pNQW8zMWRnSEJlb1d6bmN0d0p3VVRkeWJmcXFBYjRzWlh3REh6cW5FREh5YWMxYkw1a2ZlM21uTElmZFRhYWFmQ0ZwanN3el9PV1NLODBDNHU1RzR3ajdMWTkzS1pjVlNwQk5tRVNiSmpCTFlNd2diWlNMbko?oc=5) `C3`
+- 2026-11-06 · 지상전·점령 · 타이즈 — ISW, 11월 5일 기준 타이즈·라헤지주 지형 통제 평가 발표 [출처](https://news.google.com/rss/articles/CBMixgFBVV95cUxQa3VsOTVOZF9zVDVJVmU0V0RJTjJpclJIWGVHQzFHWlB5QnNOMXc1Z2dWQVZLaFhSMGN1V08wa2t3Z3lNdGhWRUVwQklhRjhvZDFYS09iY1lwbVVwc2h1WDdnbFFOakRxT1ktR2ZUY3hqcnR3akZqZ0lZeTR0Rjdka0lGMDNYWk1lMS03dWlJZjVhem5yZHEzWjFTN1Y4SzZHWGJwcUZRb09yQ0lzaDREYUNaelNGQ1FQUFQzN3FrRFd4S2ppMFE?oc=5) `C2`
 
-### 예멘·홍해 (21건)
-- 2026-11-05 · 경제·제재 · 타이저우 — 코술리치, 중국 타이저우 조선소서 8,585DWT 메탄올 대응 급유선 인도 [출처](https://www.hellenicshippingnews.com/carlotta-cosulich-officially-delivered/) `C3`
-- 2026-11-05 · 공습·드론·미사일 · 타이즈주 하이판 — 후티 탄도미사일 타이즈 하이판 민가 타격 4명 사망…정부군 자우프·타이즈 진격 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/houthi-attack-kills-four-people-yemeni-government-forces-make-gains-al) `B3`
-- 2026-11-05 · 외교·정치 · 리야드 — 사우디·시리아 국방부, 리야드서 국방협력협정 체결…샤라 대통령 방문 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/saudi-syrian-defence-ministries-sign-cooperation-agreement) `B3`
-- 2026-11-05 · 공습·드론·미사일 · 사다 — 후티 매체 "사우디 연합군 공격으로 24시간간 알자우프·바이다·사다·타이즈서 약 20명 사망" [출처](https://www.middleeasteye.net/live-blog/live-blog-update/saudi-led-coalition-hits-yemen-reportedly-kill-20-people-over-past-day) `B3`
-- 2026-11-05 · 지상전·점령 · 마리브 — ISW, 예멘 마리브·자우프주 지형 통제 평가(11월 4일 기준) [출처](https://news.google.com/rss/articles/CBMixgFBVV95cUxPQjM0cFdHN1U1OTdqNUxoUkM4anBkelFNcVdGNW9fRlB0NjZvRTdPRVU0ZHRnNzUzSFhWNXg0OTJ4MEREYW1fZWJRSUQ0NnZfOHZWdG1jYkJ2ZWViZWdadDVEWE5QUWt1ZzlSVHFVdUxEZ1hEUVp2NnVzaE5kc0J2S2x3RE5qb0hPVkl4cTNyLTQ3UTdOampEVG1ZbHNkWFBURkxWRmxPR3hSWTlLZ1o2ZHZLZ0VBSmhVelZEa1lnUlBFYnhYMXc?oc=5) `C4`
-- 2026-11-05 · 공습·드론·미사일 · 예멘 — ISW, 후티 FPV 드론 국경 공격 현황(8월 21일~11월 4일) [출처](https://news.google.com/rss/articles/CBMi8gFBVV95cUxNcEVUckh0dnZGX3dMZXlfUFVlbEhQODdVc2NyRlRPNWEwLVd3cTJ2cU84T0FrVElPN0hLdTY1c3hRX0ExT1M4LU8wbnEtZEJVb2oxUlJBU3hyaUh4cjcxYVFPY0FmVjQyYmJyamNEZUZPeW1sZEdrWW5qcktHRF90NVVrbnR2Zi1fdl92VFVXbV9yZTYwZFJqM2lqNE9IdXZLQnRZSnZBbmZxSW5NWHVubW9SajYwSWJ4eHdLUWZCMGxFRjBjY0pvRzdta00tVHlDdjRHR25sZ3dqSEFZUk5rT3htMHBHM0s5MkkzYks5ZG1xdw?oc=5) `C4`
-- 2026-11-05 · 공습·드론·미사일 · 홍해 — 후티, 홍해 항로 장악 위해 드론전 개시 [출처](https://news.google.com/rss/articles/CBMiggFBVV95cUxNa0lyVW9acEUyNmFrUTNkdURhRkNKYVlBTUlITGh4aG1KUURwZnJMTF9rTGp2RWg0b2MzMlhlVERQcEkzZkZMdXc5d3JjUHRxY2R0MnVTNlhiVFhLUHY0OVFuTmYxdjNaWGpPU3FiRjRTdDdrZ2MyNXJsbEFuaFdqX3Rn?oc=5) `C3`
-- 2026-11-05 · 외교·정치 · 사우디아라비아 — 후티, 적대행위 종식 조건으로 사우디에 510억 달러 요구 [출처](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBJN181Q0VzaFM0QUtBNzlQV1loamE5NlpMWlJ6c2Flc2tJcVVwVUFCMnpROXE4eHVmb09XYkl4cVlFZFJzTnlkTHQxWU5ieWlMUnJPRTZOemw3YnpMX29pbUhLWFo?oc=5) `C3`
+### 아프간–파키스탄 (23건)
+- 2026-11-06 · 경제·제재 · 파키스탄 — 파키스탄, 휘발유 리터당 9.41루피·고속디젤 5.56루피 인하 [출처](https://www.dawn.com/news/2042367/petrol-price-slashed-by-rs941-per-litre-high-speed-diesel-by-rs556) `B3`
+- 2026-11-06 · 보건 · 이슬라마바드 — 이슬라마바드, 겨울 앞두고 인플루엔자 백신 품귀 [출처](https://www.dawn.com/news/2042365/citizens-in-islamabad-left-hanging-amid-unavailability-of-influenza-vaccines) `B3`
+- 2026-11-06 · 재난·사고 · 신장 — 라다크 접경 중국 신장서 규모 5.0 지진, 카슈미르 계곡서도 진동 감지 [출처](https://news.google.com/rss/articles/CBMi0wFBVV95cUxQd2hpc0IwR3UxYXB0Q1B5d2xlbGZnSHhrT0RKQ2NXVjhGOXk5dWY3SHpIRl9kYjVFQk5VQlZwckFFY2FRVmNKZE8xTHVSZmQ3dm9pYnlVZWlpOUlBN2Z4b1pRck9kc2d5UlotTDFSZmxVMGFlNUxkQ0xJcW5PdGxWQXpxQmRVSFJpSVZjZnVsd2J4cWdqV29JVDdJUF9leEFuNUl3VGYwTld4elBjM2RIRUd5UGFXenlKdzZGeGVuLUtXNXJEN3dSV3JBUVdPTDZYb2lN0gHbAUFVX3lxTE1FeDViOHNYbE5KYVBQUHNWbDF4cHM5NDh3V3M0WkxiYTAtTVJuN2NpYUhjRjNHbkhEcHg1VnZ6WDRFbmR6eGlua3d2UHBhbHFtZzBfWVpWc2RIMmhpdzVWZ0trYjcyOENjUVZmQmluM0RCcDZXUENzeEszc2Z5M3RTTWRHMVNFT2JTd3pYNE5qM01zdXZVazRjY0FpbmZMWThabDJ4cDJSVTliLUJoMWpveExKOTNyNWxOOEpGVFBHaHZjSXdyZi11TEpYZkdWUmUyUVNyMy1fLUJlcw?oc=5) `C3`
+- 2026-11-06 · 외교·정치 · 앙카라 — 튀르키예 의회, 파키스탄·사우디와의 메카 공동방위협정 비준안 279대119로 가결 [출처](https://www.dawn.com/news/2042575/turkish-parliament-approves-makkah-defence-pact-with-pakistan-saudi-arabia) `B3`
+- 2026-11-06 · 경제·제재 · 이슬라마바드 — 세계은행 보고서, 파키스탄 대외부채 10년간 687억→1,351억 달러로 증가, 최대 채권국은 중국 [출처](https://www.dawn.com/news/2042485/countrys-external-debt-nearly-doubles-in-a-decade) `B3`
+- 2026-11-06 · 외교·정치 · 뉴욕 유엔본부 — 유엔 안보리, 교전 중에도 외교 지속 촉구하는 파키스탄 주도 의장성명 채택 [출처](https://www.dawn.com/news/2042566/un-security-council-adopts-pakistan-led-statement-urging-diplomacy-during-wars) `B3`
+- 2026-11-06 · 외교·정치 ·  — 파키스탄 말리하 알리, MMA 세계선수권 동메달, 연맹은 준결승 판정에 이의 제기 [출처](https://www.dawn.com/news/2042574/maliha-ali-takes-bronze-at-mma-worlds-as-pakistan-appeals-semi-final-decision) `B3`
+- 2026-11-06 · 경제·제재 · 카라치 — 신드주, 카라치에 파키스탄 첫 대리석 산업단지 '마블 시티' 조성 추진 [출처](https://www.dawn.com/news/2042456/first-marble-city-being-set-up-in-karachi) `B3`
 
-### 가자·서안 (20건)
-- 2026-11-05 · 지상전·점령 · 알두육 알타흐타 — 이스라엘 정착민, 예리코 서쪽 알두육 알타흐타 가옥 8채 점거 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-settlers-seize-eight-homes-occupied-west-bank-village-west) `B3`
-- 2026-11-05 · 경제·제재 · 서안지구 — 미 민주당, 영국 대이스라엘 제재 본받아 정착민 제재 법안 추진 계획 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/inspired-uk-sanctions-israel-us-democrats-want-work-labour) `B3`
-- 2026-11-05 · 지상전·점령 · 가자지구 — 이스라엘군, 10·7 전날 데이프 등 하마스 지휘부 땅굴 진입 파악 [출처](https://news.google.com/rss/articles/CBMirwFBVV95cUxOS19vNTVRaXM0eHZET2RSNU84b2RqNjUwNlFtZjU2MHNuZDQ5RFpudGdxWlJTTE9aWURwdUZMUTV0aWt3MmtRUkVMY3docFo5ZEtRQWNTWlpqTUtzbEZxUDZRZFlNbWNqMGJwZG5LN2l2aUpLYTVZNWZ4MGg5THdfLTZlWWpQdkVZLTRsYVNWa01tbDhhcS1tV1UwTmNVQ0oyc3NTcnpnNXhyUmdndF9j0gG0AUFVX3lxTE0zZEtQQmRsYVRSV1RHa0ZZY0FiZEEtUTdnUXRycnJOSlZKWWFlbGVfX2pkMGNNSHk2aEY4TWNROUV5X0k3QmhHamZOV2RMVzFHSlp3TGt2c0tqMlpFRDVKVVpMaEpobG0zUXRkdzgxTzZ4TDRLMFdfbGhIYmFqajJpN1ZqWXFvaG4tTDY1R3RfU0RuekdrbUxjUFlwQUU3V2p0WTVCV3JOdXBqNmRvR0J1MEJKZQ?oc=5) `C4`
-- 2026-11-05 · 경제·제재 · 요르단강 서안 — 서안 불법 정착촌 생산 대추야자 500만 달러 이상, '이스라엘산' 표기로 호주 수출 [출처](https://www.theguardian.com/australia-news/2026/nov/04/food-grown-in-settlements-west-bank-sold-in-australia-produce-of-israel-ntwnfb) `B3`
-- 2026-11-05 · 외교·정치 ·  — 미 중간선거 민주당 압승에 팔레스타인·이스라엘 반응 엇갈려 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/4/palestinians-israelis-react-after-democrats-sweep-us-midterms?traffic_source=rss) `B3`
-- 2026-11-05 · 보건 · 가자지구 — NGO "이스라엘, 가자 절단 아동 1,100명 해외치료 제한" [출처](https://www.aljazeera.com/news/2026/11/4/israel-restricting-treatment-for-1100-child-amputees-in-gaza-ngo?traffic_source=rss) `B3`
-- 2026-11-05 · 범죄·치안 · 야파 — 이스라엘 경찰, 야파 팔레스타인 활동가 아베드 아부 샤데 무혐의 구금 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israel-detains-palestinian-activist-without-charge) `B3`
-- 2026-11-05 · 외교·정치 · 예루살렘 — 헤르초그 이스라엘 대통령 총선 결과 수용, 연정 협의 개시…네타냐후 진영 과반 상실 [출처](https://www.aljazeera.com/news/2026/11/5/israels-herzog-accepts-vote-results-opens-talks-on-forming-a-government?traffic_source=rss) `B1`
+### 가자·서안 (22건)
+- 2026-11-06 · 테러·민간인 공격 · 헤브론 — 헤브론 정착민 폭력, 이스라엘 대통령 연정 협의·가자 공격 지속 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/5/jerusalem-daily-settler-pogroms-in-hebron?traffic_source=rss) `B3`
+- 2026-11-06 · 공습·드론·미사일 · 부레이지 난민캠프 — 이스라엘 공습·총격으로 가자서 5명 사망, 부레이지 난민촌 동쪽서 12세 소년 숨져 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-fire-kills-five-gaza-including-child) `B3`
+- 2026-11-06 · 외교·정치 · 가자지구 — 가자 주민들, 잔해 속 부품으로 풍력발전기 제작해 전력 생산 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/6/building-wind-turbines-out-of-parts-found-in-gazas-rubble?traffic_source=rss) `B3`
+- 2026-11-06 · 지상전·점령 · 예리코 — 이스라엘 정착민, 서안 예리코 외곽 주택 입주…팔레스타인은 매매 문서 위조 주장 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-settlers-move-homes-near-west-bank-city) `B2`
+- 2026-11-06 · 공습·드론·미사일 · 알샤티 난민촌 — 이스라엘, 가자시티 서쪽 알샤티 난민촌 공습으로 팔레스타인인 3명 사망 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strike-refugee-camp-kills-three-palestinians-gaza) `B3`
+- 2026-11-06 · 테러·민간인 공격 · 라말라 — 이스라엘 정착민, 라말라 인근 부르카 마을 팔레스타인 올리브밭 방화 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/6/israeli-settlers-set-fire-to-palestinian-olive-grove-near-ramallah?traffic_source=rss) `B3`
+- 2026-11-06 · 지상전·점령 · 서안 — 이스라엘 정착민, 서안 도시 인근 주택으로 이주 [출처](https://news.google.com/rss/articles/CBMingFBVV95cUxOSElCWTJxQk00Qndnc3BUQjd2UW9GLURaWVFjVm52bFhHZDNHeHBIOWJGb0l0WVdPb0tKTGxGT3c4eTEwc1F4RXBkeHcyenBhSG45c1BZSUtIVmR6QjB5Vk1oOTBfQmYxbnJWa0pCbERjcFJCM29lUUFyVUJ4czJCbUE4TkRKMlRYbFEwd0VnQ3pBM3JDVjdSRzlCTmZoUQ?oc=5) `C4`
+- 2026-11-06 · 지상전·점령 · 서안지구 — 서안지구 팔레스타인 농민, 이스라엘군 제한 속 올리브 수확·최루탄 발사 [출처](http://www.africanews.com/2026/11/05/west-bank-palestinians-harvest-olives-under-israeli-military-restrictions/) `B3`
 
-### 대만해협 (19건)
+### 보건안보·페스트 (21건)
+- 2026-11-06 · 외교·정치 ·  — 데비 셰티 박사, 팬데믹 중 프랑스 공동체 지원 공로로 프랑스 국가공로훈장 수훈 [출처](https://www.thehindu.com/news/national/karnataka/devi-shetty-conferred-with-frances-national-order-of-merit/article71670697.ece) `C4`
+- 2026-11-06 · 보건 · 나이지리아 — 나이지리아 에볼라 중점검역관리지역 지정…9일부터 입국자 건강상태 신고 의무 [출처](https://news.google.com/rss/articles/CBMib0FVX3lxTE1HWTR6MUZad0Y1VUlUaTJwQ1JVQ3EtaW9qWm01QWQ0X0ZEdmM0ZkhFbmg5d0pqVXJfU1d3ZTFkTFlrUllBMmJET0hBUzRpRHI2VmQzdTdDYThYcThBaTB3c0V6dDRERWlLdDd4UFNiRQ?oc=5) `C3`
+- 2026-11-06 · 보건 · 위스콘신 — 위스콘신서 영아 홍역 사망, 이번 주 미국 내 3번째 홍역 사망 [출처](https://news.google.com/rss/articles/CBMikwFBVV95cUxNeGdiaUdUUm8xNlhIWDFTWkF2UXBaeFdKbDVIVzctWUYwbkptbjNHRzNnTVZwRjlTZEZSNjY5TF9ETXdWeW9hTlhFX3p5WlM3UDF1TXltZDNNaXB5TncxZk8xeWw5M1paeWR4RHRrem9KRzhRTktrLWV2eWJfc3diZXg2SWpMVHB5MVR1ZUZ4QzI5UE0?oc=5) `C4`
+- 2026-11-06 · 보건 · 위스콘신주 — 위스콘신 홍역 유행 중 영아 사망, 주 내 1990년 이후 첫 사례 [출처](https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ3B3eFRjNllhQzZDcVk3YWNzM0M2S1Z0S0J5MlBPMUdDWVlpVW1JOXAycll3T1pyRVp5bktqQ0RtbFdCQVVRSkdKT3I0cUNFbXVfRU1OaktQcnVsRkJmWjdzNEZ5cEhzOXg5TlRGa0luUm1lZGhmV3M3ekZmYTNEUzl3cDdBOFk5V08tYVZ6b0tnUHlqY01KQVVkcFJnZ0R30gG-AUFVX3lxTFBiM3daQWNwMDZiX1ZHUEM5Y3BPQjZkSlRBZmc4Q18xbXhXTjI3R3pTQ2pFTVQwa25qNzg3dmZQMTAwZFk4YU9yaTl1dU9kQVkyTUkycjl5ZWlmeENYeEtUQVB0Y281UVJBQTNGblhFdmlkRkZVamlVSF9WV3ZHY1l4cG9RLThtNkZyZmxHdFVDMW44dFpHcjYtYnNfZ201QmFVckN3UUV6ckNtRWNBenFvMTJMUTVFeXFfYUtrU3c?oc=5) `C3`
+- 2026-11-06 · 보건 ·  — 아프리카 최古 국립공원서 탄저병 발생, 하마 수십 마리 폐사 [출처](https://news.google.com/rss/articles/CBMisAFBVV95cUxOVHJQcFVsQmRDOTRNQ0pkNmhTYlFVa0ZxdnVFa3pzeUVwalo1WjJTWlVaRV9tRW41Z3pSUG9SZmE5SW92QkNuc2tHdTR0RFZNRjZsNVJGQlVhYWw2djl4b1N1bXhDNVo5MDFZNnFKalVlTW9ySmZFbTFOQVhPRUprWkx6Z1VXbXltODZUS3RKWE1ESUtGNWZEVWFoSkVzUXZlazlES004eU5mRGNSQmhuQdIBtgFBVV95cUxQSDBCM0xNcHZ6UDA0UWpxSXFiajhoSTcxVlV3RkczcWZuUm1YOW9YdmNieFRxcmZ3RUdPRFJjcV95OG9BYWt3N1VZX0prUHRhODZjVm1XMmtWMWtFUExDLVZmSjRUNjNuVXdyOXlDZk5lVmEwVHZKVnJkY0lDUFdSNkxlZjFja0tHREdzZ3FwUjJLZ196dC1CQXZGOHFQalAwVnYyZGNuOFdhaEhDdUJFcWlfSHAtZw?oc=5) `C3`
+- 2026-11-06 · 보건 · 미국 — 미국 내 동물 신세계 나사벌레 감염 사례 113건으로 급증 [출처](https://news.google.com/rss/articles/CBMilwFBVV95cUxOUGViRzRwSzFHTnVqVnFVMk5yQnlUelRaSXIxb1daWG8zMEttb3RpczZQWEl6Vzk5VklNRHFpSi1lYTNROXFvWDNQYUxWUFRBQW5BWU9vNFR0SkNyVUhGTFlBSEZMQzBvTnlmSmhGWFZ5ZmFRX3cwVGJ3aGV3Y091Si1WRTNQUkRuVnBVSzRPSXJOX1RRczN3?oc=5) `C4`
+- 2026-11-06 · 보건 ·  — WHO, 분디부교 에볼라 시험용 백신 후보로 옥스퍼드·모더나 백신 권고 [출처](https://news.google.com/rss/articles/CBMijgFBVV95cUxPOGhndGptMHU3QjM3UnZEbHh0VHFpMXZSOVhkTDZoRkR0dmkxbndvU0FqM3hwZ2V1QkpaSVgyVks0djlMTzBPVktTNjVfbTVLMjBNUXhiS2dGRnlMZzU3TURVWVBqay1RcmkwTUNiQnR4aVpXVDZ2eWlqRDVpZDdEYUtZbnNpSzJoSHlpX2dB0gGWAUFVX3lxTFBwc0s2WUFQUm5JeVBHTlVRMGJHVVZnY001RXdldmMtT1VNMWx1MkMxd1hrYTQwZVAwUkpzQkNPNWxSbk5oWHQxSG9lQTF2UF9wbHBBYzBiZ21XOXhKQ0NDam1QR2ltVjg5WkNnSXB2Vm14bVRhZHdjYU5yVnlrZThadkRxWU1hRDV1cUh3SXZwUmpjTDc4QQ?oc=5) `C3`
+- 2026-11-06 · 보건 · 콩고 — 영국, 콩고서 에볼라 감염 의사 본국 이송…발병 1만 건 넘어 [출처](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQa2VYTFhtSFo1X0llRUhoLUF2WUhRX3FqLUR3UkhBb3l3NENYVE9xU2ozZ3VvV2dFUEc0TGdTT29KRGU3ekt3THBHaUhsNm9QaEdrNVpTR1VpcnFqV3JLVGRjT1B0Undhd1FuU0Q0N3VrQlhRUlJ1cDJYMXBRWjlGYWRJSnlNRFdCQm1jN0U5ZWtXTjBUejJGVGtBMDZuQjVPVFduclFFN3YybzZHRXBGLTN1eUg0cGRl?oc=5) `C3`
+
+### 북미 (17건)
+- 2026-11-06 · 경제·제재 · 애리조나 — 리오틴토, 토지 분쟁 승소 후 레졸루션 구리 사업에 1억4,400만 달러 투입 [출처](https://news.google.com/rss/articles/CBMilgFBVV95cUxNNjNud2N3bDg1c1drTDRxXzdTRXlIcTFHME1LNjRxdHROVUNMSlZUUjJCR0pBaFdqQ1k4dFNobzJubjhqa1dPRWxKM2ZvUXE1QVpiWW5mQldHc1FVUmFPNnhYMGNGZWQ4RUpvRGNlYTM0X2NtaEFFS3Uzd00yUzdxRVBGZmRoU1lZdzlwQXprb25oZEU5UEE?oc=5) `C2`
+- 2026-11-06 · 외교·정치 · 앨버타 — 캐나다 주총리, 미 중간선거 결과가 앨버타 관세 대응 입증했다고 언급 [출처](https://news.google.com/rss/articles/CBMivgFBVV95cUxNbmVXT1o2TFFiWUxON3pzdDE1dEUzeHVIc21TekZ2RUVXaEszUWVjakxaRG9jYng3S1RFSTk4VmV2QjVEaGhCem1JVGRDY3dMZTFIczRIa2Q5OFhKRW51ejRwbVIzNnAydldnWkd3cE5URUF0cVpfcGhWcjNsMnlXcTN0QmViZXpmcndWWl9rOVBldHV1bnhYM1NzWE1QZ0lCdGdicFl0RWdHblZTQlhKVjV2VGd0enhsYV8yQTdR?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 미시간 — 미시간 차기 상원의원, 관세 철폐 위해 트럼프와 협력 의향 [출처](https://news.google.com/rss/articles/CBMinwFBVV95cUxQRl9EU2F6ekQwNGhYTHhfYzZHdy1lVWg1SWVVOUJoa25PS190ZEtIdklpRU5wdnFrTWlOSVZmdHMxcGRibVM3d2pPaE5wQ2prSlRPT2VjcGZTLV9GWUZiVjJ2WkdlV0VHZjZEZkxXVlNlRTJmSmVGUU9RV2Nzcmd4alRRc1I1MnNQbDhqUU5hUDA3R3hBcHNrdXEtT045cTQ?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 캘리포니아 — 미 국방부, 해외 부품 의존 줄이려 캘리포니아 드론업체에 4.5억 달러 투자 [출처](https://news.google.com/rss/articles/CBMinAFBVV95cUxPcUwtNzZEMGJEQjdYV3hCWjEyZFhtWDI0ZV9KeDdWd3BOWFh5SUxUeXZobWtPM1gtbWlWODVoUXZ2Y2o5YnR2SHRJRTQ5alphVVA3eWgyLTBfeDh2Y2tDV0J4SXJ0aExiQUtNSjJJUnVWNXk2X2Mwb1lsMmxiNFpURFdTX2Y4T3pwYWJUQ3pIcTlvdTdoakRNZnJlTzM?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 미국 — 미국 120억 달러 핵심광물 비축 '프로젝트 볼트' 관련 희토류 시한 60일 내 도래 [출처](https://oilprice.com/Energy/Energy-General/Americas-Rare-Earth-Reckoning-Is-Less-Than-60-Days-Away.html) `C1`
+- 2026-11-06 · 경제·제재 · 캐나다 — 전문가, 민주당 중간선거 승리에도 트럼프의 대캐나다 무역전쟁 완화 어려울 것으로 전망 [출처](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWHBxRWtKQ1R6NkliRHpIaElZVTViZjhtTm00MXA5MlNUc2FhSmx4QVJVeFg0cEp4bDA2dzAxX2lIbGhrSEVYclVESTk1VnpPM1I4QU50T2RDckwxOFM1YXdlUGVIck9yX3VmNkt4S0paX25RWDVoQzVIWTJGNzdzcjdRem82Z21UNXpURllBZmJiZDJBN0VZS1BOR3FaSDMwVEV4VTIwZUdqbDQxWHpSZHM2UXZ1N0Jw?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 온타리오 — 온타리오 레체 장관, 민주당 의회 장악해도 관세 해제 기대 말라 [출처](https://www.mining.com/ontarios-lecce-warns-that-democrats-offer-no-tariff-cure/) `C4`
+- 2026-11-06 · 경제·제재 · 오타와 — 카니, 트럼프 무역전쟁에 따른 성장 둔화 속 경제 강화 예산 발표 [출처](https://news.google.com/rss/articles/CBMiiwJBVV95cUxOaTNVdnJVYUs0eUFrcVhMX1NaRC02bEFQY1hYOHBWeXRzRW1JSWJfZ3AwLS1YNjZwSEJXdjFFa1p1YWJiWEstU0FCdnY4Sm9NU2ZyallPOElXY01EdDJCakRmbXFjQzRSY0YxejdYNHNnYWdpRDBmSDZpeG5waGt5RkRQSjJ0REM2bHdYRVJ0YTZpNVdhRWRvUUx3c2dYbHpTNE04alFpRlRWU2gwajFpNW53X25YWmpCY3kxMjJSWTRsNFNwSWpYTzJNTzUwUWZNMFhXTmswd1EzTWw5bXVnc2J2UmlPZ25zTTFBbHVxNlhSRUUzcF9ZWXNEZFdWY2lXMHJLVF9sSHJaTnc?oc=5) `C3`
+
+### 대만해협 (17건)
+- 2026-11-06 · 외교·정치 · China — 인터넷 대규모 장애·차단: China (IODA 24시간 점수 108302, gtr.sarima 108302). 정부 차단·전력망 피격·케이블 손상 가능 [출처](https://ioda.inetintel.cc.gatech.edu/country/CN?d=2026-11-06) `B2`
+- 2026-11-06 · 해상 · 대만해협 — 대만 국방부, 대만 주변 해공역 PLA 활동 발표 [출처](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9ubXBMMkRzS3RzYjdmTEVtY0F3SENsX3RWM295bkw5YVV2UDRKWFc1VFVnREs1THVSR3g1ZENaRld4TGpRNGhKM3F2bTdMM3pCVVpfVzRR?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 도쿄 — 미 AI주 폭락 여파로 아시아 증시 급락, 닛케이 7%·한국·대만 지수 8% 이상 하락 [출처](https://www.dawn.com/news/2042565/asia-stocks-tumble-after-ai-rout-rocks-us-markets) `B3`
+- 2026-11-06 · 경제·제재 · 타이베이 — 대만 가권지수 장 초반 3,700포인트 넘게 폭락, TSMC 하한가 [출처](https://news.google.com/rss/articles/CBMiV0FVX3lxTE9VaTNQM1Mtdmtjb1YwSm84a2ZkUUljNlpUMmhrSjZ2NnFMZFJtT282YWZ2cW0zZHdfZ3BLOG9laTVuUl9Nby1OVTJTY2NGTUM3TWNSWmpDRQ?oc=5) `C4`
+- 2026-11-06 · 외교·정치 · 파라과이 — 대만 외교부, 페냐 파라과이 대통령 사임에도 양국 관계 영향 없다고 밝혀 [출처](https://news.google.com/rss/articles/CBMiV0FVX3lxTE81Y1NkbWxLanc0ZXVyWjdxZ21xaWxDSFZuSl9kbUd5ejBrcHBHYmE2a2d6Q0FLUlJTaW1Xc25TVFV0LVBiVlc3eGtwZGNmUFhXT2FIRTR1dw?oc=5) `C4`
+- 2026-11-06 · 외교·정치 · 다카르 — 대만 천 선수, 다카르 유스올림픽 탁구 여자 단식 금메달 [출처](https://news.google.com/rss/articles/CBMiVEFVX3lxTE1Qa1BnZTdSSS1DRzJvSGxPVFhjWTl3ZWM1aF9aWEhtXzBURXZOd3licWlWN2hqNzlNN1Q1ZmpnQzNNSlNOcGNrWExTZGdsd0w1a0hmOQ?oc=5) `C4`
 - 2026-11-05 · 재난·사고 · 캠프 슈와브 — 오키나와 캠프 슈와브서 훈련 중 미 해병 1명 사망, 조사 중 [출처](https://news.usni.org/2026/11/04/marine-dies-during-training-event-in-japan) `B2`
 - 2026-11-05 · 외교·정치 · 중국 — 시진핑 고위 장성 숙청으로 중국군 최고지휘부 공백, 대만·미 무역 영향 [출처](https://www.riotimesonline.com/china-military-purge-explained-2026/) `C2`
-- 2026-11-05 · 해상 ·  — 중국 스텔스 드론, 076형 강습상륙함에서 첫 운용 [출처](https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSWJ2YV9CUlJuLXpqdDBNWXp6WlVyTjBfUFJUeEJIczFVal8wZVhHaURwejRSWGZ0dVpQR2dCanBxcS1JM0xoNHZHNkVPRG1EdWFSdjF5S0NmMkhUMGxyLWttSFdoNlBubTNKVENOSHo5aklhZkxMb1BWNWppWHVmQ1ZnR2hlcHVTVVhEcUh0b3ZNZ0QyNFdFeTVBT25pbXMzYTVNNE5HSGJ4aU4tQTJMM3B2VF9ZYnJk?oc=5) `C3`
-- 2026-11-05 · 외교·정치 · 타이베이 — 대만 국방부장, 미국의 대만 방위 지원은 초당적으로 유지 언급 [출처](https://news.google.com/rss/articles/CBMiV0FVX3lxTFByWVNpaFFlcGN1RUVQTmg3bWpRU0ZDcDhpSlM2Rk1DbWFBYXNYdF93Y1dyWFRkYnh4YndnZGl6dmhpTmpxTVE5c0xNeXdRZTFPa2NjVG14RQ?oc=5) `C4`
-- 2026-11-05 · 외교·정치 · China — 인터넷 대규모 장애·차단: China (IODA 24시간 점수 39769, gtr.sarima 39769). 정부 차단·전력망 피격·케이블 손상 가능 [출처](https://ioda.inetintel.cc.gatech.edu/country/CN?d=2026-11-05) `B2`
-- 2026-11-04 · 공습·드론·미사일 · 대만 — 대만 지방선거 앞두고 중국 군용기 49대 대만 주변 출동 [출처](https://news.google.com/rss/articles/CBMisAFBVV95cUxOM3FnVUlha1dMeTlUaWhNeS1NZTNZa0tRS0d5Wm1Hc2hOV1AxdmtEU0NmVDBZc2xtWlFTNlFQYWhXMHVBMTF6YllOZlNHMlY3TFptbVJnSlg2VlZacGpYNlBBNlh5akI3VDUyMC1ZZTlJOEdicnJSay12U19YeldoSkt0YVpzcHVOdUhGZEZoMnp1UTJ0YTZPQlU5cGxQcHQ2ZDd4RUFiZkMzczM2MnNkWA?oc=5) `C3`
-- 2026-11-04 · 경제·제재 · 타이베이 — 대만증권거래소·블룸버그, 대만 기업 해외 인지도 제고 협력 [출처](https://news.google.com/rss/articles/CBMiV0FVX3lxTE12bWEzcEswUnZRQ0JMTXloakFVVUllc3Rpblp2a3d3dkRFeFdMcmF3RGN0aHAzd25UV184eUVlZUJJcDd2WHBlQWExWFJzYmRkdnJBaFowYw?oc=5) `C4`
-- 2026-11-04 · 지상전·점령 · 대만 — 대만 주변 중국 군사활동 증가 탐지 [출처](https://news.google.com/rss/articles/CBMiekFVX3lxTE9mVDdrV2FtTENfN0ZzMDJ6Y2cyNENESUM3S1phYU1Ud3l1SE1GN1ZsUVZkWk03SktWcWV6aU9tYm5qSVhPODNVZGIxUEhwMzUtWk9XYUhrVGtMZmUxSDktc2N3NHNhb1BMMzhPOXpqYndCWXBlLThFczdR?oc=5) `C3`
 
-### 보건안보·페스트 (14건)
-- 2026-11-05 · 보건 ·  — 에볼라 임상시험에 신규 후보 백신 2종 추가, 치료제 연구 진전 [출처](https://news.google.com/rss/articles/CBMiugFBVV95cUxNajgxMmhDVFhROUE5Y0F0cmI2MWFCUkRIOUVwUFJpOVFfYXg4UTU0QTNYNGhpeEtvUjZESFhaYlBUUVpzaWNVYXFNeThoNUI0WXhWLUREbFFqLWZWZUxiNUNsWXp4eEZwa3FxdHU1b1VrWi1yQnpJSWtfY1BSMF9aZEkxbU8tRWJBdWVydGdrNFpiNmN0MldHV0ZDSVJmR1Z5blBCWEx1N2VnUURCdFRfek80VVp6SDVRSkE?oc=5) `C4`
-- 2026-11-05 · 보건 · 콩고민주공화국 — WHO, 분디부교 에볼라 신규 백신 2종 시험 승인…DR콩고 5,300명 이상 사망 [출처](https://www.aljazeera.com/news/2026/11/4/who-approves-trials-for-two-new-ebola-vaccines?traffic_source=rss) `B2`
-- 2026-11-05 · 보건 ·  — WHO, 신규 에볼라 백신 2종 임상시험 승인…아프리카 발병 사망자 5,300명 넘어 [출처](http://www.africanews.com/2026/11/04/who-approves-clinical-trials-on-two-new-ebola-vaccines/) `B3`
-- 2026-11-05 · 보건 · 워싱턴주 — 워싱턴주 젖소 무리 고병원성 조류인플루엔자 유전자 분석 결과 발표 [출처](https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYUtNMVdyMm1relNNQU5xUkRoXzBMa2R0SWN6aVpLbjY3RklVY1lyRGhoTWs1aVJZVmQzUlUwVmlXcWc2UTB0dEM5RldGOHVRQ0FMRFlaVjByb0FEVzMzWklUZ0xpTS1uOGVpMnM5Uks3VXlOVV8xNEFSMGlrMUhEb3BHYW4xNXJ1WDhjb3BidTdTaVBUa1E2SFVWQnlMYTZLNm91SkNsS1dzVDdZb3BGUGFWM2hDWHcwdjFXQUhYczdWT3c?oc=5) `C4`
-- 2026-11-05 · 보건 ·  — 이코노미스트, 최근 에볼라 유행이 사상 최악 될 수 있다고 보도 [출처](https://news.google.com/rss/articles/CBMirgFBVV95cUxOSGxZeEJuTEFaLW1hZFNtb2ZaUlJPLUhENHo1MnhkUTVuRGd0TUp1WWE3MEZDczJiUDlGaEE5MUprME1sVGx5ajBnM1RsSzdOM1hsal9VOVhUWjQwdEtZOTJaNDhjZ0VnTFdlUXhoQzJ4VkFmQ3A5ejE0M0p4eS1xQmVnOUg4UFBDZXY0Qm9ZX1k2Sl9vQVFEbDlyaS00NGQ5SEJwclVtZ2VraW9WS2c?oc=5) `C3`
-- 2026-11-05 · 보건 · 뉴욕주 — 뉴욕주 북부 홍역 확산 속 어린이 1명 사망 [출처](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR2lLMnozSnAweENUdEE4NnZ2QVRqZUJZTVA1WlIzTU9LNHJPbXVLT28zNmVwTUlUYzRCcnFRYk9uY0lNbzRTMGcwNENybU9MdkVBQU03NDA2aHlrSktqMVY5SFBYajlSbk5vV3ZobVU3aHFrYzc2Q2RNMHJ0OU5LZmJQQ3NIV05H?oc=5) `C3`
-- 2026-11-05 · 보건 · 제퍼슨 카운티(펜실베이니아) — 펜실베이니아 제퍼슨 카운티서 홍역 관련 사망 2번째 발생 [출처](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNElja0h4eTMwTlRXZ1NUVlpZSDJQU3NvM294endnRjZlclhzOHRETkVyc2g1dUJDbzVKNWxVMlZ3SXNCV3pMWEc0MDFnaVBhVnNjcE4yeEJCWVV0U3ZJV3JUVFhEbmk2N1NZUG9zaGVHMGZhR2xyR1hhSFZwMW1BaDlkUWlUQi1BSU01dHZ2RXpIYXNlaHU2ZjBuNG5IU0JXUUc4OTh2d2JaQQ?oc=5) `C4`
-- 2026-11-04 · 보건 ·  — WHO 아프리카, 지역사회 설문이 분디부교 바이러스병 대응 행동 변화에 기여 [출처](https://news.google.com/rss/articles/CBMi4gFBVV95cUxPX2d5dUtWNl9ZZk56dVpZVXY2eS1OQ3hOLTBxVVNMalJ5ZFRGU0MzcEhId2h4d2FvN0UzYm0xSWhIMlk2TkJ5czFkZjFaSlFNVlRCRVhSTTk3VlVXU0lJNHRvRTFxdHRkdk9ZcW1JR09VeE1IMTNqTDIwQi1xVzlNc0EwcmxuY1BGdVV3QWR4M1FwdjVOQl9nX0ZidkZkR24wV2VjbW4xSThJaG5kejdJeGlObGROZUJMNWhxbjNTQ2R5enBITVBNMUxJYTdlVlZKalgtYVItRjBEX3J4LVpoU2l3?oc=5) `C4`
+### 남아시아 (15건)
+- 2026-11-06 · 테러·민간인 공격 · 암만 — 요르단 암만 스리랑카 대사관 인근 흉기 공격, 보안요원 1명 사망·1명 부상 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/5/jordanian-officer-killed-in-stabbing-attack-in-amman?traffic_source=rss) `B3`
+- 2026-11-06 · 경제·제재 · 파키스탄 — 파키스탄, 카타르 공급 차질로 겨울 부족 우려 속 LNG 화물 확보 나서 [출처](https://news.google.com/rss/articles/CBMivgFBVV95cUxORG5lNFl2b3RBMzlPX0JHR3JwUjA4LVpvOEg1RFNPckdtcGg5Tkc1NWVhSmJtcS1hYVBXX3RzMFFkRXYxT1FWSnlmUzJPY2czb0ZsMjFISDUzc1ZfTVdoMmVvMGptU0JxQldoMUZFdjY2cGxEWVBRellRX0J5Z214TWE3akNZR0ZnTmtrNTBYM2JVdjkwdUZKeG5QWVptTkpZQnlQVUFqOUFyNy1XUXBpN2NuTFRGZG1sSzV4dUxR?oc=5) `C3`
+- 2026-11-06 · 경제·제재 · 방글라데시 — 방글라데시, 공장 수백 곳 멈춘 시위 끝에 의류 노동자 최저임금 인상 합의 [출처](https://www.nytimes.com/2026/11/05/world/asia/bangladesh-garment-workers-protest-wage.html) `B2`
+- 2026-11-06 · 외교·정치 · 인도 — 인도 내무부, 2024년말 이전 무서류 입국 아프간·방글라·파키스탄 비무슬림 6개 공동체에 비자 의무화 [출처](https://www.thehindu.com/news/national/visa-must-for-undocumented-six-non-muslim-communities-who-entered-india-before-december-31-2024-home-ministry/article71671369.ece) `C1`
+- 2026-11-06 · 외교·정치 · 카트만두 — 미스리 인도 외무차관, 네팔 총리 방인 준비…네팔 측 보테코시 홍수 지원 사의 [출처](https://www.thehindu.com/news/national/foreign-secretary-misri-sets-stage-for-nepal-pms-upcoming-india-visit/article71671036.ece) `C4`
+- 2026-11-06 · 외교·정치 · 폴라바람 — 3개 주 접경 낙살 영향 44개 지역 투표 평온, 폴라바람 투표율 63% [출처](https://www.thehindu.com/news/national/andhra-pradesh/polling-peaceful-in-44-naxal-hit-areas-along-the-tri-state-borders/article71670460.ece) `C4`
+- 2026-11-06 · 테러·민간인 공격 · 아난트나그 — 카슈미르 경찰, 경찰 1명 숨진 아난트나그 공격범으로 쿨감 출신 21세 지목 [출처](https://www.thehindu.com/news/national/jammu-and-kashmir/just-one-local-terrorist-active-in-kashmir-but-terror-threat-remains-igp-sujit-kumar/article71670876.ece) `C4`
+- 2026-11-06 · 범죄·치안 · 인도-파키스탄 국경 — 파키스탄 국경 인근에서 드론·무기 은닉처 발견 [출처](https://news.google.com/rss/articles/CBMikgFBVV95cUxON2ZBaUtyUlBadFFOcGNsb2JnSm9EOGUzUzlRZDBIYkVnUC1FaGJmRTY0d2M2M0ZwazY1MDE5VTVBblZEdWNRaG5mYXhFVUJxcjJ6djUyN2phNTJIS3R2ZDJmODBZUks5Y2FDU3RTdWhFZ0M1d2hoZTZROEVNdUc3MFZQZzR3QzhGZjlGWW12VTZyZ9IBlgFBVV95cUxPZ1pXR0hHTDBVSHF1NllLMFBRcldwTzJMVkJmd0R0NEYwZ04yRko4MENOQzgwdm9YR3FkcVByNDFRSUxGZEI1bmpJSEp4d2pWaks4cFpndVpvRHpLNVE0WjRMbV9MR3UwdTVtRlZWRWNSNGFHZ2RWcTNhZkp6M3B6ZUtlMnpLX1lHSFdoUjM5aWY2Z285QUE?oc=5) `C3`
 
-### 북미 (14건)
-- 2026-11-05 · 외교·정치 ·  — 민주당 상하원 장악, 트럼프 관세·조선·존스법 해양정책 향방 불투명 [출처](https://gcaptain.com/democratic-sweep-puts-trumps-maritime-agenda-in-question/) `C3`
-- 2026-11-05 · 외교·정치 · 워싱턴 — 美 중간선거서 공화당 참패, 민주당이 의회 장악…대외 함의 분석 [출처](https://www.dw.com/en/winners-losers-the-eu-five-takeaways-from-the-us-midterms/a-79858901?maca=en-rss-en-world-4025-rdf) `B2`
-- 2026-11-05 · 경제·제재 · 애리조나 배그다드 — 프리포트, 애리조나 배그다드 구리광산 45억 달러 확장 승인 [출처](https://www.mining.com/freeport-approves-4-5-billion-bagdad-copper-expansion/) `C4`
-- 2026-11-04 · 경제·제재 · 캐나다 — 러트닉, 중단됐던 캐나다-미국 무역협상 재개…철강·알루미늄·자동차 관세(최대 50%) 논의 [출처](https://news.google.com/rss/articles/CBMihgFBVV95cUxOay02dmV5VWhXMVZOZ3lKc183NS1DSVE2bDRZQTBVcHNtOWxDSHg4Wm44QXp6dF9qVnlUbHl6RWJNc1U2eU1qWDZWTXJfMnphWTM1UEIzdWxzcFUzbm5BUFA4QjFnYlgwaTlDLWVxWTlJLU1zZUhpN2c2ZTZ3Rk4xdkl4MWtXUQ?oc=5) `C2`
-- 2026-11-04 · 경제·제재 · 뉴저지 — 뉴저지 주지사, 터미널 운영사에 러시아산 디젤 반입 금지 경고 [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxOZ1RXODhCZGhNWElJSHMwMDcwTExiS3BCRlF0eWdYbXk5U3ZRTU0tenhLcWVKOFJic203Y0hJNndseEF6cG5MTjhfRlI3d3ZONC1WNDA2QlpzZ0daNzNMQ2d0RnVBTjE5NGtiNFRHbXVaM2tMNm0ySTltZ0tPQ3FobTItRzREQXY3MmVmU0p3bWFKTlRGVVY5S0RBdWJwcmNhZnVJZVpn?oc=5) `C2`
-- 2026-11-04 · 경제·제재 · 아칸소 — 스탠다드, 14.5억 달러 아칸소 남서부 리튬 사업 연말 투자 결정 목표 [출처](https://www.mining.com/standard-nears-lithium-investment-decision/) `C4`
-- 2026-11-04 · 외교·정치 · 캐나다 — 미 중간선거가 캐나다 관계 재편 가능성, 관세 불확실성은 지속 [출처](https://news.google.com/rss/articles/CBMiugFBVV95cUxOUTNXMklyWXBIcy1HMnltMHFrQk01aXdaX054MlZLT0JjNzNvQ1JSWG9zdi1mZUYwbVdyM0l5LXM2eG8ycWtvekp1OE0yY0x2RkNUbU9UUnJ6V1pzTXE1QWRrME9BQ0pRQ2ZaVzNTNEpUV2RmY3JIM0NqUHgtV3daRGNnYXlQVXExa2ZYMWZLWG9pLUgtei1KNDJiQ0VNWUhKV21DdXM1RDlDWWhSUERXM2dsemdwOGtQREE?oc=5) `C3`
-- 2026-11-04 · 외교·정치 · 알래스카 — 미 법무부, 알래스카 상원선거 '스포일러 후보' 의혹 수사 확대 [출처](https://www.aljazeera.com/news/2026/11/4/us-department-of-justice-expands-its-probe-into-alaskas-us-senate-election?traffic_source=rss) `B3`
+### 남미 (14건)
+- 2026-11-06 · 외교·정치 · 파라과이 — 파라과이 페냐 대통령, 사임안 처리 불발 후 상원 탄핵심판 출석 의사…아르헨은 입국 부인 [출처](https://en.mercopress.com/2026/11/06/pena-says-he-will-face-his-impeachment-trial-as-argentina-denies-he-has-entered-the-country?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss) `C1`
+- 2026-11-06 · 재난·사고 · 안디나 광산 — 코델코, 광미 유출로 하천 위협하자 안디나 광산 가동 중단 [출처](https://www.mining.com/codelco-halts-andina-mine-as-tailings-spill-threaten-river/) `C4`
+- 2026-11-06 · 외교·정치 · 마이애미 — 브라질 탈출한 플라비우 보우소나루, 마이애미서 부정선거 주장하며 원격 정치 개입 모색 [출처](https://www.nytimes.com/2026/11/05/world/americas/flavio-bolsonaro-florida-brazil.html) `B3`
+- 2026-11-06 · 경제·제재 · 가이아나 — 호르무즈 해협 차질 속 가이아나 원유 증산이 공급난 완화 가능성 [출처](https://oilprice.com/Energy/Energy-General/Guyanas-Oil-Boom-Could-Ease-the-Global-Supply-Crunch.html) `C3`
+- 2026-11-06 · 지상전·점령 · 사라베나 — ELN, 11월4일 아라우카주 사라베나에서 육군 소위 마리아 판토하 납치 주장 [출처](https://www.riotimesonline.com/eln-kidnaps-army-officer-maria-camila-pantoja/) `C4`
+- 2026-11-06 · 범죄·치안 · 치아파스 — 멕시코 해군, 치아파스·오악사카 해상서 코카인 1톤 이상 압수 [출처](https://mexiconewsdaily.com/news/navy-seizes-more-than-tonne-cocaine-coasts-chiapas-and-oaxaca/) `C4`
+- 2026-11-06 · 범죄·치안 · 나우칼판 — 멕시코 연방군, 나우칼판에서 누에보 임페리오 카르텔 두목 '엘 헤네랄' 사살 [출처](https://www.riotimesonline.com/el-general-nuevo-imperio-cartel-boss-killed-mexico/) `C4`
+- 2026-11-06 · 경제·제재 ·  — 이란 전쟁 종식 의문에 유가 반등, 월가 급락에 페트로브라스 등 남미 석유주 하락 [출처](https://www.riotimesonline.com/oil-markets-latam-thursday-november-5-2026/) `C4`
 
-### 카리브해 (13건)
-- 2026-11-05 · 외교·정치 · 에르모시요 — 2027 카리브 시리즈, 2월 1~7일 멕시코 에르모시요서 개최 [출처](https://www.riotimesonline.com/caribbean-series-2027-hermosillo-mexico-baseball-guide-2026/) `C4`
-- 2026-11-05 · 외교·정치 · 앤티가 바부다 — 영국, 노예 배상 요구한 카리브 국가들과 1년 내 '구조적 대화' 합의 [출처](https://www.theguardian.com/world/2026/nov/04/debt-relief-aid-no-replacement-slavery-reparations-uk-told-caribbean) `B3`
-- 2026-11-05 · 외교·정치 · 도미니카공화국-아이티 국경 — 도미니카공화국, 아이티 주둔 엘살바도르군에 병참·정보 지원 표명 [출처](https://www.riotimesonline.com/dominican-republic-aids-el-salvador-haiti-mission/) `C4`
-- 2026-11-04 · 범죄·치안 · 아이티 — 엘살바도르, 매복 후 실종된 유엔 지원군 4명 구출 위해 아이티에 2,000명 이상 파병 [출처](http://www.africanews.com/2026/11/04/haitian-pm-thanks-el-salvador-for-support-in-fight-against-gangs/) `B2`
-- 2026-11-04 · 외교·정치 · 베네수엘라 — 트럼프 정부, 베네수엘라에 미군 주둔 허용 협정 추진… 루비오 협상 착수 [출처](https://www.nytimes.com/2026/11/03/us/politics/trump-venezuela-troop-agreement.html) `B2`
-- 2026-11-04 · 외교·정치 · 앤티가 — 찰스 3세, 앤티가서 노예무역 '슬픔' 표명했으나 사과는 안 해…카리브국 배상 요구 [출처](https://www.aljazeera.com/news/2026/11/3/uks-king-charles-expresses-profound-sorrow-over-transatlantic-slave-era?traffic_source=rss) `B1`
-- 2026-11-04 · 외교·정치 · 카리브해 — 카니 총리, 영연방 정상회의서 카리브해 국가와 교역 확대 촉구 [출처](https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRWRTYXBrRW9mempqZEljb1BDb1p0YllQWEpRbGRMaFYzQjZoMUF0dGdyOE83bjZzRDJHZlVhLVlrZk5jMUpCdEg2V01MYkM0RFZIeVRFVHR2NlpERHhKREtZNGVYVjdMb3NfWmhvSWhDNmJtcW9QVWNmVDJObkg2OXVkaFZ1eGxMX3d6TDltT0tUOXJLSkw0aDl0QWdNRzJvNkJ5SHpIUFVGaHBfUlB4OTNBNTRNZ1ZGTTJEZjBfU29mZnZKM3IzbDM0LWluVnY0WEE?oc=5) `C3`
-- 2026-11-04 · 공습·드론·미사일 · 베네수엘라 — 미 당국자 4명, 미국이 베네수엘라의 10월 30일 ELN 캠프 공습에 정보·드론 지원 [출처](https://www.riotimesonline.com/us-said-to-help-venezuela-strike-rebel-camp/) `C4`
-
-### 남아시아 (12건)
-- 2026-11-05 · 해상 · 뭄바이 — 2024년 INS 브라마푸트라 화재·전복 사고로 해군 장교 2명 군법회의 회부 [출처](https://www.thehindu.com/news/national/two-navy-officers-face-court-martial-over-2024-ins-brahmaputra-mishap/article71665698.ece) `C4`
-- 2026-11-05 · 공습·드론·미사일 · 파키스탄 — 파키스탄, 국산 공대공미사일 파아즈 시험 성공 [출처](https://www.twz.com/air/pakistan-joins-air-to-air-missile-club-with-successful-test-of-faaz) `B2`
-- 2026-11-05 · 외교·정치 · 인도 — 인도 내각, 아그니비르 제도 개편 승인…희망자 전원 정규 편입 경로 마련 [출처](https://www.thehindu.com/news/national/what-are-the-changes-in-agniveer-scheme-and-what-prompted-government-to-implement-them-explained/article71668573.ece) `C4`
-- 2026-11-05 · 범죄·치안 · 다카 — 다카 의류노동자 임금 시위 폭력 사태로 번져 [출처](https://news.google.com/rss/articles/CBMivAFBVV95cUxNZzFKM0lZUlFrY0xsRmlBVXItZkNicmN2Y1hLWjJVMXc3MlVzZm9oLW9OQlFPdFF1ZjFkSndXbk00c1FrUFF0Z2JsakZiRWJTZDRHb2ZSVFJyNThCZ1dKOVBPanJScjJ3MkwtUmZyX09hTWowaVZvZ2NBV1IzMlNPdkM4S29zeFBUaG9IWjBLanBJVDJna3EtTjF4MzNDYWY1NDJyVFIzZnY4ejQxVUtTZllDSXp5eFFxcU0yb9IBwgFBVV95cUxPOUJObUFQby03OGk1RzZkN2YxQTNIdmVMM2lXTDJSNkRjbWwwX3Y5dm5nVlh5UTNxeUY4T09NMV8wbHctLWNhNm9RdUstOUhWSGpYVWhDSkx0RHVBUTRjbmx3eU9YUXVILVZIWGdTMjFIWmNiRkN3eWt3d3JaZHYwUmxISFpjS29XWS1Cc0NvMjFydW5HWWRfc25Ta0p5cXFJODRlMFZHYXhkNUwxSHhWdmhocXdlcEl4aWcwNHlIbXFEdw?oc=5) `C3`
-- 2026-11-04 · 범죄·치안 · 방글라데시 — 방글라데시 의류 노동자 임금 시위 4일째…경찰 최루탄 진압, 공장·교통 차질 [출처](https://www.dawn.com/news/2041880/bangladesh-garment-workers-stage-fourth-day-of-wage-protests) `B1`
-- 2026-11-04 · 외교·정치 · 뉴델리 — 갠지스 수자원 조약 만료 앞두고 인도 외교부 "갱신 진전 없어, 협의체계는 유지" [출처](https://www.thehindu.com/news/national/weeks-before-expiry-of-ganga-water-treaty-mea-says-structured-mechanism-remains-in-place-for-pact/article71661782.ece) `C4`
-- 2026-11-04 · 범죄·치안 · 아루나찰프라데시 — 아루나찰프라데시, 시앙댐 반대 폭력시위 며칠 뒤 경찰청장 라제시 쿠마르로 교체 [출처](https://www.thehindu.com/news/national/arunachal-pradesh/arunachal-pradesh-gets-new-dgp-days-after-violent-protest-against-siang-dam/article71662469.ece) `C4`
-- 2026-11-04 · 범죄·치안 · 인도 — I4C 국장 "단속 속 사이버 사기 조직, 아프리카·파키스탄·스리랑카로 이동" [출처](https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcFRRd0QwT3gzQTZwWXFrZ1A1RmdtWE1OSGpoTks1TU9idlF1MFJveFZ6WmJ3X21oMmpJdG1lWXU0bXM5TktzUDVfWkVaN282MW9GSFh5ZlVpRFNrdWhkM3lTMEIxS3lVZTZVMEdVTEhaV09TSXpGSWwxOWNGMTBfaVJpblZEeFh5MXA1Zl9DakRtVjEwYTlXZXFQS3F0eFh3MG12bzhtdjZuYlFKaldhX3dsUXFHNklEbWVPYXlKZ1pJMlJEcW9XbUhiMGdDZ0lSRWxmcWtKSjBhaU9QZHJ2VlhHVdIB6AFBVV95cUxNVmlUYXNKYUNwWmxId2RveG1kNkVsTmlOaU1zRldGVzFnVFd2bzBUVDM4ekJzZWNVUS1ublpuVmhnWkM0OUpoOTZnV0xmUWl0V3hEeGRMOWVCWFE5eFVmV1RHUUdsN3NWeEFMTUpfczc3YnpRUHJwTTRVaU5xVHNiU09DWEF3MUpJSkg2ZnpCdlpnbWxyWXRYeDVSSVhJRFJHQ0ZnSklTcHhYNmt6M1l4Y0wwV0dySkxjQmdfMENzQVhESFBVXzExYzBIQUoyeFlyWGRnQ0JVQjJEdmJPcDk1UWtVZFM0bjZO?oc=5) `C3`
-
-### 수단 (11건)
+### 수단 (14건)
+- 2026-11-06 · 외교·정치 · 수단 — UAE 누세이베 외교관의 유엔 사무총장 도전, 수단 내 UAE 역할 논란에 부딪혀 [출처](https://www.nytimes.com/2026/11/05/world/africa/lana-nusseibeh-united-nations-uae-sudan.html) `B3`
+- 2026-11-06 · 지상전·점령 · 수단 — 수단 정부군(SAF)-신속지원군(RSF) 교전 관련 기사 목록 페이지 [출처](https://news.google.com/rss/articles/CBMiggFBVV95cUxNb3JrcUd3TVV5eDVYQTBIanA5UkxiQ19paWlRNFYyc1ExWTFHZFRJaUZyM2w2d0tMWnlVQnU5S2xYUnE0ZW1WbUxGWERTSy02YVNVVk03RWppNnNSYUFXU0hyWFhQdjJrbzJhUVJyOF82WFRDT0NJa0FTTWRCMk5MOFJ3?oc=5) `C4`
+- 2026-11-06 · 공습·드론·미사일 · 수단 — 수단군, 2개월간 드론 180여기 추적…전쟁 양상 인프라 공격으로 전환 [출처](https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCMlQ3U0hjWUJRdTVMcTEycWZ3SFZSUmVIRVlsUVZWb05zd2xPdnRGZ3QxdnRkS1JRMEJSb2lpd3FjLUhlOFhSbTBVN0xMTkRp?oc=5) `C2`
+- 2026-11-06 · 범죄·치안 ·  — 이집트군, 불법 금광 채굴자 수백 명 체포 발표 [출처](http://www.africanews.com/2026/11/05/egypt-army-says-hundreds-of-illegal-gold-miners-arrested/) `B3`
+- 2026-11-05 · 경제·제재 · 수단 — 호주, 부르한 군총장·다갈로 RSF 지도자 등 수단인 4명·1개 단체 제재 [출처](https://www.riotimesonline.com/australia-sanctions-sudan-generals-burhan-dagalo/) `C2`
 - 2026-11-05 · 외교·정치 · 아디스아바바 — 에티오피아, RSF 지원 항의한 수단 외교관 6명 추방·영사관 폐쇄 명령 [출처](https://www.aljazeera.com/news/2026/11/4/sudan-ethiopia-order-tit-for-tat-diplomatic-expulsions?traffic_source=rss) `B3`
-- 2026-11-05 · 경제·제재 · 수단 — 수단 공장들, 전쟁 피해로 재가동 난항…노동자 실직·물가 상승 [출처](https://www.aljazeera.com/news/2026/11/4/sudan-factories-struggle-to-restart-after-devastating-wartime-losses?traffic_source=rss) `B3`
 - 2026-11-05 · 외교·정치 ·  — 수단·에티오피아, 상호 외교관 맞추방 명령 [출처](https://news.google.com/rss/articles/CBMimwFBVV95cUxQVjJyNmlMc0FKWWNDWFBtaXFYeVd3RVh6XzMzUmpIbWVXOURsMGwzQzI4ZU0zWDRMQkJvMzItclFxa2VobjJwQm1tU0dMYklJSllsMk4tTUE4LWFyMkxzTktzYVRhNm9UVWI3cFNXWDJIaTNSY2VLeVRzNTFWOUhpcHVocWxQY1hKWUdtczMwUWVOanY5WnhHb1BuQdIBoAFBVV95cUxPblBFTFNjMlBkMjVyeDdpZzZHbDBsUnBCdVBQRl9rLUNrTkdoSTRkVVlnOEhSRmVFWVNNa2c5VWNZVUZzRjI1VGYzWUxuYUd1OHYyTjE1MndYaEN5QUVjSGZUaTZEc3hnb05lU3dla1JkbWJrZlMyUG04bGg5dFlKZzRHMkN0S0hjWlBUb3JDaXhRNkNBT3NXV2VUWVdEam9O?oc=5) `C3`
-- 2026-11-04 · 테러·민간인 공격 · 다르푸르 — 수단 다르푸르 피란민 캠프 공격 생존자들, 희생자 이야기 증언 다짐 [출처](https://www.aljazeera.com/features/2026/11/3/darfur-survivors-vow-to-tell-story-of-those-killed-after-sudan-camp-attacks?traffic_source=rss) `B3`
-- 2026-11-04 · 지상전·점령 · 코르도판 — 수단 코르도판서 교전 재개, 합동군 사령관 사망 [출처](https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwYXhlS1cxazB6dzRqY3ZCNHI2N043TjVJdDFUQTZvaXRzZ0FHRmFaNk1RVnJKa0Y5amVTdlZqUm51dG1TdzFWeHYtVEJPR0lI?oc=5) `C4`
-- 2026-11-04 · 외교·정치 · 칼마 캠프 — 유엔 수단 특사, RSF 연계 정치 블록 회담 대기 중, 다르푸르 칼마 캠프 기아 악화 [출처](https://www.riotimesonline.com/sudan-peace-envoy-awaits-rsf-talks/) `C4`
-- 2026-11-04 · 외교·정치 · 모스크바 — 수단, 모스크바 회담서 러시아에 홍해 자유경제구역 제안 [출처](https://news.google.com/rss/articles/CBMiUEFVX3lxTE5yU2dHeW9JUS1YaHRHYURsZlVKWHE5YkdEbEhqVmhUTGlXTnF4WlQzTXlSUkdPNk1RNFZQaFdMendTaWlyYUhvTXFLMDZ6TnJW?oc=5) `C4`
-- 2026-11-04 · 테러·민간인 공격 · 차드 — 차드로 피란한 수단 아랍계 난민, RSF 연관 의혹에 다른 난민들 적대 [출처](https://www.france24.com/en/video/20261104-sudanese-arab-refugees-face-hostility-and-distrust-after-fleeing-to-chad) `B3`
+- 2026-11-05 · 보건 · 수단 — 수단 빵 부족으로 기아 인구 확대 우려 [출처](https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeDhRdlBnSzhkZ0JIZnhtbnhHSjFFX0dmWmMxV1lfVnNDUkpaM2gxOVJURkZkX1JrOTNzeldTMG5QanJCc2VrcG9BaXluWEhGbm5LZl9SN3NUdTBxTnQwc0JXVDJnOXBOR2FuM1l2MzhyeFNueWlCcks3QUhITTFKNWdyRlRTenNwQzBCZV8yTmVucE5aRW9RTmpYUWxHc2hnc0pxYkI2X1g?oc=5) `C4`
 
-### 한반도 (10건)
-- 2026-11-05 · 외교·정치 · 워싱턴 — 미 민주당 의회 장악, 한국 핵잠수함·트럼프-김정은 회담 복잡화 전망 [출처](https://en.yna.co.kr/view/AEN20261105000200315) `B3`
-- 2026-11-05 · 외교·정치 · 한반도 — ISW, 2026년 11월 4일 한반도 정세 업데이트 발표 [출처](https://news.google.com/rss/articles/CBMilgFBVV95cUxQWUZzOFRyR3BzX2pYNW1jVEl0VE1aQ2FScnlVM3plSHRLc1djLWl6Q3JEOEc1SGI0STRZVHhhYkxtQ1NxS0xjcURnT29vMzhmQ0QxVmVCT3g0a0xBa3J1YjQ4NWs3UDhhSU9HbFduQWZDUWROMWZ4d2VDbkhTbmsxdlZjRTlCMDN5RHN0X2xkYl9hUVR2Umc?oc=5) `C4`
-- 2026-11-04 · 공습·드론·미사일 · 동해 — 합참, 북한이 오전 9시52분경 동해상으로 미사일 여러 발 발사했다고 발표 [출처](https://www.nknews.org/2026/11/north-korea-fires-unidentified-projectile-east-toward-sea-south-korean-military/) `C1`
-- 2026-11-04 · 해상 · 남포조선소 — 북한이 서해안에서 건조 중인 기존 구축함 2척보다 큰 신형 군함 사진을 처음 공개. 남포조선소 3번째 구축함은 중단된 것으로 보임 [출처](https://www.nknews.org/2026/11/north-korea-teases-new-warship-under-construction-larger-than-destroyers/) `C3`
-- 2026-11-04 · 외교·정치 · 일본 — 러-일 관계 수십 년 만에 최악, 일본은 미국 지원 확대 원하나 우려 존재 [출처](https://www.npr.org/2026/11/03/nx-s1-6012016/japan-faces-diplomatic-dilemma-amid-joint-pressure-from-nuclear-neighbors) `B3`
-- 2026-11-04 · 경제·제재 · 서울 — 미 중간선거 결과 발표를 앞두고 기술주 강세로 코스피가 큰 폭 상승 출발 [출처](https://en.yna.co.kr/view/AEN20261104001951320) `B2`
-- 2026-11-04 · 외교·정치 · 평양 — 김여정, 대미 대화 가능하나 불필요하다며 바이낸스 63.6억달러 탈취 의혹 부인 [출처](https://www.nknews.org/2026/11/north-koreas-kim-yo-jong-says-talks-with-us-are-possible-but-not-a-necessity/) `C2`
-- 2026-11-04 · 해상 · 남포 — 김정은, 남포조선소 시찰하고 해군력 신속 증강 지시 [출처](https://en.yna.co.kr/view/AEN20261104003651315) `B3`
+### 한반도 (13건)
+- 2026-11-06 · Y · 워싱턴 — 미 전문가, 바이낸스 탈취 뒤 한미일 대북 제재 공조 강화 촉구 [출처](https://en.yna.co.kr/view/AEN20261106000600315) `B3`
+- 2026-11-06 · 해상 · 남포조선소 — 김정은, 남포조선소서 5천t급 구축함보다 큰 신형 군함 건조 시찰 [출처](https://news.usni.org/2026/11/05/north-korean-leader-inspects-new-warship-under-construction-at-nampho-shipyard) `B2`
+- 2026-11-06 · 외교·정치 ·  — 트럼프 북미 회담 모색 속 FBI·국무부는 기존 대북 기조 유지 신호 [출처](https://thediplomat.com/2026/11/the-trump-administration-is-sending-mixed-messages-to-north-korea/) `B3`
+- 2026-11-06 · 외교·정치 · 평양 — 북한, 일본 방위비 증액 추진은 자국민 부담만 가중시킬 것이라 비난 [출처](https://en.yna.co.kr/view/AEN20261106002800315) `B3`
+- 2026-11-06 · 경제·제재 · 서울 — 기술주 매도세에 한국거래소, 코스피 서킷브레이커 발동해 거래 정지 [출처](https://en.yna.co.kr/view/AEN20261106002100320) `B3`
+- 2026-11-06 · 외교·정치 · 서울 — 정의혜 외교부 차관, 영국 의원단과 북한·우크라이나 문제 논의 [출처](https://en.yna.co.kr/view/AEN20261106001300315) `B3`
+- 2026-11-06 · 경제·제재 · 북한 — 미국·EU, 북한 사이버 활동에 대한 제재 추진 [출처](https://news.google.com/rss/articles/CBMiiAFBVV95cUxOV3VFMnNSSEk2Ymh2ZW5jMW1yWlVFWXA3THg2dXU5ZWZqMlIyRER4M0k0U1hKbXZiNVZfQkJOYzlUdkZ4QXR6dUtOSWFsNk0wOURUemc4MDU1T3V5ZU00ZnJwS0M3a3pxTXVMcnNLc2FuY1N4SUJfN3hSR3E5aGRobnFMTU1vUG5B?oc=5) `C3`
+- 2026-11-06 · Y · 서울 — 정부, 이재명 대통령·유럽 순방 수행단 개인정보 유출 모든 가능성 조사 [출처](https://en.yna.co.kr/view/AEN20261106004100315) `B3`
 
-### 에티오피아·티그라이 (9건)
-- 2026-11-05 · 경제·제재 · 에티오피아 — 분쟁이 에티오피아 경제개혁 의제를 무산시킬 가능성 분석 [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxOWURsVjl1TVVFUjRWZ1pxdHRzMjFKT2hnbXRPZWQxTTRJbDFMVURyekhGX0phQ3BWWVRKd1BRZkE4YzV2cW56eThlcC1ORDhaUXhfUUM4RV9Tbmx2MGNmQ1ZiMVBPRGtuU1o3VnZGdXJyTUJWckNMcHBhcDlDT005d3JoTzBiSFBBenFEU2xlVjRJeW1ZXzJnOEVYMjZyYXdXa0lhX3JR?oc=5) `C3`
-- 2026-11-05 · 외교·정치 · 남아프리카공화국 — 남아공 지방선거 실시, ANC 시험대…에티오피아는 수단 외교관 6명 추방 [출처](https://www.france24.com/en/south-africans-vote-in-key-municipal-elections) `B3`
-- 2026-11-04 · 범죄·치안 · 미국 — 에티오피아계 미국인, 에티오피아 위한 간첩 혐의 유죄 인정…최대 22년형 [출처](https://news.google.com/rss/articles/CBMitwFBVV95cUxQMDVEUGFXdGhRTkROT3hHdFg5bTR1YUliWHNBdlVoVDJ1UF9SSVVBdVh3Zk44MkhkbFp3NU9uV05kX0tFS2NuVWI0Y0lCeHFxbEtzV0ozS3dVXzlWUGt1WFY4OFJLdDRZRGQ4bENWYW8ydWpnTk13OFNpY3FHRzl5bnV1Tml4QXhCLXdlS2I3MVZDbmpMRFJMZjdyZG43YWxQV3RodnRsZTdfSTBha2NHWmhhelNNVGM?oc=5) `C4`
-- 2026-11-04 · 범죄·치안 · 티그라이 — 에티오피아계 미 계약업자, 티그라이 전투원 사살 돕기 위해 기밀문서 제공 시인 [출처](https://www.bbc.co.uk/news/articles/c6y8lz73vmv7o?at_medium=RSS&at_campaign=rss) `B2`
-- 2026-11-04 · 테러·민간인 공격 · 시르카 — 에티오피아 인권위, 시르카 공격 사망 48명 확인·비공식 무장단체 경고 [출처](https://news.google.com/rss/articles/CBMixAFBVV95cUxQU0dBd1gzNHE2TThlV1dEaUpMOG45VHBpNDZTY0hhbzR1MlNuZTU2c2JJdnNyRzRLMXFiOUtLbmRZdTJNbVhjMDJaeHJrMjFYb3pxb1NDV0xLNEtka0szSVRUb2xPUF9QS0ZMOHItOHVwUFJOMUQyWktnQ2tRWWFISlFrdDJpTzZaWVdsTTV1c25jbXRuTjFlb1Z5Y19PNEFFRnZlUGhIakVDclM5WGExNnJsLWlUbnAzWFlXdnVFUTBoNHli?oc=5) `C4`
-- 2026-11-04 · 지상전·점령 · 에티오피아 — 크리티컬 스레츠, 2026년 11월 3일 에티오피아 전쟁 안보 리뷰 [출처](https://news.google.com/rss/articles/CBMisgFBVV95cUxPakFsTjJTdGRQU0FORDVaY19EbzhYSDZ0Wi1kNkpXcmlvclJLM1FydlF4QU5RSk9Da0wwMFNlYlZ6YlVwQldGVGNmd29DUUFXQzMzLTdlZVVIUGxoQjVDVi01dlNTRWR0QUhSU1RLYU10TGFONDN3TUp3U0lTRjBVaUlPcG1IUnBncVBHSmcxc3d1ZnYzN3NxTmtnYjgwekxrMldBbzFQTkxYN1B5ZHM4MkF3?oc=5) `C4`
-- 2026-11-04 · 외교·정치 · 아디스아바바 — 에티오피아, 수단의 RSF 지원 의혹 재제기 후 수단 외교관 추방 [출처](https://news.google.com/rss/articles/CBMiqgFBVV95cUxPTHVvZk0yZ1NQQ09lYzJ1UUFIREo2MU5oMEJ2Qlp0ZVJIUWl1UmZoMWIzZmhsN3h2bWh1NDVZODBWd1dqTVo5QVZROEFGNFhRa1U0cmd2a01xb0k2Z2ZVdE9LLTNlRVZVMHNXRE15czdLMkVweWJFdlA2OGlLMGZlN0QxWGlkZTU5UUFuZUVCRDYtQllVNW1CdU00b1lGY0xiMldXY25YTFVsQQ?oc=5) `C3`
-- 2026-11-04 · 경제·제재 · 오모강 — 에티오피아, GERD 이어 오모강 수력발전 건설·전력 수출 확대 [출처](https://www.france24.com/en/video/20261104-ethiopia-expands-hydropower-ambitions) `B3`
-
-### 호주·태평양 (8건)
-- 2026-11-05 · 외교·정치 · 피지 — 피지 안보조약 비준 보류에 라부카 총리 "매우 실망", 다른 경로 추진 [출처](https://www.rnz.co.nz/news/pacific/2349209/parliamentary-committee-puts-ratification-of-fiji-australia-security-treaty-on-hold) `C2`
-- 2026-11-05 · 경제·제재 · 호주 — 호주 무역흑자 A$28억으로 7개월 최고, LNG·금속 수출 견인 [출처](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSGVNdzFfNDdnYmZzUzBoZmhpNzlsU1o5NWEtbUtnSi1ZZks2OHZxOUtUMDlEcjNOMk5NMzUxbVdsQzViQ0RDazI3SDZhWVZsY3FlNWRQLTJfVDBNNXZKQ2dkQ0hNZTg2bDl4ZnNRUHdZbDgycFNGVEozbU5sNEVDaGE5YTJZQkdCR0pDX2ZKVm5mcjhOMks0ZTJmS1N0MVhFRmdiVU5GcWwxU0hVUHdVVkt0QS02Y2Rx?oc=5) `C3`
-- 2026-11-04 · Y · 뉴사우스웨일스 — NSW 보건부 사이버 보안 침해 '중대 사고' 선포, 경찰 수사…환자 데이터 유출 없어 [출처](https://www.abc.net.au/news/2026-11-04/cyber-security-nsw-police-investigate-cyber-breach-at-nsw-health/107344174) `C2`
-- 2026-11-04 · 외교·정치 ·  — 미 중간선거 예비결과 태평양 미국령서 공화당 후보 강세 [출처](https://www.rnz.co.nz/news/pacific/2330530/republicans-make-electoral-gains-across-us-pacific-territories) `C4`
-- 2026-11-04 · 외교·정치 · 호주 — 호주 공공조사, 3680억 달러 오커스 잠수함 협정 중단·왕립위 요구 [출처](https://www.theguardian.com/australia-news/2026/nov/04/aukus-worst-australian-defence-decision-ever-public-inquiry) `B3`
-- 2026-11-04 · 해상 · 호주 — 호주, 초대형 무인잠수정 '고스트 샤크'의 드론 군집 전개 능력 공개 [출처](https://news.google.com/rss/articles/CBMilgJBVV95cUxOWFpiZ1RuWVhOOWFYR3d4TDNjX09USlZ5NWZfd0dYZ1A1dE80a3FWVzhRZmwzQ1RYd2JodEpNLVRPdlJsd1BEX3NpczFRSi1sWTI5UVNuNkZoTndRTXNYTlRfNm05Um5ZeE1SYTNCQmZEVVRQaFVkcGNHQzBSeFVzRDRZWG95UmJCMU5JVHVhcUw2NU0tVmxYZWt5UUEtQ2dLaWF3Y0hFMWY4ZmdWZDhFRjdXQ0VXMm1jZWJ3a1ZfdEh2a3VzNm9HOFIxUUdLQTh1OFh5Y2dDZGJMNC10bkh6VlJtWnF5azFTYW90VG9lQVZSSi1meElFX3lXVnJuOVMzM0d0bFZ1cXlsVkhWVDJ3MlJ0Rkk3QQ?oc=5) `C3`
-- 2026-11-04 · 경제·제재 · 서오스트레일리아 — 세계 최초 그린암모니아 추진 철광석 운반선, 서호주서 출항 [출처](https://news.google.com/rss/articles/CBMitgFBVV95cUxNYTB3clFhYW5JdjFfemV4S0d6el95bWdGRmxmSTltXzlfc2hZemk4QTBwRnhmNmdtbDMxNUZGS2pLck4yaWU3LWhNZE0wVlY0Z2JjNDJTVWsxenlBRWhwUGVwUnk1aWhfVXo0cVB0eG5QQ1lSdDFjWGI4TWlFT3JpWmE2SUFVckl0TkJmTWNIRjBkM3V4bnJfbDFoRWVuLWxyQVlSUVctcFhhamVEcS1VYXFaWDJUdw?oc=5) `C3`
-- 2026-11-04 · 경제·제재 ·  — 중국 부동산 침체로 철광석 연초比 6%↓ 톤당 91달러, 포테스큐 35%↓ [출처](https://www.hellenicshippingnews.com/iron-ore-enters-its-best-three-months-but-fortescue-has-a-china-problem/) `C3`
-
-### 사헬 (8건)
+### 사헬 (10건)
+- 2026-11-06 · 외교·정치 · 기니 북동부 — 기니, 북동부 금 채굴 금지로 부르키나파소 광부 8천여명 추방, 와가두구 반발 [출처](http://www.africanews.com/2026/11/05/guinea-expels-burkinabe-gold-miners-draws-ougadougous-fury/) `B3`
+- 2026-11-06 · 외교·정치 · 나이지리아 — 나이지리아 법원, 대선 2개월 앞두고 야당 ADC 아티쿠 후보 지명 무효 판결 [출처](http://www.africanews.com/2026/11/05/nigerian-court-nullifies-atiku-abubakars-presidential-candidacy/) `B3`
+- 2026-11-06 · 외교·정치 · Nigeria — 인터넷 대규모 장애·차단: Nigeria (IODA 24시간 점수 4000, bgp.median 4000). 정부 차단·전력망 피격·케이블 손상 가능 [출처](https://ioda.inetintel.cc.gatech.edu/country/NG?d=2026-11-06) `B2`
 - 2026-11-05 · 경제·제재 · 나미비아 — 나이지리아 단고테, 남부 아프리카 공급 대비 나미비아에 대형 연료 저장시설 가동 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/5/africas-richest-man-launches-mega-oil-tank-farm-in-namibia?traffic_source=rss) `B3`
 - 2026-11-05 · 외교·정치 · 은자메나 — 차드 대통령, 은자메나서 알제리 외무장관 접견…알제리는 이번 주 니제르에 파병 [출처](http://www.africanews.com/2026/11/04/chadian-president-meets-algerian-foreign-minister-in-ndjamena/) `B3`
 - 2026-11-05 · 외교·정치 · 라바트 — 나이지리아, 라바트서 브라질 3-1로 꺾고 U-17 여자월드컵 결승 진출 [출처](https://www.riotimesonline.com/nigeria-u17-womens-world-cup-final-japan/) `C4`
-- 2026-11-04 · 외교·정치 · Chad — 인터넷 대규모 장애·차단: Chad (IODA 24시간 점수 6392, bgp.median 6392). 정부 차단·전력망 피격·케이블 손상 가능 [출처](https://ioda.inetintel.cc.gatech.edu/country/TD?d=2026-11-04) `B2`
-- 2026-11-04 · 지상전·점령 · 니제르 — 알제리, UAE·이스라엘·모로코 견제 위해 불개입 원칙 깨고 니제르에 병력 파견 [출처](https://www.middleeasteye.net/news/uae-israel-morocco-threat-pushed-algiers-send-troops-niger) `B3`
-- 2026-11-04 · 외교·정치 · 벵가지 — 니제르, 동부 리비아 군 지도자와 협력 협정 체결(벵가지) [출처](http://www.africanews.com/2026/11/04/niger-signs-cooperation-deal-with-military-leader-in-eastern-libya/) `B3`
-- 2026-11-04 · 경제·제재 · 나이지리아 — 나이지리아 국영 NNPC, 9월 순익 약 3.78억 달러, 산유량 일 304만 배럴 [출처](https://www.riotimesonline.com/nigeria-nnpc-september-profit-509-billion-naira-2026/) `C2`
-- 2026-11-04 · 경제·제재 · 세네갈 — 세네갈 야당 주도 국회, IMF 구제금융 앞두고 핵심 예산안 부결 [출처](http://www.africanews.com/2026/11/04/senegals-national-assembly-rejects-key-budget-bill-after-heated-disputes/) `B3`
+- 2026-11-05 · 경제·제재 · 라고스 — 나이지리아 단고테, 라고스 정유소 주식 아프리카 거래소로 상장 확대 추진 [출처](http://www.africanews.com/2026/11/05/nigerias-dangote-looks-to-expand-ipo-access-to-exchanges-across-africa/) `B3`
+- 2026-11-05 · 보건 · 말리 — UNICEF 말리 인도적 상황보고서 3호(2026년 9월 30일 기준) [출처](https://news.google.com/rss/articles/CBMinwFBVV95cUxPTjd3RTZiTkFBdC04b3dLUFh6NnpldWNUOWRTeWF1TDdmUzNkbkh0WmFhOTc3allCQ1plVi1qXzB4eVozcGxwUFhnTDRIaDdnXzNURGMwYklQOHBucEZkZGUzUkhHVVMxOUVJeGJwc2RoSVV5Z29oenBGa2FhV1gtN09DSE9qWlAtYllQYlk0UF92Z2V2MVd0SmNlcUNWbjA?oc=5) `C4`
 
-### 남미 (8건)
-- 2026-11-05 · 테러·민간인 공격 · 메디아카노아 톨게이트 — 칼리 인근 메디아카노아 톨게이트 폭발물 공격, 한 달 새 세 번째 [출처](https://www.riotimesonline.com/colombia-mediacanoa-toll-explosive-attack/) `C4`
-- 2026-11-05 · 경제·제재 · 브라질 — 브라질 대선 결과로 농산물 원자재 가격이 영향받은 배경을 분석 [출처](https://news.google.com/rss/articles/CBMipAFBVV95cUxPbm1MWlFjc1U3UjAzdlFwWWtEZWc3ZXJRVUVpbDBrckNwYU1Ca0JoNm44MnRBNEEyTnp3WWg4dE9GX2RvbXRQT1hsZ0xtbGJQekFfR3VzQXNmMkdtdWdqUHBuc0V3SlhGdmgycDJjQWFPZjZVTGVadEV1Y045S0xtVEFBY3JrZ2NRSkwwSlEzMDJkd0V1UXozMmFYWER2bGt2QXBrRg?oc=5) `C2`
-- 2026-11-05 · 경제·제재 · 파라과이 — 파라과이 우에노은행 지급불능으로 폐쇄, 국민 절반 예금 묶여 전국 시위 [출처](https://www.aljazeera.com/video/newsfeed/2026/11/5/paraguay-bank-collapses-with-half-of-populations-savings?traffic_source=rss) `B3`
-- 2026-11-05 · 경제·제재 · 멕시코 — 멕시코 중앙은행 11월 5일 금리 결정, 선관위 상임 위원장 공석 [출처](https://www.riotimesonline.com/the-big-read-mexico-5-november-2026/) `C4`
-- 2026-11-04 · 외교·정치 ·  — Brazil's Data Center Push Hinges on Gas Rules, Grid Access and a New Congress [출처](https://oilprice.com/Energy/Energy-General/Brazils-Data-Center-Push-Hinges-on-Gas-Rules-Grid-Access-and-a-New-Congress.html) `C3`
-- 2026-11-04 · 범죄·치안 · 아마존 — 브라질 선거 후 아마존 원주민 영토 재침입 위협 제기 [출처](https://news.google.com/rss/articles/CBMisAFBVV95cUxPWkZfSTdFQ1FZTXItVGpBZ3hJeUFuak5pX0FxXzRjZVgzai1NcHdPRHUybFh3LW5fUE5faFl3Y2NUYW9UMUFTX2hjczhMNHFvd0FxRnlGRlZ1R3dnYi1TNEZmVUFNbnUyemgyRVA4YTBJSEE3b2ZLN2FYcmw2U2FPb05tVU9uTGZpRTVCVkQtT3FIcGFxbWx2S210LXNlcGtQVTFrUnJJOEdGOFllNmppbQ?oc=5) `C3`
-- 2026-11-04 · 공습·드론·미사일 · 베네수엘라 — 미국, 베네수엘라 마약조직 드론 공격 지원…약 24명 사망 [출처](https://www.nytimes.com/2026/11/03/world/americas/us-venezuela-strike-eln-drug-trafficking.html) `B3`
-- 2026-11-04 · 외교·정치 · 멕시코 — 美 중간선거 결과, 미-멕시코 긴장 완화 또는 셰인바움 정부 압박 강화 가능성 [출처](https://mexiconewsdaily.com/politics/how-might-the-results-of-todays-midterm-elections-in-the-united-states-impact-mexico/) `C4`
+### 카리브해 (9건)
+- 2026-11-06 · 외교·정치 · 베네수엘라 — 루비오 국무장관, 개혁 전제로 베네수엘라 2027년 선거 가능성 언급…보장은 없어 [출처](https://www.riotimesonline.com/rubio-venezuela-elections-ideally-2027/) `C4`
+- 2026-11-06 · 범죄·치안 · 아바나 — 아바나에서 요아니 산체스 납치 8시간 지나도록 소식 없어 [출처](https://havanatimes.org/news/no-news-of-yoani-sanchez-eight-hours-after-her-kidnapping-in-havana/) `C4`
+- 2026-11-06 · 경제·제재 · 쿠바 — 미 국무부, 쿠바 해운 대상 제재 확대 [출처](https://news.google.com/rss/articles/CBMimwFBVV95cUxQSFIzcXM5akZjMnpzb0plc2ZESEpheWFpWUF4aTF4eHBoTHdiUjVPSm4xOGp1OUJNbkFneG8xSWtFbk96Mm1qQ3pzMjFGZzNwNFQ4cXJQeHZyTUlTWDhZeHQxNlBFQmFFSHo4X2U5MUNJb2FEclhNcUFLNWJPNENTcU5pQmVKQTJfTXplTzBrRjdZQlJLTllVTjBXNA?oc=5) `C4`
+- 2026-11-05 · 외교·정치 · 에르모시요 — 2027 카리브 시리즈, 2월 1~7일 멕시코 에르모시요서 개최 [출처](https://www.riotimesonline.com/caribbean-series-2027-hermosillo-mexico-baseball-guide-2026/) `C4`
+- 2026-11-05 · 외교·정치 · 앤티가 바부다 — 영국, 노예 배상 요구한 카리브 국가들과 1년 내 '구조적 대화' 합의 [출처](https://www.theguardian.com/world/2026/nov/04/debt-relief-aid-no-replacement-slavery-reparations-uk-told-caribbean) `B3`
+- 2026-11-05 · 외교·정치 · 도미니카공화국-아이티 국경 — 도미니카공화국, 아이티 주둔 엘살바도르군에 병참·정보 지원 표명 [출처](https://www.riotimesonline.com/dominican-republic-aids-el-salvador-haiti-mission/) `C4`
+- 2026-11-05 · 범죄·치안 · 포르토프랭스 — 포르토프랭스 옛 학교에 폭력 피란민 약 3,000명 거주 [출처](http://www.africanews.com/2026/11/05/nearly-3000-people-find-shelter-in-a-former-school-in-haiti/) `B3`
+- 2026-11-05 · 외교·정치 · 그레나다 — 그레나다 고등법원 선거중지 소송 기각, 오늘 하원 15석 총선 [출처](https://www.riotimesonline.com/grenada-court-clears-way-for-election-today/) `C4`
+
+### 에티오피아·티그라이 (9건)
+- 2026-11-06 · 지상전·점령 ·  — 에티오피아 남부 무력 충돌로 수만 명 케냐로 피란 [출처](http://www.africanews.com/2026/11/05/fighting-wont-stop-ethiopia-clashes-drive-thousands-into-kenya/) `B3`
+- 2026-11-06 · 외교·정치 · 나이지리아 — 나이지리아 법원, 대선 두 달 앞두고 유력 야당 후보 자격 박탈 [출처](https://www.france24.com/en/nigeria-court-bars-opposition-candidate-two-months-before-election) `B3`
+- 2026-11-05 · 경제·제재 · 에티오피아 — 분쟁이 에티오피아 경제개혁 의제를 무산시킬 가능성 분석 [출처](https://news.google.com/rss/articles/CBMipgFBVV95cUxOWURsVjl1TVVFUjRWZ1pxdHRzMjFKT2hnbXRPZWQxTTRJbDFMVURyekhGX0phQ3BWWVRKd1BRZkE4YzV2cW56eThlcC1ORDhaUXhfUUM4RV9Tbmx2MGNmQ1ZiMVBPRGtuU1o3VnZGdXJyTUJWckNMcHBhcDlDT005d3JoTzBiSFBBenFEU2xlVjRJeW1ZXzJnOEVYMjZyYXdXa0lhX3JR?oc=5) `C3`
+- 2026-11-05 · 외교·정치 · 남아프리카공화국 — 남아공 지방선거 실시, ANC 시험대…에티오피아는 수단 외교관 6명 추방 [출처](https://www.france24.com/en/south-africans-vote-in-key-municipal-elections) `B3`
+- 2026-11-05 · 지상전·점령 · 에티오피아 — 에티오피아 분쟁 재발로 수천 명 피란, 원조 삭감에 식량·의료 부족 [출처](https://www.france24.com/en/video/20261105-ethiopian-families-fleeing-conflict-face-difficulties-with-food-access) `B2`
+- 2026-11-05 · 외교·정치 · 아프리카의 뿔 — 아프리카의 뿔 분열 속 튀르키예의 중재 역할 논평 [출처](https://news.google.com/rss/articles/CBMirgFBVV95cUxONTJIUGstZU9GeHVWNjA3QmlGeC1kRmI5MXdCMVJQazgzc2MzX1RFaVRxRkNySHlWaVNaRmZHTUVoNEM0RWNfazM4VWhsQnBncnpHd3JmOVgwUzJFcTJFOWh6cUpyUElvTlMwZ1JEblJtbXE5RlE5eWdIdWotY2pVNkl3R0dTUV9VaGEwUTV6cGFtTXlUV2JsbHpHeWRiZVRWcjNGa2pwQ0FJWDNGUnfSAa4BQVVfeXFMTjUySFBrLWVPRnh1VjYwN0JpRngtZEZiOTF3QjFSUGs4M3NjM19URWlUcUZDckh5VmlTWkZmR01FaDRDNEVjX2szOFVobEJwZ3J6R3dyZjlYMFMyRXEyRTloenFKclBJb05TMGdSRG5SbW1xOUZROXlnSHVqLWNqVTZJd0dHU1FfVWhhMFE1enBhbU15VFdibGx6R3lkYmVUVnIzRmtqcENBSVgzRlJ3?oc=5) `C3`
+- 2026-11-05 · 외교·정치 · 티그라이 — 유엔, 분쟁 재발 우려 속 티그라이 데사아 숲 복원 노력 인정 [출처](https://news.google.com/rss/articles/CBMiUkFVX3lxTE9yZEdUTFEweVNRWDlsdUF2RTM4NE5PYjFHRG84TGJJVmhuckY3N1N4REt3Um85eEJTYmNld1l1ZzRHaFM3TDdOcjN3TXVDejA4a1E?oc=5) `C4`
+- 2026-11-05 · 외교·정치 ·  — 에티오피아·수단, 내전 개입 의혹으로 상호 영사관 폐쇄 [출처](https://news.google.com/rss/articles/CBMixgFBVV95cUxOTTlicHVYUUVsaXg4a1EzVTlpSGE0SklXVGI4RkhkNDdqVk1DbzBwZG5RV2xxTkFTYWVXMFd5aE9PcjZPUXc1dHM1ZGx5bTYxeTlGOG5HaThDS0g1OUJBRmF0ampONnRHVGp3ZVJzSDF0T0xxOHp2QTM2Y3lvS2ZzUWF2NVRMTlFmUGlpNHItSjhXcFU3cXJnd2tIcGZ2ak9pRE1ucTNwMUNNWFVkX0VTbGQ5aEdXMm9Xc29aS0FUVE5UamRZeVE?oc=5) `C3`
+
+### 호주·태평양 (6건)
+- 2026-11-06 · 해상 · 쿡제도 — 뉴질랜드 해군 4명, 쿡제도 순찰선 Te Kukupa II 불법조업 단속 지원 [출처](https://www.rnz.co.nz/news/pacific/2368855/nz-navy-supports-cooks-illegal-fishing-fight) `C4`
+- 2026-11-06 · 외교·정치 · 뉴질랜드 — 뉴질랜드 11월 7일 총선, 생활비 상승이 핵심 쟁점 [출처](https://www.bbc.co.uk/news/videos/cr86zxe1q5j3o?at_medium=RSS&at_campaign=rss) `B2`
+- 2026-11-06 · 재난·사고 · 보르네오 — 호주, 인도네시아 보르네오 산불 진화 지원 위해 군용기 파견 [출처](https://news.google.com/rss/articles/CBMi6wFBVV95cUxOR0lkcHhNalV5ZmFtaEVjUUNmTnRfLTFNeGo4NXYtODNnU2l6YzBxMlBuSGZ0QWlsOEVORHVySnViOVl5dlpIMkJrV3FwOTlrS0VxTW1hQWVrUWN6bjZjZDlOWTV4bVpHclFMcTFkVXZXU3JHU3ViWDU3N2hfczhmYTREQ2xWZlpwMlhSVmd6ajRUT2loSnBfMDdYLWRTWGxZQnJSQndNY2gwYzYycjczUHZpMUZWc0RpVVZTZGF0c0U2VGJpNVJaaDFHbkU0cnZmZDUya2xSQ00tZ2t2bjR3SXpPMGJGWWtJUHd3?oc=5) `C3`
+- 2026-11-05 · 외교·정치 · 피지 — 피지 안보조약 비준 보류에 라부카 총리 "매우 실망", 다른 경로 추진 [출처](https://www.rnz.co.nz/news/pacific/2349209/parliamentary-committee-puts-ratification-of-fiji-australia-security-treaty-on-hold) `C2`
+- 2026-11-05 · 경제·제재 · 호주 — 호주 무역흑자 A$28억으로 7개월 최고, LNG·금속 수출 견인 [출처](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSGVNdzFfNDdnYmZzUzBoZmhpNzlsU1o5NWEtbUtnSi1ZZks2OHZxOUtUMDlEcjNOMk5NMzUxbVdsQzViQ0RDazI3SDZhWVZsY3FlNWRQLTJfVDBNNXZKQ2dkQ0hNZTg2bDl4ZnNRUHdZbDgycFNGVEozbU5sNEVDaGE5YTJZQkdCR0pDX2ZKVm5mcjhOMks0ZTJmS1N0MVhFRmdiVU5GcWwxU0hVUHdVVkt0QS02Y2Rx?oc=5) `C3`
+- 2026-11-05 · 재난·사고 · Fiji region — 규모 6.1 지진: Fiji region [출처](https://earthquake.usgs.gov/earthquakes/eventpage/us7000tw8r) `A1`
 
 ### 레바논·시리아 (6건)
+- 2026-11-06 · 공습·드론·미사일 · 크파르텝니트 — 이스라엘, 레바논 남부 나바티예 크파르텝니트·티레 만수리 공습 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strikes-target-lebanons-nabatieh-tyre-districts) `B3`
 - 2026-11-05 · 외교·정치 · 리야드 — 시리아·사우디 국방협력 협정 체결, 4억300만달러 차관 합의…샤라아 대통령 리야드 방문 [출처](https://www.aljazeera.com/news/2026/11/5/syria-saudi-arabia-sign-defence-cooperation-deal-agree-403m-in-loans?traffic_source=rss) `B3`
-- 2026-11-04 · 테러·민간인 공격 · 홈스 — 시리아, 홈스 정유소 겨냥 헤즈볼라 음모 저지 주장…헤즈볼라는 부인 [출처](https://www.aljazeera.com/news/2026/11/3/syria-arrests-cell-it-links-to-isis-over-plot-against-oil-refinery?traffic_source=rss) `B3`
-- 2026-11-04 · 공습·드론·미사일 · 아이타알자발 — 이스라엘, 레바논 빈트즈바일 지구 아이타알자발 외곽 공습·포격 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-air-strikes-hit-lebanons-bint-jbeil-district) `B3`
-- 2026-11-04 · 지상전·점령 · 자바타 알카샤브 — 이스라엘군 차량 4대, 시리아 쿠네이트라 자바타 알카샤브 진입해 가택수색 [출처](https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-raid-homes-after-advancing-south-western-syrian-town) `B3`
-- 2026-11-04 · 외교·정치 · 레바논 — 유엔 평화유지국장 "레바논·서사하라 PKO 철수로 안보 공백 우려"…안보리 분열 [출처](https://news.un.org/feed/view/en/story/2026/11/1168741) `A2`
-- 2026-11-04 · 외교·정치 · 시리아 — 유엔 조사위 "시리아 내전 후 출생 아동 다수 국적 없어…부계 국적법 탓" [출처](https://news.un.org/feed/view/en/story/2026/11/1168737) `A2`
+- 2026-11-05 · 외교·정치 · 레바논 남부 — 유엔 평화유지국장: 레바논·이스라엘군, 완충 병력 없이 직접 대치 우려 [출처](https://news.google.com/rss/articles/CBMi4AFBVV95cUxOMzhBbTRGcUQ4emxEUjlWU24waE5wY0czanFKSjZsbGlDVzlkLUFVck9zZkZvYjdXaG95NDh5QUtqcWlMZEFEWm9ycUhYVjBOMDhGTGxHTVdVMzVsdWI1SExCbFlVUkRQR0VPV1NNQnJxdHBlRGlndFJMNXBKTE9yeVFiQlhlb1U4cE4wY3JkdE9adUszTjBOY2ZTZTI3eVZNdXFQbmRscGljWDhPb3JBMFVsWWFBc19PVVo5bGtsMGpEWE45MHNROEgtOVg3NlFCNzZRTVd4dERONV9vVVNIUw?oc=5) `C4`
+- 2026-11-05 · 경제·제재 · 시리아 — 사우디 기금, 시리아 인프라·공공서비스 사업에 4억300만달러 이상 지원 [출처](https://news.google.com/rss/articles/CBMiywFBVV95cUxPcEgyM182M2x0X3JEUGtlbWR1S1QwVkRjMjJQVElzb3JwelVST0JhdG9oVElrUHU1bjRJeW13X3dpNUZIbF9JWFJYWXM5VW9TbGNjb2JQV1d0djlXZmJoc3ZwTEp4ajYwVGdndS12QlU1SVBDT1pzYTN6cHd5Ui10YmVpanE4alJXMmRTR1JjTGZ3ZFlwazN4ZzZtbjBDcXdJdVlMZkFwZkZieXhwaE9XZzhSSU81clE4RTRfOWR0a01LeFhCRTZyY0NrUQ?oc=5) `C4`
+- 2026-11-05 · 외교·정치 · 홈스 — 시리아 홈스 데이터 입력원 채용 공고 [출처](https://news.google.com/rss/articles/CBMickFVX3lxTE9EV3ZGTWF3ZjlWck5uSzVBZDBFQWJYcnJwV01GNGtPYk5oei1Gdm9VczhVSDVhekVxNWk3UVVkWU1JdGl0RHJrS1JTUExtZzdNTEZVelB3eGNROUlaUEN6ODVzd2JZeUQ0NFNxOGJlUXJWZw?oc=5) `C4`
+- 2026-11-05 · 보건 · 홈스 — 시리아 홈스 의사(일반·소아과·산부인과) 채용 공고 [출처](https://news.google.com/rss/articles/CBMihwFBVV95cUxQT21QUUVVbV96QzA4cXk3a21GVzBCVm56ZHZUV2hlMGs0a3E5X1JlQ00zSy1sOC1NUWZRdnR5RmZrX0EzSG5FX0RoWkNoeG1QLXNTWEtuSlBoakptbWJhTVowMDlaZkpCVlhGczlSeVlNM2VzMVRBdEQyRW9aV2dJVzFmblFTVnc?oc=5) `C4`
 
-### 콩고 동부 (5건)
-- 2026-11-05 · 경제·제재 · 카모아-카쿨라 — 아이반호 마인스 카모아-카쿨라 구리광산 2차 생산 하향, 비용 급증 [출처](https://www.mining.com/coppers-biggest-new-mine-stumbles-again-as-costs-soar/) `C4`
-- 2026-11-04 · 외교·정치 · 콩고민주공화국 동부 — MONUSCO 단장, 콩고민주공화국 동부서 카빌라 전 대통령 등 반군연합 지도부 면담 [출처](http://www.africanews.com/2026/11/03/un-peacekeeping-head-meets-leaders-of-rebel-coalition-in-eastern-drc/) `B3`
-- 2026-11-04 · 보건 · 비룽가 국립공원 — 민주콩고 비룽가 국립공원 탄저병 발생, 9월 이후 하마 30마리 폐사 [출처](https://www.nytimes.com/2026/11/03/world/africa/congo-anthrax-hippos-virunga-park.html) `B3`
-- 2026-11-04 · 경제·제재 · 르완다 — 미국, DR콩고 분쟁 관여로 르완다군 제재…NBA, 군 소속팀 아프리카 리그 퇴출 [출처](https://www.bbc.co.uk/news/articles/c699zdx9knmpo?at_medium=RSS&at_campaign=rss) `B2`
-- 2026-11-04 · 경제·제재 · 콜웨지 — 콩고민주공화국 콜웨지 주민, 중국 광산·정부 상대 오염 소송 [출처](https://www.france24.com/en/video/20261104-dr-congo-residents-sue-chinese-mining-giant-for-widespread-pollution) `B3`
+### 미얀마 (5건)
+- 2026-11-06 · 공습·드론·미사일 · 라카인주 — 미얀마 군정, 9월부터 라카인주 탈환 공세…민간인 대상 공습·이중타격 강화 [출처](https://www.france24.com/en/asia-pacific/20261105-myanmar-civilians-under-fire-from-military-junta) `B3`
+- 2026-11-06 · 외교·정치 · 헤이그 — ICJ, 감비아가 제소한 미얀마 로힝야 집단학살 사건 11월 19일 판결 예정 [출처](https://www.middleeasteye.net/news/icj-rule-rohingya-genocide-case-imminently-heres-what-you-need-know) `B3`
+- 2026-11-06 · 해상 · 나프강 — 나프강 일대 사건들, 방글라데시 해양 전략의 공백 드러내 [출처](https://thediplomat.com/2026/11/the-naf-river-exposes-a-gap-in-bangladeshs-maritime-strategy/) `B3`
+- 2026-11-05 · 외교·정치 · 네피도 — 중국, 미얀마 군정에 투자사업 이행 지연 불만 표하며 가속 촉구 [출처](https://www.irrawaddy.com/news/myanmar-china-watch/hurry-up-with-our-investment-projects-china-tells-myanmar-regime.html) `C3`
+- 2026-11-05 · 경제·제재 ·  — 짯화 급락으로 미얀마-태국 국경무역 차질, 일부 거래 중단 [출처](https://www.irrawaddy.com/business/kyat-slump-disrupts-thai-border-trade-as-import-costs-rise.html) `C3`
 
-### 남중국해 (4건)
-- 2026-11-05 · 해상 · 남중국해 — 미 항모 시어도어 루스벨트 남중국해 항행 중 중국 감시 받아 [출처](https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQVV4NDFQRDNsdUtYRWtLeHZ6bThrbldEVHA4MGtiUnUwa2NJLVFrNjIwSVd6X2pUUHV1eVhFcGFrbnVOV3gzd1VEeDdSX0c0blJfOEllVUR6U3pXcWJPVU9kaHAwbXdZRm1iZ3YteDdCcnFBbFp1bGVpdHRBYXVoNTRxcDVuRGVxWEp2ak5TMGl4b3M4LXRERkItRWVpNHRWU25EeVNaVTN4enVxVDMyUC1BMGFCaUpUeHhvaUp0SHlEanRnc0sxbmx3R290cVZ1WGdkcg?oc=5) `C3`
+### 소말리아·아덴만 (5건)
+- 2026-11-06 · 외교·정치 · 모가디슈 — 소말리아 대법원, 충돌 촉발한 모하무드 대통령 임기 1년 연장 '위법' 판결 [출처](http://www.africanews.com/2026/11/05/extension-of-mohamuds-presidential-term-unlawful-somalias-supreme-court-rules/) `B2`
+- 2026-11-05 · 외교·정치 · 소말리아 — NUSOJ 보고서, 소말리아 여성 언론인 대상 괴롭힘·열악한 근무환경 만연 지적 [출처](https://news.google.com/rss/articles/CBMi4gFBVV95cUxOLVZaOGswTjJnbW9iSFY2RzQzOHlZWnZLbGxGT3VLaG9aMXphcDlNVmpxdVRob2dQNE42ZFhyT2xBOHlPcWVMeHBfNG9zX2RDeFJOVGpuN2l5eF8yOC1LRks5Q3ZtUlY4N0g0WnNSWk5rREd4V3Ztc3VkQ0JkR3IzTll2SGJ4SG51eXlPWEd6RTZjZG1jYXJjaDBFeVdDODlnSllPQUlzcTFvbjBhdEdzUWs3VnVQYXF5d1pBalJTS29fOEZHOTRRcGZKUHNMT0JHTGJjY210cHhwR1ZOOGNnNVF3?oc=5) `C3`
+- 2026-11-05 · 해상 ·  — 소말리아 해적, 이란 어선 나포…상선 공격 우려 고조 [출처](https://news.google.com/rss/articles/CBMiUkFVX3lxTE93aExOVUdvU0hpXzRrTTlZM3FHbzlESTFkdl9Qa2FNVDcxOHljSDBrSWhSUElkX25CY2RNdkJwdkhIU0huVmpUVG1WM2hIU1VWemc?oc=5) `C4`
+- 2026-11-05 · 외교·정치 · 히란주 — 소말리아 의원, 히란주 마카위슬리 민병대 반군 규정 거부 [출처](https://news.google.com/rss/articles/CBMixgFBVV95cUxPby0yVE1FZVlQTUxHMEpGMTduNk5NRVJkYjhPMWRHWnk0UnFsSXpiYk9nT1FUNnBwSE8wX0tCTk95ckRHbGFON0FHS1BwT0FfVHVRYUQ5c2p2cU5CelVnakZRYlNZUlFld0RoTmp0U1lBMms5LUY0WmY0S0dzNlo4UEdkT0o4QVNaRnJHZTdCSzRrdjF3R2FGbjJQMUJUSm9KV0pQQ1RGb3Z1emxFOXJaUVdyY2x1S1VualJzamZlNVlweXFueXc?oc=5) `C3`
+- 2026-11-05 · 해상 · 소말리아 해역 — 소말리아 해적, 이란 다우선 납치…2026년 소말리아 해역 4번째 [출처](https://news.google.com/rss/articles/CBMifkFVX3lxTE5HUlBuU3E2QXNjQXlnQ1lWeTlMeG1YRGtoU1hROGRwNmloWDUwSm54UDRkRy16elU0amdfaVpUUmdEbjZDZ0ozQ0pOaG1pdXNQbHh2eHBpTk9JNHBFdjFoaDY3Q1dmMFh2ZF9fZlNoUzRDR2F6Vy10T21GVmJDQQ?oc=5) `C3`
+
+### 남중국해 (5건)
+- 2026-11-06 · 범죄·치안 · 필리핀 — 필리핀 당국, 토머스 마클 주니어를 아동 성착취물 수사 '관심 인물'로 지정 [출처](https://www.theguardian.com/world/2026/nov/05/meghan-sussex-thomas-markle-jr-philippines-child-sexual-abuse-inquiry) `B3`
 - 2026-11-05 · 외교·정치 · 마닐라 — 카니 캐나다 총리, 마닐라 제49차 아세안 정상회의 참석·필리핀 FTA 협상 [출처](https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdXcxV2ZkRVktQzBBdzMtTkdrTWUzMnU0YV9OMDZCcFI1UUJ6OWtCQTdtdHdEVHU5NWlfVWdDLXRFX1p1YkVTeHM4U3J5eVdqb0szcnNUY0RTbVM4UkpJckpGQ3Z2Smd5cGg2WVdHOUthSDd2SW9GZk5QUk5OLWk3S2VhNWd6V1JSSkNCeHZYSkF3cF9IbS1VM2J0UkhncUkyM2dYRjM3blhvNHU3Zkprczd5TExhYldXZXpkeTNpc1RNNzVlSVduNFRLWUhDS0lsV3prUA?oc=5) `C3`
+- 2026-11-05 · 해상 · 남중국해 — 미 항모 시어도어 루스벨트 남중국해 항행 중 중국 감시 받아 [출처](https://news.google.com/rss/articles/CBMi1AFBVV95cUxQQVV4NDFQRDNsdUtYRWtLeHZ6bThrbldEVHA4MGtiUnUwa2NJLVFrNjIwSVd6X2pUUHV1eVhFcGFrbnVOV3gzd1VEeDdSX0c0blJfOEllVUR6U3pXcWJPVU9kaHAwbXdZRm1iZ3YteDdCcnFBbFp1bGVpdHRBYXVoNTRxcDVuRGVxWEp2ak5TMGl4b3M4LXRERkItRWVpNHRWU25EeVNaVTN4enVxVDMyUC1BMGFCaUpUeHhvaUp0SHlEanRnc0sxbmx3R290cVZ1WGdkcg?oc=5) `C3`
 - 2026-11-05 · 외교·정치 · 중국 남부전구 — ASPI 분석: 호주에 가장 중요한 중국군 조직은 남부전구 [출처](https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTlpsQ1dxVTBoNlJoNGNjRTNObS1GLXVxNVlEcUxQRzJhYkdBTkJlNVJXZGl4ZFVyZ29EMHVEV3BEbHFEMXNLOUdSMmZWVWlHQTh4OE1ycDNybkgwNHZqR1JuVmVBS3dFYmxiTFo1TU5mM2MzcHh4ejVrdHRmclRoUF9JX19Id0lQS0NvSXptZDZBc0I2WkhkN1dwRkZmOXB1Q29VdDA0MVNwOHM?oc=5) `C3`
-- 2026-11-04 · 경제·제재 · 필리핀 — USDA, 필리핀 생명공학·신생산기술 연례 보고서 발간 [출처](https://news.google.com/rss/articles/CBMiswFBVV95cUxONmxSeXhicDNaX3Fzdlcza0pSLUh1d3J4RGlVNGZ6eXM3cXNSZ1hiamI4U3ZXbk9fRUhDT2NVMUhSRURwdnNYeGdfU1BPWjZmdjZSQkdIUW92VFVCUnpBSmtlbDNIb2VJT2NNS3BNYzFCYV9xWHFCa29YR2xhdHFhOXpKcUJfTUtXZXpWZ0JQUnRlTFhfNUFpNmthcWpWYmZMbTVQWmlzdG9TclhGTWdEeEtrNA?oc=5) `C4`
+- 2026-11-05 · 경제·제재 · 동남아시아 — IEEFA, 동남아 4개국 LNG 발전사업 678억 달러 규모 취소·지연 [출처](https://oilprice.com/Latest-Energy-News/World-News/IEEFA-678-Billion-in-Asian-LNG-Power-Projects-Scrapped-or-Stalled.html) `C3`
 
-### 미얀마 (4건)
-- 2026-11-04 · 외교·정치 · 헤이그 — ICJ, 11월 19일 미얀마 로힝야 제노사이드 사건 판결 예정 [출처](https://www.irrawaddy.com/news/myanmars-crisis-the-world/top-un-court-to-rule-november-19-on-myanmar-rohingya-genocide-case.html) `C3`
-- 2026-11-04 · 테러·민간인 공격 · 미얀마 — 아세안 정상회의 앞두고 미얀마 군정 민간인 공격 확대 우려 [출처](https://www.irrawaddy.com/opinion/editorial/is-myanmars-regime-preparing-another-summit-surprise.html) `C3`
-- 2026-11-04 · 외교·정치 · 태국 — 태국-미얀마 협력 확대, 군정 정보·감시 역량 강화 가능성 [출처](https://www.irrawaddy.com/opinion/guest-column/thailands-new-deals-with-myanmar-and-washingtons-changing-priorities.html) `C3`
-- 2026-11-04 · 외교·정치 · 미얀마 — 미얀마 NUG, 미국 신전략이 군정 접근·경제이익 우선해 민주주의 소외 우려 경고 [출처](https://www.irrawaddy.com/news/myanmars-crisis-the-world/myanmars-nug-warns-us-against-prioritizing-its-interests-over-peace.html) `C3`
-
-### 소말리아·아덴만 (1건)
-- 2026-11-04 · 보건 · 아일랜드 — 아일랜드 올림픽 육상선수 키아라 마기언, 대장암 4기 진단 후 별세 [출처](https://www.bbc.co.uk/news/articles/cw62ye1030njo?at_medium=RSS&at_campaign=rss) `B2`
+### 콩고 동부 (3건)
+- 2026-11-06 · 보건 · 로열프리병원 — 콩고민주공화국서 에볼라 확진된 영국인 의사, 런던 로열프리병원 이송 [출처](https://www.theguardian.com/world/2026/nov/05/british-ebola-patient-evacuated-drc-arrives-london-hospital) `B3`
+- 2026-11-05 · 경제·제재 · 카모아-카쿨라 — 아이반호 마인스 카모아-카쿨라 구리광산 2차 생산 하향, 비용 급증 [출처](https://www.mining.com/coppers-biggest-new-mine-stumbles-again-as-costs-soar/) `C4`
+- 2026-11-05 · 보건 · 콩고민주공화국 — 콩고민주공화국 분디부교 에볼라 유행 속 신규 백신 후보 2종 임상 추가 [출처](https://news.un.org/feed/view/en/story/2026/11/1168742) `A1`
 
 ## 시장
 
 | 지표 | 값 | 날짜 | 변동 |
 |---|---:|---|---|
-| 브렌트유 ($/bbl) | 94.16 | 2026-11-05 | -10.1% |
-| WTI ($/bbl) | 87.15 | 2026-11-05 | -9.7% |
-| 경유 선물 ($/gal) | 4.15 | 2026-11-05 | -6.2% |
-| 휘발유 선물 ($/gal) | 2.7 | 2026-11-05 | -6.7% |
-| 헨리허브 가스 ($/MMBtu) | 2.95 | 2026-11-05 | +3.3% |
-| 유럽 TTF 가스 (€/MWh) | 85.03 | 2026-11-04 | -3.5% |
-| 금 ($/oz) | 4133.2 | 2026-11-05 | +4.1% |
-| 은 ($/oz) | 52.69 | 2026-11-05 | +3.9% |
-| 백금 ($/oz) | 1523.4 | 2026-11-05 | +4.4% |
-| 구리 ($/lb) | 6.39 | 2026-11-05 | -2.4% |
-| 시카고 밀 (c/bu) | 600.75 | 2026-11-05 | -0.9% |
-| 캔자스 밀 (c/bu) | 634.75 | 2026-11-05 | -1.7% |
-| 옥수수 (c/bu) | 445.75 | 2026-11-05 | -0.6% |
-| 대두 (c/bu) | 1202.0 | 2026-11-05 | -0.2% |
-| 대두유 (c/lb) | 62.64 | 2026-11-05 | -3.7% |
-| 쌀 ($/cwt) | 18.07 | 2026-11-05 | +3.1% |
-| 설탕 No.11 (c/lb) | 18.47 | 2026-11-04 | -3.1% |
-| 커피 아라비카 (c/lb) | 279.5 | 2026-11-04 | -4.3% |
-| 코코아 ($/t) | 5427.0 | 2026-11-04 | -0.1% |
-| 면화 (c/lb) | 78.09 | 2026-11-04 | +0.6% |
-| 생우 (c/lb) | 218.03 | 2026-11-04 | -0.8% |
-| 달러인덱스 | 101.27 | 2026-11-05 | -0.5% |
-| 원/달러 | 1340.68 | 2026-11-05 | +0.2% |
-| 엔/달러 | 157.93 | 2026-11-05 | +0.1% |
-| 위안/달러 | 6.67 | 2026-11-05 | +0.1% |
-| 유로/달러 | 1.13 | 2026-11-05 | +0.8% |
-| 호주달러/달러 | 0.7 | 2026-11-05 | -0.1% |
-| 헤알/달러 | 5.46 | 2026-11-05 | +1.4% |
-| 미 10년물 (%) | 4.89 | 2026-11-04 | -1.9% |
-| 미 5년물 (%) | 4.69 | 2026-11-04 | -2.3% |
-| VIX | 16.61 | 2026-11-04 | -3.4% |
-| 코스피 | 5383.8 | 2026-11-05 | -9.3% |
-| S&P 500 | 7688.62 | 2026-11-04 | -0.7% |
-| 니케이225 | 61077.9 | 2026-11-05 | -5.5% |
-| 상하이종합 | 3680.75 | 2026-11-05 | +2.3% |
-| 우라늄 ETF (URA) | 32.7 | 2026-11-04 | -10.5% |
-| 리튬·배터리 ETF (LIT) | 61.88 | 2026-11-04 | -1.3% |
-| 건화물 운임 ETF (BDRY) | 12.61 | 2026-11-04 | +0.6% |
-| 비트코인 ($) | 80539.21 | 2026-11-05 | +2.9% |
+| 브렌트유 ($/bbl) | 99.9 | 2026-11-06 | -4.6% |
+| WTI ($/bbl) | 91.65 | 2026-11-06 | -5.0% |
+| 경유 선물 ($/gal) | 4.38 | 2026-11-06 | -1.0% |
+| 휘발유 선물 ($/gal) | 2.81 | 2026-11-06 | -3.1% |
+| 헨리허브 가스 ($/MMBtu) | 3.0 | 2026-11-06 | +5.1% |
+| 유럽 TTF 가스 (€/MWh) | 89.64 | 2026-11-05 | -1.1% |
+| 금 ($/oz) | 4055.3 | 2026-11-06 | +2.2% |
+| 은 ($/oz) | 51.53 | 2026-11-06 | +1.6% |
+| 백금 ($/oz) | 1513.3 | 2026-11-06 | +3.7% |
+| 구리 ($/lb) | 6.21 | 2026-11-06 | -5.1% |
+| 시카고 밀 (c/bu) | 595.75 | 2026-11-06 | -1.8% |
+| 캔자스 밀 (c/bu) | 631.5 | 2026-11-06 | -2.2% |
+| 옥수수 (c/bu) | 440.75 | 2026-11-06 | -1.7% |
+| 대두 (c/bu) | 1190.0 | 2026-11-06 | -1.2% |
+| 대두유 (c/lb) | 62.0 | 2026-11-06 | -4.7% |
+| 쌀 ($/cwt) | 18.34 | 2026-11-06 | +4.6% |
+| 설탕 No.11 (c/lb) | 18.6 | 2026-11-05 | -2.4% |
+| 커피 아라비카 (c/lb) | 277.4 | 2026-11-05 | -5.0% |
+| 코코아 ($/t) | 5290.0 | 2026-11-05 | -2.7% |
+| 면화 (c/lb) | 78.45 | 2026-11-05 | +1.0% |
+| 생우 (c/lb) | 214.47 | 2026-11-05 | -2.4% |
+| 달러인덱스 | 101.89 | 2026-11-06 | +0.1% |
+| 원/달러 | 1356.1 | 2026-11-06 | +2.3% |
+| 엔/달러 | 158.15 | 2026-11-06 | +0.3% |
+| 위안/달러 | 6.67 | 2026-11-06 | +0.1% |
+| 유로/달러 | 1.12 | 2026-11-06 | +0.3% |
+| 호주달러/달러 | 0.69 | 2026-11-06 | -2.1% |
+| 헤알/달러 | 5.5 | 2026-11-06 | +1.3% |
+| 미 10년물 (%) | 4.84 | 2026-11-05 | -1.9% |
+| 미 5년물 (%) | 4.61 | 2026-11-05 | -2.4% |
+| VIX | 28.18 | 2026-11-05 | +45.1% |
+| 코스피 | 5059.69 | 2026-11-06 | -11.7% |
+| S&P 500 | 7353.73 | 2026-11-05 | -4.7% |
+| 니케이225 | 57434.77 | 2026-11-06 | -9.3% |
+| 상하이종합 | 3648.19 | 2026-11-06 | +0.3% |
+| 우라늄 ETF (URA) | 30.98 | 2026-11-05 | -13.3% |
+| 리튬·배터리 ETF (LIT) | 60.18 | 2026-11-05 | -1.2% |
+| 건화물 운임 ETF (BDRY) | 13.02 | 2026-11-05 | +4.4% |
+| 비트코인 ($) | 75603.51 | 2026-11-06 | -1.4% |
 
 ## 해협 통항 (IMF PortWatch)
 
 | 해협 | 최신일 | 척수 | 7일 평균 | 28일 평균 |
 |---|---|---:|---:|---:|
-| suez | 2026-10-25 | 46 | 41.3 | 42.2 |
-| panama | 2026-10-25 | 28 | 28.7 | 28.6 |
-| blacksea | 2026-10-25 | 62 | 53.7 | 49.0 |
-| bab | 2026-10-25 | 36 | 28.9 | 27.2 |
-| malacca | 2026-10-25 | 212 | 228.0 | 222.2 |
-| hormuz | 2026-10-25 | 2 | 3.3 | 3.5 |
-| cape | 2026-10-25 | 100 | 87.1 | 85.9 |
-| gibraltar | 2026-10-25 | 103 | 116.4 | 119.1 |
-| taiwan | 2026-10-25 | 240 | 190.0 | 204.6 |
+| suez | 2026-10-25 | 46 | 41.3 | 41.7 |
+| panama | 2026-10-25 | 28 | 28.7 | 29.0 |
+| blacksea | 2026-10-25 | 62 | 53.7 | 55.3 |
+| bab | 2026-10-25 | 36 | 28.9 | 28.8 |
+| malacca | 2026-10-25 | 212 | 228.0 | 224.9 |
+| hormuz | 2026-10-25 | 2 | 3.3 | 3.4 |
+| cape | 2026-10-25 | 100 | 87.1 | 84.5 |
+| gibraltar | 2026-10-25 | 103 | 116.4 | 120.5 |
+| taiwan | 2026-10-25 | 240 | 190.0 | 198.2 |
 
 ## 수집원 상태 (95/95 정상)
 
