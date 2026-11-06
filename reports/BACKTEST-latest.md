@@ -3,7 +3,7 @@
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | 1.7 | None | None | None | None |
+| brent | 1.71 | None | None | None | None |
 | wheat | -0.21 | None | None | None | None |
 | gold | 0.99 | None | None | None | None |
 | dxy | 0.04 | None | None | None | None |
