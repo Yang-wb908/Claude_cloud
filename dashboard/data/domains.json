@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-06T07:02:52Z",
+ "generated": "2026-11-06T12:59:35Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-06T07:02:52Z",
+  "at": "2026-11-06T12:59:35Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -54,26 +54,26 @@
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "airlift": 2
+      "other": 2
      },
      "ac": [
       {
-       "flight": "",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 35.33,
-       "lon": 126.72,
-       "alt": 26000,
-       "reg": "167982"
+       "flight": "CARD",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.45,
+       "lon": 127.11,
+       "alt": "ground",
+       "reg": "18-21005"
       },
       {
-       "flight": "",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 35.7,
-       "lon": 128.67,
-       "alt": 22050,
-       "reg": "168075"
+       "flight": "KEEP00",
+       "t": "H47",
+       "role": "other",
+       "lat": 36.47,
+       "lon": 127.35,
+       "alt": 1450,
+       "reg": "16-08212"
       }
      ]
     },
@@ -121,22 +121,22 @@
       37.5
      ],
      "n": 1,
-     "key": 0,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "TURNA01",
-       "t": "AT76",
-       "role": "other",
-       "lat": 34.28,
-       "lon": 32.12,
-       "alt": 15500,
-       "reg": "TCB-751"
+       "flight": "IAM1424",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 34.64,
+       "lon": 32.47,
+       "alt": 35000,
+       "reg": "MM62227"
       }
      ]
     },
@@ -166,23 +166,51 @@
       30.5,
       61.0
      ],
-     "n": 1,
-     "key": 0,
+     "n": 4,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 3,
+      "isr": 1
      },
      "ac": [
       {
        "flight": "CEF6027",
        "t": "C295",
        "role": "other",
-       "lat": 53.81,
-       "lon": 13.79,
-       "alt": 20025,
+       "lat": 57.31,
+       "lon": 14.26,
+       "alt": 20000,
        "reg": "0481"
+      },
+      {
+       "flight": "RJA23H",
+       "t": "GL7T",
+       "role": "other",
+       "lat": 55.74,
+       "lon": 14.83,
+       "alt": 43000,
+       "reg": "VP-BHM"
+      },
+      {
+       "flight": "PLF042",
+       "t": "C295",
+       "role": "other",
+       "lat": 53.98,
+       "lon": 18.54,
+       "alt": 17000,
+       "reg": "022"
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 55.8,
+       "lon": 19.78,
+       "alt": 32000,
+       "reg": "N159L"
       }
      ]
     },
@@ -205,12 +233,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 7
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-06T07:02:52Z",
+  "at": "2026-11-06T12:59:35Z",
   "data": {
    "n_total": 1768,
    "recent": [
@@ -361,12 +389,12 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-06T07:02:52Z",
+  "at": "2026-11-06T12:59:35Z",
   "data": {
    "n_week": 100,
    "by_country": {
     "US": 38,
-    "??": 25,
+    "??": 24,
     "CA": 6,
     "DE": 6,
     "BR": 4,
@@ -376,10 +404,10 @@
     "CH": 2,
     "ES": 2,
     "AE": 1,
+    "IL": 1,
     "DK": 1,
     "ID": 1,
-    "VN": 1,
-    "IN": 1
+    "VN": 1
    },
    "by_group": {
     "medusalocker": 17,
@@ -387,10 +415,10 @@
     "BrainCipher": 11,
     "safepay": 8,
     "akira": 6,
-    "SilentRansomGroup": 5,
     "Aoqin": 5,
     "play": 5,
     "incransom": 5,
+    "SilentRansomGroup": 4,
     "Dark Project": 4
    },
    "kr": []
