@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-04",
+ "asof": "2026-11-07",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -1595,9 +1595,15 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-07",
+   "note": "자동 판정(보통): 기한일 현재 호르무즈 통항은 하루 2척에 그친다. 그런데도 이란의 블랙리스트 개편에 따른 선별 통항, 간헐적 유조선 피격, 드론 격추가 함께 이어지고 운임과 보험 부담도 높아 '통제된 해협 지속' 상태가 맞다. 브렌트유도 기한일 기준 97~99달러로 95~110달러 범위 안에 있다. 다만 주간 15% 급락으로 미뤄 보면 기간 중 한때 110달러를 넘었을 가능성이 있어 확신도를 '보통'으로 낮췄다.",
+   "by": "auto",
+   "evidence": [
+    "https://splash247.com/seafarer-missing-in-gulf-tanker-strike-as-iran-redraws-hormuz-blacklist/",
+    "https://oilprice.com/Energy/Energy-General/The-Iran-War-Isnt-Over-but-Oil-Traders-Are-Already-Pricing-In-Peace.html",
+    "https://oilprice.com/Latest-Energy-News/World-News/Oil-Traders-Want-US-to-Release-Sanctioned-Tankers-as-Freight-Costs-Soar.html"
+   ]
   },
   {
    "id": "scn-hormuz_reopen-2026-10-08",
@@ -1648,7 +1654,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 11월 4일 아덴만에서 미국 국적 상선을 노린 후티 미사일이 격추돼 상선 공격 재개 정황은 있다. 그러나 11월 1일 마감 주간까지 수에즈 통과가 오히려 늘었고, 그 뒤 선사들이 다시 우회했다는 근거는 없다. 시나리오의 두 번째 요소인 수에즈 복귀 선사 재이탈을 확인할 수 없어 판정을 보류한다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-14"
   },
   {
    "id": "scn-redsea_calm-2026-10-08",
@@ -1676,9 +1684,15 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-11-07",
+   "note": "자동 판정(보통): 기한(11-07)까지 오데사 남쪽 흑해에서 화물선 한 척을 타격했다는 러시아 측 주장은 있었다. 그러나 오데사 3항과 노보로시스크를 동시에 타격했다는 보도나 곡물 회랑이 사실상 멈췄다는 근거는 없고, 노보로시스크 항로도 계속 운항 중이며 밀 선물은 오히려 내렸다. 따라서 이 시나리오는 실현되지 않은 것으로 판정한다.",
+   "by": "auto",
+   "evidence": [
+    "http://www.africanews.com/2026/11/06/russia-ukraine-escalate-mutual-strikes-in-black-sea-ahead-of-abu-dhabi-talks/",
+    "https://www.hellenicshippingnews.com/seven-shadow-fleet-tankers-spoof-ais-to-hide-novorossiysk-voyages/",
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVW1aRW12bW0zWnRwbTVMUW9fZzlrT0dQNkszUUpER0tqeEJHcFB3SlNwSFhuMW1wYUNSbzZrWEcwODVoLVh1R1VLWlJTVWlCN1Y2TzVYSDNwdGg5WF8taWQxYmptendsOEVsMFNYQXlzVlhrQXVCZG8zV0puQ2dwNnJQNGJOemxNTjB1Z2NOanNWeHhGVGVlWkxaZmJDdjl5LXNNQUxWTnFBNmhlVUhZ?oc=5"
+   ]
   },
   {
    "id": "scn-blacksea_deal-2026-10-08",
@@ -1882,7 +1896,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 기한(2026-11-07)이 오늘이지만, 에스콘디다·센티넬라 파업이나 2주 이상 조업 중단을 확인하거나 부정하는 수집 사건이 없습니다. 구리 가격은 6.26달러/lb로 6달러 트립와이어를 넘었으나 4.3% 하락 중이어서 파업이 일어났다는 근거로 보기 어렵습니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-14"
   },
   {
    "id": "scn-dem_house_win-2026-10-08",
