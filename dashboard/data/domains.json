@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-07T00:57:05Z",
+ "generated": "2026-11-07T06:14:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-07T00:57:05Z",
+  "at": "2026-11-07T06:14:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,13 +65,62 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 5,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 4,
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "AUH06",
+       "t": "B789",
+       "role": "other",
+       "lat": 24.42,
+       "lon": 54.71,
+       "alt": 3025,
+       "reg": "A6-PFG"
+      },
+      {
+       "flight": "DU111",
+       "t": "A139",
+       "role": "other",
+       "lat": 25.18,
+       "lon": 55.31,
+       "alt": 850,
+       "reg": "DU-111"
+      },
+      {
+       "flight": "",
+       "t": "B762",
+       "role": "tanker",
+       "lat": 24.78,
+       "lon": 55.49,
+       "alt": 27525,
+       "reg": "19-46108"
+      },
+      {
+       "flight": "ORF1",
+       "t": "B748",
+       "role": "other",
+       "lat": 23.65,
+       "lon": 57.85,
+       "alt": 7425,
+       "reg": "A4O-HMS"
+      },
+      {
+       "flight": "ORF6",
+       "t": "A319",
+       "role": "other",
+       "lat": 23.59,
+       "lon": 58.31,
+       "alt": "ground",
+       "reg": "A4O-AJ"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -160,12 +209,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 0
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-07T00:57:05Z",
+  "at": "2026-11-07T06:14:24Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -306,37 +355,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-07T00:57:05Z",
+  "at": "2026-11-07T06:14:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 40,
-    "??": 24,
+    "US": 38,
+    "??": 23,
+    "DE": 8,
     "CA": 7,
-    "DE": 6,
     "BR": 3,
     "IT": 2,
     "AU": 2,
     "GB": 2,
+    "AL": 1,
     "SA": 1,
     "AE": 1,
     "MX": 1,
     "FR": 1,
     "IL": 1,
-    "DK": 1,
-    "ID": 1
+    "DK": 1
    },
    "by_group": {
-    "N0n": 20,
+    "N0n": 16,
     "medusalocker": 16,
-    "BrainCipher": 11,
+    "BrainCipher": 12,
+    "SilentRansomGroup": 8,
     "safepay": 8,
-    "SilentRansomGroup": 7,
     "akira": 7,
     "play": 5,
+    "qilin": 4,
     "Dark Project": 4,
-    "qilin": 3,
-    "genesis": 2
+    "incransom": 2
    },
    "kr": []
   }
