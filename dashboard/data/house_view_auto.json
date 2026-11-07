@@ -52,7 +52,7 @@
     "p": 10.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78341346,
+    "vol": 78349283,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -126,7 +126,7 @@
     "p": 1.7,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45921033,
+    "vol": 45926509,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -174,7 +174,7 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 75.0,
+   "p": 81.8,
    "k": 1,
    "prior": 50.0,
    "evidence": [
@@ -182,6 +182,11 @@
      "key": "tw:ethiopia_interstate",
      "f": 3.0,
      "note": "국가 간 교전 사건 급증"
+    },
+    {
+     "key": "sens:ioda:ethiopia",
+     "f": 1.5,
+     "note": "에티오피아·에리트레아 인터넷 차단 (IODA)"
     }
    ]
   },
@@ -319,10 +324,8 @@
  ],
  "sensors": {
   "ioda": [
+   "ethiopia",
    "taiwan"
-  ],
-  "quake": [
-   "iran"
   ]
  },
  "market_skill": 1.0,
@@ -338,7 +341,6 @@
   "kev_edge",
   "korea_missile",
   "maritime_attacks",
-  "quake_near_site",
   "ransom_kr"
  ],
  "market_record": {

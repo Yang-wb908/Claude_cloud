@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-07T18:56:34Z",
+ "generated": "2026-11-07T22:02:02Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-07T18:56:34Z",
+  "at": "2026-11-07T22:02:02Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RCH4553",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 33.26,
-       "lon": 131.11,
-       "alt": 33000,
-       "reg": "09-9212"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,41 +65,22 @@
       60.0,
       30.5
      ],
-     "n": 3,
-     "key": 1,
+     "n": 1,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "other": 2,
-      "tanker": 1
+      "other": 1
      },
      "ac": [
-      {
-       "flight": "SVA7035",
-       "t": "B737",
-       "role": "other",
-       "lat": 26.38,
-       "lon": 50.14,
-       "alt": 1900,
-       "reg": "HZ-MF1"
-      },
-      {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 24.52,
-       "lon": 55.46,
-       "alt": 29500,
-       "reg": "19-46110"
-      },
       {
        "flight": "",
        "t": "",
        "role": "other",
-       "lat": 24.97,
-       "lon": 55.56,
-       "alt": 24000,
+       "lat": 23.91,
+       "lon": 59.11,
+       "alt": 10400,
        "reg": ""
       }
      ]
@@ -203,12 +172,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-07T18:56:34Z",
+  "at": "2026-11-07T22:02:02Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -349,11 +318,11 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-07T18:56:34Z",
+  "at": "2026-11-07T22:02:02Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 34,
+    "US": 33,
     "??": 23,
     "CA": 7,
     "DE": 6,
@@ -362,23 +331,23 @@
     "BR": 3,
     "CH": 2,
     "DK": 2,
+    "FR": 2,
     "IT": 2,
     "TR": 1,
     "AL": 1,
     "SA": 1,
-    "AE": 1,
-    "MX": 1
+    "AE": 1
    },
    "by_group": {
     "N0n": 19,
     "medusalocker": 16,
     "SilentRansomGroup": 8,
+    "qilin": 8,
     "metaencryptor": 7,
-    "qilin": 7,
     "akira": 7,
-    "BrainCipher": 5,
     "play": 5,
     "payload": 4,
+    "BrainCipher": 4,
     "rhysida": 2
    },
    "kr": [
