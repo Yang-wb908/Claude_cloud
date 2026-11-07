@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-06T19:10:05Z",
+ "generated": "2026-11-07T00:57:05Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-06T19:10:05Z",
+  "at": "2026-11-07T00:57:05Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.54,
-       "lon": 127.38,
-       "alt": 40000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -111,25 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR6130",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 31.29,
-       "lon": 36.04,
-       "alt": 13400,
-       "reg": "ZZ174"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -140,25 +116,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "P8",
-       "role": "isr",
-       "lat": 43.67,
-       "lon": 29.34,
-       "alt": 13500,
-       "reg": "170269"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -196,15 +160,25 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 0
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-06T19:10:05Z",
+  "at": "2026-11-07T00:57:05Z",
   "data": {
-   "n_total": 1768,
+   "n_total": 1769,
    "recent": [
+    {
+     "cve": "CVE-2026-19868",
+     "vendor": "SonicWall",
+     "product": "SonicOS SSLVPN",
+     "name": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+     "added": "2026-11-06",
+     "due": "2026-11-20",
+     "ransom": false,
+     "edge": true
+    },
     {
      "cve": "CVE-2024-27834",
      "vendor": "Apple",
@@ -324,75 +298,55 @@
      "due": "2026-10-29",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2026-114625",
-     "vendor": "Arista",
-     "product": "VeloCloud Orchestrator",
-     "name": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
-     "added": "2026-10-23",
-     "due": "2026-10-26",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-110447",
-     "vendor": "Collabora",
-     "product": "Collabora Online – Built-in CODE Server",
-     "name": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
-     "added": "2026-10-23",
-     "due": "2026-10-26",
-     "ransom": false,
-     "edge": false
     }
    ],
-   "n_recent": 14,
-   "n_week": 4
+   "n_recent": 13,
+   "n_week": 3
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-06T19:10:05Z",
+  "at": "2026-11-07T00:57:05Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 37,
-    "??": 25,
-    "CA": 6,
+    "US": 40,
+    "??": 24,
+    "CA": 7,
     "DE": 6,
     "BR": 3,
     "IT": 2,
     "AU": 2,
-    "CN": 2,
     "GB": 2,
-    "CH": 2,
     "SA": 1,
     "AE": 1,
+    "MX": 1,
+    "FR": 1,
     "IL": 1,
     "DK": 1,
     "ID": 1
    },
    "by_group": {
     "N0n": 20,
-    "medusalocker": 17,
+    "medusalocker": 16,
     "BrainCipher": 11,
-    "akira": 8,
     "safepay": 8,
-    "Aoqin": 5,
+    "SilentRansomGroup": 7,
+    "akira": 7,
     "play": 5,
-    "SilentRansomGroup": 4,
     "Dark Project": 4,
-    "qilin": 3
+    "qilin": 3,
+    "genesis": 2
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 4,
-  "kev_edge_3d": 0,
+  "kev_week": 3,
+  "kev_edge_3d": 1,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 0
+  "events": 1
  }
 }

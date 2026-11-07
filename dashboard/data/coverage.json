@@ -1,36 +1,47 @@
 {
- "generated": "2026-11-06T18:57:42Z",
+ "generated": "2026-11-07T00:56:57Z",
  "days": 3,
  "unmapped_total": 8,
- "max_cluster": 4,
- "max_key": "topic:Tanzania",
+ "max_cluster": 2,
+ "max_key": "place:부산",
  "clusters": [
   {
-   "key": "topic:Tanzania",
-   "n": 4,
-   "domains": 3,
+   "key": "place:부산",
+   "n": 2,
+   "domains": 2,
    "types": {
-    "D": 4
+    "E": 2
    },
    "since": "2026-11-06",
    "sample": [
     {
      "d": "2026-11-06",
-     "title": "Tanzania’s Opposition Leader Gets a Four-Year Sentence",
-     "url": "https://www.nytimes.com/2026/11/06/world/africa/tanzanias-opposition-leader-gets-a-four-year-sentence.html",
-     "domain": "nytimes.com"
+     "title": "US urges China to honour Busan trade deal commitments",
+     "url": "https://www.aljazeera.com/economy/2026/11/6/us-urges-china-to-honour-busan-trade-deal-commitments?traffic_source=rss",
+     "domain": "aljazeera.com"
     },
+    {
+     "d": "2026-11-06",
+     "title": "US presses China to honor Busan trade truce as rare earth shipments fall short.",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcExYZThRWWdOcFN0dzBJelYtOXVsbnhrTHpoYmdQYTdCX2hLU3ZKNVRpTEJKSU85WTBSZE41SUhNYVhWZW83YldlRUUtNXN5OGNoV0ZNNW1ZNE5XVHVnU1ZOcTVLSHdLN2RYSkx0d25oUnVKRTBzVVk1ZjdYTUdwRDZiUlZVblc4SWxKZEVjb3FWSEJzZ2Q4Um9SMkFMc0ZhWm0zcWhOWFA5cFV0TmFn?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Tanzania",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-11-06",
+   "sample": [
     {
      "d": "2026-11-06",
      "title": "Tanzania opposition leader jailed for four years after treason acquittal",
      "url": "http://www.africanews.com/2026/11/06/tanzania-opposition-leader-jailed-for-four-years-after-treason-acquittal/",
      "domain": "africanews.com"
-    },
-    {
-     "d": "2026-11-06",
-     "title": "Tanzania: Opposition leader Tundu Lissu jailed for four years",
-     "url": "https://www.dw.com/en/tanzania-opposition-leader-tundu-lissu-jailed-for-four-years/a-79875248?maca=en-rss-en-world-4025-rdf",
-     "domain": "dw.com"
     },
     {
      "d": "2026-11-06",
@@ -41,24 +52,24 @@
    ]
   },
   {
-   "key": "topic:Corn",
+   "key": "topic:Food Price",
    "n": 2,
    "domains": 1,
    "types": {
     "E": 2
    },
-   "since": "2026-11-05",
+   "since": "2026-11-06",
    "sample": [
     {
      "d": "2026-11-06",
-     "title": "Corn output decline forecast for South Africa",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPM01YZ3dvaHhGN19JMnZiZHN6M3JlRlMyS1pvWGFNTmtDd2lYZlFrWE5qQlFpTHpJZ3JUdjFQRlplUVNYMXJpTG1CNk5MV2Q4QUtDY1owSVZKa0VabkVaNFFwMmRiTTktdGJTWGVvZXNXRkZGMXVVYWlBWmVRUGR4OW1MOVRxbkNVODRpZlJlSW9ZUQ?oc=5",
+     "title": "FAO Food Price Index falls in October",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONFpSMF9xd1NHbVlIWnRiaHBnSjVQMjU0Q3dRTGpqeVJJQzZ4Y1FpWTN4eXBBZEt4aDVFUFN6NHExMWlIY0NoMlhEMEdURGVWUTVHUEhjUnM2VDhkVm1iRkFKSzFfVzkxT1pCTEpnQnBvUlpiUTdVMHZpWGIwNDY4S1FzVTZ3c1E?oc=5",
      "domain": "news.google.com"
     },
     {
-     "d": "2026-11-05",
-     "title": "Corn, Soybean Futures Remain at Multi-Month Lows",
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcW1zbnNIR1RaeC03a0c4aTlqX09yR0dxcU9wc1Z2Q3F5ZFFvdU5IdmhOS2d4TzFFS1RVVE1mNURfLTU2TFotUjNiX2ZCWXloc2pvdW1MTGdncGhoOTZqdVJmemRodG5obDZQd09yVmdURGhIOXR5X2dMdzdGeGNPWjZoOEs3ZEhyZ2fSAY8BQVVfeXFMTXZDdXZ5ZHJ0N2Qza0VZWFIyOUY0WnBvUEhxZDJwemhQZTBPalFLaHFPd05rRFpiSWhOTzdoN0hVUjRBUEw1enVYQm1mVldYZ1ltbzRWd2lNVVFfcTFxR3FiRkpUN2g3NUM4LWVnUFNWeGRNTmZucW1idGJ6aXNvb0phRmpsYmZTMFExRWRNV0E?oc=5",
+     "d": "2026-11-06",
+     "title": "FAO Food Price Index edges down in October amid subdued demand",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRTVaUjU3ZlVjLUVEYncxRnhVYlk0amZScGpfRUUzbkFHRTVRbzU5V3dFMTNEdWRyMDEwQkx4bDV5ZEk2YzA5d3o2b0NWVUVqSXM3RDJKVV9ZdzA1eXVtZHJfV0RhbEgydzBKX2RZdEw2TVROTVU3UE9HcTNMdVlQR0RPLUhhOGFzNGswRnRkS184U3hrcEZaUVVB?oc=5",
      "domain": "news.google.com"
     }
    ]
@@ -70,18 +81,18 @@
    "types": {
     "E": 2
    },
-   "since": "2026-11-06",
+   "since": "2026-11-05",
    "sample": [
     {
-     "d": "2026-11-06",
-     "title": "China’s Rare Earth Appetite Could Leave the Rest of Us Hungry",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVC1yaWdaQjlmLTdrWmIxWUxoWTZHV3I5eUJqcTU3OXpobEFBaW43VHhCSWhQNTVSWDhXOXNtNFdJVnpqNURCTmEwMzg2NkdKTm56SEo4OGNMcVNkcWFoeHpkT0dNcjFXelVvckFuRERKX0E1UTltekg2ejdxMXo4ZzZRX1Znb29BZTlnck54V1BzeC1uWnlCZ05FQlItUmltU2hIN3FuY3VObldQU1YwS0pKM2RSZDA?oc=5",
+     "d": "2026-11-05",
+     "title": "A rare earth with geopolitical powers: How China’s yttrium leverage is choking defence supply chains",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTm1vMDNsVUxhUG1jem5yX0dZcDd6bVQwVy1sTjhIdk80aDRoYmw4Uk1MRmcwZklWOXFPZERnb0c3Rkk1WmpGa1JPR3NuY0tGbHpVeTBiOVFVY2pPajNDR205NjRDMUg4Y2tablhqQVRQVU1hZEdMbEZVUWFfM0o3dkR5Z05OMG1DLUZkYURyX2U0LUJFNVRIYmIteWw3TGJfVjBvNDZEMWR0VDZtMThNLWNkNldyV2NGcjloZ0dEaXN6ODVZV0pxbVM5dmJWb3pU0gHWAUFVX3lxTE56SzBWbHF2Tl9xRk92ZE4tZ1k2a1pMcE94TWFZeFk4T2EzQXdNX2lZdmEydkFIbklSX2V2cXppci1GTkxrZHZJd2RydC1DTGRlRDh6Z0Q4aHRCOTcxbUo2N1lmRk9XNFB3RXh4ck1vZmF5QXJiTVQtX3gzUnVhYTg1eXUyOTc3N21GS0RWcXRGYWV5SXAySzRPSHc2TzA5XzVRUndxM29ZOUEyclBmUlBSR2xoell4dzF2Wi1zanR5TEN0WF9oSlg1Z095NkM0c081WHhXVFE?oc=5",
      "domain": "news.google.com"
     },
     {
-     "d": "2026-11-06",
-     "title": "China 2030 Resource Plan Rare Earth Export Deadline",
-     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQV3lJYTRiWWRzS1luUDRPWlRWNEZ2TV9zQkFmZ1JyRTVZYzQ4OVQ2QlI2N0JtZE53eVNIQnBjaFFYTUppSEx4VGVSbncwdnJjOGRZY0NUZXQyRHd4VHRscGxyN0xDVlRDMXBsZGIxY0Z2TEVDQVh4a2ViNGdlS2MyMUNGRS1TUTA?oc=5",
+     "d": "2026-11-05",
+     "title": "China's Yttrium Exports to Japan Plummet 98% Amid Dual-Use Item Controls : Global : JKN",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xWnk2djhyYm1IZ2I4dkRTUnV1cGtKR192TENDN2puSVZsa2FhWjBFWFZQOG1rVU9GR1JLLURGNGM5bi1jdi13dlFoRklUeUpwX0YwVWM5ZnI4VVhKNEZ5aklR?oc=5",
      "domain": "news.google.com"
     }
    ]
