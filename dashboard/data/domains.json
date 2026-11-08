@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-08T18:56:38Z",
+ "generated": "2026-11-08T22:17:45Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-08T18:56:38Z",
+  "at": "2026-11-08T22:17:45Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -61,9 +61,9 @@
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.11,
-       "lon": 124.29,
-       "alt": 38025,
+       "lat": 37.74,
+       "lon": 127.87,
+       "alt": 38000,
        "reg": "N591SR"
       }
      ]
@@ -77,25 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "CTM1466",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 24.53,
-       "lon": 53.78,
-       "alt": 9675,
-       "reg": "F-RBAK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -184,12 +172,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-08T18:56:38Z",
+  "at": "2026-11-08T22:17:45Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -330,35 +318,35 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-08T18:56:38Z",
+  "at": "2026-11-08T22:17:45Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 37,
-    "??": 16,
+    "US": 39,
+    "??": 12,
+    "CA": 6,
     "DE": 6,
     "KR": 5,
-    "CA": 5,
     "MX": 3,
     "BR": 3,
     "GB": 3,
+    "SG": 2,
     "IL": 2,
     "DK": 2,
     "FR": 2,
     "IT": 2,
-    "CO": 1,
-    "BE": 1,
-    "CH": 1
+    "TH": 1,
+    "CO": 1
    },
    "by_group": {
     "N0n": 29,
     "qilin": 13,
+    "akira": 8,
     "metaencryptor": 7,
-    "akira": 7,
     "SilentRansomGroup": 6,
-    "medusalocker": 6,
     "incransom": 5,
     "payload": 4,
+    "Deadlock": 3,
     "BYOD": 3,
     "Whitearmor": 2
    },

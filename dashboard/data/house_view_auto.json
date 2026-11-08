@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 70.0,
+   "p": 69.8,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -33,7 +33,7 @@
   },
   {
    "id": "hormuz_war",
-   "p": 16.0,
+   "p": 16.2,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -44,15 +44,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.907,
-     "note": "예측시장 10% (가중 0.10)"
+     "f": 0.927,
+     "note": "예측시장 12% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 9.5,
+    "p": 11.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78494716,
+    "vol": 78583529,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -325,7 +325,6 @@
  "sensors": {
   "ioda": [
    "ethiopia",
-   "sahel",
    "taiwan"
   ]
  },
@@ -336,7 +335,6 @@
  "fired": [
   "bio_health_events",
   "copper_6",
-  "coverage_surge",
   "ethiopia_interstate",
   "hormuz_transits_low",
   "ioda_outage",
