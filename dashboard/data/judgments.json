@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-07",
+ "asof": "2026-11-08",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -60,9 +60,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 0,
+   "resolved": "2026-11-08",
+   "note": "자동 판정(보통): 예멘 정부군 공세가 한 달 넘게 소모전으로 이어지고 있지만, 드루리 집계로는 11월 1일 마감 주간에 컨테이너선 53척이 수에즈를 지났고 아시아-유럽 선복 대부분이 복귀했습니다. 선사들은 후티와 이메일로 연락하며 홍해 통과를 이어가고 있으며, 희망봉으로 다시 우회했다는 근거는 없습니다. 다만 전투가 바브엘만데브 연안에서 직접 벌어졌는지가 불분명하고 드루리 수치가 11월 1일까지만 있어 확신도는 '보통'으로 둡니다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -112,6 +112,12 @@
       "상황판 '상선 피격'이 2주 연속 [no]이고, 대형 선사 가운데 아시아-유럽 노선을 희망봉 경유로 다시 공지하는 곳이 없다."
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://www.hellenicshippingnews.com/drewry-red-sea-diversion-tracker-shows-significant-increase-in-suez-canal-transits/",
+    "https://www.aljazeera.com/news/2026/11/5/a-month-after-yemen-government-offensive-began-war-of-attrition-takes-hold?traffic_source=rss",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWnBubG96c1ktVkN2VE9wYXM4SjRCQXQ1c0RDTkNQLXVsaHhwcU1MSzI0RUYtVVphWFdleXB0VHVpY3piZktaNUw0NmpUQ3Zxa2RUMmRHby13S3kySXZTQ1dLQnJfY2J3Vm9mcmMtWU5ITkl2c01EMEx0OXQzTVFGOHpDWWtnbklfb1RQaVp6ak9TWFV4ZWJWb1FZZ1EtWHhtcTdrNWI1OE5VZ2lNWFFxSFpEQQ?oc=5"
    ]
   },
   {
@@ -204,9 +210,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.bluf",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-11-08",
+   "note": "자동 판정(보통): 11월 5일 기준 '최근 한 달간 4번째 시험'이라는 보도가 있어 10월 이후 북한의 추가 발사는 실제로 이어졌습니다. 기한인 11월 8일까지 DMZ에서는 폭발 부상자 발생과 확성기 설치, 유엔 사무총장의 긴장 우려 표명만 있었고 국지 교전 보도는 없습니다. 다만 10월 10일 전후 발사를 직접 확인한 근거는 없어 확신도는 '보통'으로 둡니다.",
    "dissent": [
     {
      "d": "2026-10-13",
@@ -256,6 +262,12 @@
       "북한 총참모부나 김여정 명의로 '국경선 침범 시 즉각 대응'을 명시한 담화가 나온다."
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNlRzWDl1U0JHOUNCdEV1RmlHSWwxMTBjVDFuaGZHMmVsSzJYVkg5TjVvTl9pWEhUZkNwY25XamlGMm8zb3MxZkVva29RdHBweU1jVnJudjV1QVc3VHBmNjBhN1E3dEpGNEVEUU5ZVllyOXN4ci1Qb2R4OXJNZ0VGLTRZdlZFQzRjUkF3VVM5UG5BOGlqc09QZnN0TjhSOWZqZGh3cHRwR1RDd3lrWlNrXzdacmJ1cDVWNUY1ZlF1Q0hFdUd3NlRqbFc0VUlxR1p1WE5Ca0dMUkJxMWF6aTlzY1cyejN3dw?oc=5",
+    "https://en.yna.co.kr/view/AEN20261107000300315",
+    "https://www.nknews.org/2026/11/north-korean-loudspeakers-visible-at-border-but-no-broadcasts-heard/"
    ]
   },
   {
@@ -340,9 +352,9 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.iran",
-   "outcome": null,
-   "resolved": null,
-   "note": "",
+   "outcome": 1,
+   "resolved": "2026-11-08",
+   "note": "자동 판정(보통): 기한까지 이란은 양보하지 않았다. IRGC가 탄도미사일 사거리 제한을 해제했고, 군이 개전 초보다 강해졌다고 주장했으며, 유조선 기뢰 공격도 주장했다. 카타르를 통해 핵 제안을 보냈지만 미국이 먼저 7개 요구를 충족해야 한다는 조건을 달아 체제가 양보로 돌아선 징후로 보기 어렵다.",
    "dissent": [
     {
      "d": "2026-10-20",
@@ -380,6 +392,12 @@
       "2주 동안 이란발 유조선·상선 공격 보고가 없고, 비(非)이라크 국적 VLCC 통과 사례가 추가로 확인된다."
      ]
     }
+   ],
+   "by": "auto",
+   "evidence": [
+    "https://www.dawn.com/news/2042798/iran-says-forces-stronger-than-at-beginning-of-war",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/iran-sent-nuclear-proposal-us-qatar-senior-iranian-official-tells",
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQVjIzLTl5alRxMV9QYzJOek5iWWhTNGxZTXJ6bFFXYkRIRXFQM09JRjNaRUZreXFmS1hWeTlDM2NRMHM5cE1QejJDc3FaaDBWTVBkWFNVOUpMTGd6TDZMVGxwTUV3c2Y4b2xyOHptWklyUDZoWXRDV3Z4b3gxOERWQlFITUhfT2dhZ1piVFBoV0J4aUZYZnlibjNPNEJFTHd0cnFTRUVRS2dRMmxKN1hJUS1Pa0RJQ2JRME50SklfcGJFcEFFbTd1VThmQlZQX2RMeUN2bkhOY0o?oc=5"
    ]
   },
   {
@@ -470,7 +488,7 @@
    "src": "IW.theaters.ukraine",
    "outcome": null,
    "resolved": null,
-   "note": "",
+   "note": "판정 보류: 10월 말에 3자 회담이 열렸는지 확인할 근거가 없습니다. 11월 5~6일 백악관 러·우 회담과 아부다비 협상 예정 보도가 있고 올레시키 국지 휴전만 확인돼 전면 휴전은 없는 것으로 보이지만, 판단의 핵심 조건인 '10월 말 회담 개최'를 판정할 수 없습니다.",
    "dissent": [
     {
      "d": "2026-10-27",
@@ -496,7 +514,9 @@
       "흑해 상선 공격 [obs] 지표가 2주 동안 새 사건 없이 유지된다."
      ]
     }
-   ]
+   ],
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-yemen-1",
@@ -588,7 +608,7 @@
    "src": "IW.theaters.ethiopia",
    "outcome": null,
    "resolved": null,
-   "note": "",
+   "note": "판정 보류: 정부가 티그라이에 과도행정부를 세웠고, 이후에도 TPLF가 악숨 인근 반격 등 무장 저항을 이어가고 있어 정부 장악 뒤 비정규전으로 버틴다는 판단과 대체로 맞습니다. 다만 '게릴라전 전환'을 직접 확인한 보도는 없습니다. 에리트레아 쪽 조건부 전망은 외교 단절과 총리 경고까지만 확인되고 국가 간 교전은 확인되지 않아 판정에 반영하지 않았습니다.",
    "dissent": [
     {
      "d": "2026-11-03",
@@ -602,7 +622,9 @@
       "아프리카연합(AU)이나 IGAD가 에티오피아-에리트레아 양자 중재를 개시하지 않는다. 이는 국가 간 전쟁 인식이 국제적으로 형성되지 않았다는 신호다."
      ]
     }
-   ]
+   ],
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-ethiopia-2",
@@ -680,7 +702,7 @@
    "src": "IW.theaters.sudan",
    "outcome": null,
    "resolved": null,
-   "note": "",
+   "note": "판정 보류: 구호단체 자금 부족·창고 고갈과 칼마 난민촌의 물자 부족·기근 임박 보도는 있지만, 원인이 접근 차단인지 자금 부족인지 근거에 나와 있지 않습니다. 구호 접근이 다시 닫혔는지 직접 보여 주는 사건(호송대 차단·통로 폐쇄 등)도 없어 판정할 수 없습니다.",
    "dissent": [
     {
      "d": "2026-11-03",
@@ -694,7 +716,9 @@
       "WFP가 추가 피격 없이 차량 운행 재개를 발표하거나 '구호 활동 중단'을 공지하지 않는다."
      ]
     }
-   ]
+   ],
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-gaza-1",
@@ -772,7 +796,9 @@
    "src": "IW.theaters.afpak",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 기간 중 파키스탄이 아프간 국경 충돌 책임을 인도에 돌리고 '인도 지원' 무장세력을 언급했으며, 국경 인근 라자스탄 철로에서 폭발도 있었다. 그러나 LeT 사령관 사살과 이어지는 인도–파키스탄 간 직접 대치나 뚜렷한 긴장 고조 사건은 근거에서 확인되지 않아 판정하기 어렵다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-korea-1",
@@ -805,9 +831,15 @@
    "conf": "보통",
    "due": "2026-11-08",
    "src": "IW.theaters.korea",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-08",
+   "note": "자동 판정(보통): 기한까지 DMZ 지뢰 사건은 외교적 대응으로 이어졌습니다. 외교장관이 G20에서 남북대화를 촉구했고 유엔 사무총장은 통신선 복원을 요구했습니다. 남북 간 국지 교전이 일어났다는 근거는 없습니다.",
+   "by": "auto",
+   "evidence": [
+    "https://en.yna.co.kr/view/AEN20261101001000315",
+    "https://en.yna.co.kr/view/AEN20261107000300315",
+    "https://en.yna.co.kr/view/AEN20261103012200315"
+   ]
   },
   {
    "id": "th-korea-3",
@@ -822,7 +854,9 @@
    "src": "IW.theaters.korea",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 제공된 근거에는 북한군 포로의 한국 인도나 이에 대한 북한의 대남 비난을 다룬 사건이 없습니다. 북한의 비난은 아이언메이스 훈련과 자금세탁 블랙리스트 지정을 향한 것이어서 이 판단은 판정할 수 없습니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-lebanon-1",
@@ -858,7 +892,9 @@
    "src": "IW.theaters.lebanon",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 이 판단은 검증 가능한 사건 예측이 아니라 분석적 평가에 가깝습니다. 홈스 정유소 음모를 두고 시리아는 헤즈볼라가 배후라고 주장했으나 헤즈볼라는 부인했고, 같은 기사 URL은 IS 연계 조직이라고 표기하고 있습니다. 이스라엘이 시리아와 레바논을 동시에 타격한 사례도 있어 근거가 엇갈리므로 판정을 보류합니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-sahel-1",
@@ -894,7 +930,9 @@
    "src": "IW.theaters.sahel",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 제공된 근거에는 2026-10-08~11-08 기간에 IS 사헬 지부가 니제르에서 벌인 공격 규모를 보여주는 사건이 없습니다. 말리 메나카에서 민간인 40여 명이 숨졌고 지하디스트 경쟁이 확산됐다는 보도는 있지만, 이것만으로는 IS 사헬의 공격 규모가 커지고 있다고 판정할 수 없습니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-drc-1",
@@ -930,7 +968,9 @@
    "src": "IW.theaters.drc",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 제공된 근거에는 유럽의 대르완다 압박이 완화됐는지 강화됐는지 보여주는 사건이 없습니다. 미국이 르완다를 제재한 것과 벨기에가 카빌라를 규탄한 것은 유럽의 대르완다 태도를 직접 보여주지 않아, 이 해석이 맞았는지 판정할 수 없습니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-somalia-1",
@@ -966,7 +1006,9 @@
    "src": "IW.theaters.somalia",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 소말리아 해적의 이란 어선 납치, 인도 해군의 선원 구출 등 해적 활동이 늘어나 해운 위협이 커졌다는 보도는 있습니다. 그러나 아덴만 해적 위험 등급이 공식적으로 올라갔거나 보험료가 올랐다는 근거는 제공된 자료에 없습니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-myanmar-1",
@@ -1043,7 +1085,9 @@
    "src": "IW.theaters.scs",
    "outcome": null,
    "resolved": null,
-   "note": ""
+   "note": "판정 보류: 10월 9일 스카버러 등에서 필리핀과 중국 사이 충돌이 급증했다는 보도는 있습니다. 그러나 기한(11월 8일)까지 실제 우발 사고나 중국이 필리핀 정찰을 물리적으로 차단했다는 사건은 근거에서 확인되지 않습니다. '위험이 커진다'는 판단도 결과로 확정하기 어려워 판정을 보류합니다.",
+   "auto_tries": 1,
+   "auto_next": "2026-11-15"
   },
   {
    "id": "th-carib-1",

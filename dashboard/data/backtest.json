@@ -1,90 +1,85 @@
 {
- "generated": "2026-11-07T06:10:31Z",
+ "generated": "2026-11-08T06:15:40Z",
  "series": {
   "BZ=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "CL=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "HO=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "NG=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
-  },
-  "TTF=F": {
-   "from": "2024-11-07",
-   "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "GC=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "SI=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "HG=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "ZW=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 502
+   "n": 501
   },
   "ZC=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 502
+   "n": 501
   },
   "ZS=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 502
+   "n": 501
   },
   "ZR=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
+   "to": "2026-11-06",
+   "n": 501
+  },
+  "SB=F": {
+   "from": "2024-11-08",
    "to": "2026-11-06",
    "n": 502
   },
-  "SB=F": {
-   "from": "2024-11-07",
-   "to": "2026-11-06",
-   "n": 503
-  },
   "KC=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "CC=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "CT=F": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "DX-Y.NYB": {
-   "from": "2024-11-07",
+   "from": "2024-11-08",
    "to": "2026-11-06",
-   "n": 503
+   "n": 502
   },
   "KRW=X": {
    "from": "2024-11-06",
@@ -127,14 +122,70 @@
    "n": 501
   },
   "BTC-USD": {
-   "from": "2024-11-07",
-   "to": "2026-11-07",
+   "from": "2024-11-08",
+   "to": "2026-11-08",
    "n": 730
   }
  },
  "events": {
-  "n": 47,
+  "n": 21,
   "rows": [
+   {
+    "d": "2026-11-05",
+    "th": "ukraine",
+    "t": "M",
+    "x": "미국·NATO 항공기, 지역 상공서 동시 임무 수행(불가리아 보도)",
+    "moves": {
+     "brent": {
+      "d1": 0.03,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "wheat": {
+      "d1": -1.34,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "gold": {
+      "d1": -0.94,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "dxy": {
+      "d1": 0.74,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "vix": {
+      "d1": -9.01,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "kospi": {
+      "d1": -6.02,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "krw": {
+      "d1": 1.21,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     },
+     "spx": {
+      "d1": 0.31,
+      "d5": null,
+      "d20": null,
+      "d60": null
+     }
+    }
+   },
    {
     "d": "2026-11-05",
     "th": "ukraine",
@@ -252,62 +303,6 @@
     "th": "ukraine",
     "t": "S",
     "x": "우크라 정보총국 \"러시아, 월 200기 이상 탄도·순항미사일 생산 능력 보유\"",
-    "moves": {
-     "brent": {
-      "d1": 0.03,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -1.34,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -0.94,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.74,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": -9.01,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -6.02,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": 1.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": 0.31,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-05",
-    "th": "ukraine",
-    "t": "M",
-    "x": "미국·NATO 항공기, 지역 상공서 동시 임무 수행(불가리아 보도)",
     "moves": {
      "brent": {
       "d1": 0.03,
@@ -1310,1462 +1305,6 @@
       "d60": null
      }
     }
-   },
-   {
-    "d": "2026-11-05",
-    "th": "sudan",
-    "t": "S",
-    "x": "UN 평화유지 수장, 지난달 아비에이 드론 공격으로 최소 30명 사망 경고",
-    "moves": {
-     "brent": {
-      "d1": 0.03,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -1.34,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -0.94,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.74,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": -9.01,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -6.02,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": 1.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": 0.31,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-05",
-    "th": "iran",
-    "t": "M",
-    "x": "정부, 이란전 연루 우려에도 청해부대 임무 확대 추진",
-    "moves": {
-     "brent": {
-      "d1": 0.03,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -1.34,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -0.94,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.74,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": -9.01,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -6.02,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": 1.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": 0.31,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-05",
-    "th": "ukraine",
-    "t": "M",
-    "x": "러시아 유조선 3척 중 1척 여전히 미국행 항로 유지",
-    "moves": {
-     "brent": {
-      "d1": 0.03,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -1.34,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -0.94,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.74,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": -9.01,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -6.02,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": 1.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": 0.31,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-05",
-    "th": "iran",
-    "t": "M",
-    "x": "이란군, 호르무즈 해협 동쪽서 유조선 기뢰 피격 발표",
-    "moves": {
-     "brent": {
-      "d1": 0.03,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": -1.34,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": -0.94,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.74,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": -9.01,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -6.02,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": 1.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": 0.31,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "M",
-    "x": "이란, 10월 29~30일 호르무즈 해협 일대서 유조선 최소 4척 공격…부착식 기뢰 사용",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "yemen",
-    "t": "S",
-    "x": "주사우디 미 대사관, 후티의 공항·인프라 공격 관련 자국민 안전 경보 재발령",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러시아, 우크라 인도주의 거점 공격 최소 31명 사망… 미, 9개월 만에 평화협상 재개 발표",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "M",
-    "x": "오만 앞바다 상선 미확인 비행체 피격, 인도인 1명 사망·13명 구조",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "gaza",
-    "t": "S",
-    "x": "가자 당국 \"이스라엘 공습으로 하마스 대원 포함 4명 사망\"",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "gaza",
-    "t": "A",
-    "x": "이스라엘 전직 장성들이 서안지구 정착민 폭력을 규탄하고 팔레스타인 농민의 올리브 수확을 도움",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "S",
-    "x": "이란, 미 휴전안 '불충분' 평가…미군 케슘섬 '방어적' 공습 보도",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "afpak",
-    "t": "S",
-    "x": "파키스탄 FAAZ 미사일, 신규 탐색기 옵션으로 인도에 위협 요인",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "sudan",
-    "t": "A",
-    "x": "수단 다르푸르 피란민 캠프 공격 생존자들, 희생자 이야기 증언 다짐",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "yemen",
-    "t": "M",
-    "x": "후티 홍해 공세 성과 분석, 휴전 시 재무장 시간만 벌어준다는 주장",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "M",
-    "x": "UKMTO에 따르면 오만 리마 북동쪽 14해리 해상에서 유조선이 미상 발사체 2발에 맞음. 인명·환경 피해는 보고되지 않음",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "S",
-    "x": "NYT 보도: 미 중부사령부가 중간선거 뒤인 수요일부터 이란을 공습할 계획 보유. 항모 3척이 역내 전개 중",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "iran",
-    "t": "S",
-    "x": "미국이 월요일 밤 케심섬을 공습한 뒤 이란은 미국의 휴전안이 '불충분'하다고 밝힘. 협상 향방은 불투명",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티 미사일 3발·드론 4기 이후 사우디 '단호한' 대응 경고, 헤그세스 리야드 회담",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티 매체, 사우디 연합군 알바이다 공습 4회·사다 가므르 포격 보도",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "ukraine",
-    "t": "S",
-    "x": "러시아 남부 창고에 드론 공격, 온라인 유통업체 오존 주장",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "afpak",
-    "t": "A",
-    "x": "파키스탄 국경 인근 라자스탄 철로에서 폭발, 열차 운행 취소…ATS 수사 착수",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "sudan",
-    "t": "A",
-    "x": "차드로 피란한 수단 아랍계 난민, RSF 연관 의혹에 다른 난민들 적대",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "yemen",
-    "t": "S",
-    "x": "후티 킹칼리드공항 공격으로 항공편 차질, 네팔 노동자 사우디 발묶여",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "ethiopia",
-    "t": "A",
-    "x": "에티오피아 인권위, 시르카 공격 사망 48명 확인·비공식 무장단체 경고",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "sudan",
-    "t": "S",
-    "x": "RSF, 자살드론 떼로 에드다마진 공격",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
-   },
-   {
-    "d": "2026-11-04",
-    "th": "sudan",
-    "t": "S",
-    "x": "남코르도판 주유소 드론 공습으로 최소 7명 사망",
-    "moves": {
-     "brent": {
-      "d1": 3.88,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "wheat": {
-      "d1": 0.13,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "gold": {
-      "d1": 0.99,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "dxy": {
-      "d1": 0.04,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "vix": {
-      "d1": 69.66,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "kospi": {
-      "d1": -5.28,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "krw": {
-      "d1": -0.21,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     },
-     "spx": {
-      "d1": -4.36,
-      "d5": null,
-      "d20": null,
-      "d60": null
-     }
-    }
    }
   ],
   "summary": {
@@ -2790,7 +1329,7 @@
    "wheat": {
     "d1": {
      "median": -1.34,
-     "hit_up": 0.47
+     "hit_up": 0.0
     },
     "d5": {
      "median": null,
@@ -2808,7 +1347,7 @@
    "gold": {
     "d1": {
      "median": -0.94,
-     "hit_up": 0.47
+     "hit_up": 0.0
     },
     "d5": {
      "median": null,
@@ -2844,7 +1383,7 @@
    "vix": {
     "d1": {
      "median": -9.01,
-     "hit_up": 0.47
+     "hit_up": 0.0
     },
     "d5": {
      "median": null,
@@ -2880,7 +1419,7 @@
    "krw": {
     "d1": {
      "median": 1.21,
-     "hit_up": 0.53
+     "hit_up": 1.0
     },
     "d5": {
      "median": null,
@@ -2898,7 +1437,7 @@
    "spx": {
     "d1": {
      "median": 0.31,
-     "hit_up": 0.53
+     "hit_up": 1.0
     },
     "d5": {
      "median": null,
@@ -2993,13 +1532,13 @@
    "episodes": 4,
    "rows": [
     {
-     "d": "2024-11-07",
-     "v": 75.63,
-     "self_20": -5.96,
-     "self_60": -1.35,
-     "brent_60": -1.35,
-     "wheat_60": 0.13,
-     "spx_60": 1.85
+     "d": "2024-11-08",
+     "v": 73.87,
+     "self_20": -2.34,
+     "self_60": 0.57,
+     "brent_60": 0.57,
+     "wheat_60": 2.66,
+     "spx_60": 0.51
     },
     {
      "d": "2026-06-15",
@@ -3031,7 +1570,7 @@
    ],
    "median_self_60": 29.41,
    "median_brent_60": 29.41,
-   "median_spx_60": 1.73,
+   "median_spx_60": 1.06,
    "active_now": false
   },
   {
@@ -3137,38 +1676,6 @@
    "value": 5.5,
    "episodes": 0,
    "rows": [],
-   "median_self_60": null,
-   "median_brent_60": null,
-   "median_spx_60": null,
-   "active_now": false
-  },
-  {
-   "id": "ttf_100",
-   "title": "유럽 TTF 가스 100유로/MWh 돌파",
-   "sym": "TTF=F",
-   "op": ">",
-   "value": 100,
-   "episodes": 2,
-   "rows": [
-    {
-     "d": "2026-10-28",
-     "v": 100.72,
-     "self_20": null,
-     "self_60": null,
-     "brent_60": null,
-     "wheat_60": null,
-     "spx_60": null
-    },
-    {
-     "d": "2026-10-30",
-     "v": 103.944,
-     "self_20": null,
-     "self_60": null,
-     "brent_60": null,
-     "wheat_60": null,
-     "spx_60": null
-    }
-   ],
    "median_self_60": null,
    "median_brent_60": null,
    "median_spx_60": null,
@@ -3426,15 +1933,15 @@
  ],
  "ledger": {
   "n": 104,
-  "resolved": 40,
-  "brier": 0.18,
-  "base_rate": 0.82,
+  "resolved": 42,
+  "brier": 0.175,
+  "base_rate": 0.81,
   "bins": [
    {
     "bin": "0-20",
-    "n": 3,
-    "pred": 0.11,
-    "obs": 0.33
+    "n": 4,
+    "pred": 0.12,
+    "obs": 0.25
    },
    {
     "bin": "20-40",
@@ -3450,7 +1957,7 @@
    },
    {
     "bin": "60-80",
-    "n": 30,
+    "n": 31,
     "pred": 0.61,
     "obs": 0.97
    },
@@ -3465,7 +1972,9 @@
    "th-bio-2",
    "th-namerica-1",
    "th-namerica-2",
-   "scn-gulf_hurricane-2026-10-08"
+   "scn-redsea_houthi-2026-10-08",
+   "scn-gulf_hurricane-2026-10-08",
+   "scn-chile_escondida_strike-2026-10-08"
   ]
  }
 }
