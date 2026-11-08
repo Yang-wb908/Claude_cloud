@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-07T22:02:02Z",
+ "generated": "2026-11-08T06:19:23Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-07T22:02:02Z",
+  "at": "2026-11-08T06:19:23Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,45 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 3,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1,
+      "airlift": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.57,
+       "lon": 127.44,
+       "alt": 38000,
+       "reg": "N591SR"
+      },
+      {
+       "flight": "RCH4205",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 33.56,
+       "lon": 130.49,
+       "alt": 30000,
+       "reg": "09-9212"
+      },
+      {
+       "flight": "TORII11",
+       "t": "B350",
+       "role": "other",
+       "lat": 33.49,
+       "lon": 131.97,
+       "alt": 18000,
+       "reg": "168209"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,25 +97,13 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 23.91,
-       "lon": 59.11,
-       "alt": 10400,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -172,12 +192,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-07T22:02:02Z",
+  "at": "2026-11-08T06:19:23Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -318,39 +338,47 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-07T22:02:02Z",
+  "at": "2026-11-08T06:19:23Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 33,
-    "??": 23,
-    "CA": 7,
+    "US": 36,
+    "??": 17,
+    "CA": 6,
     "DE": 6,
-    "KR": 4,
+    "KR": 5,
     "GB": 4,
     "BR": 3,
+    "IL": 2,
     "CH": 2,
     "DK": 2,
+    "MX": 2,
     "FR": 2,
     "IT": 2,
-    "TR": 1,
-    "AL": 1,
-    "SA": 1,
-    "AE": 1
+    "SG": 1,
+    "PT": 1
    },
    "by_group": {
-    "N0n": 19,
-    "medusalocker": 16,
-    "SilentRansomGroup": 8,
-    "qilin": 8,
+    "N0n": 29,
+    "qilin": 13,
+    "medusalocker": 12,
     "metaencryptor": 7,
     "akira": 7,
-    "play": 5,
+    "SilentRansomGroup": 6,
     "payload": 4,
-    "BrainCipher": 4,
-    "rhysida": 2
+    "rhysida": 2,
+    "incransom": 2,
+    "genesis": 2
    },
    "kr": [
+    {
+     "victim": "Company #142",
+     "group": "N0n",
+     "country": "KR",
+     "sector": "Not Found",
+     "d": "2026-11-07",
+     "url": "https://www.ransomware.live/id/Q29tcGFueSAjMTQyQE4wbg=="
+    },
     {
      "victim": "Daeah E&C",
      "group": "metaencryptor",
@@ -391,7 +419,7 @@
   "kev_week": 3,
   "kev_edge_3d": 1,
   "ransom_week": 100,
-  "ransom_kr_week": 4,
-  "events": 5
+  "ransom_kr_week": 5,
+  "events": 6
  }
 }

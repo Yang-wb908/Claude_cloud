@@ -52,7 +52,7 @@
     "p": 10.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78349283,
+    "vol": 78374395,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -100,7 +100,7 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2960365,
+    "vol": 2961989,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -126,7 +126,7 @@
     "p": 1.7,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45926509,
+    "vol": 45928344,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -140,16 +140,10 @@
   },
   {
    "id": "korea_strategic",
-   "p": 16.7,
+   "p": 10.0,
    "k": 1,
    "prior": 10.0,
-   "evidence": [
-    {
-     "key": "tw:korea_missile",
-     "f": 1.8,
-     "note": "24시간 내 발사"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "fed_hawkish",
@@ -325,11 +319,12 @@
  "sensors": {
   "ioda": [
    "ethiopia",
+   "sahel",
    "taiwan"
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-07",
+ "asof": "2026-11-08",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
@@ -339,7 +334,6 @@
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
-  "korea_missile",
   "maritime_attacks",
   "ransom_kr"
  ],
