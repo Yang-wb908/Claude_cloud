@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 69.9,
+   "p": 70.0,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -33,7 +33,7 @@
   },
   {
    "id": "hormuz_war",
-   "p": 16.1,
+   "p": 16.0,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -44,15 +44,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.917,
+     "f": 0.907,
      "note": "예측시장 10% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 9.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78382481,
+    "vol": 78494716,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -126,7 +126,7 @@
     "p": 1.7,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45934736,
+    "vol": 45940791,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -293,21 +293,21 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 9.0,
+   "p": 9.5,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
      "key": "market:india_pak_loc_escalation",
-     "f": 0.89,
-     "note": "예측시장 7% (가중 0.30)"
+     "f": 0.948,
+     "note": "예측시장 8% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 7.0,
+    "p": 8.5,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
-    "vol": 348732,
+    "vol": 348832,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -336,6 +336,7 @@
  "fired": [
   "bio_health_events",
   "copper_6",
+  "coverage_surge",
   "ethiopia_interstate",
   "hormuz_transits_low",
   "ioda_outage",
