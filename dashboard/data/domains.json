@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-09T18:56:50Z",
+ "generated": "2026-11-09T22:32:15Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-09T18:56:50Z",
+  "at": "2026-11-09T22:32:15Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -75,13 +75,13 @@
      },
      "ac": [
       {
-       "flight": "RSD675",
-       "t": "T204",
+       "flight": "@@@@@@@@",
+       "t": "",
        "role": "other",
-       "lat": 23.74,
-       "lon": 57.72,
-       "alt": 30075,
-       "reg": "RA-64057"
+       "lat": 24.94,
+       "lon": 55.41,
+       "alt": 24000,
+       "reg": ""
       }
      ]
     },
@@ -145,25 +145,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "NAF14",
-       "t": "GLF6",
-       "role": "other",
-       "lat": 53.97,
-       "lon": 21.79,
-       "alt": 44875,
-       "reg": "V-117"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -184,14 +172,14 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 2
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-09T18:56:50Z",
+  "at": "2026-11-09T22:32:15Z",
   "data": {
-   "n_total": 1772,
+   "n_total": 1773,
    "recent": [
     {
      "cve": "CVE-2026-102895",
@@ -218,6 +206,16 @@
      "vendor": "SignalWire",
      "product": "FreeSwitch",
      "name": "SignalWire FreeSwitch Code Injection Vulnerability",
+     "added": "2026-11-09",
+     "due": "2026-11-12",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-123218",
+     "vendor": "IBM",
+     "product": "Aspera Faspex",
+     "name": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
      "added": "2026-11-09",
      "due": "2026-11-12",
      "ransom": false,
@@ -354,43 +352,43 @@
      "edge": false
     }
    ],
-   "n_recent": 16,
-   "n_week": 6
+   "n_recent": 17,
+   "n_week": 7
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-09T18:56:50Z",
+  "at": "2026-11-09T22:32:15Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 53,
+    "US": 52,
     "CA": 11,
     "??": 8,
+    "TH": 4,
     "GB": 3,
     "HK": 3,
-    "TH": 3,
     "CO": 2,
     "MX": 2,
+    "CM": 1,
     "NL": 1,
     "IT": 1,
     "KR": 1,
     "ZA": 1,
     "DK": 1,
-    "SA": 1,
-    "FR": 1
+    "SA": 1
    },
    "by_group": {
-    "N0n": 69,
+    "N0n": 66,
     "Deadlock": 6,
     "krybit": 5,
     "lockbit5": 4,
+    "BYOD": 3,
     "incransom": 3,
     "metaencryptor": 2,
-    "Aoqin": 1,
-    "morpheus": 1,
-    "Scarlettgroup": 1,
-    "anubis": 1
+    "rhysida": 1,
+    "HYFLOCK": 1,
+    "everstake": 1
    },
    "kr": [
     {
@@ -406,7 +404,7 @@
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 6,
+  "kev_week": 7,
   "kev_edge_3d": 1,
   "ransom_week": 100,
   "ransom_kr_week": 1,
