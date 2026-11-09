@@ -1,16 +1,16 @@
 ### 주간 백테스트 2026-11-09
-시계열 25개 · 사건 연구 71건 · 판단 장부 104건(판정 46건)
+시계열 25개 · 사건 연구 67건 · 판단 장부 104건(판정 53건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | -1.91 | None | None | None | None |
-| wheat | -0.47 | None | None | None | None |
-| gold | 1.15 | None | None | None | None |
-| dxy | -0.22 | None | None | None | None |
-| vix | -9.01 | None | None | None | None |
+| brent | -1.22 | None | None | None | None |
+| wheat | -0.21 | None | None | None | None |
+| gold | 0.97 | None | None | None | None |
+| dxy | -0.25 | None | None | None | None |
+| vix | None | None | None | None | None |
 | kospi | -0.81 | None | None | None | None |
-| krw | -0.68 | None | None | None | None |
-| spx | 0.31 | None | None | None | None |
+| krw | -0.73 | None | None | None | None |
+| spx | None | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
 |---|---|---|---|---|---|
@@ -24,4 +24,4 @@
 | VIX 30 돌파 | 3 | -43.94 | -4.32 | 15.53 | - |
 | 달러인덱스 105 돌파 | 1 | 2.37 | 3.94 | 1.08 | - |
 
-판단 장부 Brier 0.202 (기저율 0.8) · 기한 경과 미판정 16건
+판단 장부 Brier 0.208 (기저율 0.79) · 기한 경과 미판정 12건
