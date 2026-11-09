@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-09T06:53:34Z",
+ "generated": "2026-11-09T06:59:37Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-09T06:53:34Z",
+  "at": "2026-11-09T06:59:37Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,14 +48,14 @@
       132.0,
       40.5
      ],
-     "n": 3,
+     "n": 2,
      "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
       "isr": 1,
-      "other": 2
+      "other": 1
      },
      "ac": [
       {
@@ -63,18 +63,9 @@
        "t": "GLEX",
        "role": "isr",
        "lat": 37.13,
-       "lon": 124.47,
+       "lon": 124.8,
        "alt": 38000,
        "reg": "N291SR"
-      },
-      {
-       "flight": "MERCS70",
-       "t": "H64",
-       "role": "other",
-       "lat": 36.94,
-       "lon": 127.06,
-       "alt": 300,
-       "reg": "21-03378"
       },
       {
        "flight": "CARD10",
@@ -96,51 +87,69 @@
       60.0,
       30.5
      ],
-     "n": 4,
+     "n": 6,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
       "airlift": 1,
-      "other": 3
+      "other": 5
      },
      "ac": [
       {
-       "flight": "",
+       "flight": "CTM1467",
        "t": "A400",
        "role": "airlift",
-       "lat": 28.69,
-       "lon": 48.43,
-       "alt": 10175,
+       "lat": 28.96,
+       "lon": 47.97,
+       "alt": 9775,
        "reg": "F-RBAK"
+      },
+      {
+       "flight": "ZAM48",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.18,
+       "lon": 51.02,
+       "alt": 7825,
+       "reg": "QA356"
+      },
+      {
+       "flight": "QAF3",
+       "t": "A345",
+       "role": "other",
+       "lat": 25.0,
+       "lon": 52.52,
+       "alt": 25350,
+       "reg": "A7-HHH"
       },
       {
        "flight": "YASAT15",
        "t": "P180",
        "role": "other",
-       "lat": 24.34,
-       "lon": 55.36,
-       "alt": 6850,
+       "lat": 24.47,
+       "lon": 55.62,
+       "alt": 3850,
        "reg": "1207"
-      },
-      {
-       "flight": "MJN580",
-       "t": "GLF4",
-       "role": "other",
-       "lat": 23.59,
-       "lon": 58.27,
-       "alt": "ground",
-       "reg": "558"
       },
       {
        "flight": "MJN576",
        "t": "A320",
        "role": "other",
+       "lat": 23.59,
+       "lon": 58.28,
+       "alt": "ground",
+       "reg": "554"
+      },
+      {
+       "flight": "MJN580",
+       "t": "GLF4",
+       "role": "other",
        "lat": 23.61,
        "lon": 58.29,
        "alt": "ground",
-       "reg": "554"
+       "reg": "558"
       }
      ]
     },
@@ -255,12 +264,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 8
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-09T06:53:34Z",
+  "at": "2026-11-09T06:59:37Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -401,7 +410,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-09T06:53:34Z",
+  "at": "2026-11-09T06:59:37Z",
   "data": {
    "n_week": 100,
    "by_country": {
