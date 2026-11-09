@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-09T12:58:52Z",
+ "generated": "2026-11-09T18:56:50Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-09T12:58:52Z",
+  "at": "2026-11-09T18:56:50Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,13 +65,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "RSD675",
+       "t": "T204",
+       "role": "other",
+       "lat": 23.74,
+       "lon": 57.72,
+       "alt": 30075,
+       "reg": "RA-64057"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -99,44 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 3,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {
-      "tanker": 1,
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "ASY823",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 33.15,
-       "lon": 33.24,
-       "alt": 33500,
-       "reg": "A39-005"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 31.95,
-       "lon": 34.98,
-       "alt": 18750,
-       "reg": ""
-      },
-      {
-       "flight": "A7HHK",
-       "t": "A342",
-       "role": "other",
-       "lat": 35.17,
-       "lon": 35.72,
-       "alt": 36000,
-       "reg": "A7-HHK"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -164,70 +145,23 @@
       30.5,
       61.0
      ],
-     "n": 6,
-     "key": 1,
+     "n": 1,
+     "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
      "by_role": {
-      "airlift": 3,
-      "other": 2,
-      "isr": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "NAF23",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 55.31,
-       "lon": 9.3,
-       "alt": 5775,
-       "reg": "G-781"
-      },
-      {
-       "flight": "PR55",
-       "t": "MF17",
+       "flight": "NAF14",
+       "t": "GLF6",
        "role": "other",
-       "lat": 56.4,
-       "lon": 9.31,
-       "alt": 2825,
-       "reg": ""
-      },
-      {
-       "flight": "BB21",
-       "t": "MF17",
-       "role": "other",
-       "lat": 56.6,
-       "lon": 9.47,
-       "alt": 2850,
-       "reg": "T-428"
-      },
-      {
-       "flight": "IAM4670",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 57.87,
-       "lon": 12.9,
-       "alt": 26000,
-       "reg": "MM62186"
-      },
-      {
-       "flight": "BAF657",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 54.06,
-       "lon": 22.17,
-       "alt": 32000,
-       "reg": "CT-06"
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 53.79,
-       "lon": 22.47,
-       "alt": 36000,
-       "reg": "N159L"
+       "lat": 53.97,
+       "lon": 21.79,
+       "alt": 44875,
+       "reg": "V-117"
       }
      ]
     },
@@ -250,15 +184,45 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-09T12:58:52Z",
+  "at": "2026-11-09T18:56:50Z",
   "data": {
-   "n_total": 1769,
+   "n_total": 1772,
    "recent": [
+    {
+     "cve": "CVE-2026-102895",
+     "vendor": "GPUStack",
+     "product": "GPUStack",
+     "name": "GPUStack Improper Authentication Vulnerability",
+     "added": "2026-11-09",
+     "due": "2026-11-12",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-123158",
+     "vendor": "OpenBSD",
+     "product": "OpenSSH",
+     "name": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+     "added": "2026-11-09",
+     "due": "2026-11-12",
+     "ransom": false,
+     "edge": false
+    },
+    {
+     "cve": "CVE-2026-116779",
+     "vendor": "SignalWire",
+     "product": "FreeSwitch",
+     "name": "SignalWire FreeSwitch Code Injection Vulnerability",
+     "added": "2026-11-09",
+     "due": "2026-11-12",
+     "ransom": false,
+     "edge": false
+    },
     {
      "cve": "CVE-2026-19868",
      "vendor": "SonicWall",
@@ -390,94 +354,62 @@
      "edge": false
     }
    ],
-   "n_recent": 13,
-   "n_week": 3
+   "n_recent": 16,
+   "n_week": 6
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-09T12:58:52Z",
+  "at": "2026-11-09T18:56:50Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 38,
-    "??": 9,
-    "DE": 7,
-    "KR": 5,
-    "CA": 5,
-    "MX": 4,
-    "BR": 4,
+    "US": 53,
+    "CA": 11,
+    "??": 8,
     "GB": 3,
-    "TH": 2,
-    "SG": 2,
-    "IL": 2,
-    "DK": 2,
-    "FR": 2,
-    "IT": 2,
-    "PL": 1
+    "HK": 3,
+    "TH": 3,
+    "CO": 2,
+    "MX": 2,
+    "NL": 1,
+    "IT": 1,
+    "KR": 1,
+    "ZA": 1,
+    "DK": 1,
+    "SA": 1,
+    "FR": 1
    },
    "by_group": {
-    "N0n": 28,
-    "qilin": 11,
-    "metaencryptor": 7,
+    "N0n": 69,
     "Deadlock": 6,
-    "SilentRansomGroup": 6,
-    "incransom": 5,
-    "akira": 5,
+    "krybit": 5,
     "lockbit5": 4,
-    "payload": 4,
-    "anubis": 2
+    "incransom": 3,
+    "metaencryptor": 2,
+    "Aoqin": 1,
+    "morpheus": 1,
+    "Scarlettgroup": 1,
+    "anubis": 1
    },
    "kr": [
     {
-     "victim": "Company #142",
-     "group": "N0n",
-     "country": "KR",
-     "sector": "Not Found",
-     "d": "2026-11-07",
-     "url": "https://www.ransomware.live/id/Q29tcGFueSAjMTQyQE4wbg=="
-    },
-    {
-     "victim": "Daeah E&C",
-     "group": "metaencryptor",
-     "country": "KR",
-     "sector": "Manufacturing",
-     "d": "2026-11-07",
-     "url": "https://www.ransomware.live/id/RGFlYWggRSZDQG1ldGFlbmNyeXB0b3I="
-    },
-    {
-     "victim": "DAEWON Chemical",
-     "group": "metaencryptor",
-     "country": "KR",
-     "sector": "Manufacturing",
-     "d": "2026-11-07",
-     "url": "https://www.ransomware.live/id/REFFV09OIENoZW1pY2FsQG1ldGFlbmNyeXB0b3I="
-    },
-    {
-     "victim": "Wooshin Systems",
+     "victim": "JH Technology",
      "group": "metaencryptor",
      "country": "KR",
      "sector": "Technology",
-     "d": "2026-11-07",
-     "url": "https://www.ransomware.live/id/V29vc2hpbiBTeXN0ZW1zQG1ldGFlbmNyeXB0b3I="
-    },
-    {
-     "victim": "Hyundai E&C",
-     "group": "metaencryptor",
-     "country": "KR",
-     "sector": "Manufacturing",
-     "d": "2026-11-07",
-     "url": "https://www.ransomware.live/id/SHl1bmRhaSBFJkNAbWV0YWVuY3J5cHRvcg=="
+     "d": "2026-11-09",
+     "url": "https://www.ransomware.live/id/SkggVGVjaG5vbG9neUBtZXRhZW5jcnlwdG9y"
     }
    ]
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 3,
+  "kev_week": 6,
   "kev_edge_3d": 1,
   "ransom_week": 100,
-  "ransom_kr_week": 5,
-  "events": 6
+  "ransom_kr_week": 1,
+  "events": 2
  }
 }
