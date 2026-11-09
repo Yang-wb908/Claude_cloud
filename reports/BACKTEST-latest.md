@@ -3,13 +3,13 @@
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | -1.7 | None | None | None | None |
-| wheat | -0.55 | None | None | None | None |
-| gold | 1.09 | None | None | None | None |
+| brent | -1.91 | None | None | None | None |
+| wheat | -0.47 | None | None | None | None |
+| gold | 1.15 | None | None | None | None |
 | dxy | -0.22 | None | None | None | None |
 | vix | -9.01 | None | None | None | None |
-| kospi | -0.93 | None | None | None | None |
-| krw | -0.66 | None | None | None | None |
+| kospi | -0.81 | None | None | None | None |
+| krw | -0.68 | None | None | None | None |
 | spx | 0.31 | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
