@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-08T22:17:45Z",
+ "generated": "2026-11-09T06:53:34Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-08T22:17:45Z",
+  "at": "2026-11-09T06:53:34Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,23 +48,42 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 3,
      "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "isr": 1,
+      "other": 2
      },
      "ac": [
       {
        "flight": "@@@@@@@@",
        "t": "GLEX",
        "role": "isr",
-       "lat": 37.74,
-       "lon": 127.87,
+       "lat": 37.13,
+       "lon": 124.47,
        "alt": 38000,
-       "reg": "N591SR"
+       "reg": "N291SR"
+      },
+      {
+       "flight": "MERCS70",
+       "t": "H64",
+       "role": "other",
+       "lat": 36.94,
+       "lon": 127.06,
+       "alt": 300,
+       "reg": "21-03378"
+      },
+      {
+       "flight": "CARD10",
+       "t": "H60",
+       "role": "other",
+       "lat": 37.45,
+       "lon": 127.11,
+       "alt": "ground",
+       "reg": "19-21040"
       }
      ]
     },
@@ -77,13 +96,53 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 4,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1,
+      "other": 3
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 28.69,
+       "lon": 48.43,
+       "alt": 10175,
+       "reg": "F-RBAK"
+      },
+      {
+       "flight": "YASAT15",
+       "t": "P180",
+       "role": "other",
+       "lat": 24.34,
+       "lon": 55.36,
+       "alt": 6850,
+       "reg": "1207"
+      },
+      {
+       "flight": "MJN580",
+       "t": "GLF4",
+       "role": "other",
+       "lat": 23.59,
+       "lon": 58.27,
+       "alt": "ground",
+       "reg": "558"
+      },
+      {
+       "flight": "MJN576",
+       "t": "A320",
+       "role": "other",
+       "lat": 23.61,
+       "lon": 58.29,
+       "alt": "ground",
+       "reg": "554"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -128,13 +187,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 45.18,
+       "lon": 27.25,
+       "alt": 28000,
+       "reg": "N159L"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -145,13 +216,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 54,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "IL76",
+       "role": "airlift",
+       "lat": 53.56,
+       "lon": 27.25,
+       "alt": 28975,
+       "reg": "7T-WIU"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -172,12 +255,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 9
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-08T22:17:45Z",
+  "at": "2026-11-09T06:53:34Z",
   "data": {
    "n_total": 1769,
    "recent": [
@@ -318,37 +401,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-08T22:17:45Z",
+  "at": "2026-11-09T06:53:34Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
-    "??": 12,
-    "CA": 6,
-    "DE": 6,
+    "US": 38,
+    "??": 9,
+    "DE": 7,
     "KR": 5,
-    "MX": 3,
-    "BR": 3,
+    "CA": 5,
+    "MX": 4,
+    "BR": 4,
     "GB": 3,
+    "TH": 2,
     "SG": 2,
     "IL": 2,
     "DK": 2,
     "FR": 2,
     "IT": 2,
-    "TH": 1,
-    "CO": 1
+    "PL": 1
    },
    "by_group": {
-    "N0n": 29,
-    "qilin": 13,
-    "akira": 8,
+    "N0n": 28,
+    "qilin": 11,
     "metaencryptor": 7,
+    "Deadlock": 6,
     "SilentRansomGroup": 6,
     "incransom": 5,
+    "akira": 5,
+    "lockbit5": 4,
     "payload": 4,
-    "Deadlock": 3,
-    "BYOD": 3,
-    "Whitearmor": 2
+    "BYOD": 2
    },
    "kr": [
     {

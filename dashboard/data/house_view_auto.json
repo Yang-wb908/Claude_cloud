@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 69.8,
+   "p": 72.3,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 14.0,
+   "p": 10.9,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -28,12 +28,25 @@
      "key": "ind:iran:0",
      "f": 0.5,
      "note": "공격 재개는 재개방과 불일치"
+    },
+    {
+     "key": "market:hormuz_reopen",
+     "f": 0.713,
+     "note": "예측시장 6% (가중 0.30)"
     }
-   ]
+   ],
+   "market": {
+    "p": 6.5,
+    "q": "Strait of Hormuz traffic returns to normal by December 31?",
+    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
+    "vol": 17048657,
+    "end": "2027-01-01",
+    "w": 0.3
+   }
   },
   {
    "id": "hormuz_war",
-   "p": 16.2,
+   "p": 16.8,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -52,7 +65,7 @@
     "p": 11.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78583529,
+    "vol": 78940067,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -79,10 +92,16 @@
   },
   {
    "id": "blacksea_escalate",
-   "p": 15.0,
+   "p": 19.8,
    "k": 1,
    "prior": 15.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "sens:firms:ukraine",
+     "f": 1.4,
+     "note": "러시아 정유·터미널 위성 열점 경보 (FIRMS)"
+    }
+   ]
   },
   {
    "id": "blacksea_deal",
@@ -100,14 +119,14 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2962246,
+    "vol": 2962402,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 5.4,
+   "p": 5.5,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -118,22 +137,22 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.738,
+     "f": 0.747,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.7,
+    "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45940791,
+    "vol": 45959189,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 24.6,
+   "p": 24.5,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -192,7 +211,7 @@
   },
   {
    "id": "bio_spread",
-   "p": 14.3,
+   "p": 12.8,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -205,8 +224,21 @@
      "key": "ind:bio:0",
      "f": 0.5,
      "note": "접촉자 2차 발병"
+    },
+    {
+     "key": "market:bio_spread",
+     "f": 0.881,
+     "note": "예측시장 1% (가중 0.05)"
     }
-   ]
+   ],
+   "market": {
+    "p": 1.3,
+    "q": "Hantavirus pandemic in 2026?",
+    "url": "https://polymarket.com/event/hantavirus-pandemic-in-2026",
+    "vol": 19060707,
+    "end": "2027-01-01",
+    "w": 0.05
+   }
   },
   {
    "id": "brazil_bolsonaro_win",
@@ -315,6 +347,13 @@
  ],
  "review": [
   {
+   "id": "hormuz_reopen",
+   "house": 30.0,
+   "market": 6.5,
+   "q": "Strait of Hormuz traffic returns to normal by December 31?",
+   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31"
+  },
+  {
    "id": "blacksea_deal",
    "house": 30.0,
    "market": 7.5,
@@ -323,19 +362,23 @@
   }
  ],
  "sensors": {
+  "firms": [
+   "ukraine"
+  ],
   "ioda": [
    "ethiopia",
    "taiwan"
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-08",
+ "asof": "2026-11-09",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
   "copper_6",
   "ethiopia_interstate",
+  "firms_site_alert",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",

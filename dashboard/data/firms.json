@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-08T22:17:35Z",
+ "generated": "2026-11-09T06:53:17Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
  ],
- "n_alerts": 0,
+ "n_alerts": 1,
  "errors": [],
- "learning": 24,
+ "learning": 25,
  "sites": [
   {
    "id": "salavat",
@@ -18,10 +18,10 @@
    "lon": 55.97,
    "r_km": 6,
    "n": 0,
-   "base_days": 27,
-   "base_n": 0,
+   "base_days": 28,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -54,10 +54,10 @@
    "lon": 39.73,
    "r_km": 5,
    "n": 0,
-   "base_days": 26,
-   "base_n": 0.0,
+   "base_days": 27,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -125,14 +125,17 @@
    "lat": 59.47,
    "lon": 32.03,
    "r_km": 5,
-   "n": 0,
-   "base_days": 29,
-   "base_n": 0,
-   "frp_max": 0,
-   "base_frp": 0,
-   "at": null,
-   "d": null,
-   "status": "normal"
+   "n": 13,
+   "base_days": 26,
+   "base_n": 0.0,
+   "frp_max": 3.6,
+   "base_frp": 0.0,
+   "at": [
+    32.05659,
+    59.48791
+   ],
+   "d": "2026-11-09",
+   "status": "alert"
   },
   {
    "id": "tuapse",
@@ -161,13 +164,16 @@
    "lat": 44.7,
    "lon": 37.79,
    "r_km": 5,
-   "n": 0,
+   "n": 1,
    "base_days": 29,
    "base_n": 1,
-   "frp_max": 0,
+   "frp_max": 1.3,
    "base_frp": 1.1,
-   "at": null,
-   "d": null,
+   "at": [
+    37.80624,
+    44.73635
+   ],
+   "d": "2026-11-09",
    "status": "normal"
   },
   {
@@ -216,13 +222,13 @@
    "lon": 46.2,
    "r_km": 5,
    "n": 0,
-   "base_days": 29,
-   "base_n": 0,
+   "base_days": 0,
+   "base_n": null,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": null,
    "at": null,
    "d": null,
-   "status": "normal"
+   "status": "learning"
   },
   {
    "id": "zaporizhzhia_npp",
@@ -251,13 +257,16 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 0,
-   "base_days": 28,
-   "base_n": 8.5,
-   "frp_max": 0,
-   "base_frp": 5.15,
-   "at": null,
-   "d": null,
+   "n": 3,
+   "base_days": 29,
+   "base_n": 8,
+   "frp_max": 3.8,
+   "base_frp": 5.1,
+   "at": [
+    48.27376,
+    30.34839
+   ],
+   "d": "2026-11-08",
    "status": "normal"
   },
   {
@@ -269,11 +278,11 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 15,
+   "n": 19,
    "base_days": 29,
    "base_n": 15,
    "frp_max": 8.9,
-   "base_frp": 5.8,
+   "base_frp": 5.9,
    "at": [
     56.05587,
     27.16747
@@ -290,16 +299,13 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 2,
+   "n": 0,
    "base_days": 29,
    "base_n": 3,
-   "frp_max": 1.3,
+   "frp_max": 0,
    "base_frp": 1.2,
-   "at": [
-    50.32579,
-    29.21762
-   ],
-   "d": "2026-11-07",
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -348,15 +354,15 @@
    "lon": 50.16,
    "r_km": 7,
    "n": 1,
-   "base_days": 27,
-   "base_n": 1,
-   "frp_max": 2.8,
-   "base_frp": 2.9,
+   "base_days": 28,
+   "base_n": 1.0,
+   "frp_max": 4.8,
+   "base_frp": 2.8499999999999996,
    "at": [
-    50.11087,
-    26.68149
+    50.11198,
+    26.68473
    ],
-   "d": "2026-11-07",
+   "d": "2026-11-08",
    "status": "normal"
   },
   {
@@ -368,16 +374,13 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 4,
+   "n": 0,
    "base_days": 29,
    "base_n": 2,
-   "frp_max": 0.6,
+   "frp_max": 0,
    "base_frp": 1.1,
-   "at": [
-    49.70041,
-    25.93132
-   ],
-   "d": "2026-11-07",
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -425,14 +428,14 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 13,
+   "n": 17,
    "base_days": 29,
-   "base_n": 27,
-   "frp_max": 10.7,
-   "base_frp": 10.0,
+   "base_n": 24,
+   "frp_max": 9.4,
+   "base_frp": 10.2,
    "at": [
-    51.53093,
-    25.88465
+    51.55082,
+    25.90417
    ],
    "d": "2026-11-08",
    "status": "normal"
@@ -519,10 +522,10 @@
    "lon": 45.32,
    "r_km": 10,
    "n": 0,
-   "base_days": 18,
-   "base_n": 0.0,
+   "base_days": 19,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -609,10 +612,10 @@
    "lon": 25.35,
    "r_km": 10,
    "n": 0,
-   "base_days": 28,
-   "base_n": 0.0,
+   "base_days": 29,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -627,10 +630,10 @@
    "lon": 30.22,
    "r_km": 10,
    "n": 0,
-   "base_days": 10,
-   "base_n": 0.0,
+   "base_days": 11,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -645,10 +648,10 @@
    "lon": 37.22,
    "r_km": 8,
    "n": 0,
-   "base_days": 17,
-   "base_n": 0,
+   "base_days": 18,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -683,13 +686,13 @@
    "n": 4,
    "base_days": 29,
    "base_n": 5,
-   "frp_max": 5.2,
-   "base_frp": 10.8,
+   "frp_max": 2.4,
+   "base_frp": 9.3,
    "at": [
-    29.74803,
-    11.05871
+    29.76504,
+    11.01394
    ],
-   "d": "2026-11-07",
+   "d": "2026-11-09",
    "status": "normal"
   },
   {
@@ -702,10 +705,10 @@
    "lon": 39.47,
    "r_km": 10,
    "n": 0,
-   "base_days": 17,
-   "base_n": 0,
+   "base_days": 18,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -722,11 +725,11 @@
    "n": 8,
    "base_days": 29,
    "base_n": 10,
-   "frp_max": 6.9,
+   "frp_max": 5.7,
    "base_frp": 11.4,
    "at": [
-    -70.19649,
-    11.73903
+    -70.19987,
+    11.73952
    ],
    "d": "2026-11-08",
    "status": "normal"
@@ -812,16 +815,13 @@
    "lat": 71.27,
    "lon": 72.07,
    "r_km": 8,
-   "n": 1,
-   "base_days": 25,
-   "base_n": 0,
-   "frp_max": 5.3,
-   "base_frp": 0,
-   "at": [
-    72.06503,
-    71.25795
-   ],
-   "d": "2026-11-07",
+   "n": 0,
+   "base_days": 26,
+   "base_n": 0.0,
+   "frp_max": 0,
+   "base_frp": 0.0,
+   "at": null,
+   "d": null,
    "status": "normal"
   }
  ],
@@ -840,7 +840,7 @@
    "base_days": 29,
    "base_n": 1199,
    "n_hi": 142,
-   "d": "2026-11-08",
+   "d": "2026-11-09",
    "status": "normal"
   },
   {
@@ -853,11 +853,11 @@
     32.5,
     14.5
    ],
-   "n": 712,
+   "n": 304,
    "base_days": 29,
    "base_n": 1249,
-   "n_hi": 285,
-   "d": "2026-11-08",
+   "n_hi": 60,
+   "d": "2026-11-09",
    "status": "normal"
   },
   {
@@ -871,8 +871,8 @@
     31.6
    ],
    "n": 0,
-   "base_days": 29,
-   "base_n": 0,
+   "base_days": 18,
+   "base_n": 0.0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -904,10 +904,10 @@
     40.0,
     14.9
    ],
-   "n": 58,
+   "n": 27,
    "base_days": 29,
-   "base_n": 72,
-   "n_hi": 11,
+   "base_n": 71,
+   "n_hi": 1,
    "d": "2026-11-08",
    "status": "normal"
   },
@@ -921,10 +921,10 @@
     30.0,
     1.0
    ],
-   "n": 2,
+   "n": 43,
    "base_days": 29,
    "base_n": 103,
-   "n_hi": 0,
+   "n_hi": 24,
    "d": "2026-11-08",
    "status": "normal"
   },
@@ -938,11 +938,11 @@
     94.5,
     21.5
    ],
-   "n": 1,
-   "base_days": 28,
-   "base_n": 0.0,
+   "n": 0,
+   "base_days": 29,
+   "base_n": 0,
    "n_hi": 0,
-   "d": "2026-11-07",
+   "d": null,
    "status": "normal"
   },
   {
@@ -955,13 +955,32 @@
     39.0,
     49.5
    ],
-   "n": 5,
+   "n": 3,
    "base_days": 29,
-   "base_n": 14,
+   "base_n": 11,
    "n_hi": 0,
    "d": "2026-11-08",
    "status": "normal"
   }
  ],
- "alerts": []
+ "alerts": [
+  {
+   "d": "2026-11-09",
+   "t": "X",
+   "at": [
+    32.057,
+    59.488
+   ],
+   "th": "ukraine",
+   "p": "키리시 정유공장",
+   "x": "위성 열점: 키리시 정유공장 반경 5km 안 13건, 최대 FRP 4MW (평소 0건·0MW). 원인 미상, 피격·화재 여부 확인 필요",
+   "s": "https://firms.modaps.eosdis.nasa.gov/map/#d:2026-11-09;@32.057,59.488,12.0z",
+   "g": "B2",
+   "src": "firms",
+   "lang": "ko",
+   "auto": true,
+   "id": "firms-kirishi-2026-11-09",
+   "r": 3
+  }
+ ]
 }
