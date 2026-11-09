@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 72.3,
+   "p": 71.9,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 10.9,
+   "p": 11.7,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.713,
-     "note": "예측시장 6% (가중 0.30)"
+     "f": 0.778,
+     "note": "예측시장 8% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 6.5,
+    "p": 8.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 17048657,
+    "vol": 17091022,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 16.8,
+   "p": 16.4,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -57,15 +57,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.927,
-     "note": "예측시장 12% (가중 0.10)"
+     "f": 0.907,
+     "note": "예측시장 10% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 11.5,
+    "p": 9.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 78942687,
+    "vol": 79049910,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -119,7 +119,7 @@
     "p": 7.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2962402,
+    "vol": 2965059,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -145,7 +145,7 @@
     "p": 1.8,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 45959189,
+    "vol": 46019195,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -193,14 +193,14 @@
   },
   {
    "id": "ethiopia_war",
-   "p": 60.0,
+   "p": 75.0,
    "k": 1,
    "prior": 50.0,
    "evidence": [
     {
-     "key": "sens:ioda:ethiopia",
-     "f": 1.5,
-     "note": "에티오피아·에리트레아 인터넷 차단 (IODA)"
+     "key": "tw:ethiopia_interstate",
+     "f": 3.0,
+     "note": "국가 간 교전 사건 급증"
     }
    ]
   },
@@ -230,7 +230,7 @@
     "p": 1.3,
     "q": "Hantavirus pandemic in 2026?",
     "url": "https://polymarket.com/event/hantavirus-pandemic-in-2026",
-    "vol": 19060707,
+    "vol": 19060862,
     "end": "2027-01-01",
     "w": 0.05
    }
@@ -344,7 +344,7 @@
   {
    "id": "hormuz_reopen",
    "house": 30.0,
-   "market": 6.5,
+   "market": 8.5,
    "q": "Strait of Hormuz traffic returns to normal by December 31?",
    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31"
   },
@@ -361,8 +361,13 @@
    "ukraine"
   ],
   "ioda": [
-   "ethiopia",
    "taiwan"
+  ],
+  "gdacs": [
+   "southasia"
+  ],
+  "gdacs_tc": [
+   "southasia"
   ]
  },
  "market_skill": 1.0,
@@ -372,6 +377,9 @@
  "fired": [
   "bio_health_events",
   "copper_6",
+  "ethiopia_interstate",
+  "firms_site_alert",
+  "gdacs_red",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
