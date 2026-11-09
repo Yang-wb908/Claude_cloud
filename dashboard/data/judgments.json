@@ -1,5 +1,5 @@
 {
- "asof": "2026-11-08",
+ "asof": "2026-11-09",
  "method": "ICD 203 확률 용어를 중앙값으로 환산. 적중 1 / 빗나감 0 / 판정불가 null. Brier = 평균 (p - 결과)^2.",
  "items": [
   {
@@ -488,7 +488,7 @@
    "src": "IW.theaters.ukraine",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 10월 말에 3자 회담이 열렸는지 확인할 근거가 없습니다. 11월 5~6일 백악관 러·우 회담과 아부다비 협상 예정 보도가 있고 올레시키 국지 휴전만 확인돼 전면 휴전은 없는 것으로 보이지만, 판단의 핵심 조건인 '10월 말 회담 개최'를 판정할 수 없습니다.",
+   "note": "판정 보류: 10월 말 3자 회담이 열렸다는 근거는 없습니다. 미국 주재 러·우 회담은 11월 5~6일 백악관에서 열렸습니다. 전면 휴전은 없고 공습은 계속되고 있지만, 올레시키 국지 휴전이 언급돼 판단이 맞았는지 단정하기 어렵습니다.",
    "dissent": [
     {
      "d": "2026-10-27",
@@ -515,8 +515,8 @@
      ]
     }
    ],
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-yemen-1",
@@ -608,7 +608,7 @@
    "src": "IW.theaters.ethiopia",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 정부가 티그라이에 과도행정부를 세웠고, 이후에도 TPLF가 악숨 인근 반격 등 무장 저항을 이어가고 있어 정부 장악 뒤 비정규전으로 버틴다는 판단과 대체로 맞습니다. 다만 '게릴라전 전환'을 직접 확인한 보도는 없습니다. 에리트레아 쪽 조건부 전망은 외교 단절과 총리 경고까지만 확인되고 국가 간 교전은 확인되지 않아 판정에 반영하지 않았습니다.",
+   "note": "판정 보류: 티그라이 과도행정부 설치와 악숨 인근 TPLF 반격 주장 보도는 있습니다. 하지만 TPLF가 게릴라전으로 바뀌었는지, 에리트레아가 TPLF 편에서 개입했는지 확인할 근거가 없습니다. 외교관계 단절만으로는 국가 간 전쟁이 일어났다고 판정할 수 없습니다.",
    "dissent": [
     {
      "d": "2026-11-03",
@@ -623,8 +623,8 @@
      ]
     }
    ],
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-ethiopia-2",
@@ -702,7 +702,7 @@
    "src": "IW.theaters.sudan",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 구호단체 자금 부족·창고 고갈과 칼마 난민촌의 물자 부족·기근 임박 보도는 있지만, 원인이 접근 차단인지 자금 부족인지 근거에 나와 있지 않습니다. 구호 접근이 다시 닫혔는지 직접 보여 주는 사건(호송대 차단·통로 폐쇄 등)도 없어 판정할 수 없습니다.",
+   "note": "판정 보류: 칼마 난민촌 물자 부족과 기근 임박, 구호단체 창고 고갈 보도는 있습니다. 그러나 원인이 자금 부족으로 제시되어 있고, 구호 접근이 다시 막혔다는 근거(호송대 피격, 통로 봉쇄 등)는 제공된 자료에서 확인되지 않아 판정을 보류합니다.",
    "dissent": [
     {
      "d": "2026-11-03",
@@ -717,8 +717,8 @@
      ]
     }
    ],
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-gaza-1",
@@ -796,9 +796,9 @@
    "src": "IW.theaters.afpak",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 기간 중 파키스탄이 아프간 국경 충돌 책임을 인도에 돌리고 '인도 지원' 무장세력을 언급했으며, 국경 인근 라자스탄 철로에서 폭발도 있었다. 그러나 LeT 사령관 사살과 이어지는 인도–파키스탄 간 직접 대치나 뚜렷한 긴장 고조 사건은 근거에서 확인되지 않아 판정하기 어렵다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 파키스탄이 아프간 국경 충돌과 발루치스탄 무장세력의 배후로 인도를 지목하고, 인도는 미국에 파키스탄 F-16 개량에 대한 우려를 전달하는 등 인도–파키스탄 사이에 말로 주고받는 긴장 신호는 있습니다. 그러나 카슈미르 LeT 사령관 사살과 연결된 인도–파키스탄 축의 뚜렷한 긴장 고조(군사 충돌이나 외교 단절 등)는 근거에서 확인되지 않아 판정을 보류합니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-korea-1",
@@ -854,9 +854,9 @@
    "src": "IW.theaters.korea",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 제공된 근거에는 북한군 포로의 한국 인도나 이에 대한 북한의 대남 비난을 다룬 사건이 없습니다. 북한의 비난은 아이언메이스 훈련과 자금세탁 블랙리스트 지정을 향한 것이어서 이 판단은 판정할 수 없습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 제공된 근거에는 북한군 포로의 한국 인도나 이에 대한 북한의 반응을 다룬 사건이 없습니다. 북한이 한미 훈련을 비난하고 접경에 확성기를 설치했다는 보도는 있지만, 이것이 포로 인도 때문에 대남 비난이 거세졌다는 근거는 되지 않아 판정을 보류합니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-lebanon-1",
@@ -892,9 +892,9 @@
    "src": "IW.theaters.lebanon",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 이 판단은 검증 가능한 사건 예측이 아니라 분석적 평가에 가깝습니다. 홈스 정유소 음모를 두고 시리아는 헤즈볼라가 배후라고 주장했으나 헤즈볼라는 부인했고, 같은 기사 URL은 IS 연계 조직이라고 표기하고 있습니다. 이스라엘이 시리아와 레바논을 동시에 타격한 사례도 있어 근거가 엇갈리므로 판정을 보류합니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 이 판단은 관계를 해석한 것이라 사건 하나로 맞고 틀림을 가리기 어렵습니다. 시리아는 홈스 정유소를 노린 음모를 헤즈볼라와 연결했지만 헤즈볼라는 부인했고, 해당 보도의 URL은 IS 연계 조직으로 표기돼 있어 근거가 서로 엇갈립니다. 홈스 버스 총격이 이스라엘–레바논 축과 연결됐다는 근거도, 연결되지 않았다는 근거도 제공 자료에 없습니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-sahel-1",
@@ -930,9 +930,9 @@
    "src": "IW.theaters.sahel",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 제공된 근거에는 2026-10-08~11-08 기간에 IS 사헬 지부가 니제르에서 벌인 공격 규모를 보여주는 사건이 없습니다. 말리 메나카에서 민간인 40여 명이 숨졌고 지하디스트 경쟁이 확산됐다는 보도는 있지만, 이것만으로는 IS 사헬의 공격 규모가 커지고 있다고 판정할 수 없습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 이 판단은 특정 사건이 일어나는지를 묻는 예측이 아니라, IS 사헬 지부의 공격 규모가 커지고 있다는 해석입니다. 제공된 근거로는 이 해석을 확인하거나 반박할 수 없습니다. 기간 중 IS 소행으로 지목된 사건은 10월 20일 말리 메나카의 민간인 40여 명 피살뿐이고, 니제르 보안군을 노린 대규모 공격이 이어졌다는 근거도 없어 판정을 보류합니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-drc-1",
@@ -968,9 +968,9 @@
    "src": "IW.theaters.drc",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 제공된 근거에는 유럽의 대르완다 압박이 완화됐는지 강화됐는지 보여주는 사건이 없습니다. 미국이 르완다를 제재한 것과 벨기에가 카빌라를 규탄한 것은 유럽의 대르완다 태도를 직접 보여주지 않아, 이 해석이 맞았는지 판정할 수 없습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 카빌라의 반군 합류와 치세케디의 푸틴 협력 요청을 보면 협상 교착은 이어지고 있다. 다만 제공된 근거에는 벨기에·EU 등 유럽의 대르완다 압박이 어떻게 바뀌었는지 보여주는 사건이 없고, 확인된 제재는 미국의 조치뿐이라 판단의 핵심인 유럽 압박 완화 여부는 판정할 수 없다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-somalia-1",
@@ -1006,9 +1006,9 @@
    "src": "IW.theaters.somalia",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 소말리아 해적의 이란 어선 납치, 인도 해군의 선원 구출 등 해적 활동이 늘어나 해운 위협이 커졌다는 보도는 있습니다. 그러나 아덴만 해적 위험 등급이 공식적으로 올라갔거나 보험료가 올랐다는 근거는 제공된 자료에 없습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 기한 내 소말리아 해적의 어선·다우선 납치와 인도 해군의 선원 구출로 해적 활동이 늘어난 것은 확인된다. 그러나 아덴만 해적 위험 등급이 실제로 올라갔거나 보험료가 올랐다는 근거는 제공된 자료에 없다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-myanmar-1",
@@ -1085,9 +1085,9 @@
    "src": "IW.theaters.scs",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 10월 9일 스카버러 등에서 필리핀과 중국 사이 충돌이 급증했다는 보도는 있습니다. 그러나 기한(11월 8일)까지 실제 우발 사고나 중국이 필리핀 정찰을 물리적으로 차단했다는 사건은 근거에서 확인되지 않습니다. '위험이 커진다'는 판단도 결과로 확정하기 어려워 판정을 보류합니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-15"
+   "note": "판정 보류: 기한(11-08)까지 수집된 사건에 스카버러 공중 근접 재발, 중국의 필리핀 정찰 물리적 차단, 우발 사고는 없습니다. 다만 근거가 사비나·아융인 암초와 랴오닝 항모전단 추적에 몰려 있고 스카버러 관련 보도가 하나도 없어, 사건이 없었다고 확정할 수 없습니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-carib-1",
@@ -1151,9 +1151,13 @@
    "cm": "energy",
    "due": "2026-12-31",
    "src": "INTEL.cm.energy",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 0,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(보통): 현재 시세는 BZ=F 98.32달러, CL=F 90.83달러로 Brent-WTI 차이가 약 7.5달러다. 13~14달러에 고착된다는 핵심 전제가 깨졌다. Dubai 대비 Brent의 상대 강세는 확인할 자료가 없다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.hellenicshippingnews.com/crude-oil-rout-pressures-south-american-soybean-oil-prices/"
+   ]
   },
   {
    "id": "cm-energy-3",
@@ -1486,11 +1490,15 @@
    "conf": "보통",
    "due": "2026-10-31",
    "src": "IW.theaters.bio",
-   "outcome": null,
-   "resolved": null,
-   "note": "판정 보류: 제공된 사건 중 러시아 병원체 검사 결과를 WHO에 공유했는지에 관한 보도가 없다. 기한(10/31)은 지났지만, 공유했는지 안 했는지 확인할 근거가 없어 판정을 보류한다.",
+   "outcome": 1,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(보통): 기한(10월 31일)이 지난 11월 7일에도 WHO가 러시아 페스트 연구소 직원의 사망 경위가 불명확하다며 추가 정보를 요구했다. 따라서 10월 말까지 병원체 검사 결과가 공식 공유되지 않은 것으로 판단된다. 다만 공유 여부를 직접 확인한 근거는 아니므로 확신도는 '보통'으로 둔다.",
    "auto_tries": 2,
-   "auto_next": "2026-11-09"
+   "auto_next": "2026-11-09",
+   "by": "auto",
+   "evidence": [
+    "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYmR5NV92TnAyd0dfTG9RM01IbjdfZlo2VHRGXzdCeVBQU3RkZ0sxSERWaWdUajZBS0g3STRyWHdHYmlOaVdscmhib0t4NE9rMjZjalctbWNNZ0VNSjhOUDFRUlJ5NVM1WWhmRVlXSDZSRGhvcG5xYWJFcXJwMjltUU95NU5MdENHMFVodldiRHhDWG1kZDJYZENCV1VFU2vSAaQBQVVfeXFMT1VoemJrSlMxTGExeG1yZ3lQRjRNb3ZQMkNhQUU5bjI4SVRYSTFnZldFWXBVU1VrT1JwUENnWURzdzROaGhJUnZwSXNpWDdmVzY2S0M1ZVYyREp1UDl3S1RvV2ZkMTJLTDBjaHM1U1F2YWZYQjZ2V0t4Xy1Ta3F4ODJOZUpUVE1haFRUTUM3TkVUSDdpSHBQbm13S05PRHZtMGh0TXI?oc=5"
+   ]
   },
   {
    "id": "th-latam-1",
@@ -1547,9 +1555,9 @@
    "src": "IW.theaters.namerica",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 제공된 근거에는 미국이 캐나다산 자동차·부품·철강에 50% 관세를 발효했다는 사건이 없습니다. 캐나다 관련 사건은 카니 총리의 미국 비판, EU·캐나다 협정 등에 그칩니다. 다만 수집 범위에 한계가 있어 발효되지 않았다고 확정하기도 어렵습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-10"
+   "note": "판정 보류: 민주당이 '캐나다부터' 관세 제한 표결을 추진한다는 보도는 캐나다 관련 관세가 있다는 뜻일 뿐입니다. 11/3 이전에 자동차·부품·철강 50% 관세가 실제로 발효됐는지는 제공된 근거로 확인할 수 없습니다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "th-namerica-2",
@@ -1562,11 +1570,16 @@
    "conf": "보통",
    "due": "2026-11-04",
    "src": "IW.theaters.namerica",
-   "outcome": null,
-   "resolved": null,
-   "note": "판정 보류: 제공된 근거에는 11/3 중간선거의 하원 다수당 결과를 확인해 주는 사건이 없습니다. 선거 관련 항목은 캐나다 관계 전망 기사와 알래스카 상원선거 수사 기사뿐이어서 아직 판정할 수 없습니다.",
+   "outcome": 1,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(높음): 중간선거에서 민주당이 상·하원을 모두 장악했다는 보도가 여러 건 확인됩니다. 따라서 하원 다수당이 된다는 판단은 맞았습니다.",
    "auto_tries": 1,
-   "auto_next": "2026-11-11"
+   "auto_next": "2026-11-11",
+   "by": "auto",
+   "evidence": [
+    "https://www.dawn.com/news/2043077/trump-says-elections-were-giant-step-back-in-history-for-us",
+    "https://oilprice.com/Energy/Energy-General/Democratic-Win-Set-to-Reshuffle-US-Energy-Policy.html"
+   ]
   },
   {
    "id": "th-oceania-1",
@@ -1681,9 +1694,15 @@
    "conf": "보통",
    "due": "2026-12-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(보통): 미군의 케슘섬 등 이란 영토 타격, 대이란 해상봉쇄, 봉쇄 돌파 선박 무력화로 미·이란 직접 교전이 확인됩니다. 호르무즈 일일 통항은 1척이고 카타르가 해협 재개방 중재안을 추진 중이어서 장기 폐쇄 상태도 확인됩니다. 다만 걸프 생산시설 타격(코르모르 가스전 드론 피격 정도)과 '30일 이상 폐쇄' 기간은 근거가 간접적이라 확신도는 보통으로 둡니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.theguardian.com/world/2026/nov/07/us-carries-out-another-round-of-minor-strikes-on-iran-trump-says",
+    "https://www.theguardian.com/world/2026/nov/07/strait-of-hormuz-qatar-plan-iran-nuclear-inspections",
+    "https://www.middleeasteye.net/live-blog/live-blog-update/drone-attack-hits-khor-mor-gas-field-iraqs-kurdistan-region"
+   ]
   },
   {
    "id": "scn-redsea_houthi-2026-10-08",
@@ -1696,11 +1715,17 @@
    "conf": "보통",
    "due": "2026-11-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": "판정 보류: 11월 4일 아덴만에서 미국 국적 상선을 노린 후티 미사일이 격추돼 상선 공격 재개 정황은 있다. 그러나 11월 1일 마감 주간까지 수에즈 통과가 오히려 늘었고, 그 뒤 선사들이 다시 우회했다는 근거는 없다. 시나리오의 두 번째 요소인 수에즈 복귀 선사 재이탈을 확인할 수 없어 판정을 보류한다.",
+   "outcome": 0,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(보통): 기한(11-07)까지 바브엘만데브에서 후티가 상선을 공격했다는 사건은 확인되지 않는다. 오히려 아시아-유럽 선복 대부분이 수에즈로 돌아왔고 운하 수입도 2023년 이후 최고를 기록해, 선사 재이탈은 일어나지 않았다.",
    "auto_tries": 1,
-   "auto_next": "2026-11-14"
+   "auto_next": "2026-11-14",
+   "by": "auto",
+   "evidence": [
+    "https://www.hellenicshippingnews.com/drewry-red-sea-diversion-tracker-shows-significant-increase-in-suez-canal-transits/",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZDNwd29Gdk9kdHo5Y2VSOXVyWDFvbzNZQzdLMWxLWUx1Y214RW9vNFBnY3JRUnNnYWxMOFNQRnJ4T0tKUkdVZ0FZcUFmblNlOWVNZG82UHFudjdDemZiMHJrZHhJb3Y4cU5ubHM0S2lsQThQWWo0cFRfRWtvdWFERGJYcVFGRVh1dnFiV3MyZlZkNWY4bkNWUNIBmAFBVV95cUxQMWU2SEQ0Ny1ySVVqZWNqUmZjQWRta3lfSjNORHdTbWNNUmxfZm4tNm85YWJQTnd6VkUxbXF3cjR0Qm53Z1BzT0ZINWVwbFZaUWlSNTRhaTZnMlU3Yzd6bTZnNHluSkEzSGVlUDlvQlF4Y2NKdzQtV0c4U25OQzNjUTlQTHZ1VDlySUI2SHFOTjBxeUlTblRsRQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWnBubG96c1ktVkN2VE9wYXM4SjRCQXQ1c0RDTkNQLXVsaHhwcU1MSzI0RUYtVVphWFdleXB0VHVpY3piZktaNUw0NmpUQ3Zxa2RUMmRHby13S3kySXZTQ1dLQnJfY2J3Vm9mcmMtWU5ITkl2c01EMEx0OXQzTVFGOHpDWWtnbklfb1RQaVp6ak9TWFV4ZWJWb1FZZ1EtWHhtcTdrNWI1OE5VZ2lNWFFxSFpEQQ?oc=5"
+   ]
   },
   {
    "id": "scn-redsea_calm-2026-10-08",
@@ -1940,9 +1965,9 @@
    "src": "house_view",
    "outcome": null,
    "resolved": null,
-   "note": "판정 보류: 기한(2026-11-07)이 오늘이지만, 에스콘디다·센티넬라 파업이나 2주 이상 조업 중단을 확인하거나 부정하는 수집 사건이 없습니다. 구리 가격은 6.26달러/lb로 6달러 트립와이어를 넘었으나 4.3% 하락 중이어서 파업이 일어났다는 근거로 보기 어렵습니다.",
-   "auto_tries": 1,
-   "auto_next": "2026-11-14"
+   "note": "판정 보류: 기한(2026-11-07)은 지났지만, 제공된 근거에는 에스콘디다·센티넬라 파업이나 조업 중단 여부를 보여 주는 사건이 하나도 없다. 구리 가격 6.24달러(-2.2%)만으로는 2주 이상 중단이 있었는지 없었는지 판정할 수 없다.",
+   "auto_tries": 2,
+   "auto_next": "2026-11-16"
   },
   {
    "id": "scn-dem_house_win-2026-10-08",
@@ -1955,9 +1980,15 @@
    "conf": "보통",
    "due": "2026-12-07",
    "src": "house_view",
-   "outcome": null,
-   "resolved": null,
-   "note": ""
+   "outcome": 1,
+   "resolved": "2026-11-09",
+   "note": "자동 판정(보통): 민주당이 하원을 탈환해 공화당 대통령과의 분점 정부가 확정됐습니다. 민주당은 첫 100시간 안에 관세 제한 표결을 추진해 의회 견제가 실제로 나타나고 있습니다. 다만 거부권을 넘을 표가 부족하고 재정 교착은 아직 확인되지 않아 신뢰도는 보통으로 둡니다.",
+   "by": "auto",
+   "evidence": [
+    "https://www.dawn.com/news/2043077/trump-says-elections-were-giant-step-back-in-history-for-us",
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNjZfS0kzay1NNFY0ZnRPMTBtclptOWhnNlBJb1lwX2dDN1J6T0cyVEdkbEplMnBjekRKMmJaVmZpajQ0NHBCVmFtRHlidmhsa1pXd2kzb09JZC1qSWlkdzJKVVU3cVBPaWlCZE8tTGlPeDZWWHItTVdpc0VSekpLTDNTb0hYcE5EVGltQ3Z6anExM0FfT2FLTFBSbFZ1T1cyX1IxQndOcThpQ3ppRnhmUzNpeXRNTzA5aWluVS1VekhDOF90SVp4YlFxZ0lnd2g4aVE?oc=5",
+    "https://oilprice.com/Energy/Energy-General/Democratic-Win-Set-to-Reshuffle-US-Energy-Policy.html"
+   ]
   },
   {
    "id": "scn-us_canada_auto_tariffs-2026-10-08",
