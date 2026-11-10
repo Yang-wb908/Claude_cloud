@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-09T22:32:15Z",
+ "generated": "2026-11-10T06:58:59Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-09T22:32:15Z",
+  "at": "2026-11-10T06:58:59Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -65,23 +65,41 @@
       60.0,
       30.5
      ],
-     "n": 1,
+     "n": 3,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 3
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
-       "t": "",
+       "flight": "HZ102",
+       "t": "B738",
        "role": "other",
-       "lat": 24.94,
-       "lon": 55.41,
-       "alt": 24000,
-       "reg": ""
+       "lat": 26.49,
+       "lon": 49.6,
+       "alt": 15475,
+       "reg": "HZ-102"
+      },
+      {
+       "flight": "NBS12",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.15,
+       "lon": 51.18,
+       "alt": 7550,
+       "reg": "QA362"
+      },
+      {
+       "flight": "NBS11",
+       "t": "PC21",
+       "role": "other",
+       "lat": 25.16,
+       "lon": 51.18,
+       "alt": 7400,
+       "reg": "QA367"
       }
      ]
     },
@@ -172,12 +190,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-09T22:32:15Z",
+  "at": "2026-11-10T06:58:59Z",
   "data": {
    "n_total": 1773,
    "recent": [
@@ -330,65 +348,45 @@
      "due": "2026-11-10",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2026-109618",
-     "vendor": "PHP Group",
-     "product": "PHP",
-     "name": "PHP Memory Corruption Vulnerability",
-     "added": "2026-10-26",
-     "due": "2026-10-29",
-     "ransom": false,
-     "edge": false
-    },
-    {
-     "cve": "CVE-2026-109619",
-     "vendor": "PHP Group",
-     "product": "PHP",
-     "name": "PHP Stale Internal Request-State Vulnerability",
-     "added": "2026-10-26",
-     "due": "2026-10-29",
-     "ransom": false,
-     "edge": false
     }
    ],
-   "n_recent": 17,
+   "n_recent": 15,
    "n_week": 7
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-09T22:32:15Z",
+  "at": "2026-11-10T06:58:59Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 52,
+    "US": 51,
+    "??": 12,
     "CA": 11,
-    "??": 8,
-    "TH": 4,
+    "TH": 3,
     "GB": 3,
     "HK": 3,
-    "CO": 2,
-    "MX": 2,
+    "ZA": 2,
+    "AE": 1,
     "CM": 1,
     "NL": 1,
     "IT": 1,
+    "CO": 1,
     "KR": 1,
-    "ZA": 1,
     "DK": 1,
     "SA": 1
    },
    "by_group": {
-    "N0n": 66,
-    "Deadlock": 6,
+    "N0n": 68,
     "krybit": 5,
-    "lockbit5": 4,
-    "BYOD": 3,
-    "incransom": 3,
+    "Deadlock": 5,
+    "Aoqin": 2,
+    "SilentRansomGroup": 2,
+    "Global Secret Group": 2,
+    "BYOD": 2,
     "metaencryptor": 2,
-    "rhysida": 1,
-    "HYFLOCK": 1,
-    "everstake": 1
+    "iah6477": 1,
+    "PixelLeaks": 1
    },
    "kr": [
     {
@@ -405,9 +403,9 @@
  "summary": {
   "adsb_surge": 0,
   "kev_week": 7,
-  "kev_edge_3d": 1,
+  "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 1,
-  "events": 2
+  "events": 1
  }
 }
