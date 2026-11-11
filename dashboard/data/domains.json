@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-11T06:45:26Z",
+ "generated": "2026-11-11T12:58:41Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-11T06:45:26Z",
+  "at": "2026-11-11T12:58:41Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -67,21 +67,21 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {
       "other": 1
      },
      "ac": [
       {
-       "flight": "ORF5",
+       "flight": "MJN576",
        "t": "A320",
        "role": "other",
-       "lat": 25.49,
-       "lon": 53.07,
-       "alt": 31875,
-       "reg": "A4O-AA"
+       "lat": 23.52,
+       "lon": 58.25,
+       "alt": 8725,
+       "reg": "555"
       }
      ]
     },
@@ -96,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -111,32 +111,70 @@
       37.0,
       37.5
      ],
-     "n": 2,
-     "key": 0,
-     "base": 0,
-     "runs": 55,
+     "n": 6,
+     "key": 2,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {
-      "airlift": 2
+      "tanker": 2,
+      "airlift": 1,
+      "other": 3
      },
      "ac": [
       {
-       "flight": "RJAF363",
-       "t": "IL76",
-       "role": "airlift",
-       "lat": 33.42,
-       "lon": 31.69,
-       "alt": 36000,
-       "reg": "RJAF-361"
+       "flight": "RRR9915",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 34.4,
+       "lon": 32.77,
+       "alt": 7675,
+       "reg": "ZZ335"
       },
       {
-       "flight": "GAF106",
-       "t": "A400",
+       "flight": "RRR9958",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 34.59,
+       "lon": 32.98,
+       "alt": "ground",
+       "reg": "ZZ337"
+      },
+      {
+       "flight": "318",
+       "t": "C130",
        "role": "airlift",
-       "lat": 31.12,
-       "lon": 33.3,
-       "alt": 27975,
-       "reg": "54+28"
+       "lat": 31.69,
+       "lon": 34.9,
+       "alt": 1550,
+       "reg": "318"
+      },
+      {
+       "flight": "BOOSTER",
+       "t": "HRON",
+       "role": "other",
+       "lat": 31.91,
+       "lon": 34.93,
+       "alt": 25825,
+       "reg": ""
+      },
+      {
+       "flight": "329",
+       "t": "A119",
+       "role": "other",
+       "lat": 31.79,
+       "lon": 35.01,
+       "alt": 2300,
+       "reg": ""
+      },
+      {
+       "flight": "301",
+       "t": "A119",
+       "role": "other",
+       "lat": 31.67,
+       "lon": 35.17,
+       "alt": 5200,
+       "reg": "301"
       }
      ]
     },
@@ -149,13 +187,35 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 55,
+     "n": 2,
+     "key": 1,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "AHY6731",
+       "t": "B77L",
+       "role": "other",
+       "lat": 42.5,
+       "lon": 27.14,
+       "alt": 32000,
+       "reg": "4K-AI001"
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 42.74,
+       "lon": 30.64,
+       "alt": 34000,
+       "reg": "N159L"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -166,13 +226,81 @@
       30.5,
       61.0
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 55,
+     "n": 7,
+     "key": 1,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 4,
+      "other": 2,
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "LONGL03",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 57.1,
+       "lon": 9.9,
+       "alt": 800,
+       "reg": "B-538"
+      },
+      {
+       "flight": "HUSKY31",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 60.83,
+       "lon": 11.22,
+       "alt": 23100,
+       "reg": "5629"
+      },
+      {
+       "flight": "SPDER21",
+       "t": "DHC6",
+       "role": "other",
+       "lat": 55.42,
+       "lon": 12.63,
+       "alt": 850,
+       "reg": "OY-FHC"
+      },
+      {
+       "flight": "GAF643",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 54.25,
+       "lon": 12.64,
+       "alt": 40000,
+       "reg": "14+07"
+      },
+      {
+       "flight": "PRIMR41",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 54.47,
+       "lon": 13.59,
+       "alt": 26000,
+       "reg": "54+44"
+      },
+      {
+       "flight": "SVF677",
+       "t": "SF34",
+       "role": "other",
+       "lat": 60.95,
+       "lon": 15.81,
+       "alt": 25000,
+       "reg": "100001"
+      },
+      {
+       "flight": "GAF122",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 58.52,
+       "lon": 22.09,
+       "alt": 33975,
+       "reg": "54+46"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -185,20 +313,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 16
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-11T06:45:26Z",
+  "at": "2026-11-11T12:58:41Z",
   "data": {
    "n_total": 1779,
    "recent": [
@@ -399,18 +527,18 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-11T06:45:26Z",
+  "at": "2026-11-11T12:58:41Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 55,
+    "US": 56,
     "CA": 11,
     "??": 10,
     "ES": 3,
     "GB": 3,
-    "AE": 2,
     "ZA": 2,
     "DE": 1,
+    "AE": 1,
     "AU": 1,
     "MX": 1,
     "JP": 1,
@@ -420,7 +548,7 @@
     "TH": 1
    },
    "by_group": {
-    "N0n": 48,
+    "N0n": 47,
     "interlock": 9,
     "Booba Project": 6,
     "SilentRansomGroup": 4,

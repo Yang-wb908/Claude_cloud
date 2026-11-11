@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 75.0,
+   "p": 74.9,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 8.2,
+   "p": 8.3,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -31,22 +31,22 @@
     },
     {
      "key": "market:hormuz_reopen",
-     "f": 0.501,
+     "f": 0.509,
      "note": "예측시장 2% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 2.1,
+    "p": 2.2,
     "q": "Strait of Hormuz traffic returns to normal by November 30?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765",
-    "vol": 1945336,
+    "vol": 1957429,
     "end": "2026-12-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 16.8,
+   "p": 16.7,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -65,7 +65,7 @@
     "p": 7.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 79629182,
+    "vol": 79635038,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -113,7 +113,7 @@
     "p": 6.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 2968310,
+    "vol": 2968368,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -139,7 +139,7 @@
     "p": 1.3,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46185569,
+    "vol": 46188363,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -180,7 +180,7 @@
     "p": 85.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 6796484,
+    "vol": 6874580,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -339,7 +339,7 @@
   {
    "id": "hormuz_reopen",
    "house": 30.0,
-   "market": 2.1,
+   "market": 2.2,
    "q": "Strait of Hormuz traffic returns to normal by November 30?",
    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-november-30-20260810151158765"
   },
