@@ -39,7 +39,7 @@
     "p": 7.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 17683396,
+    "vol": 17704890,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -65,7 +65,7 @@
     "p": 7.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 79870303,
+    "vol": 79893776,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -99,28 +99,28 @@
   },
   {
    "id": "blacksea_deal",
-   "p": 22.5,
+   "p": 24.0,
    "k": 1,
    "prior": 30.0,
    "evidence": [
     {
      "key": "market:blacksea_deal",
-     "f": 0.678,
-     "note": "예측시장 10% (가중 0.30)"
+     "f": 0.739,
+     "note": "예측시장 14% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 10.5,
+    "p": 13.5,
     "q": "Russia x Ukraine ceasefire agreement by December 31, 2026?",
     "url": "https://polymarket.com/event/russia-x-ukraine-ceasefire-agreement-by-december-31-2026",
-    "vol": 3407718,
+    "vol": 3414142,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "taiwan_quarantine",
-   "p": 5.2,
+   "p": 5.3,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -131,22 +131,22 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.699,
-     "note": "예측시장 1% (가중 0.20)"
+     "f": 0.72,
+     "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.3,
+    "p": 1.5,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46211805,
+    "vol": 46286848,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 24.8,
+   "p": 24.7,
    "k": 1,
    "prior": 25.0,
    "evidence": []
@@ -180,7 +180,7 @@
     "p": 86.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 7008385,
+    "vol": 7042535,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -359,7 +359,6 @@
  "sensors": {
   "ioda": [
    "carib",
-   "gaza",
    "korea",
    "southasia",
    "taiwan"
@@ -378,6 +377,7 @@
  "fired": [
   "bio_health_events",
   "copper_6",
+  "coverage_surge",
   "ethiopia_interstate",
   "gdacs_red",
   "hormuz_transits_low",

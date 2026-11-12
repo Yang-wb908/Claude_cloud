@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-12T06:56:36Z",
+ "generated": "2026-11-12T12:57:47Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-12T06:56:36Z",
+  "at": "2026-11-12T12:57:47Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "STARS01",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.47,
-       "lon": 126.53,
-       "alt": 200,
-       "reg": "19-21090"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -77,70 +65,33 @@
       60.0,
       30.5
      ],
-     "n": 6,
-     "key": 2,
+     "n": 2,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 2,
-      "airlift": 2,
-      "tanker": 2
+      "other": 1,
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "DUB1",
-       "t": "B744",
+       "flight": "BAH09",
+       "t": "RJ85",
        "role": "other",
-       "lat": 28.0,
-       "lon": 49.58,
-       "alt": 36000,
-       "reg": "A6-HRM"
-      },
-      {
-       "flight": "UAF311",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 26.18,
-       "lon": 51.9,
-       "alt": 15100,
-       "reg": "311"
-      },
-      {
-       "flight": "ATLAS45",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 24.51,
-       "lon": 55.0,
-       "alt": 375,
-       "reg": "F-RBAK"
-      },
-      {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 25.23,
-       "lon": 55.43,
-       "alt": 25025,
-       "reg": "58-0052"
+       "lat": 25.91,
+       "lon": 50.53,
+       "alt": 2000,
+       "reg": "A9C-BDF"
       },
       {
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.49,
-       "lon": 55.43,
-       "alt": 29500,
-       "reg": "20-46075"
-      },
-      {
-       "flight": "",
-       "t": "",
-       "role": "other",
-       "lat": 25.06,
-       "lon": 55.43,
-       "alt": 24000,
-       "reg": ""
+       "lat": 25.48,
+       "lon": 55.76,
+       "alt": 28000,
+       "reg": "16-46021"
       }
      ]
     },
@@ -170,52 +121,23 @@
       37.0,
       37.5
      ],
-     "n": 4,
-     "key": 1,
+     "n": 1,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "isr": 1,
-      "other": 2,
-      "airlift": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "SPAR84",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 32.65,
-       "lon": 29.02,
-       "alt": 40000,
-       "reg": "01-0029"
-      },
-      {
-       "flight": "UNO264",
-       "t": "A169",
+       "flight": "QAF7",
+       "t": "A320",
        "role": "other",
-       "lat": 33.26,
-       "lon": 35.11,
-       "alt": 750,
-       "reg": "MM82197"
-      },
-      {
-       "flight": "GAF299",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 31.81,
-       "lon": 35.89,
-       "alt": 7850,
-       "reg": "54+43"
-      },
-      {
-       "flight": "HERC32",
-       "t": "M28",
-       "role": "other",
-       "lat": 31.98,
-       "lon": 35.95,
-       "alt": 4175,
-       "reg": "355"
+       "lat": 35.25,
+       "lon": 36.47,
+       "alt": 37025,
+       "reg": "A7-AAG"
       }
      ]
     },
@@ -228,13 +150,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "J001",
+       "t": "C680",
+       "role": "other",
+       "lat": 40.71,
+       "lon": 30.41,
+       "alt": 24275,
+       "reg": "J-001"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -245,32 +179,61 @@
       30.5,
       61.0
      ],
-     "n": 2,
-     "key": 0,
+     "n": 5,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 2
+      "airlift": 1,
+      "other": 3,
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "TX40",
-       "t": "MF17",
-       "role": "other",
-       "lat": 55.53,
-       "lon": 9.63,
-       "alt": 1775,
-       "reg": "T-429"
+       "flight": "",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 57.1,
+       "lon": 9.84,
+       "alt": "ground",
+       "reg": "B-538"
       },
       {
-       "flight": "HUF352",
-       "t": "A319",
+       "flight": "TR08",
+       "t": "G12T",
        "role": "other",
-       "lat": 54.33,
-       "lon": 17.88,
-       "alt": 38000,
-       "reg": "604"
+       "lat": 58.4,
+       "lon": 15.53,
+       "alt": 1025,
+       "reg": "40208"
+      },
+      {
+       "flight": "TR12",
+       "t": "G12T",
+       "role": "other",
+       "lat": 58.44,
+       "lon": 15.55,
+       "alt": 1575,
+       "reg": "40212"
+      },
+      {
+       "flight": "GNY4501",
+       "t": "",
+       "role": "other",
+       "lat": 58.62,
+       "lon": 18.45,
+       "alt": 1925,
+       "reg": ""
+      },
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 53.82,
+       "lon": 21.49,
+       "alt": 36000,
+       "reg": "N159L"
       }
      ]
     },
@@ -293,12 +256,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 13
+   "total_mil": 9
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-12T06:56:36Z",
+  "at": "2026-11-12T12:57:47Z",
   "data": {
    "n_total": 1779,
    "recent": [
@@ -479,13 +442,13 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-12T06:56:36Z",
+  "at": "2026-11-12T12:57:47Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 51,
+    "US": 52,
     "??": 16,
-    "CA": 7,
+    "CA": 6,
     "GB": 4,
     "ES": 3,
     "QA": 1,
@@ -500,16 +463,16 @@
     "IN": 1
    },
    "by_group": {
-    "N0n": 28,
+    "N0n": 25,
     "Curious Worm": 9,
     "interlock": 9,
     "Booba Project": 6,
     "play": 4,
     "SilentRansomGroup": 4,
+    "qilin": 3,
     "Aoqin": 3,
     "akira": 3,
-    "Vortex": 3,
-    "BYOD": 3
+    "Vortex": 3
    },
    "kr": [
     {
