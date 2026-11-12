@@ -1,82 +1,10 @@
 {
- "generated": "2026-11-12T12:57:31Z",
+ "generated": "2026-11-12T18:56:44Z",
  "days": 3,
- "unmapped_total": 16,
- "max_cluster": 6,
- "max_key": "topic:China",
+ "unmapped_total": 10,
+ "max_cluster": 3,
+ "max_key": "place:서울",
  "clusters": [
-  {
-   "key": "topic:China",
-   "n": 6,
-   "domains": 4,
-   "types": {
-    "D": 2,
-    "C": 1,
-    "E": 3
-   },
-   "since": "2026-11-10",
-   "sample": [
-    {
-     "d": "2026-11-12",
-     "title": "China’s Rare Earth Relief Lets Alternative Suppliers Sell at High Prices",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMTN6aGYxMEljVVE3T3gwek5IcXdWbFZaVHdUOFV6Q01OMGpsRUhpT2FPSmJiQlMzU3VJREFUMGktRGdXR0lrWkhCMXh5T1BhVVBUS0Y5dDhlR0cwbjA0YWNudVg2LTdjSkUyVld5TVl6NUYzakFTZmtLUkJ5M3lVMXdPdVJkSHBQY0tRWDVQZThSbzZRRUxNUjN3TDZSZkNCNDEwRG1CWVhuQQ?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "China says US ‘fabricating’ Nvidia spy claims to justify tech ‘blockade’",
-     "url": "https://www.aljazeera.com/news/2026/11/12/china-says-us-fabricating-nvidia-spy-claims-to-justify-tech-blockade?traffic_source=rss",
-     "domain": "aljazeera.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "China accuses US of 'fabricating' Nvidia spy claims to push tech 'blockade'",
-     "url": "https://www.france24.com/en/asia-pacific/20261112-china-accuses-us-fabricating-nvidia-spy-claims-to-push-tech-blockade",
-     "domain": "france24.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "In China’s Spy Operations, Romance Can Be a Long Game",
-     "url": "https://www.nytimes.com/2026/11/12/world/asia/china-spy-espionage-romance.html",
-     "domain": "nytimes.com"
-    },
-    {
-     "d": "2026-11-11",
-     "title": "China extends pause on rare-earth export restrictions — OilPrice",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTzdITXF2SHpVQnZzZ1A0b3A4dW1VU1pBZFZhd2hUbXF4T0ozZ2tkVjBuaFFJTWJtTFBscjBNcXlna1RuU3Y1QjZfN1g0ci0wT2xmaGw2QlpxSTVIZ1ByZGkzU2l6MDIzTVUzdWFGUkwzckt2U2F0dlpFUDkzWkloeDRNZVh0YUM5aHpaWFk5a3BVVDdoYXpDWDlFYW5XU1dlVVp0UGdEbE9jMVBp?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Indonesia",
-   "n": 3,
-   "domains": 3,
-   "types": {
-    "D": 3
-   },
-   "since": "2026-11-12",
-   "sample": [
-    {
-     "d": "2026-11-12",
-     "title": "Indonesia's vice-president resigns after academic credentials questioned",
-     "url": "https://www.cbc.ca/news/world/indonesia-vice-president-resigns-9.7418723?cmp=rss",
-     "domain": "cbc.ca"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "Indonesia’s Vice President, Gibran, Resigns",
-     "url": "https://www.nytimes.com/2026/11/12/world/asia/indonesia-gibran-vice-president-resign.html",
-     "domain": "nytimes.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "Indonesia vice president resigns amid dispute over eligibility",
-     "url": "https://www.aljazeera.com/news/2026/11/12/indonesia-vice-president-resigns-amid-dispute-over-eligibility?traffic_source=rss",
-     "domain": "aljazeera.com"
-    }
-   ]
-  },
   {
    "key": "place:서울",
    "n": 3,
@@ -108,7 +36,59 @@
    ]
   },
   {
-   "key": "topic:Yttrium",
+   "key": "topic:China",
+   "n": 3,
+   "domains": 1,
+   "types": {
+    "E": 3
+   },
+   "since": "2026-11-10",
+   "sample": [
+    {
+     "d": "2026-11-12",
+     "title": "China’s Rare Earth Relief Lets Alternative Suppliers Sell at High Prices",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMTN6aGYxMEljVVE3T3gwek5IcXdWbFZaVHdUOFV6Q01OMGpsRUhpT2FPSmJiQlMzU3VJREFUMGktRGdXR0lrWkhCMXh5T1BhVVBUS0Y5dDhlR0cwbjA0YWNudVg2LTdjSkUyVld5TVl6NUYzakFTZmtLUkJ5M3lVMXdPdVJkSHBQY0tRWDVQZThSbzZRRUxNUjN3TDZSZkNCNDEwRG1CWVhuQQ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-11",
+     "title": "China extends pause on rare-earth export restrictions — OilPrice",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTzdITXF2SHpVQnZzZ1A0b3A4dW1VU1pBZFZhd2hUbXF4T0ozZ2tkVjBuaFFJTWJtTFBscjBNcXlna1RuU3Y1QjZfN1g0ci0wT2xmaGw2QlpxSTVIZ1ByZGkzU2l6MDIzTVUzdWFGUkwzckt2U2F0dlpFUDkzWkloeDRNZVh0YUM5aHpaWFk5a3BVVDdoYXpDWDlFYW5XU1dlVVp0UGdEbE9jMVBp?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-10",
+     "title": "China extends pause on rare earth and battery export controls until 2027",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTzZiRDBZOFJpUzJoZC1sdWZkT0xwVC0xb21LcVlIZzBEeXdNZ1FQdUtCWTYtNUk4ZHFQXzVMY3JTWXk0eGREZW4yQVVhcFlzV2tLamN4dG5fR1VSNGFRa19wMjBWYkpObjU2a1BMTmZCczgxaTB0SWpqbUdFaXVMNGtJQlRmdmZPTFY5NUdPOTdRX2xZZ1RaS0RWX2twRmJ4SzBfWldreWJraFZPQ3YwYnZtZ2RoQllU?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Indonesia",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-11-12",
+   "sample": [
+    {
+     "d": "2026-11-12",
+     "title": "Indonesia's VP resigns as his eligibility and academic credentials are questioned",
+     "url": "https://www.npr.org/2026/11/12/g-s1-153190/indonesias-vp-resigns-as-his-eligibility-and-academic-credentials-are-questioned",
+     "domain": "npr.org"
+    },
+    {
+     "d": "2026-11-12",
+     "title": "Indonesia's vice-president resigns after academic credentials questioned",
+     "url": "https://www.cbc.ca/news/world/indonesia-vice-president-resigns-9.7418723?cmp=rss",
+     "domain": "cbc.ca"
+    }
+   ]
+  },
+  {
+   "key": "topic:China Rare",
    "n": 2,
    "domains": 1,
    "types": {
@@ -117,38 +97,15 @@
    "since": "2026-11-11",
    "sample": [
     {
-     "d": "2026-11-11",
-     "title": "Yttrium's 125-Fold Price Gap Looms Over Trump-Xi Talks in Shenzhen",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOeVRsUm95c2dxVF9LOVUwbnBMSTZTMENWamYyNG9Cc1VfWERCX2duZzh1TzJFQUk3Mk94WFk1dkt0eTZ4T3dTWURRa0dtNVZIeHpfSW10QTEyOTVDaF9yejlHQ1g5MkI1cTNHLWpOWEF6aC1FUXpMX1UzbjZXNEswTzZWdVlYbnc5VU9mUm1meTQ4enhRRVNWS1hDZWd6SUJkRlY1SzJYUzdJREdWaWJjVnpCcmPSAbQBQVVfeXFMTnlUbFJveXNncVRfSzlVMG5wTEk2UzBDVmpmMjRvQnNVX1hEQl9nbmc4dU8yRUFJNzJPeFhZNXZLdHk2eE93U1lEUWtHbTVWSHh6X0ltdEExMjk1Q2hfcno5R0NYOTJCNXEzRy1qTlhBemgtRVF6TF9VM242VzRLME82VnVZWG53OVVPZlJtZnk0OHp4UUVTVktYQ2VneklCZEZWNUsyWFM3SURHVmliY1Z6QnJj?oc=5",
+     "d": "2026-11-12",
+     "title": "China Rare Earth Export Controls 2027 Extension Explained",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8wUkpXaFJIc3NsS3k0Vjh3UUZWNzR0dFhmRXd0R0UtTW1QemVGWUhyR3djTVBxd2s2SWJLLUFWeTNFSDA2U2Z6Q3NYNkFuYlJXVUZnM1lXeTN5WmUzd2NDWEZDWDJCd0k1MkxYWHAwSWdKN1VYeG14UF9vcGs4czA?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-11-11",
-     "title": "Yttrium prices jump ninefold in a year as China curbs exports",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZldKbkZhUDFGSDFMWHZERE14aFg2NTFSWmpHRmktUUZFZHFUZFZwWFZTN2U5VTY0dmt3cHRDdF9WeE1aTm9GUzY1U1ByR0RZakJOY3ZCN2FVMEJQWVBYeUg0a3FzMVpBazJYMWZOcXpSeXNOTW11VjZNay1oaU55ZlJHd1BEYjl6bGF3SldxT2Q1Z1JN?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Rare",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-11-10",
-   "sample": [
-    {
-     "d": "2026-11-11",
-     "title": "Rare earth yttrium soars 9-fold in a year amid China curbs",
-     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQ1dIOVZpMG1ESFNIdW8ySFBwTTRibDlRV0VINnNpMTE2aFhsOHVXcXF4Sk9tSTlNaWI3c2tJUUgxNktpbFRDMVNwYjFNUWd1SzE3ajVlbzlPR1NVbmpVQjJHV2t4NGk5WWZGM1hJSUFlM2NLX2owSWotRXFmUGtYRFZodlJ5aGJGT2pveGdEV3ZkaTRHSWtTelVLTkVqTEpEVFlv?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-10",
-     "title": "Rare earth price gap flags supply strains ahead of Trump-Xi meet",
-     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaXZWcTZLM3FEQlhsYmFONlA1X08xTVY4cXVvM3BfWW5OeDJDcWRoNzF5VHJEN3NyRHBVLXliVWltbjdGTEl2TW1iaE5aQjJVdlRCUXJJS0piTVBJRmx3WEktVjA1aTdhMEI4UUVjRHB2QW5kZmUwdGxpc2JETko0cWRYR0U2SUR2Q3BPUzJpOU1rSmpaY0JZ?oc=5",
+     "title": "China Rare Earth Export Revenue 2026 Explained",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE95bFotaHV1MDB5aGlqZmhjaDZaZFhBbTE4SlVKOFJMMkM2SFVlZ0UwVTZIaXRRa3k5dWVDVW82SVdrTmNIcmdlN2hsT3lKNHBYYkMzekNFQUdFMWdjdG1RTWxWZHp2SVFvVFFEVTcxTDN4UHBvMGhNblRYOTM0QQ?oc=5",
      "domain": "news.google.com"
     }
    ]

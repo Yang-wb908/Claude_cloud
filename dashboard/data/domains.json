@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-12T12:57:47Z",
+ "generated": "2026-11-12T18:57:12Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-12T12:57:47Z",
+  "at": "2026-11-12T18:57:12Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.17,
+       "lon": 124.76,
+       "alt": 38000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,35 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 2,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1,
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "BAH09",
-       "t": "RJ85",
-       "role": "other",
-       "lat": 25.91,
-       "lon": 50.53,
-       "alt": 2000,
-       "reg": "A9C-BDF"
-      },
-      {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 25.48,
-       "lon": 55.76,
-       "alt": 28000,
-       "reg": "16-46021"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -121,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "QAF7",
-       "t": "A320",
-       "role": "other",
-       "lat": 35.25,
-       "lon": 36.47,
-       "alt": 37025,
-       "reg": "A7-AAG"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -150,23 +128,32 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "J001",
-       "t": "C680",
+       "flight": "EM415",
+       "t": "B429",
        "role": "other",
-       "lat": 40.71,
-       "lon": 30.41,
-       "alt": 24275,
-       "reg": "J-001"
+       "lat": 41.03,
+       "lon": 28.81,
+       "alt": 1325,
+       "reg": "EM-7119"
+      },
+      {
+       "flight": "TRK1",
+       "t": "B748",
+       "role": "other",
+       "lat": 40.99,
+       "lon": 28.85,
+       "alt": 450,
+       "reg": "TC-TRK"
       }
      ]
     },
@@ -179,61 +166,51 @@
       30.5,
       61.0
      ],
-     "n": 5,
-     "key": 1,
+     "n": 4,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
       "other": 3,
-      "isr": 1
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 57.1,
-       "lon": 9.84,
+       "flight": "KRF72",
+       "t": "F900",
+       "role": "other",
+       "lat": 60.21,
+       "lon": 11.09,
        "alt": "ground",
-       "reg": "B-538"
+       "reg": "G-ZABH"
       },
       {
-       "flight": "TR08",
-       "t": "G12T",
+       "flight": "PRIMR08",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 53.84,
+       "lon": 11.97,
+       "alt": 20975,
+       "reg": "54+45"
+      },
+      {
+       "flight": "HUF572",
+       "t": "FA7X",
        "role": "other",
-       "lat": 58.4,
-       "lon": 15.53,
-       "alt": 1025,
-       "reg": "40208"
+       "lat": 57.78,
+       "lon": 13.19,
+       "alt": 41000,
+       "reg": "606"
       },
       {
-       "flight": "TR12",
-       "t": "G12T",
+       "flight": "GAF701",
+       "t": "A21N",
        "role": "other",
-       "lat": 58.44,
-       "lon": 15.55,
-       "alt": 1575,
-       "reg": "40212"
-      },
-      {
-       "flight": "GNY4501",
-       "t": "",
-       "role": "other",
-       "lat": 58.62,
-       "lon": 18.45,
-       "alt": 1925,
-       "reg": ""
-      },
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 53.82,
-       "lon": 21.49,
-       "alt": 36000,
-       "reg": "N159L"
+       "lat": 54.04,
+       "lon": 21.98,
+       "alt": 32375,
+       "reg": "15+11"
       }
      ]
     },
@@ -256,12 +233,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 7
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-12T12:57:47Z",
+  "at": "2026-11-12T18:57:12Z",
   "data": {
    "n_total": 1779,
    "recent": [
@@ -442,48 +419,39 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-12T12:57:47Z",
+  "at": "2026-11-12T18:57:12Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 52,
-    "??": 16,
-    "CA": 6,
-    "GB": 4,
+    "US": 42,
+    "??": 14,
+    "CA": 7,
+    "GB": 3,
+    "SA": 3,
+    "MX": 3,
     "ES": 3,
+    "JP": 2,
+    "BR": 2,
+    "DE": 2,
+    "ZA": 2,
+    "CY": 1,
     "QA": 1,
     "ET": 1,
-    "IE": 1,
-    "SA": 1,
-    "DE": 1,
-    "AE": 1,
-    "AU": 1,
-    "MX": 1,
-    "JP": 1,
-    "IN": 1
+    "IE": 1
    },
    "by_group": {
-    "N0n": 25,
+    "thegentlemen": 22,
     "Curious Worm": 9,
     "interlock": 9,
     "Booba Project": 6,
     "play": 4,
+    "incransom": 4,
     "SilentRansomGroup": 4,
     "qilin": 3,
-    "Aoqin": 3,
     "akira": 3,
     "Vortex": 3
    },
-   "kr": [
-    {
-     "victim": "JH Technology",
-     "group": "metaencryptor",
-     "country": "KR",
-     "sector": "Technology",
-     "d": "2026-11-09",
-     "url": "https://www.ransomware.live/id/SkggVGVjaG5vbG9neUBtZXRhZW5jcnlwdG9y"
-    }
-   ]
+   "kr": []
   }
  },
  "summary": {
@@ -491,7 +459,7 @@
   "kev_week": 11,
   "kev_edge_3d": 3,
   "ransom_week": 100,
-  "ransom_kr_week": 1,
-  "events": 4
+  "ransom_kr_week": 0,
+  "events": 3
  }
 }
