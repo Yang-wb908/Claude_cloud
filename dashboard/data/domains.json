@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-13T00:58:17Z",
+ "generated": "2026-11-13T06:57:10Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-13T00:58:17Z",
+  "at": "2026-11-13T06:57:10Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,13 +65,35 @@
       60.0,
       30.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 55,
+     "n": 2,
+     "key": 1,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "ZABEEL04",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.82,
+       "lon": 55.29,
+       "alt": 23000,
+       "reg": "1302"
+      },
+      {
+       "flight": "",
+       "t": "",
+       "role": "other",
+       "lat": 24.86,
+       "lon": 55.34,
+       "alt": 29500,
+       "reg": ""
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -84,8 +106,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -99,13 +121,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 32.0,
+       "lon": 34.9,
+       "alt": "ground",
+       "reg": "94-7320"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -116,13 +150,35 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
-     "base": 0,
-     "runs": 55,
+     "n": 2,
+     "key": 1,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 44.81,
+       "lon": 27.2,
+       "alt": 28725,
+       "reg": "N159L"
+      },
+      {
+       "flight": "HUF884",
+       "t": "E390",
+       "role": "other",
+       "lat": 42.26,
+       "lon": 28.48,
+       "alt": 35000,
+       "reg": "610"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -135,8 +191,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -152,20 +208,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 0
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-13T00:58:17Z",
+  "at": "2026-11-13T06:57:10Z",
   "data": {
    "n_total": 1779,
    "recent": [
@@ -326,35 +382,35 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-13T00:58:17Z",
+  "at": "2026-11-13T06:57:10Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 42,
-    "??": 14,
+    "US": 41,
+    "??": 12,
     "CA": 7,
+    "BR": 3,
     "GB": 3,
     "SA": 3,
     "MX": 3,
+    "IN": 2,
     "JP": 2,
-    "BR": 2,
     "ES": 2,
     "DE": 2,
-    "ZA": 2,
+    "TH": 1,
     "PK": 1,
-    "MY": 1,
-    "CY": 1,
-    "QA": 1
+    "GL": 1,
+    "NG": 1
    },
    "by_group": {
     "thegentlemen": 22,
     "Curious Worm": 10,
     "interlock": 9,
     "Booba Project": 6,
+    "incransom": 5,
     "play": 4,
-    "incransom": 4,
-    "SilentRansomGroup": 4,
     "Aoqin": 3,
+    "Vexy Ransomware": 3,
     "qilin": 3,
     "akira": 3
    },
