@@ -1,25 +1,77 @@
 {
- "generated": "2026-11-13T07:02:41Z",
+ "generated": "2026-11-13T12:58:55Z",
  "days": 3,
- "unmapped_total": 8,
- "max_cluster": 4,
- "max_key": "topic:China Rare",
+ "unmapped_total": 11,
+ "max_cluster": 3,
+ "max_key": "topic:Microsoft",
  "clusters": [
   {
-   "key": "topic:China Rare",
-   "n": 4,
+   "key": "topic:Microsoft",
+   "n": 3,
+   "domains": 2,
+   "types": {
+    "X": 3
+   },
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Live: Microsoft struggles to restore services as outage hits global users",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
+     "domain": "aljazeera.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Microsoft faces a major Outlook outage: ‘no signs of a cyberattack’",
+     "url": "https://www.france24.com/en/video/20261113-microsoft-faces-a-major-outlook-outage-no-signs-of-a-cyberattack",
+     "domain": "france24.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Microsoft hit by global outages: What happened and why?",
+     "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-hit-by-global-outages-what-happened-and-why?traffic_source=rss",
+     "domain": "aljazeera.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China",
+   "n": 3,
    "domains": 1,
    "types": {
-    "E": 4
+    "E": 3
    },
    "since": "2026-11-11",
    "sample": [
     {
-     "d": "2026-11-13",
-     "title": "China Rare Earth Supply Chain Vulnerabilities 2026",
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTzVGOHZIbExMRGtJVS12cHdpWG9IS3hNTWVFUlFGTXVvNUNWM2RGdGY4ZGFRQVYzMUNQVGI0MkZIOU5wMUpNeGNTSndhMGtDMS1pM1Z4TEdNMzU5dmNhWE5zamNEQ1BjSHBRRURvNFI1d0hHS2ExRTVJNXNEMU1FcVdKU1ZMSU92UGc?oc=5",
+     "d": "2026-11-12",
+     "title": "China extends suspension of new rare earth controls until January",
+     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBfaEd1NUc5X2dsVENrUVZnS29IX2I5SkVvVHpJT1JzbU9Mdm9namphRGhVZjFzU19HTVF1U0l0QlpGN2xndG9RNzRSRjlzT3ZP?oc=5",
      "domain": "news.google.com"
     },
+    {
+     "d": "2026-11-12",
+     "title": "China’s Rare Earth Relief Lets Alternative Suppliers Sell at High Prices",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMTN6aGYxMEljVVE3T3gwek5IcXdWbFZaVHdUOFV6Q01OMGpsRUhpT2FPSmJiQlMzU3VJREFUMGktRGdXR0lrWkhCMXh5T1BhVVBUS0Y5dDhlR0cwbjA0YWNudVg2LTdjSkUyVld5TVl6NUYzakFTZmtLUkJ5M3lVMXdPdVJkSHBQY0tRWDVQZThSbzZRRUxNUjN3TDZSZkNCNDEwRG1CWVhuQQ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-11",
+     "title": "China extends pause on rare-earth export restrictions — OilPrice",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTzdITXF2SHpVQnZzZ1A0b3A4dW1VU1pBZFZhd2hUbXF4T0ozZ2tkVjBuaFFJTWJtTFBscjBNcXlna1RuU3Y1QjZfN1g0ci0wT2xmaGw2QlpxSTVIZ1ByZGkzU2l6MDIzTVUzdWFGUkwzckt2U2F0dlpFUDkzWkloeDRNZVh0YUM5aHpaWFk5a3BVVDdoYXpDWDlFYW5XU1dlVVp0UGdEbE9jMVBp?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:China Rare",
+   "n": 3,
+   "domains": 1,
+   "types": {
+    "E": 3
+   },
+   "since": "2026-11-11",
+   "sample": [
     {
      "d": "2026-11-12",
      "title": "China Rare Earth Group Party Oversight Heavy Rare Earths",
@@ -41,30 +93,7 @@
    ]
   },
   {
-   "key": "topic:Microsoft",
-   "n": 2,
-   "domains": 2,
-   "types": {
-    "X": 2
-   },
-   "since": "2026-11-13",
-   "sample": [
-    {
-     "d": "2026-11-13",
-     "title": "Microsoft outage drags on for hours, disrupting Outlook, Teams for businesses and governments",
-     "url": "https://www.dawn.com/news/2044258/microsoft-outage-drags-on-for-hours-disrupting-outlook-teams-for-businesses-and-governments",
-     "domain": "dawn.com"
-    },
-    {
-     "d": "2026-11-13",
-     "title": "Microsoft struggles to repair global Outlook outage",
-     "url": "https://www.france24.com/en/technology/20261113-major-microsoft-outlook-outage-disrupts-services-in-74-countries",
-     "domain": "france24.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:China",
+   "key": "topic:Yttrium Prices",
    "n": 2,
    "domains": 1,
    "types": {
@@ -73,15 +102,15 @@
    "since": "2026-11-12",
    "sample": [
     {
-     "d": "2026-11-12",
-     "title": "China extends suspension of new rare earth controls until January",
-     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBfaEd1NUc5X2dsVENrUVZnS29IX2I5SkVvVHpJT1JzbU9Mdm9namphRGhVZjFzU19HTVF1U0l0QlpGN2xndG9RNzRSRjlzT3ZP?oc=5",
+     "d": "2026-11-13",
+     "title": "Yttrium Prices Soar 174-Fold as China Curbs Rare Earth Exports",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNlRXRmd0RG1KR1owS3lzaFB4XzVWTEZUVmxjb2NWOFlET0VfSGlrOElKeU8xeFBBRmc5Q3hPMEhIdUYyYlAta0tWWFV4aHRlTFdmMHhabWJneW41ZE4xRGt1bUFtbWVRVGswVm1wdU1lbHU0NzJQelAyS2JsTzlGb2ctQXlJSUtVdF9DRHJaMzUwQ3M2TlpoN2NB?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-11-12",
-     "title": "China’s Rare Earth Relief Lets Alternative Suppliers Sell at High Prices",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMTN6aGYxMEljVVE3T3gwek5IcXdWbFZaVHdUOFV6Q01OMGpsRUhpT2FPSmJiQlMzU3VJREFUMGktRGdXR0lrWkhCMXh5T1BhVVBUS0Y5dDhlR0cwbjA0YWNudVg2LTdjSkUyVld5TVl6NUYzakFTZmtLUkJ5M3lVMXdPdVJkSHBQY0tRWDVQZThSbzZRRUxNUjN3TDZSZkNCNDEwRG1CWVhuQQ?oc=5",
+     "title": "Yttrium Prices Soar 174-Fold After China's Rare Earth Export Curbs; Japan's Parts Supply Chain Rattled",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBWWml6Y3MzdEsyWkc1amd1NDdIalVpcjJVdXBROThOR1YwTEVndHRmQ3kyclgyMVdKUVhOSVFhc1FFYUQxck1mNW1pd0wxMEZXNFA1c0VsTFZvWDVadEtzNVFlZml0cXR6R3Joazc2bUJVUTJkOXc?oc=5",
      "domain": "news.google.com"
     }
    ]
