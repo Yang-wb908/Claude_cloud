@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T18:56:45Z",
+ "generated": "2026-11-13T00:57:55Z",
  "sources": [
   "VIIRS_NOAA20_NRT",
   "VIIRS_SNPP_NRT"
@@ -36,10 +36,10 @@
    "lon": 73.22,
    "r_km": 6,
    "n": 0,
-   "base_days": 28,
-   "base_n": 0.0,
+   "base_days": 29,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -54,10 +54,10 @@
    "lon": 39.73,
    "r_km": 5,
    "n": 0,
-   "base_days": 27,
-   "base_n": 0,
+   "base_days": 28,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -163,9 +163,9 @@
    "r_km": 5,
    "n": 0,
    "base_days": 29,
-   "base_n": 1,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.6,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -197,16 +197,13 @@
    "lat": 59.68,
    "lon": 28.4,
    "r_km": 6,
-   "n": 4,
-   "base_days": 0,
-   "base_n": null,
-   "frp_max": 17.3,
-   "base_frp": null,
-   "at": [
-    28.42132,
-    59.69945
-   ],
-   "d": "2026-11-11",
+   "n": 0,
+   "base_days": 1,
+   "base_n": 4,
+   "frp_max": 0,
+   "base_frp": 17.3,
+   "at": null,
+   "d": null,
    "status": "learning"
   },
   {
@@ -254,9 +251,9 @@
    "lat": 30.34,
    "lon": 48.28,
    "r_km": 6,
-   "n": 10,
+   "n": 3,
    "base_days": 29,
-   "base_n": 8,
+   "base_n": 9,
    "frp_max": 7.8,
    "base_frp": 4.9,
    "at": [
@@ -275,7 +272,7 @@
    "lat": 27.2,
    "lon": 56.07,
    "r_km": 8,
-   "n": 10,
+   "n": 8,
    "base_days": 29,
    "base_n": 15,
    "frp_max": 4.0,
@@ -296,16 +293,16 @@
    "lat": 29.24,
    "lon": 50.31,
    "r_km": 6,
-   "n": 7,
+   "n": 3,
    "base_days": 29,
    "base_n": 3,
-   "frp_max": 2.7,
-   "base_frp": 1.2,
+   "frp_max": 1.5,
+   "base_frp": 1.3,
    "at": [
-    50.32235,
-    29.21758
+    50.29916,
+    29.2204
    ],
-   "d": "2026-11-11",
+   "d": "2026-11-12",
    "status": "normal"
   },
   {
@@ -357,7 +354,7 @@
    "base_days": 29,
    "base_n": 1,
    "frp_max": 8.0,
-   "base_frp": 3.1,
+   "base_frp": 3.3,
    "at": [
     50.10798,
     26.68193
@@ -374,16 +371,16 @@
    "lat": 25.93,
    "lon": 49.67,
    "r_km": 7,
-   "n": 2,
-   "base_days": 29,
-   "base_n": 2,
-   "frp_max": 0.5,
+   "n": 1,
+   "base_days": 28,
+   "base_n": 2.0,
+   "frp_max": 1.5,
    "base_frp": 1.1,
    "at": [
-    49.69683,
-    25.93216
+    49.69283,
+    25.93182
    ],
-   "d": "2026-11-11",
+   "d": "2026-11-12",
    "status": "normal"
   },
   {
@@ -431,14 +428,14 @@
    "lat": 25.9,
    "lon": 51.55,
    "r_km": 8,
-   "n": 8,
+   "n": 21,
    "base_days": 29,
    "base_n": 20,
    "frp_max": 8.2,
    "base_frp": 10.2,
    "at": [
-    51.50245,
-    25.90691
+    51.52915,
+    25.88649
    ],
    "d": "2026-11-12",
    "status": "normal"
@@ -525,10 +522,10 @@
    "lon": 45.32,
    "r_km": 10,
    "n": 0,
-   "base_days": 22,
-   "base_n": 0.0,
+   "base_days": 23,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -633,10 +630,10 @@
    "lon": 30.22,
    "r_km": 10,
    "n": 0,
-   "base_days": 14,
-   "base_n": 0.0,
+   "base_days": 15,
+   "base_n": 0,
    "frp_max": 0,
-   "base_frp": 0.0,
+   "base_frp": 0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -650,16 +647,13 @@
    "lat": 19.6,
    "lon": 37.22,
    "r_km": 8,
-   "n": 1,
-   "base_days": 21,
-   "base_n": 0,
-   "frp_max": 1.5,
-   "base_frp": 0,
-   "at": [
-    37.21065,
-    19.52946
-   ],
-   "d": "2026-11-11",
+   "n": 0,
+   "base_days": 22,
+   "base_n": 0.0,
+   "frp_max": 0,
+   "base_frp": 0.0,
+   "at": null,
+   "d": null,
    "status": "normal"
   },
   {
@@ -690,10 +684,10 @@
    "lon": 29.72,
    "r_km": 10,
    "n": 2,
-   "base_days": 28,
-   "base_n": 5.0,
+   "base_days": 29,
+   "base_n": 5,
    "frp_max": 7.9,
-   "base_frp": 8.600000000000001,
+   "base_frp": 7.9,
    "at": [
     29.77901,
     11.00974
@@ -711,10 +705,10 @@
    "lon": 39.47,
    "r_km": 10,
    "n": 0,
-   "base_days": 21,
-   "base_n": 0,
+   "base_days": 22,
+   "base_n": 0.0,
    "frp_max": 0,
-   "base_frp": 0,
+   "base_frp": 0.0,
    "at": null,
    "d": null,
    "status": "normal"
@@ -728,14 +722,14 @@
    "lat": 11.75,
    "lon": -70.22,
    "r_km": 8,
-   "n": 5,
-   "base_days": 29,
-   "base_n": 7,
-   "frp_max": 13.4,
-   "base_frp": 8.5,
+   "n": 8,
+   "base_days": 28,
+   "base_n": 7.5,
+   "frp_max": 10.8,
+   "base_frp": 10.05,
    "at": [
-    -70.19494,
-    11.73849
+    -70.19339,
+    11.73767
    ],
    "d": "2026-11-12",
    "status": "normal"
@@ -821,16 +815,13 @@
    "lat": 71.27,
    "lon": 72.07,
    "r_km": 8,
-   "n": 1,
-   "base_days": 29,
-   "base_n": 0,
-   "frp_max": 2.7,
-   "base_frp": 0,
-   "at": [
-    72.0448,
-    71.2597
-   ],
-   "d": "2026-11-11",
+   "n": 0,
+   "base_days": 27,
+   "base_n": 1,
+   "frp_max": 0,
+   "base_frp": 0.8,
+   "at": null,
+   "d": null,
    "status": "normal"
   }
  ],
@@ -845,10 +836,10 @@
     27.5,
     16.0
    ],
-   "n": 479,
+   "n": 251,
    "base_days": 29,
    "base_n": 1199,
-   "n_hi": 172,
+   "n_hi": 75,
    "d": "2026-11-12",
    "status": "normal"
   },
@@ -862,10 +853,10 @@
     32.5,
     14.5
    ],
-   "n": 1257,
+   "n": 904,
    "base_days": 29,
    "base_n": 1713,
-   "n_hi": 246,
+   "n_hi": 245,
    "d": "2026-11-12",
    "status": "normal"
   },
@@ -880,8 +871,8 @@
     31.6
    ],
    "n": 0,
-   "base_days": 21,
-   "base_n": 0,
+   "base_days": 22,
+   "base_n": 0.0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -897,8 +888,8 @@
     33.6
    ],
    "n": 0,
-   "base_days": 27,
-   "base_n": 0,
+   "base_days": 28,
+   "base_n": 0.0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -913,10 +904,10 @@
     40.0,
     14.9
    ],
-   "n": 17,
+   "n": 2,
    "base_days": 29,
    "base_n": 71,
-   "n_hi": 2,
+   "n_hi": 0,
    "d": "2026-11-12",
    "status": "normal"
   },
@@ -930,11 +921,11 @@
     30.0,
     1.0
    ],
-   "n": 39,
+   "n": 0,
    "base_days": 29,
-   "base_n": 96,
+   "base_n": 94,
    "n_hi": 0,
-   "d": "2026-11-11",
+   "d": null,
    "status": "normal"
   },
   {
@@ -948,8 +939,8 @@
     21.5
    ],
    "n": 0,
-   "base_days": 26,
-   "base_n": 0.0,
+   "base_days": 27,
+   "base_n": 0,
    "n_hi": 0,
    "d": null,
    "status": "normal"
@@ -964,9 +955,9 @@
     39.0,
     49.5
    ],
-   "n": 3,
+   "n": 1,
    "base_days": 29,
-   "base_n": 8,
+   "base_n": 7,
    "n_hi": 0,
    "d": "2026-11-12",
    "status": "normal"
