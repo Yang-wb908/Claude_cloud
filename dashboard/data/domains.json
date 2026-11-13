@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-13T06:57:10Z",
+ "generated": "2026-11-13T07:03:04Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-13T06:57:10Z",
+  "at": "2026-11-13T07:03:04Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -67,31 +67,31 @@
      ],
      "n": 2,
      "key": 1,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {
-      "tanker": 1,
-      "other": 1
+      "other": 1,
+      "tanker": 1
      },
      "ac": [
-      {
-       "flight": "ZABEEL04",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 24.82,
-       "lon": 55.29,
-       "alt": 23000,
-       "reg": "1302"
-      },
       {
        "flight": "",
        "t": "",
        "role": "other",
-       "lat": 24.86,
-       "lon": 55.34,
-       "alt": 29500,
+       "lat": 24.98,
+       "lon": 55.58,
+       "alt": 27950,
        "reg": ""
+      },
+      {
+       "flight": "ZABEEL04",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.68,
+       "lon": 55.58,
+       "alt": 23000,
+       "reg": "1302"
       }
      ]
     },
@@ -134,8 +134,8 @@
        "flight": "",
        "t": "C130",
        "role": "airlift",
-       "lat": 32.0,
-       "lon": 34.9,
+       "lat": 32.02,
+       "lon": 34.89,
        "alt": "ground",
        "reg": "94-7320"
       }
@@ -150,33 +150,23 @@
       42.0,
       47.5
      ],
-     "n": 2,
-     "key": 1,
-     "base": 0.0,
-     "runs": 56,
+     "n": 1,
+     "key": 0,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {
-      "isr": 1,
       "other": 1
      },
      "ac": [
       {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 44.81,
-       "lon": 27.2,
-       "alt": 28725,
-       "reg": "N159L"
-      },
-      {
-       "flight": "HUF884",
-       "t": "E390",
+       "flight": "TURNA21",
+       "t": "AT76",
        "role": "other",
-       "lat": 42.26,
-       "lon": 28.48,
-       "alt": 35000,
-       "reg": "610"
+       "lat": 40.67,
+       "lon": 30.07,
+       "alt": 6675,
+       "reg": "TCB756"
       }
      ]
     },
@@ -216,12 +206,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-13T06:57:10Z",
+  "at": "2026-11-13T07:03:04Z",
   "data": {
    "n_total": 1779,
    "recent": [
@@ -382,7 +372,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-13T06:57:10Z",
+  "at": "2026-11-13T07:03:04Z",
   "data": {
    "n_week": 100,
    "by_country": {
