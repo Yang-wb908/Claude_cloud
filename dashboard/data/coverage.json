@@ -1,58 +1,58 @@
 {
- "generated": "2026-11-13T12:58:55Z",
+ "generated": "2026-11-13T18:57:30Z",
  "days": 3,
- "unmapped_total": 11,
+ "unmapped_total": 18,
  "max_cluster": 3,
- "max_key": "topic:Microsoft",
+ "max_key": "topic:Turkiye",
  "clusters": [
   {
-   "key": "topic:Microsoft",
+   "key": "topic:Turkiye",
    "n": 3,
-   "domains": 2,
+   "domains": 3,
    "types": {
-    "X": 3
+    "D": 3
    },
    "since": "2026-11-13",
    "sample": [
     {
      "d": "2026-11-13",
-     "title": "Live: Microsoft struggles to restore services as outage hits global users",
-     "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/live-microsoft-struggles-to-restore-services-as-outage-hits-global-users?traffic_source=rss",
+     "title": "Turkiye, Qatar sign defence agreement: Turkish presidency",
+     "url": "https://www.dawn.com/news/2044322/turkiye-qatar-sign-defence-agreement-turkish-presidency",
+     "domain": "dawn.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Turkiye and Qatar sign mutual defence agreement",
+     "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement?traffic_source=rss",
      "domain": "aljazeera.com"
     },
     {
      "d": "2026-11-13",
-     "title": "Microsoft faces a major Outlook outage: ‘no signs of a cyberattack’",
-     "url": "https://www.france24.com/en/video/20261113-microsoft-faces-a-major-outlook-outage-no-signs-of-a-cyberattack",
-     "domain": "france24.com"
-    },
-    {
-     "d": "2026-11-13",
-     "title": "Microsoft hit by global outages: What happened and why?",
-     "url": "https://www.aljazeera.com/news/2026/11/13/microsoft-hit-by-global-outages-what-happened-and-why?traffic_source=rss",
-     "domain": "aljazeera.com"
+     "title": "Turkiye, Qatar sign mutual defense agreement, Turkish presidency says",
+     "url": "https://www.arabnews.com/middle-east/turkiye-qatar-sign-mutual-defense-agreement-turkish-presidency-says-3011680",
+     "domain": "arabnews.com"
     }
    ]
   },
   {
    "key": "topic:China",
    "n": 3,
-   "domains": 1,
+   "domains": 2,
    "types": {
     "E": 3
    },
    "since": "2026-11-11",
    "sample": [
     {
-     "d": "2026-11-12",
-     "title": "China extends suspension of new rare earth controls until January",
-     "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBfaEd1NUc5X2dsVENrUVZnS29IX2I5SkVvVHpJT1JzbU9Mdm9namphRGhVZjFzU19HTVF1U0l0QlpGN2xndG9RNzRSRjlzT3ZP?oc=5",
-     "domain": "news.google.com"
+     "d": "2026-11-13",
+     "title": "China warns against fresh US chip curbs",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/13/china-warns-against-fresh-us-chip-curbs?traffic_source=rss",
+     "domain": "aljazeera.com"
     },
     {
-     "d": "2026-11-12",
-     "title": "China’s Rare Earth Relief Lets Alternative Suppliers Sell at High Prices",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMTN6aGYxMEljVVE3T3gwek5IcXdWbFZaVHdUOFV6Q01OMGpsRUhpT2FPSmJiQlMzU3VJREFUMGktRGdXR0lrWkhCMXh5T1BhVVBUS0Y5dDhlR0cwbjA0YWNudVg2LTdjSkUyVld5TVl6NUYzakFTZmtLUkJ5M3lVMXdPdVJkSHBQY0tRWDVQZThSbzZRRUxNUjN3TDZSZkNCNDEwRG1CWVhuQQ?oc=5",
+     "d": "2026-11-13",
+     "title": "China could cap rare earths sales if US expands chip curbs over Nvidia: analysts",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxObmIxT2FWVk9hRUdTbm80NEotRVE1VEkzSklWOTVoODlaVU1Vb3dMQWpwbUw0QllvZGNGb016YjBfRXJHRlgyLWFmd2VSN2k0MFJHa1dvVzFUNkVoQ0RNVlNKQ0RxTjJ6SDFYOHMyZVEzUWNDdkk1bDg4RDA1N3haNTU1R3ctZHdaOS1COVNtZG5rN3dETVR0Y1Uxcm9ZTlJRVnphYmU0YWpVTFl5enBLdkl2QndwRVowNUJDS1VxbFRMVmRxeWpsV3B6MWhvaEJvdHBMUlZ0blFXNjRhTXNPdA?oc=5",
      "domain": "news.google.com"
     },
     {
@@ -64,13 +64,128 @@
    ]
   },
   {
-   "key": "topic:China Rare",
-   "n": 3,
+   "key": "topic:Microsoft",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "X": 2
+   },
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Microsoft 'deeply sorry' as outage triggers global chaos",
+     "url": "https://www.dawn.com/news/2044258/microsoft-deeply-sorry-as-outage-triggers-global-chaos",
+     "domain": "dawn.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Microsoft’s Global Outage and Fixes: What We Know",
+     "url": "https://www.nytimes.com/2026/11/13/technology/microsoft-outage-what-to-know.html",
+     "domain": "nytimes.com"
+    }
+   ]
+  },
+  {
+   "key": "place:나이로비",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "X": 2
+   },
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Kenyan building collapse near Nairobi kills six people",
+     "url": "https://www.aljazeera.com/news/2026/11/13/kenyan-building-collapse-near-nairobi-kills-six-people?traffic_source=rss",
+     "domain": "aljazeera.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Kenyans brace for El Niño rains as flood survivors fear a repeat of 2024 devastation",
+     "url": "http://www.africanews.com/2026/11/13/kenyans-brace-for-el-nino-rains-as-flood-survivors-fear-a-repeat-of-2024-devastation/",
+     "domain": "africanews.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Indonesia",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-11-12",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Indonesia's wiretapping scandal opens a political fault line",
+     "url": "https://www.dw.com/en/indonesia-s-wiretapping-scandal-opens-a-political-fault-line/a-79939753?maca=en-rss-en-world-4025-rdf",
+     "domain": "dw.com"
+    },
+    {
+     "d": "2026-11-12",
+     "title": "Indonesia's vice-president resigns after academic credentials questioned",
+     "url": "https://www.cbc.ca/news/world/indonesia-vice-president-resigns-9.7418723?cmp=rss",
+     "domain": "cbc.ca"
+    }
+   ]
+  },
+  {
+   "key": "topic:Copper",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Copper shortage or surplus? Banks split on 2027 outlook",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdjdVQkZBNzZCSl9oZ3VmLUd2cEtRdFNWR3JkYWhQVmNiOXJxSTZUMExwZGVJYkRULWhuRzFHZGpLTGpnMUVjOWRES0VTSnZHcm82MWxHcU5HRVExM2hKVkJhSHB3ams5YTNMRWdIbHVuSVZGOFBQVzNGbU53Q0sxdzFuZUY?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Copper shortage or surplus? Banks split on 2027 outlook",
+     "url": "https://www.mining.com/copper-shortage-or-surplus-banks-split-on-2027-outlook/",
+     "domain": "mining.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Turkey",
+   "n": 2,
    "domains": 1,
    "types": {
-    "E": 3
+    "D": 2
    },
-   "since": "2026-11-11",
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-13",
+     "title": "Turkey and Qatar sign mutual defence agreement",
+     "url": "https://www.middleeasteye.net/news/turkey-and-qatar-sign-mutual-defence-agreement",
+     "domain": "middleeasteye.net"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Turkey and Qatar sign mutual defence pact, Erdogan’s office says",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/turkey-and-qatar-sign-mutual-defence-pact-erdogans-office-says",
+     "domain": "middleeasteye.net"
+    }
+   ]
+  },
+  {
+   "key": "topic:China Rare",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 2
+   },
+   "since": "2026-11-12",
    "sample": [
     {
      "d": "2026-11-12",
@@ -82,35 +197,6 @@
      "d": "2026-11-12",
      "title": "China Rare Earth Export Controls 2027 Extension Explained",
      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8wUkpXaFJIc3NsS3k0Vjh3UUZWNzR0dFhmRXd0R0UtTW1QemVGWUhyR3djTVBxd2s2SWJLLUFWeTNFSDA2U2Z6Q3NYNkFuYlJXVUZnM1lXeTN5WmUzd2NDWEZDWDJCd0k1MkxYWHAwSWdKN1VYeG14UF9vcGs4czA?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-11",
-     "title": "China Rare Earth Export Revenue 2026 Explained",
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE95bFotaHV1MDB5aGlqZmhjaDZaZFhBbTE4SlVKOFJMMkM2SFVlZ0UwVTZIaXRRa3k5dWVDVW82SVdrTmNIcmdlN2hsT3lKNHBYYkMzekNFQUdFMWdjdG1RTWxWZHp2SVFvVFFEVTcxTDN4UHBvMGhNblRYOTM0QQ?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Yttrium Prices",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-11-12",
-   "sample": [
-    {
-     "d": "2026-11-13",
-     "title": "Yttrium Prices Soar 174-Fold as China Curbs Rare Earth Exports",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNlRXRmd0RG1KR1owS3lzaFB4XzVWTEZUVmxjb2NWOFlET0VfSGlrOElKeU8xeFBBRmc5Q3hPMEhIdUYyYlAta0tWWFV4aHRlTFdmMHhabWJneW41ZE4xRGt1bUFtbWVRVGswVm1wdU1lbHU0NzJQelAyS2JsTzlGb2ctQXlJSUtVdF9DRHJaMzUwQ3M2TlpoN2NB?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "Yttrium Prices Soar 174-Fold After China's Rare Earth Export Curbs; Japan's Parts Supply Chain Rattled",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBWWml6Y3MzdEsyWkc1amd1NDdIalVpcjJVdXBROThOR1YwTEVndHRmQ3kyclgyMVdKUVhOSVFhc1FFYUQxck1mNW1pd0wxMEZXNFA1c0VsTFZvWDVadEtzNVFlZml0cXR6R3Joazc2bUJVUTJkOXc?oc=5",
      "domain": "news.google.com"
     }
    ]
