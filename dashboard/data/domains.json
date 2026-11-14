@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-13T18:57:55Z",
+ "generated": "2026-11-14T00:57:28Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-13T18:57:55Z",
+  "at": "2026-11-14T00:57:28Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 56,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.06,
-       "lon": 124.69,
-       "alt": 38000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -79,8 +67,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -96,8 +84,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -111,25 +99,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 56,
+     "n": 0,
+     "key": 0,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR9915",
-       "t": "A332",
-       "role": "tanker",
-       "lat": 34.59,
-       "lon": 32.97,
-       "alt": "ground",
-       "reg": "ZZ335"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -142,8 +118,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -159,8 +135,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -176,32 +152,32 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {
       "other": 1
      },
      "ac": [
       {
-       "flight": "DRAG972",
+       "flight": "DRAG971",
        "t": "EC45",
        "role": "other",
-       "lat": 14.83,
-       "lon": -61.07,
-       "alt": 8025,
-       "reg": "F-ZBRA"
+       "lat": 16.0,
+       "lon": -61.74,
+       "alt": 750,
+       "reg": "F-ZBQY"
       }
      ]
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-13T18:57:55Z",
+  "at": "2026-11-14T00:57:28Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -354,75 +330,55 @@
      "due": "2026-11-06",
      "ransom": false,
      "edge": false
-    },
-    {
-     "cve": "CVE-2026-118527",
-     "vendor": "Ivanti",
-     "product": "Connect Secure",
-     "name": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
-     "added": "2026-10-30",
-     "due": "2026-11-13",
-     "ransom": false,
-     "edge": true
-    },
-    {
-     "cve": "CVE-2026-111357",
-     "vendor": "Ivanti",
-     "product": "Connect Secure",
-     "name": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
-     "added": "2026-10-30",
-     "due": "2026-11-02",
-     "ransom": false,
-     "edge": true
     }
    ],
-   "n_recent": 17,
-   "n_week": 13
+   "n_recent": 15,
+   "n_week": 12
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-13T18:57:55Z",
+  "at": "2026-11-14T00:57:28Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 42,
-    "??": 10,
-    "CA": 7,
+    "US": 43,
+    "??": 9,
+    "CA": 8,
     "GB": 3,
     "SA": 3,
     "MX": 3,
+    "AU": 2,
     "MY": 2,
     "BR": 2,
-    "IN": 2,
-    "JP": 2,
     "ES": 2,
     "DE": 2,
     "TR": 1,
     "BW": 1,
-    "TH": 1
+    "TH": 1,
+    "PK": 1
    },
    "by_group": {
     "thegentlemen": 22,
     "Curious Worm": 10,
     "interlock": 9,
+    "play": 6,
     "akira": 6,
     "Booba Project": 6,
     "incransom": 4,
-    "play": 4,
-    "N0n": 3,
-    "Vexy Ransomware": 3,
-    "qilin": 3
+    "Aoqin": 3,
+    "Dark Project": 3,
+    "N0n": 3
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 13,
-  "kev_edge_3d": 4,
+  "kev_week": 12,
+  "kev_edge_3d": 1,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 4
+  "events": 1
  }
 }

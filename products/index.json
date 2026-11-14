@@ -1,94 +1,6 @@
 {
  "products": [
   {
-   "serial": "WR-26-1012-04",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)",
-   "th": "ethiopia",
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-04.md",
-   "key": "WR:tripwire:ethiopia_interstate:2026-10-12"
-  },
-  {
-   "serial": "WR-26-1012-05",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "구리 6달러/lb 돌파",
-   "th": null,
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-05.md",
-   "key": "WR:tripwire:copper_6:2026-10-12"
-  },
-  {
-   "serial": "WR-26-1012-06",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "보건안보 전역 24시간 보건(H) 사건 3건 이상",
-   "th": "bio",
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-06.md",
-   "key": "WR:tripwire:bio_health_events:2026-10-12"
-  },
-  {
-   "serial": "WR-26-1012-07",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "감시 국가 인터넷 대규모 장애·차단 (IODA)",
-   "th": null,
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-07.md",
-   "key": "WR:tripwire:ioda_outage:2026-10-12"
-  },
-  {
-   "serial": "WR-26-1012-08",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "감시 시설·해협 300km 안 규모 5 이상 지진 (USGS)",
-   "th": null,
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-08.md",
-   "key": "WR:tripwire:quake_near_site:2026-10-12"
-  },
-  {
-   "serial": "WR-26-1012-09",
-   "kind": "WR",
-   "d": "2026-10-12",
-   "title": "한국 기업·기관 랜섬웨어 피해 게시 주 3건 이상",
-   "th": null,
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1012-09.md",
-   "key": "WR:tripwire:ransom_kr:2026-10-12"
-  },
-  {
-   "serial": "DIB-26-1013",
-   "kind": "DIB",
-   "d": "2026-10-13",
-   "title": "일일 정보 브리프",
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/DIB-26-1013.md"
-  },
-  {
-   "serial": "WR-26-1013-01",
-   "kind": "WR",
-   "d": "2026-10-13",
-   "title": "호르무즈 일일 통항 10척 미만 (PortWatch)",
-   "th": "iran",
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1013-01.md",
-   "key": "WR:tripwire:hormuz_transits_low:2026-10-13"
-  },
-  {
-   "serial": "WR-26-1013-02",
-   "kind": "WR",
-   "d": "2026-10-13",
-   "title": "북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)",
-   "th": "korea",
-   "cls": "UNCLASSIFIED // OSINT",
-   "path": "products/WR-26-1013-02.md",
-   "key": "WR:tripwire:korea_missile:2026-10-13"
-  },
-  {
    "serial": "WR-26-1013-03",
    "kind": "WR",
    "d": "2026-10-13",
@@ -3935,7 +3847,95 @@
    "cls": "UNCLASSIFIED // OSINT",
    "path": "products/WR-26-1113-10.md",
    "key": "WR:tripwire:firms_site_alert:2026-11-13"
+  },
+  {
+   "serial": "DIB-26-1114",
+   "kind": "DIB",
+   "d": "2026-11-14",
+   "title": "일일 정보 브리프",
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/DIB-26-1114.md"
+  },
+  {
+   "serial": "WR-26-1114-01",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "호르무즈 일일 통항 10척 미만 (PortWatch)",
+   "th": "iran",
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-01.md",
+   "key": "WR:tripwire:hormuz_transits_low:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-02",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "북한 미사일 발사 (24시간 내 공습·미사일 유형 사건)",
+   "th": "korea",
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-02.md",
+   "key": "WR:tripwire:korea_missile:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-03",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "해상 피격·피랍 사건 24시간 내 3건 이상",
+   "th": null,
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-03.md",
+   "key": "WR:tripwire:maritime_attacks:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-04",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "에티오피아–에리트레아 국가 간 교전 관련 사건 급증 (24시간 5건 이상)",
+   "th": "ethiopia",
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-04.md",
+   "key": "WR:tripwire:ethiopia_interstate:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-05",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "구리 6달러/lb 돌파",
+   "th": null,
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-05.md",
+   "key": "WR:tripwire:copper_6:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-06",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "보건안보 전역 24시간 보건(H) 사건 3건 이상",
+   "th": "bio",
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-06.md",
+   "key": "WR:tripwire:bio_health_events:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-07",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "감시 국가 인터넷 대규모 장애·차단 (IODA)",
+   "th": null,
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-07.md",
+   "key": "WR:tripwire:ioda_outage:2026-11-14"
+  },
+  {
+   "serial": "WR-26-1114-08",
+   "kind": "WR",
+   "d": "2026-11-14",
+   "title": "VPN·방화벽 등 경계 장비 취약점 실제 악용 확인 (CISA KEV, 3일 내)",
+   "th": null,
+   "cls": "UNCLASSIFIED // OSINT",
+   "path": "products/WR-26-1114-08.md",
+   "key": "WR:tripwire:kev_edge:2026-11-14"
   }
  ],
- "generated": "2026-11-13T18:57:58Z"
+ "generated": "2026-11-14T00:57:30Z"
 }

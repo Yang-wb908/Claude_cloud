@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T18:57:57Z",
+ "generated": "2026-11-14T00:57:30Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 3,
    "threshold": 10,
    "op": "<",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "korea_missile",
@@ -21,7 +21,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "maritime_attacks",
@@ -29,10 +29,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 39,
+   "current": 26,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -40,10 +40,10 @@
    "sev": 4,
    "th": "ethiopia",
    "why": "국가 간 전쟁 공식화 가능성.",
-   "current": 8,
+   "current": 7,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "copper_6",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": null,
    "why": "공급 차질·재고 고갈 신호.",
-   "current": 6.08,
+   "current": 6.06,
    "threshold": 6,
    "op": ">",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "bio_health_events",
@@ -65,18 +65,7 @@
    "current": 15,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
-  },
-  {
-   "id": "firms_site_alert",
-   "title": "위성 열점 경보 (감시 시설·분쟁 지역에서 평소의 3배 이상, NASA FIRMS)",
-   "sev": 3,
-   "th": null,
-   "why": "정유·터미널·기지 주변 열점 급증은 피격·화재 신호. 사건 목록의 '위성 열점' 항목과 FIRMS 지도로 확인.",
-   "current": 1,
-   "threshold": 1,
-   "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "ioda_outage",
@@ -87,18 +76,7 @@
    "current": 3,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
-  },
-  {
-   "id": "gdacs_red",
-   "title": "GDACS 적색 재난 경보 (태풍·홍수·지진·화산)",
-   "sev": 2,
-   "th": null,
-   "why": "대규모 인명 피해가 예상되는 재난. 항만·생산 차질과 인도적 위기, 군 동원으로 이어진다.",
-   "current": 1,
-   "threshold": 1,
-   "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   },
   {
    "id": "kev_edge",
@@ -106,10 +84,10 @@
    "sev": 2,
    "th": null,
    "why": "국가 배후 해킹 조직이 즉시 노리는 유형. 국내 기관·기업 장비 패치 여부 점검.",
-   "current": 4,
+   "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-13T18:57:57Z"
+   "at": "2026-11-14T00:57:30Z"
   }
  ]
 }
