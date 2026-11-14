@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-14T00:57:28Z",
+ "generated": "2026-11-14T06:44:02Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-14T00:57:28Z",
+  "at": "2026-11-14T06:44:02Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -14,13 +14,25 @@
       126.0,
       27.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "1114",
+       "t": "B738",
+       "role": "other",
+       "lat": 24.4,
+       "lon": 121.1,
+       "alt": 16000,
+       "reg": "3701"
+      }
+     ]
     },
     "scs": {
      "name": "남중국해",
@@ -31,13 +43,25 @@
       121.0,
       18.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "TANOM06",
+       "t": "A139",
+       "role": "other",
+       "lat": 6.16,
+       "lon": 116.13,
+       "alt": 1150,
+       "reg": "M503-2"
+      }
+     ]
     },
     "korea": {
      "name": "한반도 주변",
@@ -48,13 +72,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 35.8,
+       "lon": 124.41,
+       "alt": 38000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,13 +101,25 @@
       60.0,
       30.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "UAF311",
+       "t": "C130",
+       "role": "airlift",
+       "lat": 25.49,
+       "lon": 53.3,
+       "alt": 20000,
+       "reg": "311"
+      }
+     ]
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -99,13 +147,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "VM712",
+       "t": "C560",
+       "role": "other",
+       "lat": 34.36,
+       "lon": 32.32,
+       "alt": 17050,
+       "reg": "166712"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -150,34 +210,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "DRAG971",
-       "t": "EC45",
-       "role": "other",
-       "lat": 16.0,
-       "lon": -61.74,
-       "alt": 750,
-       "reg": "F-ZBQY"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-14T00:57:28Z",
+  "at": "2026-11-14T06:44:02Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -338,13 +386,14 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-14T00:57:28Z",
+  "at": "2026-11-14T06:44:02Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 43,
-    "??": 9,
-    "CA": 8,
+    "US": 39,
+    "??": 12,
+    "CA": 7,
+    "DE": 3,
     "GB": 3,
     "SA": 3,
     "MX": 3,
@@ -352,23 +401,22 @@
     "MY": 2,
     "BR": 2,
     "ES": 2,
-    "DE": 2,
+    "KW": 1,
     "TR": 1,
     "BW": 1,
-    "TH": 1,
-    "PK": 1
+    "TH": 1
    },
    "by_group": {
     "thegentlemen": 22,
-    "Curious Worm": 10,
-    "interlock": 9,
+    "Curious Worm": 12,
+    "interlock": 6,
     "play": 6,
     "akira": 6,
     "Booba Project": 6,
     "incransom": 4,
     "Aoqin": 3,
-    "Dark Project": 3,
-    "N0n": 3
+    "Panzer": 3,
+    "Dark Project": 3
    },
    "kr": []
   }
