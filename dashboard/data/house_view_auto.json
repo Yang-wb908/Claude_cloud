@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 73.0,
+   "p": 73.2,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -39,14 +39,14 @@
     "p": 5.5,
     "q": "Strait of Hormuz traffic returns to normal by December 31?",
     "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 17912728,
+    "vol": 17913027,
     "end": "2027-01-01",
     "w": 0.3
    }
   },
   {
    "id": "hormuz_war",
-   "p": 16.5,
+   "p": 16.3,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -57,15 +57,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.896,
+     "f": 0.884,
      "note": "예측시장 8% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 8.5,
+    "p": 7.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 80181711,
+    "vol": 80200344,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -113,7 +113,7 @@
     "p": 6.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 3000448,
+    "vol": 3000611,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -139,7 +139,7 @@
     "p": 1.5,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46413770,
+    "vol": 46414878,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -180,7 +180,7 @@
     "p": 87.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 8517400,
+    "vol": 8520600,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -315,18 +315,18 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 8.6,
+   "p": 8.5,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
      "key": "market:india_pak_loc_escalation",
-     "f": 0.851,
+     "f": 0.838,
      "note": "예측시장 6% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 6.1,
+    "p": 5.8,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
     "vol": 353223,
@@ -365,6 +365,7 @@
   "ioda": [
    "carib",
    "europe",
+   "sahel",
    "taiwan"
   ]
  },
@@ -375,7 +376,6 @@
  "fired": [
   "bio_health_events",
   "copper_6",
-  "coverage_surge",
   "ethiopia_interstate",
   "firms_site_alert",
   "hormuz_transits_low",

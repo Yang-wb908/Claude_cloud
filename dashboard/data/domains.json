@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-14T12:57:00Z",
+ "generated": "2026-11-14T18:19:42Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-14T12:57:00Z",
+  "at": "2026-11-14T18:19:42Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.53,
+       "lon": 127.37,
+       "alt": 38000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -66,22 +78,22 @@
       30.5
      ],
      "n": 1,
-     "key": 0,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "RSD308",
-       "t": "A319",
-       "role": "other",
-       "lat": 23.43,
-       "lon": 57.06,
-       "alt": 29275,
-       "reg": "RA-73025"
+       "flight": "ZABEEL05",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 24.57,
+       "lon": 55.48,
+       "alt": 22000,
+       "reg": "1302"
       }
      ]
     },
@@ -111,13 +123,25 @@
       37.0,
       37.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "tanker": 1
+     },
+     "ac": [
+      {
+       "flight": "",
+       "t": "K35R",
+       "role": "tanker",
+       "lat": 31.96,
+       "lon": 34.23,
+       "alt": 10875,
+       "reg": "62-3529"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -145,34 +169,13 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "FNY5622",
-       "t": "ATLA",
-       "role": "other",
-       "lat": 55.35,
-       "lon": 11.76,
-       "alt": 20050,
-       "reg": "12"
-      },
-      {
-       "flight": "MMF41",
-       "t": "",
-       "role": "other",
-       "lat": 54.97,
-       "lon": 24.25,
-       "alt": 2050,
-       "reg": ""
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -183,22 +186,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "RCH4207",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 17.84,
+       "lon": -67.2,
+       "alt": 30000,
+       "reg": "95-0104"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 3
+   "total_mil": 4
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-14T12:57:00Z",
+  "at": "2026-11-14T18:19:42Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -359,12 +374,12 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-14T12:57:00Z",
+  "at": "2026-11-14T18:19:42Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 38,
-    "??": 12,
+    "US": 37,
+    "??": 13,
     "CA": 7,
     "DE": 4,
     "GB": 3,
@@ -385,8 +400,8 @@
     "play": 6,
     "akira": 6,
     "Booba Project": 6,
-    "interlock": 5,
     "incransom": 4,
+    "interlock": 3,
     "Aoqin": 3,
     "Panzer": 3,
     "Dark Project": 3

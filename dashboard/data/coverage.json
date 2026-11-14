@@ -1,48 +1,65 @@
 {
- "generated": "2026-11-14T12:56:42Z",
+ "generated": "2026-11-14T18:19:19Z",
  "days": 3,
- "unmapped_total": 11,
- "max_cluster": 5,
+ "unmapped_total": 14,
+ "max_cluster": 3,
  "max_key": "topic:Microsoft",
  "clusters": [
   {
    "key": "topic:Microsoft",
-   "n": 5,
-   "domains": 5,
+   "n": 3,
+   "domains": 3,
    "types": {
-    "X": 5
+    "X": 3
    },
    "since": "2026-11-14",
    "sample": [
     {
      "d": "2026-11-14",
+     "title": "Microsoft announces service 'restored', global outage over",
+     "url": "https://www.dawn.com/news/2044507/microsoft-announces-service-restored-global-outage-over",
+     "domain": "dawn.com"
+    },
+    {
+     "d": "2026-11-14",
+     "title": "Microsoft apologises for global outage and rules out cyberattack",
+     "url": "http://www.africanews.com/2026/11/14/microsoft-apologises-for-global-outage-and-rules-out-cyberattack/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-11-14",
      "title": "Microsoft services fully restored after global outage",
      "url": "https://www.cbc.ca/news/business/microsoft-services-restored-after-outage-9.7422072?cmp=rss",
      "domain": "cbc.ca"
-    },
+    }
+   ]
+  },
+  {
+   "key": "topic:China Rare",
+   "n": 3,
+   "domains": 1,
+   "types": {
+    "E": 3
+   },
+   "since": "2026-11-13",
+   "sample": [
     {
      "d": "2026-11-14",
-     "title": "Microsoft says services fully restored after global outage hits governments",
-     "url": "https://www.theguardian.com/technology/2026/nov/14/microsoft-says-services-fully-restored-after-global-outage",
-     "domain": "theguardian.com"
+     "title": "China Rare Earth Separation Plant vs Western Supply Chains 2026",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNd0FhRC1mbElfb2V1SG9CaG51aUdJWGU2bkZRNHVWNThMTFZuTllxZFN2SVlwN194SHJfZXVZU0lHU1VWUzJxZlpOWVM0MlZIbWNkbzJidDgwMjlTd3ROank4b2xWb0lhdno1VDdkOFZpVDlacUxxeDVPZkR0bTNhbkE1ZXBETDdlNHRIOG1jRVdiMVo5LW5z?oc=5",
+     "domain": "news.google.com"
     },
     {
-     "d": "2026-11-14",
-     "title": "Microsoft's widespread outages caused global chaos, including in the healthcasre industry",
-     "url": "https://www.france24.com/en/microsoft-s-widespread-outages-caused-global-chaos-including-in-the-healthcasre-industry",
-     "domain": "france24.com"
+     "d": "2026-11-13",
+     "title": "China Rare Earth SOE Political Risk for Western Buyers",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1JN2JUWGt2UTJ0am8xY3BzNVh0NlBUTHoxQ3FxV1dJVmhwU1paVFdsMlltTVZYUnZwdllHX2hHemFJZnd1c0l6UmZ3NGtWMkozdlVKU24zTFlmdURpRWlhNmZSS2p5Uk1iZnlzZll6TElXNVNwTEVfWUo4M0U?oc=5",
+     "domain": "news.google.com"
     },
     {
-     "d": "2026-11-14",
-     "title": "Microsoft says all services working again",
-     "url": "https://www.dw.com/en/microsoft-says-all-services-working-again/a-79946887?maca=en-rss-en-world-4025-rdf",
-     "domain": "dw.com"
-    },
-    {
-     "d": "2026-11-14",
-     "title": "Microsoft says all services restored after global outage",
-     "url": "https://www.arabnews.com/world/microsoft-says-all-services-restored-after-global-outage-3011792",
-     "domain": "arabnews.com"
+     "d": "2026-11-13",
+     "title": "China Rare Earth Supply Chain Vulnerabilities 2026",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTzVGOHZIbExMRGtJVS12cHdpWG9IS3hNTWVFUlFGTXVvNUNWM2RGdGY4ZGFRQVYzMUNQVGI0MkZIOU5wMUpNeGNTSndhMGtDMS1pM1Z4TEdNMzU5dmNhWE5zamNEQ1BjSHBRRURvNFI1d0hHS2ExRTVJNXNEMU1FcVdKU1ZMSU92UGc?oc=5",
+     "domain": "news.google.com"
     }
    ]
   },
@@ -70,24 +87,24 @@
    ]
   },
   {
-   "key": "topic:China Rare",
+   "key": "topic:Trump",
    "n": 2,
    "domains": 1,
    "types": {
-    "E": 2
+    "D": 2
    },
    "since": "2026-11-13",
    "sample": [
     {
-     "d": "2026-11-13",
-     "title": "China Rare Earth SOE Political Risk for Western Buyers",
-     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1JN2JUWGt2UTJ0am8xY3BzNVh0NlBUTHoxQ3FxV1dJVmhwU1paVFdsMlltTVZYUnZwdllHX2hHemFJZnd1c0l6UmZ3NGtWMkozdlVKU24zTFlmdURpRWlhNmZSS2p5Uk1iZnlzZll6TElXNVNwTEVfWUo4M0U?oc=5",
+     "d": "2026-11-14",
+     "title": "Trump, Xi, Putin to hold historic meeting in China: White House",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOU5VcUlzV2Z2dWRXQzBMYnVQMnBWUEwzbXR2dktwaEZ5dUYxUXBvSmdEZjVZTmJDek5GQUIxdFBTNVprcHpFNE9WTC1taF9iZnp6aWNpN2YxbmplX1NOS0hBN0UwYnp3T3pGeXpYOEdMMDFzYkd5d2x2X05nSWZjOTNpLTJURnhSLTJoVzdkaVFsZk5Rb0hrVUtvYThmVmRL?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-11-13",
-     "title": "China Rare Earth Supply Chain Vulnerabilities 2026",
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTzVGOHZIbExMRGtJVS12cHdpWG9IS3hNTWVFUlFGTXVvNUNWM2RGdGY4ZGFRQVYzMUNQVGI0MkZIOU5wMUpNeGNTSndhMGtDMS1pM1Z4TEdNMzU5dmNhWE5zamNEQ1BjSHBRRURvNFI1d0hHS2ExRTVJNXNEMU1FcVdKU1ZMSU92UGc?oc=5",
+     "title": "Trump admin aims to maintain Israel aid in coming years, despite US president’s claim otherwise",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd21ZVXdsc0ZQMl9uNnBnUU5jMlhVM1kzdG9zald6SzZhMEUwMVIyQTEyVjB1UGpTNGViWnZveWR0di1BVGVldk5RTG8td21TRzV5VEw5NHRvcTNIOHAzeGVpaDAyZkc1QkYtSEhGTUdhX0lHWDFkU090Z0ZGWjBWYnhRazViTTBZNFR6RlhGdEpLRk9YOHhfRFhkdWlla1RsMThSb1NVcjRnZ1pNbVhNajFyTC1tRVpIQV8yNnQ5UkFZQdIBxwFBVV95cUxQRUdtWW1ERU1sa1Zvelg4WGVzbklRWGZ0bjdDeXhpMVU0SWJSYmlqRnFjTEVYdGVDaVNjdWl4Z0toSEJWOVMtNlNDbzlKa0tod29UZWFDNjE1QUo0eHNqakJFdGNBUVVTRkVndTItX1ZBNlVTekt0c0lla2F1MURkbENYZUlsRklsTGJ2VUxQbkkyVkRQVFlldU45MWpndU9zdjhkVDIxZVlwQnhnUFkxUGNTcGJ2SEZyT1R4SnVYc29PNWtMb1ZF?oc=5",
      "domain": "news.google.com"
     }
    ]
@@ -104,13 +121,37 @@
     {
      "d": "2026-11-13",
      "title": "Yttrium Prices Soar 174-Fold as China Curbs Rare Earth Exports",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQkUxRS0zTk1PY2RGX3VDVVJqcXlRNS0wSTJHX2g1NnFLRktvYTZ2RktabGRka2FmRHR4NkhvbVZ2MjAtVDU1TWtIYTk4b0VFRmpBNUFBVWR5bWh4dTdqb3BfeHZ5aEdubTM5UHhBTThiWnpmLTdRalNSbGlIc1dBSW1Xc1BnRkhFLVhmdjRGOG1xNmtUUGUyYmlUajNqUQ?oc=5",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNlRXRmd0RG1KR1owS3lzaFB4XzVWTEZUVmxjb2NWOFlET0VfSGlrOElKeU8xeFBBRmc5Q3hPMEhIdUYyYlAta0tWWFV4aHRlTFdmMHhabWJneW41ZE4xRGt1bUFtbWVRVGswVm1wdU1lbHU0NzJQelAyS2JsTzlGb2ctQXlJSUtVdF9DRHJaMzUwQ3M2TlpoN2NB?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-11-12",
      "title": "Yttrium Prices Soar 174-Fold After China's Rare Earth Export Curbs; Japan's Parts Supply Chain Rattled",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBWWml6Y3MzdEsyWkc1amd1NDdIalVpcjJVdXBROThOR1YwTEVndHRmQ3kyclgyMVdKUVhOSVFhc1FFYUQxck1mNW1pd0wxMEZXNFA1c0VsTFZvWDVadEtzNVFlZml0cXR6R3Joazc2bUJVUTJkOXc?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Nvidia",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 1,
+    "D": 1
+   },
+   "since": "2026-11-14",
+   "sample": [
+    {
+     "d": "2026-11-14",
+     "title": "U.S. says \"Nvidia issue is not a subject for negotiation\"... China retaliates with rare earths : Global : JKN",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBORWNQbWdSWmVMU1dtbmhvdHlhb3ROUENiWUU1RV9hQ1FrZkNEQ0dIR0ZEbmQ1RFZGcldldzN3NDBBU3FsX3RDbWFpcWpyRUVLYzIwRjVqT3IwbU9Sa3pNTjRR?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-14",
+     "title": "Nvidia affair will hang over Trump’s upcoming trip to Asia-Pacific",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQek5aM0lfMXZBTm5keW15M2JpYldtVWo3RlEwaExpNm1pdkRQdDl1UWZUaHJVSWprRTJCbFdEZjFXQ0dYczYwYm4tbkFhM3VTd1hneWZVeWNJLXVOcVdSYnoyOHZQWlR1T1ZjcG1lQXdjUjVSSzFqcU8tLWVfcnlnVnpvUHdMa0dmeUpLcjcwaHF1S3VIcVZmYU1Ma3lUdjd1eWE3bkI4Z0JoSDJlVnNQMkNENE8?oc=5",
      "domain": "news.google.com"
     }
    ]
