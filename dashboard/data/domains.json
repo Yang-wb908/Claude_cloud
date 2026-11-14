@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-14T18:19:42Z",
+ "generated": "2026-11-14T22:39:47Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-14T18:19:42Z",
+  "at": "2026-11-14T22:39:47Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.53,
-       "lon": 127.37,
-       "alt": 38000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -87,13 +75,13 @@
      },
      "ac": [
       {
-       "flight": "ZABEEL05",
-       "t": "A332",
+       "flight": "",
+       "t": "B762",
        "role": "tanker",
-       "lat": 24.57,
-       "lon": 55.48,
-       "alt": 22000,
-       "reg": "1302"
+       "lat": 24.49,
+       "lon": 55.51,
+       "alt": 30025,
+       "reg": "22-46099"
       }
      ]
     },
@@ -123,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "tanker": 1
-     },
-     "ac": [
-      {
-       "flight": "",
-       "t": "K35R",
-       "role": "tanker",
-       "lat": 31.96,
-       "lon": 34.23,
-       "alt": 10875,
-       "reg": "62-3529"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -186,34 +162,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RCH4207",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 17.84,
-       "lon": -67.2,
-       "alt": 30000,
-       "reg": "95-0104"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 1
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-14T18:19:42Z",
+  "at": "2026-11-14T22:39:47Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -373,7 +337,7 @@
   }
  },
  "ransom": {
-  "ok": true,
+  "ok": false,
   "at": "2026-11-14T18:19:42Z",
   "data": {
    "n_week": 100,
@@ -407,13 +371,14 @@
     "Dark Project": 3
    },
    "kr": []
-  }
+  },
+  "err": "SSLError: HTTPSConnectionPool(host='api.ransomware.live', port=443): Max retries exceeded with url: /v2/recentvictims (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)')))"
  },
  "summary": {
   "adsb_surge": 0,
   "kev_week": 12,
   "kev_edge_3d": 1,
-  "ransom_week": 100,
+  "ransom_week": 0,
   "ransom_kr_week": 0,
   "events": 1
  }

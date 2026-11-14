@@ -1,39 +1,10 @@
 {
- "generated": "2026-11-14T18:19:19Z",
+ "generated": "2026-11-14T22:39:27Z",
  "days": 3,
- "unmapped_total": 14,
+ "unmapped_total": 9,
  "max_cluster": 3,
- "max_key": "topic:Microsoft",
+ "max_key": "topic:China Rare",
  "clusters": [
-  {
-   "key": "topic:Microsoft",
-   "n": 3,
-   "domains": 3,
-   "types": {
-    "X": 3
-   },
-   "since": "2026-11-14",
-   "sample": [
-    {
-     "d": "2026-11-14",
-     "title": "Microsoft announces service 'restored', global outage over",
-     "url": "https://www.dawn.com/news/2044507/microsoft-announces-service-restored-global-outage-over",
-     "domain": "dawn.com"
-    },
-    {
-     "d": "2026-11-14",
-     "title": "Microsoft apologises for global outage and rules out cyberattack",
-     "url": "http://www.africanews.com/2026/11/14/microsoft-apologises-for-global-outage-and-rules-out-cyberattack/",
-     "domain": "africanews.com"
-    },
-    {
-     "d": "2026-11-14",
-     "title": "Microsoft services fully restored after global outage",
-     "url": "https://www.cbc.ca/news/business/microsoft-services-restored-after-outage-9.7422072?cmp=rss",
-     "domain": "cbc.ca"
-    }
-   ]
-  },
   {
    "key": "topic:China Rare",
    "n": 3,
@@ -87,48 +58,25 @@
    ]
   },
   {
-   "key": "topic:Trump",
+   "key": "topic:Microsoft",
    "n": 2,
-   "domains": 1,
+   "domains": 2,
    "types": {
-    "D": 2
+    "X": 2
    },
-   "since": "2026-11-13",
+   "since": "2026-11-14",
    "sample": [
     {
      "d": "2026-11-14",
-     "title": "Trump, Xi, Putin to hold historic meeting in China: White House",
-     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOU5VcUlzV2Z2dWRXQzBMYnVQMnBWUEwzbXR2dktwaEZ5dUYxUXBvSmdEZjVZTmJDek5GQUIxdFBTNVprcHpFNE9WTC1taF9iZnp6aWNpN2YxbmplX1NOS0hBN0UwYnp3T3pGeXpYOEdMMDFzYkd5d2x2X05nSWZjOTNpLTJURnhSLTJoVzdkaVFsZk5Rb0hrVUtvYThmVmRL?oc=5",
-     "domain": "news.google.com"
+     "title": "Microsoft apologises for global outage and rules out cyberattack",
+     "url": "http://www.africanews.com/2026/11/14/microsoft-apologises-for-global-outage-and-rules-out-cyberattack/",
+     "domain": "africanews.com"
     },
     {
-     "d": "2026-11-13",
-     "title": "Trump admin aims to maintain Israel aid in coming years, despite US president’s claim otherwise",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPd21ZVXdsc0ZQMl9uNnBnUU5jMlhVM1kzdG9zald6SzZhMEUwMVIyQTEyVjB1UGpTNGViWnZveWR0di1BVGVldk5RTG8td21TRzV5VEw5NHRvcTNIOHAzeGVpaDAyZkc1QkYtSEhGTUdhX0lHWDFkU090Z0ZGWjBWYnhRazViTTBZNFR6RlhGdEpLRk9YOHhfRFhkdWlla1RsMThSb1NVcjRnZ1pNbVhNajFyTC1tRVpIQV8yNnQ5UkFZQdIBxwFBVV95cUxQRUdtWW1ERU1sa1Zvelg4WGVzbklRWGZ0bjdDeXhpMVU0SWJSYmlqRnFjTEVYdGVDaVNjdWl4Z0toSEJWOVMtNlNDbzlKa0tod29UZWFDNjE1QUo0eHNqakJFdGNBUVVTRkVndTItX1ZBNlVTekt0c0lla2F1MURkbENYZUlsRklsTGJ2VUxQbkkyVkRQVFlldU45MWpndU9zdjhkVDIxZVlwQnhnUFkxUGNTcGJ2SEZyT1R4SnVYc29PNWtMb1ZF?oc=5",
-     "domain": "news.google.com"
-    }
-   ]
-  },
-  {
-   "key": "topic:Yttrium Prices",
-   "n": 2,
-   "domains": 1,
-   "types": {
-    "E": 2
-   },
-   "since": "2026-11-12",
-   "sample": [
-    {
-     "d": "2026-11-13",
-     "title": "Yttrium Prices Soar 174-Fold as China Curbs Rare Earth Exports",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQNlRXRmd0RG1KR1owS3lzaFB4XzVWTEZUVmxjb2NWOFlET0VfSGlrOElKeU8xeFBBRmc5Q3hPMEhIdUYyYlAta0tWWFV4aHRlTFdmMHhabWJneW41ZE4xRGt1bUFtbWVRVGswVm1wdU1lbHU0NzJQelAyS2JsTzlGb2ctQXlJSUtVdF9DRHJaMzUwQ3M2TlpoN2NB?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-12",
-     "title": "Yttrium Prices Soar 174-Fold After China's Rare Earth Export Curbs; Japan's Parts Supply Chain Rattled",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBWWml6Y3MzdEsyWkc1amd1NDdIalVpcjJVdXBROThOR1YwTEVndHRmQ3kyclgyMVdKUVhOSVFhc1FFYUQxck1mNW1pd0wxMEZXNFA1c0VsTFZvWDVadEtzNVFlZml0cXR6R3Joazc2bUJVUTJkOXc?oc=5",
-     "domain": "news.google.com"
+     "d": "2026-11-14",
+     "title": "Microsoft services fully restored after global outage",
+     "url": "https://www.cbc.ca/news/business/microsoft-services-restored-after-outage-9.7422072?cmp=rss",
+     "domain": "cbc.ca"
     }
    ]
   },

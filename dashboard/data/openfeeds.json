@@ -1,18 +1,18 @@
 {
- "generated": "2026-11-14T18:19:32Z",
+ "generated": "2026-11-14T22:39:39Z",
  "resolved_markets": 0,
  "ioda": {
   "ok": true,
-  "at": "2026-11-14T18:19:32Z",
+  "at": "2026-11-14T22:39:39Z",
   "data": {
    "window_h": 24,
    "countries": [
     {
      "code": "CN",
      "name": "China",
-     "score": 121744.5,
+     "score": 131831.3,
      "sources": {
-      "gtr.sarima": 121744.5
+      "gtr.sarima": 131831.3
      },
      "events": 1,
      "th": "taiwan",
@@ -25,9 +25,9 @@
     {
      "code": "NF",
      "name": "Norfolk Island",
-     "score": 76919.1,
+     "score": 66727.6,
      "sources": {
-      "gtr.sarima": 76919.1
+      "gtr.sarima": 66727.6
      },
      "events": 1,
      "th": null,
@@ -37,9 +37,9 @@
     {
      "code": "VE",
      "name": "Venezuela",
-     "score": 37285.4,
+     "score": 42404.6,
      "sources": {
-      "bgp.median": 37285.4
+      "bgp.median": 42404.6
      },
      "events": 1,
      "th": "carib",
@@ -52,9 +52,9 @@
     {
      "code": "FI",
      "name": "Finland",
-     "score": 34765.8,
+     "score": 39819.2,
      "sources": {
-      "gtr.sarima": 34765.8
+      "gtr.sarima": 39819.2
      },
      "events": 1,
      "th": "europe",
@@ -65,23 +65,11 @@
      "alert": true
     },
     {
-     "code": "GI",
-     "name": "Gibraltar",
-     "score": 15781.2,
-     "sources": {
-      "bgp.median": 15781.2
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
      "code": "UG",
      "name": "Uganda",
-     "score": 11859.5,
+     "score": 21513.7,
      "sources": {
-      "gtr.sarima": 11859.5
+      "gtr.sarima": 21513.7
      },
      "events": 1,
      "th": "drc",
@@ -89,14 +77,26 @@
       32.3,
       1.4
      ],
+     "alert": true
+    },
+    {
+     "code": "GI",
+     "name": "Gibraltar",
+     "score": 16088.1,
+     "sources": {
+      "bgp.median": 16088.1
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
      "alert": false
     },
     {
      "code": "GQ",
      "name": "Equatorial Guinea",
-     "score": 7316.3,
+     "score": 7739.3,
      "sources": {
-      "bgp.median": 7316.3
+      "bgp.median": 7739.3
      },
      "events": 1,
      "th": null,
@@ -106,9 +106,9 @@
     {
      "code": "SC",
      "name": "Seychelles",
-     "score": 7269.1,
+     "score": 7701.8,
      "sources": {
-      "bgp.median": 7269.1
+      "bgp.median": 7701.8
      },
      "events": 1,
      "th": null,
@@ -118,9 +118,9 @@
     {
      "code": "TJ",
      "name": "Tajikistan",
-     "score": 4507.6,
+     "score": 4788.8,
      "sources": {
-      "bgp.median": 4507.6
+      "bgp.median": 4788.8
      },
      "events": 1,
      "th": null,
@@ -130,21 +130,9 @@
     {
      "code": "CK",
      "name": "Cook Islands",
-     "score": 3924.7,
+     "score": 4312.9,
      "sources": {
-      "bgp.median": 3924.7
-     },
-     "events": 1,
-     "th": null,
-     "at": null,
-     "alert": false
-    },
-    {
-     "code": "RS",
-     "name": "Serbia",
-     "score": 3594.3,
-     "sources": {
-      "bgp.median": 3594.3
+      "bgp.median": 4312.9
      },
      "events": 1,
      "th": null,
@@ -154,9 +142,9 @@
     {
      "code": "XK",
      "name": "Kosovo",
-     "score": 3544.6,
+     "score": 4017.5,
      "sources": {
-      "bgp.median": 3544.6
+      "bgp.median": 4017.5
      },
      "events": 1,
      "th": null,
@@ -164,11 +152,38 @@
      "alert": false
     },
     {
+     "code": "RS",
+     "name": "Serbia",
+     "score": 3883.4,
+     "sources": {
+      "bgp.median": 3883.4
+     },
+     "events": 1,
+     "th": null,
+     "at": null,
+     "alert": false
+    },
+    {
+     "code": "HT",
+     "name": "Haiti",
+     "score": 3198.9,
+     "sources": {
+      "gtr.sarima": 3198.9
+     },
+     "events": 1,
+     "th": "carib",
+     "at": [
+      -72.3,
+      18.9
+     ],
+     "alert": false
+    },
+    {
      "code": "NG",
      "name": "Nigeria",
-     "score": 2458.7,
+     "score": 2856.0,
      "sources": {
-      "bgp.median": 2458.7
+      "bgp.median": 2856.0
      },
      "events": 1,
      "th": "sahel",
@@ -215,6 +230,21 @@
      "alert": false
     },
     {
+     "code": "NE",
+     "name": "Niger",
+     "score": 163.3,
+     "sources": {
+      "bgp.median": 163.3
+     },
+     "events": 1,
+     "th": "sahel",
+     "at": [
+      8.1,
+      17.6
+     ],
+     "alert": false
+    },
+    {
      "code": "GH",
      "name": "Ghana",
      "score": 159.7,
@@ -255,38 +285,23 @@
       -4.0
      ],
      "alert": false
-    },
-    {
-     "code": "NE",
-     "name": "Niger",
-     "score": 20.1,
-     "sources": {
-      "bgp.median": 20.1
-     },
-     "events": 1,
-     "th": "sahel",
-     "at": [
-      8.1,
-      17.6
-     ],
-     "alert": false
     }
    ],
-   "n_alerts": 4
+   "n_alerts": 5
   }
  },
  "poly": {
   "ok": true,
-  "at": "2026-11-14T18:19:32Z",
+  "at": "2026-11-14T22:39:39Z",
   "data": {
-   "n_markets": 580,
+   "n_markets": 571,
    "matched": {
     "hormuz_war": {
      "q": "Will the U.S. invade Iran before 2027?",
      "p": 0.075,
-     "vol": 80200344,
-     "vol24": 53358,
-     "chg1d": null,
+     "vol": 80202403,
+     "vol24": 39985,
+     "chg1d": -0.01,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
@@ -296,8 +311,8 @@
     "hormuz_reopen": {
      "q": "Strait of Hormuz traffic returns to normal by December 31?",
      "p": 0.055,
-     "vol": 17913027,
-     "vol24": 102024,
+     "vol": 17915512,
+     "vol24": 105350,
      "chg1d": null,
      "mslug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
      "end": "2027-01-01",
@@ -309,8 +324,8 @@
      "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
      "p": 0.065,
      "vol": 3000611,
-     "vol24": 528,
-     "chg1d": -0.01,
+     "vol24": 223,
+     "chg1d": null,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
@@ -320,9 +335,9 @@
     "taiwan_quarantine": {
      "q": "Will China invade Taiwan by end of 2026?",
      "p": 0.015,
-     "vol": 46414878,
-     "vol24": 21153,
-     "chg1d": 0.0005,
+     "vol": 46424371,
+     "vol24": 21252,
+     "chg1d": null,
      "mslug": "will-china-invade-taiwan-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
@@ -343,10 +358,10 @@
     },
     "fed_hawkish": {
      "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
-     "p": 0.875,
-     "vol": 8520600,
-     "vol24": 171806,
-     "chg1d": null,
+     "p": 0.865,
+     "vol": 8608712,
+     "vol24": 116222,
+     "chg1d": -0.02,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
@@ -356,8 +371,8 @@
     "india_pak_loc_escalation": {
      "q": "Will India strike Pakistan by December 31, 2026?",
      "p": 0.058,
-     "vol": 353223,
-     "vol24": 0,
+     "vol": 353225,
+     "vol24": 2,
      "chg1d": -0.0035,
      "mslug": "will-india-strike-pakistan-by-december-31-2026",
      "end": "2027-01-01",
@@ -370,19 +385,19 @@
     {
      "q": "Will the U.S. invade Iran before 2027?",
      "p": 0.075,
-     "vol": 80200344,
-     "vol24": 53358,
-     "chg1d": null,
+     "vol": 80202403,
+     "vol24": 39985,
+     "chg1d": -0.01,
      "mslug": "will-the-us-invade-iran-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027"
     },
     {
      "q": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
-     "p": 0.202,
-     "vol": 35072292,
-     "vol24": 22862,
-     "chg1d": -0.003,
+     "p": 0.192,
+     "vol": 35096448,
+     "vol24": 36970,
+     "chg1d": -0.014,
      "mslug": "will-benjamin-netanyahu-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
@@ -390,8 +405,8 @@
     {
      "q": "Will the Iranian regime fall before 2027?",
      "p": 0.025,
-     "vol": 29880923,
-     "vol24": 6823,
+     "vol": 29883361,
+     "vol24": 5153,
      "chg1d": null,
      "mslug": "will-the-iranian-regime-fall-by-the-end-of-2026",
      "end": "2027-01-01",
@@ -400,8 +415,8 @@
     {
      "q": "Strait of Hormuz traffic returns to normal by December 31?",
      "p": 0.055,
-     "vol": 17913027,
-     "vol24": 102024,
+     "vol": 17915512,
+     "vol24": 105350,
      "chg1d": null,
      "mslug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
      "end": "2027-01-01",
@@ -409,89 +424,79 @@
     },
     {
      "q": "Will Gadi Eizenkot be the next Prime Minister of Israel?",
-     "p": 0.637,
-     "vol": 10132341,
-     "vol24": 13307,
-     "chg1d": 0.006,
+     "p": 0.635,
+     "vol": 10138144,
+     "vol24": 15764,
+     "chg1d": 0.0035,
      "mslug": "will-gadi-eizenkot-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
      "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
-     "p": 0.875,
-     "vol": 8520600,
-     "vol24": 171806,
-     "chg1d": null,
+     "p": 0.865,
+     "vol": 8608712,
+     "vol24": 116222,
+     "chg1d": -0.02,
      "mslug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
     },
     {
      "q": "Will there be no change in Fed interest rates after the December 2026 meeting?",
-     "p": 0.036,
-     "vol": 8220033,
-     "vol24": 426371,
-     "chg1d": 0.015,
+     "p": 0.033,
+     "vol": 8237724,
+     "vol24": 374426,
+     "chg1d": 0.0085,
      "mslug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635"
     },
     {
-     "q": "Will David Lisnard win the 2027 French presidential election?",
-     "p": 0.181,
-     "vol": 7976631,
-     "vol24": 109248,
-     "chg1d": 0.009,
-     "mslug": "will-david-lisnard-win-the-2027-french-presidential-election",
-     "end": "2027-04-19",
-     "url": "https://polymarket.com/event/will-david-lisnard-win-the-2027-french-presidential-election"
-    },
-    {
      "q": "Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?",
-     "p": 0.093,
-     "vol": 6438827,
-     "vol24": 620346,
-     "chg1d": -0.014,
+     "p": 0.086,
+     "vol": 6445948,
+     "vol24": 213283,
+     "chg1d": 0.015,
      "mslug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808637",
      "end": "2026-12-09",
      "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-50-bps-after-the-december-2026-meeting-20260729232808637"
     },
     {
      "q": "Will Naftali Bennett be the next Prime Minister of Israel?",
-     "p": 0.033,
-     "vol": 5880906,
-     "vol24": 1867,
-     "chg1d": -0.001,
+     "p": 0.032,
+     "vol": 5886878,
+     "vol24": 7747,
+     "chg1d": -0.002,
      "mslug": "will-naftali-bennett-be-the-next-prime-minister-of-israel",
-     "end": "2026-10-28",
-     "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
-    },
-    {
-     "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
-     "p": 0.042,
-     "vol": 5601844,
-     "vol24": 14128,
-     "chg1d": -0.0035,
-     "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
      "end": "2026-10-28",
      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
     },
     {
      "q": "Will Marine Le Pen win the 2027 French presidential election?",
      "p": 0.473,
-     "vol": 5590408,
-     "vol24": 110850,
-     "chg1d": -0.002,
+     "vol": 5643841,
+     "vol24": 95922,
+     "chg1d": null,
      "mslug": "will-marine-le-pen-win-the-2027-french-presidential-election",
      "end": "2027-04-19",
      "url": "https://polymarket.com/event/will-marine-le-pen-win-the-2027-french-presidential-election"
     },
     {
+     "q": "Will Avigdor Lieberman be the next Prime Minister of Israel?",
+     "p": 0.043,
+     "vol": 5604208,
+     "vol24": 16140,
+     "chg1d": 0.0005,
+     "mslug": "will-avigdor-lieberman-be-the-next-prime-minister-of-israel",
+     "end": "2026-10-28",
+     "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election"
+    },
+    {
      "q": "NATO x Russia military clash by December 31, 2026?",
      "p": 0.11,
-     "vol": 3789769,
-     "vol24": 12064,
+     "vol": 3790578,
+     "vol24": 12593,
      "chg1d": 0.005,
      "mslug": "nato-x-russia-military-clash-by-december-31-2026-244-538-582",
      "end": "2027-01-01",
@@ -501,18 +506,18 @@
      "q": "China x Taiwan military clash before 2027?",
      "p": 0.032,
      "vol": 3554978,
-     "vol24": 2243,
-     "chg1d": -0.0035,
+     "vol24": 1747,
+     "chg1d": -0.0025,
      "mslug": "china-x-taiwan-military-clash-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/china-x-taiwan-military-clash-before-2027"
     },
     {
      "q": "Will Édouard Philippe win the 2027 French presidential election?",
-     "p": 0.045,
-     "vol": 3403018,
-     "vol24": 75413,
-     "chg1d": -0.01,
+     "p": 0.065,
+     "vol": 3493372,
+     "vol24": 123297,
+     "chg1d": 0.02,
      "mslug": "will-douard-philippe-win-the-2027-french-presidential-election",
      "end": "2027-04-19",
      "url": "https://polymarket.com/event/will-douard-philippe-win-the-2027-french-presidential-election"
@@ -520,8 +525,8 @@
     {
      "q": "US announces end of Iranian blockade by November 30, 2026?",
      "p": 0.065,
-     "vol": 3168200,
-     "vol24": 93759,
+     "vol": 3181887,
+     "vol24": 84913,
      "chg1d": -0.01,
      "mslug": "us-announces-end-of-iranian-blockade-by-november-30-2026",
      "end": "2026-12-01",
@@ -531,28 +536,28 @@
      "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
      "p": 0.065,
      "vol": 3000611,
-     "vol24": 528,
-     "chg1d": -0.01,
+     "vol24": 223,
+     "chg1d": null,
      "mslug": "ukraine-signs-peace-deal-with-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
     },
     {
      "q": "Will Chiang Wan-an win the next Taipei Mayor election?",
-     "p": 0.655,
-     "vol": 2357323,
-     "vol24": 79744,
-     "chg1d": null,
+     "p": 0.645,
+     "vol": 2375467,
+     "vol24": 93200,
+     "chg1d": -0.01,
      "mslug": "will-chiang-wan-an-win-the-next-taipei-mayor-election-20260813125857101",
      "end": "2026-11-29",
      "url": "https://polymarket.com/event/will-chiang-wan-an-win-the-next-taipei-mayor-election-20260813125857101"
     },
     {
      "q": "Will Hezbollah disarm by December 31?",
-     "p": 0.023,
+     "p": 0.024,
      "vol": 2092119,
      "vol24": 2,
-     "chg1d": -0.0005,
+     "chg1d": null,
      "mslug": "will-hezbollah-disarm-by-december-31-632-848",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-hezbollah-disarm-by-march-31"
@@ -560,19 +565,19 @@
     {
      "q": "Will Hamas agree to disarm by December 31?",
      "p": 0.037,
-     "vol": 1784223,
-     "vol24": 17,
-     "chg1d": -0.008,
+     "vol": 1784355,
+     "vol24": 144,
+     "chg1d": 0.002,
      "mslug": "will-hamas-agree-to-disarm-by-december-31",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-hamaz-disarm-by-december-31"
     },
     {
      "q": "Will Israel strike 4 countries in 2026?",
-     "p": 0.841,
+     "p": 0.842,
      "vol": 1537591,
      "vol24": 4,
-     "chg1d": 0.041,
+     "chg1d": 0.0405,
      "mslug": "will-israel-strike-4-countries-in-november-2025",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/how-many-different-countries-will-israel-strike-in-2026"
@@ -580,9 +585,9 @@
     {
      "q": "China x Japan military clash before 2027?",
      "p": 0.022,
-     "vol": 1474046,
-     "vol24": 31,
-     "chg1d": 0.0005,
+     "vol": 1474055,
+     "vol24": 40,
+     "chg1d": null,
      "mslug": "china-x-japan-military-clash-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/china-x-japan-military-clash-before-2027"
@@ -592,7 +597,7 @@
      "p": 0.032,
      "vol": 1088657,
      "vol24": 0,
-     "chg1d": 0.0015,
+     "chg1d": 0.0005,
      "mslug": "us-x-russia-military-clash-by-december-31-2026-775",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/us-x-russia-military-clash-by"
@@ -600,8 +605,8 @@
     {
      "q": "Putin out as President of Russia by June 30, 2027?",
      "p": 0.085,
-     "vol": 884027,
-     "vol24": 3714,
+     "vol": 886201,
+     "vol24": 5875,
      "chg1d": null,
      "mslug": "putin-out-as-president-of-russia-by-june-30-2027",
      "end": "2027-07-01",
@@ -611,18 +616,28 @@
      "q": "Will Ukraine agree to cede territory to Russia before 2027?",
      "p": 0.037,
      "vol": 844583,
-     "vol24": 2088,
-     "chg1d": -0.0175,
+     "vol24": 62,
+     "chg1d": -0.003,
      "mslug": "will-ukraine-agree-to-cede-territory-to-russia-before-2027",
      "end": "2027-01-01",
      "url": "https://polymarket.com/event/will-ukraine-agree-to-cede-territory-to-russia-before-2027"
+    },
+    {
+     "q": "Israel and Syria normalize relations by December 31, 2026?",
+     "p": 0.03,
+     "vol": 694485,
+     "vol24": 0,
+     "chg1d": -0.0005,
+     "mslug": "israel-and-syria-normalize-relations-by-december-31-2026-166",
+     "end": "2027-01-01",
+     "url": "https://polymarket.com/event/israel-and-syria-normalize-relations-in-2025"
     }
    ]
   }
  },
  "quakes": {
   "ok": true,
-  "at": "2026-11-14T18:19:32Z",
+  "at": "2026-11-14T22:39:39Z",
   "data": [
    {
     "d": "2026-11-09",
@@ -666,7 +681,7 @@
  },
  "ofac": {
   "ok": true,
-  "at": "2026-11-14T18:19:32Z",
+  "at": "2026-11-14T22:39:39Z",
   "data": {
    "n_total": 19565,
    "baseline": false,
@@ -679,11 +694,11 @@
   }
  },
  "summary": {
-  "ioda_alerts": 4,
+  "ioda_alerts": 5,
   "quakes_near": 0,
   "gdacs_red": 0,
   "ofac_new": 0,
   "ofac_new_vessels": 0,
-  "events": 4
+  "events": 5
  }
 }
