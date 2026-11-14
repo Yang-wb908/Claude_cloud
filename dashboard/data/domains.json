@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-14T06:44:02Z",
+ "generated": "2026-11-14T12:57:00Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-14T06:44:02Z",
+  "at": "2026-11-14T12:57:00Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -14,25 +14,13 @@
       126.0,
       27.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "1114",
-       "t": "B738",
-       "role": "other",
-       "lat": 24.4,
-       "lon": 121.1,
-       "alt": 16000,
-       "reg": "3701"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "scs": {
      "name": "남중국해",
@@ -43,25 +31,13 @@
       121.0,
       18.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "TANOM06",
-       "t": "A139",
-       "role": "other",
-       "lat": 6.16,
-       "lon": 116.13,
-       "alt": 1150,
-       "reg": "M503-2"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "korea": {
      "name": "한반도 주변",
@@ -72,25 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0,
-     "runs": 55,
+     "n": 0,
+     "key": 0,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 35.8,
-       "lon": 124.41,
-       "alt": 38000,
-       "reg": "N291SR"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -103,21 +67,21 @@
      ],
      "n": 1,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {
-      "airlift": 1
+      "other": 1
      },
      "ac": [
       {
-       "flight": "UAF311",
-       "t": "C130",
-       "role": "airlift",
-       "lat": 25.49,
-       "lon": 53.3,
-       "alt": 20000,
-       "reg": "311"
+       "flight": "RSD308",
+       "t": "A319",
+       "role": "other",
+       "lat": 23.43,
+       "lon": 57.06,
+       "alt": 29275,
+       "reg": "RA-73025"
       }
      ]
     },
@@ -132,8 +96,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -147,25 +111,13 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "VM712",
-       "t": "C560",
-       "role": "other",
-       "lat": 34.36,
-       "lon": 32.32,
-       "alt": 17050,
-       "reg": "166712"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "blacksea": {
      "name": "흑해",
@@ -178,8 +130,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -193,13 +145,34 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 2
+     },
+     "ac": [
+      {
+       "flight": "FNY5622",
+       "t": "ATLA",
+       "role": "other",
+       "lat": 55.35,
+       "lon": 11.76,
+       "alt": 20050,
+       "reg": "12"
+      },
+      {
+       "flight": "MMF41",
+       "t": "",
+       "role": "other",
+       "lat": 54.97,
+       "lon": 24.25,
+       "alt": 2050,
+       "reg": ""
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -212,20 +185,20 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0,
-     "runs": 55,
+     "base": 0.0,
+     "runs": 56,
      "status": "normal",
      "by_role": {},
      "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-14T06:44:02Z",
+  "at": "2026-11-14T12:57:00Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -386,14 +359,14 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-14T06:44:02Z",
+  "at": "2026-11-14T12:57:00Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
+    "US": 38,
     "??": 12,
     "CA": 7,
-    "DE": 3,
+    "DE": 4,
     "GB": 3,
     "SA": 3,
     "MX": 3,
@@ -409,10 +382,10 @@
    "by_group": {
     "thegentlemen": 22,
     "Curious Worm": 12,
-    "interlock": 6,
     "play": 6,
     "akira": 6,
     "Booba Project": 6,
+    "interlock": 5,
     "incransom": 4,
     "Aoqin": 3,
     "Panzer": 3,
