@@ -120,10 +120,15 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 5.3,
+   "p": 7.5,
    "k": 1,
    "prior": 5.0,
    "evidence": [
+    {
+     "key": "metric:feeds.gfw.data.taiwan.chg<=-0.3",
+     "f": 1.8,
+     "note": "대만해협 체류 선박 30% 이상 감소 (GFW)"
+    },
     {
      "key": "sens:ioda:taiwan",
      "f": 1.5,
@@ -131,7 +136,7 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.72,
+     "f": 0.64,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
@@ -146,23 +151,17 @@
   },
   {
    "id": "us_china_tariff",
-   "p": 24.7,
+   "p": 22.5,
    "k": 1,
    "prior": 25.0,
    "evidence": []
   },
   {
    "id": "korea_strategic",
-   "p": 16.7,
+   "p": 10.0,
    "k": 1,
    "prior": 10.0,
-   "evidence": [
-    {
-     "key": "tw:korea_missile",
-     "f": 1.8,
-     "note": "24시간 내 발사"
-    }
-   ]
+   "evidence": []
   },
   {
    "id": "fed_hawkish",
@@ -371,7 +370,7 @@
   ]
  },
  "market_skill": 1.0,
- "asof": "2026-11-14",
+ "asof": "2026-11-15",
  "mode": "auto",
  "base_asof": "2026-10-08",
  "fired": [
@@ -382,7 +381,6 @@
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
-  "korea_missile",
   "maritime_attacks"
  ],
  "market_record": {
