@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 73.2,
+   "p": 70.3,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -20,7 +20,7 @@
   },
   {
    "id": "hormuz_reopen",
-   "p": 10.5,
+   "p": 14.1,
    "k": 1,
    "prior": 30.0,
    "evidence": [
@@ -28,25 +28,12 @@
      "key": "ind:iran:0",
      "f": 0.5,
      "note": "공격 재개는 재개방과 불일치"
-    },
-    {
-     "key": "market:hormuz_reopen",
-     "f": 0.676,
-     "note": "예측시장 6% (가중 0.30)"
     }
-   ],
-   "market": {
-    "p": 5.5,
-    "q": "Strait of Hormuz traffic returns to normal by December 31?",
-    "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31",
-    "vol": 17915512,
-    "end": "2027-01-01",
-    "w": 0.3
-   }
+   ]
   },
   {
    "id": "hormuz_war",
-   "p": 16.3,
+   "p": 15.7,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -65,7 +52,7 @@
     "p": 7.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 80202403,
+    "vol": 80252484,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -113,7 +100,7 @@
     "p": 6.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 3000611,
+    "vol": 3000613,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -144,7 +131,7 @@
     "p": 1.5,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46424371,
+    "vol": 46429750,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -179,7 +166,7 @@
     "p": 86.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 8608712,
+    "vol": 8881174,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -314,18 +301,18 @@
   },
   {
    "id": "india_pak_loc_escalation",
-   "p": 8.5,
+   "p": 8.6,
    "k": 1,
    "prior": 10.0,
    "evidence": [
     {
      "key": "market:india_pak_loc_escalation",
-     "f": 0.838,
+     "f": 0.842,
      "note": "예측시장 6% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 5.8,
+    "p": 5.9,
     "q": "Will India strike Pakistan by December 31, 2026?",
     "url": "https://polymarket.com/event/india-strike-on-pakistan-by",
     "vol": 353225,
@@ -335,13 +322,6 @@
   }
  ],
  "review": [
-  {
-   "id": "hormuz_reopen",
-   "house": 30.0,
-   "market": 5.5,
-   "q": "Strait of Hormuz traffic returns to normal by December 31?",
-   "url": "https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-december-31"
-  },
   {
    "id": "blacksea_deal",
    "house": 30.0,
@@ -359,11 +339,11 @@
  ],
  "sensors": {
   "firms": [
-   "carib"
+   "carib",
+   "europe"
   ],
   "ioda": [
    "carib",
-   "drc",
    "europe",
    "sahel",
    "taiwan"

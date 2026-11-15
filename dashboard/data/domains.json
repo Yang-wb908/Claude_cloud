@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-14T22:39:47Z",
+ "generated": "2026-11-15T06:49:40Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-14T22:39:47Z",
+  "at": "2026-11-15T06:49:40Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,35 @@
       132.0,
       40.5
      ],
-     "n": 0,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1,
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "HRCLS88",
+       "t": "C30J",
+       "role": "airlift",
+       "lat": 35.04,
+       "lon": 126.97,
+       "alt": 12925,
+       "reg": "170288"
+      },
+      {
+       "flight": "TORII11",
+       "t": "B350",
+       "role": "other",
+       "lat": 37.09,
+       "lon": 127.02,
+       "alt": 250,
+       "reg": "168209"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,23 +87,32 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 2,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "tanker": 1
+      "other": 2
      },
      "ac": [
       {
-       "flight": "",
-       "t": "B762",
-       "role": "tanker",
-       "lat": 24.49,
-       "lon": 55.51,
-       "alt": 30025,
-       "reg": "22-46099"
+       "flight": "MJN575",
+       "t": "A320",
+       "role": "other",
+       "lat": 23.55,
+       "lon": 58.21,
+       "alt": 3550,
+       "reg": "555"
+      },
+      {
+       "flight": "RESC11",
+       "t": "H60",
+       "role": "other",
+       "lat": 23.59,
+       "lon": 58.28,
+       "alt": null,
+       "reg": "168554"
       }
      ]
     },
@@ -111,13 +142,43 @@
       37.0,
       37.5
      ],
-     "n": 0,
+     "n": 3,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 3
+     },
+     "ac": [
+      {
+       "flight": "VM767",
+       "t": "C560",
+       "role": "other",
+       "lat": 34.68,
+       "lon": 31.9,
+       "alt": 24075,
+       "reg": "166767"
+      },
+      {
+       "flight": "HERC32",
+       "t": "M28",
+       "role": "other",
+       "lat": 31.99,
+       "lon": 36.03,
+       "alt": 6600,
+       "reg": "355"
+      },
+      {
+       "flight": "SHD259",
+       "t": "C208",
+       "role": "other",
+       "lat": 31.97,
+       "lon": 36.03,
+       "alt": 5675,
+       "reg": "1541"
+      }
+     ]
     },
     "blacksea": {
      "name": "흑해",
@@ -128,13 +189,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "BRIO66",
+       "t": "CL60",
+       "role": "isr",
+       "lat": 44.93,
+       "lon": 27.68,
+       "alt": 25725,
+       "reg": "N159L"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -145,13 +218,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "SPDER21",
+       "t": "DHC6",
+       "role": "other",
+       "lat": 55.87,
+       "lon": 11.53,
+       "alt": 4125,
+       "reg": "OY-FHC"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -172,12 +257,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 1
+   "total_mil": 9
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-14T22:39:47Z",
+  "at": "2026-11-15T06:49:40Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -337,22 +422,22 @@
   }
  },
  "ransom": {
-  "ok": false,
-  "at": "2026-11-14T18:19:42Z",
+  "ok": true,
+  "at": "2026-11-15T06:49:40Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 37,
+    "US": 34,
     "??": 13,
     "CA": 7,
+    "GB": 4,
     "DE": 4,
-    "GB": 3,
+    "ES": 3,
+    "MY": 3,
     "SA": 3,
     "MX": 3,
     "AU": 2,
-    "MY": 2,
     "BR": 2,
-    "ES": 2,
     "KW": 1,
     "TR": 1,
     "BW": 1,
@@ -363,22 +448,21 @@
     "Curious Worm": 12,
     "play": 6,
     "akira": 6,
-    "Booba Project": 6,
+    "qilin": 4,
     "incransom": 4,
-    "interlock": 3,
     "Aoqin": 3,
     "Panzer": 3,
-    "Dark Project": 3
+    "Dark Project": 3,
+    "N0n": 3
    },
    "kr": []
-  },
-  "err": "SSLError: HTTPSConnectionPool(host='api.ransomware.live', port=443): Max retries exceeded with url: /v2/recentvictims (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1011)')))"
+  }
  },
  "summary": {
   "adsb_surge": 0,
   "kev_week": 12,
   "kev_edge_3d": 1,
-  "ransom_week": 0,
+  "ransom_week": 100,
   "ransom_kr_week": 0,
   "events": 1
  }
