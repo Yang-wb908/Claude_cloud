@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-15T06:49:40Z",
+ "generated": "2026-11-15T12:56:28Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-15T06:49:40Z",
+  "at": "2026-11-15T12:56:28Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,35 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "airlift": 1,
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "HRCLS88",
-       "t": "C30J",
-       "role": "airlift",
-       "lat": 35.04,
-       "lon": 126.97,
-       "alt": 12925,
-       "reg": "170288"
-      },
-      {
-       "flight": "TORII11",
-       "t": "B350",
-       "role": "other",
-       "lat": 37.09,
-       "lon": 127.02,
-       "alt": 250,
-       "reg": "168209"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -97,22 +75,22 @@
      },
      "ac": [
       {
-       "flight": "MJN575",
-       "t": "A320",
+       "flight": "BAH09",
+       "t": "RJ85",
        "role": "other",
-       "lat": 23.55,
-       "lon": 58.21,
-       "alt": 3550,
-       "reg": "555"
+       "lat": 26.35,
+       "lon": 51.59,
+       "alt": 10200,
+       "reg": "A9C-BDF"
       },
       {
-       "flight": "RESC11",
-       "t": "H60",
+       "flight": "HZKSGA",
+       "t": "GLF4",
        "role": "other",
-       "lat": 23.59,
-       "lon": 58.28,
-       "alt": null,
-       "reg": "168554"
+       "lat": 24.1,
+       "lon": 55.1,
+       "alt": 18000,
+       "reg": "HZ-KSGA"
       }
      ]
     },
@@ -142,41 +120,33 @@
       37.0,
       37.5
      ],
-     "n": 3,
+     "n": 2,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 3
+      "airlift": 1,
+      "other": 1
      },
      "ac": [
       {
-       "flight": "VM767",
-       "t": "C560",
-       "role": "other",
-       "lat": 34.68,
-       "lon": 31.9,
-       "alt": 24075,
-       "reg": "166767"
+       "flight": "RRR6629",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 37.22,
+       "lon": 30.84,
+       "alt": 34000,
+       "reg": "ZZ173"
       },
       {
-       "flight": "HERC32",
-       "t": "M28",
+       "flight": "BOOSTER",
+       "t": "HRON",
        "role": "other",
-       "lat": 31.99,
-       "lon": 36.03,
-       "alt": 6600,
-       "reg": "355"
-      },
-      {
-       "flight": "SHD259",
-       "t": "C208",
-       "role": "other",
-       "lat": 31.97,
-       "lon": 36.03,
-       "alt": 5675,
-       "reg": "1541"
+       "lat": 32.06,
+       "lon": 34.89,
+       "alt": 17850,
+       "reg": ""
       }
      ]
     },
@@ -189,25 +159,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 0,
+     "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "isr": 1
-     },
-     "ac": [
-      {
-       "flight": "BRIO66",
-       "t": "CL60",
-       "role": "isr",
-       "lat": 44.93,
-       "lon": 27.68,
-       "alt": 25725,
-       "reg": "N159L"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -228,13 +186,13 @@
      },
      "ac": [
       {
-       "flight": "SPDER21",
-       "t": "DHC6",
+       "flight": "VM204",
+       "t": "B350",
        "role": "other",
-       "lat": 55.87,
-       "lon": 11.53,
-       "alt": 4125,
-       "reg": "OY-FHC"
+       "lat": 55.31,
+       "lon": 12.57,
+       "alt": 26000,
+       "reg": "168204"
       }
      ]
     },
@@ -257,12 +215,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 9
+   "total_mil": 5
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-15T06:49:40Z",
+  "at": "2026-11-15T12:56:28Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -423,7 +381,7 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-15T06:49:40Z",
+  "at": "2026-11-15T12:56:28Z",
   "data": {
    "n_week": 100,
    "by_country": {

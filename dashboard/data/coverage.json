@@ -1,8 +1,81 @@
 {
- "generated": "2026-11-15T09:42:27Z",
+ "generated": "2026-11-15T12:56:05Z",
  "days": 3,
- "unmapped_total": 0,
- "max_cluster": 0,
- "max_key": null,
- "clusters": []
+ "unmapped_total": 6,
+ "max_cluster": 2,
+ "max_key": "topic:Trump",
+ "clusters": [
+  {
+   "key": "topic:Trump",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 1,
+    "E": 1
+   },
+   "since": "2026-11-14",
+   "sample": [
+    {
+     "d": "2026-11-15",
+     "title": "Trump's minerals push has yet to loosen China's grip ahead of Xi talks",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOaURoeVUxczBjTW5iWENvZzREQUJONTdwYjNlRWVQczhaSmlUaWtQZFNBMGsxaENwak9POENqSE1oeVFUWVoyU2IxdTREWUt0TWx2aXhJVzBSbVdleHlXQ0pYWWViWnNablZtMTg4c3h0NEhzLWN0YVdQY0pEQko1NEdTem5EalFIMmZWcXhDSXQzLW9od2lPZ3dWcHlyOWJyNDY0NUcxbnFKSllSY1JzX3p3SHlERFh0LXlsbQ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-14",
+     "title": "Trump, Xi and Putin plan an unprecedented joint meeting on the sidelines of APEC",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObGhvM3dhZ2tQVXpvczdlS3cwVmNmWGVuN1lNYXlJRG1BVTJaODVFNWU0MU5NdFdBaTJGWng5Mi1vMEk5dXB1cUl5a1lscXYwQURxZkxvd1pyUGp0TkFIdi02a3ozTEtoZUNOQnJKb1BIWWNad1dxN3BPUkVocWpXcE5KVURJNm9CWGpQX3AxSEtKNTBsLXo5T05UV2ZaalNoSDU2RU9NSUNBWi01MC1V0gG0AUFVX3lxTFBoM3Q5Y083YW9XTVdvMDBoV3ZhTi1mcDBGSHFKd01fM0RfSVh5RC1CLXpaWHplMi1oazY1ZDl4N3pxWkV1ZVZCN1IzNTA4Y1YyMXItTUFfTkVuRGkydXc1WXZzdmJ2Y2NwTTcteVJya3R6Ry1wSFFWQ1M0TkZ6OVVPVDhtME9SMy0wOXZ6QmZTWThWWGxUbXhnUFBZZER5RFA5dnpRLXZ0bWM4QnlWc0VFUm1tZg?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "place:워싱턴",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 1,
+    "E": 1
+   },
+   "since": "2026-11-13",
+   "sample": [
+    {
+     "d": "2026-11-15",
+     "title": "Washington and Beijing need more than an AI hotline",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSFFSRkI2Z1p4MEN1WlpYSllOT0QwSkh2aHZlRV94UG1VYUJtNTJnMlBTY3JHeU5vRF82M2ZNcjNhTEktQm9jYnhqMmdCdDQ2U29RcTdxeTZlQi1DZmJ5TjlOaElJWTh6WTlZd2ZCTWNZbnlUWmNXWjF5ekhLUU9ucnlfdXNacFlCWEJlcg?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-13",
+     "title": "Daily on Energy: US-China rare earth truce extended",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOXzhrdWNxblBZZ2ZCaGROMFlTaWJNcEVWUUItUktScGNkX2tHQUMwamxDY0l6UzZvei1QU1RvWi1pUkx4NFlhR2h5U05ORzE1UkhVbGtLd1RBMU5yMnZNam5LV3N3cGNxVHN2YVA4aGJ6bE01SDBZZU0tM25XYmhvell3V09VRGpVSFhKNG1vTVdXNGNMZjQtQXo4elVydFh4QVA0Z0twUTJXeUZXOGZV?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  },
+  {
+   "key": "topic:Nvidia",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "E": 1,
+    "D": 1
+   },
+   "since": "2026-11-14",
+   "sample": [
+    {
+     "d": "2026-11-14",
+     "title": "U.S. says \"Nvidia issue is not a subject for negotiation\"... China retaliates with rare earths : Global : JKN",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBORWNQbWdSWmVMU1dtbmhvdHlhb3ROUENiWUU1RV9hQ1FrZkNEQ0dIR0ZEbmQ1RFZGcldldzN3NDBBU3FsX3RDbWFpcWpyRUVLYzIwRjVqT3IwbU9Sa3pNTjRR?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-14",
+     "title": "Nvidia affair will hang over Trump’s upcoming trip to Asia-Pacific",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQek5aM0lfMXZBTm5keW15M2JpYldtVWo3RlEwaExpNm1pdkRQdDl1UWZUaHJVSWprRTJCbFdEZjFXQ0dYczYwYm4tbkFhM3VTd1hneWZVeWNJLXVOcVdSYnoyOHZQWlR1T1ZjcG1lQXdjUjVSSzFqcU8tLWVfcnlnVnpvUHdMa0dmeUpLcjcwaHF1S3VIcVZmYU1Ma3lUdjd1eWE3bkI4Z0JoSDJlVnNQMkNENE8?oc=5",
+     "domain": "news.google.com"
+    }
+   ]
+  }
+ ]
 }

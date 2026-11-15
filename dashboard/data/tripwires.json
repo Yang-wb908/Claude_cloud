@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T06:49:42Z",
+ "generated": "2026-11-15T12:56:33Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 3,
    "threshold": 10,
    "op": "<",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "maritime_attacks",
@@ -18,10 +18,10 @@
    "sev": 4,
    "th": null,
    "why": "해협 폐쇄·보험료 급등 선행.",
-   "current": 23,
+   "current": 29,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -32,7 +32,7 @@
    "current": 10,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "copper_6",
@@ -43,7 +43,7 @@
    "current": 6.09,
    "threshold": 6,
    "op": ">",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "bio_health_events",
@@ -51,10 +51,10 @@
    "sev": 3,
    "th": "bio",
    "why": "2차 감염·격리 확대 신호. 질병청 재평가·검역 격상 점검.",
-   "current": 13,
+   "current": 16,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "firms_site_alert",
@@ -65,7 +65,7 @@
    "current": 2,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "ioda_outage",
@@ -76,7 +76,7 @@
    "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   },
   {
    "id": "kev_edge",
@@ -87,7 +87,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-15T06:49:42Z"
+   "at": "2026-11-15T12:56:33Z"
   }
  ]
 }
