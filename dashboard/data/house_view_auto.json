@@ -2,7 +2,7 @@
  "scenarios": [
   {
    "id": "hormuz_persist",
-   "p": 70.3,
+   "p": 70.4,
    "k": 1,
    "prior": 60.0,
    "evidence": [
@@ -33,7 +33,7 @@
   },
   {
    "id": "hormuz_war",
-   "p": 15.7,
+   "p": 15.5,
    "k": 1,
    "prior": 10.0,
    "evidence": [
@@ -44,15 +44,15 @@
     },
     {
      "key": "market:hormuz_war",
-     "f": 0.884,
-     "note": "예측시장 8% (가중 0.10)"
+     "f": 0.871,
+     "note": "예측시장 6% (가중 0.10)"
     }
    ],
    "market": {
-    "p": 7.5,
+    "p": 6.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 80267701,
+    "vol": 80292987,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -86,21 +86,21 @@
   },
   {
    "id": "blacksea_deal",
-   "p": 19.9,
+   "p": 18.1,
    "k": 1,
    "prior": 30.0,
    "evidence": [
     {
      "key": "market:blacksea_deal",
-     "f": 0.579,
-     "note": "예측시장 6% (가중 0.30)"
+     "f": 0.516,
+     "note": "예측시장 4% (가중 0.30)"
     }
    ],
    "market": {
-    "p": 6.5,
+    "p": 4.5,
     "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
     "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027",
-    "vol": 3000632,
+    "vol": 3011983,
     "end": "2027-01-01",
     "w": 0.3
    }
@@ -131,7 +131,7 @@
     "p": 1.5,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46434436,
+    "vol": 46441549,
     "end": "2027-01-01",
     "w": 0.2
    }
@@ -166,7 +166,7 @@
     "p": 86.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 8943292,
+    "vol": 8950412,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -325,7 +325,7 @@
   {
    "id": "blacksea_deal",
    "house": 30.0,
-   "market": 6.5,
+   "market": 4.5,
    "q": "Ukraine signs peace deal with Russia by December 31, 2026?",
    "url": "https://polymarket.com/event/ukraine-signs-peace-deal-with-russia-before-2027"
   },
@@ -344,6 +344,7 @@
   ],
   "ioda": [
    "carib",
+   "drc",
    "europe",
    "sahel",
    "taiwan"
@@ -356,6 +357,7 @@
  "fired": [
   "bio_health_events",
   "copper_6",
+  "coverage_surge",
   "ethiopia_interstate",
   "firms_site_alert",
   "hormuz_transits_low",

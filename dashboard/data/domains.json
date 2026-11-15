@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-15T12:56:28Z",
+ "generated": "2026-11-15T18:56:43Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-15T12:56:28Z",
+  "at": "2026-11-15T18:56:43Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,13 +48,25 @@
       132.0,
       40.5
      ],
-     "n": 0,
-     "key": 0,
+     "n": 1,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "isr": 1
+     },
+     "ac": [
+      {
+       "flight": "@@@@@@@@",
+       "t": "GLEX",
+       "role": "isr",
+       "lat": 37.5,
+       "lon": 127.28,
+       "alt": 40000,
+       "reg": "N291SR"
+      }
+     ]
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -65,34 +77,13 @@
       60.0,
       30.5
      ],
-     "n": 2,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 2
-     },
-     "ac": [
-      {
-       "flight": "BAH09",
-       "t": "RJ85",
-       "role": "other",
-       "lat": 26.35,
-       "lon": 51.59,
-       "alt": 10200,
-       "reg": "A9C-BDF"
-      },
-      {
-       "flight": "HZKSGA",
-       "t": "GLF4",
-       "role": "other",
-       "lat": 24.1,
-       "lon": 55.1,
-       "alt": 18000,
-       "reg": "HZ-KSGA"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "redsea": {
      "name": "홍해·아덴만",
@@ -120,33 +111,23 @@
       37.0,
       37.5
      ],
-     "n": 2,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "airlift": 1,
       "other": 1
      },
      "ac": [
       {
-       "flight": "RRR6629",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 37.22,
-       "lon": 30.84,
-       "alt": 34000,
-       "reg": "ZZ173"
-      },
-      {
-       "flight": "BOOSTER",
-       "t": "HRON",
+       "flight": "TRK4",
+       "t": "A319",
        "role": "other",
-       "lat": 32.06,
-       "lon": 34.89,
-       "alt": 17850,
-       "reg": ""
+       "lat": 36.06,
+       "lon": 33.29,
+       "alt": 24250,
+       "reg": "TC-IST"
       }
      ]
     },
@@ -176,25 +157,13 @@
       30.5,
       61.0
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "VM204",
-       "t": "B350",
-       "role": "other",
-       "lat": 55.31,
-       "lon": 12.57,
-       "alt": 26000,
-       "reg": "168204"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -215,12 +184,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 5
+   "total_mil": 2
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-15T12:56:28Z",
+  "at": "2026-11-15T18:56:43Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -381,37 +350,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-15T12:56:28Z",
+  "at": "2026-11-15T18:56:43Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 34,
-    "??": 13,
-    "CA": 7,
-    "GB": 4,
-    "DE": 4,
-    "ES": 3,
+    "US": 32,
+    "??": 15,
+    "CA": 6,
+    "HK": 3,
+    "DE": 3,
     "MY": 3,
     "SA": 3,
-    "MX": 3,
-    "AU": 2,
+    "CN": 2,
+    "ES": 2,
+    "GB": 2,
     "BR": 2,
-    "KW": 1,
-    "TR": 1,
-    "BW": 1,
-    "TH": 1
+    "MX": 2,
+    "ID": 1,
+    "PH": 1,
+    "CH": 1
    },
    "by_group": {
     "thegentlemen": 22,
+    "PixelLeaks": 20,
     "Curious Worm": 12,
-    "play": 6,
-    "akira": 6,
-    "qilin": 4,
-    "incransom": 4,
+    "akira": 4,
+    "qilin": 3,
+    "play": 3,
     "Aoqin": 3,
-    "Panzer": 3,
-    "Dark Project": 3,
-    "N0n": 3
+    "incransom": 3,
+    "N0n": 3,
+    "Vexy Ransomware": 3
    },
    "kr": []
   }
