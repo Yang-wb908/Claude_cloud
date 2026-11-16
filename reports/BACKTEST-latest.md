@@ -1,15 +1,15 @@
 ### 주간 백테스트 2026-11-16
-시계열 25개 · 사건 연구 66건 · 판단 장부 104건(판정 53건)
+시계열 26개 · 사건 연구 58건 · 판단 장부 104건(판정 54건)
 
 | 자산 | +1일 중앙값 | +5일 | +20일 | +60일 | 20일 상승 비율 |
 |---|---|---|---|---|---|
-| brent | 0.77 | None | None | None | None |
-| wheat | -0.84 | None | None | None | None |
-| gold | -0.95 | None | None | None | None |
-| dxy | 0.05 | None | None | None | None |
+| brent | 0.46 | None | None | None | None |
+| wheat | -0.67 | None | None | None | None |
+| gold | -0.76 | None | None | None | None |
+| dxy | 0.03 | None | None | None | None |
 | vix | None | None | None | None | None |
-| kospi | -3.93 | None | None | None | None |
-| krw | 0.06 | None | None | None | None |
+| kospi | -3.59 | None | None | None | None |
+| krw | 0.08 | None | None | None | None |
 | spx | None | None | None | None | None |
 
 | 트립와이어 | 과거 발동 | 자기 60일 중앙값 | 브렌트 60일 | S&P 60일 | 현재 |
@@ -18,10 +18,11 @@
 | 브렌트유 85달러 하회 | 4 | 29.41 | 29.41 | 2.81 | - |
 | 원/달러 1,400원 돌파 | 7 | 2.37 | -2.47 | 2.06 | - |
 | 미 10년물 5.5% 돌파 | 0 | None | None | None | - |
+| 유럽 TTF 가스 100유로/MWh 돌파 | 2 | None | None | None | - |
 | 시카고 밀 8달러/bu 돌파 | 0 | None | None | None | - |
 | 구리 6달러/lb 돌파 | 8 | 1.07 | 43.38 | 3.71 | 발동 중 |
 | 금 4,500달러/oz 돌파 | 8 | -2.18 | -3.77 | 1.28 | - |
 | VIX 30 돌파 | 3 | -43.94 | -4.32 | 15.53 | - |
 | 달러인덱스 105 돌파 | 1 | 0.27 | 1.96 | 4.0 | - |
 
-판단 장부 Brier 0.208 (기저율 0.79) · 기한 경과 미판정 12건
+판단 장부 Brier 0.206 (기저율 0.78) · 기한 경과 미판정 12건
