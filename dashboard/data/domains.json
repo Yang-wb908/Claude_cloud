@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-15T19:02:05Z",
+ "generated": "2026-11-16T00:56:04Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-15T19:02:05Z",
+  "at": "2026-11-16T00:56:04Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,23 +48,50 @@
       132.0,
       40.5
      ],
-     "n": 1,
-     "key": 1,
+     "n": 4,
+     "key": 0,
      "base": 0,
      "runs": 55,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 4
      },
      "ac": [
       {
-       "flight": "@@@@@@@@",
-       "t": "GLEX",
-       "role": "isr",
-       "lat": 37.84,
-       "lon": 128.14,
-       "alt": 40000,
-       "reg": "N291SR"
+       "flight": "KAF001",
+       "t": "B748",
+       "role": "other",
+       "lat": 34.66,
+       "lon": 126.65,
+       "alt": 36000,
+       "reg": "22-001"
+      },
+      {
+       "flight": "KNP973",
+       "t": "SURN",
+       "role": "other",
+       "lat": 37.31,
+       "lon": 126.99,
+       "alt": 1350,
+       "reg": "973"
+      },
+      {
+       "flight": "CATS16",
+       "t": "BE20",
+       "role": "other",
+       "lat": 35.33,
+       "lon": 129.11,
+       "alt": 8775,
+       "reg": "84-00157"
+      },
+      {
+       "flight": "CATS88",
+       "t": "B190",
+       "role": "other",
+       "lat": 34.0,
+       "lon": 130.81,
+       "alt": 20975,
+       "reg": "86-00082"
       }
      ]
     },
@@ -90,10 +117,10 @@
        "flight": "",
        "t": "B762",
        "role": "tanker",
-       "lat": 24.98,
-       "lon": 54.49,
-       "alt": 19875,
-       "reg": "23-46114"
+       "lat": 24.75,
+       "lon": 55.54,
+       "alt": 27500,
+       "reg": "20-46075"
       }
      ]
     },
@@ -124,22 +151,22 @@
       37.5
      ],
      "n": 1,
-     "key": 0,
+     "key": 1,
      "base": 0,
      "runs": 55,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "tanker": 1
      },
      "ac": [
       {
-       "flight": "TRK4",
-       "t": "A319",
-       "role": "other",
-       "lat": 36.65,
-       "lon": 33.23,
-       "alt": 31975,
-       "reg": "TC-IST"
+       "flight": "RRR9915",
+       "t": "A332",
+       "role": "tanker",
+       "lat": 34.59,
+       "lon": 32.97,
+       "alt": "ground",
+       "reg": "ZZ335"
       }
      ]
     },
@@ -174,20 +201,8 @@
      "base": 0,
      "runs": 55,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "RRR4985",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 58.69,
-       "lon": 23.07,
-       "alt": 27975,
-       "reg": "ZM418"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -208,12 +223,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 4
+   "total_mil": 6
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-15T19:02:05Z",
+  "at": "2026-11-16T00:56:04Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -374,37 +389,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-15T19:02:05Z",
+  "at": "2026-11-16T00:56:04Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 32,
+    "US": 35,
     "??": 15,
-    "CA": 6,
+    "CA": 5,
+    "MY": 4,
     "HK": 3,
     "DE": 3,
-    "MY": 3,
-    "SA": 3,
+    "ID": 2,
     "CN": 2,
     "ES": 2,
     "GB": 2,
     "BR": 2,
+    "SA": 2,
     "MX": 2,
-    "ID": 1,
     "PH": 1,
     "CH": 1
    },
    "by_group": {
-    "thegentlemen": 22,
     "PixelLeaks": 20,
+    "thegentlemen": 17,
     "Curious Worm": 12,
-    "akira": 4,
-    "qilin": 3,
+    "qilin": 9,
+    "incransom": 4,
     "play": 3,
-    "Aoqin": 3,
-    "incransom": 3,
     "N0n": 3,
-    "Vexy Ransomware": 3
+    "akira": 3,
+    "Vexy Ransomware": 3,
+    "Barracuda": 2
    },
    "kr": []
   }
