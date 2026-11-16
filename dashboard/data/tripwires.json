@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T06:48:38Z",
+ "generated": "2026-11-16T06:44:51Z",
  "fired": [
   {
    "id": "hormuz_transits_low",
@@ -10,7 +10,7 @@
    "current": 3,
    "threshold": 10,
    "op": "<",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "maritime_attacks",
@@ -21,7 +21,7 @@
    "current": 26,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "ethiopia_interstate",
@@ -32,7 +32,7 @@
    "current": 6,
    "threshold": 5,
    "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "copper_6",
@@ -43,7 +43,7 @@
    "current": 6.02,
    "threshold": 6,
    "op": ">",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "bio_health_events",
@@ -54,18 +54,7 @@
    "current": 7,
    "threshold": 3,
    "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
-  },
-  {
-   "id": "firms_site_alert",
-   "title": "위성 열점 경보 (감시 시설·분쟁 지역에서 평소의 3배 이상, NASA FIRMS)",
-   "sev": 3,
-   "th": null,
-   "why": "정유·터미널·기지 주변 열점 급증은 피격·화재 신호. 사건 목록의 '위성 열점' 항목과 FIRMS 지도로 확인.",
-   "current": 1,
-   "threshold": 1,
-   "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "ioda_outage",
@@ -76,7 +65,7 @@
    "current": 4,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   },
   {
    "id": "kev_edge",
@@ -87,7 +76,7 @@
    "current": 1,
    "threshold": 1,
    "op": ">=",
-   "at": "2026-11-16T06:48:38Z"
+   "at": "2026-11-16T06:44:51Z"
   }
  ]
 }
