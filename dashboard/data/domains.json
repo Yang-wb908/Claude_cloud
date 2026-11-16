@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-16T06:48:37Z",
+ "generated": "2026-11-16T12:58:05Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-16T06:48:37Z",
+  "at": "2026-11-16T12:58:05Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -48,43 +48,13 @@
       132.0,
       40.5
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 3
-     },
-     "ac": [
-      {
-       "flight": "CARD40",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "18-21001"
-      },
-      {
-       "flight": "CARD10",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "19-21040"
-      },
-      {
-       "flight": "CARD30",
-       "t": "H60",
-       "role": "other",
-       "lat": 37.45,
-       "lon": 127.11,
-       "alt": "ground",
-       "reg": "19-21042"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "gulf": {
      "name": "페르시아만·오만만",
@@ -95,41 +65,23 @@
       60.0,
       30.5
      ],
-     "n": 3,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 3
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "",
-       "t": "AS50",
-       "role": "other",
-       "lat": 25.1,
-       "lon": 51.36,
-       "alt": 225,
-       "reg": "QA335"
-      },
-      {
-       "flight": "",
-       "t": "B789",
-       "role": "other",
-       "lat": 24.96,
-       "lon": 51.73,
-       "alt": 7050,
-       "reg": "A6-PFG"
-      },
-      {
-       "flight": "2241",
-       "t": "C208",
-       "role": "other",
-       "lat": 24.12,
-       "lon": 55.84,
-       "alt": 5675,
-       "reg": "2241"
+       "flight": "RRR9946",
+       "t": "A400",
+       "role": "airlift",
+       "lat": 24.16,
+       "lon": 54.41,
+       "alt": 26850,
+       "reg": "ZM408"
       }
      ]
     },
@@ -159,60 +111,23 @@
       37.0,
       37.5
      ],
-     "n": 5,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 3,
-      "airlift": 2
+      "other": 1
      },
      "ac": [
       {
-       "flight": "SPAR89",
-       "t": "BE20",
+       "flight": "BOOSTER",
+       "t": "HRON",
        "role": "other",
-       "lat": 35.73,
-       "lon": 30.36,
-       "alt": 21000,
-       "reg": "76-3239"
-      },
-      {
-       "flight": "KAF3209",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 31.02,
-       "lon": 30.39,
-       "alt": 32000,
-       "reg": "KAF343"
-      },
-      {
-       "flight": "CTM2009",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 34.3,
-       "lon": 32.76,
-       "alt": 18550,
-       "reg": "0007"
-      },
-      {
-       "flight": "APX11",
-       "t": "PC21",
-       "role": "other",
-       "lat": 32.32,
-       "lon": 35.78,
-       "alt": 9850,
-       "reg": "1177"
-      },
-      {
-       "flight": "APX21",
-       "t": "PC21",
-       "role": "other",
-       "lat": 32.32,
-       "lon": 35.78,
-       "alt": 9875,
-       "reg": "1172"
+       "lat": 31.78,
+       "lon": 34.69,
+       "alt": 19850,
+       "reg": ""
       }
      ]
     },
@@ -235,13 +150,13 @@
      },
      "ac": [
       {
-       "flight": "TUAF161",
-       "t": "C650",
+       "flight": "DUKE75",
+       "t": "BE20",
        "role": "other",
-       "lat": 41.25,
-       "lon": 41.3,
-       "alt": 39000,
-       "reg": "93-005"
+       "lat": 44.7,
+       "lon": 27.47,
+       "alt": 25175,
+       "reg": "84-00162"
       }
      ]
     },
@@ -254,32 +169,41 @@
       30.5,
       61.0
      ],
-     "n": 2,
+     "n": 3,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 2
+      "other": 3
      },
      "ac": [
       {
-       "flight": "FHV22",
-       "t": "DHC6",
+       "flight": "PCT647",
+       "t": "D228",
        "role": "other",
-       "lat": 56.39,
-       "lon": 10.74,
-       "alt": 5025,
-       "reg": "OY-FHD"
+       "lat": 54.76,
+       "lon": 9.06,
+       "alt": 5525,
+       "reg": "57+05"
       },
       {
-       "flight": "SVF660",
-       "t": "SF34",
+       "flight": "IAM1492",
+       "t": "B350",
        "role": "other",
-       "lat": 58.4,
-       "lon": 15.52,
-       "alt": "ground",
-       "reg": "100001"
+       "lat": 56.56,
+       "lon": 9.64,
+       "alt": 30000,
+       "reg": "MM62317"
+      },
+      {
+       "flight": "FAF7230",
+       "t": "MIR2",
+       "role": "other",
+       "lat": 54.99,
+       "lon": 17.92,
+       "alt": 23100,
+       "reg": "F-UGJJ"
       }
      ]
     },
@@ -302,12 +226,12 @@
     }
    },
    "n_surge": 0,
-   "total_mil": 14
+   "total_mil": 6
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-16T06:48:37Z",
+  "at": "2026-11-16T12:58:05Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -468,37 +392,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-16T06:48:37Z",
+  "at": "2026-11-16T12:58:05Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 36,
-    "??": 15,
+    "US": 39,
+    "??": 16,
+    "CA": 5,
     "IN": 4,
     "MY": 4,
-    "HK": 3,
     "DE": 3,
-    "CA": 3,
+    "GB": 3,
     "ID": 2,
     "CN": 2,
-    "ES": 2,
-    "GB": 2,
-    "BR": 2,
-    "SA": 2,
-    "MX": 2,
-    "PH": 1
+    "HK": 2,
+    "JP": 1,
+    "PH": 1,
+    "CH": 1,
+    "VN": 1,
+    "ES": 1
    },
    "by_group": {
     "PixelLeaks": 23,
     "Curious Worm": 12,
-    "thegentlemen": 12,
     "qilin": 9,
+    "metaencryptor": 5,
+    "ShadowByt3$": 5,
     "incransom": 4,
+    "Aoqin": 3,
     "play": 3,
     "N0n": 3,
-    "akira": 3,
-    "Vexy Ransomware": 3,
-    "BYOD": 2
+    "akira": 3
    },
    "kr": []
   }

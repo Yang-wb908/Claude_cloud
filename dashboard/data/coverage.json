@@ -1,19 +1,32 @@
 {
- "generated": "2026-11-16T06:48:15Z",
+ "generated": "2026-11-16T12:57:46Z",
  "days": 3,
- "unmapped_total": 7,
- "max_cluster": 3,
+ "unmapped_total": 18,
+ "max_cluster": 5,
  "max_key": "topic:Trump",
  "clusters": [
   {
    "key": "topic:Trump",
-   "n": 3,
-   "domains": 1,
+   "n": 5,
+   "domains": 3,
    "types": {
+    "D": 2,
     "E": 3
    },
    "since": "2026-11-15",
    "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "FAA ground stop still affecting thousands of flights. And, Trump meets Xi, Putin in Asia",
+     "url": "https://www.npr.org/2026/11/16/g-s1-153841/up-first-newsletter-faa-ground-stop-democratic-leaders-congress-trump-asia-trip",
+     "domain": "npr.org"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "Xi, Trump and Putin to discuss 'world peace' at Shenzhen summit, China says",
+     "url": "https://www.france24.com/en/asia-pacific/20261116-xi-trump-putin-discuss-world-peace-shenzhen-summit-china-says",
+     "domain": "france24.com"
+    },
     {
      "d": "2026-11-15",
      "title": "Trump minerals push leaves US vulnerable to China rare earths",
@@ -22,27 +35,39 @@
     },
     {
      "d": "2026-11-15",
-     "title": "Trump faces China rare earth dependence as US mining projects lag ahead of Xi Jinping meeting | Hindustan Times",
-     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPeUZHSGtIRlVobWd2eWQxaFFwSHYyYTJ2Sk84Q1lLSXAxN1o4eXowS2h6SGQxMzJMU1hzcmN6TUZTLXZabzkyOUQ3NndLeV9JcERvc0lxWlNYZVdtR1R6YzFkRjB2WGcyaldveEFEcWxlNlZDd0UyQTYtcW1STTk1Vk52aE5Cdm1DZEQ0YWw3MmlLOGo2d19DamhsSDJDeldzVWlfWkhMS1BiQ25Tc2lrazNBYkJRV3hVbUJJWllpalh4eTBHRlBodER3Rk54aENIZGFOcHVXbGx0aHFoOXFrYnVMVm9iWUpHYnFYcTJ1dVJtanU2R2Jr0gH8AUFVX3lxTE9KTXhncTlGTjRQam40bEREbGg2U0hKTURBSG9sOXhvYVMxVWd3UTVXak5TUWhVejVPVE51aWVtQ0lCb0VuWnJpVVBaczBEQXF6aFQ0Q2hJQWcyU2lzWEZsOVM1WlJDTE5GM2oxUzFVSVd4NTAtcTA5LUFxekFNSFZmVndYaFJINFl0NjBzUmYzRTJSeHN2cFFHbWxRdXhjc1JjRTJqYXBxV21yZ0VrZFZIai1UWldFZlA4c0o5ZG51U25Ld0VIR2R1TTNRUWloaVRUZFRqa19NY1R5NmdnOHFHdzRjNmswN1RQZnppaUhVREMtZTBlWGk3a3Nubg?oc=5",
+     "title": "Trump’s minerals push has yet to loosen China’s grip ahead of Xi talks",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOU2RQWW0tdGtNT1E0d1dCWmN0RkFQeWZXRWZNczJFV1VsNnV5ZklfSGpUak56cnFjdDZsSkRMVVl5TlVuODJBU00wTWJUdjBlbDBSYVVRREF1OGVudm9IRnFmYUhMUEJqNHRfeDB1Q0w5R0NKdURBdWIzQW1tbndBemFVd3RRMjFxbVlJbnZ1Z2RtN21jU2MwTG9OOFRZemFhYlR6RVZEMUNPZGxrZFIzcEx0bWpDdWM?oc=5",
      "domain": "news.google.com"
     },
     {
      "d": "2026-11-15",
-     "title": "Trump's minerals push has yet to loosen China's grip ahead of Xi talks",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmgzajlTc2t4SmdLb1g1X3o1VWhhMlFTWnJ3Sk5sOW9JcDBUU0ZYU0tkX0s4M28za1ZVRGw0S1FlZEJVNXhVRGhwTjI5Um9HRzJxb0lRWk8yeE9pb3ZuQXk3a3F4WU1wNDRHcTQ5SV9jRnpHOHlOOGZBWUliVU16bThPM0R5OElKQk5hXzNGR2pZc3BFYTcxa2IxcVVoLWhNaTJobDR1RHhZa3B1dHotX0hId1NPajBKSjBRa3BZSHUtN2RrV084?oc=5",
+     "title": "Trump faces China rare earth dependence as US mining projects lag ahead of Xi Jinping meeting | Hindustan Times",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPeUZHSGtIRlVobWd2eWQxaFFwSHYyYTJ2Sk84Q1lLSXAxN1o4eXowS2h6SGQxMzJMU1hzcmN6TUZTLXZabzkyOUQ3NndLeV9JcERvc0lxWlNYZVdtR1R6YzFkRjB2WGcyaldveEFEcWxlNlZDd0UyQTYtcW1STTk1Vk52aE5Cdm1DZEQ0YWw3MmlLOGo2d19DamhsSDJDeldzVWlfWkhMS1BiQ25Tc2lrazNBYkJRV3hVbUJJWllpalh4eTBHRlBodER3Rk54aENIZGFOcHVXbGx0aHFoOXFrYnVMVm9iWUpHYnFYcTJ1dVJtanU2R2Jr0gH8AUFVX3lxTE9KTXhncTlGTjRQam40bEREbGg2U0hKTURBSG9sOXhvYVMxVWd3UTVXak5TUWhVejVPVE51aWVtQ0lCb0VuWnJpVVBaczBEQXF6aFQ0Q2hJQWcyU2lzWEZsOVM1WlJDTE5GM2oxUzFVSVd4NTAtcTA5LUFxekFNSFZmVndYaFJINFl0NjBzUmYzRTJSeHN2cFFHbWxRdXhjc1JjRTJqYXBxV21yZ0VrZFZIai1UWldFZlA4c0o5ZG51U25Ld0VIR2R1TTNRUWloaVRUZFRqa19NY1R5NmdnOHFHdzRjNmswN1RQZnppaUhVREMtZTBlWGk3a3Nubg?oc=5",
      "domain": "news.google.com"
     }
    ]
   },
   {
    "key": "topic:China",
-   "n": 2,
+   "n": 4,
    "domains": 2,
    "types": {
-    "E": 2
+    "E": 4
    },
    "since": "2026-11-13",
    "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "China’s Top Rare Earth Firms’ Profits Surge on Supply Caps - The China-Global South Project",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONlJ6Nm5Ya1o3VHZWUVBnaHZQb3ZkRVpIUkN5RnhUeHR3YWpSdk1EWXUtcWhtVm9OOWh4NGRsUUVETGFyb2RnQy1hUXVoMlFDWmZkQWtlMXd6MlQzNThJaWp1bnJsV0xfNWJiVXZUWExGRVJQbkhHZHBJbXNycDFfNmhkRVZDcDdH?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "China's top rare earth firms' profits surge on supply caps",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNWE0c2x0ZU5WRUdQZGxCSXFfQU5lenV4TGtPTE9yT3R3WlJvRnE5dlBabzZMTklhZHhSTWpxV2RjLVlSN0gtWkZKN25EMzFfWEVLZzlPVkFtbkdEZnFtM1NZMVFvMVJoN01sS01hOEU2VC1iMl9mdXlRYzNreGhKMzV0TmlRSVJiUmVNaTJqMzI3YWE2QzVMTkN6ZmtHNzd0OEZRaQ?oc=5",
+     "domain": "news.google.com"
+    },
     {
      "d": "2026-11-16",
      "title": "China's rare earth dominance leaves U.S. vulnerable ahead of Trump-Xi talks",
@@ -58,26 +83,102 @@
    ]
   },
   {
-   "key": "place:싱가포르",
-   "n": 2,
-   "domains": 1,
+   "key": "topic:Jordan",
+   "n": 3,
+   "domains": 3,
    "types": {
-    "D": 1,
-    "X": 1
+    "C": 2,
+    "D": 1
    },
    "since": "2026-11-16",
    "sample": [
     {
      "d": "2026-11-16",
-     "title": "Megaspeed, firm at centre of Nvidia scandal, says Alice Huang left in 2025",
-     "url": "https://www.aljazeera.com/news/2026/11/16/megaspeed-firm-at-centre-of-nvidia-scandal-says-alice-huang-left-in-2025?traffic_source=rss",
+     "title": "Jordan bans Telegram app over 'radicalisation' claims",
+     "url": "https://www.dw.com/en/jordan-bans-telegram-app-over-radicalisation-claims/a-79956706?maca=en-rss-en-world-4025-rdf",
+     "domain": "dw.com"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "Jordan bans Telegram over national security concerns",
+     "url": "https://www.aljazeera.com/news/2026/11/16/jordan-bans-telegram-messing-app-over-national-security-concerns?traffic_source=rss",
      "domain": "aljazeera.com"
     },
     {
      "d": "2026-11-16",
-     "title": "Indonesian president apologises to Singapore, Malaysia for wildfire haze",
-     "url": "https://www.aljazeera.com/news/2026/11/16/indonesian-president-apologises-to-singapore-malaysia-for-wildfire-haze?traffic_source=rss",
-     "domain": "aljazeera.com"
+     "title": "Jordan bans Telegram, accusing it of promoting 'extremism'",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/jordan-bans-telegram-accusing-it-promoting-extremism",
+     "domain": "middleeasteye.net"
+    }
+   ]
+  },
+  {
+   "key": "topic:South Africa",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "C": 2
+   },
+   "since": "2026-11-16",
+   "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "17 killed in two deadly shootings as South Africa battles rising violent crime",
+     "url": "http://www.africanews.com/2026/11/16/17-killed-in-two-deadly-shootings-as-south-africa-battles-rising-violent-crime/",
+     "domain": "africanews.com"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "Two mass shootings in South Africa leave 17 dead",
+     "url": "https://www.bbc.co.uk/news/articles/c8y5x3n4kywpo?at_medium=RSS&at_campaign=rss",
+     "domain": "bbc.co.uk"
+    }
+   ]
+  },
+  {
+   "key": "place:베이징",
+   "n": 2,
+   "domains": 2,
+   "types": {
+    "D": 1,
+    "E": 1
+   },
+   "since": "2026-11-16",
+   "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "Beijing's output quotas more than double profits at China's two state rare earth groups",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUEVaRGg1cnBQSVZUMXJMT3J5TGxPbnZBM2g1bmd0WnVXZ2tIOXU3bU5SWl84UkQ0ZTNGaldNOTBzNnFEZmptMTUzSHBjbkg1a2toVEllQkw2WjhNX2szdm9JZzdLX2JqVktLLVJnZkVHYjZlY0xrNUlUQ2xrV2FUcGJ1Q3h3ejhUTDNJZ1VvS0Via0tBS0FMQ0ZWeHRNeVZDUHVuQXVLYmtfQQ?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "China says Xi, Trump, Putin to discuss ‘world peace’ in trilateral summit",
+     "url": "https://www.dawn.com/news/2044928/china-says-xi-trump-putin-to-discuss-world-peace-in-trilateral-summit",
+     "domain": "dawn.com"
+    }
+   ]
+  },
+  {
+   "key": "place:뉴욕",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 2
+   },
+   "since": "2026-11-15",
+   "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "Trump’s Asia Trip Will Bring Him to the Table With Xi and Putin",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOLVVDaXk0aEl6ZTJYNWFTMnJTQTBkWk1JN3laRkxoVXozZ3F6aHhVc1plRi1aQkt1SG56cnJkQzN1S2Q4djl5Tm9oeGE4c0FjSm5ET056UnBtRWNJUElwY1p2S0hpVmdXUzVsTVQ0LVA5Z0c5ZTlCYUpsSVg1M0pqbmJn?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-15",
+     "title": "Nvidia Fallout Looms Over Trump-Xi Meeting",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOUnBicm1Jcmo3Ukx0dXNldVp4TmRXbkpvN0JIV2NaWE9VaFB5RGxqLTU1WFV2MGpSTXlzZ3A0ZHlZdG5pcHVjaWxJQl9idVJfSUZFVUp1RWJzTGphUzNDc0Z0S0xrNkFwdlZqbWl3dFRPM2MwYmdIVGpKVVhTR2wxT1AzVWlSUQ?oc=5",
+     "domain": "news.google.com"
     }
    ]
   }
