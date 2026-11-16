@@ -1,52 +1,15 @@
 {
- "generated": "2026-11-16T00:55:45Z",
+ "generated": "2026-11-16T06:48:15Z",
  "days": 3,
- "unmapped_total": 10,
- "max_cluster": 4,
- "max_key": "topic:China",
+ "unmapped_total": 7,
+ "max_cluster": 3,
+ "max_key": "topic:Trump",
  "clusters": [
   {
-   "key": "topic:China",
-   "n": 4,
-   "domains": 3,
-   "types": {
-    "E": 3,
-    "M": 1
-   },
-   "since": "2026-11-13",
-   "sample": [
-    {
-     "d": "2026-11-15",
-     "title": "The US and China reciprocally extend the suspensions of service fees",
-     "url": "https://www.hellenicshippingnews.com/the-us-and-china-reciprocally-extend-the-suspensions-of-service-fees/",
-     "domain": "hellenicshippingnews.com"
-    },
-    {
-     "d": "2026-11-15",
-     "title": "China's rare earth dominance leaves U.S. vulnerable ahead of Trump-Xi talks",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOU1hZRmNMLXhMaWUzdHIzaVUtbFRrM19YVjUzQk5ZdFBYTXM5b3QtTFhhNGJoT1c1YlJtc1pKaU5sWE5LcjZKRjZWTU00aHIydXo3WkNrNGxNa1NfRXpwZXQzUXUtM2t0NFByZkdZOExFNTM0X29BMVVTd3BKVGMwZ2xLWlBHdGJmZnFxS3lILUtYaHhNc3ktOUdqRVRybFo0V0c1eA?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-14",
-     "title": "US’ top 3 nuclear rivals expand undersea capabilities, China could add 40 nuclear attack submarines",
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUUdOVjA0c09VWlV0ampKMHNvWFI2MWppMm5xS1lzeWJNZVh4NDBSTU9ZVUlRX1RPSkNScTNoNm4xLWhydHFMRFQ0UVZ4SndSMXVwOFM1THVyakh0QXpVbTI3Y2Y5SHVNN2pZOXRiXzMtX3ZJYW5OamJXQ0tzUkR1RlIySzhHTmJYUXdkSXMyT2FIaXN6M3VlMHVFN3JzeGhkZ19tV2x5YUw?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-13",
-     "title": "Why China’s Push to Boost Spending Is Falling Short",
-     "url": "https://thediplomat.com/2026/11/why-chinas-push-to-boost-spending-is-falling-short/",
-     "domain": "thediplomat.com"
-    }
-   ]
-  },
-  {
    "key": "topic:Trump",
-   "n": 4,
+   "n": 3,
    "domains": 1,
    "types": {
-    "D": 1,
     "E": 3
    },
    "since": "2026-11-15",
@@ -59,44 +22,62 @@
     },
     {
      "d": "2026-11-15",
-     "title": "Trump to Stay Silent on 'Jensen Huang Scandal' at U.S.-China Summit; Semiconductor Curbs Off the Table",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE43amVVU0Zwc1RuZUVtdHRreWFaU1YwZ1pCaTBoRFphRzN4am9VMDNkZlpZYmNZaV9pd1czLUFVWW9td0hCekVSUFItcHNsUnp5aXhqNGRzdGpGd3N5MFF5NDJpMENTaDRsSFFFbVNxUHowMVlxVnc?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-15",
-     "title": "Trump’s minerals push has yet to loosen China’s grip ahead of Xi talks",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOU2RQWW0tdGtNT1E0d1dCWmN0RkFQeWZXRWZNczJFV1VsNnV5ZklfSGpUak56cnFjdDZsSkRMVVl5TlVuODJBU00wTWJUdjBlbDBSYVVRREF1OGVudm9IRnFmYUhMUEJqNHRfeDB1Q0w5R0NKdURBdWIzQW1tbndBemFVd3RRMjFxbVlJbnZ1Z2RtN21jU2MwTG9OOFRZemFhYlR6RVZEMUNPZGxrZFIzcEx0bWpDdWM?oc=5",
-     "domain": "news.google.com"
-    },
-    {
-     "d": "2026-11-15",
      "title": "Trump faces China rare earth dependence as US mining projects lag ahead of Xi Jinping meeting | Hindustan Times",
      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPeUZHSGtIRlVobWd2eWQxaFFwSHYyYTJ2Sk84Q1lLSXAxN1o4eXowS2h6SGQxMzJMU1hzcmN6TUZTLXZabzkyOUQ3NndLeV9JcERvc0lxWlNYZVdtR1R6YzFkRjB2WGcyaldveEFEcWxlNlZDd0UyQTYtcW1STTk1Vk52aE5Cdm1DZEQ0YWw3MmlLOGo2d19DamhsSDJDeldzVWlfWkhMS1BiQ25Tc2lrazNBYkJRV3hVbUJJWllpalh4eTBHRlBodER3Rk54aENIZGFOcHVXbGx0aHFoOXFrYnVMVm9iWUpHYnFYcTJ1dVJtanU2R2Jr0gH8AUFVX3lxTE9KTXhncTlGTjRQam40bEREbGg2U0hKTURBSG9sOXhvYVMxVWd3UTVXak5TUWhVejVPVE51aWVtQ0lCb0VuWnJpVVBaczBEQXF6aFQ0Q2hJQWcyU2lzWEZsOVM1WlJDTE5GM2oxUzFVSVd4NTAtcTA5LUFxekFNSFZmVndYaFJINFl0NjBzUmYzRTJSeHN2cFFHbWxRdXhjc1JjRTJqYXBxV21yZ0VrZFZIai1UWldFZlA4c0o5ZG51U25Ld0VIR2R1TTNRUWloaVRUZFRqa19NY1R5NmdnOHFHdzRjNmswN1RQZnppaUhVREMtZTBlWGk3a3Nubg?oc=5",
+     "domain": "news.google.com"
+    },
+    {
+     "d": "2026-11-15",
+     "title": "Trump's minerals push has yet to loosen China's grip ahead of Xi talks",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPQmgzajlTc2t4SmdLb1g1X3o1VWhhMlFTWnJ3Sk5sOW9JcDBUU0ZYU0tkX0s4M28za1ZVRGw0S1FlZEJVNXhVRGhwTjI5Um9HRzJxb0lRWk8yeE9pb3ZuQXk3a3F4WU1wNDRHcTQ5SV9jRnpHOHlOOGZBWUliVU16bThPM0R5OElKQk5hXzNGR2pZc3BFYTcxa2IxcVVoLWhNaTJobDR1RHhZa3B1dHotX0hId1NPajBKSjBRa3BZSHUtN2RrV084?oc=5",
      "domain": "news.google.com"
     }
    ]
   },
   {
-   "key": "topic:China Rare",
+   "key": "topic:China",
    "n": 2,
-   "domains": 1,
+   "domains": 2,
    "types": {
     "E": 2
    },
-   "since": "2026-11-15",
+   "since": "2026-11-13",
    "sample": [
     {
-     "d": "2026-11-15",
-     "title": "China Rare Earth Buyer Power Supply Chain Resilience Study",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNZ3pxTXRic2JBLUVGQ2dFT0lNU2FjREc1Y1hFQnNobEh5aExOT00xYTBLck5TZ2F4dW1ScDdKSGZKLXVpRjhreWFnQTJsSDFPUnc1bDRtaHpSOXhTOE42Zl91TnFyWUZEa1lDWDFzdTEwand4OXZNcVBjY0t3RHgzb2lR?oc=5",
+     "d": "2026-11-16",
+     "title": "China's rare earth dominance leaves U.S. vulnerable ahead of Trump-Xi talks",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOU1hZRmNMLXhMaWUzdHIzaVUtbFRrM19YVjUzQk5ZdFBYTXM5b3QtTFhhNGJoT1c1YlJtc1pKaU5sWE5LcjZKRjZWTU00aHIydXo3WkNrNGxNa1NfRXpwZXQzUXUtM2t0NFByZkdZOExFNTM0X29BMVVTd3BKVGMwZ2xLWlBHdGJmZnFxS3lILUtYaHhNc3ktOUdqRVRybFo0V0c1eA?oc=5",
      "domain": "news.google.com"
     },
     {
-     "d": "2026-11-15",
-     "title": "China Rare Earth Group 10000 Tonne Separation Plant Explained",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMUx6WTdCX3Rrc1Fud3pQdWdlWDhsSmNnd21WYWNUS3FNZXY4V2FhZFVyVWplMEZ0WE90Z1I5TmdKZGt6UnMwdml1TlBSY0t3V3JnUmotMEdDUjdHNjRXQ0NOQ1J3MFVNODBnWmJSYy14Q2tyV3I2a3dkUUZSZlBoTXdB?oc=5",
-     "domain": "news.google.com"
+     "d": "2026-11-13",
+     "title": "Why China’s Push to Boost Spending Is Falling Short",
+     "url": "https://thediplomat.com/2026/11/why-chinas-push-to-boost-spending-is-falling-short/",
+     "domain": "thediplomat.com"
+    }
+   ]
+  },
+  {
+   "key": "place:싱가포르",
+   "n": 2,
+   "domains": 1,
+   "types": {
+    "D": 1,
+    "X": 1
+   },
+   "since": "2026-11-16",
+   "sample": [
+    {
+     "d": "2026-11-16",
+     "title": "Megaspeed, firm at centre of Nvidia scandal, says Alice Huang left in 2025",
+     "url": "https://www.aljazeera.com/news/2026/11/16/megaspeed-firm-at-centre-of-nvidia-scandal-says-alice-huang-left-in-2025?traffic_source=rss",
+     "domain": "aljazeera.com"
+    },
+    {
+     "d": "2026-11-16",
+     "title": "Indonesian president apologises to Singapore, Malaysia for wildfire haze",
+     "url": "https://www.aljazeera.com/news/2026/11/16/indonesian-president-apologises-to-singapore-malaysia-for-wildfire-haze?traffic_source=rss",
+     "domain": "aljazeera.com"
     }
    ]
   }
