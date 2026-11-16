@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-16T12:58:05Z",
+ "generated": "2026-11-16T18:57:24Z",
  "adsb": {
   "ok": true,
-  "at": "2026-11-16T12:58:05Z",
+  "at": "2026-11-16T18:57:24Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -66,22 +66,22 @@
       30.5
      ],
      "n": 1,
-     "key": 0,
+     "key": 1,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "airlift": 1
+      "isr": 1
      },
      "ac": [
       {
-       "flight": "RRR9946",
-       "t": "A400",
-       "role": "airlift",
-       "lat": 24.16,
-       "lon": 54.41,
-       "alt": 26850,
-       "reg": "ZM408"
+       "flight": "MRS1315",
+       "t": "GLF5",
+       "role": "isr",
+       "lat": 24.45,
+       "lon": 54.66,
+       "alt": "ground",
+       "reg": "CN-MMR"
       }
      ]
     },
@@ -117,17 +117,17 @@
      "runs": 56,
      "status": "normal",
      "by_role": {
-      "other": 1
+      "airlift": 1
      },
      "ac": [
       {
-       "flight": "BOOSTER",
-       "t": "HRON",
-       "role": "other",
-       "lat": 31.78,
-       "lon": 34.69,
-       "alt": 19850,
-       "reg": ""
+       "flight": "RCH5039",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 32.68,
+       "lon": 33.01,
+       "alt": 36000,
+       "reg": "08-8193"
       }
      ]
     },
@@ -140,25 +140,13 @@
       42.0,
       47.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 1
-     },
-     "ac": [
-      {
-       "flight": "DUKE75",
-       "t": "BE20",
-       "role": "other",
-       "lat": 44.7,
-       "lon": 27.47,
-       "alt": 25175,
-       "reg": "84-00162"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "baltic": {
      "name": "발트해",
@@ -169,43 +157,13 @@
       30.5,
       61.0
      ],
-     "n": 3,
+     "n": 0,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {
-      "other": 3
-     },
-     "ac": [
-      {
-       "flight": "PCT647",
-       "t": "D228",
-       "role": "other",
-       "lat": 54.76,
-       "lon": 9.06,
-       "alt": 5525,
-       "reg": "57+05"
-      },
-      {
-       "flight": "IAM1492",
-       "t": "B350",
-       "role": "other",
-       "lat": 56.56,
-       "lon": 9.64,
-       "alt": 30000,
-       "reg": "MM62317"
-      },
-      {
-       "flight": "FAF7230",
-       "t": "MIR2",
-       "role": "other",
-       "lat": 54.99,
-       "lon": 17.92,
-       "alt": 23100,
-       "reg": "F-UGJJ"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -216,22 +174,34 @@
       -58.0,
       18.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
      "base": 0.0,
      "runs": 56,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "airlift": 1
+     },
+     "ac": [
+      {
+       "flight": "CFC4038",
+       "t": "C17",
+       "role": "airlift",
+       "lat": 18.16,
+       "lon": -65.5,
+       "alt": 11475,
+       "reg": "177705"
+      }
+     ]
     }
    },
    "n_surge": 0,
-   "total_mil": 6
+   "total_mil": 3
   }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-16T12:58:05Z",
+  "at": "2026-11-16T18:57:24Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -392,17 +362,17 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-16T12:58:05Z",
+  "at": "2026-11-16T18:57:24Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
-    "??": 16,
-    "CA": 5,
+    "US": 40,
+    "??": 15,
+    "CA": 10,
+    "MY": 5,
     "IN": 4,
-    "MY": 4,
     "DE": 3,
-    "GB": 3,
+    "GB": 2,
     "ID": 2,
     "CN": 2,
     "HK": 2,
@@ -414,15 +384,15 @@
    },
    "by_group": {
     "PixelLeaks": 23,
-    "Curious Worm": 12,
+    "N0n": 14,
     "qilin": 9,
     "metaencryptor": 5,
     "ShadowByt3$": 5,
-    "incransom": 4,
+    "incransom": 5,
+    "akira": 4,
     "Aoqin": 3,
-    "play": 3,
-    "N0n": 3,
-    "akira": 3
+    "Curious Worm": 3,
+    "Vexy Ransomware": 3
    },
    "kr": []
   }
