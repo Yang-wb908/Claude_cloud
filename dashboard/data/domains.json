@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-16T18:57:24Z",
+ "generated": "2026-11-16T22:22:07Z",
  "adsb": {
-  "ok": true,
+  "ok": false,
   "at": "2026-11-16T18:57:24Z",
   "data": {
    "areas": {
@@ -197,11 +197,12 @@
    },
    "n_surge": 0,
    "total_mil": 3
-  }
+  },
+  "err": "ReadTimeout: HTTPSConnectionPool(host='api.adsb.lol', port=443): Read timed out. (read timeout=40)"
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-16T18:57:24Z",
+  "at": "2026-11-16T22:22:07Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -362,37 +363,37 @@
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-16T18:57:24Z",
+  "at": "2026-11-16T22:22:07Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 40,
-    "??": 15,
-    "CA": 10,
-    "MY": 5,
+    "US": 39,
+    "??": 16,
+    "CA": 9,
+    "DE": 4,
+    "MY": 4,
     "IN": 4,
-    "DE": 3,
-    "GB": 2,
+    "GB": 3,
+    "AU": 2,
     "ID": 2,
     "CN": 2,
     "HK": 2,
     "JP": 1,
+    "IT": 1,
     "PH": 1,
-    "CH": 1,
-    "VN": 1,
-    "ES": 1
+    "CH": 1
    },
    "by_group": {
     "PixelLeaks": 23,
     "N0n": 14,
     "qilin": 9,
-    "metaencryptor": 5,
     "ShadowByt3$": 5,
-    "incransom": 5,
+    "Curious Worm": 4,
+    "metaencryptor": 4,
+    "incransom": 4,
     "akira": 4,
-    "Aoqin": 3,
-    "Curious Worm": 3,
-    "Vexy Ransomware": 3
+    "play": 3,
+    "Aoqin": 3
    },
    "kr": []
   }

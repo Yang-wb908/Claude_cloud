@@ -52,7 +52,7 @@
     "p": 7.5,
     "q": "Will the U.S. invade Iran before 2027?",
     "url": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-    "vol": 80368395,
+    "vol": 80382843,
     "end": "2027-01-01",
     "w": 0.1
    }
@@ -107,7 +107,7 @@
   },
   {
    "id": "taiwan_quarantine",
-   "p": 7.6,
+   "p": 7.9,
    "k": 1,
    "prior": 5.0,
    "evidence": [
@@ -123,50 +123,56 @@
     },
     {
      "key": "market:taiwan_quarantine",
-     "f": 0.656,
+     "f": 0.685,
      "note": "예측시장 2% (가중 0.20)"
     }
    ],
    "market": {
-    "p": 1.7,
+    "p": 2.1,
     "q": "Will China invade Taiwan by end of 2026?",
     "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-    "vol": 46451588,
+    "vol": 46629337,
     "end": "2027-01-01",
     "w": 0.2
    }
   },
   {
    "id": "us_china_tariff",
-   "p": 22.4,
+   "p": 22.1,
    "k": 1,
    "prior": 25.0,
    "evidence": []
   },
   {
    "id": "korea_strategic",
-   "p": 10.0,
+   "p": 16.7,
    "k": 1,
    "prior": 10.0,
-   "evidence": []
+   "evidence": [
+    {
+     "key": "tw:korea_missile",
+     "f": 1.8,
+     "note": "24시간 내 발사"
+    }
+   ]
   },
   {
    "id": "fed_hawkish",
-   "p": 53.9,
+   "p": 57.2,
    "k": 1,
    "prior": 25.0,
    "evidence": [
     {
      "key": "market:fed_hawkish",
-     "f": 3.51,
-     "note": "예측시장 88% (가중 0.40)"
+     "f": 4.015,
+     "note": "예측시장 92% (가중 0.40)"
     }
    ],
    "market": {
-    "p": 88.5,
+    "p": 91.5,
     "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
     "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636",
-    "vol": 9042159,
+    "vol": 9130895,
     "end": "2026-12-09",
     "w": 0.4
    }
@@ -326,13 +332,14 @@
   {
    "id": "fed_hawkish",
    "house": 25.0,
-   "market": 88.5,
+   "market": 91.5,
    "q": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
    "url": "https://polymarket.com/event/will-the-fed-increase-interest-rates-by-25-bps-after-the-december-2026-meeting-20260729232808636"
   }
  ],
  "sensors": {
   "firms": [
+   "carib",
    "europe"
   ],
   "ioda": [
@@ -340,6 +347,12 @@
    "europe",
    "sahel",
    "taiwan"
+  ],
+  "gdacs": [
+   "southasia"
+  ],
+  "gdacs_tc": [
+   "southasia"
   ]
  },
  "market_skill": 1.0,
@@ -348,12 +361,12 @@
  "base_asof": "2026-10-08",
  "fired": [
   "bio_health_events",
-  "coverage_surge",
   "ethiopia_interstate",
   "firms_site_alert",
   "hormuz_transits_low",
   "ioda_outage",
   "kev_edge",
+  "korea_missile",
   "maritime_attacks"
  ],
  "market_record": {
