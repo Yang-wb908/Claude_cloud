@@ -24,6 +24,7 @@ jobs:
           fetch-depth: 40
       - id: g
         run: |
+          if [ -f ops/PAUSED ]; then echo "skip=1" >> "$GITHUB_OUTPUT"; echo "::notice title=수집 일시 정지::ops/PAUSED 가 있어 건너뜀. 재개: Actions → '수집 정지·재개' → resume"; exit 0; fi
           if [ "${{ github.event_name }}" = "schedule" ] && git log --format=%s -40 | grep -q "일일 동기화 $(date -u +%Y-%m-%d)"; then
             echo "skip=1" >> "$GITHUB_OUTPUT"; echo "오늘 일일 동기화 이미 완료 → 건너뜀"
           fi

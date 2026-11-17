@@ -1,0 +1,69 @@
+name: 수집 정지·재개
+
+# pause  : ops/PAUSED 를 만들어 모든 예약 수집·분석(collect·daily·sitrep·backtest·advisor·redteam·imint)을 건너뛰게 하고,
+#          상황판 배포본을 '수집 정지' 표시로 다시 빌드한다. 데이터·설정·키는 그대로 둔다.
+# resume : ops/PAUSED 를 지우고 곧바로 수집(Claude 정제 포함)과 일일 동기화를 실행한다. 끝나면 배포본이 자동 갱신된다.
+# 휴대폰 GitHub 앱: Actions → '수집 정지·재개' → Run workflow → mode 선택.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "pause(정지) 또는 resume(재개)"
+        type: choice
+        options: [pause, resume]
+        default: resume
+      reason:
+        description: "정지 사유(선택)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: pause
+  cancel-in-progress: false
+
+jobs:
+  toggle:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BR: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: 정지
+        if: inputs.mode == 'pause'
+        env:
+          REASON: ${{ inputs.reason }}
+        run: |
+          set -e
+          python3 - <<'PY'
+          import json, os, pathlib
+          from datetime import datetime, timedelta, timezone
+          now = datetime.now(timezone.utc)
+          pathlib.Path("ops").mkdir(exist_ok=True)
+          pathlib.Path("ops/PAUSED").write_text(json.dumps({"since": now.strftime("%Y-%m-%dT%H:%MZ"), "kst": (now + timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
+              "reason": os.environ.get("REASON") or "", "by": "pause.yml",
+              "resume": "Actions → '수집 정지·재개' → mode=resume (또는 ops/PAUSED 삭제 후 collect.yml·daily.yml 수동 실행)"}, ensure_ascii=False, indent=1) + "\n")
+          PY
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ops/PAUSED
+          git diff --cached --quiet || (git commit -m "ops: 수집 일시 정지 [skip ci]" && git pull --rebase --autostash origin "$BR" && git push origin "HEAD:$BR")
+          gh workflow run dist.yml --ref "$BR"   # 배포본에 '수집 정지' 표시
+          echo "수집을 일시 정지했습니다. 재개: 이 워크플로를 mode=resume 으로 실행." >> "$GITHUB_STEP_SUMMARY"
+      - name: 재개
+        if: inputs.mode == 'resume'
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -f ops/PAUSED ]; then
+            git rm -q ops/PAUSED
+            git commit -m "ops: 수집 재개 [skip ci]" && git pull --rebase --autostash origin "$BR" && git push origin "HEAD:$BR"
+          fi
+          gh workflow run collect.yml --ref "$BR" -f claude=true
+          gh workflow run daily.yml --ref "$BR"
+          echo "수집을 재개했습니다. 수집·일일 동기화를 지금 실행했고, 끝나면 배포본(board-dist)이 자동 갱신됩니다(약 20~30분)." >> "$GITHUB_STEP_SUMMARY"

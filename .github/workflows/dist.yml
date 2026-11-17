@@ -9,7 +9,7 @@ on:
     types: [completed]
   push:
     branches: ["claude/compassionate-rubin-jmaq9e"]
-    paths: ["dashboard/*.js", "dashboard/app.html", "dashboard/loader.html", "dashboard/build.py", "dashboard/*.json", ".github/workflows/dist.yml"]
+    paths: ["dashboard/*.js", "dashboard/app.html", "dashboard/loader.html", "dashboard/build.py", "dashboard/*.json", ".github/workflows/dist.yml", "ops/PAUSED"]
   workflow_dispatch:
 
 permissions:

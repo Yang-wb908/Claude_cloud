@@ -448,6 +448,7 @@ a.btn{text-decoration:none;display:inline-block}
 .grp[aria-selected="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
 .tabs{top:37px}
 .status.sync.passive{cursor:default;opacity:.8}
+.status.paused{cursor:default;color:var(--ink);border-color:color-mix(in srgb,#d4a017 60%,transparent);background:color-mix(in srgb,#d4a017 14%,transparent)}
 .keybox{margin:0 0 10px}.keybox .note{margin:0 0 6px}.keyrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .keyrow input[type=password]{flex:1 1 220px;min-width:0;font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
 .keybox select{font:inherit;padding:4px 6px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);max-width:100%}
@@ -562,6 +563,7 @@ button.lnk{border:0;background:none;color:var(--ink);cursor:pointer;font:inherit
         <span class="lvl" id="glvl"></span>
         <span class="dtg" id="dtg"></span>
         <button class="status" id="status" aria-expanded="false" aria-controls="info"><i></i><span id="statusText">스냅숏</span></button>
+        <span class="status paused" id="pausedBadge" hidden></span>
         <button class="status sync" id="dlBtn" hidden title="열 때마다 최신 판을 받아 띄우는 작은 HTML 파일을 내려받습니다. claude.ai 밖에서도 모든 기능이 동작합니다.">HTML 받기</button>
         <button class="status sync" id="syncBtn" title="GitHub 커넥터로 저장소의 최신 시세·사건·채점·장부를 불러옵니다">저장소 동기화</button>
         <button class="status search" id="searchBtn" title="전역 검색 (Ctrl+K)">⌕ 검색</button>
@@ -714,6 +716,8 @@ const INTEL = typeof window.INTEL === "object" ? window.INTEL : null;
 let AUTO = typeof INTEL_AUTO === "object" ? INTEL_AUTO : null;
 let RFI_ = typeof RFI === "object" && RFI ? RFI : [];
 let TRIP_ = typeof TRIP === "object" ? TRIP : null;
+/* 수집 일시 정지(ops/PAUSED): 화면은 마지막 수집 상태로 고정, 재개하면 다음 수집부터 다시 갱신 */
+const PAUSED_ = typeof PAUSED === "object" && PAUSED ? PAUSED : null;
 const SRC_ = typeof SOURCES === "object" && SOURCES ? SOURCES : [];
 let current = null;
 const TH = Object.fromEntries(DATA.theaters.map(t => [t.id, t]));
@@ -1849,7 +1853,7 @@ function setStatus(mode){
   statusEl.className = "status " + mode;
   if (mode === "loading") statusText.textContent = "실시간 연결 중…";
   else if (mode === "live") statusText.textContent = "실시간 " + liveAgo();
-  else statusText.textContent = AUTO && AUTO.generated ? "자동 수집 " + AUTO.generated.slice(5, 16).replace("T", " ") + "Z" : "스냅숏";
+  else statusText.textContent = AUTO && AUTO.generated ? (PAUSED_ ? "마지막 수집 " : "자동 수집 ") + AUTO.generated.slice(5, 16).replace("T", " ") + "Z" : "스냅숏";
   renderInfo();
 }
 function liveAgo(){ if (!liveAt) return ""; const m = Math.round((Date.now() - liveAt) / 60000); return m < 1 ? "방금 갱신" : m + "분 전 갱신"; }
@@ -1858,6 +1862,7 @@ function renderInfo(){
     info.innerHTML = `<p><b>실시간 모드.</b> 위키백과 Current events를 15분마다 다시 읽어 사건을 지구본에 찍습니다. 위치는 본문에 연결된 문서의 좌표로 자동 추정합니다.</p><p>원문은 영어로 표시되고, 브리핑·핵심판단·시장 지표는 스냅숏 값입니다.</p><button class="btn ghost" id="reload">지금 갱신</button>`;
   } else {
     info.innerHTML = `<p><b>스냅숏 모드.</b> ${esc(IW.meta.asofKST)} KST까지 수집한 사건 ${DATA.events.length}건, 전역 브리핑 ${DATA.theaters.length}건, 핵심판단 ${IW.bluf.judgments.length}개${INTEL ? ", 해협·경제·강대국 수집 지표" : ""}입니다.</p>
+      ${PAUSED_ ? `<p><b>수집 일시 정지 중</b> (${esc(PAUSED_.kst || PAUSED_.since || "")} KST부터${PAUSED_.reason ? " · " + esc(PAUSED_.reason) : ""}). 화면은 마지막 수집 상태 그대로이며, 시세·사건·경보는 갱신되지 않습니다. 재개하면 즉시 수집이 돌고 20~30분 안에 최신 상태로 돌아옵니다.</p>` : ""}
       ${typeof distInfoHtml === "function" ? distInfoHtml() : ""}
       ${liveErr && typeof STANDALONE !== "undefined" && STANDALONE ? `<p class="note">위키백과 실시간 연결 실패: ${esc(liveErr)}</p>` : ""}
       <button class="btn ghost" id="reload">${typeof STANDALONE !== "undefined" && STANDALONE ? "위키백과 실시간 사건 보기 (영문)" : "실시간 연결 다시 시도"}</button>
@@ -2065,6 +2070,7 @@ function wrapWideTables(root){
 try { const mo = new MutationObserver(() => { clearTimeout(mo._t); mo._t = setTimeout(() => wrapWideTables(), 50); }); document.querySelectorAll(".pane").forEach(p => mo.observe(p, {childList: true, subtree: true})); } catch(e) {}
 
 /* ---------- 시작 ---------- */
+if (PAUSED_) { const pb = $("#pausedBadge"); pb.hidden = false; pb.textContent = "⏸ 수집 정지 " + String(PAUSED_.kst || PAUSED_.since || "").slice(5, 10).replace("-", "/"); pb.title = "수집 일시 정지 중 (" + (PAUSED_.kst || PAUSED_.since || "") + " KST부터). 화면은 마지막 수집 상태입니다."; }
 applyBriefs(typeof BRIEFS === "object" ? BRIEFS : null); renderTheaters(); renderTimeline(); renderSensors(); renderBluf(); repoActivity(); setStatus("snapshot");
 try { const t = localStorage.getItem("sit-tab"); if (t && document.querySelector(`.tab[data-pane="${t}"]`)) setTab(t); } catch(e) {}
 resize();

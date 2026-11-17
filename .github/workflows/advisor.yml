@@ -15,7 +15,21 @@ permissions:
   issues: write
 
 jobs:
+  # 수집 일시 정지(ops/PAUSED)면 건너뛴다. 재개는 pause.yml(resume).
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.g.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ops
+      - id: g
+        run: |
+          if [ -f ops/PAUSED ]; then echo "skip=1" >> "$GITHUB_OUTPUT"; echo "::notice title=수집 일시 정지::ops/PAUSED 가 있어 건너뜀. 재개: Actions → '수집 정지·재개' → resume"; exit 0; fi
   advise:
+    needs: guard
+    if: needs.guard.outputs.skip != '1'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

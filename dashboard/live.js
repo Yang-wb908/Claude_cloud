@@ -115,6 +115,7 @@ function nextRepublishKST(){
   // 저장소 동기화는 보는 사람 계정에 GitHub 커넥터가 있을 때만 쓸 수 있다(claude.ai 에는 현재 GitHub 커넥터가 없음).
   if (STANDALONE) return;  // 단독 실행: 버튼은 배포본 자동 갱신 표시(standalone.js)로 쓴다
   // 없으면 버튼 대신 '다음 자동 갱신' 시각을 보여준다 — 상황판은 수집 직후 6시간마다 최신 데이터로 다시 배포된다.
+  if (PAUSED_) { btn.hidden = true; return; }  // 수집 정지 중: 재배포도 멈추므로 '다음 갱신' 시각을 숨김(헤더 배지로 표시)
   const passive = () => { btn.hidden = false; btn.disabled = true; btn.classList.add("passive"); btn.textContent = "다음 갱신 " + nextRepublishKST() + " KST";
     btn.title = "상황판은 6시간마다(03·09·15·21시 52분 KST) 최신 수집 데이터로 자동 재배포됩니다. 새로 열면 최신 판이 보입니다."; };
   passive(); setInterval(() => { if (!syncState.mcp) passive(); }, 60e3);

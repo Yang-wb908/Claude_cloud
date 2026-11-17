@@ -35,6 +35,7 @@ jobs:
           fetch-depth: 40
       - id: g
         run: |
+          if [ -f ops/PAUSED ]; then echo "skip=1" >> "$GITHUB_OUTPUT"; echo "::notice title=수집 일시 정지::ops/PAUSED 가 있어 건너뜀. 재개: Actions → '수집 정지·재개' → resume"; exit 0; fi
           last=$(git log -1 --format=%ct --grep='자동 수집' || true); now=$(date +%s)
           if [ "${{ github.event_name }}" = "schedule" ] && [ -n "$last" ] && [ $((now - last)) -lt 10800 ]; then
             echo "skip=1" >> "$GITHUB_OUTPUT"; echo "최근 3시간 안에 수집됨 → 늦게 도착한 예약 실행 건너뜀"
