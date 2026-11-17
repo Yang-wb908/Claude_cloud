@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-16T22:22:07Z",
+ "generated": "2026-11-17T06:57:49Z",
  "adsb": {
-  "ok": false,
-  "at": "2026-11-16T18:57:24Z",
+  "ok": true,
+  "at": "2026-11-17T06:57:49Z",
   "data": {
    "areas": {
     "taiwan": {
@@ -16,8 +16,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -33,8 +33,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -50,8 +50,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -65,23 +65,41 @@
       60.0,
       30.5
      ],
-     "n": 1,
-     "key": 1,
-     "base": 0.0,
-     "runs": 56,
+     "n": 3,
+     "key": 0,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {
-      "isr": 1
+      "other": 3
      },
      "ac": [
       {
-       "flight": "MRS1315",
-       "t": "GLF5",
-       "role": "isr",
-       "lat": 24.45,
-       "lon": 54.66,
-       "alt": "ground",
-       "reg": "CN-MMR"
+       "flight": "NBS31",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.78,
+       "lon": 51.22,
+       "alt": 11425,
+       "reg": "QA362"
+      },
+      {
+       "flight": "",
+       "t": "PC21",
+       "role": "other",
+       "lat": 24.77,
+       "lon": 51.24,
+       "alt": 12100,
+       "reg": "QA366"
+      },
+      {
+       "flight": "RFF9920",
+       "t": "A124",
+       "role": "other",
+       "lat": 24.94,
+       "lon": 54.82,
+       "alt": 9800,
+       "reg": "RA-82037"
       }
      ]
     },
@@ -96,8 +114,8 @@
      ],
      "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {},
      "ac": []
@@ -111,23 +129,87 @@
       37.0,
       37.5
      ],
-     "n": 1,
+     "n": 8,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
      "by_role": {
-      "airlift": 1
+      "airlift": 1,
+      "other": 7
      },
      "ac": [
       {
-       "flight": "RCH5039",
+       "flight": "RCH4996",
        "t": "C17",
        "role": "airlift",
-       "lat": 32.68,
-       "lon": 33.01,
-       "alt": 36000,
-       "reg": "08-8193"
+       "lat": 31.84,
+       "lon": 29.54,
+       "alt": 32000,
+       "reg": "08-8194"
+      },
+      {
+       "flight": "EM409",
+       "t": "B429",
+       "role": "other",
+       "lat": 36.87,
+       "lon": 30.78,
+       "alt": 525,
+       "reg": "EM-7112"
+      },
+      {
+       "flight": "0000313",
+       "t": "A119",
+       "role": "other",
+       "lat": 31.83,
+       "lon": 35.34,
+       "alt": 1900,
+       "reg": "302"
+      },
+      {
+       "flight": "SHAD273",
+       "t": "C208",
+       "role": "other",
+       "lat": 30.85,
+       "lon": 35.66,
+       "alt": 10900,
+       "reg": "1538"
+      },
+      {
+       "flight": "SHD252",
+       "t": "C208",
+       "role": "other",
+       "lat": 32.16,
+       "lon": 35.78,
+       "alt": 7300,
+       "reg": "1541"
+      },
+      {
+       "flight": "APX21",
+       "t": "PC21",
+       "role": "other",
+       "lat": 32.32,
+       "lon": 36.0,
+       "alt": 16450,
+       "reg": "1179"
+      },
+      {
+       "flight": "APX11",
+       "t": "PC21",
+       "role": "other",
+       "lat": 32.3,
+       "lon": 36.01,
+       "alt": 16175,
+       "reg": "1173"
+      },
+      {
+       "flight": "HERC32",
+       "t": "M28",
+       "role": "other",
+       "lat": 32.03,
+       "lon": 36.09,
+       "alt": 6800,
+       "reg": "355"
       }
      ]
     },
@@ -140,13 +222,25 @@
       42.0,
       47.5
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "TKTEST",
+       "t": "A345",
+       "role": "other",
+       "lat": 40.97,
+       "lon": 28.83,
+       "alt": "ground",
+       "reg": "TC-CAN"
+      }
+     ]
     },
     "baltic": {
      "name": "발트해",
@@ -157,13 +251,25 @@
       30.5,
       61.0
      ],
-     "n": 0,
+     "n": 1,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
-     "by_role": {},
-     "ac": []
+     "by_role": {
+      "other": 1
+     },
+     "ac": [
+      {
+       "flight": "GAF708",
+       "t": "A21N",
+       "role": "other",
+       "lat": 54.65,
+       "lon": 25.28,
+       "alt": "ground",
+       "reg": "15+11"
+      }
+     ]
     },
     "carib": {
      "name": "카리브해(베네수엘라 앞)",
@@ -174,35 +280,22 @@
       -58.0,
       18.5
      ],
-     "n": 1,
+     "n": 0,
      "key": 0,
-     "base": 0.0,
-     "runs": 56,
+     "base": 0,
+     "runs": 55,
      "status": "normal",
-     "by_role": {
-      "airlift": 1
-     },
-     "ac": [
-      {
-       "flight": "CFC4038",
-       "t": "C17",
-       "role": "airlift",
-       "lat": 18.16,
-       "lon": -65.5,
-       "alt": 11475,
-       "reg": "177705"
-      }
-     ]
+     "by_role": {},
+     "ac": []
     }
    },
    "n_surge": 0,
-   "total_mil": 3
-  },
-  "err": "ReadTimeout: HTTPSConnectionPool(host='api.adsb.lol', port=443): Read timed out. (read timeout=40)"
+   "total_mil": 13
+  }
  },
  "kev": {
   "ok": true,
-  "at": "2026-11-16T22:22:07Z",
+  "at": "2026-11-17T06:57:49Z",
   "data": {
    "n_total": 1781,
    "recent": [
@@ -358,52 +451,52 @@
     }
    ],
    "n_recent": 15,
-   "n_week": 12
+   "n_week": 8
   }
  },
  "ransom": {
   "ok": true,
-  "at": "2026-11-16T22:22:07Z",
+  "at": "2026-11-17T06:57:49Z",
   "data": {
    "n_week": 100,
    "by_country": {
-    "US": 39,
-    "??": 16,
-    "CA": 9,
+    "US": 41,
+    "??": 15,
+    "CA": 8,
+    "GB": 4,
     "DE": 4,
-    "MY": 4,
     "IN": 4,
-    "GB": 3,
+    "PH": 3,
+    "MY": 2,
     "AU": 2,
     "ID": 2,
     "CN": 2,
     "HK": 2,
-    "JP": 1,
-    "IT": 1,
-    "PH": 1,
-    "CH": 1
+    "KW": 1,
+    "SA": 1,
+    "JP": 1
    },
    "by_group": {
     "PixelLeaks": 23,
-    "N0n": 14,
-    "qilin": 9,
+    "qilin": 19,
+    "N0n": 13,
+    "Vortex": 9,
     "ShadowByt3$": 5,
     "Curious Worm": 4,
     "metaencryptor": 4,
-    "incransom": 4,
-    "akira": 4,
-    "play": 3,
-    "Aoqin": 3
+    "netrunner": 2,
+    "Aoqin": 2,
+    "chaos": 2
    },
    "kr": []
   }
  },
  "summary": {
   "adsb_surge": 0,
-  "kev_week": 12,
-  "kev_edge_3d": 1,
+  "kev_week": 8,
+  "kev_edge_3d": 0,
   "ransom_week": 100,
   "ransom_kr_week": 0,
-  "events": 1
+  "events": 0
  }
 }
