@@ -39,7 +39,7 @@ def test_intake_ops_handlers(tmp_path, monkeypatch):
     pend = json.loads((d / "data" / "warnings_pending.json").read_text()); assert pend[0]["kind"] == "watchcon"
     r5 = intake.dissent({"판단 id": "bluf-1", "대안 판단과 근거": "중재 타결 가능성 과소평가", "대안 확률 (0~100)": "45"})
     j = next(x for x in json.loads((d / "data" / "judgments.json").read_text())["items"] if x["id"] == "bluf-1")
-    assert j["dissent"][0]["p"] == 0.45 and "이견 기록" in r5
+    assert j["dissent"][-1]["p"] == 0.45 and "이견 기록" in r5
     # products: DIB + WR for the fired tripwire + the pending watchcon change
     res = products.run(d, tmp_path / "products")
     assert res["written"][0].startswith("DIB-") and sum(1 for s in res["written"] if s.startswith("WR-")) == 2
